@@ -10,7 +10,7 @@ LEAGUE_SUBTITLE = "A Quarter Century of {insert witty name here} Glory"
 FOUNDED = 2001
 CURRENT_SEASON = 2025
 
-MANAGER_COLORS: dict[str, str] = {
+MANAGER_COLORS = {
     "Shawn":         "#D4AF37",
     "Brian Clark":   "#3B82F6",
     "Dominic":       "#EF4444",
@@ -786,7 +786,7 @@ _POS_COLORS = {
     "Other": "#374151",
 }
 # Seasons where the keeper format was suspended — treat as gaps in streak math
-_KEEPER_SUSPENSION_YEARS: set[int] = {2005, 2011}
+_KEEPER_SUSPENSION_YEARS = {2005, 2011}
 
 
 @st.cache_data

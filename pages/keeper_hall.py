@@ -169,7 +169,7 @@ top_kept = (
 active_keeper_szns = sorted(keepers["season"].unique().astype(int).tolist())
 
 # Build (player, season) -> (manager, franchise_id) lookup for keepers only
-keeper_map: dict[tuple, tuple] = {}
+keeper_map = {}
 for _, row in keepers.iterrows():
     keeper_map[(row["player_name"], int(row["season"]))] = (row["manager"], row["franchise_id"])
 

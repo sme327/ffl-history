@@ -239,7 +239,7 @@ top_players = (
 )
 
 # Build a lookup: (player, season) -> (manager, is_keeper)
-ownership_map: dict[tuple, tuple] = {}
+ownership_map = {}
 for _, row in dpw.iterrows():
     key = (row["player_name"], int(row["season"]))
     ownership_map[key] = (row["manager"], bool(row["is_keeper"]))
