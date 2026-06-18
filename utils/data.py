@@ -955,6 +955,60 @@ def get_player_ownership() -> pd.DataFrame:
 
 
 @st.cache_data
+def get_keeper_enriched() -> pd.DataFrame:
+    """Keeper picks enriched with championship flags, manager season W-L, and playoff appearances."""
+    dpw = get_draft_picks_with_pos()
+    keepers = dpw[dpw["is_keeper"]].copy()
+    champions = get_champions()
+    data_all = load_all()
+    std = data_all["standings"]
+    tnh = data_all["team_name_history"]
+    pg = data_all["playoff_games"]
+
+    # Championship flag
+    champ_lookup = champions[["season", "champion_manager"]].rename(
+        columns={"champion_manager": "_champ_mgr"}
+    )
+    keepers = keepers.merge(champ_lookup, on="season", how="left")
+    keepers["won_title"] = keepers["manager"] == keepers["_champ_mgr"]
+    keepers = keepers.drop(columns=["_champ_mgr"])
+
+    # Manager W-L record that season
+    tnh_mgr = tnh[["season", "team_name", "canonical_name"]].rename(
+        columns={"canonical_name": "manager"}
+    )
+    std_with_mgr = std.merge(tnh_mgr, on=["season", "team_name"], how="left")
+    std_lookup = (
+        std_with_mgr[["season", "manager", "wins", "losses", "rank"]]
+        .drop_duplicates(subset=["season", "manager"])
+    )
+    keepers = keepers.merge(std_lookup, on=["season", "manager"], how="left")
+    keepers = keepers.rename(columns={"rank": "finish"})
+    keepers["wins"] = keepers["wins"].fillna(0).astype(int)
+    keepers["losses"] = keepers["losses"].fillna(0).astype(int)
+
+    # Playoff flag (appeared in championship bracket)
+    champ_pg = pg[pg["bracket"] == "championship"]
+    pl_teams = pd.concat([
+        champ_pg[["season", "team_1"]].rename(columns={"team_1": "team_name"}),
+        champ_pg[["season", "team_2"]].rename(columns={"team_2": "team_name"}),
+    ]).drop_duplicates()
+    pl_with_mgr = (
+        pl_teams.merge(tnh_mgr, on=["season", "team_name"], how="left")
+        .drop_duplicates(subset=["season", "manager"])
+    )
+    pl_with_mgr["made_playoffs"] = True
+    keepers = keepers.merge(
+        pl_with_mgr[["season", "manager", "made_playoffs"]],
+        on=["season", "manager"], how="left",
+    )
+    keepers["made_playoffs"] = keepers["made_playoffs"].fillna(False)
+    keepers["keeper_cost_round"] = keepers["round"].astype(int)
+
+    return keepers.reset_index(drop=True)
+
+
+@st.cache_data
 def get_franchise_legends(franchise_id: str) -> list[dict]:
     """Top players for a franchise by weighted (draft + keeper) frequency."""
     po = get_player_ownership()
