@@ -165,6 +165,8 @@ def _event_card(row) -> str:
 
     editorial_badge = '<span class="tl-editorial-badge">✦ EDITORIAL</span>' if source == "editorial" else ""
 
+    desc_html = "" if not desc or desc == "nan" else f'<div class="tl-event-desc">{desc}</div>'
+
     mgr_line = ""
     if mgr and mgr != "nan":
         mgr_line = (
@@ -183,7 +185,7 @@ def _event_card(row) -> str:
         f'      {editorial_badge}'
         f'    </div>'
         f'    <div class="tl-event-title" style="font-size:{title_size};">{title}</div>'
-        f'    {"" if not desc or desc == "nan" else f\'<div class="tl-event-desc">{desc}</div>\'}'
+        f'    {desc_html}'
         f'    {mgr_line}'
         f'  </div>'
         f'</div>'
