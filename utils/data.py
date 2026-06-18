@@ -1,4 +1,5 @@
 """Central data loading and derived metrics for The Long Game."""
+from __future__ import annotations
 import pandas as pd
 import streamlit as st
 from pathlib import Path
