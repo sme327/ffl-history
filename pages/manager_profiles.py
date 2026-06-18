@@ -3,7 +3,8 @@ import streamlit as st
 import plotly.graph_objects as go
 from utils.data import (
     load_all, get_manager_stats, get_manager_season_history,
-    get_manager_h2h, get_champions, MANAGER_EMOJI, CURRENT_SEASON,
+    get_manager_h2h, get_champions, get_draft_picks_with_pos, get_player_ownership,
+    MANAGER_EMOJI, MANAGER_COLORS, CURRENT_SEASON,
 )
 from utils.styles import inject_css, render_nav, render_page_footer, avatar_html, metric_card, html_table
 
@@ -342,6 +343,115 @@ if len(h2h) > 0:
             html_table(["Opponent", "GP", "W-L", "Win%", "PF", "PA"], h2h_rows),
             unsafe_allow_html=True,
         )
+
+st.markdown('<hr class="tl-divider-full">', unsafe_allow_html=True)
+
+# ── DRAFT IDENTITY ─────────────────────────────────────────────────────────────
+st.markdown(
+    '<div class="tl-section-label">Draft Profile</div>'
+    '<div class="tl-section-title">Draft Identity</div>',
+    unsafe_allow_html=True,
+)
+
+_dpw = get_draft_picks_with_pos()
+_po  = get_player_ownership()
+_mgr_dpw   = _dpw[_dpw["manager"] == mgr_name]
+_mgr_real  = _mgr_dpw[~_mgr_dpw["is_keeper"]]
+_mgr_keep  = _mgr_dpw[_mgr_dpw["is_keeper"]]
+
+_SKILL = ["QB", "RB", "WR", "TE"]
+_POS_C = {"RB":"#22C55E","WR":"#3B82F6","QB":"#EF4444","TE":"#F59E0B","DEF":"#8B5CF6","K":"#6B7280"}
+
+if len(_mgr_real) > 0:
+    _r1 = _mgr_real[(_mgr_real["round"] == 1) & _mgr_real["position"].isin(_SKILL + ["DEF","K"])]
+    _r1_counts = _r1["position"].value_counts()
+    _r1_total  = len(_r1)
+
+    # Style label
+    def _style_lbl(counts, total, krate):
+        if total == 0: return "UNKNOWN", "#6B7280"
+        rb, wr, qb, te = [counts.get(p,0)/total for p in ["RB","WR","QB","TE"]]
+        if rb >= 0.55: return "RB HOARDER", "#22C55E"
+        if wr >= 0.45: return "WR COLLECTOR", "#3B82F6"
+        if qb >= 0.35: return "QB LOYALIST", "#EF4444"
+        if te >= 0.15: return "TE FIRST BELIEVER", "#F59E0B"
+        if krate >= 0.08: return "KEEPER MAXIMIZER", "#A78BFA"
+        return "BALANCED DRAFTER", "#A7B0BC"
+
+    _krate = len(_mgr_keep) / len(_mgr_dpw) if len(_mgr_dpw) else 0
+    _style, _style_c = _style_lbl(_r1_counts.to_dict(), _r1_total, _krate)
+
+    # Most drafted and most kept (non-DEF)
+    _indiv_real = _mgr_real[_mgr_real["position"] != "DEF"]
+    _most_d = _indiv_real["player_name"].value_counts().index[0] if len(_indiv_real) else "—"
+    _most_d_n = int(_indiv_real["player_name"].value_counts().iloc[0]) if len(_indiv_real) else 0
+    _indiv_keep = _mgr_keep[_mgr_keep["position"] != "DEF"]
+    _most_k = _indiv_keep["player_name"].value_counts().index[0] if len(_indiv_keep) else "—"
+    _most_k_n = int(_indiv_keep["player_name"].value_counts().iloc[0]) if len(_indiv_keep) else 0
+
+    _di_left, _di_right = st.columns([2, 1])
+    with _di_left:
+        # Horizontal position bar
+        _bar_html = '<div style="margin-bottom:1rem;">'
+        _bar_html += '<div style="font-size:0.65rem;color:#A7B0BC;font-family:\'Inter\',sans-serif;margin-bottom:6px;">ROUND 1 PICK BREAKDOWN</div>'
+        _bar_html += '<div style="display:flex;height:18px;border-radius:4px;overflow:hidden;width:100%;">'
+        for _pos in ["RB","WR","QB","TE","DEF","K"]:
+            _cnt = _r1_counts.get(_pos, 0)
+            if _cnt == 0 or _r1_total == 0: continue
+            _pct = _cnt / _r1_total * 100
+            _bar_html += (
+                f'<div style="width:{_pct}%;background:{_POS_C[_pos]};'
+                f'display:flex;align-items:center;justify-content:center;'
+                f'font-size:0.6rem;font-weight:700;color:#000;" title="{_pos} {_pct:.0f}%">'
+                f'{"" if _pct < 10 else _pos}</div>'
+            )
+        _bar_html += '</div>'
+        # Legend
+        _bar_html += '<div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;">'
+        for _pos in ["RB","WR","QB","TE","DEF","K"]:
+            _cnt = _r1_counts.get(_pos, 0)
+            if _cnt == 0: continue
+            _pct = _cnt / _r1_total * 100
+            _bar_html += (
+                f'<span style="font-size:0.62rem;font-family:\'Inter\',sans-serif;color:{_POS_C[_pos]};">'
+                f'{_pos}: {_pct:.0f}% ({_cnt})</span>'
+            )
+        _bar_html += '</div></div>'
+        st.markdown(_bar_html, unsafe_allow_html=True)
+
+    with _di_right:
+        _mgr_c = MANAGER_COLORS.get(mgr_name, "#6B7280")
+        st.markdown(
+            f'<div style="background:#0F1B2D;border:1px solid #1E2D40;border-top:3px solid {_mgr_c};'
+            f'border-radius:6px;padding:12px 14px;">'
+            f'<div style="font-size:0.6rem;color:{_style_c};font-family:\'Inter\',sans-serif;'
+            f'font-weight:700;letter-spacing:2px;margin-bottom:8px;">{_style}</div>'
+            f'<div style="font-size:0.67rem;color:#A7B0BC;font-family:\'Inter\',sans-serif;'
+            f'margin-bottom:3px;">Most drafted: <span style="color:#F5F5F5;font-weight:600;">'
+            f'{_most_d} ({_most_d_n}×)</span></div>'
+            f'<div style="font-size:0.67rem;color:#A7B0BC;font-family:\'Inter\',sans-serif;'
+            f'margin-bottom:3px;">Most kept: <span style="color:#D4AF37;font-weight:600;">'
+            f'{_most_k} ({_most_k_n}×)</span></div>'
+            f'<div style="font-size:0.67rem;color:#A7B0BC;font-family:\'Inter\',sans-serif;">'
+            f'Keeper rate: <span style="color:#F5F5F5;font-weight:600;">{_krate*100:.1f}%</span></div>'
+            f'</div>',
+            unsafe_allow_html=True,
+        )
+else:
+    st.markdown(
+        '<p style="color:#A7B0BC;font-size:0.75rem;font-family:\'Inter\',sans-serif;">'
+        'No draft data available for this manager.</p>',
+        unsafe_allow_html=True,
+    )
+
+st.markdown(
+    '<div style="margin-top:0.75rem;">'
+    '<a href="/draft_center" target="_self" style="font-family:\'Inter\',sans-serif;font-size:0.65rem;'
+    'color:#D4AF37;letter-spacing:3px;text-transform:uppercase;text-decoration:none;'
+    'border-bottom:1px solid rgba(212,175,55,0.5);padding-bottom:2px;">'
+    'FULL DRAFT PROFILE IN DRAFT CENTER →</a></div>',
+    unsafe_allow_html=True,
+)
 
 st.markdown('<hr class="tl-divider-full">', unsafe_allow_html=True)
 

@@ -4,7 +4,8 @@ import pandas as pd
 from utils.data import (
     load_all, get_franchise_stats, get_franchise_steward_periods,
     get_champions, get_playoff_result_for_team,
-    MANAGER_EMOJI, CURRENT_SEASON,
+    get_franchise_legends, get_draft_picks_with_pos,
+    MANAGER_EMOJI, MANAGER_COLORS, CURRENT_SEASON,
 )
 from utils.styles import inject_css, render_nav, render_page_footer, metric_card, html_table
 
@@ -831,26 +832,94 @@ st.markdown(
 
 st.markdown('<hr class="tl-divider-full">', unsafe_allow_html=True)
 
-# ── FRANCHISE LEGENDS (FUTURE) ───────────────────────────────────────────────────
+# ── FRANCHISE LEGENDS ────────────────────────────────────────────────────────
 st.markdown(
-    '<div class="tl-section-label">Coming Soon</div>'
+    '<div class="tl-section-label">The Cornerstones</div>'
     '<div class="tl-section-title">Franchise Legends</div>',
     unsafe_allow_html=True,
 )
 
-st.markdown(
-    f"""
-    <div class="tl-card" style="text-align:center;padding:2rem 1.5rem;border-style:dashed;opacity:0.65;">
-        <div style="font-size:2rem;margin-bottom:0.5rem;">🏅</div>
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:#A7B0BC;letter-spacing:3px;">Reserved for Player Data</div>
-        <div style="font-family:'Inter',sans-serif;font-size:0.72rem;color:#A7B0BC;margin-top:0.4rem;line-height:1.6;">
-            When roster data is available, this section will surface the players who defined each franchise era —
-            the studs drafted, the waiver wire pickups that won titles, the names that made this franchise what it is.
-        </div>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
+_fl_legends = get_franchise_legends(selected_franchise)
+_dpw_fr = get_draft_picks_with_pos()
+_POS_C_FR = {"RB":"#22C55E","WR":"#3B82F6","QB":"#EF4444","TE":"#F59E0B","DEF":"#8B5CF6","K":"#6B7280"}
+
+if _fl_legends:
+    st.markdown(
+        '<p style="font-family:\'Inter\',sans-serif;color:#A7B0BC;font-size:0.73rem;margin:-0.25rem 0 1.25rem;">'
+        'Ranked by franchise investment: draft frequency + keeper frequency (keepers weighted 3×).</p>',
+        unsafe_allow_html=True,
+    )
+    _leg_cols = st.columns(min(4, len(_fl_legends)))
+    for _ci, (_leg, _col) in enumerate(zip(_fl_legends, _leg_cols)):
+        _pname = _leg["player_name"]
+        _pos   = _leg.get("position", "?") or "?"
+        _pos_c = _POS_C_FR.get(_pos, "#6B7280")
+        _d_cnt = int(_leg["draft_count"])
+        _k_cnt = int(_leg["keeper_count"])
+        _score = int(_leg["legend_score"])
+        _szns  = _leg["seasons"]
+        _szn_str = f"{min(_szns)}–{max(_szns)}" if _szns else "—"
+        medal = ["🥇","🥈","🥉","🏅","🏅","🏅","🏅","🏅"][_ci]
+
+        # Who from this franchise drafted them (get unique managers)
+        _fr_picks = _dpw_fr[
+            (_dpw_fr["franchise_id"] == selected_franchise) &
+            (_dpw_fr["player_name"] == _pname)
+        ]
+        _fr_mgrs  = _fr_picks["manager"].dropna().unique().tolist()
+        _mgr_str  = " → ".join(MANAGER_EMOJI.get(m,"") + " " + m for m in _fr_mgrs)
+
+        _kept_str = "" if _k_cnt == 0 else f" · Kept {_k_cnt}×"
+        _mgr_line = (
+            f'<div style="font-size:0.58rem;color:#A7B0BC;font-family:\'Inter\',sans-serif;margin-top:4px;">'
+            f'{_mgr_str}</div>'
+        ) if _mgr_str else ""
+        _col.markdown(
+            f'<div style="background:#0F1B2D;border:1px solid #1E2D40;border-top:3px solid {_pos_c};'
+            f'border-radius:6px;padding:12px;text-align:center;height:100%;">'
+            f'<div style="font-size:1.4rem;margin-bottom:4px;">{medal}</div>'
+            f'<div style="font-family:\'Bebas Neue\',sans-serif;font-size:0.95rem;color:#F5F5F5;'
+            f'letter-spacing:2px;line-height:1.2;margin-bottom:4px;">{_pname}</div>'
+            f'<div style="background:{_pos_c};color:#000;font-weight:700;font-size:0.55rem;'
+            f'padding:1px 5px;border-radius:3px;display:inline-block;letter-spacing:1px;'
+            f'margin-bottom:6px;">{_pos}</div>'
+            f'<div style="font-size:0.6rem;color:#A7B0BC;font-family:\'Inter\',sans-serif;">'
+            f'Drafted {_d_cnt}×{_kept_str}</div>'
+            f'<div style="font-size:0.58rem;color:#6B7280;font-family:\'Inter\',sans-serif;'
+            f'margin-top:3px;">{_szn_str}</div>'
+            f'{_mgr_line}'
+            f'</div>',
+            unsafe_allow_html=True,
+        )
+    # Second row if more than 4
+    if len(_fl_legends) > 4:
+        _leg_cols2 = st.columns(len(_fl_legends) - 4)
+        for _ci2, (_leg, _col) in enumerate(zip(_fl_legends[4:], _leg_cols2)):
+            _pname = _leg["player_name"]
+            _pos   = _leg.get("position", "?") or "?"
+            _pos_c = _POS_C_FR.get(_pos, "#6B7280")
+            _d_cnt = int(_leg["draft_count"])
+            _k_cnt = int(_leg["keeper_count"])
+            _szns  = _leg["seasons"]
+            _szn_str = f"{min(_szns)}–{max(_szns)}" if _szns else "—"
+            medal = ["🏅","🏅","🏅","🏅"][_ci2]
+            _col.markdown(
+                f'<div style="background:#0F1B2D;border:1px solid #1E2D40;border-top:3px solid {_pos_c};'
+                f'border-radius:6px;padding:12px;text-align:center;margin-top:10px;">'
+                f'<div style="font-size:1.1rem;margin-bottom:3px;">{medal}</div>'
+                f'<div style="font-family:\'Bebas Neue\',sans-serif;font-size:0.88rem;color:#F5F5F5;'
+                f'letter-spacing:2px;line-height:1.2;">{_pname}</div>'
+                f'<div style="font-size:0.58rem;color:#A7B0BC;font-family:\'Inter\',sans-serif;margin-top:3px;">'
+                f'Drafted {_d_cnt}× · Kept {_k_cnt}× · {_szn_str}</div>'
+                f'</div>',
+                unsafe_allow_html=True,
+            )
+else:
+    st.markdown(
+        '<p style="color:#A7B0BC;font-size:0.75rem;font-family:\'Inter\',sans-serif;">'
+        'No draft history available for this franchise.</p>',
+        unsafe_allow_html=True,
+    )
 
 render_page_footer(
     href="/champions",

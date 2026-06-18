@@ -748,6 +748,8 @@ def render_nav(active: str = "home"):
         ("season_archive",    "/season_archive",      "Season Archive"),
         ("manager_profiles",  "/manager_profiles",    "Managers"),
         ("franchise_profiles","/franchise_profiles",  "Franchises"),
+        ("draft_center",      "/draft_center",        "Draft Center"),
+        ("keeper_hall",       "/keeper_hall",         "Keeper Hall"),
     ]
     links = "".join(
         f'<a href="{href}" class="tl-nav-link{" active" if active == key else ""}" target="_self">{label}</a>'

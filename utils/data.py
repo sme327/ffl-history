@@ -10,6 +10,33 @@ LEAGUE_SUBTITLE = "A Quarter Century of {insert witty name here} Glory"
 FOUNDED = 2001
 CURRENT_SEASON = 2025
 
+MANAGER_COLORS: dict[str, str] = {
+    "Shawn":         "#D4AF37",
+    "Brian Clark":   "#3B82F6",
+    "Dominic":       "#EF4444",
+    "Kevin O'Boyle": "#10B981",
+    "Kevin Swanson": "#F59E0B",
+    "Thomas":        "#8B5CF6",
+    "Evan":          "#EC4899",
+    "Steve Swanson": "#14B8A6",
+    "Fadi":          "#F97316",
+    "Douglas":       "#6366F1",
+    "Jeff":          "#84CC16",
+    "Eric":          "#06B6D4",
+    "Jamie":         "#A78BFA",
+    "Nick Blaettler":"#FB923C",
+    "Adam":          "#F43F5E",
+    "Rob":           "#94A3B8",
+    "Byron":         "#C084FC",
+    "Dan":           "#4ADE80",
+    "Dale":          "#FCD34D",
+    "Bryan Kearney": "#60A5FA",
+    "Joe Tyszko":    "#34D399",
+    "Mike":          "#FCA5A5",
+    "Robby":         "#93C5FD",
+    "BV":            "#6B7280",
+}
+
 MANAGER_EMOJI = {
     "Shawn": "🐝",
     "Fadi": "👑",
@@ -49,6 +76,7 @@ def load_all() -> dict:
         "team_name_history": "team_name_history.csv",
         "franchise_history": "franchise_history.csv",
         "draft_picks": "draft_picks.csv",
+        "player_positions": "player_positions.csv",
         "season_trades": "season_trades.csv",
         "league_settings": "league_settings.csv",
         "manager_lookup": "manager_lookup.csv",
@@ -742,3 +770,198 @@ def get_timeline_events() -> pd.DataFrame:
         all_events[col] = all_events[col].fillna(False).astype(bool)
 
     return all_events
+
+
+# ── DRAFT & KEEPER ANALYSIS ───────────────────────────────────────────────────
+
+_FANTASY_POS = ["QB", "RB", "WR", "TE", "DEF", "K"]
+_POS_NORM = {"FB": "RB"}          # rare fullbacks count as RBs in fantasy
+_POS_COLORS = {
+    "RB":  "#22C55E",
+    "WR":  "#3B82F6",
+    "QB":  "#EF4444",
+    "TE":  "#F59E0B",
+    "DEF": "#8B5CF6",
+    "K":   "#6B7280",
+    "Other": "#374151",
+}
+# Seasons where the keeper format was suspended — treat as gaps in streak math
+_KEEPER_SUSPENSION_YEARS: set[int] = {2005, 2011}
+
+
+@st.cache_data
+def get_draft_picks_with_pos() -> pd.DataFrame:
+    """Draft picks joined with position, manager name, and franchise_id.
+    Excludes --empty-- placeholder rows and normalises rare non-fantasy positions."""
+    data = load_all()
+    dp = data["draft_picks"].copy()
+    pp = data["player_positions"]
+    fh = data["franchise_history"]
+    tnh = data["team_name_history"]
+
+    dpw = dp.merge(pp[["player_name", "position"]], on="player_name", how="left")
+    dpw["position"] = dpw["position"].map(lambda p: _POS_NORM.get(p, p) if pd.notna(p) else p)
+
+    dpw = dpw.merge(
+        tnh[["season", "team_name", "canonical_name"]],
+        on=["season", "team_name"], how="left",
+    ).rename(columns={"canonical_name": "manager"})
+
+    dpw = dpw.merge(
+        fh[["season", "manager_name", "franchise_id"]],
+        left_on=["season", "manager"], right_on=["season", "manager_name"], how="left",
+    ).drop(columns=["manager_name"])
+
+    return dpw[dpw["player_name"] != "--empty--"].reset_index(drop=True)
+
+
+@st.cache_data
+def get_position_trends_data() -> pd.DataFrame:
+    """Round-1 position share by season. Excludes keeper picks and years with <5 real R1 picks."""
+    dpw = get_draft_picks_with_pos()
+    r1 = dpw[(dpw["round"] == 1) & (~dpw["is_keeper"]) & dpw["position"].isin(_FANTASY_POS)].copy()
+    r1["pos_group"] = r1["position"]
+
+    trend = (
+        r1.groupby(["season", "pos_group"])
+        .size()
+        .unstack(fill_value=0)
+        .reset_index()
+    )
+    # Keep only seasons with enough real round-1 picks
+    pos_cols = [c for c in trend.columns if c != "season"]
+    trend["total"] = trend[pos_cols].sum(axis=1)
+    trend = trend[trend["total"] >= 5].copy()
+    for col in pos_cols:
+        trend[col] = (trend[col] / trend["total"] * 100).round(1)
+    return trend.drop(columns=["total"])
+
+
+@st.cache_data
+def get_draft_records() -> dict:
+    """Various draft superlatives as a dict of labelled facts."""
+    dpw = get_draft_picks_with_pos()
+    real = dpw[~dpw["is_keeper"]].copy()
+    keepers = dpw[dpw["is_keeper"]].copy()
+
+    # Most drafted individual players (exclude DEF)
+    indiv = real[real["position"] != "DEF"]
+    most_drafted = indiv.groupby("player_name").size().sort_values(ascending=False)
+
+    # Most drafted DEF
+    defs = real[real["position"] == "DEF"]
+    most_drafted_def = defs.groupby("player_name").size().sort_values(ascending=False)
+
+    # Most managers to draft the same player
+    mgr_per_player = indiv.groupby("player_name")["manager"].nunique().sort_values(ascending=False)
+
+    # Most frequently kept player
+    most_kept = keepers.groupby("player_name").size().sort_values(ascending=False)
+
+    # Earliest QB taken (lowest overall_pick, non-keeper, from rounds 1+)
+    qb_picks = real[real["position"] == "QB"].sort_values("overall_pick")
+    te_picks = real[real["position"] == "TE"].sort_values("overall_pick")
+    k_picks  = real[real["position"] == "K"].sort_values("overall_pick")
+    def_picks = real[real["position"] == "DEF"].sort_values("overall_pick")
+
+    def _top(df, n=1):
+        if len(df) == 0:
+            return []
+        return df.head(n)[["season", "overall_pick", "round", "pick_in_round", "manager", "player_name"]].to_dict("records")
+
+    # Keeper position breakdown
+    k_pos = keepers[keepers["position"].notna()]["position"].value_counts()
+
+    return {
+        "most_drafted_players": most_drafted.head(10).reset_index().values.tolist(),
+        "most_drafted_def": most_drafted_def.head(5).reset_index().values.tolist(),
+        "most_mgrs_one_player": mgr_per_player.head(5).reset_index().values.tolist(),
+        "most_kept_players": most_kept.head(10).reset_index().values.tolist(),
+        "earliest_qb": _top(qb_picks, 5),
+        "earliest_te": _top(te_picks, 5),
+        "earliest_k": _top(k_picks, 3),
+        "earliest_def_r1": _top(def_picks[def_picks["round"] == 1], 3),
+        "keeper_pos_breakdown": k_pos.to_dict(),
+        "total_picks": len(real),
+        "total_keepers": len(keepers),
+        "total_unique_players": indiv["player_name"].nunique(),
+        "keeper_seasons": sorted(keepers["season"].unique().tolist()),
+    }
+
+
+@st.cache_data
+def get_keeper_chains() -> pd.DataFrame:
+    """Per-player keeper streak analysis. One row per (player, manager, streak)."""
+    dpw = get_draft_picks_with_pos()
+    keepers = dpw[dpw["is_keeper"]].copy()
+
+    rows = []
+    for player, grp in keepers.groupby("player_name"):
+        all_rows = grp.sort_values("season")[["season", "manager", "franchise_id"]].values.tolist()
+        if not all_rows:
+            continue
+
+        def _flush(streak):
+            mgrs = list(dict.fromkeys([r[1] for r in streak]))  # ordered unique managers
+            rows.append({
+                "player_name": player,
+                "primary_manager": streak[0][1],
+                "all_managers": mgrs,
+                "franchise_id": streak[0][2],
+                "seasons": [int(r[0]) for r in streak],
+                "streak_len": len(streak),
+                "first_season": int(streak[0][0]),
+                "last_season": int(streak[-1][0]),
+                "multi_manager": len(mgrs) > 1,
+            })
+
+        streak_start = 0
+        for i in range(1, len(all_rows)):
+            prev_szn, prev_mgr, prev_fid = all_rows[i - 1]
+            curr_szn, curr_mgr, curr_fid = all_rows[i]
+            gap_years = set(range(int(prev_szn) + 1, int(curr_szn)))
+            is_suspension_gap = gap_years.issubset(_KEEPER_SUSPENSION_YEARS)
+            # Break streak on non-suspension year gap OR franchise change
+            if not is_suspension_gap or curr_fid != prev_fid:
+                _flush(all_rows[streak_start:i])
+                streak_start = i
+
+        _flush(all_rows[streak_start:])
+
+    df = pd.DataFrame(rows)
+    return df.sort_values("streak_len", ascending=False).reset_index(drop=True)
+
+
+@st.cache_data
+def get_player_ownership() -> pd.DataFrame:
+    """Per (player, manager) summary: draft count, keeper count, seasons list."""
+    dpw = get_draft_picks_with_pos()
+    rows = []
+    for (player, mgr), grp in dpw.groupby(["player_name", "manager"]):
+        k_grp = grp[grp["is_keeper"]]
+        rows.append({
+            "player_name": player,
+            "manager": mgr,
+            "franchise_id": grp["franchise_id"].iloc[0] if grp["franchise_id"].notna().any() else None,
+            "position": grp["position"].iloc[0],
+            "draft_count": int((~grp["is_keeper"]).sum()),
+            "keeper_count": int(grp["is_keeper"].sum()),
+            "total_seasons": len(grp),
+            "seasons": sorted(grp["season"].astype(int).tolist()),
+            "first_season": int(grp["season"].min()),
+            "last_season": int(grp["season"].max()),
+        })
+    return pd.DataFrame(rows).sort_values("total_seasons", ascending=False).reset_index(drop=True)
+
+
+@st.cache_data
+def get_franchise_legends(franchise_id: str) -> list[dict]:
+    """Top players for a franchise by weighted (draft + keeper) frequency."""
+    po = get_player_ownership()
+    fpo = po[po["franchise_id"] == franchise_id].copy()
+    if len(fpo) == 0:
+        return []
+    fpo["legend_score"] = fpo["draft_count"] * 1 + fpo["keeper_count"] * 3
+    fpo = fpo[fpo["position"] != "DEF"]  # exclude team defenses
+    top = fpo.nlargest(8, "legend_score")
+    return top[["player_name", "position", "draft_count", "keeper_count", "legend_score", "seasons"]].to_dict("records")
