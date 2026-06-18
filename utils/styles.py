@@ -714,6 +714,61 @@ _CSS = """
             color: #D4AF37;
             background: rgba(212,175,55,0.08);
         }
+
+        /* ── MOBILE NAV ─────────────────────────────────── */
+        .tl-nav-toggle-cb { display: none; }
+        .tl-nav-hamburger {
+            display: none;
+            cursor: pointer;
+            color: #D4AF37;
+            font-size: 1.6rem;
+            line-height: 1;
+            user-select: none;
+            padding: 4px 2px;
+        }
+        @media (max-width: 900px) {
+            .main .block-container {
+                padding-top: 64px !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            .tl-nav {
+                height: auto;
+                min-height: 52px;
+                padding: 0 1.25rem;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .tl-nav-brand { font-size: 1.1rem; letter-spacing: 3px; }
+            .tl-nav-hamburger { display: block; }
+            .tl-nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 0;
+                padding: 0.4rem 0 0.75rem;
+                border-top: 1px solid rgba(184,144,46,0.25);
+                margin-top: 4px;
+            }
+            .tl-nav-toggle-cb:checked ~ .tl-nav-links { display: flex; }
+            .tl-nav-link {
+                padding: 0.5rem 0.25rem;
+                font-size: 0.72rem;
+                border-bottom: none !important;
+                border-left: 2px solid transparent;
+                padding-left: 0.6rem;
+                transition: border-color 0.15s, color 0.15s;
+            }
+            .tl-nav-link.active {
+                border-left-color: #D4AF37;
+                border-bottom-color: transparent !important;
+            }
+            .tl-nav-link:hover {
+                border-left-color: #D4AF37;
+                border-bottom-color: transparent !important;
+            }
+        }
 """
 
 _FONTS_URL = "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap"
@@ -759,6 +814,8 @@ def render_nav(active: str = "home"):
         f"""
         <div class="tl-nav">
             <a href="/" class="tl-nav-brand">THE LONG GAME</a>
+            <input type="checkbox" id="tl-nav-toggle" class="tl-nav-toggle-cb">
+            <label for="tl-nav-toggle" class="tl-nav-hamburger">&#9776;</label>
             <div class="tl-nav-links">{links}</div>
         </div>
         """,
