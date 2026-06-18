@@ -641,7 +641,11 @@ for p, fill in era_traces:
         mode="lines",
         fill=fill,
         line=dict(width=1.5, color=POS_COLORS[p]),
-        fillcolor=POS_COLORS[p] + "55",
+        fillcolor="rgba({},{},{},0.33)".format(
+            int(POS_COLORS[p][1:3], 16),
+            int(POS_COLORS[p][3:5], 16),
+            int(POS_COLORS[p][5:7], 16),
+        ),
         hovertemplate=f"<b>%{{x}}</b><br>{p}: %{{y:.1f}}%<extra></extra>",
         stackgroup="one",
     ))
