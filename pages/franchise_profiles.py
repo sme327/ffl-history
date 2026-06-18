@@ -6,7 +6,7 @@ from utils.data import (
     get_champions, get_playoff_result_for_team,
     MANAGER_EMOJI, CURRENT_SEASON,
 )
-from utils.styles import inject_css, render_nav, metric_card, html_table
+from utils.styles import inject_css, render_nav, render_page_footer, metric_card, html_table
 
 st.set_page_config(
     page_title="Franchises · The Long Game",
@@ -850,4 +850,10 @@ st.markdown(
     </div>
     """,
     unsafe_allow_html=True,
+)
+
+render_page_footer(
+    href="/champions",
+    cta="BACK TO THE TROPHY ROOM",
+    tagline="EVERY FRANCHISE.<br>ONE DESTINATION.",
 )

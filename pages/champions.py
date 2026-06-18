@@ -4,7 +4,7 @@ from utils.data import (
     load_all, get_champions, get_manager_stats,
     MANAGER_EMOJI, CURRENT_SEASON, FOUNDED,
 )
-from utils.styles import inject_css, render_nav, html_table
+from utils.styles import inject_css, render_nav, render_page_footer, html_table
 
 st.set_page_config(
     page_title="Champions · The Long Game",
@@ -412,4 +412,10 @@ st.markdown(
         final_rows,
     ),
     unsafe_allow_html=True,
+)
+
+render_page_footer(
+    href="/league_timeline",
+    cta="EXPLORE THE TIMELINE",
+    tagline="EVERY SEASON.<br>EVERY MOMENT.<br>EVERY UPSET.",
 )

@@ -788,6 +788,31 @@ def section_header(label: str, title: str) -> str:
     )
 
 
+def render_page_footer(href: str, cta: str, tagline: str) -> None:
+    """Bottom 'continue the journey' link — mirrors the home page teaser style."""
+    st.markdown(
+        f"""
+        <div style="text-align:center;padding:4rem 0 2.5rem;">
+            <div style="height:1px;background:linear-gradient(to right,transparent,#D4AF37,transparent);
+                        margin:0 auto 2.25rem;max-width:400px;"></div>
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:1.35rem;color:#F5F5F5;
+                        letter-spacing:4px;line-height:1.9;">
+                {tagline}
+            </div>
+            <div style="margin-top:1.75rem;">
+                <a href="{href}" target="_self"
+                   style="font-family:'Inter',sans-serif;font-size:0.72rem;color:#D4AF37;
+                          letter-spacing:4px;text-transform:uppercase;text-decoration:none;
+                          border-bottom:1px solid rgba(212,175,55,0.6);padding-bottom:3px;">
+                    {cta} &nbsp;&rarr;
+                </a>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
 def html_table(headers: list, rows: list) -> str:
     th = "".join(f"<th>{h}</th>" for h in headers)
     tbody = ""

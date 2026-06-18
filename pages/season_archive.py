@@ -1,7 +1,7 @@
 """Season Archive page — drill into any individual season."""
 import streamlit as st
 from utils.data import load_all, get_champions, get_playoff_result_for_team, MANAGER_EMOJI, CURRENT_SEASON
-from utils.styles import inject_css, render_nav, html_table
+from utils.styles import inject_css, render_nav, render_page_footer, html_table
 
 st.set_page_config(
     page_title="Season Archive · The Long Game",
@@ -237,3 +237,9 @@ with col:
         html_table(["Rank", "Team", "Manager", "Total Points"], scorer_rows),
         unsafe_allow_html=True,
     )
+
+render_page_footer(
+    href="/manager_profiles",
+    cta="MEET THE MANAGERS",
+    tagline="SEASONS PASS.<br>THE PEOPLE REMAIN.",
+)

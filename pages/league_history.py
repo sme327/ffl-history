@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 from utils.data import load_all, get_champions, get_all_time_manager_stats, MANAGER_EMOJI, FOUNDED, CURRENT_SEASON
-from utils.styles import inject_css, render_nav, html_table
+from utils.styles import inject_css, render_nav, render_page_footer, html_table
 
 st.set_page_config(
     page_title="League History · The Long Game",
@@ -222,4 +222,10 @@ st.markdown(
         ats_rows,
     ),
     unsafe_allow_html=True,
+)
+
+render_page_footer(
+    href="/season_archive",
+    cta="BROWSE THE SEASON ARCHIVE",
+    tagline="RECORDS SHOW WHAT HAPPENED.<br>THE ARCHIVES SHOW HOW.",
 )

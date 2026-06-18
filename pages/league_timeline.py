@@ -1,7 +1,7 @@
 """League Timeline — every season, every moment, 25 years of history."""
 import streamlit as st
 from utils.data import get_timeline_events, CURRENT_SEASON, FOUNDED, MANAGER_EMOJI
-from utils.styles import inject_css, render_nav
+from utils.styles import inject_css, render_nav, render_page_footer
 
 st.set_page_config(
     page_title="Timeline · The Long Game",
@@ -240,4 +240,10 @@ st.markdown(
     f'{total_events} TOTAL EVENTS &nbsp;·&nbsp; COMPUTED FROM LEAGUE DATA &nbsp;·&nbsp; '
     f'EDITORIAL ANNOTATIONS ADDED BY LEAGUE HISTORIAN</div>',
     unsafe_allow_html=True,
+)
+
+render_page_footer(
+    href="/league_history",
+    cta="SEE THE LEAGUE RECORDS",
+    tagline="THE MOMENTS ARE RECORDED.<br>THE NUMBERS TELL ANOTHER STORY.",
 )

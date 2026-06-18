@@ -5,7 +5,7 @@ from utils.data import (
     load_all, get_manager_stats, get_manager_season_history,
     get_manager_h2h, get_champions, MANAGER_EMOJI, CURRENT_SEASON,
 )
-from utils.styles import inject_css, render_nav, avatar_html, metric_card, html_table
+from utils.styles import inject_css, render_nav, render_page_footer, avatar_html, metric_card, html_table
 
 st.set_page_config(
     page_title="Managers · The Long Game",
@@ -406,3 +406,9 @@ for team_name, s_start, s_end in runs:
 _, col, _ = st.columns([1, 2, 1])
 with col:
     st.markdown(html_table(["Years", "Team Name"], name_rows), unsafe_allow_html=True)
+
+render_page_footer(
+    href="/franchise_profiles",
+    cta="EXPLORE THE FRANCHISES",
+    tagline="MANAGERS COME AND GO.<br>THE FRANCHISES ENDURE.",
+)
