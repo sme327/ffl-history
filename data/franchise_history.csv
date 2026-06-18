@@ -1,0 +1,297 @@
+franchise_id,season,manager_name
+F01,2001,Adam
+F01,2002,Adam
+F01,2003,Adam
+F01,2004,Adam
+F01,2005,Adam
+F01,2006,Adam
+F01,2007,Adam
+F01,2008,Adam
+F01,2009,Adam
+F01,2010,Adam
+F01,2011,Adam
+F01,2012,Adam
+F01,2013,Adam
+F01,2014,Adam
+F01,2015,Douglas
+F01,2016,Douglas
+F01,2017,Douglas
+F01,2018,Douglas
+F01,2019,Douglas
+F01,2020,Douglas
+F01,2021,Douglas
+F01,2022,Douglas
+F01,2023,Douglas
+F01,2024,Douglas
+F01,2025,Douglas
+F02,2001,Brian Clark
+F02,2002,Brian Clark
+F02,2003,Brian Clark
+F02,2004,Brian Clark
+F02,2005,Brian Clark
+F02,2006,Brian Clark
+F02,2007,Brian Clark
+F02,2008,Brian Clark
+F02,2009,Brian Clark
+F02,2010,Brian Clark
+F02,2011,Brian Clark
+F02,2012,Brian Clark
+F02,2013,Brian Clark
+F02,2014,Brian Clark
+F02,2015,Brian Clark
+F02,2016,Brian Clark
+F02,2017,Brian Clark
+F02,2018,Brian Clark
+F02,2019,Brian Clark
+F02,2020,Brian Clark
+F02,2021,Brian Clark
+F02,2022,Brian Clark
+F02,2023,Brian Clark
+F02,2024,Brian Clark
+F02,2025,Brian Clark
+F03,2001,Byron
+F03,2002,Byron
+F03,2003,Byron
+F03,2004,Byron
+F03,2005,Dominic
+F03,2006,Dominic
+F03,2007,Dominic
+F03,2008,Dominic
+F03,2009,Dominic
+F03,2010,Dominic
+F03,2011,Dominic
+F03,2012,Dominic
+F03,2013,Dominic
+F03,2014,Dominic
+F03,2015,Dominic
+F03,2016,Dominic
+F03,2017,Dominic
+F03,2018,Dominic
+F03,2019,Dominic
+F03,2020,Dominic
+F03,2021,Dominic
+F03,2022,Dominic
+F03,2023,Dominic
+F03,2024,Dominic
+F03,2025,Dominic
+F04,2001,Dale
+F04,2002,Dale
+F04,2003,Joe Tyszko
+F04,2004,Joe Tyszko
+F04,2005,Joe Tyszko
+F04,2006,Joe Tyszko
+F04,2007,Joe Tyszko
+F04,2008,Joe Tyszko
+F04,2009,Joe Tyszko
+F04,2010,Nick Blaettler
+F04,2011,Nick Blaettler
+F04,2012,Nick Blaettler
+F04,2013,Nick Blaettler
+F04,2014,Nick Blaettler
+F04,2015,Nick Blaettler
+F04,2016,Nick Blaettler
+F04,2017,Nick Blaettler
+F04,2018,Nick Blaettler
+F04,2019,Nick Blaettler
+F04,2020,Nick Blaettler
+F04,2021,Bryan Kearney
+F04,2022,Bryan Kearney
+F04,2023,Eric
+F04,2024,Eric
+F04,2025,Eric
+F05,2001,Dan
+F05,2002,Dan
+F05,2003,Dan
+F05,2004,Evan
+F05,2005,Evan
+F05,2006,Evan
+F05,2007,Evan
+F05,2008,Evan
+F05,2009,Evan
+F05,2010,Evan
+F05,2011,Evan
+F05,2012,Evan
+F05,2013,Evan
+F05,2014,Evan
+F05,2015,Evan
+F05,2016,Evan
+F05,2017,Evan
+F05,2018,Evan
+F05,2019,Evan
+F05,2020,Evan
+F05,2021,Evan
+F05,2022,Evan
+F05,2023,Evan
+F05,2024,Evan
+F05,2025,Evan
+F06,2001,Fadi
+F06,2002,Fadi
+F06,2003,Fadi
+F06,2004,Fadi
+F06,2005,Fadi
+F06,2006,Fadi
+F06,2007,Fadi
+F06,2008,Fadi
+F06,2009,Fadi
+F06,2010,Fadi
+F06,2011,Fadi
+F06,2012,Fadi
+F06,2013,Fadi
+F06,2014,Fadi
+F06,2015,Fadi
+F06,2016,Fadi
+F06,2017,Fadi
+F06,2018,Fadi
+F06,2019,Fadi
+F06,2020,Fadi
+F06,2021,Fadi
+F06,2022,Fadi
+F06,2023,Fadi
+F06,2024,Fadi
+F06,2025,Fadi
+F07,2001,Jamie
+F07,2002,Jamie
+F07,2003,Jamie
+F07,2004,Jamie
+F07,2005,Jamie
+F07,2006,Mike
+F07,2007,Mike
+F07,2008,Mike
+F07,2009,Mike
+F07,2010,BV
+F07,2011,Robby
+F07,2012,Robby
+F07,2013,Robby
+F07,2014,Robby
+F07,2015,Robby
+F07,2016,Robby
+F07,2017,Jeff
+F07,2018,Jeff
+F07,2019,Jeff
+F07,2020,Jeff
+F07,2021,Jeff
+F07,2022,Jeff
+F07,2023,Jeff
+F07,2024,Jeff
+F07,2025,Jeff
+F08,2001,Rob
+F08,2002,Rob
+F08,2003,Rob
+F08,2004,Rob
+F08,2005,Rob
+F08,2006,Rob
+F08,2007,Steve Swanson
+F08,2008,Steve Swanson
+F08,2009,Steve Swanson
+F08,2010,Steve Swanson
+F08,2011,Steve Swanson
+F08,2012,Steve Swanson
+F08,2013,Steve Swanson
+F08,2014,Steve Swanson
+F08,2015,Steve Swanson
+F08,2016,Steve Swanson
+F08,2017,Steve Swanson
+F08,2018,Steve Swanson
+F08,2019,Steve Swanson
+F08,2020,Steve Swanson
+F08,2021,Steve Swanson
+F08,2022,Steve Swanson
+F08,2023,Steve Swanson
+F08,2024,Steve Swanson
+F08,2025,Steve Swanson
+F09,2001,Shawn
+F09,2002,Shawn
+F09,2003,Shawn
+F09,2004,Shawn
+F09,2005,Shawn
+F09,2006,Shawn
+F09,2007,Shawn
+F09,2008,Shawn
+F09,2009,Shawn
+F09,2010,Shawn
+F09,2011,Shawn
+F09,2012,Shawn
+F09,2013,Shawn
+F09,2014,Shawn
+F09,2015,Shawn
+F09,2016,Shawn
+F09,2017,Shawn
+F09,2018,Shawn
+F09,2019,Shawn
+F09,2020,Shawn
+F09,2021,Shawn
+F09,2022,Shawn
+F09,2023,Shawn
+F09,2024,Shawn
+F09,2025,Shawn
+F10,2002,Kevin O'Boyle
+F10,2003,Kevin O'Boyle
+F10,2004,Kevin O'Boyle
+F10,2005,Kevin O'Boyle
+F10,2006,Kevin O'Boyle
+F10,2007,Kevin O'Boyle
+F10,2008,Kevin O'Boyle
+F10,2009,Kevin O'Boyle
+F10,2010,Kevin O'Boyle
+F10,2011,Kevin O'Boyle
+F10,2012,Kevin O'Boyle
+F10,2013,Kevin O'Boyle
+F10,2014,Kevin O'Boyle
+F10,2015,Kevin O'Boyle
+F10,2016,Kevin O'Boyle
+F10,2017,Kevin O'Boyle
+F10,2018,Kevin O'Boyle
+F10,2019,Kevin O'Boyle
+F10,2020,Kevin O'Boyle
+F10,2021,Kevin O'Boyle
+F10,2022,Kevin O'Boyle
+F10,2023,Kevin O'Boyle
+F10,2024,Kevin O'Boyle
+F10,2025,Kevin O'Boyle
+F11,2002,Kevin Swanson
+F11,2003,Kevin Swanson
+F11,2004,Kevin Swanson
+F11,2005,Kevin Swanson
+F11,2006,Kevin Swanson
+F11,2007,Kevin Swanson
+F11,2008,Kevin Swanson
+F11,2009,Kevin Swanson
+F11,2010,Kevin Swanson
+F11,2011,Kevin Swanson
+F11,2012,Kevin Swanson
+F11,2013,Kevin Swanson
+F11,2014,Kevin Swanson
+F11,2015,Kevin Swanson
+F11,2016,Kevin Swanson
+F11,2017,Kevin Swanson
+F11,2018,Kevin Swanson
+F11,2019,Kevin Swanson
+F11,2020,Kevin Swanson
+F11,2021,Kevin Swanson
+F11,2022,Kevin Swanson
+F11,2023,Kevin Swanson
+F11,2024,Kevin Swanson
+F11,2025,Kevin Swanson
+F12,2003,Thomas
+F12,2004,Thomas
+F12,2005,Thomas
+F12,2006,Thomas
+F12,2007,Thomas
+F12,2008,Thomas
+F12,2009,Thomas
+F12,2010,Thomas
+F12,2011,Thomas
+F12,2012,Thomas
+F12,2013,Thomas
+F12,2014,Thomas
+F12,2015,Thomas
+F12,2016,Thomas
+F12,2017,Thomas
+F12,2018,Thomas
+F12,2019,Thomas
+F12,2020,Thomas
+F12,2021,Thomas
+F12,2022,Thomas
+F12,2023,Thomas
+F12,2024,Thomas
+F12,2025,Thomas

@@ -1,0 +1,282 @@
+season,bracket,week,round,game_type,seed_1,team_1,score_1,seed_2,team_2,score_2,winner
+2001,consolation,16,1,semifinal,5,crown,39.35,8,No Mercy,52.56,No Mercy
+2001,consolation,16,1,semifinal,6,Recruits,69.30,7,clark,54.03,Recruits
+2001,championship,16,2,semifinal,1,sme,59.08,4,Cammuffs,75.52,Cammuffs
+2001,championship,16,2,semifinal,2,Marx Brothers,65.91,3,angel,80.33,angel
+2001,consolation,17,2,5th_place,8,No Mercy,33.83,6,Recruits,27.12,No Mercy
+2001,consolation,17,2,7th_place,5,crown,21.07,7,clark,86.75,clark
+2001,championship,17,3,final,4,Cammuffs,55.46,3,angel,59.01,angel
+2001,championship,17,3,3rd_place,1,sme,73.35,2,Marx Brothers,75.53,Marx Brothers
+2002,championship,15,1,quarterfinal,1,Team Old Style,72.27,8,Team Duff,53.62,Team Old Style
+2002,championship,15,1,quarterfinal,4,Cammuffs,81.58,5,watch yourself,88.24,watch yourself
+2002,championship,15,1,quarterfinal,3,sme,61.17,6,angel,73.13,angel
+2002,championship,15,1,quarterfinal,2,Atom Smashers,50.88,7,Pilsner Urquell FC,53.01,Pilsner Urquell FC
+2002,consolation,16,1,semifinal,8,Team Duff,61.25,4,Cammuffs,61.47,Cammuffs
+2002,consolation,16,1,semifinal,3,sme,80.38,2,Atom Smashers,45.07,sme
+2002,championship,16,2,semifinal,1,Team Old Style,52.94,5,watch yourself,28.38,Team Old Style
+2002,championship,16,2,semifinal,6,angel,66.12,7,Pilsner Urquell FC,59.21,angel
+2002,consolation,17,2,5th_place,4,Cammuffs,62.27,3,sme,58.44,Cammuffs
+2002,consolation,17,2,7th_place,8,Team Duff,60.71,2,Atom Smashers,31.13,Team Duff
+2002,championship,17,3,final,1,Team Old Style,49.10,6,angel,75.63,angel
+2002,championship,17,3,3rd_place,5,watch yourself,76.14,7,Pilsner Urquell FC,79.77,Pilsner Urquell FC
+2003,championship,15,1,quarterfinal,1,Team Duff,41.25,8,1043,64.02,1043
+2003,championship,15,1,quarterfinal,4,Budweiser,52.42,5,Cammuffs,79.28,Cammuffs
+2003,championship,15,1,quarterfinal,3,team old style,55.78,6,Guinness on Tap,74.27,Guinness on Tap
+2003,championship,15,1,quarterfinal,2,crabby jamie,84.85,7,Ditkas Mustache,75.73,crabby jamie
+2003,consolation,16,1,semifinal,1,Team Duff,67.16,4,Budweiser,17.93,Team Duff
+2003,consolation,16,1,semifinal,3,team old style,94.74,7,Ditkas Mustache,77.08,team old style
+2003,championship,16,2,semifinal,8,1043,87.58,5,Cammuffs,71.70,1043
+2003,championship,16,2,semifinal,6,Guinness on Tap,52.86,2,crabby jamie,71.27,crabby jamie
+2003,consolation,17,2,5th_place,1,Team Duff,58.15,3,team old style,54.30,Team Duff
+2003,consolation,17,2,7th_place,4,Budweiser,47.10,7,Ditkas Mustache,48.62,Ditkas Mustache
+2003,championship,17,3,final,8,1043,53.95,2,crabby jamie,66.45,crabby jamie
+2003,championship,17,3,3rd_place,5,Cammuffs,51.15,6,Guinness on Tap,87.94,Guinness on Tap
+2004,championship,15,1,quarterfinal,1,Good Times,49.08,8,crabby jamie,73.00,crabby jamie
+2004,championship,15,1,quarterfinal,4,mini ditkas,91.44,5,Enraged Swedes,64.55,mini ditkas
+2004,championship,15,1,quarterfinal,3,shootinfor.500,76.28,6,crown,67.82,shootinfor.500
+2004,championship,15,1,quarterfinal,2,guy montag,82.33,7,Guinness,85.91,Guinness
+2004,consolation,16,1,semifinal,1,Good Times,108.56,5,Enraged Swedes,86.03,Good Times
+2004,consolation,16,1,semifinal,6,crown,46.88,2,guy montag,72.35,guy montag
+2004,championship,16,2,semifinal,8,crabby jamie,99.05,4,mini ditkas,46.67,crabby jamie
+2004,championship,16,2,semifinal,3,shootinfor.500,74.76,7,Guinness,61.69,shootinfor.500
+2004,consolation,17,2,5th_place,1,Good Times,60.67,2,guy montag,100.58,guy montag
+2004,consolation,17,2,7th_place,5,Enraged Swedes,64.93,6,crown,56.67,Enraged Swedes
+2004,championship,17,3,final,8,crabby jamie,84.38,3,shootinfor.500,59.41,crabby jamie
+2004,championship,17,3,3rd_place,4,mini ditkas,69.97,7,Guinness,63.57,mini ditkas
+2005,championship,14,1,quarterfinal,1,Team Duff,57.13,8,Ricky Williams,59.36,Ricky Williams
+2005,championship,14,1,quarterfinal,4,who is john galt?,60.34,5,giant,72.51,giant
+2005,championship,14,1,quarterfinal,3,Good Times,56.28,6,Guinness,61.77,Guinness
+2005,championship,14,1,quarterfinal,2,miniDITKAS,83.97,7,crabby jamie,97.12,crabby jamie
+2005,consolation,15,1,semifinal,1,Team Duff,65.62,4,who is john galt?,47.06,Team Duff
+2005,consolation,15,1,semifinal,3,Good Times,41.12,2,miniDITKAS,54.60,miniDITKAS
+2005,championship,15,2,semifinal,8,Ricky Williams,77.73,5,giant,88.68,giant
+2005,championship,15,2,semifinal,6,Guinness,83.08,7,crabby jamie,56.75,Guinness
+2005,consolation,16,2,5th_place,1,Team Duff,115.00,2,miniDITKAS,103.82,Team Duff
+2005,consolation,16,2,7th_place,4,who is john galt?,58.18,3,Good Times,41.12,who is john galt?
+2005,championship,16,3,final,5,giant,61.82,6,Guinness,73.81,Guinness
+2005,championship,16,3,3rd_place,8,Ricky Williams,61.92,7,crabby jamie,54.01,Ricky Williams
+2006,championship,14,1,quarterfinal,1,Beer Gut,82.96,8,Branch Davidians,111.73,Branch Davidians
+2006,championship,14,1,quarterfinal,4,team old style,40.35,5,Guinness,109.11,Guinness
+2006,championship,14,1,quarterfinal,3,Team Duff,49.42,6,who is john galt?,61.09,who is john galt?
+2006,championship,14,1,quarterfinal,2,Nw Lnx Fighting Corn,57.68,7,MiniDitkas,81.16,MiniDitkas
+2006,consolation,15,1,semifinal,1,Beer Gut,95.88,4,team old style,67.34,Beer Gut
+2006,consolation,15,1,semifinal,3,Team Duff,57.84,2,Nw Lnx Fighting Corn,65.96,Nw Lnx Fighting Corn
+2006,championship,15,2,semifinal,8,Branch Davidians,63.34,5,Guinness,70.29,Guinness
+2006,championship,15,2,semifinal,6,who is john galt?,49.23,7,MiniDitkas,59.44,MiniDitkas
+2006,consolation,16,2,5th_place,1,Beer Gut,81.08,2,Nw Lnx Fighting Corn,43.54,Beer Gut
+2006,consolation,16,2,7th_place,4,team old style,15.73,3,Team Duff,65.90,Team Duff
+2006,championship,16,3,final,5,Guinness,76.13,7,MiniDitkas,101.31,MiniDitkas
+2006,championship,16,3,3rd_place,8,Branch Davidians,43.39,6,who is john galt?,51.84,who is john galt?
+2007,championship,14,1,quarterfinal,1,South of 55 is mine!,77.03,8,Nw Lnx Fightin' Corn,61.98,South of 55 is mine!
+2007,championship,14,1,quarterfinal,4,who is john galt?,80.46,5,Good Times,83.05,Good Times
+2007,championship,14,1,quarterfinal,3,Minooka Bears,92.83,6,you're all screwed,81.47,Minooka Bears
+2007,championship,14,1,quarterfinal,2,MiniDitkas,79.69,7,Beer Gut,54.95,MiniDitkas
+2007,consolation,15,1,semifinal,8,Nw Lnx Fightin' Corn,54.48,4,who is john galt?,56.69,who is john galt?
+2007,consolation,15,1,semifinal,6,you're all screwed,63.94,7,Beer Gut,61.50,you're all screwed
+2007,championship,15,2,semifinal,1,South of 55 is mine!,55.85,5,Good Times,49.78,South of 55 is mine!
+2007,championship,15,2,semifinal,3,Minooka Bears,71.44,2,MiniDitkas,64.69,Minooka Bears
+2007,consolation,16,2,5th_place,4,who is john galt?,58.78,6,you're all screwed,37.51,who is john galt?
+2007,consolation,16,2,7th_place,8,Nw Lnx Fightin' Corn,68.17,7,Beer Gut,47.40,Nw Lnx Fightin' Corn
+2007,championship,16,3,final,1,South of 55 is mine!,95.55,3,Minooka Bears,79.50,South of 55 is mine!
+2007,championship,16,3,3rd_place,5,Good Times,53.32,2,MiniDitkas,79.02,MiniDitkas
+2008,championship,14,1,quarterfinal,1,MiniDitkas,94.38,8,Good Times,94.40,Good Times
+2008,championship,14,1,quarterfinal,4,long live the goat,79.57,5,Minooka Bears,66.39,long live the goat
+2008,championship,14,1,quarterfinal,3,who is john galt?,85.87,6,old style,77.35,who is john galt?
+2008,championship,14,1,quarterfinal,2,Nw Lnx Fightin' Corn,64.11,7,First to Worst,87.13,First to Worst
+2008,consolation,15,1,semifinal,1,MiniDitkas,92.22,5,Minooka Bears,70.66,MiniDitkas
+2008,consolation,15,1,semifinal,6,old style,85.89,2,Nw Lnx Fightin' Corn,64.65,old style
+2008,championship,15,2,semifinal,8,Good Times,82.11,4,long live the goat,90.24,long live the goat
+2008,championship,15,2,semifinal,3,who is john galt?,65.00,7,First to Worst,69.54,First to Worst
+2008,consolation,16,2,5th_place,1,MiniDitkas,127.19,6,old style,101.25,MiniDitkas
+2008,consolation,16,2,7th_place,5,Minooka Bears,75.33,2,Nw Lnx Fightin' Corn,75.67,Nw Lnx Fightin' Corn
+2008,championship,16,3,final,4,long live the goat,61.68,7,First to Worst,75.84,First to Worst
+2008,championship,16,3,3rd_place,8,Good Times,84.20,3,who is john galt?,54.70,Good Times
+2009,championship,14,1,quarterfinal,1,team old style,108.15,8,3-PEAT??,84.85,team old style
+2009,championship,14,1,quarterfinal,4,AmstelAssLighters,94.11,5,NewLenoxFightinCorn,81.44,AmstelAssLighters
+2009,championship,14,1,quarterfinal,3,cubs killed harry,83.80,6,Beer Gut,81.18,cubs killed harry
+2009,championship,14,1,quarterfinal,2,Guinness,75.47,7,miniDITKAS,83.69,miniDITKAS
+2009,consolation,15,1,semifinal,8,3-PEAT??,58.51,5,NewLenoxFightinCorn,82.31,NewLenoxFightinCorn
+2009,consolation,15,1,semifinal,6,Beer Gut,89.44,2,Guinness,85.76,Beer Gut
+2009,championship,15,2,semifinal,1,team old style,103.86,4,AmstelAssLighters,71.61,team old style
+2009,championship,15,2,semifinal,3,cubs killed harry,105.16,7,miniDITKAS,94.15,cubs killed harry
+2009,consolation,16,2,5th_place,5,NewLenoxFightinCorn,88.83,6,Beer Gut,78.22,NewLenoxFightinCorn
+2009,consolation,16,2,7th_place,8,3-PEAT??,19.04,2,Guinness,68.86,Guinness
+2009,championship,16,3,final,1,team old style,101.34,3,cubs killed harry,77.23,team old style
+2009,championship,16,3,3rd_place,4,AmstelAssLighters,81.26,7,miniDITKAS,88.34,miniDITKAS
+2010,championship,14,1,quarterfinal,1,Minooka Bears,94.15,8,cubs killed harry,48.04,Minooka Bears
+2010,championship,14,1,quarterfinal,4,Return to Glory?,99.78,5,Good Times,70.64,Return to Glory?
+2010,championship,14,1,quarterfinal,3,chad 86,69.82,6,Fuzzy Bears,85.90,Fuzzy Bears
+2010,championship,14,1,quarterfinal,2,miniDITKAS,60.77,7,team old style,89.63,team old style
+2010,consolation,15,1,semifinal,8,cubs killed harry,73.63,5,Good Times,77.85,Good Times
+2010,consolation,15,1,semifinal,3,chad 86,60.60,2,miniDITKAS,54.05,chad 86
+2010,championship,15,2,semifinal,1,Minooka Bears,81.34,4,Return to Glory?,97.98,Return to Glory?
+2010,championship,15,2,semifinal,6,Fuzzy Bears,79.34,7,team old style,96.96,team old style
+2010,consolation,16,2,5th_place,5,Good Times,67.55,3,chad 86,81.48,chad 86
+2010,consolation,16,2,7th_place,8,cubs killed harry,70.42,2,miniDITKAS,48.75,cubs killed harry
+2010,championship,16,3,final,4,Return to Glory?,77.53,7,team old style,122.75,team old style
+2010,championship,16,3,3rd_place,1,Minooka Bears,76.91,6,Fuzzy Bears,103.19,Fuzzy Bears
+2011,championship,14,1,quarterfinal,1,angry cat,119.87,8,Three Four D,84.95,angry cat
+2011,championship,14,1,quarterfinal,4,Quakes and Canes,56.62,5,Sub .500!!!,139.89,Sub .500!!!
+2011,championship,14,1,quarterfinal,3,Fuzzy Bears,72.34,6,cubs killed harry,88.05,cubs killed harry
+2011,championship,14,1,quarterfinal,2,Guinness,96.84,7,team old style,77.60,Guinness
+2011,consolation,15,1,semifinal,8,Three Four D,43.05,4,Quakes and Canes,92.32,Quakes and Canes
+2011,consolation,15,1,semifinal,3,Fuzzy Bears,95.42,7,team old style,68.25,Fuzzy Bears
+2011,championship,15,2,semifinal,1,angry cat,73.18,5,Sub .500!!!,93.40,Sub .500!!!
+2011,championship,15,2,semifinal,6,cubs killed harry,64.29,2,Guinness,88.64,Guinness
+2011,consolation,16,2,5th_place,4,Quakes and Canes,78.46,3,Fuzzy Bears,105.06,Fuzzy Bears
+2011,consolation,16,2,7th_place,8,Three Four D,79.40,7,team old style,51.23,Three Four D
+2011,championship,16,3,final,5,Sub .500!!!,81.18,2,Guinness,70.14,Sub .500!!!
+2011,championship,16,3,3rd_place,1,angry cat,78.12,6,cubs killed harry,66.35,angry cat
+2012,championship,14,1,quarterfinal,1,miniDITKAS,72.08,8,Quakes and Canes,78.94,Quakes and Canes
+2012,championship,14,1,quarterfinal,4,Three Four D,50.76,5,Fuzzy Bears,92.24,Fuzzy Bears
+2012,championship,14,1,quarterfinal,3,Guinness,58.73,6,Goood Times,84.75,Goood Times
+2012,championship,14,1,quarterfinal,2,angry cat,73.73,7,los pollos hermanos,60.56,angry cat
+2012,consolation,15,1,semifinal,1,miniDITKAS,87.49,4,Three Four D,95.75,Three Four D
+2012,consolation,15,1,semifinal,3,Guinness,43.88,7,los pollos hermanos,104.62,los pollos hermanos
+2012,championship,15,2,semifinal,8,Quakes and Canes,85.72,5,Fuzzy Bears,78.02,Quakes and Canes
+2012,championship,15,2,semifinal,6,Goood Times,91.13,2,angry cat,60.68,Goood Times
+2012,consolation,16,2,5th_place,4,Three Four D,102.37,7,los pollos hermanos,114.49,los pollos hermanos
+2012,consolation,16,2,7th_place,1,miniDITKAS,105.97,3,Guinness,74.23,miniDITKAS
+2012,championship,16,3,final,8,Quakes and Canes,69.01,6,Goood Times,109.28,Goood Times
+2012,championship,16,3,3rd_place,5,Fuzzy Bears,50.20,2,angry cat,100.89,angry cat
+2013,championship,14,1,quarterfinal,1,Three Four D,88.64,8,angry cat,71.38,Three Four D
+2013,championship,14,1,quarterfinal,4,Goood Times,101.68,5,cubs killed harry,76.50,Goood Times
+2013,championship,14,1,quarterfinal,3,Guinness,62.33,6,Fuzzy Bears,79.08,Fuzzy Bears
+2013,championship,14,1,quarterfinal,2,miniDITKAS,122.56,7,team old style,68.97,miniDITKAS
+2013,consolation,15,1,semifinal,8,angry cat,45.42,5,cubs killed harry,89.16,cubs killed harry
+2013,consolation,15,1,semifinal,3,Guinness,72.55,7,team old style,72.90,team old style
+2013,championship,15,2,semifinal,1,Three Four D,91.23,4,Goood Times,93.72,Goood Times
+2013,championship,15,2,semifinal,6,Fuzzy Bears,69.65,2,miniDITKAS,75.71,miniDITKAS
+2013,consolation,16,2,5th_place,5,cubs killed harry,56.32,7,team old style,47.79,cubs killed harry
+2013,consolation,16,2,7th_place,8,angry cat,49.97,3,Guinness,54.16,Guinness
+2013,championship,16,3,final,4,Goood Times,87.11,2,miniDITKAS,74.47,Goood Times
+2013,championship,16,3,3rd_place,1,Three Four D,107.75,6,Fuzzy Bears,92.19,Three Four D
+2014,championship,14,1,quarterfinal,1,team old style,60.30,8,Second Draft Pick,105.97,Second Draft Pick
+2014,championship,14,1,quarterfinal,4,This Is How We Do,65.42,5,angry cat,67.91,angry cat
+2014,championship,14,1,quarterfinal,3,Fuzzy Bears,84.54,6,los pollos hermanos,74.44,Fuzzy Bears
+2014,championship,14,1,quarterfinal,2,miniDITKAS,80.00,7,Swami Singer,55.67,miniDITKAS
+2014,consolation,15,1,semifinal,1,team old style,77.90,4,This Is How We Do,72.23,team old style
+2014,consolation,15,1,semifinal,6,los pollos hermanos,48.95,7,Swami Singer,53.29,Swami Singer
+2014,championship,15,2,semifinal,8,Second Draft Pick,75.66,5,angry cat,59.71,Second Draft Pick
+2014,championship,15,2,semifinal,3,Fuzzy Bears,91.04,2,miniDITKAS,83.60,Fuzzy Bears
+2014,consolation,16,2,5th_place,1,team old style,92.02,7,Swami Singer,47.93,team old style
+2014,consolation,16,2,7th_place,4,This Is How We Do,111.67,6,los pollos hermanos,51.81,This Is How We Do
+2014,championship,16,3,final,8,Second Draft Pick,58.86,3,Fuzzy Bears,79.74,Fuzzy Bears
+2014,championship,16,3,3rd_place,5,angry cat,69.92,2,miniDITKAS,56.56,angry cat
+2015,championship,14,1,quarterfinal,1,angry cat,54.56,8,cubs killed harry,86.70,cubs killed harry
+2015,championship,14,1,quarterfinal,4,miniDITKAS,95.94,5,los pollos hermanos,113.50,los pollos hermanos
+2015,championship,14,1,quarterfinal,3,This Is How We Do,78.63,6,Guinness,79.34,Guinness
+2015,championship,14,1,quarterfinal,2,Fuzzy Bears,94.37,7,Goood Times,85.08,Fuzzy Bears
+2015,consolation,15,1,semifinal,1,angry cat,80.48,4,miniDITKAS,95.82,miniDITKAS
+2015,consolation,15,1,semifinal,3,This Is How We Do,149.47,7,Goood Times,47.54,This Is How We Do
+2015,championship,15,2,semifinal,8,cubs killed harry,80.03,5,los pollos hermanos,89.70,los pollos hermanos
+2015,championship,15,2,semifinal,6,Guinness,93.93,2,Fuzzy Bears,77.84,Guinness
+2015,consolation,16,2,5th_place,4,miniDITKAS,82.09,3,This Is How We Do,131.10,This Is How We Do
+2015,consolation,16,2,7th_place,1,angry cat,64.17,7,Goood Times,40.30,angry cat
+2015,championship,16,3,final,5,los pollos hermanos,59.14,6,Guinness,113.03,Guinness
+2015,championship,16,3,3rd_place,8,cubs killed harry,56.70,2,Fuzzy Bears,64.52,Fuzzy Bears
+2016,championship,14,1,quarterfinal,1,This Is How We Do,41.33,8,Swami Singer,90.88,Swami Singer
+2016,championship,14,1,quarterfinal,4,Just My Luck,56.52,5,Saved by Le'Bell,121.42,Saved by Le'Bell
+2016,championship,14,1,quarterfinal,3,team old style,77.74,6,Fuzzy Bears,59.91,team old style
+2016,championship,14,1,quarterfinal,2,Guinness,57.84,7,Goood Times,32.05,Guinness
+2016,consolation,15,1,semifinal,1,This Is How We Do,100.69,4,Just My Luck,63.95,This Is How We Do
+2016,consolation,15,1,semifinal,6,Fuzzy Bears,37.51,7,Goood Times,43.07,Goood Times
+2016,championship,15,2,semifinal,8,Swami Singer,84.07,5,Saved by Le'Bell,59.46,Swami Singer
+2016,championship,15,2,semifinal,3,team old style,106.53,2,Guinness,92.06,team old style
+2016,consolation,16,2,5th_place,1,This Is How We Do,127.84,7,Goood Times,89.73,This Is How We Do
+2016,consolation,16,2,7th_place,4,Just My Luck,74.16,6,Fuzzy Bears,88.20,Fuzzy Bears
+2016,championship,16,3,final,8,Swami Singer,68.44,3,team old style,76.38,team old style
+2016,championship,16,3,3rd_place,5,Saved by Le'Bell,87.08,2,Guinness,62.38,Saved by Le'Bell
+2017,championship,14,1,quarterfinal,1,cubs killed harry,59.41,8,The Great CornJulio,68.47,The Great CornJulio
+2017,championship,14,1,quarterfinal,4,Mean Machine 22,94.27,5,Goood Times,67.32,Mean Machine 22
+2017,championship,14,1,quarterfinal,3,miniDITKAS,67.52,6,los pollos hermanos,66.62,miniDITKAS
+2017,championship,14,1,quarterfinal,2,Guinness,125.27,7,Who Diggs Nelson?,70.68,Guinness
+2017,consolation,15,1,semifinal,1,cubs killed harry,66.41,5,Goood Times,86.02,Goood Times
+2017,consolation,15,1,semifinal,6,los pollos hermanos,96.77,7,Who Diggs Nelson?,103.62,Who Diggs Nelson?
+2017,championship,15,2,semifinal,8,The Great CornJulio,72.27,4,Mean Machine 22,96.89,Mean Machine 22
+2017,championship,15,2,semifinal,3,miniDITKAS,85.84,2,Guinness,84.45,miniDITKAS
+2017,consolation,16,2,5th_place,5,Goood Times,86.45,7,Who Diggs Nelson?,94.95,Who Diggs Nelson?
+2017,consolation,16,2,7th_place,1,cubs killed harry,62.93,6,los pollos hermanos,51.25,cubs killed harry
+2017,championship,16,3,final,4,Mean Machine 22,90.42,3,miniDITKAS,74.51,Mean Machine 22
+2017,championship,16,3,3rd_place,8,The Great CornJulio,65.65,2,Guinness,94.47,Guinness
+2018,championship,14,1,quarterfinal,1,Mean Machine 22,91.44,8,miniDITKAS,103.78,miniDITKAS
+2018,championship,14,1,quarterfinal,4,Bears,71.59,5,team old style,76.57,team old style
+2018,championship,14,1,quarterfinal,3,Goood Times,83.19,6,Melvin&The Chipmunks,110.22,Melvin&The Chipmunks
+2018,championship,14,1,quarterfinal,2,No Diggity,107.74,7,Guinness,49.00,No Diggity
+2018,consolation,15,1,semifinal,1,Mean Machine 22,101.78,4,Bears,70.27,Mean Machine 22
+2018,consolation,15,1,semifinal,3,Goood Times,82.80,7,Guinness,99.11,Guinness
+2018,championship,15,2,semifinal,8,miniDITKAS,46.44,5,team old style,101.13,team old style
+2018,championship,15,2,semifinal,6,Melvin&The Chipmunks,51.78,2,No Diggity,74.86,No Diggity
+2018,consolation,16,2,5th_place,1,Mean Machine 22,122.58,7,Guinness,51.62,Mean Machine 22
+2018,consolation,16,2,7th_place,4,Bears,100.38,3,Goood Times,69.20,Bears
+2018,championship,16,3,final,5,team old style,120.94,2,No Diggity,84.81,team old style
+2018,championship,16,3,3rd_place,8,miniDITKAS,91.04,6,Melvin&The Chipmunks,68.92,miniDITKAS
+2019,championship,14,1,quarterfinal,1,Guinness,76.80,8,Bears,100.03,Bears
+2019,championship,14,1,quarterfinal,4,This Is How We Do,73.47,5,Mean Machine 22,75.04,Mean Machine 22
+2019,championship,14,1,quarterfinal,3,miniDITKAS,108.02,6,angry cat,82.70,miniDITKAS
+2019,championship,14,1,quarterfinal,2,team old style,97.40,7,West Coast Infirmary,106.04,West Coast Infirmary
+2019,consolation,15,1,semifinal,1,Guinness,112.14,4,This Is How We Do,98.03,Guinness
+2019,consolation,15,1,semifinal,6,angry cat,59.96,2,team old style,96.77,team old style
+2019,championship,15,2,semifinal,8,Bears,121.94,5,Mean Machine 22,108.56,Bears
+2019,championship,15,2,semifinal,3,miniDITKAS,87.41,7,West Coast Infirmary,94.90,West Coast Infirmary
+2019,consolation,16,2,5th_place,1,Guinness,87.56,2,team old style,85.23,Guinness
+2019,consolation,16,2,7th_place,4,This Is How We Do,106.94,6,angry cat,40.92,This Is How We Do
+2019,championship,16,3,final,8,Bears,89.23,7,West Coast Infirmary,85.96,Bears
+2019,championship,16,3,3rd_place,5,Mean Machine 22,69.98,3,miniDITKAS,35.80,Mean Machine 22
+2020,championship,14,1,quarterfinal,1,West Coast Infirmary,66.80,8,Bears,74.70,Bears
+2020,championship,14,1,quarterfinal,4,Fuzzy Bears,61.41,5,team old style,91.32,team old style
+2020,championship,14,1,quarterfinal,3,Guinness,97.16,6,angry cat,90.08,Guinness
+2020,championship,14,1,quarterfinal,2,Mean Machine 22,94.01,7,Goood Times,79.68,Mean Machine 22
+2020,consolation,15,1,semifinal,1,West Coast Infirmary,73.96,4,Fuzzy Bears,90.28,Fuzzy Bears
+2020,consolation,15,1,semifinal,6,angry cat,91.71,7,Goood Times,90.07,angry cat
+2020,championship,15,2,semifinal,8,Bears,88.61,5,team old style,68.37,Bears
+2020,championship,15,2,semifinal,3,Guinness,100.36,2,Mean Machine 22,118.58,Mean Machine 22
+2020,consolation,16,2,5th_place,4,Fuzzy Bears,119.55,6,angry cat,95.18,Fuzzy Bears
+2020,consolation,16,2,7th_place,1,West Coast Infirmary,63.82,7,Goood Times,94.25,Goood Times
+2020,championship,16,3,final,8,Bears,83.94,2,Mean Machine 22,89.36,Mean Machine 22
+2020,championship,16,3,3rd_place,5,team old style,120.80,3,Guinness,74.16,team old style
+2021,championship,15,1,quarterfinal,4,“I’ll take Kittle”,60.24,5,West Coast Infirmary,46.66,“I’ll take Kittle”
+2021,championship,15,1,quarterfinal,3,miniDITKAS,70.74,6,Guinness,122.97,Guinness
+2021,consolation,16,1,semifinal,7,Bears,77.54,11,Mean Machine 22,78.11,Mean Machine 22
+2021,consolation,16,1,semifinal,8,Fuzzy Bears,109.03,9,Goood Times,56.77,Fuzzy Bears
+2021,championship,16,2,semifinal,1,Beast Mode,95.19,6,Guinness,103.23,Guinness
+2021,championship,16,2,semifinal,2,team old style,59.67,4,“I’ll take Kittle”,119.05,“I’ll take Kittle”
+2021,consolation,17,2,7th_place,8,Fuzzy Bears,65.75,11,Mean Machine 22,90.73,Mean Machine 22
+2021,championship,17,3,final,4,“I’ll take Kittle”,86.87,6,Guinness,65.93,“I’ll take Kittle”
+2021,championship,17,3,3rd_place,1,Beast Mode,82.55,2,team old style,79.14,Beast Mode
+2022,championship,15,1,quarterfinal,4,Futball in the Groin,92.90,5,G’day Bumblenuts,49.11,Futball in the Groin
+2022,championship,15,1,quarterfinal,3,miniDITKAS,73.04,6,This Is How We Do,61.18,miniDITKAS
+2022,consolation,16,1,semifinal,7,team old style,83.20,10,Goood Times,57.93,team old style
+2022,consolation,16,1,semifinal,8,“I’ll take Kittle”,63.25,9,Bears,121.94,Bears
+2022,championship,16,2,semifinal,1,Fuzzy Bears,92.59,4,Futball in the Groin,64.13,Fuzzy Bears
+2022,championship,16,2,semifinal,2,Good Douche Bag,83.93,3,miniDITKAS,62.56,Good Douche Bag
+2022,consolation,17,2,7th_place,7,team old style,68.80,9,Bears,73.79,Bears
+2022,championship,17,3,final,1,Fuzzy Bears,75.50,2,Good Douche Bag,77.76,Good Douche Bag
+2022,championship,17,3,3rd_place,3,miniDITKAS,94.48,4,Futball in the Groin,51.99,miniDITKAS
+2023,championship,15,1,quarterfinal,4,“I’ll take Kittle”,89.93,5,miniDITKAS,88.15,“I’ll take Kittle”
+2023,championship,15,1,quarterfinal,3,Mean Machine 22,81.77,6,team old style,85.61,team old style
+2023,consolation,16,1,semifinal,7,Guntry Club,86.70,12,Fuzzy Bears,76.52,Guntry Club
+2023,consolation,16,1,semifinal,8,Bears,84.91,10,This Is How We Do,42.65,Bears
+2023,championship,16,2,semifinal,1,Goood Times,91.59,6,team old style,97.01,team old style
+2023,championship,16,2,semifinal,2,Futball in the Groin,93.04,4,“I’ll take Kittle”,105.21,“I’ll take Kittle”
+2023,consolation,17,2,7th_place,7,Guntry Club,57.70,8,Bears,71.00,Bears
+2023,championship,17,3,final,4,“I’ll take Kittle”,113.18,6,team old style,55.14,“I’ll take Kittle”
+2023,championship,17,3,3rd_place,1,Goood Times,93.33,2,Futball in the Groin,105.57,Futball in the Groin
+2024,championship,15,1,quarterfinal,4,Bears,70.35,5,Fuzzy Bears,130.24,Fuzzy Bears
+2024,championship,15,1,quarterfinal,3,“I’ll take Kittle”,79.90,6,This Is How We Do,99.90,This Is How We Do
+2024,consolation,16,1,semifinal,7,Mean Machine 22,82.86,10,Guinness,93.32,Guinness
+2024,consolation,16,1,semifinal,8,team old style,116.36,9,G’day Bumblenuts,55.98,team old style
+2024,championship,16,2,semifinal,1,Guntry Club,95.47,6,This Is How We Do,119.39,This Is How We Do
+2024,championship,16,2,semifinal,2,Goood Times,104.94,5,Fuzzy Bears,87.23,Goood Times
+2024,consolation,17,2,7th_place,8,team old style,99.79,10,Guinness,99.76,team old style
+2024,championship,17,3,final,2,Goood Times,98.74,6,This Is How We Do,98.86,This Is How We Do
+2024,championship,17,3,3rd_place,1,Guntry Club,122.05,5,Fuzzy Bears,90.39,Guntry Club
+2025,championship,15,1,quarterfinal,4,Bears,47.37,5,Guntry Club,86.64,Guntry Club
+2025,championship,15,1,quarterfinal,3,Futball in the Groin,98.30,6,team old style,83.60,Futball in the Groin
+2025,consolation,16,1,semifinal,7,G’day Bumblenuts,105.28,12,Guinness,70.71,G’day Bumblenuts
+2025,consolation,16,1,semifinal,8,“I’ll take Kittle”,62.79,10,Mean Machine 22,69.02,Mean Machine 22
+2025,championship,16,2,semifinal,1,Fuzzy Bears,70.15,5,Guntry Club,69.04,Fuzzy Bears
+2025,championship,16,2,semifinal,2,This Is How We Do,74.69,3,Futball in the Groin,111.05,Futball in the Groin
+2025,consolation,17,2,7th_place,7,G’day Bumblenuts,36.24,10,Mean Machine 22,89.45,Mean Machine 22
+2025,championship,17,3,final,1,Fuzzy Bears,97.34,3,Futball in the Groin,79.65,Fuzzy Bears
+2025,championship,17,3,3rd_place,2,This Is How We Do,68.14,5,Guntry Club,0.00,This Is How We Do

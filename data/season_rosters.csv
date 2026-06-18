@@ -1,0 +1,16 @@
+season,week,team_name,slot,player_name,fantasy_points,starter_status
+2001,17,sme,QB,Brett Favre,16.58,starter
+2001,17,sme,WR,Terrell Owens,17.80,starter
+2001,17,sme,WR,David Boston,2.90,starter
+2001,17,sme,RB,Ahman Green,18.00,starter
+2001,17,sme,TE,Frank Wycheck,1.15,starter
+2001,17,sme,K,Ryan Longwell,10.00,starter
+2001,17,sme,DEF,Packers,7.00,starter
+2001,17,sme,BN,Randy Moss,1.03,bench
+2001,17,sme,BN,David Patten,2.70,bench
+2001,17,sme,BN,Raghib Ismail,3.55,bench
+2001,17,sme,BN,Stephen Davis,15.90,bench
+2001,17,sme,BN,Ike Hilliard,7.55,bench
+2001,17,sme,BN,Troy Hambrick,1.00,bench
+2001,17,sme,BN,Stacy Mack,3.38,bench
+2001,17,sme,BN,Browns,36.00,bench

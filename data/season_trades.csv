@@ -1,0 +1,248 @@
+season,trade_id,date,team_name,player_name,player_pos,trade_partner
+2001,5703d61f,"Dec 31, 4:33 pm",sme,David Boston,TB - WR,crown
+2001,5703d61f,"Dec 31, 4:33 pm",crown,Duce Staley,Pit - RB,sme
+2001,42bc8672,"Dec 31, 4:33 pm",clark,LaDainian Tomlinson,NYJ - RB,sme
+2001,42bc8672,"Dec 31, 4:33 pm",sme,Ahman Green,GB - RB,clark
+2001,e2e030ef,"Dec 31, 4:33 pm",clark,Ernie Conwell,NO - TE,Cammuffs
+2001,e2e030ef,"Dec 31, 4:33 pm",clark,Ahman Green,GB - RB,Cammuffs
+2001,e2e030ef,"Dec 31, 4:33 pm",Cammuffs,Shaun Alexander,Was - RB,clark
+2001,e2e030ef,"Dec 31, 4:33 pm",Cammuffs,Bears,Chi - DEF,clark
+2001,42bc8672,"Dec 31, 4:33 pm",sme,David Akers,Det - K,clark
+2001,42bc8672,"Dec 31, 4:33 pm",sme,Browns,Cle - DEF,clark
+2001,42bc8672,"Dec 31, 4:33 pm",clark,Bears,Chi - DEF,sme
+2001,42bc8672,"Dec 31, 4:33 pm",clark,Paul Edinger,Min - K,sme
+2001,42bc8672,"Dec 31, 4:33 pm",clark,Shaun Alexander,Was - RB,sme
+2001,42bc8672,"Dec 31, 4:33 pm",sme,Ike Hilliard,TB - WR,clark
+2001,e2e030ef,"Dec 31, 4:33 pm",clark,Eric Moulds,Ten - WR,Cammuffs
+2001,e2e030ef,"Dec 31, 4:33 pm",clark,Peerless Price,Buf - WR,Cammuffs
+2001,e2e030ef,"Dec 31, 4:33 pm",clark,Kurt Warner,Ari - QB,Cammuffs
+2001,e2e030ef,"Dec 31, 4:33 pm",Cammuffs,Aaron Brooks,LV - QB,clark
+2001,e2e030ef,"Dec 31, 4:33 pm",Cammuffs,Priest Holmes,KC - RB,clark
+2001,e2e030ef,"Dec 31, 4:33 pm",Cammuffs,Rod Smith,Den - WR,clark
+2001,047b9da3,"Dec 31, 4:33 pm",sme,Mike Anderson,Bal - RB,Recruits
+2001,047b9da3,"Dec 31, 4:33 pm",Recruits,Jerome Bettis,Pit - RB,sme
+2001,42bc8672,"Dec 31, 4:33 pm",clark,Priest Holmes,KC - RB,sme
+2001,42bc8672,"Dec 31, 4:33 pm",sme,Vinny Testaverde,Car - QB,clark
+2001,047b9da3,"Dec 31, 4:33 pm",Recruits,Tony Gonzalez,Atl - TE,sme
+2001,047b9da3,"Dec 31, 4:33 pm",sme,Anthony Becht,KC - TE,Recruits
+2001,bae9df78,"Dec 31, 4:33 pm",sme,Priest Holmes,KC - RB,No Mercy
+2001,bae9df78,"Dec 31, 4:33 pm",No Mercy,Anthony Thomas,Buf - RB,sme
+2001,10bda49e,"Dec 31, 4:33 pm",crown,Ravens,Bal - DEF,clark
+2001,10bda49e,"Dec 31, 4:33 pm",crown,Tyrone Wheatley,LV - RB,clark
+2001,10bda49e,"Dec 31, 4:33 pm",clark,Lamar Smith,NO - RB,crown
+2001,01a80683,"Dec 31, 4:33 pm",sme,Tony Gonzalez,Atl - TE,Flatulent Quadroons
+2001,01a80683,"Dec 31, 4:33 pm",Flatulent Quadroons,Jerome Pathon,Atl - WR,sme
+2001,6ab30569,"Dec 31, 4:33 pm",Recruits,Ron Dayne,Hou - RB,Flatulent Quadroons
+2001,6ab30569,"Dec 31, 4:33 pm",Recruits,Warrick Dunn,TB - RB,Flatulent Quadroons
+2001,6ab30569,"Dec 31, 4:33 pm",Flatulent Quadroons,James Allen,Hou - RB,Recruits
+2001,6ab30569,"Dec 31, 4:33 pm",Flatulent Quadroons,Michael Bennett,LV - RB,Recruits
+2001,61412b18,"Dec 31, 4:33 pm",Flatulent Quadroons,Warrick Dunn,TB - RB,clark
+2001,61412b18,"Dec 31, 4:33 pm",Flatulent Quadroons,Keyshawn Johnson,Car - WR,clark
+2001,61412b18,"Dec 31, 4:33 pm",Flatulent Quadroons,Stacey Mack,Hou - RB,clark
+2001,61412b18,"Dec 31, 4:33 pm",clark,Eddie George,Dal - RB,Flatulent Quadroons
+2001,61412b18,"Dec 31, 4:33 pm",clark,Jermaine Wiggins,Min - TE,Flatulent Quadroons
+2001,67ffcdd7,"Dec 31, 4:33 pm",Marx Brothers,Wayne Chrebet,NYJ - WR,clark
+2001,67ffcdd7,"Dec 31, 4:33 pm",Marx Brothers,Trent Green,LAR - QB,clark
+2001,67ffcdd7,"Dec 31, 4:33 pm",Marx Brothers,Olindo Mare,Chi - K,clark
+2001,67ffcdd7,"Dec 31, 4:33 pm",clark,Sebastian Janikowski,Sea - K,Marx Brothers
+2001,42bc8672,"Dec 31, 4:33 pm",clark,Aaron Brooks,LV - QB,sme
+2001,42bc8672,"Dec 31, 4:33 pm",sme,Johnnie Morton,SF - WR,clark
+2001,67ffcdd7,"Dec 31, 4:33 pm",Marx Brothers,Jackie Harris,Dal - TE,clark
+2001,67ffcdd7,"Dec 31, 4:33 pm",clark,Dwayne Carswell,Den - TE,Marx Brothers
+2002,62af2f00,"Dec 31, 4:33 pm",Guinness On Tap,Steve Beuerlein,Den - QB,Cammuffs
+2002,62af2f00,"Dec 31, 4:33 pm",Cammuffs,Michael Bennett,LV - RB,Guinness On Tap
+2002,7a2a4e2f,"Dec 31, 4:33 pm",sme,Tiki Barber,NYG - RB,Pilsner Urquell FC
+2002,7a2a4e2f,"Dec 31, 4:33 pm",Pilsner Urquell FC,Randy Moss,SF - WR,sme
+2002,79df4178,"Dec 31, 4:33 pm",Cammuffs,Terry Glenn,Dal - WR,sme
+2002,79df4178,"Dec 31, 4:33 pm",sme,Amos Zereoue,NE - RB,Cammuffs
+2002,d80a6a36,"Dec 31, 4:33 pm",crown,Antowain Smith,NO - RB,sme
+2002,d80a6a36,"Dec 31, 4:33 pm",sme,Troy Brown,NE - WR,crown
+2002,f2bd573a,"Dec 31, 4:33 pm",crown,Warrick Dunn,TB - RB,Team Old Style
+2002,f2bd573a,"Dec 31, 4:33 pm",crown,Eric Johnson,NO - TE,Team Old Style
+2002,f2bd573a,"Dec 31, 4:33 pm",crown,Dennis Northcutt,Det - WR,Team Old Style
+2002,f2bd573a,"Dec 31, 4:33 pm",Team Old Style,Chris Chambers,KC - WR,crown
+2002,f2bd573a,"Dec 31, 4:33 pm",Team Old Style,Jamal Lewis,Cle - RB,crown
+2002,f2bd573a,"Dec 31, 4:33 pm",Team Old Style,David Sloan,NO - TE,crown
+2002,85469185,"Dec 31, 4:33 pm",Cammuffs,Amani Toomer,NYG - WR,Team Old Style
+2002,85469185,"Dec 31, 4:33 pm",Team Old Style,Thomas Jones,KC - RB,Cammuffs
+2002,85469185,"Dec 31, 4:33 pm",Team Old Style,Dolphins,Mia - DEF,Cammuffs
+2002,156d817c,"Dec 31, 4:33 pm",Team Old Style,Marvin Harrison,Ind - WR,Team Duff
+2002,156d817c,"Dec 31, 4:33 pm",Team Duff,Edgerrin James,Sea - RB,Team Old Style
+2002,405e15db,"Dec 31, 4:33 pm",Team Duff,Ed McCaffrey,Den - WR,sme
+2002,405e15db,"Dec 31, 4:33 pm",sme,Antowain Smith,NO - RB,Team Duff
+2002,4a7332c2,"Dec 31, 4:33 pm",mini ditka's bitches,Trent Green,LAR - QB,sme
+2002,4a7332c2,"Dec 31, 4:33 pm",mini ditka's bitches,Pat Johnson,Bal - WR,sme
+2002,4a7332c2,"Dec 31, 4:33 pm",sme,Deion Branch,Ind - WR,mini ditka's bitches
+2002,4a7332c2,"Dec 31, 4:33 pm",sme,Tim Brown,TB - WR,mini ditka's bitches
+2002,04bb7959,"Dec 31, 4:33 pm",Atom Smashers,Mark Brunell,NYJ - QB,sme
+2002,04bb7959,"Dec 31, 4:33 pm",Atom Smashers,Donald Driver,GB - WR,sme
+2002,04bb7959,"Dec 31, 4:33 pm",sme,Trent Green,LAR - QB,Atom Smashers
+2002,04bb7959,"Dec 31, 4:33 pm",sme,Josh Reed,Buf - WR,Atom Smashers
+2002,c0278825,"Dec 31, 4:33 pm",Team Old Style,Warrick Dunn,TB - RB,sme
+2002,c0278825,"Dec 31, 4:33 pm",Team Old Style,Peerless Price,Buf - WR,sme
+2002,c0278825,"Dec 31, 4:33 pm",sme,Antwaan Randle El,Pit - WR,Team Old Style
+2002,c0278825,"Dec 31, 4:33 pm",sme,Duce Staley,Pit - RB,Team Old Style
+2002,7a2a4e2f,"Dec 31, 4:33 pm",sme,Colts,Ind - DEF,Pilsner Urquell FC
+2002,7a2a4e2f,"Dec 31, 4:33 pm",Pilsner Urquell FC,Charlie Garner,TB - RB,sme
+2003,e2bd1396,"Dec 31, 4:33 pm",Team Tupa,Anquan Boldin,Det - WR,Cammuffs
+2003,e2bd1396,"Dec 31, 4:33 pm",Team Tupa,Corey Dillon,NE - RB,Cammuffs
+2003,e2bd1396,"Dec 31, 4:33 pm",Team Tupa,Jimmy Smith,Jax - WR,Cammuffs
+2003,e2bd1396,"Dec 31, 4:33 pm",Cammuffs,Joe Horn,Atl - WR,Team Tupa
+2003,e2bd1396,"Dec 31, 4:33 pm",Cammuffs,Deuce McAllister,NO - RB,Team Tupa
+2003,e2bd1396,"Dec 31, 4:33 pm",Team Tupa,Anquan Boldin,Det - WR,Cammuffs
+2003,e2bd1396,"Dec 31, 4:33 pm",Team Tupa,Corey Dillon,NE - RB,Cammuffs
+2003,e2bd1396,"Dec 31, 4:33 pm",Team Tupa,Jimmy Smith,Jax - WR,Cammuffs
+2003,13f9baf2,"Dec 31, 4:33 pm",Team Tupa,Anquan Boldin,Det - WR,Pilsner Urquell FC
+2003,13f9baf2,"Dec 31, 4:33 pm",Team Tupa,Corey Dillon,NE - RB,Pilsner Urquell FC
+2003,13f9baf2,"Dec 31, 4:33 pm",Team Tupa,Jimmy Smith,Jax - WR,Pilsner Urquell FC
+2003,13f9baf2,"Dec 31, 4:33 pm",Pilsner Urquell FC,Todd Heap,Ari - TE,Team Tupa
+2003,13f9baf2,"Dec 31, 4:33 pm",Pilsner Urquell FC,Stacey Mack,Hou - RB,Team Tupa
+2003,f33e5437,"Dec 31, 4:33 pm",team old style,Randy McMichael,LAC - TE,Guinness on Tap
+2003,f33e5437,"Dec 31, 4:33 pm",Guinness on Tap,T.J. Duckett,Sea - RB,team old style
+2004,b6839664,"Nov 23, 1:32 am",team old style,Shaun McDonald,Pit - WR,mini ditkas
+2004,b6839664,"Nov 23, 1:32 am",mini ditkas,Peerless Price,Buf - WR,team old style
+2004,37fe44ff,"Nov 5, 12:11 am",guy montag,Terrell Owens,Cin - WR,Suxors
+2004,37fe44ff,"Nov 5, 12:11 am",Suxors,Reuben Droughns,NYG - RB,guy montag
+2004,37fe44ff,"Nov 5, 12:11 am",Suxors,Eric Johnson,NO - TE,guy montag
+2004,37fe44ff,"Nov 5, 12:11 am",Suxors,Ronald Curry,LV - WR,guy montag
+2004,8a1f1ec6,"Oct 17, 12:39 am",Ricky Williams,Jimmy Smith,Jax - WR,shootinfor.500
+2004,8a1f1ec6,"Oct 17, 12:39 am",Ricky Williams,Emmitt Smith,Ari - RB,shootinfor.500
+2004,8a1f1ec6,"Oct 17, 12:39 am",shootinfor.500,Brian Westbrook,SF - RB,Ricky Williams
+2004,8a1f1ec6,"Oct 17, 12:39 am",shootinfor.500,Jerry Porter,Jax - WR,Ricky Williams
+2004,9418b5c7,"Oct 4, 12:12 am",crabby jamie,Jamal Lewis,Cle - RB,2005 #1 draft pick
+2004,9418b5c7,"Oct 4, 12:12 am",crabby jamie,Steve McNair,Bal - QB,2005 #1 draft pick
+2004,9418b5c7,"Oct 4, 12:12 am",crabby jamie,Larry Fitzgerald,Ari - WR,2005 #1 draft pick
+2004,9418b5c7,"Oct 4, 12:12 am",crabby jamie,Muhsin Muhammad,Car - WR,2005 #1 draft pick
+2004,9418b5c7,"Oct 4, 12:12 am",2005 #1 draft pick,Michael Vick,Pit - QB,crabby jamie
+2004,9418b5c7,"Oct 4, 12:12 am",2005 #1 draft pick,Javon Walker,LV - WR,crabby jamie
+2004,9418b5c7,"Oct 4, 12:12 am",2005 #1 draft pick,Aaron Stecker,Atl - RB,crabby jamie
+2004,5287c9fe,"Oct 2, 12:11 am",2005 #1 draft pick,Duce Staley,Pit - RB,crabby jamie
+2004,5287c9fe,"Oct 2, 12:11 am",crabby jamie,Michael Bennett,LV - RB,2005 #1 draft pick
+2005,628ffb86,"Nov 14, 1:18 am",miniDITKAS,Mike Anderson,Bal - RB,Good Times
+2005,628ffb86,"Nov 14, 1:18 am",Good Times,Donald Driver,GB - WR,miniDITKAS
+2005,ef9a128d,"Oct 16, 1:12 am",what's an end zone?,Michael Jenkins,Min - WR,Ricky Williams
+2005,ef9a128d,"Oct 16, 1:12 am",what's an end zone?,Willis McGahee,Cle - RB,Ricky Williams
+2005,ef9a128d,"Oct 16, 1:12 am",what's an end zone?,Kelly Holcomb,Min - QB,Ricky Williams
+2005,ef9a128d,"Oct 16, 1:12 am",Ricky Williams,Jamal Lewis,Cle - RB,what's an end zone?
+2005,ef9a128d,"Oct 16, 1:12 am",Ricky Williams,Drew Bennett,LAR - WR,what's an end zone?
+2005,ef9a128d,"Oct 16, 1:12 am",Ricky Williams,Tony Gonzalez,Atl - TE,what's an end zone?
+2006,6ae226bb,"Oct 31, 2:17 am",Branch Davidians,Chris Chambers,KC - WR,who is john galt?
+2006,6ae226bb,"Oct 31, 2:17 am",who is john galt?,Cadillac Williams,LAR - RB,Branch Davidians
+2007,91955fd4,"Oct 25, 2:18 am",who is john galt?,Earnest Graham,TB - RB,Old Style
+2007,91955fd4,"Oct 25, 2:18 am",who is john galt?,Dallas Clark,Bal - TE,Old Style
+2007,91955fd4,"Oct 25, 2:18 am",Old Style,Laurence Maroney,NE - RB,who is john galt?
+2007,fa6db3c5,"Oct 22, 3:05 am",Minooka Bears,Carson Palmer,Ari - QB,Old Style
+2007,fa6db3c5,"Oct 22, 3:05 am",Minooka Bears,Nate Burleson,Det - WR,Old Style
+2007,fa6db3c5,"Oct 22, 3:05 am",Old Style,Torry Holt,Jax - WR,Minooka Bears
+2007,fa6db3c5,"Oct 22, 3:05 am",Old Style,Dallas Clark,Bal - TE,Minooka Bears
+2007,5d1be176,"Oct 11, 2:06 am",vick's dog pound,Tony Romo,Dal - QB,Guinness
+2007,5d1be176,"Oct 11, 2:06 am",Guinness,Drew Brees,NO - QB,vick's dog pound
+2007,5d1be176,"Oct 11, 2:06 am",Guinness,Marvin Harrison,Ind - WR,vick's dog pound
+2007,0a20bf91,"Oct 9, 2:23 am",RedShit,Brandon Jackson,Cle - RB,Old Style
+2007,0a20bf91,"Oct 9, 2:23 am",Old Style,Ladell Betts,NO - RB,RedShit
+2007,68c3b619,"Oct 7, 1:20 am",South of 55 is mine!,Maurice Jones-Drew,LV - RB,MiniDitkas
+2007,68c3b619,"Oct 7, 1:20 am",MiniDitkas,Santana Moss,Was - WR,South of 55 is mine!
+2007,8755a20b,"Sep 28, 12:39 am",who is john galt?,Marques Colston,NO - WR,you're all screwed
+2007,8755a20b,"Sep 28, 12:39 am",who is john galt?,Laurence Maroney,NE - RB,you're all screwed
+2007,8755a20b,"Sep 28, 12:39 am",you're all screwed,Deion Branch,Ind - WR,who is john galt?
+2007,8755a20b,"Sep 28, 12:39 am",you're all screwed,Ahman Green,GB - RB,who is john galt?
+2008,5e518eac,"Nov 14, 2:34 am",you're all screwed,Bo Scaife,Ten - TE,old style
+2008,5e518eac,"Nov 14, 2:34 am",you're all screwed,Trent Edwards,Phi - QB,old style
+2008,5e518eac,"Nov 14, 2:34 am",old style,Chris Cooley,Was - TE,you're all screwed
+2008,0201eca5,"Nov 9, 12:29 am",PJH Hawks,LenDale White,Ten - RB,Minooka Bears
+2008,0201eca5,"Nov 9, 12:29 am",Minooka Bears,Peyton Manning,Den - QB,PJH Hawks
+2008,0201eca5,"Nov 9, 12:29 am",Minooka Bears,Patriots,NE - DEF,PJH Hawks
+2008,1968e51a,"Oct 18, 1:38 am",Beer Gut,Chad Pennington,Mia - QB,old style
+2008,1968e51a,"Oct 18, 1:38 am",old style,Roy Williams,Chi - WR,Beer Gut
+2008,c9053d23,"Oct 13, 12:17 am",PJH Hawks,Torry Holt,Jax - WR,old style
+2008,c9053d23,"Oct 13, 12:17 am",PJH Hawks,Edgerrin James,Sea - RB,old style
+2008,c9053d23,"Oct 13, 12:17 am",old style,Braylon Edwards,Sea - WR,PJH Hawks
+2008,be77db86,"Oct 11, 12:21 am",Beer Gut,Roddy White,Atl - WR,MiniDitkas
+2008,be77db86,"Oct 11, 12:21 am",MiniDitkas,Philip Rivers,Ind - QB,Beer Gut
+2008,0d4b4e22,"Oct 7, 12:16 am",you're all screwed,Julius Jones,Sea - RB,long live the goat
+2008,0d4b4e22,"Oct 7, 12:16 am",long live the goat,Andre Johnson,Ten - WR,you're all screwed
+2008,0d4b4e22,"Oct 7, 12:16 am",long live the goat,Thomas Jones,KC - RB,you're all screwed
+2010,9f8e073e,"Nov 10, 1:13 am",BV,Ryan Torain,NYG - RB,Minooka Bears
+2010,9f8e073e,"Nov 10, 1:13 am",BV,Fred Jackson,Sea - RB,Minooka Bears
+2010,9f8e073e,"Nov 10, 1:13 am",BV,Danny Amendola,Hou - WR,Minooka Bears
+2010,9f8e073e,"Nov 10, 1:13 am",Minooka Bears,Brandon Jackson,Cle - RB,BV
+2010,9f8e073e,"Nov 10, 1:13 am",Minooka Bears,Giants,NYG - DEF,BV
+2011,f98d171f,"Nov 19, 1:41 am",Guinness,Shonn Greene,Ten - RB,angry cat
+2011,f98d171f,"Nov 19, 1:41 am",angry cat,Ravens,Bal - DEF,Guinness
+2011,53181ebd,"Nov 18, 2:24 am",team old style,Earl Bennett,Chi - WR,Three Four D
+2011,53181ebd,"Nov 18, 2:24 am",Three Four D,Brent Celek,Phi - TE,team old style
+2011,f0dec6c8,"Nov 1, 2:27 am",miniDITKAS,Jordy Nelson,LV - WR,chad 86
+2011,f0dec6c8,"Nov 1, 2:27 am",miniDITKAS,Greg Olsen,Sea - TE,chad 86
+2011,f0dec6c8,"Nov 1, 2:27 am",chad 86,Montario Hardesty,Cle - RB,miniDITKAS
+2012,a4edb04b,"Oct 18, 8:58 am",angry cat,Calvin Johnson,Det - WR,Quakes and Canes
+2012,a4edb04b,"Oct 18, 8:58 am",Quakes and Canes,Steve Johnson,LAC - WR,angry cat
+2012,a4edb04b,"Oct 18, 8:58 am",Quakes and Canes,Darren Sproles,Phi - RB,angry cat
+2013,e800ee6f,"Oct 10, 2:29 am",angry cat,Colin Kaepernick,SF - QB,Quakes and Canes
+2013,e800ee6f,"Oct 10, 2:29 am",Quakes and Canes,Antonio Brown,TB - WR,angry cat
+2013,b398a7d0,"Sep 30, 2:01 am",Goood Times,Daryl Richardson,Pit - RB,Quakes and Canes
+2013,b398a7d0,"Sep 30, 2:01 am",Goood Times,Le'Veon Bell,TB - RB,Quakes and Canes
+2013,b398a7d0,"Sep 30, 2:01 am",Quakes and Canes,Jared Cook,LAC - TE,Goood Times
+2013,b398a7d0,"Sep 30, 2:01 am",Quakes and Canes,Tony Romo,Dal - QB,Goood Times
+2015,2bdb3d32,"Nov 23, 1:44 am",Goood Times,Adrian Peterson,Sea - RB,Guinness
+2015,2bdb3d32,"Nov 23, 1:44 am",Guinness,T.J. Yeldon,Buf - RB,Goood Times
+2015,8f2bcc03,"Oct 15, 12:54 am",los pollos hermanos,LeGarrette Blount,Det - RB,team old style
+2015,8f2bcc03,"Oct 15, 12:54 am",team old style,Larry Donnell,NYG - TE,los pollos hermanos
+2016,2fd82c6f,"Nov 13, 12:29 am",Mean Machine 2,Sterling Shepard,TB - WR,los pollos hermanos
+2016,2fd82c6f,"Nov 13, 12:29 am",Mean Machine 2,Devontae Booker,NYG - RB,los pollos hermanos
+2016,2fd82c6f,"Nov 13, 12:29 am",Mean Machine 2,Jimmy Graham,NO - TE,los pollos hermanos
+2016,2fd82c6f,"Nov 13, 12:29 am",los pollos hermanos,Odell Beckham Jr.,NYG - WR,Mean Machine 2
+2016,2fd82c6f,"Nov 13, 12:29 am",los pollos hermanos,Todd Gurley,Atl - RB,Mean Machine 2
+2016,2fd82c6f,"Nov 13, 12:29 am",los pollos hermanos,Allen Hurns,Mia - WR,Mean Machine 2
+2017,b739643a,"Nov 11, 12:37 am",Who Diggs Nelson?,Marcus Mariota,Was - QB,This Is How We Do
+2017,d57ce602,"Nov 10, 12:32 am",Mean Machine 22,Lions,Det - DEF,This Is How We Do
+2017,3860ea1a,"Nov 9, 12:19 am",Guinness,Michael Thomas,NO - WR,This Is How We Do
+2018,0eab371e,"Nov 7, 1:27 am",Futball in the Groin,Aaron Jones Sr.,Min - RB,Mean Machine 22
+2018,0eab371e,"Nov 7, 1:27 am",Mean Machine 22,Saquon Barkley,Phi - RB,Futball in the Groin
+2018,28bf3dd2,"Nov 7, 1:27 am",team old style,Adam Thielen,Pit - WR,Fuzzy Bears
+2018,28bf3dd2,"Nov 7, 1:27 am",Fuzzy Bears,Randall Cobb,NYJ - WR,team old style
+2018,e6e25546,"Nov 7, 1:27 am",Fuzzy Bears,Matthew Stafford,LAR - QB,This Is How We Do
+2018,e6e25546,"Nov 7, 1:27 am",This Is How We Do,Cam Newton,Car - QB,Fuzzy Bears
+2018,d5700476,"Nov 3, 12:34 am",Mean Machine 22,Todd Gurley,Atl - RB,Los Pollos Hermanos
+2018,d5700476,"Nov 3, 12:34 am",Los Pollos Hermanos,James Conner,Ari - RB,Mean Machine 22
+2019,c3bf85e3,"Nov 20, 3:59 am",Goood Times,James Conner,Ari - RB,West Coast Infirmary
+2019,c3bf85e3,"Nov 20, 3:59 am",West Coast Infirmary,Ezekiel Elliott,Dal - RB,Goood Times
+2020,ac67157b,"Oct 17, 12:10 am",angry cat,Jerry Jeudy,Cle - WR,team old style
+2020,ac67157b,"Oct 17, 12:10 am",team old style,Adrian Peterson,Sea - RB,angry cat
+2020,1a664914,"Oct 15, 1:27 am",team old style,Russell Wilson,NYG - QB,West Coast Infirmary
+2020,1a664914,"Oct 15, 1:27 am",West Coast Infirmary,Clyde Edwards-Helaire,KC - RB,team old style
+2020,f838a187,"Oct 15, 1:27 am",West Coast Infirmary,DeAndre Hopkins,Bal - WR,angry cat
+2020,f838a187,"Oct 15, 1:27 am",angry cat,Mark Ingram II,NO - RB,West Coast Infirmary
+2021,5b5cdc8e,"Nov 10, 12:21 am",Futball in the Groin,Kyle Pitts Sr.,Atl - TE,Beast Mode
+2021,5b5cdc8e,"Nov 10, 12:21 am",Beast Mode,Mark Andrews,Bal - TE,Futball in the Groin
+2021,6bd87ef8,"Oct 14, 12:10 am",“I’ll take Kittle”,Dak Prescott,Dal - QB,Beast Mode
+2021,6bd87ef8,"Oct 14, 12:10 am",Beast Mode,Aaron Jones Sr.,Min - RB,“I’ll take Kittle”
+2022,4fbb1a78,"Nov 19, 12:19 am",Good Douche Bag,Patrick Mahomes,KC - QB,“I’ll take Kittle”
+2022,4fbb1a78,"Nov 19, 12:19 am",“I’ll take Kittle”,Tua Tagovailoa,Atl - QB,Good Douche Bag
+2022,563b0264,"Nov 17, 12:12 am",Bears,George Kittle,SF - TE,Good Douche Bag
+2022,563b0264,"Nov 17, 12:12 am",Bears,Tom Brady,TB - QB,Good Douche Bag
+2022,563b0264,"Nov 17, 12:12 am",Good Douche Bag,Cole Kmet,Chi - TE,Bears
+2022,563b0264,"Nov 17, 12:12 am",Good Douche Bag,Tony Pollard,Ten - RB,Bears
+2022,2eafcdf3,"Nov 15, 12:12 am",Goood Times,Isaiah McKenzie,Mia - WR,Good Douche Bag
+2022,2eafcdf3,"Nov 15, 12:12 am",Good Douche Bag,Cooper Kupp,Sea - WR,Goood Times
+2022,3386a5d7,"Nov 4, 12:13 am",Goood Times,Ezekiel Elliott,Dal - RB,Fuzzy Bears
+2022,3386a5d7,"Nov 4, 12:13 am",Fuzzy Bears,Travis Etienne Jr.,NO - RB,Goood Times
+2023,f9e0dee1,"Nov 20, 12:17 am",This Is How We Do,Dallas Goedert,Phi - TE,Bears
+2023,f9e0dee1,"Nov 20, 12:17 am",Bears,Travis Kelce,KC - TE,This Is How We Do
+2023,7f778d18,"Nov 18, 12:14 am",G’day Bumblenuts,Trey McBride,Ari - TE,miniDITKAS
+2023,7f778d18,"Nov 18, 12:14 am",miniDITKAS,T.J. Hockenson,Min - TE,G’day Bumblenuts
+2023,e7683d39,"Nov 17, 12:13 am",Futball in the Groin,Lamar Jackson,Bal - QB,G’day Bumblenuts
+2023,e7683d39,"Nov 17, 12:13 am",G’day Bumblenuts,Matthew Stafford,LAR - QB,Futball in the Groin
+2023,a1d3b43e,"Nov 10, 12:09 am",Goood Times,Josh Allen,Buf - QB,Fuzzy Bears
+2023,a1d3b43e,"Nov 10, 12:09 am",Fuzzy Bears,Cooper Kupp,Sea - WR,Goood Times
+2023,eb14d360,"Oct 31, 12:11 am",Bears,Jalen Hurts,Phi - QB,Fuzzy Bears
+2023,eb14d360,"Oct 31, 12:11 am",Fuzzy Bears,Trevor Lawrence,Jax - QB,Bears
+2024,54566553,"Nov 18, 12:22 am",Futball in the Groin,JuJu Smith-Schuster,NYG - WR,Bears
+2024,54566553,"Nov 18, 12:22 am",Bears,Cooper Kupp,Sea - WR,Futball in the Groin
+2024,54566553,"Nov 18, 12:22 am",Bears,James Conner,Ari - RB,Futball in the Groin
+2024,54566553,"Nov 18, 12:22 am",Futball in the Groin,Jalen Coker,Car - WR,Bears
+2024,b70abb0f,"Nov 18, 12:22 am",This Is How We Do,Jahmyr Gibbs,Det - RB,Futball in the Groin
+2024,b70abb0f,"Nov 18, 12:22 am",Futball in the Groin,Rashee Rice,KC - WR,This Is How We Do
+2025,24a14a62,"Nov 21, 12:44 am",Goood Times,Bhayshul Tuten,Jax - RB,G’day Bumblenuts
+2025,24a14a62,"Nov 21, 12:44 am",G’day Bumblenuts,Cam Skattebo,NYG - RB,Goood Times
+2025,4baa61b3,"Nov 8, 12:45 am",Fuzzy Bears,Ja'Marr Chase,Cin - WR,Goood Times
+2025,4baa61b3,"Nov 8, 12:45 am",Goood Times,Deebo Samuel,Was - WR,Fuzzy Bears
