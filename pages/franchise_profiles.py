@@ -82,9 +82,12 @@ franchise_options = (
 )
 option_map = dict(zip(franchise_options["current_manager"], franchise_options["franchise_id"]))
 
+_sorted_mgr_keys = sorted(option_map.keys())
+_default_mgr_idx = _sorted_mgr_keys.index("Eric") if "Eric" in _sorted_mgr_keys else 0
 selected_mgr = st.selectbox(
     "SELECT FRANCHISE",
-    options=sorted(option_map.keys()),
+    options=_sorted_mgr_keys,
+    index=_default_mgr_idx,
     format_func=lambda n: f"{MANAGER_EMOJI.get(n, '')}  {n}  ·  {option_map[n]}",
     label_visibility="collapsed",
 )
@@ -490,10 +493,15 @@ for i, (_, p) in enumerate(periods.iterrows()):
         f'<div class="tl-steward-rich-years">{yr_range}</div>'
         f'{trophy_html}'
         f'<div class="tl-steward-rich-divider"></div>'
+        f'<div style="display:flex;flex-direction:column;gap:0.35rem;">'
+        f'<div style="text-align:center;">'
+        f'<div class="tl-steward-rich-stat-val">{w}-{l}</div>'
+        f'<div class="tl-steward-rich-stat-lbl">Record</div>'
+        f'</div>'
         f'<div style="display:flex;justify-content:space-around;gap:0.3rem;">'
-        f'<div><div class="tl-steward-rich-stat-val">{w}-{l}</div><div class="tl-steward-rich-stat-lbl">Record</div></div>'
         f'<div><div class="tl-steward-rich-stat-val">{pl}</div><div class="tl-steward-rich-stat-lbl">Playoffs</div></div>'
         f'<div><div class="tl-steward-rich-stat-val">{szns}</div><div class="tl-steward-rich-stat-lbl">Seasons</div></div>'
+        f'</div>'
         f'</div>'
         f'</div>'
     )
@@ -839,7 +847,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-_fl_legends = get_franchise_legends(selected_franchise)
+_fl_legends = get_franchise_legends(franchise_id)
 _dpw_fr = get_draft_picks_with_pos()
 _POS_C_FR = {"RB":"#22C55E","WR":"#3B82F6","QB":"#EF4444","TE":"#F59E0B","DEF":"#8B5CF6","K":"#6B7280"}
 
@@ -863,7 +871,7 @@ if _fl_legends:
 
         # Who from this franchise drafted them (get unique managers)
         _fr_picks = _dpw_fr[
-            (_dpw_fr["franchise_id"] == selected_franchise) &
+            (_dpw_fr["franchise_id"] == franchise_id) &
             (_dpw_fr["player_name"] == _pname)
         ]
         _fr_mgrs  = _fr_picks["manager"].dropna().unique().tolist()
