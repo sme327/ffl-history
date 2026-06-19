@@ -232,7 +232,11 @@ st.markdown(
 # ── Hero metric row ──────────────────────────────────────────────────────────
 _cl_rec = f"{int(closest_row['rs_a_wins'])}–{int(closest_row['rs_b_wins'])}"
 _cl_games = int(closest_row["rs_games"])
-_top_score = int(all_rivalries.iloc[0]["rivalry_score"])
+
+# Most close games (margin < 5 pts)
+_close_row = all_rivalries.iloc[all_rivalries["close_games"].argmax()]
+_close_a, _close_b = _close_row["mgr_a"], _close_row["mgr_b"]
+_close_n = int(_close_row["close_games"])
 
 # Small league-wide strip above the rivalry cards
 st.markdown(
@@ -274,17 +278,17 @@ def _hero_card(label: str, metric: str, vs_html: str, sub: str = "") -> str:
     )
 
 _hero_cards = [
-    _hero_card("Top Rivalry Score",       str(_top_score),
+    _hero_card("Most Played",           f"{int(most_played_row['rs_games'])} Meetings",
                _rivalry_vs(_mp_a, _mp_b)),
-    _hero_card("Most Played",             f"{int(most_played_row['rs_games'])} Meetings",
-               _rivalry_vs(_mp_a, _mp_b)),
-    _hero_card("Most Playoff Meetings",   f"{int(most_pl_row['pl_games'])} Meetings",
+    _hero_card("Most Playoff Meetings", f"{int(most_pl_row['pl_games'])} Meetings",
                _rivalry_vs(_pl_a, _pl_b)),
-    _hero_card("Closest Series",          _cl_rec,
+    _hero_card("Closest Series",        _cl_rec,
                _rivalry_vs(_cl_a, _cl_b),
                sub=f"{_cl_games} Meetings · 0 Game Difference"),
-    _hero_card("Most One-Sided",          f"{_lo_wins}–{_lo_losses}",
+    _hero_card("Most One-Sided",        f"{_lo_wins}–{_lo_losses}",
                _rivalry_vs(_lo_dom, _lo_vic)),
+    _hero_card("Most Close Games",      f"{_close_n} Games Within 5 Pts",
+               _rivalry_vs(_close_a, _close_b)),
 ]
 st.markdown(
     '<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:1.5rem;">'
