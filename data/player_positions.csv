@@ -9,12 +9,10 @@ Aaron Dobson,WR,nflverse
 Aaron Hernandez,TE,nflverse
 Aaron Jones Sr.,RB,nflverse_no_suffix
 Aaron Rodgers,QB,nflverse
-Aaron Rodgers (Pit - QB) ,QB,nflverse
 Adam Thielen,WR,nflverse
 Adam Vinatieri,K,nflverse
 Adonai Mitchell,WR,nflverse
 Adrian Peterson,RB,nflverse_ambiguous
-Adrian Peterson (Sea - RB) ,RB,nflverse_ambiguous
 Ahmad Bradshaw,RB,nflverse
 Ahman Green,RB,nflverse
 Albert Wilson,WR,nflverse
@@ -39,7 +37,6 @@ Amos Zereoue,RB,nflverse
 Andre Davis,WR,nflverse_ambiguous
 Andre Ellington,RB,nflverse
 Andre Johnson,WR,nflverse_ambiguous
-Andre Johnson (Ten - WR) ,WR,nflverse_ambiguous
 Andre Williams,RB,nflverse
 Andrew Glover,TE,nflverse
 Andrew Hawkins,WR,nflverse
@@ -62,7 +59,6 @@ Antonio Gibson,RB,nflverse_ambiguous
 Antowain Smith,RB,nflverse
 Antwaan Randle El,WR,nflverse
 Arian Foster,RB,nflverse
-Arian Foster (Mia - RB) ,RB,nflverse
 Arnaz Battle,WR,nflverse
 Arrelious Benn,WR,nflverse
 Ashley Lelie,WR,nflverse
@@ -198,7 +194,6 @@ Chris Herndon,TE,nflverse
 Chris Hogan,WR,nflverse
 Chris Ivory,RB,nflverse
 Chris Johnson,RB,nflverse_ambiguous
-Chris Johnson (Ari - RB) ,RB,nflverse_ambiguous
 Chris Olave,WR,nflverse
 Chris Perry,RB,nflverse
 Chris Simms,QB,nflverse
@@ -359,7 +354,6 @@ Drake Maye,QB,nflverse
 Drew Bennett,WR,nflverse
 Drew Bledsoe,QB,nflverse
 Drew Brees,QB,nflverse
-Drew Brees (NO - QB) ,QB,nflverse
 Duce Staley,RB,nflverse
 Duke Johnson,RB,nflverse
 Dustin Keller,TE,nflverse
@@ -434,7 +428,6 @@ Greg Zuerlein,K,nflverse
 Gus Edwards,RB,nflverse
 Gus Frerotte,QB,nflverse
 Hakeem Nicks,WR,nflverse
-Hakeem Nicks (NYG - WR) ,WR,nflverse
 Harrison Butker,K,nflverse
 Harry Douglas,WR,nflverse
 Hayden Hurst,TE,nflverse
@@ -780,7 +773,6 @@ Matt Stover,K,nflverse
 Matthew Golden,WR,nflverse
 Matthew Stafford,QB,nflverse
 Maurice Jones-Drew,RB,nflverse
-Maurice Jones-Drew (LV - RB) ,RB,nflverse
 Maurice Morris,RB,nflverse
 Mecole Hardman Jr.,WR,nflverse_no_suffix
 Melvin Gordon III,RB,nflverse_no_suffix
@@ -798,7 +790,6 @@ Michael Pittman,RB,nflverse_ambiguous
 Michael Pittman Jr.,RB,nflverse_no_suffix
 Michael Thomas,WR,nflverse_ambiguous
 Michael Turner,RB,nflverse
-Michael Turner (Atl - RB) ,RB,nflverse
 Michael Vick,QB,manual
 Michael Westbrook,WR,nflverse
 Mike Alstott,FB,nflverse
@@ -898,7 +889,6 @@ Rashaad Penny,RB,nflverse
 Rashad Jennings,RB,nflverse
 Rashard Higgins,WR,nflverse
 Rashard Mendenhall,RB,nflverse
-Rashard Mendenhall (Ari - RB) ,RB,nflverse
 Rashee Rice,WR,nflverse
 Rashid Shaheed,WR,nflverse
 Rashod Bateman,WR,nflverse
@@ -936,7 +926,6 @@ Roberto Aguayo,K,nflverse
 Rod Gardner,WR,nflverse
 Rod Smith,RB,nflverse_ambiguous
 Roddy White,WR,nflverse
-Roddy White (Atl - WR) ,WR,nflverse
 Rodrigo Blankenship,K,nflverse
 Rome Odunze,WR,nflverse
 Romeo Doubs,WR,nflverse
@@ -1002,7 +991,6 @@ Steve McNair,QB,nflverse
 Steve Slaton,RB,nflverse
 Steve Smith,WR,nflverse_ambiguous
 Steven Jackson,RB,nflverse_ambiguous
-Steven Jackson (NE - RB) ,RB,nflverse_ambiguous
 T.J. Duckett,RB,nflverse
 T.J. Hockenson,TE,nflverse
 T.J. Houshmandzadeh,WR,nflverse
