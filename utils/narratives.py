@@ -295,3 +295,88 @@ SEASON_HOOKS: dict[int, str] = {
     2024: "Saquon proved everyone wrong. Some managers did too.",
     2025: "The current season. The story isn't finished.",
 }
+
+# ── RIVALRY PLAQUES ────────────────────────────────────────────────────────────
+# Keyed by sorted tuple of (manager_a, manager_b) in alphabetical order.
+# These appear as museum-style plaques on the Rivalries page.
+RIVALRY_PLAQUES: dict[tuple[str, str], str] = {
+    ("Kevin O'Boyle", "Kevin Swanson"): (
+        "Two Kevins. One league. Thirty-five regular season meetings, five playoff "
+        "matchups, and one championship game. No rivalry in league history has been "
+        "played more often or remained more evenly matched. They faced each other at "
+        "least twice a season for over a decade — and neither could ever put the other away."
+    ),
+    ("Brian Clark", "Dominic"): (
+        "Brian Clark owned Dominic in the regular season, winning 21 of 29 matchups — "
+        "the most dominant long-running RS record in league history. But when January "
+        "arrived, Dominic owned Clark. Three playoff eliminations. Two championship game "
+        "victories. The rivalry that proves regular season supremacy means nothing when "
+        "the stakes are highest."
+    ),
+    ("Dominic", "Kevin O'Boyle"): (
+        "Twelve wins against eleven across the regular season — nearly identical. "
+        "But in two championship game meetings, Dominic prevailed both times: 2011 and 2021. "
+        "A rivalry of near-equals, separated only by the most important games ever played."
+    ),
+    ("Evan", "Fadi"): (
+        "Fifteen wins each in the regular season. Exactly. Of all long-running rivalries "
+        "in this league, none has produced more parity. But when they met in the "
+        "championship game, Evan walked away with the trophy. Twice. "
+        "The scoreboard says dead even. The trophy case does not."
+    ),
+    ("Brian Clark", "Kevin O'Boyle"): (
+        "Thirty regular season meetings. Five playoff matchups. Fifteen wins each across "
+        "both formats. They have contested some of the most important games in league "
+        "history — yet they have never met in a championship game. "
+        "The rivalry that climbed higher every season but never quite reached the summit."
+    ),
+    ("Dominic", "Fadi"): (
+        "Fadi leads the regular season 16-9 — a convincing edge built over two decades. "
+        "But Dominic leads the playoff record 3-1. The pattern holds: Fadi can beat "
+        "Dominic during the season, but not when everything is on the line."
+    ),
+    ("Evan", "Kevin Swanson"): (
+        "Thirteen wins each. Three playoff meetings. A rivalry built on parity and "
+        "longevity that has played out across the full arc of the league's history, "
+        "without either manager ever fully separating from the other."
+    ),
+    ("Kevin Swanson", "Shawn"): (
+        "Kevin Swanson leads the series 17-11 and has eliminated Shawn from the playoffs "
+        "twice. A rivalry defined less by headline moments and more by a quiet, sustained "
+        "dominance that Shawn has never been able to fully answer."
+    ),
+    ("Shawn", "Thomas"): (
+        "Thirty-four meetings — the second-most in league history. Shawn leads 19-15, "
+        "and their matchups have spanned the entire life of the league. No two active "
+        "managers have played each other more. The rivalry that defines continuity."
+    ),
+    ("Kevin O'Boyle", "Shawn"): (
+        "Shawn leads the series 18-10, but seven of their meetings have been decided "
+        "by fewer than five points. No long-running rivalry in league history has produced "
+        "more close games. The rivalry that always comes down to the wire."
+    ),
+    ("Brian Clark", "Kevin Swanson"): (
+        "Three playoff meetings and a regular season series that has gone back and forth "
+        "for over fifteen years. They have met when seasons were on the line more than "
+        "almost any other pair of managers."
+    ),
+    ("Fadi", "Thomas"): (
+        "Thirty-one meetings — third-most in league history. Fadi leads 18-13 in a "
+        "rivalry that has never produced a championship meeting but has defined the "
+        "middle tier of contenders for most of the league's existence."
+    ),
+    ("Brian Clark", "Shawn"): (
+        "Brian Clark leads 19-11 in a rivalry where eight games have been decided by "
+        "fewer than five points. The most close games between any two managers with a "
+        "lopsided overall record. Shawn keeps it close. He just can't quite win."
+    ),
+    ("Dominic", "Steve Swanson"): (
+        "Two of the league's most consistent playoff contenders — with one "
+        "championship meeting between them. Dominic won that one too."
+    ),
+    ("Evan", "Shawn"): (
+        "Fifteen wins each in twenty-nine meetings. Two playoff appearances together. "
+        "A rivalry built on mutual respect and identical records — one of the most "
+        "balanced long-term matchups the league has ever produced."
+    ),
+}

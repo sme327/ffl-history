@@ -805,6 +805,7 @@ def render_nav(active: str = "home"):
         ("franchise_profiles","/franchise_profiles",  "Franchises"),
         ("draft_center",      "/draft_center",        "Draft Center"),
         ("keeper_hall",       "/keeper_hall",         "Keeper Hall"),
+        ("rivalries",         "/rivalries",            "Rivalries"),
     ]
     links = "".join(
         f'<a href="{href}" class="tl-nav-link{" active" if active == key else ""}" target="_self">{label}</a>'

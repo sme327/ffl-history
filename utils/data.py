@@ -1020,3 +1020,233 @@ def get_franchise_legends(franchise_id: str) -> list[dict]:
     fpo = fpo[fpo["position"] != "DEF"]  # exclude team defenses
     top = fpo.nlargest(8, "legend_score")
     return top[["player_name", "position", "draft_count", "keeper_count", "legend_score", "seasons"]].to_dict("records")
+
+
+# ── RIVALRY DATA ──────────────────────────────────────────────────────────────
+
+@st.cache_data
+def get_all_rivalries() -> pd.DataFrame:
+    """Rivalry scores and head-to-head records for every manager pair."""
+    data = load_all()
+    wm = data["weekly_matchups"]
+    tnh = data["team_name_history"]
+    pg = data["playoff_games"]
+
+    mgr_lu = tnh.set_index(["season", "team_name"])["canonical_name"].to_dict()
+
+    # Regular-season games — one row per game (deduplicate from two-perspective data)
+    rs = wm[~wm["is_bye"].astype(bool) & ~wm["is_playoff"].astype(bool)].copy()
+    rs["mgr"] = rs.apply(lambda r: mgr_lu.get((r["season"], r["team_name"])), axis=1)
+    rs["opp_mgr"] = rs.apply(lambda r: mgr_lu.get((r["season"], r["opponent"])), axis=1)
+    rs = rs.dropna(subset=["mgr", "opp_mgr"])
+    rs = rs[rs["mgr"] != rs["opp_mgr"]]
+    rs["pair"] = rs.apply(lambda r: tuple(sorted([r["mgr"], r["opp_mgr"]])), axis=1)
+    rs["margin"] = (rs["team_score"] - rs["opponent_score"]).abs()
+    rs["winner"] = rs.apply(
+        lambda r: r["mgr"] if r["result"] == "Win" else r["opp_mgr"], axis=1
+    )
+    rs_dedup = rs.drop_duplicates(subset=["season", "week", "pair"]).copy()
+
+    # Championship-bracket playoff games
+    champ = pg[pg["bracket"] == "championship"].copy()
+    champ["mgr1"] = champ.apply(lambda r: mgr_lu.get((r["season"], r["team_1"])), axis=1)
+    champ["mgr2"] = champ.apply(lambda r: mgr_lu.get((r["season"], r["team_2"])), axis=1)
+    champ["winner_mgr"] = champ.apply(lambda r: mgr_lu.get((r["season"], r["winner"])), axis=1)
+    champ = champ.dropna(subset=["mgr1", "mgr2"])
+    champ["pair"] = champ.apply(
+        lambda r: tuple(sorted([r["mgr1"], r["mgr2"]])), axis=1
+    )
+    champ["margin"] = (champ["score_1"] - champ["score_2"]).abs()
+
+    RECENT_CUTOFF = CURRENT_SEASON - 4
+    all_pairs = set(rs_dedup["pair"].unique()) | set(champ["pair"].unique())
+
+    rows = []
+    raw_scores = []
+
+    for pair in all_pairs:
+        mgr_a, mgr_b = pair
+        rs_grp = rs_dedup[rs_dedup["pair"] == pair]
+        pl_grp = champ[champ["pair"] == pair]
+        final_grp = pl_grp[pl_grp["game_type"] == "final"]
+
+        total_rs = len(rs_grp)
+        a_wins = int((rs_grp["winner"] == mgr_a).sum())
+        b_wins = int((rs_grp["winner"] == mgr_b).sum())
+        close = int((rs_grp["margin"] < 5).sum())
+        recent = int((rs_grp["season"] >= RECENT_CUTOFF).sum())
+        a_pct = a_wins / total_rs if total_rs > 0 else 0.5
+        balance = 1.0 - abs(a_pct - 0.5) * 2.0
+
+        pl_total = len(pl_grp)
+        pl_a = int((pl_grp["winner_mgr"] == mgr_a).sum()) if pl_total else 0
+        pl_b = int((pl_grp["winner_mgr"] == mgr_b).sum()) if pl_total else 0
+        final_total = len(final_grp)
+        final_a = int((final_grp["winner_mgr"] == mgr_a).sum()) if final_total else 0
+        final_b = int((final_grp["winner_mgr"] == mgr_b).sum()) if final_total else 0
+
+        raw = (
+            total_rs * 1.5
+            + pl_total * 8.0
+            + final_total * 15.0
+            + close * 2.0
+            + recent * 1.5
+            + balance * 25.0
+        )
+        raw_scores.append(raw)
+
+        # Season range
+        seasons_played = sorted(rs_grp["season"].unique().tolist()) if total_rs else []
+        first_meeting = int(min(seasons_played)) if seasons_played else 0
+        last_meeting = int(max(seasons_played)) if seasons_played else 0
+
+        # Biggest win margins
+        a_wins_df = rs_grp[rs_grp["winner"] == mgr_a]
+        b_wins_df = rs_grp[rs_grp["winner"] == mgr_b]
+        a_biggest = float(a_wins_df["margin"].max()) if len(a_wins_df) else 0.0
+        b_biggest = float(b_wins_df["margin"].max()) if len(b_wins_df) else 0.0
+        closest_game = float(rs_grp["margin"].min()) if total_rs else 0.0
+
+        rows.append({
+            "mgr_a": mgr_a, "mgr_b": mgr_b,
+            "rs_games": total_rs, "rs_a_wins": a_wins, "rs_b_wins": b_wins,
+            "rs_a_pct": round(a_pct, 3), "balance": round(balance, 3),
+            "close_games": close, "recent_games": recent,
+            "pl_games": pl_total, "pl_a_wins": pl_a, "pl_b_wins": pl_b,
+            "final_games": final_total, "final_a_wins": final_a, "final_b_wins": final_b,
+            "rivalry_raw": raw,
+            "a_biggest_win": round(a_biggest, 1),
+            "b_biggest_win": round(b_biggest, 1),
+            "closest_game": round(closest_game, 2),
+            "first_meeting": first_meeting,
+            "last_meeting": last_meeting,
+        })
+
+    df = pd.DataFrame(rows)
+    mx = df["rivalry_raw"].max()
+    df["rivalry_score"] = (df["rivalry_raw"] / mx * 100).round(0).astype(int)
+    return df.sort_values("rivalry_score", ascending=False).reset_index(drop=True)
+
+
+@st.cache_data
+def get_h2h_detail(mgr_a: str, mgr_b: str) -> dict:
+    """All games between two managers — RS + playoff — with per-game detail."""
+    data = load_all()
+    wm = data["weekly_matchups"]
+    tnh = data["team_name_history"]
+    pg = data["playoff_games"]
+
+    mgr_lu = tnh.set_index(["season", "team_name"])["canonical_name"].to_dict()
+    pair = tuple(sorted([mgr_a, mgr_b]))
+
+    # RS games
+    rs = wm[~wm["is_bye"].astype(bool) & ~wm["is_playoff"].astype(bool)].copy()
+    rs["mgr"] = rs.apply(lambda r: mgr_lu.get((r["season"], r["team_name"])), axis=1)
+    rs["opp_mgr"] = rs.apply(lambda r: mgr_lu.get((r["season"], r["opponent"])), axis=1)
+    rs = rs.dropna(subset=["mgr", "opp_mgr"])
+    rs["pair"] = rs.apply(lambda r: tuple(sorted([r["mgr"], r["opp_mgr"]])), axis=1)
+    rs = rs[rs["pair"] == pair].drop_duplicates(subset=["season", "week", "pair"])
+    rs["winner"] = rs.apply(lambda r: r["mgr"] if r["result"] == "Win" else r["opp_mgr"], axis=1)
+    rs["a_score"] = rs.apply(
+        lambda r: r["team_score"] if r["mgr"] == mgr_a else r["opponent_score"], axis=1
+    )
+    rs["b_score"] = rs.apply(
+        lambda r: r["opponent_score"] if r["mgr"] == mgr_a else r["team_score"], axis=1
+    )
+    rs["margin"] = (rs["team_score"] - rs["opponent_score"]).abs()
+
+    # Playoff games
+    champ = pg[pg["bracket"] == "championship"].copy()
+    champ["mgr1"] = champ.apply(lambda r: mgr_lu.get((r["season"], r["team_1"])), axis=1)
+    champ["mgr2"] = champ.apply(lambda r: mgr_lu.get((r["season"], r["team_2"])), axis=1)
+    champ["winner_mgr"] = champ.apply(lambda r: mgr_lu.get((r["season"], r["winner"])), axis=1)
+    champ["pair"] = champ.apply(lambda r: tuple(sorted([r["mgr1"], r["mgr2"]])), axis=1)
+    champ = champ[champ["pair"] == pair]
+    champ["a_score"] = champ.apply(
+        lambda r: float(r["score_1"]) if r["mgr1"] == mgr_a else float(r["score_2"]), axis=1
+    )
+    champ["b_score"] = champ.apply(
+        lambda r: float(r["score_2"]) if r["mgr1"] == mgr_a else float(r["score_1"]), axis=1
+    )
+    champ["margin"] = (champ["score_1"] - champ["score_2"]).abs()
+
+    return {
+        "rs": rs[["season", "week", "winner", "a_score", "b_score", "margin"]].sort_values(["season", "week"]),
+        "playoffs": champ[["season", "game_type", "winner_mgr", "a_score", "b_score", "margin"]].sort_values("season"),
+    }
+
+
+@st.cache_data
+def get_franchise_rivalries() -> pd.DataFrame:
+    """Franchise-vs-franchise head-to-head records."""
+    data = load_all()
+    wm = data["weekly_matchups"]
+    tnh = data["team_name_history"]
+    fh = data["franchise_history"]
+
+    # Team → franchise lookup
+    fh_lu = fh.set_index(["season", "manager_name"])["franchise_id"].to_dict()
+    tnh_lu = tnh.set_index(["season", "team_name"])["canonical_name"].to_dict()
+
+    def fid_from_team(season, team):
+        mgr = tnh_lu.get((season, team))
+        if mgr is None:
+            return None
+        return fh_lu.get((season, mgr))
+
+    rs = wm[~wm["is_bye"].astype(bool) & ~wm["is_playoff"].astype(bool)].copy()
+    rs["fid"] = rs.apply(lambda r: fid_from_team(r["season"], r["team_name"]), axis=1)
+    rs["opp_fid"] = rs.apply(lambda r: fid_from_team(r["season"], r["opponent"]), axis=1)
+    rs = rs.dropna(subset=["fid", "opp_fid"])
+    rs = rs[rs["fid"] != rs["opp_fid"]]
+    rs["pair"] = rs.apply(lambda r: tuple(sorted([r["fid"], r["opp_fid"]])), axis=1)
+    rs["winner_fid"] = rs.apply(
+        lambda r: r["fid"] if r["result"] == "Win" else r["opp_fid"], axis=1
+    )
+    rs_dedup = rs.drop_duplicates(subset=["season", "week", "pair"])
+
+    rows = []
+    for pair, grp in rs_dedup.groupby("pair"):
+        fid_a, fid_b = pair
+        a_wins = int((grp["winner_fid"] == fid_a).sum())
+        b_wins = int((grp["winner_fid"] == fid_b).sum())
+        total = len(grp)
+        rows.append({
+            "fid_a": fid_a, "fid_b": fid_b,
+            "games": total, "a_wins": a_wins, "b_wins": b_wins,
+            "a_pct": round(a_wins / total, 3) if total else 0.5,
+        })
+
+    df = pd.DataFrame(rows)
+    return df.sort_values("games", ascending=False).reset_index(drop=True)
+
+
+@st.cache_data
+def get_playoff_eliminations() -> pd.DataFrame:
+    """Who has eliminated whom in the championship bracket."""
+    data = load_all()
+    pg = data["playoff_games"]
+    tnh = data["team_name_history"]
+
+    mgr_lu = tnh.set_index(["season", "team_name"])["canonical_name"].to_dict()
+    champ = pg[
+        (pg["bracket"] == "championship")
+        & (pg["game_type"].isin(["quarterfinal", "semifinal", "final"]))
+    ].copy()
+    champ["winner_mgr"] = champ.apply(lambda r: mgr_lu.get((r["season"], r["winner"])), axis=1)
+    champ["loser_team"] = champ.apply(
+        lambda r: r["team_2"] if r["winner"] == r["team_1"] else r["team_1"], axis=1
+    )
+    champ["loser_mgr"] = champ.apply(
+        lambda r: mgr_lu.get((r["season"], r["loser_team"])), axis=1
+    )
+    champ = champ.dropna(subset=["winner_mgr", "loser_mgr"])
+
+    pair_counts = (
+        champ.groupby(["winner_mgr", "loser_mgr"])
+        .size()
+        .reset_index(name="eliminations")
+        .sort_values("eliminations", ascending=False)
+        .reset_index(drop=True)
+    )
+    return pair_counts
