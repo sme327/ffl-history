@@ -229,30 +229,87 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-h1, h2, h3, h4, h5 = st.columns(5)
-_stat = lambda v, l: f'<div class="tl-metric"><div class="tl-metric-value">{v}</div><div class="tl-metric-label">{l}</div></div>'
-with h1:
-    st.markdown(_stat(total_pairs, "Active Rivalries"), unsafe_allow_html=True)
-with h2:
-    st.markdown(
-        _stat(f"{_mp_a} vs {_mp_b}", f"Most Played · {int(most_played_row['rs_games'])} games"),
-        unsafe_allow_html=True,
+# ── Hero metric row ──────────────────────────────────────────────────────────
+_cl_rec = f"{int(closest_row['rs_a_wins'])}–{int(closest_row['rs_b_wins'])}"
+
+def _hero_metric(number: str, label: str, name: str = "") -> str:
+    name_html = (
+        f'<div style="font-size:0.62rem;color:#4B5563;margin-top:5px;'
+        f'font-family:\'Inter\',sans-serif;line-height:1.3;">{name}</div>'
+    ) if name else ""
+    return (
+        f'<div style="background:#0F1B2D;border:1px solid #1E3A5F;border-radius:8px;'
+        f'padding:20px 14px;text-align:center;box-sizing:border-box;">'
+        f'<div style="font-family:\'Bebas Neue\',sans-serif;font-size:2.4rem;'
+        f'color:#F5F5F5;line-height:1;letter-spacing:1px;">{number}</div>'
+        f'<div style="font-size:0.52rem;letter-spacing:2px;color:#6B7280;'
+        f'text-transform:uppercase;margin-top:6px;">{label}</div>'
+        f'{name_html}'
+        f'</div>'
     )
-with h3:
-    st.markdown(
-        _stat(f"{_cl_a} vs {_cl_b}", "Closest Series (RS)"),
-        unsafe_allow_html=True,
-    )
-with h4:
-    st.markdown(
-        _stat(f"{_pl_a} vs {_pl_b}", f"Most Playoff Meetings · {int(most_pl_row['pl_games'])}"),
-        unsafe_allow_html=True,
-    )
-with h5:
-    st.markdown(
-        _stat(f"{_lo_dom} {_lo_wins}–{_lo_losses}", f"Most One-Sided vs {_lo_vic}"),
-        unsafe_allow_html=True,
-    )
+
+_metric_cards = [
+    _hero_metric(str(total_pairs), "Active Rivalries", "League-wide"),
+    _hero_metric(str(int(most_played_row["rs_games"])), "Most Played", f"{_mp_a} vs {_mp_b}"),
+    _hero_metric(_cl_rec, "Closest Series", f"{_cl_a} vs {_cl_b}"),
+    _hero_metric(str(int(most_pl_row["pl_games"])), "Most Playoff Meetings", f"{_pl_a} vs {_pl_b}"),
+    _hero_metric(f"{_lo_wins}–{_lo_losses}", "Most One-Sided", f"{_lo_dom} vs {_lo_vic}"),
+]
+st.markdown(
+    '<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:1.5rem;">'
+    + "".join(_metric_cards)
+    + "</div>",
+    unsafe_allow_html=True,
+)
+
+# ── Featured rivalry showcase ─────────────────────────────────────────────────
+_top = all_rivalries.iloc[0]
+_top_a, _top_b = _top["mgr_a"], _top["mgr_b"]
+_top_col_a, _top_col_b = _color(_top_a), _color(_top_b)
+_top_score = int(_top["rivalry_score"])
+_top_rs = int(_top["rs_games"])
+_top_rec = f'{int(_top["rs_a_wins"])}–{int(_top["rs_b_wins"])}'
+_top_pl = int(_top["pl_games"])
+_top_finals = int(_top["final_games"])
+_top_plaque = _plaque(_top_a, _top_b)
+
+_stat_pill = lambda v, l: (
+    f'<span style="display:inline-block;background:#081120;border:1px solid #1E3A5F;'
+    f'border-radius:4px;padding:5px 12px;font-size:0.65rem;color:#94A3B8;">'
+    f'<span style="color:#F5F5F5;font-weight:700;">{v}</span> {l}</span>'
+)
+_top_plaque_html = (
+    f'<div style="margin-top:18px;border-left:3px solid #374151;padding-left:14px;'
+    f'font-family:\'Inter\',sans-serif;font-size:0.72rem;color:#CBD5E1;'
+    f'font-style:italic;line-height:1.7;">{_top_plaque}</div>'
+) if _top_plaque else ""
+
+st.markdown(
+    f'<div style="background:#0F1B2D;border:1px solid #1E3A5F;border-left:4px solid #D4AF37;'
+    f'border-radius:10px;padding:24px 28px;margin-bottom:0.5rem;">'
+    f'<div style="font-size:0.55rem;letter-spacing:3px;color:#D4AF37;'
+    f'font-family:\'Bebas Neue\',sans-serif;margin-bottom:10px;">THE DEFINING RIVALRY</div>'
+    f'<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;">'
+    f'<div style="flex:1;">'
+    f'<div style="font-family:\'Inter\',sans-serif;font-size:1.5rem;font-weight:700;'
+    f'color:#E2E8F0;margin-bottom:14px;">'
+    f'<span style="color:{_top_col_a};">{_emoji(_top_a)} {_top_a}</span>'
+    f'<span style="color:#6B7280;font-size:0.9rem;margin:0 10px;">vs</span>'
+    f'<span style="color:{_top_col_b};">{_emoji(_top_b)} {_top_b}</span>'
+    f'</div>'
+    f'<div style="display:flex;flex-wrap:wrap;gap:8px;">'
+    + _stat_pill(_top_rs, "Meetings")
+    + _stat_pill(_top_rec, "RS Record")
+    + _stat_pill(_top_pl, "Playoff Meetings")
+    + (_stat_pill(_top_finals, f'Championship Game{"s" if _top_finals != 1 else ""}') if _top_finals else "")
+    + f'</div>{_top_plaque_html}</div>'
+    f'<div style="text-align:center;flex-shrink:0;">'
+    f'<div style="font-family:\'Bebas Neue\',sans-serif;font-size:3.5rem;'
+    f'color:#D4AF37;line-height:1;">{_top_score}</div>'
+    f'<div style="font-size:0.5rem;letter-spacing:2px;color:#6B7280;">RIVALRY SCORE</div>'
+    f'</div></div></div>',
+    unsafe_allow_html=True,
+)
 
 st.markdown('<hr class="tl-divider-full">', unsafe_allow_html=True)
 
