@@ -822,6 +822,7 @@ def get_draft_picks_with_pos() -> pd.DataFrame:
 @st.cache_data
 def get_position_trends_data() -> pd.DataFrame:
     """Round-1 position share by season. Excludes keeper picks and years with <5 real R1 picks."""
+    _cache_bust = 1
     dpw = get_draft_picks_with_pos()
     r1 = dpw[(dpw["round"] == 1) & (~dpw["is_keeper"]) & dpw["position"].isin(_FANTASY_POS)].copy()
     r1["pos_group"] = r1["position"]
@@ -844,6 +845,7 @@ def get_position_trends_data() -> pd.DataFrame:
 @st.cache_data
 def get_draft_records() -> dict:
     """Various draft superlatives as a dict of labelled facts."""
+    _cache_bust = 1
     dpw = get_draft_picks_with_pos()
     real = dpw[~dpw["is_keeper"]].copy()
     keepers = dpw[dpw["is_keeper"]].copy()
@@ -896,6 +898,7 @@ def get_draft_records() -> dict:
 @st.cache_data
 def get_keeper_chains() -> pd.DataFrame:
     """Per-player keeper streak analysis. One row per (player, manager, streak)."""
+    _cache_bust = 1
     dpw = get_draft_picks_with_pos()
     keepers = dpw[dpw["is_keeper"]].copy()
 
@@ -939,6 +942,7 @@ def get_keeper_chains() -> pd.DataFrame:
 @st.cache_data
 def get_player_ownership() -> pd.DataFrame:
     """Per (player, manager) summary: draft count, keeper count, seasons list."""
+    _cache_bust = 1
     dpw = get_draft_picks_with_pos()
     rows = []
     for (player, mgr), grp in dpw.groupby(["player_name", "manager"]):
@@ -961,6 +965,7 @@ def get_player_ownership() -> pd.DataFrame:
 @st.cache_data
 def get_keeper_enriched() -> pd.DataFrame:
     """Keeper picks enriched with championship flags, manager season W-L, and playoff appearances."""
+    _cache_bust = 1
     dpw = get_draft_picks_with_pos()
     keepers = dpw[dpw["is_keeper"]].copy()
     champions = get_champions()
