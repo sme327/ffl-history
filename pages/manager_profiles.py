@@ -622,9 +622,9 @@ for _col, _href, _icon, _title, _desc in [
     _col.markdown(
         f'<a href="{_href}" target="_self" style="display:block;background:#0F1B2D;border:1px solid #1E2D40;'
         f'border-radius:6px;padding:16px;text-decoration:none;">'
-        f'<div style="font-size:1.5rem;margin-bottom:6px;">{_icon}</div>'
-        f'<div style="font-family:\'Bebas Neue\',sans-serif;font-size:1rem;color:#D4AF37;letter-spacing:2px;">{_title}</div>'
-        f'<div style="font-family:\'Inter\',sans-serif;font-size:0.65rem;color:#A7B0BC;margin-top:4px;line-height:1.5;">{_desc}</div>'
+        f'<span style="display:block;font-size:1.5rem;margin-bottom:6px;">{_icon}</span>'
+        f'<span style="display:block;font-family:\'Bebas Neue\',sans-serif;font-size:1rem;color:#D4AF37;letter-spacing:2px;">{_title}</span>'
+        f'<span style="display:block;font-family:\'Inter\',sans-serif;font-size:0.65rem;color:#A7B0BC;margin-top:4px;line-height:1.5;">{_desc}</span>'
         f'</a>',
         unsafe_allow_html=True,
     )
