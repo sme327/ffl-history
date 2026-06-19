@@ -233,8 +233,13 @@ fig_kev.add_trace(go.Bar(
 fig_kev.update_layout(
     paper_bgcolor="#081120", plot_bgcolor="#0F1B2D",
     font=dict(family="Inter", color="#A7B0BC", size=11),
-    margin=dict(l=0, r=0, t=30, b=0), height=220,
-    xaxis=dict(showgrid=False, tickmode="linear", dtick=2),
+    margin=dict(l=0, r=0, t=30, b=40), height=240,
+    xaxis=dict(
+        showgrid=False,
+        tickmode="linear", tick0=2003, dtick=1,
+        tickangle=-45,
+        range=[2002.5, 2025.5],
+    ),
     yaxis=dict(gridcolor="rgba(167,139,250,0.15)", title="Keepers"),
     showlegend=False,
 )
