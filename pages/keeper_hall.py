@@ -57,6 +57,18 @@ po = get_player_ownership()
 rec = get_draft_records()
 keepers = dpw[dpw["is_keeper"]].copy()
 
+# ── TEMP DEBUG (remove after confirming 2005/2011 on deployed app) ──────────
+import pandas as _pd_debug
+with st.expander("🔍 DEBUG: raw vs pipeline keeper counts"):
+    _raw2 = _pd_debug.read_csv("data/draft_picks.csv")
+    st.write("Raw CSV counts:", _raw2[_raw2["is_keeper"]==True].groupby("season").size().to_dict())
+    st.write("Pipeline counts:", keepers.groupby("season").size().to_dict())
+    st.write("2005 raw rows:", len(_raw2[(_raw2["season"]==2005)&(_raw2["is_keeper"]==True)]))
+    st.write("2011 raw rows:", len(_raw2[(_raw2["season"]==2011)&(_raw2["is_keeper"]==True)]))
+    st.write("2005 pipeline rows:", len(keepers[keepers["season"]==2005]))
+    st.write("2011 pipeline rows:", len(keepers[keepers["season"]==2011]))
+# ── END DEBUG ────────────────────────────────────────────────────────────────
+
 # Suspension-year aware active keeper seasons
 active_keeper_szns = sorted(keepers["season"].unique().astype(int).tolist())
 

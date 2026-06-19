@@ -68,6 +68,7 @@ MANAGER_EMOJI = {
 
 @st.cache_data
 def load_all() -> dict:
+    _cache_bust = 2  # increment to force re-read when CSV data changes
     files = {
         "standings": "season_standings.csv",
         "playoff_games": "playoff_games.csv",
