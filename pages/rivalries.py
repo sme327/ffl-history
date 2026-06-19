@@ -231,33 +231,64 @@ st.markdown(
 
 # ── Hero metric row ──────────────────────────────────────────────────────────
 _cl_rec = f"{int(closest_row['rs_a_wins'])}–{int(closest_row['rs_b_wins'])}"
+_cl_games = int(closest_row["rs_games"])
+_top_score = int(all_rivalries.iloc[0]["rivalry_score"])
 
-def _hero_metric(number: str, label: str, name: str = "") -> str:
-    name_html = (
-        f'<div style="font-size:0.62rem;color:#4B5563;margin-top:5px;'
-        f'font-family:\'Inter\',sans-serif;line-height:1.3;">{name}</div>'
-    ) if name else ""
+# Small league-wide strip above the rivalry cards
+st.markdown(
+    f'<div style="text-align:center;font-family:\'Inter\',sans-serif;font-size:0.62rem;'
+    f'letter-spacing:2px;color:#4B5563;text-transform:uppercase;margin-bottom:0.75rem;">'
+    f'{total_pairs} Active Rivalries &nbsp;·&nbsp; 25 Seasons &nbsp;·&nbsp; '
+    f'{CURRENT_SEASON - FOUNDED + 1} Years of Competition'
+    f'</div>',
+    unsafe_allow_html=True,
+)
+
+def _rivalry_vs(a: str, b: str, size: str = "0.82rem") -> str:
+    """Colored manager names with a small 'vs' between them."""
+    ca, cb = _color(a), _color(b)
     return (
-        f'<div style="background:#0F1B2D;border:1px solid #1E3A5F;border-radius:8px;'
-        f'padding:20px 14px;text-align:center;box-sizing:border-box;">'
-        f'<div style="font-family:\'Bebas Neue\',sans-serif;font-size:2.4rem;'
-        f'color:#F5F5F5;line-height:1;letter-spacing:1px;">{number}</div>'
-        f'<div style="font-size:0.52rem;letter-spacing:2px;color:#6B7280;'
-        f'text-transform:uppercase;margin-top:6px;">{label}</div>'
-        f'{name_html}'
+        f'<div style="font-family:\'Inter\',sans-serif;font-size:{size};'
+        f'font-weight:600;margin-top:8px;line-height:1.5;">'
+        f'<span style="color:{ca};">{_emoji(a)} {a}</span>'
+        f'<span style="color:#4B5563;font-size:0.62rem;margin:0 6px;">vs</span>'
+        f'<span style="color:{cb};">{_emoji(b)} {b}</span>'
         f'</div>'
     )
 
-_metric_cards = [
-    _hero_metric(str(total_pairs), "Active Rivalries", "League-wide"),
-    _hero_metric(str(int(most_played_row["rs_games"])), "Most Played", f"{_mp_a} vs {_mp_b}"),
-    _hero_metric(_cl_rec, "Closest Series", f"{_cl_a} vs {_cl_b}"),
-    _hero_metric(str(int(most_pl_row["pl_games"])), "Most Playoff Meetings", f"{_pl_a} vs {_pl_b}"),
-    _hero_metric(f"{_lo_wins}–{_lo_losses}", "Most One-Sided", f"{_lo_dom} vs {_lo_vic}"),
+def _hero_card(label: str, metric: str, vs_html: str, sub: str = "") -> str:
+    sub_html = (
+        f'<div style="font-size:0.58rem;color:#4B5563;margin-top:4px;'
+        f'font-family:\'Inter\',sans-serif;">{sub}</div>'
+    ) if sub else ""
+    return (
+        f'<div style="background:#0F1B2D;border:1px solid #1E3A5F;border-radius:8px;'
+        f'padding:18px 14px;text-align:center;box-sizing:border-box;">'
+        f'<div style="font-size:0.5rem;letter-spacing:2.5px;color:#6B7280;'
+        f'text-transform:uppercase;font-family:\'Bebas Neue\',sans-serif;">{label}</div>'
+        f'<div style="font-family:\'Bebas Neue\',sans-serif;font-size:1.9rem;'
+        f'color:#D4AF37;line-height:1;margin-top:8px;letter-spacing:1px;">{metric}</div>'
+        f'{vs_html}'
+        f'{sub_html}'
+        f'</div>'
+    )
+
+_hero_cards = [
+    _hero_card("Top Rivalry Score",       str(_top_score),
+               _rivalry_vs(_mp_a, _mp_b)),
+    _hero_card("Most Played",             f"{int(most_played_row['rs_games'])} Meetings",
+               _rivalry_vs(_mp_a, _mp_b)),
+    _hero_card("Most Playoff Meetings",   f"{int(most_pl_row['pl_games'])} Meetings",
+               _rivalry_vs(_pl_a, _pl_b)),
+    _hero_card("Closest Series",          _cl_rec,
+               _rivalry_vs(_cl_a, _cl_b),
+               sub=f"{_cl_games} Meetings · 0 Game Difference"),
+    _hero_card("Most One-Sided",          f"{_lo_wins}–{_lo_losses}",
+               _rivalry_vs(_lo_dom, _lo_vic)),
 ]
 st.markdown(
     '<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:1.5rem;">'
-    + "".join(_metric_cards)
+    + "".join(_hero_cards)
     + "</div>",
     unsafe_allow_html=True,
 )
