@@ -320,9 +320,9 @@ RIVALRY_PLAQUES: dict[tuple[str, str], str] = {
     ),
     ("Evan", "Fadi"): (
         "Fifteen wins each in the regular season. Exactly. Of all long-running rivalries "
-        "in this league, none has produced more parity. But when they met in the "
-        "championship game, Evan walked away with the trophy. Twice. "
-        "The scoreboard says dead even. The trophy case does not."
+        "in this league, none has produced more parity. They've met in two championship "
+        "games — and split them. Evan won in 2012. Fadi answered in 2024, by 0.12 points. "
+        "The closest final in league history. One trophy each. Completely unresolved."
     ),
     ("Brian Clark", "Kevin O'Boyle"): (
         "Thirty regular season meetings. Five playoff matchups. Fifteen wins each across "
