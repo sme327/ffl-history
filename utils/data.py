@@ -787,7 +787,7 @@ _POS_COLORS = {
     "Other": "#374151",
 }
 # Seasons where the keeper format was suspended — treat as gaps in streak math
-_KEEPER_SUSPENSION_YEARS = {2005, 2011}
+_KEEPER_SUSPENSION_YEARS = {2011}   # 2011 keeper data missing/pending; 2005 recovered
 
 
 @st.cache_data

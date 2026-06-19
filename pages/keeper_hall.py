@@ -220,8 +220,8 @@ for era in LEAGUE_ERAS:
         annotation_font=dict(size=9, color="#6B7280"),
     )
 for yr in _susp_years:
-    fig_kev.add_vline(x=yr, line_color="#F87171", line_dash="dash", line_width=1,
-                      annotation_text="Suspended", annotation_font=dict(size=9, color="#F87171"),
+    fig_kev.add_vline(x=yr, line_color="#F59E0B", line_dash="dash", line_width=1,
+                      annotation_text="Data Pending", annotation_font=dict(size=9, color="#F59E0B"),
                       annotation_position="top right")
 
 fig_kev.add_trace(go.Bar(
@@ -255,13 +255,12 @@ _rule_events = [
 for yr in sorted(_susp_years):
     _rule_events.append({
         "year": yr,
-        "title": f"{yr} — Keeper Rules Suspended",
-        "body": f"In {yr}, the keeper system was paused for one season. "
-                f"Every manager drafted from scratch. No carryovers. No dynasties in progress. "
-                f"The reset created a level playing field — and new opportunities for managers "
-                f"who had fallen behind.",
-        "color": "#F87171",
-        "icon": "🚫",
+        "title": f"{yr} — Draft Data Pending",
+        "body": f"Complete draft and keeper data for {yr} has not yet been recovered. "
+                f"Keeper streaks bridging this season are preserved where evidence supports continuity. "
+                f"This entry will be updated when the {yr} data is confirmed.",
+        "color": "#F59E0B",
+        "icon": "⏳",
     })
 _rule_events.append({
     "year": 2010,
@@ -657,11 +656,11 @@ tl_html = (
 )
 for szn in active_keeper_szns:
     susp = szn in _KEEPER_SUSPENSION_YEARS
-    clr = "#4B5563" if susp else "#A7B0BC"
-    lbl = "—" if susp else f"'{str(szn)[-2:]}"
+    clr = "#F59E0B" if susp else "#A7B0BC"
+    lbl = "⏳" if susp else f"'{str(szn)[-2:]}"
     tl_html += (
         f'<th style="padding:2px 3px;color:{clr};border-bottom:1px solid #1E2D40;'
-        f'text-align:center;min-width:26px;" title="{"Keepers suspended" if susp else szn}">'
+        f'text-align:center;min-width:26px;" title="{"Data pending" if susp else szn}">'
         f'{lbl}</th>'
     )
 tl_html += '<th style="padding:4px 6px;color:#A7B0BC;border-bottom:1px solid #1E2D40;">TOTAL</th></tr></thead><tbody>'
@@ -706,7 +705,7 @@ for mgr in shown_mgrs:
         f'padding:2px 8px;font-size:0.62rem;font-family:\'Inter\',sans-serif;color:#F5F5F5;">'
         f'{em} {mgr}</span>'
     )
-legend_html += '</div><p style="font-size:0.62rem;color:#4B5563;font-family:\'Inter\',sans-serif;">— = Keeper format suspended (2005, 2011)</p>'
+legend_html += '</div><p style="font-size:0.62rem;color:#F59E0B;font-family:\'Inter\',sans-serif;">⏳ 2011 — draft data pending (keeper streaks preserved where supported)</p>'
 
 st.markdown(legend_html + tl_html, unsafe_allow_html=True)
 
