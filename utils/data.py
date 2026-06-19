@@ -793,7 +793,8 @@ _KEEPER_SUSPENSION_YEARS = {2011}   # 2011 keeper data missing/pending; 2005 rec
 @st.cache_data
 def get_draft_picks_with_pos() -> pd.DataFrame:
     """Draft picks joined with position, manager name, and franchise_id.
-    Excludes --empty-- placeholder rows and normalises rare non-fantasy positions."""
+    Excludes --empty-- placeholder rows and normalises rare non-fantasy positions.
+    Cache version: 2 (2005 keepers added)."""
     data = load_all()
     dp = data["draft_picks"].copy()
     pp = data["player_positions"]
