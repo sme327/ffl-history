@@ -795,6 +795,7 @@ def get_draft_picks_with_pos() -> pd.DataFrame:
     """Draft picks joined with position, manager name, and franchise_id.
     Excludes --empty-- placeholder rows and normalises rare non-fantasy positions.
     Cache version: 3 (2005 and 2011 data complete)."""
+    _cache_bust = 3  # increment this to force cache invalidation when data files change
     data = load_all()
     dp = data["draft_picks"].copy()
     pp = data["player_positions"]

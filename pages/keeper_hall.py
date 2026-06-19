@@ -200,48 +200,81 @@ _susp_years   = sorted(_KEEPER_SUSPENSION_YEARS)
 _first_keeper_year = _keeper_years[0] if _keeper_years else FOUNDED
 _total_keeper_seasons_ct = total_keeper_seasons
 
-# Keeper volume by season (chart)
-_k_by_season = keepers.groupby("season").size().reset_index(name="count")
+# Build a complete season range so zero-keeper years (2001-2002) appear on axis
+_all_szns = pd.DataFrame({"season": range(FOUNDED, CURRENT_SEASON + 1)})
+_k_counts = keepers.groupby("season").size().reset_index(name="count")
+_k_by_season = _all_szns.merge(_k_counts, on="season", how="left").fillna(0)
+_k_by_season["count"] = _k_by_season["count"].astype(int)
 
-def _hex_to_rgba(h, a=0.05):
-    h = h.lstrip("#")
-    r, g, b = int(h[0:2],16), int(h[2:4],16), int(h[4:6],16)
-    return f"rgba({r},{g},{b},{a})"
+# Assign each season its era color; grey for pre-keeper years
+_era_color_map: dict[int, str] = {}
+for _era in LEAGUE_ERAS:
+    for _y in range(_era["start"], min(_era["end"], CURRENT_SEASON) + 1):
+        _era_color_map[_y] = _era["color"]
+_k_by_season["color"] = _k_by_season["season"].map(
+    lambda y: _era_color_map.get(y, "#374151")
+)
+# Dim the color for zero-count years
+_k_by_season["opacity"] = _k_by_season["count"].map(lambda c: 0.9 if c > 0 else 0.25)
 
 fig_kev = go.Figure()
-for era in LEAGUE_ERAS:
-    fig_kev.add_vrect(
-        x0=era["start"] - 0.5,
-        x1=min(era["end"], CURRENT_SEASON) + 0.5,
-        fillcolor=_hex_to_rgba(era["color"]),
-        line_width=0,
-        annotation_text=era["short"],
-        annotation_position="top left",
-        annotation_font=dict(size=9, color="#6B7280"),
-    )
-for yr in _susp_years:  # empty — all seasons now have complete data
-    fig_kev.add_vline(x=yr, line_color="#F59E0B", line_dash="dash", line_width=1,
-                      annotation_text="Data Pending", annotation_font=dict(size=9, color="#F59E0B"),
-                      annotation_position="top right")
 
-fig_kev.add_trace(go.Bar(
-    x=_k_by_season["season"], y=_k_by_season["count"],
-    marker_color="#A78BFA",
-    hovertemplate="<b>%{x}</b> · %{y} keepers<extra></extra>",
-    name="Keepers",
-))
+# Era background bands (very subtle)
+def _hex_to_rgba(h, a=0.05):
+    h = h.lstrip("#")
+    r, g, b = int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
+    return f"rgba({r},{g},{b},{a})"
+
+for _era in LEAGUE_ERAS:
+    _x1 = min(_era["end"], CURRENT_SEASON) + 0.5
+    fig_kev.add_vrect(
+        x0=_era["start"] - 0.5, x1=_x1,
+        fillcolor=_hex_to_rgba(_era["color"], 0.06),
+        line_width=0,
+        annotation_text=_era["short"],
+        annotation_position="top left",
+        annotation_font=dict(size=9, color=_era["color"]),
+    )
+
+# One Bar trace per era so each gets its own color in the legend
+for _era in LEAGUE_ERAS:
+    _mask = (
+        (_k_by_season["season"] >= _era["start"]) &
+        (_k_by_season["season"] <= min(_era["end"], CURRENT_SEASON))
+    )
+    _sub = _k_by_season[_mask]
+    fig_kev.add_trace(go.Bar(
+        x=_sub["season"],
+        y=_sub["count"],
+        name=_era["short"],
+        marker_color=_era["color"],
+        opacity=0.85,
+        hovertemplate="<b>%{x}</b> · %{y} keepers<extra></extra>",
+    ))
+
 fig_kev.update_layout(
     paper_bgcolor="#081120", plot_bgcolor="#0F1B2D",
     font=dict(family="Inter", color="#A7B0BC", size=11),
-    margin=dict(l=0, r=0, t=30, b=40), height=240,
+    margin=dict(l=0, r=0, t=30, b=40), height=260,
+    barmode="stack",
+    bargap=0.15,
     xaxis=dict(
         showgrid=False,
-        tickmode="linear", tick0=2003, dtick=1,
+        tickmode="linear", tick0=FOUNDED, dtick=1,
         tickangle=-45,
-        range=[2002.5, 2025.5],
+        range=[FOUNDED - 0.5, CURRENT_SEASON + 0.5],
     ),
-    yaxis=dict(gridcolor="rgba(167,139,250,0.15)", title="Keepers"),
-    showlegend=False,
+    yaxis=dict(
+        gridcolor="rgba(255,255,255,0.05)",
+        title="Keepers",
+        range=[0, 14],
+    ),
+    legend=dict(
+        orientation="h", yanchor="bottom", y=1.02,
+        xanchor="right", x=1,
+        font=dict(size=10),
+    ),
+    showlegend=True,
 )
 st.plotly_chart(fig_kev, use_container_width=True, config={"displayModeBar": False})
 
