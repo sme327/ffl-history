@@ -63,6 +63,10 @@ st.markdown(
     <div class="tl-hero">
         <div class="tl-hero-title">THE LONG GAME</div>
         <div class="tl-hero-subtitle">{LEAGUE_SUBTITLE}</div>
+        <div style="font-family:'Inter',sans-serif;font-size:0.88rem;color:#A7B0BC;
+                    margin-top:1.1rem;letter-spacing:1px;font-style:italic;line-height:1.8;">
+            Built by friendship.&nbsp; Defined by competition.&nbsp; Occasionally ruined by a waiver wire mistake.
+        </div>
     </div>
     <hr class="tl-divider">
     """,
@@ -238,32 +242,39 @@ st.markdown('<hr class="tl-divider">', unsafe_allow_html=True)
 
 # ── FEATURED EXHIBITS ─────────────────────────────────────────────────────────
 st.markdown(
-    '<div class="tl-section-label" style="text-align:center;">Explore the Archives</div>'
+    '<div class="tl-section-label" style="text-align:center;">Museum Destinations</div>'
     '<div style="text-align:center;font-family:\'Bebas Neue\',sans-serif;font-size:2rem;'
-    'color:#F5F5F5;letter-spacing:4px;margin-bottom:1.25rem;">Featured Exhibits</div>',
+    'color:#F5F5F5;letter-spacing:4px;margin-bottom:0.4rem;">Explore the Exhibits</div>'
+    '<div style="text-align:center;font-family:\'Inter\',sans-serif;font-size:0.75rem;'
+    'color:#6B7280;margin-bottom:1.5rem;">Every section is a destination. Start anywhere.</div>',
     unsafe_allow_html=True,
 )
 
-exhibits = [
-    ("🏆", "The Trophy Room",  "Every championship. Every dynasty. The immortal record.",                "/champions"),
-    ("📜", "The Record Book",  "25 seasons of dominance, upsets, and legacy by the numbers.",           "/league_history"),
-    ("📅", "Season Archives",  "Every bracket. Every upset. Every moment that mattered.",               "/season_archive"),
-    ("👤", "Manager Dossiers", "Career files, rivalries, and records for every competitor.",             "/manager_profiles"),
-    ("🏟️", "Franchise Files", "Lineages, eras, and stewardship histories spanning 25 years.",          "/franchise_profiles"),
+exhibits_row1 = [
+    ("🏆", "Trophy Room",      "Every champion. Every dynasty. The immortal record of who won and how.",  "/champions"),
+    ("📅", "Timeline",         "The historical spine of the league — every era, every turning point.",     "/league_timeline"),
+    ("🔑", "Keeper Hall",      "25 years of attachment, loyalty, and the players nobody could let go.",    "/keeper_hall"),
+]
+exhibits_row2 = [
+    ("📋", "Draft Legends",    "The obsessions, the archetypes, and the players everyone had to have.",    "/draft_center"),
+    ("👤", "Manager Files",    "Career plaques, rivalries, and records for every competitor.",             "/manager_profiles"),
+    ("🏟️", "Franchise Files", "Lineages, stewardship eras, and the franchises that built this league.",  "/franchise_profiles"),
 ]
 
-ex_cols = st.columns(5)
-for col, (icon, title, desc, href) in zip(ex_cols, exhibits):
-    with col:
-        st.markdown(
-            f"""<a href="{href}" class="tl-nav-card" target="_self">
-                <div style="font-size:0.55rem;color:#A7B0BC;letter-spacing:4px;text-transform:uppercase;margin-bottom:0.5rem;">EXHIBIT</div>
-                <div class="tl-nav-card-icon">{icon}</div>
-                <div class="tl-nav-card-title">{title}</div>
-                <div class="tl-nav-card-desc">{desc}</div>
-            </a>""",
-            unsafe_allow_html=True,
-        )
+for row in [exhibits_row1, exhibits_row2]:
+    ex_cols = st.columns(3)
+    for col, (icon, title, desc, href) in zip(ex_cols, row):
+        with col:
+            st.markdown(
+                f"""<a href="{href}" class="tl-nav-card" target="_self">
+                    <div style="font-size:0.55rem;color:#A7B0BC;letter-spacing:4px;text-transform:uppercase;margin-bottom:0.5rem;">EXHIBIT</div>
+                    <div class="tl-nav-card-icon">{icon}</div>
+                    <div class="tl-nav-card-title">{title}</div>
+                    <div class="tl-nav-card-desc">{desc}</div>
+                </a>""",
+                unsafe_allow_html=True,
+            )
+    st.markdown("<br>", unsafe_allow_html=True)
 
 # ── TROPHY ROOM TEASER ────────────────────────────────────────────────────────
 st.markdown(
@@ -271,7 +282,7 @@ st.markdown(
     <div style="text-align:center;padding:3rem 0 2rem;">
         <div style="height:1px;background:linear-gradient(to right,transparent,#D4AF37,transparent);margin:0 auto 2rem;max-width:400px;"></div>
         <div style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:#F5F5F5;letter-spacing:4px;line-height:1.8;">
-            25 SEASONS.<br>{unique_champions} DIFFERENT CHAMPIONS.<br>COUNTLESS BAD DECISIONS.
+            25 SEASONS.<br>{unique_champions} DIFFERENT CHAMPIONS.<br>ONE LEAGUE THAT NEVER QUIT.
         </div>
         <div style="margin-top:1.75rem;">
             <a href="/champions" target="_self"

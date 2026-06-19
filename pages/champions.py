@@ -1,4 +1,6 @@
 """Champions page — all-time title holders."""
+from __future__ import annotations
+import pandas as pd
 import streamlit as st
 from utils.data import (
     load_all, get_champions, get_manager_stats,
@@ -21,6 +23,8 @@ champions = get_champions()
 manager_stats = get_manager_stats()
 fh = data["franchise_history"]
 tnh = data["team_name_history"]
+pg = data["playoff_games"]
+std = data["standings"]
 
 # ── DERIVED DATA ──────────────────────────────────────────────────────────────
 champ_counts = (
@@ -382,6 +386,138 @@ with c8:
 with c9:
     st.markdown(trivia_card("The Original", str(first_champ["season"]),
         f"{first_champ['champion_team']} — {first_champ['champion_manager']} — the first to hoist it"), unsafe_allow_html=True)
+
+st.markdown('<hr class="tl-divider-full">', unsafe_allow_html=True)
+
+# ── CHAMPIONSHIP PAIN ─────────────────────────────────────────────────────────
+st.markdown(
+    '<div class="tl-section-label">The Other Side of the Story</div>'
+    '<div class="tl-section-title">Championship Pain</div>',
+    unsafe_allow_html=True,
+)
+st.markdown(
+    '<p style="font-family:\'Inter\',sans-serif;color:#A7B0BC;font-size:0.78rem;margin:-0.5rem 0 1.5rem;">'
+    'Championships tell one side of the story. The near-misses, the collapses, and the heartbreaks tell the other.</p>',
+    unsafe_allow_html=True,
+)
+
+# Compute pain metrics
+champions["margin"] = champions["champion_score"] - champions["runner_up_score"]
+_ru_counts = champions.groupby("runner_up_manager").size().sort_values(ascending=False)
+_most_ru = _ru_counts.index[0]
+_most_ru_n = int(_ru_counts.iloc[0])
+
+# 3rd place finishes
+_champ_pg = pg[pg["bracket"] == "championship"]
+_3rd_pg = _champ_pg[_champ_pg["game_type"] == "3rd_place"]
+_3rd_winners = pd.concat([
+    _3rd_pg[_3rd_pg["winner"] == _3rd_pg["team_1"]][["season","team_1"]].rename(columns={"team_1":"team"}),
+    _3rd_pg[_3rd_pg["winner"] == _3rd_pg["team_2"]][["season","team_2"]].rename(columns={"team_2":"team"}),
+]).drop_duplicates()
+_tnh_lookup = tnh.set_index(["season","team_name"])["canonical_name"].to_dict()
+_3rd_mgr = _3rd_winners.copy()
+_3rd_mgr["manager"] = _3rd_mgr.apply(lambda r: _tnh_lookup.get((int(r["season"]),r["team"]),r["team"]),axis=1)
+_3rd_counts = _3rd_mgr.groupby("manager").size().sort_values(ascending=False)
+_most_3rd = _3rd_counts.index[0] if len(_3rd_counts)>0 else "—"
+_most_3rd_n = int(_3rd_counts.iloc[0]) if len(_3rd_counts)>0 else 0
+
+# Closest loss (runner-up who lost by the smallest margin)
+_closest_loss = champions.loc[champions["margin"].idxmin()]
+_biggest_loss  = champions.loc[champions["margin"].idxmax()]
+
+# Best RS team to not win that year (highest win pct in RS that did not win the championship)
+_ms_idx = manager_stats.set_index("canonical_name")
+_pain_rows = []
+for _, champ_row in champions.iterrows():
+    szn = int(champ_row["season"])
+    szn_std = std[std["season"] == szn].copy()
+    tnh_szn = tnh[tnh["season"] == szn].set_index("team_name")["canonical_name"].to_dict()
+    szn_std["manager"] = szn_std["team_name"].map(tnh_szn)
+    szn_std = szn_std.dropna(subset=["manager"])
+    szn_std["gp"] = szn_std["wins"] + szn_std["losses"] + szn_std["ties"]
+    szn_std["wpc"] = szn_std["wins"] / szn_std["gp"].replace(0, float("nan"))
+    best_rs = szn_std.sort_values("wpc", ascending=False).iloc[0]
+    if best_rs["manager"] != champ_row["champion_manager"]:
+        _pain_rows.append({"season": szn, "manager": best_rs["manager"],
+                            "wins": int(best_rs["wins"]), "losses": int(best_rs["losses"]),
+                            "wpc": float(best_rs["wpc"] or 0)})
+_best_rs_no_title = pd.DataFrame(_pain_rows).sort_values("wpc", ascending=False)
+
+# Most appearances with zero titles (active managers)
+_active_no_title = manager_stats[
+    (manager_stats["championships"] == 0) & (manager_stats["playoff_apps"] >= 3)
+].sort_values("playoff_apps", ascending=False)
+
+def _pain_card(icon, title, headline, sub, color="#F87171"):
+    return (
+        f'<div style="background:#0F1B2D;border:1px solid #1E2D40;border-left:4px solid {color};'
+        f'border-radius:6px;padding:16px 18px;height:100%;">'
+        f'<div style="font-size:1.5rem;margin-bottom:6px;">{icon}</div>'
+        f'<div style="font-family:\'Inter\',sans-serif;font-size:0.58rem;color:#A7B0BC;'
+        f'letter-spacing:3px;text-transform:uppercase;margin-bottom:4px;">{title}</div>'
+        f'<div style="font-family:\'Bebas Neue\',sans-serif;font-size:1.3rem;color:{color};'
+        f'letter-spacing:2px;line-height:1.1;margin-bottom:6px;">{headline}</div>'
+        f'<div style="font-family:\'Inter\',sans-serif;font-size:0.68rem;color:#A7B0BC;'
+        f'line-height:1.5;">{sub}</div>'
+        f'</div>'
+    )
+
+p1, p2, p3 = st.columns(3)
+with p1:
+    _ru_years = sorted(champions[champions["runner_up_manager"] == _most_ru]["season"].tolist())
+    _yr_str = ", ".join(str(y) for y in _ru_years)
+    st.markdown(_pain_card(
+        "💔", "Most Runner-Up Finishes",
+        f"{MANAGER_EMOJI.get(_most_ru,'👤')} {_most_ru} — {_most_ru_n}×",
+        f"Runner-up in {_yr_str}. Every trip to the final ended the same way.",
+    ), unsafe_allow_html=True)
+with p2:
+    if len(_3rd_counts) > 0:
+        _3rd_yrs = _3rd_mgr[_3rd_mgr["manager"] == _most_3rd]["season"].sort_values().tolist()
+        _3rd_yr_str = ", ".join(str(y) for y in _3rd_yrs)
+        st.markdown(_pain_card(
+            "🥉", "Most Third-Place Finishes",
+            f"{MANAGER_EMOJI.get(_most_3rd,'👤')} {_most_3rd} — {_most_3rd_n}×",
+            f"Close enough to feel it. Not close enough to win it. Third place in {_3rd_yr_str}.",
+        ), unsafe_allow_html=True)
+with p3:
+    if len(_active_no_title) > 0:
+        _hb = _active_no_title.iloc[0]
+        st.markdown(_pain_card(
+            "⏳", "Most Appearances, Still Waiting",
+            f"{MANAGER_EMOJI.get(_hb['canonical_name'],'👤')} {_hb['canonical_name']} — {int(_hb['playoff_apps'])} Trips",
+            f"{int(_hb['playoff_apps'])} playoff appearances. Zero championships. "
+            f"The trophy has been tantalizingly close.",
+        ), unsafe_allow_html=True)
+
+st.markdown("<br>", unsafe_allow_html=True)
+p4, p5, p6 = st.columns(3)
+with p4:
+    st.markdown(_pain_card(
+        "😤", "Closest Championship Loss",
+        f"{_closest_loss['runner_up_manager']} · {int(_closest_loss['season'])}",
+        f"{_closest_loss['runner_up_team']} lost to {_closest_loss['champion_team']} "
+        f"by just {_closest_loss['margin']:.2f} points. The cruelest margin in league history.",
+        color="#F59E0B",
+    ), unsafe_allow_html=True)
+with p5:
+    st.markdown(_pain_card(
+        "💀", "Biggest Championship Blowout Loss",
+        f"{_biggest_loss['runner_up_manager']} · {int(_biggest_loss['season'])}",
+        f"{_biggest_loss['runner_up_team']} lost by {_biggest_loss['margin']:.2f} points. "
+        f"The most one-sided championship game in league history.",
+        color="#EF4444",
+    ), unsafe_allow_html=True)
+with p6:
+    if len(_best_rs_no_title) > 0:
+        _bnw = _best_rs_no_title.iloc[0]
+        st.markdown(_pain_card(
+            "📈", "Best Regular Season, No Title",
+            f"{MANAGER_EMOJI.get(_bnw['manager'],'👤')} {_bnw['manager']} · {int(_bnw['season'])}",
+            f"{int(_bnw['wins'])}-{int(_bnw['losses'])} regular season record — the best that year. "
+            f"Didn't matter when the playoffs started.",
+            color="#A78BFA",
+        ), unsafe_allow_html=True)
 
 st.markdown('<hr class="tl-divider-full">', unsafe_allow_html=True)
 

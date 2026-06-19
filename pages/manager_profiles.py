@@ -1,4 +1,5 @@
 """Manager Profiles page — career history for every manager."""
+from __future__ import annotations
 import streamlit as st
 import plotly.graph_objects as go
 from utils.data import (
@@ -7,6 +8,7 @@ from utils.data import (
     MANAGER_EMOJI, MANAGER_COLORS, CURRENT_SEASON,
 )
 from utils.styles import inject_css, render_nav, render_page_footer, avatar_html, metric_card, html_table
+from utils.narratives import MANAGER_IDENTITY
 
 st.set_page_config(
     page_title="Managers · The Long Game",
@@ -21,6 +23,13 @@ render_nav("manager_profiles")
 data = load_all()
 manager_stats = get_manager_stats()
 champions = get_champions()
+
+# Finals record per manager (used for plaque)
+_as_champ = champions.groupby("champion_manager").size().rename("champs").reset_index().rename(columns={"champion_manager":"mgr"})
+_as_ru    = champions.groupby("runner_up_manager").size().rename("runner_ups").reset_index().rename(columns={"runner_up_manager":"mgr"})
+_finals   = _as_champ.merge(_as_ru, on="mgr", how="outer").fillna(0)
+_finals["finals_apps"] = (_finals["champs"] + _finals["runner_ups"]).astype(int)
+finals_rec = _finals.set_index("mgr")
 
 # ── PAGE TITLE ─────────────────────────────────────────────────────────────────
 st.markdown(
@@ -95,6 +104,89 @@ with c5:
     st.markdown(metric_card(record_str, "Regular Season Record"), unsafe_allow_html=True)
 with c6:
     st.markdown(metric_card(win_pct, "Win Percentage"), unsafe_allow_html=True)
+
+st.markdown('<hr class="tl-divider-full">', unsafe_allow_html=True)
+
+# ── HALL OF FAME PLAQUE ────────────────────────────────────────────────────────
+def _build_plaque(name, ms_row, champ_years, finals_apps, playoff_apps, seasons_played, is_active):
+    titles = int(ms_row["championships"])
+    playoff_rate = playoff_apps / max(seasons_played, 1)
+    ru = int(ms_row["runner_ups"])
+
+    # Identity lead
+    if titles >= 4:
+        lead = "One of the most decorated managers in league history"
+    elif titles >= 2:
+        lead = "A multi-championship winner and proven dynasty builder"
+    elif titles == 1:
+        lead = "A championship-caliber competitor who broke through when it mattered"
+    elif playoff_apps >= 10:
+        lead = "One of the league's most consistent playoff presences"
+    elif playoff_apps >= 5:
+        lead = "A perennial competitor and familiar name in the postseason"
+    else:
+        lead = "A competitor who left their mark on league history"
+
+    # Consistency descriptor
+    if playoff_rate >= 0.65:
+        consistency = f", with a {playoff_rate:.0%} career playoff rate across {seasons_played} seasons"
+    elif seasons_played >= 15:
+        consistency = f", competing across {seasons_played} seasons"
+    else:
+        consistency = f" in {seasons_played} seasons"
+
+    # Championship sentence
+    if titles > 0:
+        yr_parts = sorted(champ_years)
+        if len(yr_parts) == 1:
+            champ_sentence = f"Won the championship in {yr_parts[0]}."
+        elif len(yr_parts) == 2:
+            champ_sentence = f"Won championships in {yr_parts[0]} and {yr_parts[1]}."
+        else:
+            yr_str = ", ".join(str(y) for y in yr_parts[:-1]) + f", and {yr_parts[-1]}"
+            champ_sentence = f"Won {titles} championships: {yr_str}."
+    elif ru >= 2:
+        champ_sentence = f"Reached the championship game {ru} times without winning. The trophy has been close."
+    elif ru == 1:
+        champ_sentence = f"Reached the championship game but fell short. The title remains elusive."
+    elif playoff_apps >= 8:
+        champ_sentence = f"Despite {playoff_apps} playoff appearances, a championship has not come. Yet."
+    else:
+        champ_sentence = "Still hunting for that first title."
+
+    # Known for (identity tag)
+    identity_tag = MANAGER_IDENTITY.get(name, "")
+    identity_html = (
+        f'<div style="margin-top:10px;font-style:italic;color:#D4AF37;font-size:0.73rem;">'
+        f'"{identity_tag}"</div>'
+    ) if identity_tag else ""
+
+    status_str = "Currently active." if is_active else "Career concluded."
+
+    plaque_body = f"{lead}{consistency}. {champ_sentence} {status_str}"
+    return plaque_body, identity_html
+
+_champ_yrs_this = sorted(
+    champions[champions["champion_manager"] == mgr_name]["season"].tolist()
+)
+_finals_apps_this = int(finals_rec.loc[mgr_name, "finals_apps"]) if mgr_name in finals_rec.index else 0
+_plaque_text, _identity_html = _build_plaque(
+    mgr_name, mgr_row, _champ_yrs_this,
+    _finals_apps_this, playoff_apps, seasons_played, is_active,
+)
+mgr_color = MANAGER_COLORS.get(mgr_name, "#D4AF37")
+
+st.markdown(
+    f'<div style="background:#0F1B2D;border:1px solid #1E2D40;border-left:5px solid {mgr_color};'
+    f'border-radius:6px;padding:20px 24px;margin-bottom:0;">'
+    f'<div style="font-family:\'Bebas Neue\',sans-serif;font-size:0.68rem;color:#A7B0BC;'
+    f'letter-spacing:4px;margin-bottom:8px;">HALL OF FAME PLAQUE</div>'
+    f'<div style="font-family:\'Inter\',sans-serif;font-size:0.82rem;color:#F5F5F5;'
+    f'line-height:1.75;">{_plaque_text}</div>'
+    f'{_identity_html}'
+    f'</div>',
+    unsafe_allow_html=True,
+)
 
 st.markdown('<hr class="tl-divider-full">', unsafe_allow_html=True)
 
