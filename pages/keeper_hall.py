@@ -57,38 +57,6 @@ po = get_player_ownership()
 rec = get_draft_records()
 keepers = dpw[dpw["is_keeper"]].copy()
 
-# ── TEMP DEBUG ──────────────────────────────────────────────────────────────
-with st.expander("🔍 DEBUG: step-by-step pipeline trace"):
-    import pandas as _pd_d
-    from utils.data import load_all as _load_all
-    _d = _load_all()
-    _dp_d = _d["draft_picks"].copy()
-    _pp_d = _d["player_positions"]
-    _fh_d = _d["franchise_history"]
-    _tnh_d = _d["team_name_history"]
-    st.write("pandas version:", _pd_d.__version__)
-    st.write("Step 0 - raw dp 2005 rows:", len(_dp_d[_dp_d["season"]==2005]))
-    st.write("Step 0 - raw dp 2005 keepers:", len(_dp_d[(_dp_d["season"]==2005)&(_dp_d["is_keeper"])]))
-    st.write("is_keeper dtype in dp:", str(_dp_d["is_keeper"].dtype))
-    _dw1 = _dp_d.merge(_pp_d[["player_name","position"]], on="player_name", how="left")
-    st.write("Step 1 (pp merge) 2005 keepers:", len(_dw1[(_dw1["season"]==2005)&(_dw1["is_keeper"])]))
-    st.write("Step 1 is_keeper dtype:", str(_dw1["is_keeper"].dtype))
-    _dw2 = _dw1.merge(_tnh_d[["season","team_name","canonical_name"]], on=["season","team_name"], how="left").rename(columns={"canonical_name":"manager"})
-    st.write("Step 2 (tnh merge) 2005 rows:", len(_dw2[_dw2["season"]==2005]))
-    st.write("Step 2 (tnh merge) 2005 keepers:", len(_dw2[(_dw2["season"]==2005)&(_dw2["is_keeper"])]))
-    st.write("Step 2 is_keeper dtype:", str(_dw2["is_keeper"].dtype))
-    _dw3 = _dw2.merge(_fh_d[["season","manager_name","franchise_id"]], left_on=["season","manager"], right_on=["season","manager_name"], how="left").drop(columns=["manager_name"])
-    st.write("Step 3 (fh merge) 2005 rows:", len(_dw3[_dw3["season"]==2005]))
-    st.write("Step 3 (fh merge) 2005 keepers:", len(_dw3[(_dw3["season"]==2005)&(_dw3["is_keeper"])]))
-    st.write("Step 3 is_keeper dtype:", str(_dw3["is_keeper"].dtype))
-    _dwf = _dw3[_dw3["player_name"]!="--empty--"].reset_index(drop=True)
-    st.write("Step 4 (final filter) 2005 rows:", len(_dwf[_dwf["season"]==2005]))
-    st.write("Step 4 (final filter) 2005 keepers:", len(_dwf[(_dwf["season"]==2005)&(_dwf["is_keeper"])]))
-    st.write("Final dpw is_keeper value_counts:", dpw["is_keeper"].value_counts().to_dict())
-    st.write("dpw 2005 rows:", len(dpw[dpw["season"]==2005]))
-    st.write("dpw 2005 is_keeper dtype:", str(dpw["is_keeper"].dtype))
-    st.write("keepers 2005:", len(keepers[keepers["season"]==2005]))
-# ── END DEBUG ────────────────────────────────────────────────────────────────
 
 # Suspension-year aware active keeper seasons
 active_keeper_szns = sorted(keepers["season"].unique().astype(int).tolist())
