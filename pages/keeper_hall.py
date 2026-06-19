@@ -57,14 +57,6 @@ po = get_player_ownership()
 rec = get_draft_records()
 keepers = dpw[dpw["is_keeper"]].copy()
 
-# ── TEMP DEBUG (remove after verifying 2005/2011) ─────────────────────────
-with st.expander("🔍 DEBUG: keeper counts by season"):
-    _raw = pd.read_csv("data/draft_picks.csv")
-    _raw_k = _raw[_raw["is_keeper"] == True]
-    st.write("Raw CSV keeper counts:", _raw_k.groupby("season").size().to_dict())
-    st.write("Pipeline keeper counts:", keepers.groupby("season").size().to_dict())
-# ── END DEBUG ─────────────────────────────────────────────────────────────
-
 # Suspension-year aware active keeper seasons
 active_keeper_szns = sorted(keepers["season"].unique().astype(int).tolist())
 
@@ -244,27 +236,34 @@ for _era in LEAGUE_ERAS:
         annotation_font=dict(size=9, color=_era["color"]),
     )
 
-# One Bar trace per era so each gets its own color in the legend
+# Single trace — per-bar colors from era map; avoids multi-trace stack alignment bugs
+_bar_colors = _k_by_season["season"].map(
+    lambda y: _era_color_map.get(int(y), "#374151")
+).tolist()
+
+# Dummy scatter traces for the era legend (invisible, legend only)
 for _era in LEAGUE_ERAS:
-    _mask = (
-        (_k_by_season["season"] >= _era["start"]) &
-        (_k_by_season["season"] <= min(_era["end"], CURRENT_SEASON))
-    )
-    _sub = _k_by_season[_mask]
-    fig_kev.add_trace(go.Bar(
-        x=_sub["season"],
-        y=_sub["count"],
+    fig_kev.add_trace(go.Scatter(
+        x=[None], y=[None],
+        mode="markers",
+        marker=dict(color=_era["color"], size=10, symbol="square"),
         name=_era["short"],
-        marker_color=_era["color"],
-        opacity=0.85,
-        hovertemplate="<b>%{x}</b> · %{y} keepers<extra></extra>",
+        showlegend=True,
     ))
+
+fig_kev.add_trace(go.Bar(
+    x=_k_by_season["season"].tolist(),
+    y=_k_by_season["count"].tolist(),
+    marker_color=_bar_colors,
+    marker_opacity=0.85,
+    hovertemplate="<b>%{x}</b> · %{y} keepers<extra></extra>",
+    showlegend=False,
+))
 
 fig_kev.update_layout(
     paper_bgcolor="#081120", plot_bgcolor="#0F1B2D",
     font=dict(family="Inter", color="#A7B0BC", size=11),
     margin=dict(l=0, r=0, t=30, b=40), height=260,
-    barmode="stack",
     bargap=0.15,
     xaxis=dict(
         showgrid=False,
