@@ -9,6 +9,7 @@ from utils.data import (
     _KEEPER_SUSPENSION_YEARS,
 )
 from utils.styles import inject_css, render_nav, render_page_footer, section_header
+from utils.narratives import KEEPER_LORE, LEAGUE_ERAS
 
 st.set_page_config(
     page_title="Keeper Hall · The Long Game",
@@ -122,6 +123,168 @@ for col, val, lbl in [
     col.markdown(
         f'<div class="tl-metric"><div class="tl-metric-value">{val}</div>'
         f'<div class="tl-metric-label">{lbl}</div></div>',
+        unsafe_allow_html=True,
+    )
+
+st.markdown('<hr class="tl-divider-full">', unsafe_allow_html=True)
+
+# ════════════════════════════════════════════════════════════════════════════════
+# SECTION 0A — KEEPER LORE
+# ════════════════════════════════════════════════════════════════════════════════
+st.markdown(section_header("THE STORIES", "Keeper Lore"), unsafe_allow_html=True)
+st.markdown(
+    '<p style="font-family:\'Inter\',sans-serif;color:#A7B0BC;font-size:0.78rem;margin:-0.5rem 0 1.5rem;">'
+    'Keeping a player isn\'t just strategy. It\'s a relationship — a bet that your player matters more '
+    'than whoever\'s on the board. These are the players that became league institutions.</p>',
+    unsafe_allow_html=True,
+)
+
+# Match lore entries to players actually in our keeper data
+_kept_players = set(keepers["player_name"].unique())
+_lore_entries = [(p, lore) for p, lore in KEEPER_LORE.items() if p in _kept_players]
+
+# Add data context to each lore entry
+_keep_counts = keepers.groupby("player_name").size().to_dict()
+_keep_chains_top = chains.set_index("player_name") if len(chains) > 0 else pd.DataFrame()
+
+if _lore_entries:
+    lore_cols = st.columns(2)
+    for idx, (player, lore_text) in enumerate(_lore_entries):
+        col = lore_cols[idx % 2]
+        _kc  = _keep_counts.get(player, 0)
+        _pos = keepers[keepers["player_name"] == player]["position"].iloc[0] if player in keepers["player_name"].values else "?"
+        _pos = str(_pos) if _pos else "?"
+        _pos_c = {"RB":"#22C55E","WR":"#3B82F6","QB":"#EF4444","TE":"#F59E0B"}.get(_pos,"#6B7280")
+        _mgrs_who_kept = keepers[keepers["player_name"] == player]["manager"].unique().tolist()
+        _mgr_str = " · ".join(f"{_mgr_emoji(m)} {m}" for m in _mgrs_who_kept[:4])
+        if len(_mgrs_who_kept) > 4:
+            _mgr_str += f" +{len(_mgrs_who_kept)-4} more"
+
+        col.markdown(
+            f'<div style="background:#0F1B2D;border:1px solid #1E2D40;border-left:4px solid {_pos_c};'
+            f'border-radius:6px;padding:18px 20px;margin-bottom:12px;">'
+            f'<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">'
+            f'<div style="font-family:\'Bebas Neue\',sans-serif;font-size:1.4rem;color:#F5F5F5;letter-spacing:3px;">{player}</div>'
+            f'<span style="background:{_pos_c};color:#000;font-weight:700;font-size:0.55rem;'
+            f'padding:2px 5px;border-radius:3px;letter-spacing:1px;">{_pos}</span>'
+            f'<span style="font-size:0.6rem;color:#D4AF37;font-weight:600;">Kept {_kc}×</span>'
+            f'</div>'
+            f'<div style="font-family:\'Inter\',sans-serif;font-size:0.72rem;color:#A7B0BC;'
+            f'line-height:1.7;margin-bottom:10px;font-style:italic;">{lore_text}</div>'
+            f'<div style="font-size:0.6rem;color:#6B7280;">{_mgr_str}</div>'
+            f'</div>',
+            unsafe_allow_html=True,
+        )
+else:
+    st.markdown(
+        '<p style="color:#A7B0BC;">Keeper lore will appear as player data populates.</p>',
+        unsafe_allow_html=True,
+    )
+
+st.markdown('<hr class="tl-divider-full">', unsafe_allow_html=True)
+
+# ════════════════════════════════════════════════════════════════════════════════
+# SECTION 0B — KEEPER RULE EVOLUTION
+# ════════════════════════════════════════════════════════════════════════════════
+st.markdown(section_header("HOW WE GOT HERE", "Keeper Rule Evolution"), unsafe_allow_html=True)
+st.markdown(
+    '<p style="font-family:\'Inter\',sans-serif;color:#A7B0BC;font-size:0.78rem;margin:-0.5rem 0 1.5rem;">'
+    'The keeper system didn\'t arrive fully formed. It evolved — reshaping draft strategy, '
+    'player value, and championship architecture with each change.</p>',
+    unsafe_allow_html=True,
+)
+
+# Derive rule history from data
+_keeper_years = sorted(keepers["season"].unique().tolist())
+_susp_years   = sorted(_KEEPER_SUSPENSION_YEARS)
+_first_keeper_year = _keeper_years[0] if _keeper_years else FOUNDED
+_total_keeper_seasons_ct = total_keeper_seasons
+
+# Keeper volume by season (chart)
+_k_by_season = keepers.groupby("season").size().reset_index(name="count")
+
+def _hex_to_rgba(h, a=0.05):
+    h = h.lstrip("#")
+    r, g, b = int(h[0:2],16), int(h[2:4],16), int(h[4:6],16)
+    return f"rgba({r},{g},{b},{a})"
+
+fig_kev = go.Figure()
+for era in LEAGUE_ERAS:
+    fig_kev.add_vrect(
+        x0=era["start"] - 0.5,
+        x1=min(era["end"], CURRENT_SEASON) + 0.5,
+        fillcolor=_hex_to_rgba(era["color"]),
+        line_width=0,
+        annotation_text=era["short"],
+        annotation_position="top left",
+        annotation_font=dict(size=9, color="#6B7280"),
+    )
+for yr in _susp_years:
+    fig_kev.add_vline(x=yr, line_color="#F87171", line_dash="dash", line_width=1,
+                      annotation_text="Suspended", annotation_font=dict(size=9, color="#F87171"),
+                      annotation_position="top right")
+
+fig_kev.add_trace(go.Bar(
+    x=_k_by_season["season"], y=_k_by_season["count"],
+    marker_color="#A78BFA",
+    hovertemplate="<b>%{x}</b> · %{y} keepers<extra></extra>",
+    name="Keepers",
+))
+fig_kev.update_layout(
+    paper_bgcolor="#081120", plot_bgcolor="#0F1B2D",
+    font=dict(family="Inter", color="#A7B0BC", size=11),
+    margin=dict(l=0, r=0, t=30, b=0), height=220,
+    xaxis=dict(showgrid=False, tickmode="linear", dtick=2),
+    yaxis=dict(gridcolor="rgba(167,139,250,0.15)", title="Keepers"),
+    showlegend=False,
+)
+st.plotly_chart(fig_kev, use_container_width=True, config={"displayModeBar": False})
+
+# Rule evolution timeline cards
+_rule_events = [
+    {
+        "year": _first_keeper_year,
+        "title": "The Keeper System Begins",
+        "body": f"Starting in {_first_keeper_year}, managers gained the ability to retain selected players "
+                f"from year to year. The draft instantly became about more than just the current season. "
+                f"Strategy, patience, and foresight now mattered as much as luck.",
+        "color": "#D4AF37",
+        "icon": "🔑",
+    },
+]
+for yr in sorted(_susp_years):
+    _rule_events.append({
+        "year": yr,
+        "title": f"{yr} — Keeper Rules Suspended",
+        "body": f"In {yr}, the keeper system was paused for one season. "
+                f"Every manager drafted from scratch. No carryovers. No dynasties in progress. "
+                f"The reset created a level playing field — and new opportunities for managers "
+                f"who had fallen behind.",
+        "color": "#F87171",
+        "icon": "🚫",
+    })
+_rule_events.append({
+    "year": 2010,
+    "title": "The Keeper Revolution Takes Hold",
+    "body": "By 2010, keeper strategy had matured enough to fundamentally reshape how managers drafted. "
+            "Players were evaluated not just for their current season, but for their multi-year keeper potential. "
+            "The managers who understood this earliest built the most enduring dynasties.",
+    "color": "#A78BFA",
+    "icon": "🧠",
+})
+
+for ev in sorted(_rule_events, key=lambda x: x["year"]):
+    st.markdown(
+        f'<div style="display:flex;gap:16px;padding:12px 0;border-bottom:1px solid #1E2D40;">'
+        f'<div style="font-family:\'Bebas Neue\',sans-serif;font-size:1.2rem;color:{ev["color"]};'
+        f'min-width:48px;text-align:center;">{ev["icon"]}</div>'
+        f'<div>'
+        f'<div style="font-family:\'Bebas Neue\',sans-serif;font-size:0.9rem;color:{ev["color"]};'
+        f'letter-spacing:2px;">{ev["title"]}</div>'
+        f'<div style="font-family:\'Inter\',sans-serif;font-size:0.68rem;color:#A7B0BC;'
+        f'line-height:1.6;margin-top:4px;">{ev["body"]}</div>'
+        f'</div>'
+        f'</div>',
         unsafe_allow_html=True,
     )
 
@@ -922,8 +1085,28 @@ with mgr_col:
 
 st.markdown('<hr class="tl-divider-full">', unsafe_allow_html=True)
 
+st.markdown(
+    '<div class="tl-section-label">Continue Exploring</div>',
+    unsafe_allow_html=True,
+)
+xp_c1, xp_c2, xp_c3 = st.columns(3)
+for col, href, icon, title, desc in [
+    (xp_c1, "/champions", "🏆", "Championship Impact", "See which keepers led to titles — and which managers built dynasties around them."),
+    (xp_c2, "/draft_center", "📋", "The Draft Room", "Keepers start in the draft. See the obsessions, archetypes, and player loyalties."),
+    (xp_c3, "/franchise_profiles", "🏟️", "Franchise Legacies", "How did keeper decisions shape 25-year franchise identities?"),
+]:
+    col.markdown(
+        f'<a href="{href}" target="_self" style="display:block;background:#0F1B2D;border:1px solid #1E2D40;'
+        f'border-radius:6px;padding:16px;text-decoration:none;">'
+        f'<div style="font-size:1.5rem;margin-bottom:6px;">{icon}</div>'
+        f'<div style="font-family:\'Bebas Neue\',sans-serif;font-size:1rem;color:#D4AF37;letter-spacing:2px;">{title}</div>'
+        f'<div style="font-family:\'Inter\',sans-serif;font-size:0.65rem;color:#A7B0BC;margin-top:4px;line-height:1.5;">{desc}</div>'
+        f'</a>',
+        unsafe_allow_html=True,
+    )
+
 render_page_footer(
-    href="/draft_center",
-    cta="BACK TO THE DRAFT CENTER",
-    tagline="THE KEEPERS WERE COVETED.<br>THE DRAFT IS WHERE IT ALL STARTED.",
+    href="/champions",
+    cta="SEE THE CHAMPIONSHIP IMPACT",
+    tagline="THE KEEPERS WERE COVETED.<br>THE CHAMPIONSHIPS PROVED WHY.",
 )

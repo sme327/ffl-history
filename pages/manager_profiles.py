@@ -609,6 +609,26 @@ _, col, _ = st.columns([1, 2, 1])
 with col:
     st.markdown(html_table(["Years", "Team Name"], name_rows), unsafe_allow_html=True)
 
+st.markdown(
+    '<div class="tl-section-label">Continue Exploring</div>',
+    unsafe_allow_html=True,
+)
+_mgr_xp = st.columns(3)
+for _col, _href, _icon, _title, _desc in [
+    (_mgr_xp[0], "/franchise_profiles", "🏟️", "Franchise History", "The franchise this manager stewards — who built it before them, and where it goes next."),
+    (_mgr_xp[1], "/draft_center", "📋", "Draft Identity", "Full draft DNA, player loyalties, and archetype breakdown in the Draft Center."),
+    (_mgr_xp[2], "/champions", "🏆", "Trophy Room", "The full championship record — who's won, who's been close, and who's still waiting."),
+]:
+    _col.markdown(
+        f'<a href="{_href}" target="_self" style="display:block;background:#0F1B2D;border:1px solid #1E2D40;'
+        f'border-radius:6px;padding:16px;text-decoration:none;">'
+        f'<div style="font-size:1.5rem;margin-bottom:6px;">{_icon}</div>'
+        f'<div style="font-family:\'Bebas Neue\',sans-serif;font-size:1rem;color:#D4AF37;letter-spacing:2px;">{_title}</div>'
+        f'<div style="font-family:\'Inter\',sans-serif;font-size:0.65rem;color:#A7B0BC;margin-top:4px;line-height:1.5;">{_desc}</div>'
+        f'</a>',
+        unsafe_allow_html=True,
+    )
+
 render_page_footer(
     href="/franchise_profiles",
     cta="EXPLORE THE FRANCHISES",

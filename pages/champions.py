@@ -550,6 +550,26 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+st.markdown(
+    '<div class="tl-section-label">Continue Exploring</div>',
+    unsafe_allow_html=True,
+)
+_xp_cols = st.columns(3)
+for _col, _href, _icon, _title, _desc in [
+    (_xp_cols[0], "/franchise_profiles", "🏟️", "Franchise Dynasties", "Which franchises built the championship foundations? Lineage, stewardship, and legacies."),
+    (_xp_cols[1], "/keeper_hall", "🔑", "Keeper Legacy", "The players behind the dynasties — who was kept, who won, and what it meant."),
+    (_xp_cols[2], "/manager_profiles", "👤", "Manager Profiles", "Career records and Hall of Fame plaques for every competitor in league history."),
+]:
+    _col.markdown(
+        f'<a href="{_href}" target="_self" style="display:block;background:#0F1B2D;border:1px solid #1E2D40;'
+        f'border-radius:6px;padding:16px;text-decoration:none;">'
+        f'<div style="font-size:1.5rem;margin-bottom:6px;">{_icon}</div>'
+        f'<div style="font-family:\'Bebas Neue\',sans-serif;font-size:1rem;color:#D4AF37;letter-spacing:2px;">{_title}</div>'
+        f'<div style="font-family:\'Inter\',sans-serif;font-size:0.65rem;color:#A7B0BC;margin-top:4px;line-height:1.5;">{_desc}</div>'
+        f'</a>',
+        unsafe_allow_html=True,
+    )
+
 render_page_footer(
     href="/league_timeline",
     cta="EXPLORE THE TIMELINE",
