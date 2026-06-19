@@ -36,18 +36,19 @@ _CSS = """
             letter-spacing: 5px;
             text-decoration: none !important;
         }
-        .tl-nav-links { display: flex; gap: 2rem; align-items: center; }
+        .tl-nav-links { display: flex; gap: 1rem; align-items: center; flex-wrap: nowrap; }
         .tl-nav-link {
             font-family: 'Inter', sans-serif;
-            font-size: 0.7rem;
+            font-size: 0.62rem;
             font-weight: 500;
             color: #A7B0BC;
             text-decoration: none !important;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             padding: 4px 0;
             border-bottom: 2px solid transparent;
             transition: color 0.2s, border-color 0.2s;
+            white-space: nowrap;
         }
         .tl-nav-link:hover { color: #D4AF37; border-bottom-color: #D4AF37; }
         .tl-nav-link.active { color: #D4AF37; border-bottom-color: #D4AF37; }
