@@ -88,7 +88,7 @@ for _, ch in chains.iterrows():
 
 immortal_df = (
     pd.DataFrame(immortal_rows)
-    .sort_values("score", ascending=False)
+    .sort_values(["streak_len", "score"], ascending=False)
     .reset_index(drop=True)
 )
 top_chains_scored = immortal_df[immortal_df["streak_len"] >= 3]
@@ -140,12 +140,13 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Match lore entries to players actually in our keeper data
-_kept_players = set(keepers["player_name"].unique())
-_lore_entries = [(p, lore) for p, lore in KEEPER_LORE.items() if p in _kept_players]
-
-# Add data context to each lore entry
+# Only show lore for players kept 3+ times — 1-2 keeps don't warrant "lore" status
 _keep_counts = keepers.groupby("player_name").size().to_dict()
+_lore_entries = [
+    (p, lore) for p, lore in KEEPER_LORE.items()
+    if _keep_counts.get(p, 0) >= 3
+]
+
 _keep_chains_top = chains.set_index("player_name") if len(chains) > 0 else pd.DataFrame()
 
 if _lore_entries:
@@ -636,16 +637,19 @@ for mgr, kgrp in keepers.groupby("manager"):
 
 dna_stats = sorted(dna_stats, key=lambda x: -x["k_count"])
 
-# Baseball card style grid
-dna_html = '<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:0.5rem;">'
-for stat in dna_stats:
-    mgr = stat["manager"]
+# Split into active (last season = CURRENT_SEASON) and alumni
+_mgr_last_szn = dpw.dropna(subset=["manager"]).groupby("manager")["season"].max().to_dict()
+_active_stats  = [s for s in dna_stats if _mgr_last_szn.get(s["manager"], 0) >= CURRENT_SEASON]
+_alumni_stats  = [s for s in dna_stats if _mgr_last_szn.get(s["manager"], 0) <  CURRENT_SEASON]
+
+def _dna_card_html(stat: dict) -> str:
+    mgr   = stat["manager"]
     color = _mgr_color(mgr)
-    em = _mgr_emoji(mgr)
+    em    = _mgr_emoji(mgr)
     label = stat["dna"]
-    desc = _DNA_LABELS.get(label, "")
-    title_str = f'{"🏆" * stat["titles"]}' if stat["titles"] > 0 else ""
-    dna_html += (
+    desc  = _DNA_LABELS.get(label, "")
+    title_str = "🏆" * stat["titles"]
+    return (
         f'<div style="background:#0F1B2D;border:1px solid #1E2D40;border-top:3px solid {color};'
         f'border-radius:6px;padding:12px 14px;min-width:180px;flex:1;max-width:260px;">'
         f'<div style="font-size:1.8rem;margin-bottom:4px;">{em}</div>'
@@ -665,7 +669,24 @@ for stat in dna_stats:
         f'{(" ×" + str(stat["fav_k_n"])) if stat["fav_k_n"] > 1 else ""}</span></div>'
         f'</div></div>'
     )
+
+_group_label_style = (
+    'font-family:\'Bebas Neue\',sans-serif;font-size:0.8rem;letter-spacing:3px;'
+    'color:#6B7280;margin:1rem 0 0.5rem;'
+)
+dna_html = f'<div style="{_group_label_style}">Active Managers</div>'
+dna_html += '<div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:1.5rem;">'
+for stat in _active_stats:
+    dna_html += _dna_card_html(stat)
 dna_html += '</div>'
+
+if _alumni_stats:
+    dna_html += f'<div style="{_group_label_style}">League Alumni</div>'
+    dna_html += '<div style="display:flex;flex-wrap:wrap;gap:12px;">'
+    for stat in _alumni_stats:
+        dna_html += _dna_card_html(stat)
+    dna_html += '</div>'
+
 st.markdown(dna_html, unsafe_allow_html=True)
 
 st.markdown('<hr class="tl-divider-full">', unsafe_allow_html=True)
