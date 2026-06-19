@@ -219,7 +219,7 @@ for era in LEAGUE_ERAS:
         annotation_position="top left",
         annotation_font=dict(size=9, color="#6B7280"),
     )
-for yr in _susp_years:
+for yr in _susp_years:  # empty — all seasons now have complete data
     fig_kev.add_vline(x=yr, line_color="#F59E0B", line_dash="dash", line_width=1,
                       annotation_text="Data Pending", annotation_font=dict(size=9, color="#F59E0B"),
                       annotation_position="top right")
@@ -257,13 +257,11 @@ _rule_events = [
         "icon": "🔑",
     },
 ]
-for yr in sorted(_susp_years):
+for yr in sorted(_susp_years):  # empty — no pending years
     _rule_events.append({
         "year": yr,
         "title": f"{yr} — Draft Data Pending",
-        "body": f"Complete draft and keeper data for {yr} has not yet been recovered. "
-                f"Keeper streaks bridging this season are preserved where evidence supports continuity. "
-                f"This entry will be updated when the {yr} data is confirmed.",
+        "body": f"Complete draft and keeper data for {yr} has not yet been recovered.",
         "color": "#F59E0B",
         "icon": "⏳",
     })
@@ -710,7 +708,7 @@ for mgr in shown_mgrs:
         f'padding:2px 8px;font-size:0.62rem;font-family:\'Inter\',sans-serif;color:#F5F5F5;">'
         f'{em} {mgr}</span>'
     )
-legend_html += '</div><p style="font-size:0.62rem;color:#F59E0B;font-family:\'Inter\',sans-serif;">⏳ 2011 — draft data pending (keeper streaks preserved where supported)</p>'
+legend_html += '</div>'
 
 st.markdown(legend_html + tl_html, unsafe_allow_html=True)
 

@@ -787,14 +787,14 @@ _POS_COLORS = {
     "Other": "#374151",
 }
 # Seasons where the keeper format was suspended — treat as gaps in streak math
-_KEEPER_SUSPENSION_YEARS = {2011}   # 2011 keeper data missing/pending; 2005 recovered
+_KEEPER_SUSPENSION_YEARS: set[int] = set()   # 2005 and 2011 data now complete
 
 
 @st.cache_data
 def get_draft_picks_with_pos() -> pd.DataFrame:
     """Draft picks joined with position, manager name, and franchise_id.
     Excludes --empty-- placeholder rows and normalises rare non-fantasy positions.
-    Cache version: 2 (2005 keepers added)."""
+    Cache version: 3 (2005 and 2011 data complete)."""
     data = load_all()
     dp = data["draft_picks"].copy()
     pp = data["player_positions"]
