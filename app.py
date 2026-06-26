@@ -43,10 +43,27 @@ tnh_lookup = tnh.set_index(["season", "team_name"])["canonical_name"].to_dict()
 _std = std.copy()
 _std["gp"] = _std["wins"] + _std["losses"] + _std["ties"]
 _std["wpc"] = _std["wins"] / _std["gp"].replace(0, float("nan"))
-_best_szn = _std.loc[_std["wpc"].idxmax()]
-best_szn_mgr = tnh_lookup.get((int(_best_szn["season"]), _best_szn["team_name"]), _best_szn["team_name"])
+_best_szns = _std[_std["wpc"] == _std["wpc"].max()].copy()
+_best_szns["manager"] = _best_szns.apply(
+    lambda r: tnh_lookup.get((int(r["season"]), r["team_name"]), r["team_name"]), axis=1
+)
+_best_szn = _best_szns.iloc[0]
 best_szn_record = f"{int(_best_szn['wins'])}-{int(_best_szn['losses'])}"
-best_szn_year = int(_best_szn["season"])
+_best_szn_years = sorted(_best_szns["season"].astype(int).tolist())
+_best_szn_mgrs = _best_szns["manager"].tolist()
+if len(_best_szns) == 1:
+    best_szn_mgr = _best_szn_mgrs[0]
+    best_szn_year = _best_szn_years[0]
+    _best_szn_desc = f"{best_szn_mgr} — the most dominant regular season in league history."
+else:
+    _yr_str = " & ".join(str(y) for y in _best_szn_years)
+    _mgr_str = " & ".join(_best_szn_mgrs)
+    best_szn_year = _best_szn_years[0]
+    best_szn_mgr = _mgr_str
+    _best_szn_desc = (
+        f"{_mgr_str} — the only two managers in league history to go {best_szn_record}. "
+        f"Clark won the title in 2009. Fadi went 12-1 in 2010 and still lost in the playoffs."
+    )
 
 no_title_active = (
     manager_stats[(manager_stats["championships"] == 0) & (manager_stats["active"])]
@@ -219,10 +236,14 @@ with sc1:
         f"Won in {top_leg['years']}. The benchmark everyone is chasing.",
     ), unsafe_allow_html=True)
 with sc2:
+    _best_szn_value = (
+        f"{best_szn_record} ({' & '.join(str(y) for y in _best_szn_years)})"
+        if len(_best_szns) > 1 else f"{best_szn_record} in {best_szn_year}"
+    )
     st.markdown(_story(
         "Best Regular Season",
-        f"{best_szn_record} in {best_szn_year}",
-        f"{best_szn_mgr} — the most dominant regular season in league history.",
+        _best_szn_value,
+        _best_szn_desc,
     ), unsafe_allow_html=True)
 with sc3:
     if drought_row is not None:
