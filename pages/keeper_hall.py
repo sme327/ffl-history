@@ -142,10 +142,11 @@ st.markdown(
 
 # Only show lore for players kept 3+ times — 1-2 keeps don't warrant "lore" status
 _keep_counts = keepers.groupby("player_name").size().to_dict()
-_lore_entries = [
-    (p, lore) for p, lore in KEEPER_LORE.items()
-    if _keep_counts.get(p, 0) >= 3
-]
+_lore_entries = sorted(
+    [(p, lore) for p, lore in KEEPER_LORE.items() if _keep_counts.get(p, 0) >= 3],
+    key=lambda x: _keep_counts.get(x[0], 0),
+    reverse=True,
+)
 
 _keep_chains_top = chains.set_index("player_name") if len(chains) > 0 else pd.DataFrame()
 

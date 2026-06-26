@@ -245,6 +245,102 @@ KEEPER_LORE: dict[str, str] = {
         "When healthy, McCaffrey was the consensus best fantasy player in football — "
         "a dual-threat weapon who made every roster he touched better."
     ),
+    "Shaun Alexander": (
+        "The workhorse era's original franchise player. Alexander's MVP season in 2005 — 1,880 yards and "
+        "27 touchdowns — arrived the same year this league introduced keepers. Whoever had him at that "
+        "moment understood exactly what they were holding. Five straight keeps. The right call."
+    ),
+    "David Johnson": (
+        "The first CMC before CMC. Johnson's 2016 season was historically dominant — over 2,000 total "
+        "yards and 20 touchdowns — and whoever locked him in as a keeper was rewarded with one of the most "
+        "complete offensive weapons in modern fantasy. Five consecutive keeps is a statement of faith."
+    ),
+    "Adrian Peterson": (
+        "All Day. From the moment Peterson entered the league as one of the most explosive runners in NFL "
+        "history, he was a keeper lock. Four straight seasons at the top of every fantasy board. His 2012 "
+        "comeback — 2,097 yards after an ACL tear — was the one that got away."
+    ),
+    "Darren Waller": (
+        "The Raiders' best-kept secret, briefly. Before injuries shortened his prime, Waller was arguably "
+        "the most dominant tight end in the game — a rare TE1 who played like a WR1. Four consecutive "
+        "keeper seasons from the managers who saw it early and refused to let go."
+    ),
+    "Drew Brees": (
+        "The QB keeper era's most reliable tenant. Brees didn't just produce points — he produced "
+        "certainty. In a position group defined by volatility, four straight keeper seasons said one thing: "
+        "this man shows up, every week, every year. The floor was the ceiling for everyone else."
+    ),
+    "Ja'Marr Chase": (
+        "The next great WR dynasty in the making. Chase arrived like an event, posting one of the best "
+        "rookie receiver seasons in NFL history, and he hasn't slowed down. Four straight keeps and a "
+        "career that hasn't peaked yet. Someone in this league is still holding on."
+    ),
+    "Maurice Jones-Drew": (
+        "Pound for pound, one of the most efficient fantasy weapons of his era. MJD was a workhorse in "
+        "a league that loved workhorses — and four consecutive keeper seasons proved that whoever had him "
+        "understood the asset they were sitting on. You don't let that go."
+    ),
+    "Nick Chubb": (
+        "Arguably the most efficient runner in modern fantasy over his peak years. Chubb didn't need "
+        "volume to produce — he produced anyway, on fewer carries than any other workhorse of his era. "
+        "A keeper whose value was underrated at the time and appreciated only in retrospect."
+    ),
+    "Aaron Rodgers": (
+        "The year Rodgers won the Super Bowl, he also won this league's attention forever. The rare QB "
+        "worth keeping year after year — because in a league where quarterback consistency meant "
+        "everything, Rodgers delivered three straight seasons without ever feeling like a gamble."
+    ),
+    "Arian Foster": (
+        "Foster's emergence was one of the great undrafted stories in NFL history — twice undrafted, and "
+        "then the highest-scoring fantasy back of 2010. Three straight keeper seasons followed. "
+        "Whoever saw it first went to bed happy for years."
+    ),
+    "Breece Hall": (
+        "The current generation's most-kept emerging back. Hall's combination of speed, receiving ability, "
+        "and target share make him the kind of player you build a roster around. Three consecutive keeps "
+        "in his early 20s. The lore is still being written."
+    ),
+    "Calvin Ridley": (
+        "Before the suspension changed everything, Ridley was one of the most efficient receivers "
+        "in the NFL — a smooth-route technician operating behind Julio Jones in Atlanta, then stepping "
+        "into the lead role. Three keeps in three years. Then the story had a different ending."
+    ),
+    "Clinton Portis": (
+        "The workhorse era's wild card. Portis was electric in Denver and dangerous in Washington — "
+        "and four consecutive keeper seasons proved that whoever had him understood what they were "
+        "looking at. Speed, vision, and big-play ability before anyone had a name for it."
+    ),
+    "Josh Allen": (
+        "The most complete quarterback in modern fantasy football. Allen's ability to run, throw, "
+        "and simply will games into his column made him the consensus QB1 of his era — and three "
+        "straight keeper seasons in this league confirm that whoever had him wasn't letting go. "
+        "The definition of a can't-cut player."
+    ),
+    "Garrett Wilson": (
+        "The Jets' lighthouse in a dark era. Wilson's production in spite of consistently poor "
+        "quarterback play made him one of the most impressive keeper values of the modern age — "
+        "three keeps and a trajectory pointing upward, still."
+    ),
+    "Larry Johnson": (
+        "The most dangerous man in Kansas City for three consecutive seasons. Johnson's workload was "
+        "staggering — 416 carries in 2006 alone — and the managers who kept him rode the production "
+        "train until the miles finally caught up. It was worth every carry."
+    ),
+    "LeSean McCoy": (
+        "Shady. Fast, elusive, and brutally efficient in an Eagles system built for his specific skill "
+        "set. McCoy's peak years were a showcase of what a receiving back could be — and three keeper "
+        "seasons proved that whoever had him knew they were holding lightning."
+    ),
+    "Mike Evans": (
+        "The floor king. Evans didn't just have upside — he had certainty. In a position defined by "
+        "volatility, he showed up and produced every single season. Three straight keeper seasons at "
+        "receiver says something rare: this was the kind of player you simply don't release."
+    ),
+    "Rudi Johnson": (
+        "The workmanlike workhorse of the early keeper era. Not flashy, not famous — just productive. "
+        "Johnson quietly put up the kind of numbers in Cincinnati that made him impossible to cut loose. "
+        "Three consecutive keeps, and a reminder that reliability is its own kind of greatness."
+    ),
 }
 
 # ── MANAGER IDENTITY LABELS ────────────────────────────────────────────────────
@@ -254,7 +350,7 @@ MANAGER_IDENTITY: dict[str, str] = {
     "Dominic":         "Championship efficiency. Built rosters to peak at exactly the right moment.",
     "Brian Clark":     "The keeper architect. Patient, systematic, and ruthlessly consistent.",
     "Jamie":           "Never wastes a trip to the playoffs. One of the most efficient champions in league history.",
-    "Fadi":            "A perennial force who could never quite close. The most decorated manager without a dynasty.",
+    "Fadi":            "A perennial force who made them wait — then closed it by 0.12 points. Three runner-ups and one title, settled in the closest final in league history.",
     "Kevin Swanson":   "The iron man. Eighteen seasons of showing up, competing, and refusing to rebuild.",
     "Kevin O'Boyle":   "The quiet contender. Always in the mix, rarely out of playoff contention.",
     "Evan":            "High ceiling, high variance. When Evan peaks, he wins it all.",

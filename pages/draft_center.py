@@ -423,7 +423,7 @@ fig_dna.update_layout(
     font=dict(family="Inter", color="#F5F5F5", size=11),
     xaxis=dict(title="Round 1 Pick Share (%)", gridcolor="#1E2D40", range=[0, 100]),
     yaxis=dict(tickfont=dict(size=11)),
-    legend=dict(orientation="h", y=1.05, x=0, font=dict(size=11)),
+    legend=dict(orientation="h", y=1.05, x=1, xanchor="right", font=dict(size=11)),
     margin=dict(l=120, r=30, t=40, b=40),
     height=max(320, len(r1_qual) * 28 + 80),
 )

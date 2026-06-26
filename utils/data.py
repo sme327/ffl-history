@@ -88,6 +88,7 @@ def load_all() -> dict:
 
 @st.cache_data
 def get_champions() -> pd.DataFrame:
+    _cache_bust = 1
     data = load_all()
     pg = data["playoff_games"]
     tnh = data["team_name_history"]
@@ -129,6 +130,7 @@ def get_champions() -> pd.DataFrame:
 
 @st.cache_data
 def get_manager_stats() -> pd.DataFrame:
+    _cache_bust = 1
     data = load_all()
     wm = data["weekly_matchups"]
     tnh = data["team_name_history"]
