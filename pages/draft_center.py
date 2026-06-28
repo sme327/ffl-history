@@ -63,7 +63,10 @@ player_legend = (
     )
     .reset_index()
 )
-player_legend["career_span"] = player_legend["last_season"] - player_legend["first_season"] + 1
+# Count distinct seasons actually drafted — avoids inflating spans for common names
+# that span multiple NFL players (e.g. "Mike Williams" = Detroit 2005, TB 2010-13, LAC 2017-24)
+_seasons_per_player = dpw.groupby("player_name")["season"].nunique()
+player_legend["career_span"] = player_legend["player_name"].map(_seasons_per_player).fillna(0).astype(int)
 
 # Most loyal manager per player (most total seasons with this player)
 _loyal = (

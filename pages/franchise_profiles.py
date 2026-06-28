@@ -31,6 +31,20 @@ std = data["standings"]
 
 opp_lookup = tnh.set_index(["season", "team_name"])["canonical_name"].to_dict()
 
+# Maps used throughout the page for original vs successor display
+_sp_sorted = steward_periods.sort_values(["franchise_id", "start_season"])
+_first_mgr_by_fid: dict[str, str] = (
+    _sp_sorted.drop_duplicates("franchise_id", keep="first")
+    .set_index("franchise_id")["manager_name"]
+    .to_dict()
+)
+_curr_start_by_fid: dict[str, int] = (
+    _sp_sorted.drop_duplicates("franchise_id", keep="last")
+    .set_index("franchise_id")["start_season"]
+    .astype(int)
+    .to_dict()
+)
+
 # ── PAGE TITLE ──────────────────────────────────────────────────────────────────
 st.markdown(
     """
@@ -53,9 +67,21 @@ for _, fs in franchise_stats.sort_values("championships", ascending=False).iterr
     mgr = fs["current_manager"] if fs["current_manager"] and str(fs["current_manager"]) != "nan" else "—"
     emoji = MANAGER_EMOJI.get(mgr, "🏟️")
     champ_str = ("🏆 " * int(fs["championships"])).strip() if fs["championships"] > 0 else "—"
+    _fid = fs["franchise_id"]
+    _is_original = _first_mgr_by_fid.get(_fid) == mgr
+    if _is_original:
+        _mgr_cell = f"{emoji} {mgr}"
+    else:
+        _founder = _first_mgr_by_fid.get(_fid, "?")
+        _since = _curr_start_by_fid.get(_fid, "?")
+        _mgr_cell = (
+            f'{emoji} {mgr}'
+            f'<br><span style="font-size:0.68rem;color:#4B5563;font-style:italic;">'
+            f'est. by {_founder} &nbsp;·&nbsp; since {_since}</span>'
+        )
     summary_rows.append([
         (champ_str, "gold"),
-        f"{emoji} {mgr}",
+        _mgr_cell,
         str(int(fs["established"])),
         f"{int(fs['wins'])}-{int(fs['losses'])}",
         (f"{fs['win_pct']:.3f}" if fs["win_pct"] and str(fs["win_pct"]) != "nan" else "—", ""),
@@ -88,7 +114,11 @@ selected_mgr = st.selectbox(
     "SELECT FRANCHISE",
     options=_sorted_mgr_keys,
     index=_default_mgr_idx,
-    format_func=lambda n: f"{MANAGER_EMOJI.get(n, '')}  {n}  ·  {option_map[n]}",
+    format_func=lambda n: (
+        f"{MANAGER_EMOJI.get(n, '')}  {n}  ·  est. {franchise_stats[franchise_stats['current_manager'] == n]['established'].iloc[0]:.0f}"
+        if _first_mgr_by_fid.get(option_map[n]) == n
+        else f"{MANAGER_EMOJI.get(n, '')}  {n}  ·  since {_curr_start_by_fid.get(option_map[n], '?')}"
+    ),
     label_visibility="collapsed",
 )
 
@@ -293,7 +323,7 @@ st.markdown(
     f"""
     <div class="tl-champion-card" style="padding:2.5rem 2rem;">
         <div style="font-size:3.5rem;margin-bottom:0.3rem;">{hero_emoji}</div>
-        <div style="font-family:'Inter',sans-serif;font-size:0.58rem;color:#A7B0BC;letter-spacing:5px;text-transform:uppercase;">{franchise_id} &nbsp;·&nbsp; Established {est}</div>
+        <div style="font-family:'Inter',sans-serif;font-size:0.58rem;color:#A7B0BC;letter-spacing:5px;text-transform:uppercase;">Franchise &nbsp;·&nbsp; Established {est}</div>
         <div style="font-family:'Bebas Neue',sans-serif;font-size:3rem;color:#D4AF37;letter-spacing:4px;line-height:1;margin:0.4rem 0 0.15rem;">The {curr_mgr} Franchise</div>
         <div style="font-family:'Inter',sans-serif;font-size:0.85rem;color:#F5F5F5;margin-bottom:0.25rem;">{trophies_html}</div>
         <hr style="border:none;height:1px;background:rgba(184,144,46,0.3);margin:1.2rem 0 1.4rem;">
