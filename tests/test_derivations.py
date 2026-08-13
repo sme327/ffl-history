@@ -174,6 +174,30 @@ class TestHome(FixtureAssertions):
             self.assertIn(manager, best["summary"], f"{manager} missing from best-season copy")
 
 
+class TestChampionsView(FixtureAssertions):
+    def test_champions_view(self):
+        """Covers the logic lifted out of pages/champions.py."""
+        self.assert_matches("get_champions_view", D.get_champions_view())
+
+    def test_leaders_ordered_deterministically(self):
+        leaders = D.get_champions_view()["manager_leaders"]
+        keys = [(-m["championships"], -m["last"], m["manager"]) for m in leaders]
+        self.assertEqual(keys, sorted(keys), "leaders must break ties explicitly")
+
+    def test_dynasties_are_multi_title_managers(self):
+        view = D.get_champions_view()
+        expected = {m["manager"] for m in view["manager_leaders"] if m["championships"] >= 2}
+        self.assertEqual({d["manager"] for d in view["dynasties"]}, expected)
+
+    def test_finals_records_reconcile(self):
+        """Titles + runner-ups must equal finals appearances for everyone."""
+        for m in D.get_champions_view()["manager_leaders"]:
+            self.assertEqual(
+                m["titles"] + m["runner_ups"], m["finals_apps"],
+                f'{m["manager"]}: finals appearances do not reconcile',
+            )
+
+
 class TestLeagueHistory(FixtureAssertions):
     def test_season_scoring(self):
         self.assert_matches("get_season_scoring", D.get_season_scoring())

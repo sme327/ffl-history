@@ -1903,3 +1903,249 @@ def get_league_history_view() -> dict:
             }),
         },
     }
+
+
+# ── CHAMPIONS VIEW ────────────────────────────────────────────────────────────
+# Lifted out of pages/champions.py, which had seven rankings resolved by the
+# default non-stable sort — runner-up counts, third-place counts, finals
+# appearances, active-no-title, best-regular-season-no-title, and the per-season
+# best record — all of which have real ties in this data. It also assigned
+# columns onto the cached champions frame; everything here works on copies.
+
+@st.cache_data
+def get_champions_view() -> dict:
+    data = load_all()
+    champions = get_champions().copy()
+    manager_stats = get_manager_stats()
+    standings = data["standings"]
+    playoff_games = data["playoff_games"]
+    tnh = data["team_name_history"]
+    franchise_history = data["franchise_history"]
+
+    manager_by_team = tnh.set_index(["season", "team_name"])["canonical_name"].to_dict()
+    emoji = lambda name: MANAGER_EMOJI.get(name, "👤")  # noqa: E731
+
+    champions["margin"] = champions["champion_score"] - champions["runner_up_score"]
+    champions["combined"] = champions["champion_score"] + champions["runner_up_score"]
+
+    # ── Finals records ───────────────────────────────────────────────────────
+    titles = champions.groupby("champion_manager").size()
+    runner_ups = champions.groupby("runner_up_manager").size()
+    finals: dict[str, dict] = {}
+    for name in sorted(set(titles.index) | set(runner_ups.index)):
+        won, lost = int(titles.get(name, 0)), int(runner_ups.get(name, 0))
+        finals[name] = {
+            "titles": won,
+            "runner_ups": lost,
+            "finals_apps": won + lost,
+            "win_pct": round(won / (won + lost), 2) if won + lost else 0.0,
+        }
+
+    # ── Manager leaders ──────────────────────────────────────────────────────
+    grouped = (
+        champions.groupby("champion_manager")
+        .agg(championships=("season", "count"),
+             first=("season", "min"), last=("season", "max"),
+             year_list=("season", lambda s: sorted(int(y) for y in s)))
+        .reset_index()
+        .sort_values(["championships", "last", "champion_manager"],
+                     ascending=[False, False, True], kind="mergesort")
+    )
+    manager_leaders = [
+        {
+            "manager": r["champion_manager"],
+            "emoji": emoji(r["champion_manager"]),
+            "championships": int(r["championships"]),
+            "years": ", ".join(str(y) for y in r["year_list"]),
+            "year_list": r["year_list"],
+            "first": int(r["first"]),
+            "last": int(r["last"]),
+            **finals.get(r["champion_manager"], {}),
+        }
+        for _, r in grouped.iterrows()
+    ]
+
+    # ── Franchise leaders ────────────────────────────────────────────────────
+    fh_named = franchise_history.merge(
+        tnh.rename(columns={"canonical_name": "manager_name"}),
+        on=["season", "manager_name"], how="left",
+    )
+    champ_teams = champions[["season", "champion_team"]].rename(columns={"champion_team": "team_name"})
+    fran_wins = fh_named.merge(champ_teams, on=["season", "team_name"], how="inner")
+    current_managers = dict(
+        franchise_history[franchise_history["season"] == CURRENT_SEASON]
+        [["franchise_id", "manager_name"]].values
+    )
+    fran_grouped = (
+        fran_wins.groupby("franchise_id")
+        .agg(championships=("season", "count"), last=("season", "max"),
+             year_list=("season", lambda s: sorted(int(y) for y in s)))
+        .reset_index()
+        .sort_values(["championships", "last", "franchise_id"],
+                     ascending=[False, False, True], kind="mergesort")
+    )
+    franchise_leaders = [
+        {
+            "franchise_id": r["franchise_id"],
+            "current_manager": current_managers.get(r["franchise_id"], "—"),
+            "emoji": emoji(current_managers.get(r["franchise_id"], "")) if current_managers.get(r["franchise_id"]) else "🏟️",
+            "championships": int(r["championships"]),
+            "years": ", ".join(str(y) for y in r["year_list"]),
+            "last": int(r["last"]),
+        }
+        for _, r in fran_grouped.iterrows()
+    ]
+
+    # ── Dynasties ────────────────────────────────────────────────────────────
+    dynasties = []
+    for leader in manager_leaders:
+        if leader["championships"] < 2:
+            continue
+        years = leader["year_list"]
+        consecutive = all(years[i + 1] == years[i] + 1 for i in range(len(years) - 1))
+        span = leader["last"] - leader["first"] + 1
+        dynasties.append({
+            **leader,
+            "consecutive": consecutive,
+            "span": span,
+            "era_desc": (
+                f'{leader["championships"]} consecutive championships' if consecutive
+                else f'{leader["championships"]} titles across {span} seasons '
+                     f'({leader["first"]}–{leader["last"]})'
+            ),
+        })
+
+    # ── Ranked helpers with explicit tie-breaks ──────────────────────────────
+    def _ranked(counts: dict) -> list[tuple[str, int]]:
+        return sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))
+
+    ru_ranked = _ranked({k: int(v) for k, v in runner_ups.items()})
+
+    third_place = playoff_games[
+        (playoff_games["bracket"] == "championship") & (playoff_games["game_type"] == "3rd_place")
+    ]
+    third_counts: dict[str, list[int]] = {}
+    for _, g in third_place.iterrows():
+        team = g["team_1"] if g["winner"] == g["team_1"] else g["team_2"]
+        manager = manager_by_team.get((int(g["season"]), team), team)
+        third_counts.setdefault(manager, []).append(int(g["season"]))
+    third_ranked = sorted(
+        ((m, len(y), sorted(y)) for m, y in third_counts.items()),
+        key=lambda t: (-t[1], t[0]),
+    )
+
+    finals_ranked = sorted(
+        finals.items(), key=lambda kv: (-kv[1]["finals_apps"], kv[0])
+    )
+
+    # ── Best regular season that didn't win it all ───────────────────────────
+    best_rs_no_title = []
+    for _, champ in champions.iterrows():
+        season = int(champ["season"])
+        table = standings[standings["season"] == season].copy()
+        table["manager"] = table.apply(
+            lambda r: manager_by_team.get((season, r["team_name"])), axis=1
+        )
+        table = table.dropna(subset=["manager"])
+        table["games"] = table["wins"] + table["losses"] + table["ties"]
+        table["win_pct"] = table["wins"] / table["games"].replace(0, float("nan"))
+        table = table.sort_values(["win_pct", "points_for", "manager"],
+                                  ascending=[False, False, True], kind="mergesort")
+        if not len(table):
+            continue
+        best = table.iloc[0]
+        if best["manager"] != champ["champion_manager"]:
+            best_rs_no_title.append({
+                "season": season,
+                "manager": best["manager"],
+                "emoji": emoji(best["manager"]),
+                "wins": int(best["wins"]),
+                "losses": int(best["losses"]),
+                "win_pct": round(float(best["win_pct"] or 0), 4),
+            })
+    best_rs_no_title.sort(key=lambda r: (-r["win_pct"], r["season"]))
+
+    still_waiting = manager_stats[
+        (manager_stats["championships"] == 0) & (manager_stats["playoff_apps"] >= 3)
+    ].sort_values(["playoff_apps", "canonical_name"], ascending=[False, True], kind="mergesort")
+
+    # ── Back-to-back (most recent successful defence) ────────────────────────
+    ordered = champions.sort_values("season").reset_index(drop=True)
+    back_to_back = None
+    for i in range(1, len(ordered)):
+        if (ordered.iloc[i]["champion_manager"] == ordered.iloc[i - 1]["champion_manager"]
+                and ordered.iloc[i]["season"] == ordered.iloc[i - 1]["season"] + 1):
+            back_to_back = {
+                "manager": ordered.iloc[i]["champion_manager"],
+                "season": int(ordered.iloc[i]["season"]),
+                "team": ordered.iloc[i]["champion_team"],
+            }
+
+    def _final(row) -> dict:
+        return {
+            "season": int(row["season"]),
+            "champion_manager": row["champion_manager"],
+            "champion_team": row["champion_team"],
+            "champion_score": round(float(row["champion_score"]), 2),
+            "runner_up_manager": row["runner_up_manager"],
+            "runner_up_team": row["runner_up_team"],
+            "runner_up_score": round(float(row["runner_up_score"]), 2),
+            "margin": round(float(row["margin"]), 2),
+            "combined": round(float(row["combined"]), 2),
+            "emoji": MANAGER_EMOJI.get(row["champion_manager"], "🏆"),
+        }
+
+    current_rows = champions[champions["season"] == CURRENT_SEASON]
+
+    return {
+        "totals": {
+            "seasons": int(CURRENT_SEASON - FOUNDED + 1),
+            "titles_awarded": len(champions),
+            "unique_managers": int(champions["champion_manager"].nunique()),
+        },
+        "top_manager": manager_leaders[0] if manager_leaders else None,
+        "current_champion": _final(current_rows.iloc[0]) if len(current_rows) else None,
+        "manager_leaders": manager_leaders,
+        "franchise_leaders": franchise_leaders,
+        "chronological": sorted(manager_leaders, key=lambda m: (m["first"], m["manager"])),
+        "dynasties": dynasties,
+        "trivia": {
+            "biggest_blowout": _final(champions.loc[champions["margin"].idxmax()]),
+            "closest_final": _final(champions.loc[champions["margin"].idxmin()]),
+            "most_runner_up": {
+                "manager": ru_ranked[0][0], "count": ru_ranked[0][1],
+                "emoji": emoji(ru_ranked[0][0]),
+            } if ru_ranked else None,
+            "highest_scoring_final": _final(champions.loc[champions["combined"].idxmax()]),
+            "lowest_scoring_final": _final(champions.loc[champions["combined"].idxmin()]),
+            "most_finals": {
+                "manager": finals_ranked[0][0], **finals_ranked[0][1],
+            } if finals_ranked else None,
+            "back_to_back": back_to_back,
+            "highest_winning_score": _final(champions.loc[champions["champion_score"].idxmax()]),
+            "first_champion": _final(ordered.iloc[0]),
+        },
+        "pain": {
+            "most_runner_up": {
+                "manager": ru_ranked[0][0],
+                "count": ru_ranked[0][1],
+                "emoji": emoji(ru_ranked[0][0]),
+                "years": sorted(
+                    int(s) for s in champions[champions["runner_up_manager"] == ru_ranked[0][0]]["season"]
+                ),
+            } if ru_ranked else None,
+            "most_third": {
+                "manager": third_ranked[0][0], "count": third_ranked[0][1],
+                "years": third_ranked[0][2], "emoji": emoji(third_ranked[0][0]),
+            } if third_ranked else None,
+            "still_waiting": {
+                "manager": still_waiting.iloc[0]["canonical_name"],
+                "playoff_apps": int(still_waiting.iloc[0]["playoff_apps"]),
+                "emoji": emoji(still_waiting.iloc[0]["canonical_name"]),
+            } if len(still_waiting) else None,
+            "closest_loss": _final(champions.loc[champions["margin"].idxmin()]),
+            "biggest_loss": _final(champions.loc[champions["margin"].idxmax()]),
+            "best_rs_no_title": best_rs_no_title[0] if best_rs_no_title else None,
+        },
+        "finals": [_final(r) for _, r in champions.sort_values("season", ascending=False).iterrows()],
+    }

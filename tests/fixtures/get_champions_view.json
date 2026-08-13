@@ -1,0 +1,4012 @@
+{
+  "type": "dict",
+  "value": {
+    "totals": {
+      "type": "dict",
+      "value": {
+        "seasons": {
+          "type": "scalar",
+          "value": 25
+        },
+        "titles_awarded": {
+          "type": "scalar",
+          "value": 25
+        },
+        "unique_managers": {
+          "type": "scalar",
+          "value": 11
+        }
+      }
+    },
+    "top_manager": {
+      "type": "dict",
+      "value": {
+        "manager": {
+          "type": "scalar",
+          "value": "Dominic"
+        },
+        "emoji": {
+          "type": "scalar",
+          "value": "🏈"
+        },
+        "championships": {
+          "type": "scalar",
+          "value": 5
+        },
+        "years": {
+          "type": "scalar",
+          "value": "2007, 2008, 2011, 2021, 2023"
+        },
+        "year_list": {
+          "type": "list",
+          "length": 5,
+          "value": [
+            {
+              "type": "scalar",
+              "value": 2007
+            },
+            {
+              "type": "scalar",
+              "value": 2008
+            },
+            {
+              "type": "scalar",
+              "value": 2011
+            },
+            {
+              "type": "scalar",
+              "value": 2021
+            },
+            {
+              "type": "scalar",
+              "value": 2023
+            }
+          ]
+        },
+        "first": {
+          "type": "scalar",
+          "value": 2007
+        },
+        "last": {
+          "type": "scalar",
+          "value": 2023
+        },
+        "titles": {
+          "type": "scalar",
+          "value": 5
+        },
+        "runner_ups": {
+          "type": "scalar",
+          "value": 2
+        },
+        "finals_apps": {
+          "type": "scalar",
+          "value": 7
+        },
+        "win_pct": {
+          "type": "scalar",
+          "value": 0.71
+        }
+      }
+    },
+    "current_champion": {
+      "type": "dict",
+      "value": {
+        "season": {
+          "type": "scalar",
+          "value": 2025
+        },
+        "champion_manager": {
+          "type": "scalar",
+          "value": "Thomas"
+        },
+        "champion_team": {
+          "type": "scalar",
+          "value": "Fuzzy Bears"
+        },
+        "champion_score": {
+          "type": "scalar",
+          "value": 97.34
+        },
+        "runner_up_manager": {
+          "type": "scalar",
+          "value": "Jeff"
+        },
+        "runner_up_team": {
+          "type": "scalar",
+          "value": "Futball in the Groin"
+        },
+        "runner_up_score": {
+          "type": "scalar",
+          "value": 79.65
+        },
+        "margin": {
+          "type": "scalar",
+          "value": 17.69
+        },
+        "combined": {
+          "type": "scalar",
+          "value": 176.99
+        },
+        "emoji": {
+          "type": "scalar",
+          "value": "🐻"
+        }
+      }
+    },
+    "manager_leaders": {
+      "type": "list",
+      "length": 11,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🏈"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 5
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2007, 2008, 2011, 2021, 2023"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 5,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2007
+                },
+                {
+                  "type": "scalar",
+                  "value": 2008
+                },
+                {
+                  "type": "scalar",
+                  "value": 2011
+                },
+                {
+                  "type": "scalar",
+                  "value": 2021
+                },
+                {
+                  "type": "scalar",
+                  "value": 2023
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2007
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2023
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 5
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 2
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 7
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.71
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 4
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2009, 2010, 2016, 2018"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2009
+                },
+                {
+                  "type": "scalar",
+                  "value": 2010
+                },
+                {
+                  "type": "scalar",
+                  "value": 2016
+                },
+                {
+                  "type": "scalar",
+                  "value": 2018
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2009
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2018
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 4
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 2
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 6
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.67
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Jamie"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "😇"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 4
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2001, 2002, 2003, 2004"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2001
+                },
+                {
+                  "type": "scalar",
+                  "value": 2002
+                },
+                {
+                  "type": "scalar",
+                  "value": 2003
+                },
+                {
+                  "type": "scalar",
+                  "value": 2004
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 4
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 0
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 4
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 1.0
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Thomas"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🐻"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 2
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2014, 2025"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2014
+                },
+                {
+                  "type": "scalar",
+                  "value": 2025
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2014
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2025
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 2
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 2
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 4
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.5
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Douglas"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "⚙️"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 2
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2017, 2020"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2017
+                },
+                {
+                  "type": "scalar",
+                  "value": 2020
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2017
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2020
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 2
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 0
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 2
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 1.0
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Kevin O'Boyle"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 2
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2005, 2015"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2005
+                },
+                {
+                  "type": "scalar",
+                  "value": 2015
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2005
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2015
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 2
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 3
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 5
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.4
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Evan"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🎉"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 2
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2012, 2013"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2012
+                },
+                {
+                  "type": "scalar",
+                  "value": 2013
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2012
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2013
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 2
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 1
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 3
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.67
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "👑"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 1
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2024"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 1,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2024
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2024
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2024
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 1
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 3
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 4
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.25
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Bryan Kearney"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "💪"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 1
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2022"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 1,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2022
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2022
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2022
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 1
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 0
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 1
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 1.0
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Steve Swanson"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🐻"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 1
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2019"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 1,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2019
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2019
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2019
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 1
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 3
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 4
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.25
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Kevin Swanson"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🧔"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 1
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2006"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 1,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2006
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2006
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2006
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 1
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 2
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 3
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.33
+            }
+          }
+        }
+      ]
+    },
+    "franchise_leaders": {
+      "type": "list",
+      "length": 11,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "franchise_id": {
+              "type": "scalar",
+              "value": "F03"
+            },
+            "current_manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🏈"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 5
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2007, 2008, 2011, 2021, 2023"
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2023
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "franchise_id": {
+              "type": "scalar",
+              "value": "F02"
+            },
+            "current_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 4
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2009, 2010, 2016, 2018"
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2018
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "franchise_id": {
+              "type": "scalar",
+              "value": "F07"
+            },
+            "current_manager": {
+              "type": "scalar",
+              "value": "Jeff"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "⚽"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 4
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2001, 2002, 2003, 2004"
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2004
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "franchise_id": {
+              "type": "scalar",
+              "value": "F12"
+            },
+            "current_manager": {
+              "type": "scalar",
+              "value": "Thomas"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🐻"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 2
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2014, 2025"
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "franchise_id": {
+              "type": "scalar",
+              "value": "F01"
+            },
+            "current_manager": {
+              "type": "scalar",
+              "value": "Douglas"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "⚙️"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 2
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2017, 2020"
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2020
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "franchise_id": {
+              "type": "scalar",
+              "value": "F10"
+            },
+            "current_manager": {
+              "type": "scalar",
+              "value": "Kevin O'Boyle"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 2
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2005, 2015"
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2015
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "franchise_id": {
+              "type": "scalar",
+              "value": "F05"
+            },
+            "current_manager": {
+              "type": "scalar",
+              "value": "Evan"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🎉"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 2
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2012, 2013"
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2013
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "franchise_id": {
+              "type": "scalar",
+              "value": "F06"
+            },
+            "current_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "👑"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 1
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2024"
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2024
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "franchise_id": {
+              "type": "scalar",
+              "value": "F04"
+            },
+            "current_manager": {
+              "type": "scalar",
+              "value": "Eric"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "⛳"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 1
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2022"
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2022
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "franchise_id": {
+              "type": "scalar",
+              "value": "F08"
+            },
+            "current_manager": {
+              "type": "scalar",
+              "value": "Steve Swanson"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🐻"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 1
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2019"
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2019
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "franchise_id": {
+              "type": "scalar",
+              "value": "F11"
+            },
+            "current_manager": {
+              "type": "scalar",
+              "value": "Kevin Swanson"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🧔"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 1
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2006"
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2006
+            }
+          }
+        }
+      ]
+    },
+    "chronological": {
+      "type": "list",
+      "length": 11,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Jamie"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "😇"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 4
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2001, 2002, 2003, 2004"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2001
+                },
+                {
+                  "type": "scalar",
+                  "value": 2002
+                },
+                {
+                  "type": "scalar",
+                  "value": 2003
+                },
+                {
+                  "type": "scalar",
+                  "value": 2004
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 4
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 0
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 4
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 1.0
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Kevin O'Boyle"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 2
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2005, 2015"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2005
+                },
+                {
+                  "type": "scalar",
+                  "value": 2015
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2005
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2015
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 2
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 3
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 5
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.4
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Kevin Swanson"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🧔"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 1
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2006"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 1,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2006
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2006
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2006
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 1
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 2
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 3
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.33
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🏈"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 5
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2007, 2008, 2011, 2021, 2023"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 5,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2007
+                },
+                {
+                  "type": "scalar",
+                  "value": 2008
+                },
+                {
+                  "type": "scalar",
+                  "value": 2011
+                },
+                {
+                  "type": "scalar",
+                  "value": 2021
+                },
+                {
+                  "type": "scalar",
+                  "value": 2023
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2007
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2023
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 5
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 2
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 7
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.71
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 4
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2009, 2010, 2016, 2018"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2009
+                },
+                {
+                  "type": "scalar",
+                  "value": 2010
+                },
+                {
+                  "type": "scalar",
+                  "value": 2016
+                },
+                {
+                  "type": "scalar",
+                  "value": 2018
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2009
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2018
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 4
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 2
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 6
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.67
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Evan"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🎉"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 2
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2012, 2013"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2012
+                },
+                {
+                  "type": "scalar",
+                  "value": 2013
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2012
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2013
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 2
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 1
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 3
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.67
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Thomas"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🐻"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 2
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2014, 2025"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2014
+                },
+                {
+                  "type": "scalar",
+                  "value": 2025
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2014
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2025
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 2
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 2
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 4
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.5
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Douglas"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "⚙️"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 2
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2017, 2020"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2017
+                },
+                {
+                  "type": "scalar",
+                  "value": 2020
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2017
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2020
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 2
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 0
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 2
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 1.0
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Steve Swanson"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🐻"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 1
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2019"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 1,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2019
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2019
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2019
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 1
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 3
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 4
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.25
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Bryan Kearney"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "💪"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 1
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2022"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 1,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2022
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2022
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2022
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 1
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 0
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 1
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 1.0
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "👑"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 1
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2024"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 1,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2024
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2024
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2024
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 1
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 3
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 4
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.25
+            }
+          }
+        }
+      ]
+    },
+    "dynasties": {
+      "type": "list",
+      "length": 7,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🏈"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 5
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2007, 2008, 2011, 2021, 2023"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 5,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2007
+                },
+                {
+                  "type": "scalar",
+                  "value": 2008
+                },
+                {
+                  "type": "scalar",
+                  "value": 2011
+                },
+                {
+                  "type": "scalar",
+                  "value": 2021
+                },
+                {
+                  "type": "scalar",
+                  "value": 2023
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2007
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2023
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 5
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 2
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 7
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.71
+            },
+            "consecutive": {
+              "type": "scalar",
+              "value": false
+            },
+            "span": {
+              "type": "scalar",
+              "value": 17
+            },
+            "era_desc": {
+              "type": "scalar",
+              "value": "5 titles across 17 seasons (2007–2023)"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 4
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2009, 2010, 2016, 2018"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2009
+                },
+                {
+                  "type": "scalar",
+                  "value": 2010
+                },
+                {
+                  "type": "scalar",
+                  "value": 2016
+                },
+                {
+                  "type": "scalar",
+                  "value": 2018
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2009
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2018
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 4
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 2
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 6
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.67
+            },
+            "consecutive": {
+              "type": "scalar",
+              "value": false
+            },
+            "span": {
+              "type": "scalar",
+              "value": 10
+            },
+            "era_desc": {
+              "type": "scalar",
+              "value": "4 titles across 10 seasons (2009–2018)"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Jamie"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "😇"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 4
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2001, 2002, 2003, 2004"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2001
+                },
+                {
+                  "type": "scalar",
+                  "value": 2002
+                },
+                {
+                  "type": "scalar",
+                  "value": 2003
+                },
+                {
+                  "type": "scalar",
+                  "value": 2004
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 4
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 0
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 4
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 1.0
+            },
+            "consecutive": {
+              "type": "scalar",
+              "value": true
+            },
+            "span": {
+              "type": "scalar",
+              "value": 4
+            },
+            "era_desc": {
+              "type": "scalar",
+              "value": "4 consecutive championships"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Thomas"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🐻"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 2
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2014, 2025"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2014
+                },
+                {
+                  "type": "scalar",
+                  "value": 2025
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2014
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2025
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 2
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 2
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 4
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.5
+            },
+            "consecutive": {
+              "type": "scalar",
+              "value": false
+            },
+            "span": {
+              "type": "scalar",
+              "value": 12
+            },
+            "era_desc": {
+              "type": "scalar",
+              "value": "2 titles across 12 seasons (2014–2025)"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Douglas"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "⚙️"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 2
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2017, 2020"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2017
+                },
+                {
+                  "type": "scalar",
+                  "value": 2020
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2017
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2020
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 2
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 0
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 2
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 1.0
+            },
+            "consecutive": {
+              "type": "scalar",
+              "value": false
+            },
+            "span": {
+              "type": "scalar",
+              "value": 4
+            },
+            "era_desc": {
+              "type": "scalar",
+              "value": "2 titles across 4 seasons (2017–2020)"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Kevin O'Boyle"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 2
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2005, 2015"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2005
+                },
+                {
+                  "type": "scalar",
+                  "value": 2015
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2005
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2015
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 2
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 3
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 5
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.4
+            },
+            "consecutive": {
+              "type": "scalar",
+              "value": false
+            },
+            "span": {
+              "type": "scalar",
+              "value": 11
+            },
+            "era_desc": {
+              "type": "scalar",
+              "value": "2 titles across 11 seasons (2005–2015)"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Evan"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🎉"
+            },
+            "championships": {
+              "type": "scalar",
+              "value": 2
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2012, 2013"
+            },
+            "year_list": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2012
+                },
+                {
+                  "type": "scalar",
+                  "value": 2013
+                }
+              ]
+            },
+            "first": {
+              "type": "scalar",
+              "value": 2012
+            },
+            "last": {
+              "type": "scalar",
+              "value": 2013
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 2
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 1
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 3
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.67
+            },
+            "consecutive": {
+              "type": "scalar",
+              "value": true
+            },
+            "span": {
+              "type": "scalar",
+              "value": 2
+            },
+            "era_desc": {
+              "type": "scalar",
+              "value": "2 consecutive championships"
+            }
+          }
+        }
+      ]
+    },
+    "trivia": {
+      "type": "dict",
+      "value": {
+        "biggest_blowout": {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2023
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "“I’ll take Kittle”"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 113.18
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "team old style"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 55.14
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 58.04
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 168.32
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🏈"
+            }
+          }
+        },
+        "closest_final": {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2024
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "This Is How We Do"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 98.86
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Evan"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Goood Times"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 98.74
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 0.12
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 197.6
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "👑"
+            }
+          }
+        },
+        "most_runner_up": {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "👑"
+            }
+          }
+        },
+        "highest_scoring_final": {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2018
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "team old style"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 120.94
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Nick Blaettler"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "No Diggity"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 84.81
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 36.13
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 205.75
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            }
+          }
+        },
+        "lowest_scoring_final": {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Jamie"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "angel"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 59.01
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Cammuffs"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 55.46
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 3.55
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 114.47
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "😇"
+            }
+          }
+        },
+        "most_finals": {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 5
+            },
+            "runner_ups": {
+              "type": "scalar",
+              "value": 2
+            },
+            "finals_apps": {
+              "type": "scalar",
+              "value": 7
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.71
+            }
+          }
+        },
+        "back_to_back": {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Evan"
+            },
+            "season": {
+              "type": "scalar",
+              "value": 2013
+            },
+            "team": {
+              "type": "scalar",
+              "value": "Goood Times"
+            }
+          }
+        },
+        "highest_winning_score": {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2010
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "team old style"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 122.75
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Return to Glory?"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 77.53
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 45.22
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 200.28
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            }
+          }
+        },
+        "first_champion": {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Jamie"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "angel"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 59.01
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Cammuffs"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 55.46
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 3.55
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 114.47
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "😇"
+            }
+          }
+        }
+      }
+    },
+    "pain": {
+      "type": "dict",
+      "value": {
+        "most_runner_up": {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "👑"
+            },
+            "years": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2001
+                },
+                {
+                  "type": "scalar",
+                  "value": 2007
+                },
+                {
+                  "type": "scalar",
+                  "value": 2012
+                }
+              ]
+            }
+          }
+        },
+        "most_third": {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Kevin Swanson"
+            },
+            "count": {
+              "type": "scalar",
+              "value": 5
+            },
+            "years": {
+              "type": "list",
+              "length": 5,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2004
+                },
+                {
+                  "type": "scalar",
+                  "value": 2007
+                },
+                {
+                  "type": "scalar",
+                  "value": 2009
+                },
+                {
+                  "type": "scalar",
+                  "value": 2018
+                },
+                {
+                  "type": "scalar",
+                  "value": 2022
+                }
+              ]
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🧔"
+            }
+          }
+        },
+        "still_waiting": {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Shawn"
+            },
+            "playoff_apps": {
+              "type": "scalar",
+              "value": 16
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🐝"
+            }
+          }
+        },
+        "closest_loss": {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2024
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "This Is How We Do"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 98.86
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Evan"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Goood Times"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 98.74
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 0.12
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 197.6
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "👑"
+            }
+          }
+        },
+        "biggest_loss": {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2023
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "“I’ll take Kittle”"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 113.18
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "team old style"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 55.14
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 58.04
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 168.32
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🏈"
+            }
+          }
+        },
+        "best_rs_no_title": {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2010
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "👑"
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 12
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 1
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.9231
+            }
+          }
+        }
+      }
+    },
+    "finals": {
+      "type": "list",
+      "length": 25,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2025
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Thomas"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "Fuzzy Bears"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 97.34
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Jeff"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Futball in the Groin"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 79.65
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 17.69
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 176.99
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🐻"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2024
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "This Is How We Do"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 98.86
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Evan"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Goood Times"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 98.74
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 0.12
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 197.6
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "👑"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2023
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "“I’ll take Kittle”"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 113.18
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "team old style"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 55.14
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 58.04
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 168.32
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🏈"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2022
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Bryan Kearney"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "Good Douche Bag"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 77.76
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Thomas"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Fuzzy Bears"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 75.5
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 2.26
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 153.26
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "💪"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2021
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "“I’ll take Kittle”"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 86.87
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Kevin O'Boyle"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Guinness"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 65.93
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 20.94
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 152.8
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🏈"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2020
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Douglas"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "Mean Machine 22"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 89.36
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Steve Swanson"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Bears"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 83.94
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 5.42
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 173.3
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "⚙️"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2019
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Steve Swanson"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "Bears"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 89.23
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Shawn"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "West Coast Infirmary"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 85.96
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 3.27
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 175.19
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🐻"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2018
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "team old style"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 120.94
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Nick Blaettler"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "No Diggity"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 84.81
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 36.13
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 205.75
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2017
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Douglas"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "Mean Machine 22"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 90.42
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Kevin Swanson"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "miniDITKAS"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 74.51
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 15.91
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 164.93
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "⚙️"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2016
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "team old style"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 76.38
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Robby"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Swami Singer"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 68.44
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 7.94
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 144.82
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2015
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Kevin O'Boyle"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "Guinness"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 113.03
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Shawn"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "los pollos hermanos"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 59.14
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 53.89
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 172.17
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2014
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Thomas"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "Fuzzy Bears"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 79.74
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Second Draft Pick"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 58.86
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 20.88
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 138.6
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🐻"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2013
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Evan"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "Goood Times"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 87.11
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Kevin Swanson"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "miniDITKAS"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 74.47
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 12.64
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 161.58
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🎉"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2012
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Evan"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "Goood Times"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 109.28
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Quakes and Canes"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 69.01
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 40.27
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 178.29
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🎉"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2011
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "Sub .500!!!"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 81.18
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Kevin O'Boyle"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Guinness"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 70.14
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 11.04
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 151.32
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🏈"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2010
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "team old style"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 122.75
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Return to Glory?"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 77.53
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 45.22
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 200.28
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2009
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "team old style"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 101.34
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Steve Swanson"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "cubs killed harry"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 77.23
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 24.11
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 178.57
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2008
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "First to Worst"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 75.84
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Steve Swanson"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "long live the goat"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 61.68
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 14.16
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 137.52
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🏈"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2007
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "South of 55 is mine!"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 95.55
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Minooka Bears"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 79.5
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 16.05
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 175.05
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🏈"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2006
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Kevin Swanson"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "MiniDitkas"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 101.31
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Kevin O'Boyle"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Guinness"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 76.13
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 25.18
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 177.44
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🧔"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2005
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Kevin O'Boyle"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "Guinness"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 73.81
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Joe Tyszko"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "giant"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 61.82
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 11.99
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 135.63
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Jamie"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "crabby jamie"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 84.38
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Thomas"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "shootinfor.500"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 59.41
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 24.97
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 143.79
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "😇"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2003
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Jamie"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "crabby jamie"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 66.45
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Joe Tyszko"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "1043"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 53.95
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 12.5
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 120.4
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "😇"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Jamie"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "angel"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 75.63
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Team Old Style"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 49.1
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 26.53
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 124.73
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "😇"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "champion_manager": {
+              "type": "scalar",
+              "value": "Jamie"
+            },
+            "champion_team": {
+              "type": "scalar",
+              "value": "angel"
+            },
+            "champion_score": {
+              "type": "scalar",
+              "value": 59.01
+            },
+            "runner_up_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Cammuffs"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 55.46
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 3.55
+            },
+            "combined": {
+              "type": "scalar",
+              "value": 114.47
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "😇"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

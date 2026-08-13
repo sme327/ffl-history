@@ -112,6 +112,13 @@ def capture_home() -> None:
     print(f"  {'get_home_view':26} home")
 
 
+def capture_champions_view() -> None:
+    """Leaders, dynasties, trivia and the championship-pain cards —
+    lifted out of pages/champions.py."""
+    dump("get_champions_view", normalize(D.get_champions_view()))
+    print(f"  {'get_champions_view':26} leaders + dynasties")
+
+
 def capture_league_history() -> None:
     """Eras, scoring evolution, competitive balance and league records —
     lifted out of pages/league_history.py."""
@@ -154,6 +161,7 @@ def main() -> None:
     capture_by_franchise()
     capture_seasons()
     capture_home()
+    capture_champions_view()
     capture_league_history()
     capture_timeline()
     capture_rivalry_detail()
