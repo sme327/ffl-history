@@ -2367,3 +2367,207 @@ def get_manager_profile(name: str) -> dict:
         "draft": draft,
         "team_names": runs,
     }
+
+
+# ── DRAFT CENTER ──────────────────────────────────────────────────────────────
+# Lifted out of pages/draft_center.py. Four more arbitrary tie-breaks fixed:
+# the most-loyal-owner pick, the best round-one find, the player legend ranking,
+# and the round-one player counts.
+
+DRAFT_SKILL_POSITIONS = ["QB", "RB", "WR", "TE"]
+DRAFT_POSITION_ORDER = ["RB", "WR", "QB", "TE", "DEF", "K", "Other"]
+
+
+@st.cache_data
+def get_draft_center_view() -> dict:
+    from utils import narratives
+
+    picks = get_draft_picks_with_pos()
+    ownership = get_player_ownership()
+    stats = get_manager_stats().set_index("canonical_name")
+
+    drafted = picks[~picks["is_keeper"]]
+    kept = picks[picks["is_keeper"]]
+    round_one = drafted[drafted["round"] == 1]
+
+    # ── Player legends: who the league could not stop drafting ───────────────
+    skill = ownership[ownership["position"].isin(DRAFT_SKILL_POSITIONS)]
+    seasons_drafted = picks.groupby("player_name")["season"].nunique()
+    league_seasons = ownership.groupby("player_name")["total_seasons"].sum().to_dict()
+
+    # Most devoted owner: most seasons with the player. Ties resolved by name —
+    # the original kept whichever row sorted first, which was arbitrary.
+    most_loyal: dict[str, str] = {}
+    for player, group in skill.groupby("player_name"):
+        ranked = sorted(
+            ((r["manager"], int(r["total_seasons"])) for _, r in group.iterrows()),
+            key=lambda kv: (-kv[1], kv[0]),
+        )
+        most_loyal[player] = ranked[0][0] if ranked else None
+
+    legends_frame = (
+        skill.groupby("player_name")
+        .agg(total_drafts=("draft_count", "sum"),
+             unique_managers=("manager", "nunique"),
+             first_season=("first_season", "min"),
+             last_season=("last_season", "max"),
+             position=("position", "first"))
+        .reset_index()
+    )
+    legends = []
+    for _, r in legends_frame.iterrows():
+        player = r["player_name"]
+        span = int(seasons_drafted.get(player, 0))
+        drafters = ownership[(ownership["player_name"] == player) & (ownership["draft_count"] > 0)]
+        legends.append({
+            "player_name": player,
+            "position": str(r["position"]) if r["position"] else "?",
+            "total_drafts": int(r["total_drafts"]),
+            "unique_managers": int(r["unique_managers"]),
+            "first_season": int(r["first_season"]),
+            "last_season": int(r["last_season"]),
+            "career_span": span,
+            "most_loyal": most_loyal.get(player),
+            "story": narratives.player_obsession_story(
+                drafts=int(r["total_drafts"]), managers=int(r["unique_managers"]),
+                career_span=span, first_season=int(r["first_season"]),
+                last_season=int(r["last_season"]), most_loyal=most_loyal.get(player),
+                position=str(r["position"]) if r["position"] else "?",
+            ),
+            "drafters": sorted(
+                ({"manager": d["manager"], "count": int(d["draft_count"]),
+                  "emoji": MANAGER_EMOJI.get(d["manager"], "👤"),
+                  "color": MANAGER_COLORS.get(d["manager"], "#6B7280")}
+                 for _, d in drafters.iterrows()),
+                key=lambda d: (-d["count"], d["manager"]),
+            ),
+        })
+    # Five players tie at 13 drafts for the last two slots of the top-8 panel,
+    # so this ranking is load-bearing. Ties break on breadth of obsession
+    # (managers, then career span) before falling back to name.
+    legends.sort(key=lambda p: (
+        -p["total_drafts"], -p["unique_managers"], -p["career_span"], p["player_name"],
+    ))
+
+    # ── Manager draft DNA ────────────────────────────────────────────────────
+    r1_named = drafted[(drafted["round"] == 1) & drafted["position"].notna()].copy()
+    r1_named["pos_group"] = r1_named["position"].apply(
+        lambda p: p if p in DRAFT_SKILL_POSITIONS + ["DEF", "K"] else "Other"
+    )
+    grid = r1_named.groupby(["manager", "pos_group"]).size().unstack(fill_value=0)
+    keeper_rates = (kept.groupby("manager").size() / picks.groupby("manager").size()).fillna(0)
+
+    # Best round-one find: the manager's R1 skill pick with the most league-wide
+    # ownership. Ties now resolved by player name rather than iteration order.
+    best_find: dict[str, str] = {}
+    r1_skill = round_one[round_one["position"].isin(DRAFT_SKILL_POSITIONS)]
+    for manager, group in r1_skill.groupby("manager"):
+        players = sorted(set(group["player_name"]))
+        if players:
+            best_find[manager] = max(players, key=lambda p: (league_seasons.get(p, 0), p))
+
+    dna = []
+    for manager in grid.index:
+        counts = {pos: int(grid.loc[manager].get(pos, 0)) for pos in DRAFT_POSITION_ORDER}
+        total = sum(counts.values())
+        if total < 4:  # not enough first-round evidence to profile
+            continue
+        shares = {pos: counts[pos] / total for pos in counts}
+        shares["total"] = total
+        keeper_rate = float(keeper_rates.get(manager, 0.0))
+        championships = int(stats.loc[manager, "championships"]) if manager in stats.index else 0
+        seasons_played = int(stats.loc[manager, "seasons_played"]) if manager in stats.index else 1
+        playoff_apps = int(stats.loc[manager, "playoff_apps"]) if manager in stats.index else 0
+        label, color, blurb = narratives.draft_archetype(
+            shares, keeper_rate=keeper_rate, championships=championships
+        )
+        # max() returns the first maximal element, so the fixed position order
+        # already decides ties deterministically — matching the original.
+        top_position = max(["RB", "WR", "QB", "TE", "DEF", "K"], key=lambda p: counts.get(p, 0))
+        dna.append({
+            "manager": manager,
+            "emoji": MANAGER_EMOJI.get(manager, "👤"),
+            "color": MANAGER_COLORS.get(manager, "#6B7280"),
+            "counts": counts,
+            "shares": {p: round(shares[p], 4) for p in DRAFT_POSITION_ORDER},
+            "total": total,
+            "keeper_rate": round(keeper_rate, 4),
+            "championships": championships,
+            "playoff_rate": round(playoff_apps / max(seasons_played, 1), 4),
+            "archetype": label,
+            "archetype_color": color,
+            "archetype_blurb": blurb,
+            "top_position": top_position,
+            "top_position_pct": int(counts.get(top_position, 0) / total * 100),
+            "best_round_one_find": best_find.get(manager, "—"),
+        })
+    dna.sort(key=lambda d: (-d["total"], d["manager"]))
+
+    # ── Round one history ────────────────────────────────────────────────────
+    r1_counts = sorted(
+        (
+            {"player_name": p, "position": pos, "count": int(n)}
+            for (p, pos), n in round_one[
+                round_one["position"].isin(DRAFT_SKILL_POSITIONS)
+            ].groupby(["player_name", "position"]).size().items()
+        ),
+        key=lambda r: (-r["count"], r["player_name"]),
+    )
+    first_overall = sorted(
+        (
+            {"player_name": p, "count": int(n)}
+            for p, n in drafted[drafted["overall_pick"] == 1]
+            .groupby("player_name").size().items()
+        ),
+        key=lambda r: (-r["count"], r["player_name"]),
+    )
+
+    return {
+        "legends": legends,
+        "manager_dna": dna,
+        "round_one": {"most_taken": r1_counts, "first_overall": first_overall},
+        "totals": {
+            "picks": len(picks),
+            "real_drafts": len(drafted),
+            "keepers": len(kept),
+            "unique_players": int(picks["player_name"].nunique()),
+        },
+    }
+
+
+@st.cache_data
+def get_draft_loyalty_board(position_filter: str = "All Players", limit: int = 25) -> list[dict]:
+    """Most-owned players for one of the page's position filters.
+
+    Kept separate from the main view because it is a user control: the page
+    picks a filter, and the static site will do the same client-side.
+    """
+    ownership = get_player_ownership()
+
+    if position_filter == "All Players":
+        subset = ownership[ownership["position"] != "DEF"]
+    elif position_filter == "Keepers Only":
+        subset = ownership[(ownership["keeper_count"] > 0) & (ownership["position"] != "DEF")]
+    else:
+        subset = ownership[ownership["position"] == position_filter]
+
+    grouped = (
+        subset.groupby("player_name")
+        .agg(total=("total_seasons", "sum"), position=("position", "first"),
+             first=("first_season", "min"), last=("last_season", "max"))
+        .reset_index()
+    )
+    rows = sorted(
+        (
+            {
+                "player_name": r["player_name"],
+                "position": str(r["position"]) if r["position"] else "?",
+                "total_seasons": int(r["total"]),
+                "first_season": int(r["first"]),
+                "last_season": int(r["last"]),
+            }
+            for _, r in grouped.iterrows()
+        ),
+        key=lambda r: (-r["total_seasons"], r["player_name"]),
+    )
+    return rows[:limit]

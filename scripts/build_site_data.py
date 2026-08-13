@@ -154,6 +154,14 @@ def build(out: Path) -> None:
     })
 
     # ── Draft & keepers ──────────────────────────────────────────────────────
+    draft_center = D.get_draft_center_view()
+    if normalize(draft_center) != load_fixture("get_draft_center_view"):
+        raise SystemExit("\n  draft center does not match its fixture — refusing to emit.\n")
+    verify.checked += 1
+    site.write("draft-center", draft_center)
+    for board in ["All Players", "QB", "RB", "WR", "TE", "K", "DEF", "Keepers Only"]:
+        site.write(f"draft-loyalty/{slugify(board)}", D.get_draft_loyalty_board(board))
+
     site.write("draft", {
         "records": normalize(D.get_draft_records())["value"],
         "positionTrends": records(verify.frame("get_position_trends_data", D.get_position_trends_data())),

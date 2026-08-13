@@ -174,6 +174,32 @@ class TestHome(FixtureAssertions):
             self.assertIn(manager, best["summary"], f"{manager} missing from best-season copy")
 
 
+class TestDraftCenter(FixtureAssertions):
+    def test_draft_center_view(self):
+        """Covers the logic lifted out of pages/draft_center.py."""
+        self.assert_matches("get_draft_center_view", D.get_draft_center_view())
+
+    def test_loyalty_boards(self):
+        expected = load("get_draft_loyalty_board")
+        actual = {"type": "dict",
+                  "value": {f: normalize(D.get_draft_loyalty_board(f)) for f in expected["value"]}}
+        self.assert_payload("get_draft_loyalty_board", actual, expected)
+
+    def test_legends_ranking_is_total(self):
+        """Five players tie at 13 drafts for the last two top-8 slots, so the
+        ordering must be fully determined, not just by draft count."""
+        legends = D.get_draft_center_view()["legends"]
+        keys = [(-p["total_drafts"], -p["unique_managers"], -p["career_span"], p["player_name"])
+                for p in legends]
+        self.assertEqual(keys, sorted(keys))
+        self.assertEqual(len(keys), len(set(keys)), "legend ranking has an undetermined tie")
+
+    def test_every_profiled_manager_has_enough_evidence(self):
+        for entry in D.get_draft_center_view()["manager_dna"]:
+            self.assertGreaterEqual(entry["total"], 4, f'{entry["manager"]} profiled on too few picks')
+            self.assertTrue(entry["archetype"], f'{entry["manager"]} has no archetype')
+
+
 class TestManagerProfiles(FixtureAssertions):
     def test_directory(self):
         self.assert_matches("get_manager_directory", D.get_manager_directory())

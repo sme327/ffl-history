@@ -1,0 +1,5053 @@
+{
+  "type": "dict",
+  "value": {
+    "All Players": {
+      "type": "list",
+      "length": 25,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Tom Brady"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 21
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2022
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Aaron Rodgers"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 17
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2008
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2024
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Drew Brees"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 17
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2003
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2020
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Ben Roethlisberger"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 16
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2005
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2020
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Larry Fitzgerald"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 16
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2019
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Adrian Peterson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 15
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2007
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2020
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Matthew Stafford"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 15
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2010
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Peyton Manning"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 15
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2015
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Steve Smith"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 15
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2015
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Adam Vinatieri"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 14
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2018
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Mike Williams"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 14
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2005
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2024
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Andre Johnson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 13
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2003
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2015
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Eli Manning"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 13
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2017
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Jason Witten"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 13
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2005
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2017
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Matt Ryan"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 13
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2009
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2022
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Stephen Gostkowski"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 13
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2007
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2019
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Tony Gonzalez"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 13
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2013
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Anquan Boldin"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 12
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2015
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Antonio Gates"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 12
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2005
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2016
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "DeAndre Hopkins"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 12
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2013
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2024
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Frank Gore"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 12
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2006
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2017
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Julio Jones"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 12
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2011
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2022
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Keenan Allen"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 12
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2014
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Mike Evans"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 12
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2014
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Philip Rivers"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 12
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2006
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2018
+            }
+          }
+        }
+      ]
+    },
+    "QB": {
+      "type": "list",
+      "length": 25,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Tom Brady"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 21
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2022
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Aaron Rodgers"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 17
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2008
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2024
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Drew Brees"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 17
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2003
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2020
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Ben Roethlisberger"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 16
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2005
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2020
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Matthew Stafford"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 15
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2010
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Peyton Manning"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 15
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2015
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Eli Manning"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 13
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2017
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Matt Ryan"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 13
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2009
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2022
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Philip Rivers"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 12
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2006
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2018
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Carson Palmer"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 11
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2017
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Donovan McNabb"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 11
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2011
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Russell Wilson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 11
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2013
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2023
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Brett Favre"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2010
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Dak Prescott"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2016
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Cam Newton"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 9
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2012
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2020
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Tony Romo"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 9
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2007
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2015
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Kirk Cousins"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2016
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2024
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Lamar Jackson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2018
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Michael Vick"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2013
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Patrick Mahomes"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2018
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Andrew Luck"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 7
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2012
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2018
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Daunte Culpepper"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 7
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2007
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Jameis Winston"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 7
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2015
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2022
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Jay Cutler"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 7
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2007
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2014
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Kurt Warner"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 7
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2009
+            }
+          }
+        }
+      ]
+    },
+    "RB": {
+      "type": "list",
+      "length": 25,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Adrian Peterson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 15
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2007
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2020
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Frank Gore"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 12
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2006
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2017
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "DeAngelo Williams"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 11
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2006
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2016
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "LeSean McCoy"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 11
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2009
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2019
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Mark Ingram II"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 11
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2011
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2022
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Steven Jackson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 11
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2014
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Derrick Henry"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2016
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "LaDainian Tomlinson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2011
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Marshawn Lynch"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2007
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2018
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Matt Forte"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2008
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2017
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Reggie Bush"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2006
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2015
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Thomas Jones"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2011
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Alvin Kamara"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 9
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2017
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Christian McCaffrey"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 9
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2017
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Darren McFadden"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 9
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2008
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2017
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Darren Sproles"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 9
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2009
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2017
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Edgerrin James"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 9
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2009
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Ezekiel Elliott"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 9
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2016
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2024
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Fred Taylor"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 9
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2009
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "James Conner"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 9
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2017
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Joe Mixon"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 9
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2017
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Willis McGahee"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 9
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2012
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Aaron Jones Sr."
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2018
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Ahman Green"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2008
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Chris Johnson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2008
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2016
+            }
+          }
+        }
+      ]
+    },
+    "WR": {
+      "type": "list",
+      "length": 25,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Larry Fitzgerald"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 16
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2019
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Steve Smith"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 15
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2015
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Mike Williams"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 14
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2005
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2024
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Andre Johnson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 13
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2003
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2015
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Anquan Boldin"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 12
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2015
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "DeAndre Hopkins"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 12
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2013
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2024
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Julio Jones"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 12
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2011
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2022
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Keenan Allen"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 12
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2014
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Mike Evans"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 12
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2014
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Reggie Wayne"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 12
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2003
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2014
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Brandin Cooks"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 11
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2014
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2024
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Brandon Marshall"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 11
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2007
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2017
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Randy Moss"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 11
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2012
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Terrell Owens"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 11
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2012
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "A.J. Green"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2011
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2020
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Amari Cooper"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2015
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2024
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Davante Adams"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2015
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "DeSean Jackson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2009
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2019
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Derrick Mason"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2010
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Hines Ward"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2011
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Santana Moss"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2003
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2012
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Stefon Diggs"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2016
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Tyler Lockett"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2015
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2024
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Vincent Jackson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2007
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2016
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Antonio Brown"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 9
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2012
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2021
+            }
+          }
+        }
+      ]
+    },
+    "TE": {
+      "type": "list",
+      "length": 25,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Jason Witten"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 13
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2005
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2017
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Tony Gonzalez"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 13
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2013
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Antonio Gates"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 12
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2005
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2016
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Travis Kelce"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 12
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2014
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Rob Gronkowski"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2011
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2021
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Dallas Clark"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 9
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2012
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "George Kittle"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2018
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Greg Olsen"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2009
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2018
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Jeremy Shockey"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2009
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Jimmy Graham"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2011
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2018
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Kellen Winslow"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2012
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Vernon Davis"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2006
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2014
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Zach Ertz"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2014
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2022
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Alge Crumpler"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 7
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2008
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Chris Cooley"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 7
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2005
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2011
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Hunter Henry"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 7
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2017
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Kyle Rudolph"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 7
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2012
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2019
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Mark Andrews"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 7
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2019
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Owen Daniels"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 7
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2008
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2015
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "T.J. Hockenson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 7
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2019
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Dallas Goedert"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 6
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2020
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Delanie Walker"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 6
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2014
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2019
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Evan Engram"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 6
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2018
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Marcus Pollard"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 6
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2007
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Todd Heap"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 6
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2003
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2008
+            }
+          }
+        }
+      ]
+    },
+    "K": {
+      "type": "list",
+      "length": 25,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Adam Vinatieri"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 14
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2018
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Stephen Gostkowski"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 13
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2007
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2019
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "David Akers"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 11
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2013
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Justin Tucker"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 11
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2014
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2024
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Mason Crosby"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 11
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2008
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2021
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Robbie Gould"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 11
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2007
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2022
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Josh Brown"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 9
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2015
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Harrison Butker"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2018
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Jason Elam"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2009
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Matt Bryant"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2011
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2019
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Matt Prater"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2010
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2022
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Sebastian Janikowski"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2017
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Greg Zuerlein"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 7
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2013
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2024
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Jason Hanson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 7
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2012
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Jeff Wilkins"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 7
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2007
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Ryan Longwell"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 7
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2010
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Mike Vanderjagt"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 6
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2006
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Dan Bailey"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 5
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2012
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2020
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Jake Elliott"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 5
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2018
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2024
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Nate Kaeding"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 5
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2007
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2011
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Wil Lutz"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 5
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2017
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Younghoe Koo"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 5
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2020
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Jason Myers"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 4
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2019
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2023
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Martin Gramatica"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 4
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2004
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Neil Rackers"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 4
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2006
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2011
+            }
+          }
+        }
+      ]
+    },
+    "DEF": {
+      "type": "list",
+      "length": 25,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Patriots"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 23
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Ravens"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 23
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Broncos"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 20
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Eagles"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 20
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Steelers"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 20
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Bears"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 19
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Packers"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 13
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2022
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Panthers"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 13
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2018
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Vikings"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 13
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2005
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Bills"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 12
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Jets"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 12
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Buccaneers"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 11
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2022
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Giants"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 11
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2017
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Seahawks"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 11
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "49ers"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2024
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Chargers"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2022
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Chiefs"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Dolphins"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2024
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Texans"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2012
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Cowboys"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 9
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2024
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Rams"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 9
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2022
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Bengals"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2006
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2024
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Jaguars"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2019
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Colts"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 7
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2022
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Saints"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "DEF"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 7
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2022
+            }
+          }
+        }
+      ]
+    },
+    "Keepers Only": {
+      "type": "list",
+      "length": 25,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Matt Forte"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 10
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2008
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2017
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Adrian Peterson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 9
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2007
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2020
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Terrell Owens"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 9
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2010
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Drew Brees"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2008
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2015
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Peyton Manning"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2012
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Randy Moss"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 8
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2003
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2012
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Aaron Rodgers"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 7
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2010
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2021
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "LaDainian Tomlinson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 7
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2008
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "LeSean McCoy"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 7
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2009
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2017
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Alvin Kamara"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 6
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2017
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2022
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Arian Foster"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 6
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2010
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2015
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Josh Allen"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 6
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2020
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Maurice Jones-Drew"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 6
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2007
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2012
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Mike Evans"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 6
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2015
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2024
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Shaun Alexander"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 6
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2007
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Steven Jackson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 6
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2005
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2013
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Calvin Johnson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 5
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2008
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2012
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Chris Johnson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 5
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2008
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2012
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Clinton Portis"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 5
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2003
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2009
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "David Johnson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 5
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2016
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2020
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Ezekiel Elliott"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 5
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2017
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2023
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Frank Gore"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 5
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2006
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2010
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Greg Jennings"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 5
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2008
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2012
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Ja'Marr Chase"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 5
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2021
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2025
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Priest Holmes"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "total_seasons": {
+              "type": "scalar",
+              "value": 5
+            },
+            "first_season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "last_season": {
+              "type": "scalar",
+              "value": 2006
+            }
+          }
+        }
+      ]
+    }
+  }
+}

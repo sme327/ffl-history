@@ -112,6 +112,17 @@ def capture_home() -> None:
     print(f"  {'get_home_view':26} home")
 
 
+def capture_draft_center() -> None:
+    """Player legends, manager draft DNA and round-one history —
+    lifted out of pages/draft_center.py."""
+    dump("get_draft_center_view", normalize(D.get_draft_center_view()))
+    boards = ["All Players", "QB", "RB", "WR", "TE", "K", "DEF", "Keepers Only"]
+    dump("get_draft_loyalty_board", {"type": "dict", "value": {
+        f: normalize(D.get_draft_loyalty_board(f)) for f in boards
+    }})
+    print(f"  {'get_draft_center_view':26} legends + DNA")
+
+
 def capture_manager_profiles() -> None:
     """Full profile per manager, including the generated Hall of Fame plaque —
     lifted out of pages/manager_profiles.py."""
@@ -176,6 +187,7 @@ def main() -> None:
     capture_by_franchise()
     capture_seasons()
     capture_home()
+    capture_draft_center()
     capture_manager_profiles()
     capture_champions_view()
     capture_league_history()

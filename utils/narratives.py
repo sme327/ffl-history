@@ -684,3 +684,80 @@ def manager_plaque(
 
     status = "Currently active." if is_active else "Career concluded."
     return f"{lead}{consistency}. {champ_sentence} {status}"
+
+
+# ── DRAFT CENTER COPY ─────────────────────────────────────────────────────────
+
+_POSITION_NOUNS = {"QB": "quarterback", "RB": "running back", "WR": "receiver", "TE": "tight end"}
+
+
+def player_obsession_story(
+    *,
+    drafts: int,
+    managers: int,
+    career_span: int,
+    first_season: int,
+    last_season: int,
+    most_loyal: str | None,
+    position: str,
+) -> str:
+    """Three sentences on a player the league could not stop drafting."""
+    noun = _POSITION_NOUNS.get(position, "player")
+
+    if career_span >= 18:
+        opener = f"A {career_span}-year presence in this league — from {first_season} to {last_season}."
+    elif career_span >= 12:
+        opener = f"Appearing from {first_season} to {last_season}. {career_span} seasons of relevance."
+    else:
+        opener = f"A {career_span}-season run, from {first_season} to {last_season}."
+
+    if drafts >= 16:
+        volume = f"Drafted {drafts} times. Nobody could leave this {noun} on the board."
+    elif drafts >= 12:
+        volume = f"Drafted {drafts} times. The obsession was league-wide."
+    else:
+        volume = f"Drafted {drafts} times across the league."
+
+    if managers >= 10:
+        reach = f"Touched {managers} different rosters — nearly every manager in league history."
+    elif managers >= 7:
+        reach = f"{managers} different managers couldn't resist."
+    else:
+        reach = f"Owned by {managers} managers."
+
+    loyal = f" {most_loyal} was the most devoted." if most_loyal else ""
+    return f"{opener} {volume} {reach}{loyal}"
+
+
+def draft_archetype(shares: dict, *, keeper_rate: float, championships: int) -> tuple[str, str, str]:
+    """Classify a manager's first-round tendencies. Returns (label, colour, blurb)."""
+    if not shares.get("total"):
+        return "UNKNOWN", "#6B7280", "Not enough drafts to profile."
+
+    rb, wr = shares.get("RB", 0.0), shares.get("WR", 0.0)
+    qb, te = shares.get("QB", 0.0), shares.get("TE", 0.0)
+    defense = shares.get("DEF", 0.0)
+
+    if rb >= 0.65:
+        return "HERO-RB PIONEER", "#22C55E", "The bell cow was the answer. Every single year."
+    if rb >= 0.50:
+        return "RB HOARDER", "#22C55E", "Staked the first round on running backs."
+    if wr >= 0.55:
+        return "RECEIVER KINGDOM", "#3B82F6", "Receivers win leagues. They built for it."
+    if wr >= 0.40 and rb <= 0.20:
+        return "ZERO-RB PIONEER", "#60A5FA", "Avoided RBs in round one long before it had a name."
+    if qb >= 0.35:
+        return "QB LOYALIST", "#EF4444", "Quarterbacks win leagues. They drafted accordingly."
+    if qb >= 0.22:
+        return "QUARTERBACK WHISPERER", "#F87171", "Always had a QB solution before everyone else."
+    if te >= 0.22:
+        return "TE ADDICT", "#F59E0B", "Saw the tight end premium before the market caught on."
+    if te >= 0.13:
+        return "TE FIRST BELIEVER", "#FCD34D", "Would reach for a tight end when the value was right."
+    if keeper_rate >= 0.10 and championships >= 2:
+        return "CHAMPIONSHIP BUILDER", "#D4AF37", "Built to keep. Kept to win. Won."
+    if keeper_rate >= 0.09:
+        return "KEEPER ARCHITECT", "#A78BFA", "Played the long game. Draft to keep, keep to win."
+    if defense >= 0.15:
+        return "OLD-SCHOOL DRAFTER", "#9CA3AF", "Defenses were part of the strategy. Old school."
+    return "BALANCED ARCHITECT", "#A7B0BC", "No tells. Adapted to the board every single year."

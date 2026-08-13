@@ -169,7 +169,7 @@ The bulk of the work. `utils/styles.py` (886 lines) already has the right instin
 | ~~4~~ | ~~`league_history.py`~~ | 511 | ✅ **Logic extracted 2026-08-13** → `get_league_history_view()`; Plotly ports cleanly once the figure is fed data instead of frames |
 | ~~5~~ | ~~`champions.py`~~ | 577 | ✅ **Logic extracted 2026-08-13** → `get_champions_view()`; seven unstable rankings given explicit tie-breaks |
 | ~~6~~ | ~~`manager_profiles.py`~~ | 636 | ✅ **Logic extracted 2026-08-13** → `get_manager_profile()` + `manager_h2h_highlights()`; plaque copy moved to narratives |
-| 7 | `draft_center.py` | 896 | |
+| 7 | `draft_center.py` | 896 | ⚠️ **Derivations extracted 2026-08-13** → `get_draft_center_view()` + `get_draft_loyalty_board()`, fixture-covered. **Page rewiring still pending** — the page runs on its own inline copy for now |
 | 8 | `franchise_profiles.py` | 966 | |
 | 9 | `keeper_hall.py` | 1,177 | Largest, and no existing entry points — worth redesigning, not transcribing |
 | 10 | `rivalries.py` | 1,215 | Most complex routing (pairwise) — do it once every pattern exists |
