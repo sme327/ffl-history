@@ -112,6 +112,21 @@ def capture_home() -> None:
     print(f"  {'get_home_view':26} home")
 
 
+def capture_manager_profiles() -> None:
+    """Full profile per manager, including the generated Hall of Fame plaque —
+    lifted out of pages/manager_profiles.py."""
+    directory = D.get_manager_directory()
+    dump("get_manager_directory", normalize(directory))
+    names = sorted(directory["active"] + directory["former"])
+    dump("get_manager_profile", {"type": "dict",
+                                 "value": {n: normalize(D.get_manager_profile(n)) for n in names}})
+    dump("manager_h2h_highlights", {"type": "dict", "value": {
+        n: normalize(D.manager_h2h_highlights(D.get_manager_profile(n)["head_to_head"]))
+        for n in names
+    }})
+    print(f"  {'get_manager_profile':26} {len(names)} managers")
+
+
 def capture_champions_view() -> None:
     """Leaders, dynasties, trivia and the championship-pain cards —
     lifted out of pages/champions.py."""
@@ -161,6 +176,7 @@ def main() -> None:
     capture_by_franchise()
     capture_seasons()
     capture_home()
+    capture_manager_profiles()
     capture_champions_view()
     capture_league_history()
     capture_timeline()

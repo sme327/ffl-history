@@ -179,11 +179,9 @@ def build(out: Path) -> None:
                       "championships": row.get("championships"), "active": row.get("active")})
         site.write(f"managers/{slug}", {
             "slug": slug,
-            "name": name,
-            "stats": row,
+            **D.get_manager_profile(name),
             "allTime": all_time_by_name.get(name),
-            "seasons": records(D.get_manager_season_history(name)),
-            "headToHead": records(D.get_manager_h2h(name)),
+            "h2hHighlights": D.manager_h2h_highlights(D.get_manager_profile(name)["head_to_head"]),
         })
     site.write("managers/index", index)
 
@@ -278,7 +276,7 @@ PAGE_LEVEL_WORK = {
     # champions.py: done 2026-08-13 -> get_champions_view()
     "franchise_profiles.py": "per-franchise season tables and lineage narrative",
     # league_history.py: done 2026-08-13 -> get_league_history_view()
-    "manager_profiles.py": "career plaque assembly",
+    # manager_profiles.py: done 2026-08-13 -> get_manager_profile()
     "rivalries.py": "elimination/heartbreak sections built from raw frames",
 }
 

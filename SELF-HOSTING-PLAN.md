@@ -117,7 +117,6 @@ Every frame is checked against `tests/fixtures/` **before** it is written — th
 | `champions.py` | title-game context, dynasty framing |
 | `franchise_profiles.py` | per-franchise season tables, lineage narrative |
 | `league_history.py` | era summaries, competitive-balance trends |
-| `manager_profiles.py` | career plaque assembly |
 | `rivalries.py` | elimination/heartbreak sections |
 
 Each needs lifting into `utils/data.py` with fixtures added, before that route can render from JSON alone. This is the real remaining work in the data layer, and it's best done **page by page during Phase 4** — extract the logic, add its fixture, then port the presentation. Doing it that way keeps every step verified instead of front-loading a large untested refactor.
@@ -169,7 +168,7 @@ The bulk of the work. `utils/styles.py` (886 lines) already has the right instin
 | ~~3~~ | ~~`app.py` (home)~~ | 319 | ✅ **Logic extracted 2026-08-13** → `get_home_view()`; also retired the hardcoded best-season prose (review F3) |
 | ~~4~~ | ~~`league_history.py`~~ | 511 | ✅ **Logic extracted 2026-08-13** → `get_league_history_view()`; Plotly ports cleanly once the figure is fed data instead of frames |
 | ~~5~~ | ~~`champions.py`~~ | 577 | ✅ **Logic extracted 2026-08-13** → `get_champions_view()`; seven unstable rankings given explicit tie-breaks |
-| 6 | `manager_profiles.py` | 636 | First entity route with real depth |
+| ~~6~~ | ~~`manager_profiles.py`~~ | 636 | ✅ **Logic extracted 2026-08-13** → `get_manager_profile()` + `manager_h2h_highlights()`; plaque copy moved to narratives |
 | 7 | `draft_center.py` | 896 | |
 | 8 | `franchise_profiles.py` | 966 | |
 | 9 | `keeper_hall.py` | 1,177 | Largest, and no existing entry points — worth redesigning, not transcribing |

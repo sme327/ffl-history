@@ -623,3 +623,64 @@ def best_season_summary(entries: list[dict], record: str) -> str:
         for e in entries
     ]
     return " ".join([lead, *clauses])
+
+
+def manager_plaque(
+    *,
+    championships: int,
+    runner_ups: int,
+    playoff_apps: int,
+    seasons_played: int,
+    championship_years: list[int],
+    is_active: bool,
+) -> str:
+    """The Hall of Fame plaque paragraph for one manager.
+
+    Lifted out of pages/manager_profiles.py so the plaque reads identically
+    wherever it is rendered. Every input is explicit.
+    """
+    playoff_rate = playoff_apps / max(seasons_played, 1)
+
+    if championships >= 4:
+        lead = "One of the most decorated managers in league history"
+    elif championships >= 2:
+        lead = "A multi-championship winner and proven dynasty builder"
+    elif championships == 1:
+        lead = "A championship-caliber competitor who broke through when it mattered"
+    elif playoff_apps >= 10:
+        lead = "One of the league's most consistent playoff presences"
+    elif playoff_apps >= 5:
+        lead = "A perennial competitor and familiar name in the postseason"
+    else:
+        lead = "A competitor who left their mark on league history"
+
+    if playoff_rate >= 0.65:
+        consistency = f", with a {playoff_rate:.0%} career playoff rate across {seasons_played} seasons"
+    elif seasons_played >= 15:
+        consistency = f", competing across {seasons_played} seasons"
+    else:
+        consistency = f" in {seasons_played} seasons"
+
+    years = sorted(championship_years)
+    if championships > 0:
+        if len(years) == 1:
+            champ_sentence = f"Won the championship in {years[0]}."
+        elif len(years) == 2:
+            champ_sentence = f"Won championships in {years[0]} and {years[1]}."
+        else:
+            listed = ", ".join(str(y) for y in years[:-1]) + f", and {years[-1]}"
+            champ_sentence = f"Won {championships} championships: {listed}."
+    elif runner_ups >= 2:
+        champ_sentence = (
+            f"Reached the championship game {runner_ups} times without winning. "
+            f"The trophy has been close."
+        )
+    elif runner_ups == 1:
+        champ_sentence = "Reached the championship game but fell short. The title remains elusive."
+    elif playoff_apps >= 8:
+        champ_sentence = f"Despite {playoff_apps} playoff appearances, a championship has not come. Yet."
+    else:
+        champ_sentence = "Still hunting for that first title."
+
+    status = "Currently active." if is_active else "Career concluded."
+    return f"{lead}{consistency}. {champ_sentence} {status}"

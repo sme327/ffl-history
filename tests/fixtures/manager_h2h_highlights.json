@@ -1,0 +1,2855 @@
+{
+  "type": "dict",
+  "value": {
+    "Adam": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Shawn"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🐝"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 22
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 9
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 13
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.409
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 1442.8
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 1508.8
+            }
+          }
+        },
+        "victim": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Byron"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🏛️"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 6
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 4
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 2
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.667
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 348.0
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 316.9
+            }
+          }
+        },
+        "nemesis": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Kevin Swanson"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🧔"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 16
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 2
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 14
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.125
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 950.5
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 1243.5
+            }
+          }
+        }
+      }
+    },
+    "BV": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Evan"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🎉"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 2
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 1
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 1
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.5
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 156.2
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 147.1
+            }
+          }
+        },
+        "victim": {
+          "type": "scalar",
+          "value": null
+        },
+        "nemesis": {
+          "type": "scalar",
+          "value": null
+        }
+      }
+    },
+    "Brian Clark": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Shawn"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🐝"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 30
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 19
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 11
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.633
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 2267.3
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 2141.5
+            }
+          }
+        },
+        "victim": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Joe Tyszko"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🌽"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 10
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 8
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 2
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.8
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 780.9
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 714.2
+            }
+          }
+        },
+        "nemesis": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Rob"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "⚔️"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 7
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 2
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 5
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.286
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 397.4
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 413.3
+            }
+          }
+        }
+      }
+    },
+    "Bryan Kearney": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 3
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 3
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 0
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 1.0
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 285.9
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 201.7
+            }
+          }
+        },
+        "victim": {
+          "type": "scalar",
+          "value": null
+        },
+        "nemesis": {
+          "type": "scalar",
+          "value": null
+        }
+      }
+    },
+    "Byron": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "👑"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 7
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 3
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 4
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.429
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 426.3
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 432.4
+            }
+          }
+        },
+        "victim": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "👑"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 7
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 3
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 4
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.429
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 426.3
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 432.4
+            }
+          }
+        },
+        "nemesis": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Dan"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "📖"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 5
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 1
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 4
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.2
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 276.7
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 321.7
+            }
+          }
+        }
+      }
+    },
+    "Dale": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 4
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 2
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 2
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.5
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 205.3
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 239.4
+            }
+          }
+        },
+        "victim": {
+          "type": "scalar",
+          "value": null
+        },
+        "nemesis": {
+          "type": "scalar",
+          "value": null
+        }
+      }
+    },
+    "Dan": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Byron"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🏛️"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 5
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 4
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 1
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.8
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 321.7
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 276.7
+            }
+          }
+        },
+        "victim": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Byron"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🏛️"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 5
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 4
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 1
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.8
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 321.7
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 276.7
+            }
+          }
+        },
+        "nemesis": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Shawn"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🐝"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 5
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 0
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 5
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.0
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 266.3
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 379.9
+            }
+          }
+        }
+      }
+    },
+    "Dominic": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 29
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 8
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 21
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.276
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 1988.2
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 2246.5
+            }
+          }
+        },
+        "victim": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Nick Blaettler"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🐱"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 14
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 10
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 4
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.714
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 1153.7
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 1033.2
+            }
+          }
+        },
+        "nemesis": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 29
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 8
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 21
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.276
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 1988.2
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 2246.5
+            }
+          }
+        }
+      }
+    },
+    "Douglas": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "👑"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 18
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 4
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 14
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.222
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 1435.0
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 1658.1
+            }
+          }
+        },
+        "victim": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Kevin Swanson"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🧔"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 11
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 7
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 4
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.636
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 926.4
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 890.2
+            }
+          }
+        },
+        "nemesis": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "👑"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 18
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 4
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 14
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.222
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 1435.0
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 1658.1
+            }
+          }
+        }
+      }
+    },
+    "Eric": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 6
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 4
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 2
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.667
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 447.6
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 459.9
+            }
+          }
+        },
+        "victim": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 6
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 4
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 2
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.667
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 447.6
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 459.9
+            }
+          }
+        },
+        "nemesis": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Shawn"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🐝"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 5
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 2
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 3
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.4
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 366.5
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 358.7
+            }
+          }
+        }
+      }
+    },
+    "Evan": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "👑"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 30
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 15
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 15
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.5
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 2423.8
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 2289.8
+            }
+          }
+        },
+        "victim": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Adam"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🎯"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 10
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 8
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 2
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.8
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 760.3
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 667.2
+            }
+          }
+        },
+        "nemesis": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Nick Blaettler"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🐱"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 11
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 2
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 9
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.182
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 830.7
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 990.6
+            }
+          }
+        }
+      }
+    },
+    "Fadi": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Thomas"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🐻"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 31
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 18
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 13
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.581
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 2474.7
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 2309.5
+            }
+          }
+        },
+        "victim": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Douglas"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "⚙️"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 18
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 14
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 4
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.778
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 1658.1
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 1435.0
+            }
+          }
+        },
+        "nemesis": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Jeff"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "⚽"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 10
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 1
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 9
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.1
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 624.9
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 892.1
+            }
+          }
+        }
+      }
+    },
+    "Jamie": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Shawn"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🐝"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 7
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 2
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 5
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.286
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 446.6
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 465.2
+            }
+          }
+        },
+        "victim": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Rob"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "⚔️"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 6
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 5
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 1
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.833
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 382.2
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 281.0
+            }
+          }
+        },
+        "nemesis": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Shawn"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🐝"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 7
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 2
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 5
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.286
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 446.6
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 465.2
+            }
+          }
+        }
+      }
+    },
+    "Jeff": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 13
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 6
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 7
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.462
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 1166.4
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 1020.3
+            }
+          }
+        },
+        "victim": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "👑"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 10
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 9
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 1
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.9
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 892.1
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 624.9
+            }
+          }
+        },
+        "nemesis": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Kevin Swanson"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🧔"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 12
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 3
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 9
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.25
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 873.2
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 1059.7
+            }
+          }
+        }
+      }
+    },
+    "Joe Tyszko": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "👑"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 12
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 6
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 6
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.5
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 835.6
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 825.1
+            }
+          }
+        },
+        "victim": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Adam"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🎯"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 10
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 8
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 2
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.8
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 740.2
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 532.2
+            }
+          }
+        },
+        "nemesis": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Rob"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "⚔️"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 6
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 1
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 5
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.167
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 397.2
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 478.2
+            }
+          }
+        }
+      }
+    },
+    "Kevin O'Boyle": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Kevin Swanson"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🧔"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 35
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 17
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 18
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.486
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 2720.5
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 2758.6
+            }
+          }
+        },
+        "victim": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Adam"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🎯"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 18
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 12
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 6
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.667
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 1200.3
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 1101.6
+            }
+          }
+        },
+        "nemesis": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Mike"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🍻"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 7
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 0
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 7
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.0
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 394.9
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 547.6
+            }
+          }
+        }
+      }
+    },
+    "Kevin Swanson": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Kevin O'Boyle"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 35
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 18
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 17
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.514
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 2758.6
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 2720.5
+            }
+          }
+        },
+        "victim": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Adam"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🎯"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 16
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 14
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 2
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.875
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 1243.5
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 950.5
+            }
+          }
+        },
+        "nemesis": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Jamie"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "😇"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 6
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 2
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 4
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.333
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 440.1
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 473.0
+            }
+          }
+        }
+      }
+    },
+    "Mike": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Kevin O'Boyle"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 7
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 7
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 0
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 1.0
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 547.6
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 394.9
+            }
+          }
+        },
+        "victim": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Kevin O'Boyle"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 7
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 7
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 0
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 1.0
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 547.6
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 394.9
+            }
+          }
+        },
+        "nemesis": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Adam"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🎯"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 5
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 2
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 3
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.4
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 278.7
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 302.3
+            }
+          }
+        }
+      }
+    },
+    "Nick Blaettler": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Kevin O'Boyle"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 16
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 7
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 9
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.438
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 1363.4
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 1475.6
+            }
+          }
+        },
+        "victim": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Evan"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🎉"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 11
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 9
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 2
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.818
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 990.6
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 830.7
+            }
+          }
+        },
+        "nemesis": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🏈"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 14
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 4
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 10
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.286
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 1033.2
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 1153.7
+            }
+          }
+        }
+      }
+    },
+    "Rob": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "👑"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 11
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 6
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 5
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.545
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 722.9
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 665.6
+            }
+          }
+        },
+        "victim": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Joe Tyszko"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🌽"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 6
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 5
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 1
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.833
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 478.2
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 397.2
+            }
+          }
+        },
+        "nemesis": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Jamie"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "😇"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 6
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 1
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 5
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.167
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 281.0
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 382.2
+            }
+          }
+        }
+      }
+    },
+    "Robby": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Steve Swanson"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🐻"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 9
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 5
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 4
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.556
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 695.0
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 692.1
+            }
+          }
+        },
+        "victim": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 7
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 5
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 2
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.714
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 603.7
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 485.7
+            }
+          }
+        },
+        "nemesis": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Shawn"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🐝"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 6
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 1
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 5
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.167
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 374.3
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 535.8
+            }
+          }
+        }
+      }
+    },
+    "Shawn": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Thomas"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🐻"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 34
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 19
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 15
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.559
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 2706.0
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 2596.8
+            }
+          }
+        },
+        "victim": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Dan"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "📖"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 5
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 5
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 0
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 1.0
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 379.9
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 266.3
+            }
+          }
+        },
+        "nemesis": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Nick Blaettler"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🐱"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 13
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 4
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 9
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.308
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 940.7
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 1071.2
+            }
+          }
+        }
+      }
+    },
+    "Steve Swanson": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🏈"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 25
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 12
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 13
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.48
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 2053.6
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 1960.2
+            }
+          }
+        },
+        "victim": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Kevin Swanson"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🧔"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 25
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 15
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 10
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.6
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 2018.3
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 1948.7
+            }
+          }
+        },
+        "nemesis": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Thomas"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🐻"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 22
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 8
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 14
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.364
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 1574.3
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 1706.6
+            }
+          }
+        }
+      }
+    },
+    "Thomas": {
+      "type": "dict",
+      "value": {
+        "most_played": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Shawn"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🐝"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 34
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 15
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 19
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.441
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 2596.8
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 2706.0
+            }
+          }
+        },
+        "victim": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Jeff"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "⚽"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": true
+            },
+            "games": {
+              "type": "scalar",
+              "value": 9
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 6
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 3
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.667
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 808.6
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 690.5
+            }
+          }
+        },
+        "nemesis": {
+          "type": "dict",
+          "value": {
+            "opp_manager": {
+              "type": "scalar",
+              "value": "Mike"
+            },
+            "opp_emoji": {
+              "type": "scalar",
+              "value": "🍻"
+            },
+            "opp_active": {
+              "type": "scalar",
+              "value": false
+            },
+            "games": {
+              "type": "scalar",
+              "value": 7
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 2
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 5
+            },
+            "win_pct": {
+              "type": "scalar",
+              "value": 0.286
+            },
+            "pf": {
+              "type": "scalar",
+              "value": 423.6
+            },
+            "pa": {
+              "type": "scalar",
+              "value": 484.2
+            }
+          }
+        }
+      }
+    }
+  }
+}

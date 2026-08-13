@@ -2149,3 +2149,221 @@ def get_champions_view() -> dict:
         },
         "finals": [_final(r) for _, r in champions.sort_values("season", ascending=False).iterrows()],
     }
+
+
+# ── MANAGER PROFILES ──────────────────────────────────────────────────────────
+# Lifted out of pages/manager_profiles.py. The head-to-head highlights are a
+# pure helper rather than baked in, because the page scopes them to current
+# members or all-time — the same shape the static site will need.
+
+_DRAFT_SKILL_POSITIONS = ["QB", "RB", "WR", "TE"]
+
+
+def _finals_records() -> dict[str, dict]:
+    champions = get_champions()
+    titles = champions.groupby("champion_manager").size()
+    runner_ups = champions.groupby("runner_up_manager").size()
+    return {
+        name: {
+            "titles": int(titles.get(name, 0)),
+            "runner_ups": int(runner_ups.get(name, 0)),
+            "finals_apps": int(titles.get(name, 0)) + int(runner_ups.get(name, 0)),
+        }
+        for name in sorted(set(titles.index) | set(runner_ups.index))
+    }
+
+
+def manager_h2h_highlights(rows: list[dict], min_games: int = 5) -> dict:
+    """Most-played, favourite victim and toughest opponent for a set of H2H rows.
+
+    Pure function so the page can scope it to current members or all-time and
+    the static site can do the same client-side. The victim/nemesis sorts carry
+    an explicit tie-break; the originals used the default non-stable sort.
+    """
+    if not rows:
+        return {"most_played": None, "victim": None, "nemesis": None}
+
+    eligible = [r for r in rows if r["games"] >= min_games]
+    by_win_pct = sorted(eligible, key=lambda r: (-r["win_pct"], r["opp_manager"]))
+    return {
+        "most_played": rows[0],
+        "victim": by_win_pct[0] if by_win_pct else None,
+        "nemesis": sorted(eligible, key=lambda r: (r["win_pct"], r["opp_manager"]))[0] if eligible else None,
+    }
+
+
+def _season_result_category(result: str) -> str:
+    result = str(result)
+    if "Champion" in result:
+        return "Champion"
+    if "Runner-Up" in result:
+        return "Runner-Up"
+    if "3rd" in result or "4th" in result:
+        return "3rd / 4th"
+    return "Playoffs" if result != "—" else "Missed"
+
+
+@st.cache_data
+def get_manager_directory() -> dict:
+    """Active and former managers, in the order the selector shows them."""
+    stats = get_manager_stats()
+    return {
+        "active": stats[stats["active"]]["canonical_name"].tolist(),
+        "former": stats[~stats["active"]]["canonical_name"].tolist(),
+    }
+
+
+@st.cache_data
+def get_manager_profile(name: str) -> dict:
+    from utils import narratives
+
+    stats = get_manager_stats()
+    row = stats[stats["canonical_name"] == name].iloc[0]
+    champions = get_champions()
+    finals = _finals_records().get(name, {"titles": 0, "runner_ups": 0, "finals_apps": 0})
+
+    championships = int(row["championships"])
+    runner_ups = int(row["runner_ups"])
+    playoff_apps = int(row["playoff_apps"])
+    seasons_played = int(row["seasons_played"])
+    wins, losses, ties = int(row["wins"]), int(row["losses"]), int(row["ties"])
+    is_active = bool(row["active"])
+    champ_years = sorted(int(s) for s in champions[champions["champion_manager"] == name]["season"])
+
+    # ── Season history, chart-ready ──────────────────────────────────────────
+    history = get_manager_season_history(name).copy()
+    seasons = []
+    for _, h in history.iterrows():
+        played = int(h["W"]) + int(h["L"]) + int(h["T"])
+        seasons.append({
+            "season": int(h["Season"]),
+            "team_name": h["Team Name"],
+            "wins": int(h["W"]), "losses": int(h["L"]), "ties": int(h["T"]),
+            "points_for": round(float(h["PF"]), 2),
+            "points_against": round(float(h["PA"]), 2) if "PA" in history.columns else None,
+            "rank": int(h["Rank"]) if h["Rank"] else None,
+            "result": str(h["Result"]),
+            "category": _season_result_category(h["Result"]),
+            "win_pct": round(int(h["W"]) / played, 3) if played else None,
+        })
+
+    # ── Head to head ─────────────────────────────────────────────────────────
+    active_managers = set(stats[stats["active"]]["canonical_name"])
+    h2h = [
+        {
+            "opp_manager": r["opp_manager"],
+            "opp_emoji": MANAGER_EMOJI.get(r["opp_manager"], "👤"),
+            "opp_active": r["opp_manager"] in active_managers,
+            "games": int(r["games"]), "wins": int(r["wins"]), "losses": int(r["losses"]),
+            "win_pct": round(float(r["win_pct"]), 4),
+            "pf": round(float(r["pf"]), 1), "pa": round(float(r["pa"]), 1),
+        }
+        for _, r in get_manager_h2h(name).iterrows()
+    ]
+
+    # ── Draft identity ───────────────────────────────────────────────────────
+    picks = get_draft_picks_with_pos()
+    mine = picks[picks["manager"] == name]
+    drafted = mine[~mine["is_keeper"]]
+    kept = mine[mine["is_keeper"]]
+    draft = None
+    if len(drafted):
+        round_one = drafted[
+            (drafted["round"] == 1)
+            & drafted["position"].isin(_DRAFT_SKILL_POSITIONS + ["DEF", "K"])
+        ]
+        counts = {p: int(n) for p, n in round_one["position"].value_counts().items()}
+        total = len(round_one)
+        keeper_rate = len(kept) / len(mine) if len(mine) else 0.0
+
+        def _share(position: str) -> float:
+            return counts.get(position, 0) / total if total else 0.0
+
+        if total == 0:
+            style, style_color = "UNKNOWN", "#6B7280"
+        elif _share("RB") >= 0.55:
+            style, style_color = "RB HOARDER", "#22C55E"
+        elif _share("WR") >= 0.45:
+            style, style_color = "WR COLLECTOR", "#3B82F6"
+        elif _share("QB") >= 0.35:
+            style, style_color = "QB LOYALIST", "#EF4444"
+        elif _share("TE") >= 0.15:
+            style, style_color = "TE FIRST BELIEVER", "#F59E0B"
+        elif keeper_rate >= 0.08:
+            style, style_color = "KEEPER MAXIMIZER", "#A78BFA"
+        else:
+            style, style_color = "BALANCED DRAFTER", "#A7B0BC"
+
+        def _top_player(frame) -> tuple[str, int]:
+            named = frame[frame["position"] != "DEF"]
+            if not len(named):
+                return "—", 0
+            # Explicit tie-break; value_counts() ordered ties arbitrarily.
+            tally = sorted(
+                named["player_name"].value_counts().items(), key=lambda kv: (-kv[1], kv[0])
+            )
+            return tally[0][0], int(tally[0][1])
+
+        most_drafted, most_drafted_n = _top_player(drafted)
+        most_kept, most_kept_n = _top_player(kept)
+
+        draft = {
+            "round_one_counts": counts,
+            "round_one_total": total,
+            "style": style,
+            "style_color": style_color,
+            "keeper_rate": round(keeper_rate, 4),
+            "most_drafted": {"player": most_drafted, "count": most_drafted_n},
+            "most_kept": {"player": most_kept, "count": most_kept_n},
+        }
+
+    # ── Team name history, consecutive runs collapsed ────────────────────────
+    tnh = load_all()["team_name_history"]
+    mine_names = tnh[tnh["canonical_name"] == name].sort_values("season")
+    runs: list[dict] = []
+    for _, r in mine_names.iterrows():
+        season, team = int(r["season"]), r["team_name"]
+        if runs and runs[-1]["team_name"] == team:
+            runs[-1]["end"] = season
+        else:
+            runs.append({"team_name": team, "start": season, "end": season})
+    for run in runs:
+        run["years"] = str(run["start"]) if run["start"] == run["end"] else f'{run["start"]}–{run["end"]}'
+
+    return {
+        "name": name,
+        "display_name": row["display_name"],
+        "emoji": MANAGER_EMOJI.get(name, "👤"),
+        "color": MANAGER_COLORS.get(name, "#D4AF37"),
+        "active": is_active,
+        "first_season": int(row["first_season"]),
+        "last_season": int(row["last_season"]),
+        "status_label": (
+            f'Active · {int(row["first_season"])}–Present' if is_active
+            else f'{int(row["first_season"])}–{int(row["last_season"])}'
+        ),
+        "metrics": {
+            "championships": championships,
+            "runner_ups": runner_ups,
+            "playoff_apps": playoff_apps,
+            "seasons_played": seasons_played,
+            "playoff_rate": round(playoff_apps / seasons_played, 4) if seasons_played else 0.0,
+            "record": f"{wins}-{losses}" + (f"-{ties}" if ties else ""),
+            "win_pct": round(float(row["win_pct"]), 3) if (wins + losses + ties) else 0.0,
+            **finals,
+        },
+        "championship_years": champ_years,
+        "plaque": narratives.manager_plaque(
+            championships=championships,
+            runner_ups=runner_ups,
+            playoff_apps=playoff_apps,
+            seasons_played=seasons_played,
+            championship_years=champ_years,
+            is_active=is_active,
+        ),
+        "identity": narratives.MANAGER_IDENTITY.get(name, ""),
+        "seasons": seasons,
+        "head_to_head": h2h,
+        "draft": draft,
+        "team_names": runs,
+    }

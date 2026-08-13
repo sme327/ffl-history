@@ -174,6 +174,43 @@ class TestHome(FixtureAssertions):
             self.assertIn(manager, best["summary"], f"{manager} missing from best-season copy")
 
 
+class TestManagerProfiles(FixtureAssertions):
+    def test_directory(self):
+        self.assert_matches("get_manager_directory", D.get_manager_directory())
+
+    def test_profiles(self):
+        """Covers the logic lifted out of pages/manager_profiles.py."""
+        expected = load("get_manager_profile")
+        actual = {"type": "dict",
+                  "value": {n: normalize(D.get_manager_profile(n)) for n in expected["value"]}}
+        self.assert_payload("get_manager_profile", actual, expected)
+
+    def test_h2h_highlights(self):
+        expected = load("manager_h2h_highlights")
+        actual = {"type": "dict", "value": {
+            n: normalize(D.manager_h2h_highlights(D.get_manager_profile(n)["head_to_head"]))
+            for n in expected["value"]
+        }}
+        self.assert_payload("manager_h2h_highlights", actual, expected)
+
+    def test_every_manager_has_a_plaque(self):
+        directory = D.get_manager_directory()
+        for name in directory["active"] + directory["former"]:
+            plaque = D.get_manager_profile(name)["plaque"]
+            self.assertTrue(plaque and plaque.endswith("."), f"{name}: malformed plaque")
+
+    def test_season_records_reconcile_with_career_totals(self):
+        """Per-season rows must add up to the headline record."""
+        for name in D.get_manager_directory()["active"]:
+            profile = D.get_manager_profile(name)
+            wins = sum(s["wins"] for s in profile["seasons"])
+            losses = sum(s["losses"] for s in profile["seasons"])
+            self.assertTrue(
+                profile["metrics"]["record"].startswith(f"{wins}-{losses}"),
+                f'{name}: seasons sum to {wins}-{losses}, headline says {profile["metrics"]["record"]}',
+            )
+
+
 class TestChampionsView(FixtureAssertions):
     def test_champions_view(self):
         """Covers the logic lifted out of pages/champions.py."""
