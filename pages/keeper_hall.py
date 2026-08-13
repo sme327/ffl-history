@@ -4,7 +4,8 @@ import plotly.graph_objects as go
 import pandas as pd
 from utils.data import (
     get_draft_picks_with_pos, get_keeper_chains, get_player_ownership,
-    get_draft_records, get_keeper_enriched,
+    get_draft_records, get_keeper_enriched, get_keeper_hall_view,
+    KEEPER_DNA_BLURBS,
     MANAGER_EMOJI, MANAGER_COLORS, CURRENT_SEASON, FOUNDED,
     _KEEPER_SUSPENSION_YEARS,
 )
@@ -58,40 +59,20 @@ rec = get_draft_records()
 keepers = dpw[dpw["is_keeper"]].copy()
 
 
-# Suspension-year aware active keeper seasons
-active_keeper_szns = sorted(keepers["season"].unique().astype(int).tolist())
+# All derivation lives in utils.data.get_keeper_hall_view(); this page renders it.
+view = get_keeper_hall_view()
+active_keeper_szns = view["keeper_seasons"]
+immortals = view["immortals"]
+top_chains_scored = view["notable_chains"]
+most_kept_player = view["most_kept"][0]["player_name"] if view["most_kept"] else "—"
+most_kept_count = view["most_kept"][0]["count"] if view["most_kept"] else 0
 
-# Immortal scoring: streak × 2 + titles × 5 + playoffs × 0.5
-immortal_rows = []
-for _, ch in chains.iterrows():
-    player = ch["player_name"]
-    seasons_in_run = ch["seasons"]
-    chain_ke = ke[(ke["player_name"] == player) & (ke["season"].isin(seasons_in_run))]
-    titles = int(chain_ke["won_title"].sum())
-    playoffs = int(chain_ke["made_playoffs"].sum())
-    score = ch["streak_len"] * 2 + titles * 5 + playoffs * 0.5
-    pos_vals = ke[ke["player_name"] == player]["position"].dropna()
-    pos = str(pos_vals.iloc[0]) if len(pos_vals) > 0 else "?"
-    immortal_rows.append({
-        "player_name": player,
-        "primary_manager": ch["primary_manager"],
-        "all_managers": ch["all_managers"],
-        "franchise_id": ch["franchise_id"],
-        "seasons": seasons_in_run,
-        "streak_len": int(ch["streak_len"]),
-        "titles": titles,
-        "playoffs": playoffs,
-        "score": score,
-        "multi_manager": ch["multi_manager"],
-        "position": pos,
-    })
-
-immortal_df = (
-    pd.DataFrame(immortal_rows)
-    .sort_values(["streak_len", "score"], ascending=False)
-    .reset_index(drop=True)
-)
-top_chains_scored = immortal_df[immortal_df["streak_len"] >= 3]
+# Two different records: the longest chain and the highest-scoring one. They
+# happen to be the same player today, but the page previously used the
+# longest-streak row for both — so "Most Valuable Keeper Run" would have named
+# the wrong player the moment a shorter, more decorated run outscored it.
+_longest_chain = immortals[0] if immortals else None
+_best_chain = max(immortals, key=lambda c: (c["score"], c["streak_len"])) if immortals else None
 
 # ── PAGE HEADER ───────────────────────────────────────────────────────────────
 total_keepers = len(keepers)
@@ -346,11 +327,11 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-top4 = top_chains_scored.head(4)
+top4 = top_chains_scored[:4]
 
 if len(top4) > 0:
     # Hero card — #1 Immortal
-    hero = top4.iloc[0]
+    hero = top4[0]
     hero_color = _mgr_color(hero["primary_manager"])
     hero_pos = _pos_badge(hero["position"])
     hero_mgrs = hero["all_managers"]
@@ -404,10 +385,10 @@ if len(top4) > 0:
     )
 
     # Cards 2-4 in a row
-    row2 = top4.iloc[1:]
+    row2 = top4[1:]
     if len(row2) > 0:
         cols = st.columns(len(row2))
-        for col, (_, im) in zip(cols, row2.iterrows()):
+        for col, im in zip(cols, row2):
             c = _mgr_color(im["primary_manager"])
             pb = _pos_badge(im["position"])
             mgr_str = (
@@ -449,7 +430,7 @@ if len(top4) > 0:
             unsafe_allow_html=True,
         )
         extra_cols = st.columns(min(len(top_chains_scored) - 4, 3))
-        for col, (_, im) in zip(extra_cols, top_chains_scored.iloc[4:7].iterrows()):
+        for col, im in zip(extra_cols, top_chains_scored[4:7]):
             c = _mgr_color(im["primary_manager"])
             mgr_str = (
                 f'{im["franchise_id"]} ({" → ".join(im["all_managers"])})'
@@ -580,75 +561,27 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-_DNA_LABELS = {
-    "BELL COW HUNTER": "Staked the franchise on elite RBs. Kept the workhorse, season after season.",
-    "RECEIVER KINGDOM": "Built through the pass-catchers. Wide receivers were the currency.",
-    "SIGNAL CALLER": "Bet on quarterbacks at a position most managers left to the draft.",
-    "TIGHT END LOYALIST": "Found the value others ignored. Elite TEs don't hit free agency.",
-    "SKILL POSITION SNIPER": "No positional bias. Any skill player, any round, any season.",
-    "BALANCED CURATOR": "A methodical approach. Position was secondary to player quality.",
-}
-
-def _dna_label(mgr_keepers):
-    pos_c = mgr_keepers[mgr_keepers["position"].isin(POS_COLORS.keys())]["position"].value_counts()
-    total = pos_c.sum()
-    if total == 0:
-        return "BALANCED CURATOR"
-    rb_p = pos_c.get("RB", 0) / total
-    wr_p = pos_c.get("WR", 0) / total
-    qb_p = pos_c.get("QB", 0) / total
-    te_p = pos_c.get("TE", 0) / total
-    if rb_p >= 0.55:
-        return "BELL COW HUNTER"
-    if wr_p >= 0.50:
-        return "RECEIVER KINGDOM"
-    if qb_p >= 0.25:
-        return "SIGNAL CALLER"
-    if te_p >= 0.20:
-        return "TIGHT END LOYALIST"
-    if rb_p + wr_p >= 0.80:
-        return "SKILL POSITION SNIPER"
-    return "BALANCED CURATOR"
-
-# Per-manager keeper stats for DNA cards
-dna_stats = []
-for mgr, kgrp in keepers.groupby("manager"):
-    total_picks = len(dpw[dpw["manager"] == mgr])
-    k_count = len(kgrp)
-    if k_count == 0:
-        continue
-    k_rate = k_count / total_picks if total_picks > 0 else 0
-    indiv = kgrp[kgrp["position"] != "DEF"]
-    fav_k = indiv["player_name"].value_counts().index[0] if len(indiv) > 0 else "—"
-    fav_k_n = int(indiv["player_name"].value_counts().iloc[0]) if len(indiv) > 0 else 0
-    # Longest streak for this manager
-    mgr_chains = chains[chains["all_managers"].apply(lambda m: mgr in m)]
-    longest = int(mgr_chains["streak_len"].max()) if len(mgr_chains) > 0 else 1
-    longest_player = mgr_chains.loc[mgr_chains["streak_len"].idxmax(), "player_name"] if len(mgr_chains) > 0 else "—"
-    # Championship seasons
-    mgr_ke = ke[ke["manager"] == mgr]
-    titles = int(mgr_ke["won_title"].sum())
-    dna = _dna_label(kgrp)
-    dna_stats.append({
-        "manager": mgr, "k_count": k_count, "k_rate": k_rate,
-        "fav_k": fav_k, "fav_k_n": fav_k_n,
-        "longest": longest, "longest_player": longest_player,
-        "titles": titles, "dna": dna,
-    })
-
-dna_stats = sorted(dna_stats, key=lambda x: -x["k_count"])
-
-# Split into active (last season = CURRENT_SEASON) and alumni
-_mgr_last_szn = dpw.dropna(subset=["manager"]).groupby("manager")["season"].max().to_dict()
-_active_stats  = [s for s in dna_stats if _mgr_last_szn.get(s["manager"], 0) >= CURRENT_SEASON]
-_alumni_stats  = [s for s in dna_stats if _mgr_last_szn.get(s["manager"], 0) <  CURRENT_SEASON]
+# Per-manager keeper DNA comes from the extracted view.
+dna_stats = [
+    {
+        "manager": d["manager"], "k_count": d["keeper_count"], "k_rate": d["keeper_rate"],
+        "fav_k": d["favourite"]["player"], "fav_k_n": d["favourite"]["count"],
+        "longest": d["longest_streak"], "longest_player": d["longest_streak_player"],
+        "titles": d["titles"], "dna": d["dna"],
+    }
+    for d in view["manager_dna"]
+]
+_active_stats = [s_ for s_ in dna_stats
+                 if any(d["manager"] == s_["manager"] for d in view["active_dna"])]
+_alumni_stats = [s_ for s_ in dna_stats
+                 if any(d["manager"] == s_["manager"] for d in view["alumni_dna"])]
 
 def _dna_card_html(stat: dict) -> str:
     mgr   = stat["manager"]
     color = _mgr_color(mgr)
     em    = _mgr_emoji(mgr)
     label = stat["dna"]
-    desc  = _DNA_LABELS.get(label, "")
+    desc  = KEEPER_DNA_BLURBS.get(label, "")
     title_str = "🏆" * stat["titles"]
     return (
         f'<div style="background:#0F1B2D;border:1px solid #1E2D40;border-top:3px solid {color};'
@@ -1047,14 +980,14 @@ records = [
     ("Most Keepers (Career)", f"{most_keepers_mgr}", f"{most_keepers_n} keeper seasons"),
     ("Most Keepers (Single Season)", f"{single_szn_mgr}, {single_szn_yr}", f"{single_szn_n} keepers in one draft"),
     ("Most Times Kept (Player)", most_kept_player, f"Kept {most_kept_count}× total"),
-    ("Longest Single Streak", immortal_df.iloc[0]["player_name"] if len(immortal_df) > 0 else "—",
+    ("Longest Single Streak", _longest_chain["player_name"] if _longest_chain else "—",
      f'{longest_streak} consecutive seasons'),
     ("Most Diverse Keeper Portfolio", most_diverse_mgr, f"{most_diverse_n} different players kept"),
     ("Most Franchises (Player)", most_franchises_player, f"Kept by {most_franchises_n} different franchises"),
     ("First Keeper Ever", f"{first_ever_player} ({first_ever_mgr})" if len(keepers) > 0 else "—",
      f"Season {first_ever_szn}" if len(keepers) > 0 else ""),
-    ("Most Valuable Keeper Run", immortal_df.iloc[0]["player_name"] if len(immortal_df) > 0 else "—",
-     f'Score {immortal_df.iloc[0]["score"]:.1f}' if len(immortal_df) > 0 else ""),
+    ("Most Valuable Keeper Run", _best_chain["player_name"] if _best_chain else "—",
+     f'Score {_best_chain["score"]:.1f}' if _best_chain else ""),
 ]
 if len(modern_keepers) > 0:
     records.insert(5, ("Cheapest Keeper (Highest Rd)", f'{cheapest_row["player_name"]} ({cheapest_row["manager"]})',

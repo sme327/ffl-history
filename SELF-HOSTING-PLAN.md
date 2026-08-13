@@ -180,7 +180,7 @@ The bulk of the work. `utils/styles.py` (886 lines) already has the right instin
 | ~~6~~ | ~~`manager_profiles.py`~~ | 636 | ✅ **Logic extracted 2026-08-13** → `get_manager_profile()` + `manager_h2h_highlights()`; plaque copy moved to narratives |
 | ~~7~~ | ~~`draft_center.py`~~ | 896→772 | ✅ **Done 2026-08-13** → `get_draft_center_view()` + `get_draft_loyalty_board()`; page rewired, 124 lines of duplicate derivation removed |
 | ~~8~~ | ~~`franchise_profiles.py`~~ | 966→702 | ✅ **Done 2026-08-13** → `get_franchise_profile()` + `narratives.franchise_story()`; page rewired, 264 lines of duplicate derivation removed |
-| 9 | `keeper_hall.py` | 1,177 | ⚠️ **Derivations extracted 2026-08-13** → `get_keeper_hall_view()`, fixture-covered. **Page rewiring pending** — worth redesigning rather than transcribing, since it still has no entry points (review F7) |
+| ~~9~~ | ~~`keeper_hall.py`~~ | 1,177→1,105 | ✅ **Done 2026-08-13** → `get_keeper_hall_view()`; page rewired. Still has no entry points (review F7) — worth redesigning during the presentation port |
 | 10 | `rivalries.py` | 1,215 | ⚠️ **Derivations extracted 2026-08-13** → `get_rivalries_view()` + `get_head_to_head_losses()`, fixture-covered. **Page rewiring pending** |
 
 **Keep the Streamlit app running the whole time.** Side-by-side visual diffing is the only practical way to catch regressions in a design this dense, and it means an unfinished rewrite never costs you a working site. Cut over only at parity.

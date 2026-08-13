@@ -291,7 +291,6 @@ def build(out: Path) -> None:
 # render from their own inline copy. Until rewired, the two can drift apart —
 # only the extracted version is under test.
 PAGE_LEVEL_WORK = {
-    "keeper_hall.py": "rewire to get_keeper_hall_view()",
     "rivalries.py": "rewire to get_rivalries_view()",
 }
 
