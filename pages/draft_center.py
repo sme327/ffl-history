@@ -6,6 +6,7 @@ import pandas as pd
 from utils.data import (
     get_draft_picks_with_pos, get_position_trends_data,
     get_draft_records, get_player_ownership, get_manager_stats,
+    get_draft_center_view, get_draft_loyalty_board,
     MANAGER_EMOJI, MANAGER_COLORS, CURRENT_SEASON, FOUNDED,
 )
 from utils.styles import inject_css, render_nav, render_page_footer, section_header
@@ -48,45 +49,16 @@ ms       = get_manager_stats()
 real     = dpw[~dpw["is_keeper"]].copy()
 keepers  = dpw[dpw["is_keeper"]].copy()
 r1_real  = real[real["round"] == 1].copy()
-ms_idx   = ms.set_index("canonical_name")
 
-# Player-level aggregates (skill positions only, real drafts)
-_skill_po = po[po["position"].isin(SKILL_POS)].copy()
-player_legend = (
-    _skill_po.groupby("player_name")
-    .agg(
-        total_drafts=("draft_count", "sum"),
-        unique_managers=("manager", "nunique"),
-        first_season=("first_season", "min"),
-        last_season=("last_season", "max"),
-        position=("position", "first"),
-    )
-    .reset_index()
-)
-# Count distinct seasons actually drafted — avoids inflating spans for common names
-# that span multiple NFL players (e.g. "Mike Williams" = Detroit 2005, TB 2010-13, LAC 2017-24)
-_seasons_per_player = dpw.groupby("player_name")["season"].nunique()
-player_legend["career_span"] = player_legend["player_name"].map(_seasons_per_player).fillna(0).astype(int)
-
-# Most loyal manager per player (most total seasons with this player)
-_loyal = (
-    _skill_po.sort_values("total_seasons", ascending=False)
-    .drop_duplicates("player_name")[["player_name", "manager"]]
-    .set_index("player_name")["manager"]
-    .to_dict()
-)
-player_legend["most_loyal"] = player_legend["player_name"].map(_loyal)
-
-# Per-player total league ownership (proxy for player quality)
-player_seasons_total = po.groupby("player_name")["total_seasons"].sum().to_dict()
-
-# Best R1 pick per manager: their R1 skill-position pick with most total league ownership
-_r1_skill = r1_real[r1_real["position"].isin(SKILL_POS)]
-best_r1_map = {}
-for _mgr, _grp in _r1_skill.groupby("manager"):
-    _players = _grp["player_name"].unique()
-    if len(_players) > 0:
-        best_r1_map[_mgr] = max(_players, key=lambda p: player_seasons_total.get(p, 0))
+# All derivation lives in utils.data.get_draft_center_view(); this page renders it.
+view = get_draft_center_view()
+legends = view["legends"]
+manager_dna = {d["manager"]: d for d in view["manager_dna"]}
+best_r1_map = {m: d["best_round_one_find"] for m, d in manager_dna.items()}
+longest_career = max(l["career_span"] for l in legends) if legends else 0
+# Career-span ranking with an explicit tie-break; the original used a
+# non-stable sort here too.
+by_career = sorted(legends, key=lambda l: (-l["career_span"], l["player_name"]))
 
 # ── PAGE HEADER ───────────────────────────────────────────────────────────────
 st.markdown(
@@ -108,7 +80,7 @@ for col, val, lbl in [
     (s1, rec["total_picks"], "Total Draft Picks"),
     (s2, rec["total_unique_players"], "Unique Players Drafted"),
     (s3, int(r1_real["player_name"].nunique()), "Players Ever Taken Round 1"),
-    (s4, int(player_legend["career_span"].max()), "Longest Player Career (seasons)"),
+    (s4, longest_career, "Longest Player Career (seasons)"),
 ]:
     col.markdown(
         f'<div class="tl-metric"><div class="tl-metric-value">{val:,}</div>'
@@ -128,52 +100,22 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-_pos_adj = {"QB": "quarterback", "RB": "running back", "WR": "receiver", "TE": "tight end"}
 
-def _cant_quit_story(name, drafts, managers, career, first_s, last_s, loyal_mgr, pos):
-    pa = _pos_adj.get(pos, "player")
-    if career >= 18:
-        line1 = f"A {career}-year presence in this league — from {first_s} to {last_s}."
-    elif career >= 12:
-        line1 = f"Appearing from {first_s} to {last_s}. {career} seasons of relevance."
-    else:
-        line1 = f"A {career}-season run, from {first_s} to {last_s}."
-    if drafts >= 16:
-        line2 = f"Drafted {drafts} times. Nobody could leave this {pa} on the board."
-    elif drafts >= 12:
-        line2 = f"Drafted {drafts} times. The obsession was league-wide."
-    else:
-        line2 = f"Drafted {drafts} times across the league."
-    if managers >= 10:
-        line3 = f"Touched {managers} different rosters — nearly every manager in league history."
-    elif managers >= 7:
-        line3 = f"{managers} different managers couldn't resist."
-    else:
-        line3 = f"Owned by {managers} managers."
-    loyal_str = f" {loyal_mgr} was the most devoted." if loyal_mgr else ""
-    return f"{line1} {line2} {line3}{loyal_str}"
-
-top_legends = player_legend.sort_values("total_drafts", ascending=False).head(8)
 
 cant_quit_html = '<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:0;">'
-for _, row in top_legends.iterrows():
-    story = _cant_quit_story(
-        row["player_name"], row["total_drafts"], row["unique_managers"],
-        row["career_span"], row["first_season"], row["last_season"],
-        row["most_loyal"], row["position"]
-    )
-    pos = str(row["position"]) if row["position"] else "?"
+for row in legends[:8]:
+    story = row["story"]
+    pos = row["position"]
     pb = _pos_badge(pos)
     pc = POS_COLORS.get(pos, "#6B7280")
 
     # Manager dots: which managers drafted this player?
-    mgr_drafters = po[(po["player_name"] == row["player_name"]) & (po["draft_count"] > 0)]
     mgr_dots = ""
-    for _, md_row in mgr_drafters.iterrows():
+    for md_row in row["drafters"]:
         _md_mgr = md_row["manager"]
-        _md_cnt = md_row["draft_count"]
-        _md_clr = _mgr_color(_md_mgr)
-        _md_emj = _mgr_emoji(_md_mgr)
+        _md_cnt = md_row["count"]
+        _md_clr = md_row["color"]
+        _md_emj = md_row["emoji"]
         mgr_dots += (
             f'<span title="{_md_mgr} ({_md_cnt}×)" '
             f'style="display:inline-block;width:16px;height:16px;border-radius:50%;'
@@ -224,23 +166,9 @@ for _, _row in dpw.iterrows():
         _row["manager"], bool(_row["is_keeper"]), str(_row["position"]) if _row["position"] else "?"
     )
 
-# Filter players
-if _filt == "All Players":
-    _po_filt = po[po["position"] != "DEF"]
-elif _filt == "Keepers Only":
-    _po_filt = po[(po["keeper_count"] > 0) & (po["position"] != "DEF")]
-else:
-    _po_filt = po[po["position"] == _filt]
+top_players = get_draft_loyalty_board(_filt)
 
-top_players = (
-    _po_filt.groupby("player_name")
-    .agg(total=("total_seasons", "sum"), pos=("position", "first"),
-         first=("first_season", "min"), last=("last_season", "max"))
-    .sort_values("total", ascending=False)
-    .head(25)
-)
-
-tp_set = set(top_players.index)
+tp_set = {p["player_name"] for p in top_players}
 relevant_seasons = sorted({szn for (pl, szn), _ in ownership_map.items() if pl in tp_set})
 
 tl_html = (
@@ -257,10 +185,11 @@ for szn in relevant_seasons:
     )
 tl_html += '<th style="padding:4px 6px;color:#A7B0BC;border-bottom:1px solid #1E2D40;">OWN</th></tr></thead><tbody>'
 
-for i, (player, prow) in enumerate(top_players.iterrows()):
+for i, prow in enumerate(top_players):
     bg = "rgba(255,255,255,0.02)" if i % 2 == 0 else "transparent"
-    pos = prow["pos"] or "?"
-    total = int(prow["total"])
+    player = prow["player_name"]
+    pos = prow["position"]
+    total = prow["total_seasons"]
     pb = _pos_badge(pos)
     tl_html += (
         f'<tr style="background:{bg};">'
@@ -316,7 +245,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-_profile_players = list(top_players.index[:15])
+_profile_players = [p["player_name"] for p in top_players[:15]]
 _exp_cols = st.columns(3)
 for _idx, _player in enumerate(_profile_players):
     _col = _exp_cols[_idx % 3]
@@ -384,25 +313,11 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Build per-manager round-1 breakdown (managers with ≥4 real R1 picks)
-r1_q = real[(real["round"] == 1) & real["position"].notna()].copy()
-r1_q["pos_group"] = r1_q["position"].apply(lambda p: p if p in SKILL_POS + ["DEF", "K"] else "Other")
-r1_counts = r1_q.groupby(["manager", "pos_group"]).size().unstack(fill_value=0)
-r1_counts["total"] = r1_counts.sum(axis=1)
-r1_qual = r1_counts[r1_counts["total"] >= 4].copy()
-
-for col in ["RB", "WR", "QB", "TE", "DEF", "K", "Other"]:
-    if col not in r1_qual.columns:
-        r1_qual[col] = 0
-
-# Add keeper rate, success metrics
-keeper_rate = keepers.groupby("manager").size() / dpw.groupby("manager").size()
-r1_qual["keeper_rate"] = keeper_rate.reindex(r1_qual.index).fillna(0)
-r1_qual["champs"] = [int(ms_idx.loc[m, "championships"]) if m in ms_idx.index else 0 for m in r1_qual.index]
-_seasons_p = [int(ms_idx.loc[m, "seasons_played"]) if m in ms_idx.index else 1 for m in r1_qual.index]
-_playoff_a = [int(ms_idx.loc[m, "playoff_apps"]) if m in ms_idx.index else 0 for m in r1_qual.index]
-r1_qual["playoff_rate"] = [pa / max(sp, 1) for pa, sp in zip(_playoff_a, _seasons_p)]
-
+# Per-manager round-1 breakdown comes from the extracted view; the chart just
+# needs it shaped as a frame.
+r1_qual = pd.DataFrame(
+    [{"manager": d["manager"], **d["counts"], "total": d["total"]} for d in view["manager_dna"]]
+).set_index("manager")
 r1_qual = r1_qual.sort_values("RB", ascending=True)
 
 # Stacked bar chart
@@ -432,56 +347,19 @@ fig_dna.update_layout(
 )
 st.plotly_chart(fig_dna, use_container_width=True, config={"displayModeBar": False})
 
-# Archetype function — expanded personality labels
-def _archetype(row):
-    total = row["total"]
-    if total == 0:
-        return "UNKNOWN", "#6B7280", "Not enough drafts to profile."
-    rb = row.get("RB", 0) / total
-    wr = row.get("WR", 0) / total
-    qb = row.get("QB", 0) / total
-    te = row.get("TE", 0) / total
-    def_ = row.get("DEF", 0) / total
-    kr = row.get("keeper_rate", 0)
-    champs = row.get("champs", 0)
-
-    if rb >= 0.65:
-        return "HERO-RB PIONEER", "#22C55E", "The bell cow was the answer. Every single year."
-    if rb >= 0.50:
-        return "RB HOARDER", "#22C55E", "Staked the first round on running backs."
-    if wr >= 0.55:
-        return "RECEIVER KINGDOM", "#3B82F6", "Receivers win leagues. They built for it."
-    if wr >= 0.40 and rb <= 0.20:
-        return "ZERO-RB PIONEER", "#60A5FA", "Avoided RBs in round one long before it had a name."
-    if qb >= 0.35:
-        return "QB LOYALIST", "#EF4444", "Quarterbacks win leagues. They drafted accordingly."
-    if qb >= 0.22:
-        return "QUARTERBACK WHISPERER", "#F87171", "Always had a QB solution before everyone else."
-    if te >= 0.22:
-        return "TE ADDICT", "#F59E0B", "Saw the tight end premium before the market caught on."
-    if te >= 0.13:
-        return "TE FIRST BELIEVER", "#FCD34D", "Would reach for a tight end when the value was right."
-    if kr >= 0.10 and champs >= 2:
-        return "CHAMPIONSHIP BUILDER", "#D4AF37", "Built to keep. Kept to win. Won."
-    if kr >= 0.09:
-        return "KEEPER ARCHITECT", "#A78BFA", "Played the long game. Draft to keep, keep to win."
-    if def_ >= 0.15:
-        return "OLD-SCHOOL DRAFTER", "#9CA3AF", "Defenses were part of the strategy. Old school."
-    return "BALANCED ARCHITECT", "#A7B0BC", "No tells. Adapted to the board every single year."
-
 # Enhanced DNA cards
 dna_cards_html = '<div style="display:flex;flex-wrap:wrap;gap:10px;margin:1.5rem 0;">'
-for mgr, row in r1_qual.sort_values("total", ascending=False).iterrows():
-    label, lcolor, desc = _archetype(row)
-    emoji = _mgr_emoji(mgr)
-    color = _mgr_color(mgr)
-    total = int(row["total"])
-    champs = int(row.get("champs", 0))
-    pl_rate = float(row.get("playoff_rate", 0))
-    best_r1 = best_r1_map.get(mgr, "—")
+for entry in view["manager_dna"]:
+    mgr = entry["manager"]
+    label, lcolor, desc = entry["archetype"], entry["archetype_color"], entry["archetype_blurb"]
+    emoji, color = entry["emoji"], entry["color"]
+    total = entry["total"]
+    champs = entry["championships"]
+    pl_rate = entry["playoff_rate"]
+    best_r1 = entry["best_round_one_find"]
     champ_str = ("🏆 " * champs).strip() if champs > 0 else ""
-    top_pos = max(["RB","WR","QB","TE","DEF","K"], key=lambda p: row.get(p, 0))
-    top_pct = int(row.get(top_pos, 0) / total * 100) if total > 0 else 0
+    top_pos = entry["top_position"]
+    top_pct = entry["top_position_pct"]
 
     dna_cards_html += (
         f'<div style="background:#0F1B2D;border:1px solid #1E2D40;border-top:3px solid {color};'
@@ -716,8 +594,7 @@ def _rec_fact(title, body, color="#D4AF37"):
 with col1:
     st.markdown(_rec_block("MOST DRAFTED PLAYERS", rec["most_drafted_players"]), unsafe_allow_html=True)
     # Longest draft career
-    top_career = player_legend.sort_values("career_span", ascending=False).head(5)
-    career_entries = [(r["player_name"], r["career_span"]) for _, r in top_career.iterrows()]
+    career_entries = [(r["player_name"], r["career_span"]) for r in by_career[:5]]
     st.markdown(_rec_block("LONGEST DRAFT CAREER", career_entries, val_suffix=" seasons"), unsafe_allow_html=True)
 
 with col2:
@@ -738,11 +615,11 @@ with col3:
         f'Pick #{et.get("overall_pick","?")} &nbsp;·&nbsp; {et.get("manager","?")}',
     ), unsafe_allow_html=True)
     # Player with most total seasons (drafted + kept)
-    total_legend = player_legend.sort_values("career_span", ascending=False).iloc[0]
+    total_legend = by_career[0]
     st.markdown(_rec_fact(
         "LONGEST-RUNNING PLAYER",
-        f'{total_legend["player_name"]} &nbsp;·&nbsp; {int(total_legend["first_season"])}–{int(total_legend["last_season"])} &nbsp;·&nbsp; '
-        f'{int(total_legend["career_span"])} seasons &nbsp;·&nbsp; {int(total_legend["total_drafts"])} total drafts',
+        f'{total_legend["player_name"]} &nbsp;·&nbsp; {total_legend["first_season"]}–{total_legend["last_season"]} &nbsp;·&nbsp; '
+        f'{total_legend["career_span"]} seasons &nbsp;·&nbsp; {total_legend["total_drafts"]} total drafts',
     ), unsafe_allow_html=True)
 
 st.markdown('<hr class="tl-divider-full">', unsafe_allow_html=True)
@@ -762,12 +639,11 @@ with hof_col:
     )
 
     # Most drafted non-DEF players
-    top_hof = player_legend.sort_values("total_drafts", ascending=False).head(3)
-    for rank, (_, row) in enumerate(top_hof.iterrows()):
+    for rank, row in enumerate(legends[:3]):
         medal = ["🥇","🥈","🥉"][rank]
-        pos = str(row["position"]) if row["position"] else "?"
+        pos = row["position"]
         pb = _pos_badge(pos)
-        loyal = str(row.get("most_loyal", "—"))
+        loyal = str(row.get("most_loyal") or "—")
         st.markdown(
             f'<div style="background:#0F1B2D;border:1px solid #1E2D40;border-left:4px solid #D4AF37;'
             f'border-radius:6px;padding:12px 14px;margin-bottom:8px;">'

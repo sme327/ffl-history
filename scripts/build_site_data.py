@@ -279,7 +279,7 @@ def build(out: Path) -> None:
     print(f"  {len(index)} managers · {len(fran_index)} franchises · "
           f"{len(seasons)} seasons · {len(riv_rows)} rivalries")
 
-    print("\nStill computed inside pages/ and therefore not covered here or by the tests:")
+    print("\nPages still rendering from their own copy (derivations extracted, rewiring pending):")
     for page, note in PAGE_LEVEL_WORK.items():
         print(f"  {page:24} {note}")
 
@@ -287,17 +287,13 @@ def build(out: Path) -> None:
 # Pages that call load_all() and derive from raw frames themselves. Each needs
 # its logic lifted into utils/data.py (with fixtures) before the port can render
 # that route from JSON alone.
+# Pages whose derivations are extracted and fixture-covered, but which still
+# render from their own inline copy. Until rewired, the two can drift apart —
+# only the extracted version is under test.
 PAGE_LEVEL_WORK = {
-    # season_archive.py: done 2026-08-13 -> utils.data.get_season_detail()
-    # league_timeline.py: done 2026-08-13 -> get_timeline_view() + group_timeline_by_season()
-    # app.py: done 2026-08-13 -> get_home_view()
-    # champions.py: done 2026-08-13 -> get_champions_view()
-    # franchise_profiles.py: derivations extracted 2026-08-13 -> get_franchise_profile(); page rewiring pending
-    "franchise_profiles.py (page)": "rewire to get_franchise_profile()",
-    # league_history.py: done 2026-08-13 -> get_league_history_view()
-    # manager_profiles.py: done 2026-08-13 -> get_manager_profile()
-    # rivalries.py: derivations extracted 2026-08-13 -> get_rivalries_view(); page rewiring pending
-    "rivalries.py (page)": "rewire to get_rivalries_view()",
+    "franchise_profiles.py": "rewire to get_franchise_profile()",
+    "keeper_hall.py": "rewire to get_keeper_hall_view()",
+    "rivalries.py": "rewire to get_rivalries_view()",
 }
 
 

@@ -178,7 +178,7 @@ The bulk of the work. `utils/styles.py` (886 lines) already has the right instin
 | ~~4~~ | ~~`league_history.py`~~ | 511 | ✅ **Logic extracted 2026-08-13** → `get_league_history_view()`; Plotly ports cleanly once the figure is fed data instead of frames |
 | ~~5~~ | ~~`champions.py`~~ | 577 | ✅ **Logic extracted 2026-08-13** → `get_champions_view()`; seven unstable rankings given explicit tie-breaks |
 | ~~6~~ | ~~`manager_profiles.py`~~ | 636 | ✅ **Logic extracted 2026-08-13** → `get_manager_profile()` + `manager_h2h_highlights()`; plaque copy moved to narratives |
-| 7 | `draft_center.py` | 896 | ⚠️ **Derivations extracted 2026-08-13** → `get_draft_center_view()` + `get_draft_loyalty_board()`, fixture-covered. **Page rewiring still pending** — the page runs on its own inline copy for now |
+| ~~7~~ | ~~`draft_center.py`~~ | 896→772 | ✅ **Done 2026-08-13** → `get_draft_center_view()` + `get_draft_loyalty_board()`; page rewired, 124 lines of duplicate derivation removed |
 | 8 | `franchise_profiles.py` | 966 | ⚠️ **Derivations extracted 2026-08-13** → `get_franchise_profile()` + `narratives.franchise_story()`, fixture-covered. **Page rewiring pending** |
 | 9 | `keeper_hall.py` | 1,177 | ⚠️ **Derivations extracted 2026-08-13** → `get_keeper_hall_view()`, fixture-covered. **Page rewiring pending** — worth redesigning rather than transcribing, since it still has no entry points (review F7) |
 | 10 | `rivalries.py` | 1,215 | ⚠️ **Derivations extracted 2026-08-13** → `get_rivalries_view()` + `get_head_to_head_losses()`, fixture-covered. **Page rewiring pending** |
