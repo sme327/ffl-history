@@ -1459,3 +1459,111 @@ def get_season_detail(season: int) -> dict:
 def get_all_seasons() -> list[int]:
     """Every season with recorded standings, newest first."""
     return sorted((int(s) for s in load_all()["standings"]["season"].unique()), reverse=True)
+
+
+# ── TIMELINE VIEW ─────────────────────────────────────────────────────────────
+# Lifted out of pages/league_timeline.py. The page's three controls are filters
+# rather than entity pickers, so this exposes fully enriched events plus a
+# grouping helper: the page filters then groups, and the static site will do the
+# same work client-side from the same payload.
+
+@st.cache_data
+def get_era_by_season() -> dict[int, dict]:
+    """season -> {name, color}, expanded from the era definitions."""
+    from utils import narratives
+
+    mapping: dict[int, dict] = {}
+    for era in narratives.LEAGUE_ERAS:
+        for year in range(era["start"], min(era["end"], CURRENT_SEASON) + 1):
+            mapping[year] = {"name": era["short"], "color": era["color"]}
+    return mapping
+
+
+def _clean(value) -> str:
+    """Timeline columns arrive from CSV with literal 'nan' for blanks."""
+    text = "" if value is None else str(value)
+    return "" if text in ("nan", "NaT", "None") else text
+
+
+@st.cache_data
+def get_timeline_view() -> dict:
+    """Every timeline event, enriched with its display taxonomy, plus totals."""
+    from utils import narratives
+
+    events_df = get_timeline_events()
+    eras = get_era_by_season()
+
+    events = []
+    for _, row in events_df.iterrows():
+        event_type = _clean(row.get("event_type")) or "note"
+        icon, color, label = narratives.TIMELINE_EVENT_META.get(
+            event_type, ("📝", "#6B7280", event_type.replace("_", " ").title())
+        )
+        importance = _clean(row.get("importance")) or "medium"
+        manager = _clean(row.get("manager"))
+        season = int(row["season"])
+
+        events.append({
+            "season": season,
+            "event_type": event_type,
+            "icon": icon,
+            "color": color,
+            "label": label,
+            "importance": importance,
+            "importance_label": narratives.IMPORTANCE_LABELS.get(importance, "MINOR"),
+            "importance_rank": narratives.IMPORTANCE_ORDER.get(importance, 1),
+            "title": _clean(row.get("title")),
+            "description": _clean(row.get("description")),
+            "manager": manager,
+            "manager_emoji": MANAGER_EMOJI.get(manager, "") if manager else "",
+            "franchise_id": _clean(row.get("franchise_id")),
+            "source": _clean(row.get("source")) or "computed",
+            "is_editorial": _clean(row.get("source")) == "editorial",
+            "era": eras.get(season, {"name": "", "color": "#6B7280"}),
+            "show_on_league_timeline": bool(row.get("show_on_league_timeline")),
+            "show_on_homepage": bool(row.get("show_on_homepage")),
+        })
+
+    editorial = sum(1 for e in events if e["is_editorial"])
+    return {
+        "events": events,
+        "stats": {
+            "total_events": len(events),
+            "total_seasons": len({e["season"] for e in events}),
+            "computed_events": len(events) - editorial,
+            "editorial_events": editorial,
+        },
+        "filter_groups": narratives.TIMELINE_FILTER_GROUPS,
+        "all_types": narratives.TIMELINE_ALL_TYPES,
+    }
+
+
+def group_timeline_by_season(events: list[dict], newest_first: bool = True) -> list[dict]:
+    """Group enriched events into the per-season blocks the timeline renders.
+
+    Pure function over the output of get_timeline_view() so the page and the
+    static site lay the timeline out the same way after filtering.
+    """
+    by_season: dict[int, list[dict]] = {}
+    for event in events:
+        by_season.setdefault(event["season"], []).append(event)
+
+    blocks = []
+    for season in sorted(by_season, reverse=newest_first):
+        # Stable within equal importance, so the CSV's own order is preserved.
+        season_events = sorted(by_season[season], key=lambda e: e["importance_rank"])
+        editorial = sum(1 for e in season_events if e["is_editorial"])
+        count_label = f"{len(season_events)} event{'s' if len(season_events) != 1 else ''}"
+        if editorial:
+            count_label += f" · {editorial} editorial"
+
+        blocks.append({
+            "season": season,
+            "era": season_events[0]["era"],
+            "count_label": count_label,
+            "event_count": len(season_events),
+            "editorial_count": editorial,
+            "high": [e for e in season_events if e["importance"] == "high"],
+            "other": [e for e in season_events if e["importance"] != "high"],
+        })
+    return blocks

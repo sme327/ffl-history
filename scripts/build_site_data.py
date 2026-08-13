@@ -123,7 +123,17 @@ def build(out: Path) -> None:
     # ── Champions & timeline ─────────────────────────────────────────────────
     champions = verify.frame("get_champions", D.get_champions())
     site.write("champions", records(champions))
-    site.write("timeline", records(verify.frame("get_timeline_events", D.get_timeline_events())))
+    verify.frame("get_timeline_events", D.get_timeline_events())
+    timeline = D.get_timeline_view()
+    if normalize(timeline) != load_fixture("get_timeline_view"):
+        raise SystemExit("\n  timeline does not match its fixture — refusing to emit.\n")
+    verify.checked += 1
+    site.write("timeline", {
+        **timeline,
+        "bySeason": D.group_timeline_by_season(
+            [e for e in timeline["events"] if e["show_on_league_timeline"]]
+        ),
+    })
 
     # ── Draft & keepers ──────────────────────────────────────────────────────
     site.write("draft", {
@@ -245,6 +255,7 @@ def build(out: Path) -> None:
 # that route from JSON alone.
 PAGE_LEVEL_WORK = {
     # season_archive.py: done 2026-08-13 -> utils.data.get_season_detail()
+    # league_timeline.py: done 2026-08-13 -> get_timeline_view() + group_timeline_by_season()
     "app.py": "home-page storylines: best season, title droughts, top scorer",
     "champions.py": "title-game context and dynasty framing",
     "franchise_profiles.py": "per-franchise season tables and lineage narrative",

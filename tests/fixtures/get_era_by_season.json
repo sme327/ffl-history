@@ -1,0 +1,330 @@
+{
+  "type": "dict",
+  "value": {
+    "2001": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Founding"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#D4AF37"
+        }
+      }
+    },
+    "2002": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Founding"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#D4AF37"
+        }
+      }
+    },
+    "2003": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Founding"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#D4AF37"
+        }
+      }
+    },
+    "2004": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Founding"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#D4AF37"
+        }
+      }
+    },
+    "2005": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Workhorse"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#22C55E"
+        }
+      }
+    },
+    "2006": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Workhorse"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#22C55E"
+        }
+      }
+    },
+    "2007": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Workhorse"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#22C55E"
+        }
+      }
+    },
+    "2008": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Workhorse"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#22C55E"
+        }
+      }
+    },
+    "2009": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Workhorse"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#22C55E"
+        }
+      }
+    },
+    "2010": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Keepers"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#A78BFA"
+        }
+      }
+    },
+    "2011": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Keepers"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#A78BFA"
+        }
+      }
+    },
+    "2012": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Keepers"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#A78BFA"
+        }
+      }
+    },
+    "2013": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Keepers"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#A78BFA"
+        }
+      }
+    },
+    "2014": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Keepers"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#A78BFA"
+        }
+      }
+    },
+    "2015": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Keepers"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#A78BFA"
+        }
+      }
+    },
+    "2016": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Modern"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#3B82F6"
+        }
+      }
+    },
+    "2017": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Modern"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#3B82F6"
+        }
+      }
+    },
+    "2018": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Modern"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#3B82F6"
+        }
+      }
+    },
+    "2019": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Modern"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#3B82F6"
+        }
+      }
+    },
+    "2020": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Modern"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#3B82F6"
+        }
+      }
+    },
+    "2021": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Modern"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#3B82F6"
+        }
+      }
+    },
+    "2022": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Modern"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#3B82F6"
+        }
+      }
+    },
+    "2023": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Modern"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#3B82F6"
+        }
+      }
+    },
+    "2024": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Modern"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#3B82F6"
+        }
+      }
+    },
+    "2025": {
+      "type": "dict",
+      "value": {
+        "name": {
+          "type": "scalar",
+          "value": "Modern"
+        },
+        "color": {
+          "type": "scalar",
+          "value": "#3B82F6"
+        }
+      }
+    }
+  }
+}

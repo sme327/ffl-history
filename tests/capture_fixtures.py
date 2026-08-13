@@ -105,6 +105,21 @@ def capture_seasons() -> None:
     print(f"  {'get_season_detail':26} {len(seasons)} seasons")
 
 
+def capture_timeline() -> None:
+    """Enriched timeline events and the season grouping.
+
+    Extracted from pages/league_timeline.py — covers the event taxonomy
+    (icons, colours, labels) and the era assignment as well as the events.
+    """
+    view = D.get_timeline_view()
+    dump("get_timeline_view", normalize(view))
+    dump("get_era_by_season", normalize({str(k): v for k, v in D.get_era_by_season().items()}))
+
+    shown = [e for e in view["events"] if e["show_on_league_timeline"]]
+    dump("group_timeline_by_season", normalize(D.group_timeline_by_season(shown)))
+    print(f"  {'get_timeline_view':26} {view['stats']['total_events']} events")
+
+
 def capture_rivalry_detail() -> None:
     riv = D.get_all_rivalries().sort_values("rs_games", ascending=False).head(TOP_RIVALRIES)
     pairs = [(row["mgr_a"], row["mgr_b"]) for _, row in riv.iterrows()]
@@ -123,6 +138,7 @@ def main() -> None:
     capture_by_manager()
     capture_by_franchise()
     capture_seasons()
+    capture_timeline()
     capture_rivalry_detail()
     print("\nWrote tests/fixtures/. Review the diff before committing.")
 

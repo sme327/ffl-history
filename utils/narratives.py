@@ -552,3 +552,42 @@ def season_narrative(
         )
 
     return f"{opener} {closer}"
+
+
+# ── TIMELINE TAXONOMY ──────────────────────────────────────────────────────────
+# What kinds of moments the league records, and how each is labelled. Lifted out
+# of pages/league_timeline.py so the page and the static build classify events
+# identically. (icon, colour, display label)
+
+TIMELINE_EVENT_META: dict[str, tuple[str, str, str]] = {
+    "championship":   ("🏆", "#D4AF37", "Championship"),
+    "dynasty":        ("👑", "#F5C518", "Dynasty"),
+    "runner_up":      ("🥈", "#A7B0BC", "Runner-Up"),
+    "steward_change": ("🔄", "#60A5FA", "Franchise Change"),
+    "record":         ("⚡", "#F59E0B", "Record"),
+    "milestone":      ("🏛️", "#34D399", "Milestone"),
+    "heartbreak":     ("💔", "#F87171", "Heartbreak"),
+    "breakthrough":   ("🎯", "#10B981", "Breakthrough"),
+    "collapse":       ("📉", "#EF4444", "Collapse"),
+    "rivalry":        ("⚔️", "#FB923C", "Rivalry"),
+    "draft":          ("📋", "#818CF8", "Draft"),
+    "keeper":         ("🔒", "#A78BFA", "Keeper"),
+    "rule_change":    ("📜", "#9CA3AF", "Rule Change"),
+    "alumni":         ("👤", "#6B7280", "Alumni"),
+    "note":           ("📝", "#9CA3AF", "Note"),
+}
+
+TIMELINE_FILTER_GROUPS: dict[str, list[str]] = {
+    "Championships":      ["championship", "dynasty", "runner_up"],
+    "Franchise Changes":  ["steward_change", "milestone", "alumni"],
+    "Records":            ["record"],
+    "Moments":            ["heartbreak", "breakthrough", "collapse", "rivalry", "note"],
+    "Draft & Keepers":    ["draft", "keeper", "rule_change"],
+}
+
+TIMELINE_ALL_TYPES: list[str] = [t for types in TIMELINE_FILTER_GROUPS.values() for t in types]
+
+IMPORTANCE_LABELS: dict[str, str] = {"high": "MAJOR", "medium": "NOTABLE", "low": "MINOR"}
+
+# Sort weight for laying out a season's events; unknown values sit with medium.
+IMPORTANCE_ORDER: dict[str, int] = {"high": 0, "medium": 1, "low": 2}

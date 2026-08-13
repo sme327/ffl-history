@@ -187,6 +187,19 @@ class TestRivalriesAndTimeline(FixtureAssertions):
     def test_timeline_events(self):
         self.assert_matches("get_timeline_events", D.get_timeline_events())
 
+    def test_era_by_season(self):
+        self.assert_matches(
+            "get_era_by_season", {str(k): v for k, v in D.get_era_by_season().items()}
+        )
+
+    def test_timeline_view(self):
+        """Covers the enrichment lifted out of pages/league_timeline.py."""
+        self.assert_matches("get_timeline_view", D.get_timeline_view())
+
+    def test_timeline_grouping(self):
+        shown = [e for e in D.get_timeline_view()["events"] if e["show_on_league_timeline"]]
+        self.assert_matches("group_timeline_by_season", D.group_timeline_by_season(shown))
+
     def test_h2h_detail(self):
         expected = load("get_h2h_detail")
         actual = {"type": "dict", "value": {}}
