@@ -4,7 +4,7 @@ import pandas as pd
 from utils.data import (
     load_all, get_franchise_stats, get_franchise_steward_periods,
     get_champions, get_playoff_result_for_team,
-    get_franchise_legends, get_draft_picks_with_pos,
+    get_franchise_legends, get_franchise_profile, get_draft_picks_with_pos,
     MANAGER_EMOJI, MANAGER_COLORS, CURRENT_SEASON,
 )
 from utils.styles import inject_css, render_nav, render_page_footer, metric_card, html_table
@@ -129,177 +129,42 @@ periods = steward_periods[steward_periods["franchise_id"] == franchise_id].reset
 st.markdown('<hr class="tl-divider-full">', unsafe_allow_html=True)
 
 # ══════════════════════════════════════════════════════════════════════════════
-# FRANCHISE DATA COMPUTATION
+# FRANCHISE DATA — all derivation lives in utils.data.get_franchise_profile()
 # ══════════════════════════════════════════════════════════════════════════════
 
-fh_this = fh[fh["franchise_id"] == franchise_id].sort_values("season")
-all_fran_seasons = sorted(fh_this["season"].unique().tolist())
-est = int(fstat["established"])
-curr_mgr = str(fstat["current_manager"]) if pd.notna(fstat.get("current_manager")) else periods.iloc[-1]["manager_name"]
-first_mgr = periods.iloc[0]["manager_name"]
+profile = get_franchise_profile(franchise_id)
+_totals = profile["totals"]
 
-# Build franchise team-season mapping
-fms_rows = []
-for _, frow in fh_this.iterrows():
-    s = int(frow["season"])
-    mgr = frow["manager_name"]
-    tn = tnh[(tnh["canonical_name"] == mgr) & (tnh["season"] == s)]
-    if len(tn) == 0:
-        continue
-    fms_rows.append({"season": s, "mgr": mgr, "team_name": tn.iloc[0]["team_name"]})
-fms_df = pd.DataFrame(fms_rows) if fms_rows else pd.DataFrame(columns=["season", "mgr", "team_name"])
+est = profile["established"]
+first_mgr = profile["first_manager"]
+curr_mgr = profile["current_manager"]
+all_fran_seasons = profile["seasons"]
+fran_champ_seasons = profile["championship_seasons"]
+fran_ru_seasons = profile["runner_up_seasons"]
+fran_3rd_seasons = set(profile["third_place_seasons"])
+pl_seasons = set(profile["playoff_seasons"])
+n_finals_apps = _totals["finals_apps"]
+max_streak = _totals["longest_playoff_streak"]
+winning_seasons = _totals["winning_seasons"]
+best_steward_name = profile["best_steward"]
 
-# Regular season matchups for this franchise
-fran_rs = (
-    wm[~wm["is_bye"] & ~wm["is_playoff"]].merge(
-        fms_df[["season", "team_name"]], on=["season", "team_name"], how="inner"
-    )
-    if len(fms_df) > 0 else pd.DataFrame(columns=wm.columns)
-)
+mgr_by_season = {r["season"]: r["manager"] for r in profile["season_records"]}
+champ_steward_map = {s: mgr_by_season.get(s, "") for s in fran_champ_seasons}
 
-# Playoff bracket appearances
-pg_champ = pg[pg["bracket"] == "championship"].copy()
-pl_t1 = (
-    pg_champ.merge(fms_df[["season", "team_name"]].rename(columns={"team_name": "team_1"}),
-                   on=["season", "team_1"], how="inner")
-    if len(fms_df) > 0 else pg_champ.iloc[0:0]
-)
-pl_t2 = (
-    pg_champ.merge(fms_df[["season", "team_name"]].rename(columns={"team_name": "team_2"}),
-                   on=["season", "team_2"], how="inner")
-    if len(fms_df) > 0 else pg_champ.iloc[0:0]
-)
-pl_seasons = set(pl_t1["season"].tolist() + pl_t2["season"].tolist())
-
-# Finals appearances (championship game only)
-fin_t1 = pl_t1[pl_t1["game_type"] == "final"]
-fin_t2 = pl_t2[pl_t2["game_type"] == "final"]
-n_finals_apps = len(set(fin_t1["season"].tolist() + fin_t2["season"].tolist()))
-
-# 3rd place finishes
-trd_t1 = pl_t1[(pl_t1["game_type"] == "3rd_place") & (pl_t1["winner"] == pl_t1["team_1"])]
-trd_t2 = pl_t2[(pl_t2["game_type"] == "3rd_place") & (pl_t2["winner"] == pl_t2["team_2"])]
-fran_3rd_seasons = set(trd_t1["season"].tolist() + trd_t2["season"].tolist())
-
-# Championship and runner-up seasons for this franchise
-fran_champ_seasons = sorted(
-    fms_df.merge(
-        champions[["season", "champion_team"]].rename(columns={"champion_team": "team_name"}),
-        on=["season", "team_name"], how="inner",
-    )["season"].tolist()
-) if len(fms_df) > 0 else []
-
-fran_ru_seasons = sorted(
-    fms_df.merge(
-        champions[["season", "runner_up_team"]].rename(columns={"runner_up_team": "team_name"}),
-        on=["season", "team_name"], how="inner",
-    )["season"].tolist()
-) if len(fms_df) > 0 else []
-
-# Longest playoff streak
-max_streak = 0
-cur_streak = 0
-for s in all_fran_seasons:
-    if s in pl_seasons:
-        cur_streak += 1
-        max_streak = max(max_streak, cur_streak)
-    else:
-        cur_streak = 0
-
-# Per-season RS records
-szn_records = (
-    fran_rs.groupby("season").agg(
-        w=("result", lambda x: (x == "Win").sum()),
-        l=("result", lambda x: (x == "Loss").sum()),
-        pf=("team_score", "sum"),
-    ).reset_index()
-    if len(fran_rs) > 0 else pd.DataFrame(columns=["season", "w", "l", "pf"])
-)
-winning_seasons = int((szn_records["w"] > szn_records["l"]).sum()) if len(szn_records) > 0 else 0
-best_rec_row = szn_records.loc[szn_records["w"].idxmax()] if len(szn_records) > 0 else None
-most_pf_row = szn_records.loc[szn_records["pf"].idxmax()] if len(szn_records) > 0 else None
-best_week_row = fran_rs.loc[fran_rs["team_score"].idxmax()] if len(fran_rs) > 0 else None
-
-# Steward championships (inherited from franchise)
-champ_by_mgr: dict[str, int] = {}
-for _, row in champions.iterrows():
-    fh_szn = fh[(fh["franchise_id"] == franchise_id) & (fh["season"] == row["season"])]
-    if len(fh_szn) == 0:
-        continue
-    mgr = fh_szn.iloc[0]["manager_name"]
-    tn_row = tnh[(tnh["canonical_name"] == mgr) & (tnh["season"] == row["season"])]
-    if len(tn_row) == 0:
-        continue
-    if tn_row.iloc[0]["team_name"] == row["champion_team"]:
-        champ_by_mgr[mgr] = champ_by_mgr.get(mgr, 0) + 1
-
-# Per-steward stats
-steward_stats_map: dict[str, dict] = {}
-for _, p in periods.iterrows():
-    mgr = p["manager_name"]
-    mgr_szns = set(fh_this[fh_this["manager_name"] == mgr]["season"].tolist())
-    mgr_rs = fran_rs[fran_rs["season"].isin(mgr_szns)]
-    w = int((mgr_rs["result"] == "Win").sum())
-    l = int((mgr_rs["result"] == "Loss").sum())
-    steward_stats_map[mgr] = {
-        "w": w, "l": l,
-        "pl_apps": len(pl_seasons & mgr_szns),
-        "champs": champ_by_mgr.get(mgr, 0),
-        "seasons": int(p["years"]),
+steward_stats_map = {
+    st_["manager"]: {
+        "w": st_["wins"], "l": st_["losses"],
+        "pl_apps": st_["playoff_apps"], "champs": st_["championships"],
+        "seasons": st_["seasons"],
     }
+    for st_ in profile["stewards"]
+}
 
-# Map championship seasons to the steward who earned them
-champ_steward_map: dict[int, str] = {}
-for s in fran_champ_seasons:
-    row_df = fms_df[fms_df["season"] == s]
-    if len(row_df) > 0:
-        champ_steward_map[s] = row_df.iloc[0]["mgr"]
-
-# Most successful steward
-best_steward_name = (
-    max(steward_stats_map.items(), key=lambda x: (x[1]["champs"], x[1]["pl_apps"], x[1]["w"]))[0]
-    if steward_stats_map else None
-)
-
-# Rivalries (RS head-to-head)
-if len(fran_rs) > 0:
-    fran_rs_r = fran_rs.copy()
-    fran_rs_r["opp_mgr"] = fran_rs_r.apply(
-        lambda r: opp_lookup.get((int(r["season"]), r["opponent"]), r["opponent"]), axis=1
-    )
-    rs_rivalry = (
-        fran_rs_r.groupby("opp_mgr")
-        .agg(games=("result", "count"), wins=("result", lambda x: (x == "Win").sum()))
-        .reset_index()
-    )
-    rs_rivalry["losses"] = rs_rivalry["games"] - rs_rivalry["wins"]
-else:
-    rs_rivalry = pd.DataFrame(columns=["opp_mgr", "games", "wins", "losses"])
-
-# Playoff head-to-head
-pl_game_rows = []
-for _, g in pl_t1.iterrows():
-    opp = opp_lookup.get((int(g["season"]), g["team_2"]), g["team_2"])
-    pl_game_rows.append({"opp_mgr": opp, "won": g["winner"] == g["team_1"]})
-for _, g in pl_t2.iterrows():
-    opp = opp_lookup.get((int(g["season"]), g["team_1"]), g["team_1"])
-    pl_game_rows.append({"opp_mgr": opp, "won": g["winner"] == g["team_2"]})
-pl_rivalry_df = pd.DataFrame(pl_game_rows) if pl_game_rows else pd.DataFrame(columns=["opp_mgr", "won"])
-pl_rivalry = (
-    pl_rivalry_df.groupby("opp_mgr")
-    .agg(pl_games=("won", "count"), pl_wins=("won", "sum"))
-    .reset_index()
-    if len(pl_rivalry_df) > 0 else pd.DataFrame(columns=["opp_mgr", "pl_games", "pl_wins"])
-)
-
-# Combined rivalry table (top rivals by games played)
-rivalry_combined = (
-    rs_rivalry.merge(pl_rivalry, on="opp_mgr", how="left")
-    .fillna(0)
-    .sort_values("games", ascending=False)
-    .head(6)
-    .reset_index(drop=True)
-)
+_peaks = profile["peaks"]
+best_rec_row = _peaks["best_record"]
+most_pf_row = _peaks["most_points"]
+best_week_row = _peaks["best_week"]
+rivalry_combined = profile["rivals"]
 
 # ── FRANCHISE HERO CARD ─────────────────────────────────────────────────────────
 st.markdown(
@@ -365,131 +230,8 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Algorithmic story generation
-_story_parts: list[str] = []
-_n_stewards = len(periods)
-
-def _join_years(yrs):
-    strs = [str(y) for y in yrs]
-    if len(strs) <= 2:
-        return " and ".join(strs)
-    return ", ".join(strs[:-1]) + ", and " + strs[-1]
-
-if _n_stewards == 1:
-    ss = steward_stats_map.get(first_mgr, {})
-    pl, w, l = ss.get("pl_apps", 0), ss.get("w", 0), ss.get("l", 0)
-    champs = ss.get("champs", 0)
-    _szns_total = len(all_fran_seasons)
-    if champs > 0:
-        yr_str = _join_years(fran_champ_seasons)
-        _story_parts.append(
-            f"Founded in {est}, this franchise has been steered by {first_mgr} from its very first season."
-        )
-        _story_parts.append(
-            f"In {_szns_total} seasons, {first_mgr} has built an enduring legacy: "
-            f"{champs} championship{'s' if champs > 1 else ''} ({yr_str}), "
-            f"{pl} playoff appearances, and a presence that defines the standard in this league."
-        )
-    else:
-        _story_parts.append(
-            f"Founded in {est}, this franchise has been managed by {first_mgr} throughout its entire existence."
-        )
-        if pl >= 4:
-            _story_parts.append(
-                f"{first_mgr} has kept the franchise in playoff contention with {pl} postseason appearances "
-                f"across {_szns_total} seasons, compiling a {w}-{l} regular season record."
-            )
-        elif pl > 0:
-            _story_parts.append(
-                f"{first_mgr} has compiled a {w}-{l} regular season record with {pl} playoff appearance{'s' if pl != 1 else ''}."
-            )
-        else:
-            _story_parts.append(
-                f"{first_mgr} has compiled a {w}-{l} regular season record across {_szns_total} seasons."
-            )
-        _story_parts.append("The franchise's first title remains the next chapter yet to be written.")
-else:
-    _story_parts.append(f"Founded in {est} under {first_mgr}.")
-    _had_pl_narrative = False
-    _total_champs_so_far = 0
-
-    for idx, (_, _p) in enumerate(periods.iterrows()):
-        _mgr = _p["manager_name"]
-        _ss = steward_stats_map.get(_mgr, {})
-        _szns = _ss.get("seasons", 1)
-        _pl = _ss.get("pl_apps", 0)
-        _champs = _ss.get("champs", 0)
-        _w, _l = _ss.get("w", 0), _ss.get("l", 0)
-        _champ_yrs = [s for s in fran_champ_seasons if champ_steward_map.get(s) == _mgr]
-        _is_current = (_mgr == curr_mgr)
-
-        if _is_current:
-            if _champs > 0:
-                _yr_str = _join_years(_champ_yrs)
-                if _total_champs_so_far == 0:
-                    _story_parts.append(
-                        f"{_mgr} delivered the franchise's first championship{'s' if _champs > 1 else ''} ({_yr_str}) and continues to lead today."
-                    )
-                else:
-                    _story_parts.append(
-                        f"{_mgr} has added {'another' if _champs == 1 else str(_champs) + ' more'} title{'s' if _champs > 1 else ''} ({_yr_str}), continuing the tradition."
-                    )
-            elif total_champs == 0:
-                _story_parts.append(f"Today the franchise continues under {_mgr}, still searching for its first title.")
-            else:
-                _story_parts.append(f"Today the franchise continues under {_mgr}.")
-            _total_champs_so_far += _champs
-            continue
-
-        if idx == 0:
-            # First steward — add sentence only for notably strong tenures
-            if _champs > 0:
-                _yr_str = _join_years(_champ_yrs)
-                _story_parts.append(f"{_mgr} launched the franchise with immediate success, winning in {_yr_str}.")
-                _total_champs_so_far += _champs
-            elif _pl >= 4 and _szns >= 5:
-                _story_parts.append(
-                    f"The early years under {_mgr} built a competitive foundation with {_pl} playoff appearances across {_szns} seasons."
-                )
-        else:
-            # Middle steward
-            if _champs > 0:
-                _yr_str = _join_years(_champ_yrs)
-                _years_waiting = min(_champ_yrs) - est
-                _finally = "finally " if _years_waiting >= 15 and _total_champs_so_far == 0 else ""
-                _story_parts.append(
-                    f"{_mgr} {_finally}delivered the championship{'s' if _champs > 1 else ''} this franchise had been building toward, winning in {_yr_str}."
-                )
-                _total_champs_so_far += _champs
-            elif _pl >= 6 and not _had_pl_narrative:
-                _story_parts.append(
-                    f"{_mgr} transformed the franchise into a perennial playoff contender, qualifying {_pl} times across {_szns} seasons."
-                )
-                _had_pl_narrative = True
-            elif _pl >= 6 and _had_pl_narrative:
-                _story_parts.append(
-                    f"{_mgr} extended that run even further, reaching the postseason {_pl} times in {_szns} seasons — yet the title remained out of reach."
-                )
-            elif _pl >= 4 and not _had_pl_narrative:
-                _story_parts.append(
-                    f"Under {_mgr}, the franchise reached the postseason {_pl} times in {_szns} seasons, though a title remained elusive."
-                )
-                _had_pl_narrative = True
-            elif _pl >= 4 and _had_pl_narrative:
-                _story_parts.append(
-                    f"{_mgr} kept the franchise in contention with {_pl} more playoff appearances across {_szns} seasons."
-                )
-            elif _pl >= 2 and _szns >= 4:
-                _story_parts.append(
-                    f"{_mgr} contributed {_szns} seasons and a {_w}-{_l} regular season record to the franchise's history."
-                )
-            elif _szns >= 5:
-                _story_parts.append(f"The {_mgr} era spanned {_szns} seasons of the franchise's evolution.")
-
-_story_parts = _story_parts[:6]
-
 st.markdown(
-    f'<div class="tl-franchise-story">{" ".join(_story_parts)}</div>',
+    f'<div class="tl-franchise-story">{profile["story"]}</div>',
     unsafe_allow_html=True,
 )
 
@@ -513,7 +255,7 @@ for i, (_, p) in enumerate(periods.iterrows()):
     ss = steward_stats_map.get(mgr, {})
     w, l = ss.get("w", 0), ss.get("l", 0)
     pl = ss.get("pl_apps", 0)
-    champs = champ_by_mgr.get(mgr, 0)
+    champs = steward_stats_map.get(mgr, {}).get("champs", 0)
     szns = ss.get("seasons", 0)
     trophy_html = f'<div style="font-size:1rem;margin-top:0.3rem;">{"🏆" * champs}</div>' if champs else ""
     tl_items_html.append(
@@ -562,7 +304,7 @@ for _, p in periods.iterrows():
     pl_apps_era = ss.get("pl_apps", 0)
     win_pct_era = f"{w / (w + l):.3f}" if (w + l) > 0 else "—"
     pl_pct_era = f"{pl_apps_era / yrs:.0%}" if yrs > 0 else "—"
-    champs = champ_by_mgr.get(mgr, 0)
+    champs = steward_stats_map.get(mgr, {}).get("champs", 0)
     champ_str = "🏆" * champs if champs else "—"
     e = MANAGER_EMOJI.get(mgr, "")
     steward_rows.append([
@@ -604,16 +346,16 @@ def _record_card(icon, label, headline, sub=""):
 rec_cards = []
 
 if best_rec_row is not None:
-    br_w, br_l, br_szn = int(best_rec_row["w"]), int(best_rec_row["l"]), int(best_rec_row["season"])
+    br_w, br_l, br_szn = best_rec_row["wins"], best_rec_row["losses"], best_rec_row["season"]
     rec_cards.append(_record_card("📋", "Best Season Record", f"{br_w}-{br_l}", f"{br_szn} Season"))
 
 if most_pf_row is not None:
-    pf_val, pf_szn = float(most_pf_row["pf"]), int(most_pf_row["season"])
+    pf_val, pf_szn = most_pf_row["points_for"], most_pf_row["season"]
     rec_cards.append(_record_card("🎯", "Most Points in a Season", f"{pf_val:,.1f}", f"{pf_szn} Season"))
 
 if best_week_row is not None:
-    bw_score, bw_szn, bw_week = float(best_week_row["team_score"]), int(best_week_row["season"]), int(best_week_row["week"])
-    bw_team = best_week_row["team_name"]
+    bw_score, bw_szn, bw_week = best_week_row["points"], best_week_row["season"], best_week_row["week"]
+    bw_team = mgr_by_season.get(bw_szn, "")
     rec_cards.append(_record_card("⚡", "Highest Scoring Week", f"{bw_score:.2f}", f"Week {bw_week}, {bw_szn} · {bw_team}"))
 
 if max_streak > 0:
@@ -660,12 +402,12 @@ milestones.append((est, "🏛️", "Franchise Founded", f"Established under {fir
 
 if pl_seasons:
     fp = min(pl_seasons)
-    fp_mgr = fms_df[fms_df["season"] == fp]["mgr"].values[0] if len(fms_df[fms_df["season"] == fp]) > 0 else ""
+    fp_mgr = mgr_by_season.get(fp, "")
     milestones.append((fp, "🏈", "First Playoff Appearance", f"{fp_mgr} earns the franchise's first postseason berth"))
 
 if fran_ru_seasons:
     ru0 = fran_ru_seasons[0]
-    ru_mgr = fms_df[fms_df["season"] == ru0]["mgr"].values[0] if len(fms_df[fms_df["season"] == ru0]) > 0 else ""
+    ru_mgr = mgr_by_season.get(ru0, "")
     milestones.append((ru0, "🥈", "First Finals Appearance", f"{ru_mgr} reaches the championship game"))
 
 for i, (_, p) in enumerate(periods.iterrows()):
@@ -674,8 +416,8 @@ for i, (_, p) in enumerate(periods.iterrows()):
     milestones.append((int(p["start_season"]), "🔄", f"{p['manager_name']} Era Begins", "Franchise changes hands"))
 
 if best_rec_row is not None:
-    br_szn = int(best_rec_row["season"])
-    br_mgr = fms_df[fms_df["season"] == br_szn]["mgr"].values[0] if len(fms_df[fms_df["season"] == br_szn]) > 0 else ""
+    br_szn = best_rec_row["season"]
+    br_mgr = mgr_by_season.get(br_szn, "")
     milestones.append((br_szn, "📈", "Best Regular Season", f"{br_mgr} posts the franchise's finest regular-season record"))
 
 if fran_champ_seasons:
@@ -773,13 +515,13 @@ if len(rivalry_combined) > 0:
     _, rival_col, _ = st.columns([1, 4, 1])
     with rival_col:
         rival_html = '<div class="tl-card" style="padding:0;">'
-        for _, rv in rivalry_combined.iterrows():
-            opp = str(rv["opp_mgr"])
+        for rv in rivalry_combined:
+            opp = rv["opponent"]
             opp_e = MANAGER_EMOJI.get(opp, "👤")
-            rs_w, rs_l = int(rv["wins"]), int(rv["losses"])
-            rs_games = int(rv["games"])
-            pl_g = int(rv.get("pl_games", 0))
-            pl_w = int(rv.get("pl_wins", 0))
+            rs_w, rs_l = rv["wins"], rv["losses"]
+            rs_games = rv["games"]
+            pl_g = rv["playoff_games"]
+            pl_w = rv["playoff_wins"]
             pl_l = pl_g - pl_w
             pl_str = f"Playoffs: {pl_w}-{pl_l}" if pl_g > 0 else "No playoff meetings"
             wpc = rs_w / rs_games if rs_games > 0 else 0
@@ -823,20 +565,14 @@ steward_color_map = {
 std_lookup = std.set_index(["season", "team_name"])["rank"].to_dict()
 
 szn_rows = []
-fh_szn_sorted = fh_this.sort_values("season", ascending=False)
 
-for _, frow in fh_szn_sorted.iterrows():
-    season = int(frow["season"])
-    mgr = frow["manager_name"]
-    team_row = tnh[(tnh["canonical_name"] == mgr) & (tnh["season"] == season)]
-    if len(team_row) == 0:
-        continue
-    team = team_row.iloc[0]["team_name"]
-
-    rs = wm[(wm["season"] == season) & (wm["team_name"] == team) & (~wm["is_bye"]) & (~wm["is_playoff"])]
-    w = int((rs["result"] == "Win").sum())
-    l = int((rs["result"] == "Loss").sum())
-    pf = round(float(rs["team_score"].dropna().sum()), 2)
+# Per-season records come from the extracted profile — the page used to
+# recompute the same win/loss/points totals here.
+for record in sorted(profile["season_records"], key=lambda r: -r["season"]):
+    season = record["season"]
+    mgr = record["manager"]
+    team = record["team_name"]
+    w, l, pf = record["wins"], record["losses"], record["points_for"]
 
     rs_rank = std_lookup.get((season, team), "—")
     seed_str = f"#{rs_rank}" if rs_rank != "—" else "—"
