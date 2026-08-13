@@ -112,6 +112,15 @@ def capture_home() -> None:
     print(f"  {'get_home_view':26} home")
 
 
+def capture_franchise_profiles() -> None:
+    """Per-franchise history and the generated legacy story —
+    lifted out of pages/franchise_profiles.py."""
+    ids = sorted(D.get_franchise_stats()["franchise_id"].tolist())
+    dump("get_franchise_profile", {"type": "dict",
+                                   "value": {f: normalize(D.get_franchise_profile(f)) for f in ids}})
+    print(f"  {'get_franchise_profile':26} {len(ids)} franchises")
+
+
 def capture_draft_center() -> None:
     """Player legends, manager draft DNA and round-one history —
     lifted out of pages/draft_center.py."""
@@ -187,6 +196,7 @@ def main() -> None:
     capture_by_franchise()
     capture_seasons()
     capture_home()
+    capture_franchise_profiles()
     capture_draft_center()
     capture_manager_profiles()
     capture_champions_view()

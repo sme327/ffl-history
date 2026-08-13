@@ -761,3 +761,161 @@ def draft_archetype(shares: dict, *, keeper_rate: float, championships: int) -> 
     if defense >= 0.15:
         return "OLD-SCHOOL DRAFTER", "#9CA3AF", "Defenses were part of the strategy. Old school."
     return "BALANCED ARCHITECT", "#A7B0BC", "No tells. Adapted to the board every single year."
+
+
+# ── FRANCHISE STORY ───────────────────────────────────────────────────────────
+
+def _join_years(years: list[int]) -> str:
+    parts = [str(y) for y in years]
+    if len(parts) <= 2:
+        return " and ".join(parts)
+    return ", ".join(parts[:-1]) + ", and " + parts[-1]
+
+
+def franchise_story(
+    *,
+    established: int,
+    first_manager: str,
+    current_manager: str,
+    stewards: list[dict],
+    championship_seasons: list[int],
+    total_seasons: int,
+    total_championships: int,
+) -> str:
+    """The franchise's legacy paragraph, assembled steward by steward.
+
+    `stewards` is chronological, each carrying manager, seasons, playoff_apps,
+    championships, championship_years, wins and losses. Lifted out of
+    pages/franchise_profiles.py; capped at six sentences as the original was.
+    """
+    parts: list[str] = []
+
+    if len(stewards) == 1:
+        only = stewards[0]
+        wins, losses = only["wins"], only["losses"]
+        playoffs, titles = only["playoff_apps"], only["championships"]
+
+        if titles > 0:
+            parts.append(
+                f"Founded in {established}, this franchise has been steered by "
+                f"{first_manager} from its very first season."
+            )
+            parts.append(
+                f"In {total_seasons} seasons, {first_manager} has built an enduring legacy: "
+                f"{titles} championship{'s' if titles > 1 else ''} "
+                f"({_join_years(championship_seasons)}), {playoffs} playoff appearances, and a "
+                f"presence that defines the standard in this league."
+            )
+        else:
+            parts.append(
+                f"Founded in {established}, this franchise has been managed by "
+                f"{first_manager} throughout its entire existence."
+            )
+            if playoffs >= 4:
+                parts.append(
+                    f"{first_manager} has kept the franchise in playoff contention with "
+                    f"{playoffs} postseason appearances across {total_seasons} seasons, "
+                    f"compiling a {wins}-{losses} regular season record."
+                )
+            elif playoffs > 0:
+                parts.append(
+                    f"{first_manager} has compiled a {wins}-{losses} regular season record with "
+                    f"{playoffs} playoff appearance{'s' if playoffs != 1 else ''}."
+                )
+            else:
+                parts.append(
+                    f"{first_manager} has compiled a {wins}-{losses} regular season record "
+                    f"across {total_seasons} seasons."
+                )
+            parts.append("The franchise's first title remains the next chapter yet to be written.")
+
+        return " ".join(parts[:6])
+
+    parts.append(f"Founded in {established} under {first_manager}.")
+    had_playoff_line = False
+    titles_so_far = 0
+
+    for index, steward in enumerate(stewards):
+        manager = steward["manager"]
+        seasons, playoffs = steward["seasons"], steward["playoff_apps"]
+        titles, wins, losses = steward["championships"], steward["wins"], steward["losses"]
+        years = steward["championship_years"]
+
+        if manager == current_manager:
+            if titles > 0:
+                if titles_so_far == 0:
+                    parts.append(
+                        f"{manager} delivered the franchise's first "
+                        f"championship{'s' if titles > 1 else ''} ({_join_years(years)}) "
+                        f"and continues to lead today."
+                    )
+                else:
+                    more = "another" if titles == 1 else f"{titles} more"
+                    parts.append(
+                        f"{manager} has added {more} title{'s' if titles > 1 else ''} "
+                        f"({_join_years(years)}), continuing the tradition."
+                    )
+            elif total_championships == 0:
+                parts.append(
+                    f"Today the franchise continues under {manager}, "
+                    f"still searching for its first title."
+                )
+            else:
+                parts.append(f"Today the franchise continues under {manager}.")
+            titles_so_far += titles
+            continue
+
+        if index == 0:
+            # First steward — only notable tenures earn a sentence.
+            if titles > 0:
+                parts.append(
+                    f"{manager} launched the franchise with immediate success, "
+                    f"winning in {_join_years(years)}."
+                )
+                titles_so_far += titles
+            elif playoffs >= 4 and seasons >= 5:
+                parts.append(
+                    f"The early years under {manager} built a competitive foundation with "
+                    f"{playoffs} playoff appearances across {seasons} seasons."
+                )
+        else:
+            if titles > 0:
+                waited = min(years) - established
+                finally_ = "finally " if waited >= 15 and titles_so_far == 0 else ""
+                parts.append(
+                    f"{manager} {finally_}delivered the "
+                    f"championship{'s' if titles > 1 else ''} this franchise had been "
+                    f"building toward, winning in {_join_years(years)}."
+                )
+                titles_so_far += titles
+            elif playoffs >= 6 and not had_playoff_line:
+                parts.append(
+                    f"{manager} transformed the franchise into a perennial playoff contender, "
+                    f"qualifying {playoffs} times across {seasons} seasons."
+                )
+                had_playoff_line = True
+            elif playoffs >= 6:
+                parts.append(
+                    f"{manager} extended that run even further, reaching the postseason "
+                    f"{playoffs} times in {seasons} seasons — yet the title remained out of reach."
+                )
+            elif playoffs >= 4 and not had_playoff_line:
+                parts.append(
+                    f"Under {manager}, the franchise reached the postseason {playoffs} times "
+                    f"in {seasons} seasons, though a title remained elusive."
+                )
+                had_playoff_line = True
+            elif playoffs >= 4:
+                parts.append(
+                    f"{manager} kept the franchise in contention with {playoffs} more "
+                    f"playoff appearances across {seasons} seasons."
+                )
+            elif playoffs >= 2 and seasons >= 4:
+                parts.append(
+                    f"{manager} contributed {seasons} seasons and a {wins}-{losses} "
+                    f"regular season record to the franchise's history."
+                )
+            elif seasons >= 5:
+                parts.append(f"The {manager} era spanned {seasons} seasons of the franchise's evolution.")
+
+    return " ".join(parts[:6])

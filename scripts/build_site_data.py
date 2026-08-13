@@ -205,8 +205,7 @@ def build(out: Path) -> None:
         site.write(f"franchises/{fid}", {
             "id": fid,
             "stats": row,
-            "stewards": [s for s in stewards if s["franchise_id"] == fid],
-            "legends": D.get_franchise_legends(fid),
+            **D.get_franchise_profile(fid),
         })
     site.write("franchises/index", fran_index)
 
@@ -282,7 +281,8 @@ PAGE_LEVEL_WORK = {
     # league_timeline.py: done 2026-08-13 -> get_timeline_view() + group_timeline_by_season()
     # app.py: done 2026-08-13 -> get_home_view()
     # champions.py: done 2026-08-13 -> get_champions_view()
-    "franchise_profiles.py": "per-franchise season tables and lineage narrative",
+    # franchise_profiles.py: derivations extracted 2026-08-13 -> get_franchise_profile(); page rewiring pending
+    "franchise_profiles.py (page)": "rewire to get_franchise_profile()",
     # league_history.py: done 2026-08-13 -> get_league_history_view()
     # manager_profiles.py: done 2026-08-13 -> get_manager_profile()
     "rivalries.py": "elimination/heartbreak sections built from raw frames",

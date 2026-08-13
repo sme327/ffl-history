@@ -2571,3 +2571,204 @@ def get_draft_loyalty_board(position_filter: str = "All Players", limit: int = 2
         key=lambda r: (-r["total_seasons"], r["player_name"]),
     )
     return rows[:limit]
+
+
+# ── FRANCHISE PROFILES ────────────────────────────────────────────────────────
+# Lifted out of pages/franchise_profiles.py, which computed ~175 lines of
+# per-franchise history inline. The rivalry table was ranked by games with the
+# default non-stable sort; it now breaks ties explicitly.
+
+@st.cache_data
+def get_franchise_profile(franchise_id: str) -> dict:
+    from utils import narratives
+
+    data = load_all()
+    history = data["franchise_history"]
+    tnh = data["team_name_history"]
+    weekly = data["weekly_matchups"]
+    playoff_games = data["playoff_games"]
+    champions = get_champions()
+
+    stats_row = get_franchise_stats().set_index("franchise_id").loc[franchise_id]
+    periods = get_franchise_steward_periods()
+    periods = periods[periods["franchise_id"] == franchise_id].sort_values("start_season")
+
+    mine = history[history["franchise_id"] == franchise_id].sort_values("season")
+    all_seasons = sorted(int(s) for s in mine["season"].unique())
+    established = int(stats_row["established"])
+    first_manager = periods.iloc[0]["manager_name"]
+    current_manager = (
+        str(stats_row["current_manager"]) if pd.notna(stats_row.get("current_manager"))
+        else periods.iloc[-1]["manager_name"]
+    )
+    opponent_manager = tnh.set_index(["season", "team_name"])["canonical_name"].to_dict()
+
+    # ── The franchise's team in each season ──────────────────────────────────
+    team_seasons = []
+    for _, row in mine.iterrows():
+        season, manager = int(row["season"]), row["manager_name"]
+        named = tnh[(tnh["canonical_name"] == manager) & (tnh["season"] == season)]
+        if len(named):
+            team_seasons.append({
+                "season": season, "manager": manager, "team_name": named.iloc[0]["team_name"],
+            })
+    team_by_season = {t["season"]: t for t in team_seasons}
+    owns = {(t["season"], t["team_name"]) for t in team_seasons}
+
+    regular = weekly[
+        ~weekly["is_bye"].astype(bool) & ~weekly["is_playoff"].astype(bool)
+    ].copy()
+    regular = regular[[(int(s), t) in owns for s, t in zip(regular["season"], regular["team_name"])]]
+
+    # ── Postseason ───────────────────────────────────────────────────────────
+    bracket = playoff_games[playoff_games["bracket"] == "championship"]
+    appearances, finals, third_places, playoff_games_played = set(), set(), set(), []
+    for _, g in bracket.iterrows():
+        season = int(g["season"])
+        team = team_by_season.get(season, {}).get("team_name")
+        if team is None:
+            continue
+        for side, other in (("team_1", "team_2"), ("team_2", "team_1")):
+            if g[side] != team:
+                continue
+            appearances.add(season)
+            if g["game_type"] == "final":
+                finals.add(season)
+            if g["game_type"] == "3rd_place" and g["winner"] == team:
+                third_places.add(season)
+            playoff_games_played.append({
+                "opponent": opponent_manager.get((season, g[other]), g[other]),
+                "won": g["winner"] == team,
+            })
+
+    champion_seasons = sorted(
+        int(r["season"]) for _, r in champions.iterrows()
+        if team_by_season.get(int(r["season"]), {}).get("team_name") == r["champion_team"]
+    )
+    runner_up_seasons = sorted(
+        int(r["season"]) for _, r in champions.iterrows()
+        if team_by_season.get(int(r["season"]), {}).get("team_name") == r["runner_up_team"]
+    )
+
+    longest_streak = streak = 0
+    for season in all_seasons:
+        streak = streak + 1 if season in appearances else 0
+        longest_streak = max(longest_streak, streak)
+
+    # ── Per-season records ───────────────────────────────────────────────────
+    season_records = []
+    for season in all_seasons:
+        games = regular[regular["season"] == season]
+        if not len(games):
+            continue
+        season_records.append({
+            "season": season,
+            "manager": team_by_season.get(season, {}).get("manager"),
+            "team_name": team_by_season.get(season, {}).get("team_name"),
+            "wins": int((games["result"] == "Win").sum()),
+            "losses": int((games["result"] == "Loss").sum()),
+            "points_for": round(float(games["team_score"].sum()), 2),
+        })
+
+    def _peak(key):
+        if not season_records:
+            return None
+        return max(season_records, key=lambda r: (r[key], -r["season"]))
+
+    best_week = None
+    if len(regular):
+        row = regular.loc[regular["team_score"].idxmax()]
+        best_week = {
+            "season": int(row["season"]), "week": int(row["week"]),
+            "points": round(float(row["team_score"]), 2),
+            "manager": team_by_season.get(int(row["season"]), {}).get("manager"),
+        }
+
+    # ── Stewards ─────────────────────────────────────────────────────────────
+    titles_by_manager: dict[str, list[int]] = {}
+    for season in champion_seasons:
+        titles_by_manager.setdefault(team_by_season[season]["manager"], []).append(season)
+
+    stewards = []
+    for _, p in periods.iterrows():
+        manager = p["manager_name"]
+        their_seasons = {int(s) for s in mine[mine["manager_name"] == manager]["season"]}
+        their_games = regular[regular["season"].isin(their_seasons)]
+        stewards.append({
+            "manager": manager,
+            "emoji": MANAGER_EMOJI.get(manager, "👤"),
+            "color": MANAGER_COLORS.get(manager, "#6B7280"),
+            "start_season": int(p["start_season"]),
+            "end_season": int(p["end_season"]),
+            "seasons": int(p["years"]),
+            "wins": int((their_games["result"] == "Win").sum()),
+            "losses": int((their_games["result"] == "Loss").sum()),
+            "playoff_apps": len(appearances & their_seasons),
+            "championships": len(titles_by_manager.get(manager, [])),
+            "championship_years": sorted(titles_by_manager.get(manager, [])),
+        })
+
+    best_steward = max(
+        stewards,
+        key=lambda s: (s["championships"], s["playoff_apps"], s["wins"], s["manager"]),
+    )["manager"] if stewards else None
+
+    # ── Rivalries ────────────────────────────────────────────────────────────
+    rivals: dict[str, dict] = {}
+    for _, g in regular.iterrows():
+        opponent = opponent_manager.get((int(g["season"]), g["opponent"]), g["opponent"])
+        entry = rivals.setdefault(opponent, {
+            "opponent": opponent, "emoji": MANAGER_EMOJI.get(opponent, "👤"),
+            "games": 0, "wins": 0, "losses": 0, "playoff_games": 0, "playoff_wins": 0,
+        })
+        entry["games"] += 1
+        entry["wins" if g["result"] == "Win" else "losses"] += 1
+    for game in playoff_games_played:
+        entry = rivals.setdefault(game["opponent"], {
+            "opponent": game["opponent"], "emoji": MANAGER_EMOJI.get(game["opponent"], "👤"),
+            "games": 0, "wins": 0, "losses": 0, "playoff_games": 0, "playoff_wins": 0,
+        })
+        entry["playoff_games"] += 1
+        entry["playoff_wins"] += int(game["won"])
+    top_rivals = sorted(rivals.values(), key=lambda r: (-r["games"], r["opponent"]))[:6]
+
+    return {
+        "franchise_id": franchise_id,
+        "established": established,
+        "first_manager": first_manager,
+        "current_manager": current_manager,
+        "seasons": all_seasons,
+        "totals": {
+            "seasons": len(all_seasons),
+            "championships": len(champion_seasons),
+            "runner_ups": len(runner_up_seasons),
+            "playoff_apps": len(appearances),
+            "finals_apps": len(finals),
+            "third_places": len(third_places),
+            "longest_playoff_streak": longest_streak,
+            "winning_seasons": sum(1 for r in season_records if r["wins"] > r["losses"]),
+        },
+        "championship_seasons": champion_seasons,
+        "runner_up_seasons": runner_up_seasons,
+        "playoff_seasons": sorted(appearances),
+        "third_place_seasons": sorted(third_places),
+        "stewards": stewards,
+        "best_steward": best_steward,
+        "season_records": season_records,
+        "peaks": {
+            "best_record": _peak("wins"),
+            "most_points": _peak("points_for"),
+            "best_week": best_week,
+        },
+        "rivals": top_rivals,
+        "legends": get_franchise_legends(franchise_id),
+        "story": narratives.franchise_story(
+            established=established,
+            first_manager=first_manager,
+            current_manager=current_manager,
+            stewards=stewards,
+            championship_seasons=champion_seasons,
+            total_seasons=len(all_seasons),
+            total_championships=len(champion_seasons),
+        ),
+    }

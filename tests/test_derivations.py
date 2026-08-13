@@ -174,6 +174,40 @@ class TestHome(FixtureAssertions):
             self.assertIn(manager, best["summary"], f"{manager} missing from best-season copy")
 
 
+class TestFranchiseProfiles(FixtureAssertions):
+    def test_profiles(self):
+        """Covers the logic lifted out of pages/franchise_profiles.py."""
+        expected = load("get_franchise_profile")
+        actual = {"type": "dict",
+                  "value": {f: normalize(D.get_franchise_profile(f)) for f in expected["value"]}}
+        self.assert_payload("get_franchise_profile", actual, expected)
+
+    def test_every_franchise_has_a_story(self):
+        for fid in D.get_franchise_stats()["franchise_id"]:
+            story = D.get_franchise_profile(fid)["story"]
+            self.assertTrue(story.startswith("Founded in"), f"{fid}: story does not open properly")
+            self.assertLessEqual(story.count(". "), 6, f"{fid}: story exceeds six sentences")
+
+    def test_steward_seasons_cover_the_franchise(self):
+        """Steward tenures must account for every season the franchise existed."""
+        for fid in D.get_franchise_stats()["franchise_id"]:
+            profile = D.get_franchise_profile(fid)
+            self.assertEqual(
+                sum(s["seasons"] for s in profile["stewards"]),
+                profile["totals"]["seasons"],
+                f"{fid}: steward tenures do not sum to the franchise lifetime",
+            )
+
+    def test_championships_attributed_to_stewards(self):
+        for fid in D.get_franchise_stats()["franchise_id"]:
+            profile = D.get_franchise_profile(fid)
+            self.assertEqual(
+                sum(s["championships"] for s in profile["stewards"]),
+                profile["totals"]["championships"],
+                f"{fid}: championships not fully attributed to stewards",
+            )
+
+
 class TestDraftCenter(FixtureAssertions):
     def test_draft_center_view(self):
         """Covers the logic lifted out of pages/draft_center.py."""
