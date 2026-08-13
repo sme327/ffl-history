@@ -112,6 +112,14 @@ def capture_home() -> None:
     print(f"  {'get_home_view':26} home")
 
 
+def capture_rivalries_view() -> None:
+    """Finals, title records, playoff eliminations and the hall of pain —
+    lifted out of pages/rivalries.py, the page that started all of this."""
+    dump("get_rivalries_view", normalize(D.get_rivalries_view()))
+    dump("get_head_to_head_losses", normalize(D.get_head_to_head_losses()))
+    print(f"  {'get_rivalries_view':26} finals + pain")
+
+
 def capture_keeper_hall() -> None:
     """Immortal keeper chains, championship keepers and per-manager keeper DNA —
     lifted out of pages/keeper_hall.py."""
@@ -203,6 +211,7 @@ def main() -> None:
     capture_by_franchise()
     capture_seasons()
     capture_home()
+    capture_rivalries_view()
     capture_keeper_hall()
     capture_franchise_profiles()
     capture_draft_center()

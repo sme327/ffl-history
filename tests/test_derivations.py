@@ -174,6 +174,39 @@ class TestHome(FixtureAssertions):
             self.assertIn(manager, best["summary"], f"{manager} missing from best-season copy")
 
 
+class TestRivalriesView(FixtureAssertions):
+    def test_rivalries_view(self):
+        """Covers the logic lifted out of pages/rivalries.py."""
+        self.assert_matches("get_rivalries_view", D.get_rivalries_view())
+
+    def test_head_to_head_losses(self):
+        self.assert_matches("get_head_to_head_losses", D.get_head_to_head_losses())
+
+    def test_title_records_reconcile_with_finals(self):
+        view = D.get_rivalries_view()
+        wins = sum(t["wins"] for t in view["title_records"])
+        losses = sum(t["losses"] for t in view["title_records"])
+        self.assertEqual(wins, len(view["finals"]), "title wins must equal finals played")
+        self.assertEqual(losses, len(view["finals"]), "title losses must equal finals played")
+
+    def test_eliminations_balance(self):
+        """Every elimination has exactly one executioner and one victim."""
+        elims = D.get_rivalries_view()["eliminations"]
+        self.assertEqual(
+            sum(e["total"] for e in elims["by_executioner"]),
+            sum(e["total"] for e in elims["by_victim"]),
+        )
+
+    def test_perspective_is_symmetric(self):
+        """A rivalry read from either side must agree on who won."""
+        rivalries = D.get_all_rivalries()
+        for _, row in rivalries.head(40).iterrows():
+            a = D.rivalry_from_perspective(row.to_dict(), row["mgr_a"])
+            b = D.rivalry_from_perspective(row.to_dict(), row["mgr_b"])
+            self.assertEqual(a["wins"], b["losses"], f'{row["mgr_a"]} vs {row["mgr_b"]}')
+            self.assertEqual(a["losses"], b["wins"], f'{row["mgr_a"]} vs {row["mgr_b"]}')
+
+
 class TestKeeperHall(FixtureAssertions):
     def test_keeper_hall_view(self):
         """Covers the logic lifted out of pages/keeper_hall.py."""

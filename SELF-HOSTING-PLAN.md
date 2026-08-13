@@ -107,6 +107,15 @@ manifest.json
 
 Every frame is checked against `tests/fixtures/` **before** it is written — the build exits non-zero rather than emit history the test suite hasn't approved (verified by corrupting a fixture and confirming the refusal). Slugs are stable and apostrophe-safe: `Kevin O'Boyle` → `kevin-oboyle`, rivalries → `dominic-vs-kevin-oboyle`.
 
+### Phase 4 status (2026-08-13)
+
+All ten pages have had their derivations extracted into `utils/data.py` and
+`utils/narratives.py`, every one verified against the original inline logic and
+covered by fixtures. Six pages are also fully rewired to consume them; four
+still run their own copy and are listed as pending in the table above and in
+the build output. **No derivation logic remains undiscovered** — the audit is
+complete even where the rewiring is not.
+
 ### What Phase 2 uncovered
 
 **Not all derivations live in `utils/data.py`.** Seven of ten pages call `load_all()` and compute from raw frames themselves, so that logic is covered by neither the JSON build nor the fixtures:
@@ -172,7 +181,7 @@ The bulk of the work. `utils/styles.py` (886 lines) already has the right instin
 | 7 | `draft_center.py` | 896 | ⚠️ **Derivations extracted 2026-08-13** → `get_draft_center_view()` + `get_draft_loyalty_board()`, fixture-covered. **Page rewiring still pending** — the page runs on its own inline copy for now |
 | 8 | `franchise_profiles.py` | 966 | ⚠️ **Derivations extracted 2026-08-13** → `get_franchise_profile()` + `narratives.franchise_story()`, fixture-covered. **Page rewiring pending** |
 | 9 | `keeper_hall.py` | 1,177 | ⚠️ **Derivations extracted 2026-08-13** → `get_keeper_hall_view()`, fixture-covered. **Page rewiring pending** — worth redesigning rather than transcribing, since it still has no entry points (review F7) |
-| 10 | `rivalries.py` | 1,215 | Most complex routing (pairwise) — do it once every pattern exists |
+| 10 | `rivalries.py` | 1,215 | ⚠️ **Derivations extracted 2026-08-13** → `get_rivalries_view()` + `get_head_to_head_losses()`, fixture-covered. **Page rewiring pending** |
 
 **Keep the Streamlit app running the whole time.** Side-by-side visual diffing is the only practical way to catch regressions in a design this dense, and it means an unfinished rewrite never costs you a working site. Cut over only at parity.
 

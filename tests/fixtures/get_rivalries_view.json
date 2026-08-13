@@ -1,0 +1,5775 @@
+{
+  "type": "dict",
+  "value": {
+    "managers": {
+      "type": "list",
+      "length": 24,
+      "value": [
+        {
+          "type": "scalar",
+          "value": "Adam"
+        },
+        {
+          "type": "scalar",
+          "value": "BV"
+        },
+        {
+          "type": "scalar",
+          "value": "Brian Clark"
+        },
+        {
+          "type": "scalar",
+          "value": "Bryan Kearney"
+        },
+        {
+          "type": "scalar",
+          "value": "Byron"
+        },
+        {
+          "type": "scalar",
+          "value": "Dale"
+        },
+        {
+          "type": "scalar",
+          "value": "Dan"
+        },
+        {
+          "type": "scalar",
+          "value": "Dominic"
+        },
+        {
+          "type": "scalar",
+          "value": "Douglas"
+        },
+        {
+          "type": "scalar",
+          "value": "Eric"
+        },
+        {
+          "type": "scalar",
+          "value": "Evan"
+        },
+        {
+          "type": "scalar",
+          "value": "Fadi"
+        },
+        {
+          "type": "scalar",
+          "value": "Jamie"
+        },
+        {
+          "type": "scalar",
+          "value": "Jeff"
+        },
+        {
+          "type": "scalar",
+          "value": "Joe Tyszko"
+        },
+        {
+          "type": "scalar",
+          "value": "Kevin O'Boyle"
+        },
+        {
+          "type": "scalar",
+          "value": "Kevin Swanson"
+        },
+        {
+          "type": "scalar",
+          "value": "Mike"
+        },
+        {
+          "type": "scalar",
+          "value": "Nick Blaettler"
+        },
+        {
+          "type": "scalar",
+          "value": "Rob"
+        },
+        {
+          "type": "scalar",
+          "value": "Robby"
+        },
+        {
+          "type": "scalar",
+          "value": "Shawn"
+        },
+        {
+          "type": "scalar",
+          "value": "Steve Swanson"
+        },
+        {
+          "type": "scalar",
+          "value": "Thomas"
+        }
+      ]
+    },
+    "finals": {
+      "type": "list",
+      "length": 25,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2025
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Thomas"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "Fuzzy Bears"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 97.34
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Jeff"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "Futball in the Groin"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 79.65
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 17.69
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2024
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "This Is How We Do"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 98.86
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Evan"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "Goood Times"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 98.74
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 0.12
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2023
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "“I’ll take Kittle”"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 113.18
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "team old style"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 55.14
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 58.04
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2022
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Bryan Kearney"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "Good Douche Bag"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 77.76
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Thomas"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "Fuzzy Bears"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 75.5
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 2.26
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2021
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "“I’ll take Kittle”"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 86.87
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Kevin O'Boyle"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "Guinness"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 65.93
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 20.94
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2020
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Douglas"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "Mean Machine 22"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 89.36
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Steve Swanson"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "Bears"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 83.94
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 5.42
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2019
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Steve Swanson"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "Bears"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 89.23
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Shawn"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "West Coast Infirmary"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 85.96
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 3.27
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2018
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "team old style"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 120.94
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Nick Blaettler"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "No Diggity"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 84.81
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 36.13
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2017
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Douglas"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "Mean Machine 22"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 90.42
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Kevin Swanson"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "miniDITKAS"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 74.51
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 15.91
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2016
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "team old style"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 76.38
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Robby"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "Swami Singer"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 68.44
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 7.94
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2015
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Kevin O'Boyle"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "Guinness"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 113.03
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Shawn"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "los pollos hermanos"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 59.14
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 53.89
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2014
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Thomas"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "Fuzzy Bears"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 79.74
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "Second Draft Pick"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 58.86
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 20.88
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2013
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Evan"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "Goood Times"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 87.11
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Kevin Swanson"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "miniDITKAS"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 74.47
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 12.64
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2012
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Evan"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "Goood Times"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 109.28
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "Quakes and Canes"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 69.01
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 40.27
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2011
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "Sub .500!!!"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 81.18
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Kevin O'Boyle"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "Guinness"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 70.14
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 11.04
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2010
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "team old style"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 122.75
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "Return to Glory?"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 77.53
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 45.22
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2009
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "team old style"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 101.34
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Steve Swanson"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "cubs killed harry"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 77.23
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 24.11
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2008
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "First to Worst"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 75.84
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Steve Swanson"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "long live the goat"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 61.68
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 14.16
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2007
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "South of 55 is mine!"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 95.55
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "Minooka Bears"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 79.5
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 16.05
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2006
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Kevin Swanson"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "MiniDitkas"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 101.31
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Kevin O'Boyle"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "Guinness"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 76.13
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 25.18
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2005
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Kevin O'Boyle"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "Guinness"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 73.81
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Joe Tyszko"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "giant"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 61.82
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 11.99
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Jamie"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "crabby jamie"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 84.38
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Thomas"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "shootinfor.500"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 59.41
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 24.97
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2003
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Jamie"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "crabby jamie"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 66.45
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Joe Tyszko"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "1043"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 53.95
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 12.5
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Jamie"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "angel"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 75.63
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "Team Old Style"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 49.1
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 26.53
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Jamie"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "angel"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 59.01
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "Cammuffs"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 55.46
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 3.55
+            }
+          }
+        }
+      ]
+    },
+    "title_records": {
+      "type": "list",
+      "length": 16,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🏈"
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 5
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 2
+            },
+            "apps": {
+              "type": "scalar",
+              "value": 7
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 4
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 2
+            },
+            "apps": {
+              "type": "scalar",
+              "value": 6
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Jamie"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "😇"
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 4
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 0
+            },
+            "apps": {
+              "type": "scalar",
+              "value": 4
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Kevin O'Boyle"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 2
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 3
+            },
+            "apps": {
+              "type": "scalar",
+              "value": 5
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Thomas"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🐻"
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 2
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 2
+            },
+            "apps": {
+              "type": "scalar",
+              "value": 4
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Evan"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🎉"
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 2
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 1
+            },
+            "apps": {
+              "type": "scalar",
+              "value": 3
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Douglas"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "⚙️"
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 2
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 0
+            },
+            "apps": {
+              "type": "scalar",
+              "value": 2
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "👑"
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 1
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 3
+            },
+            "apps": {
+              "type": "scalar",
+              "value": 4
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Steve Swanson"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🐻"
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 1
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 3
+            },
+            "apps": {
+              "type": "scalar",
+              "value": 4
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Kevin Swanson"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🧔"
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 1
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 2
+            },
+            "apps": {
+              "type": "scalar",
+              "value": 3
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Bryan Kearney"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "💪"
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 1
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 0
+            },
+            "apps": {
+              "type": "scalar",
+              "value": 1
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Joe Tyszko"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🌽"
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 0
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 2
+            },
+            "apps": {
+              "type": "scalar",
+              "value": 2
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Shawn"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🐝"
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 0
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 2
+            },
+            "apps": {
+              "type": "scalar",
+              "value": 2
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Jeff"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "⚽"
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 0
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 1
+            },
+            "apps": {
+              "type": "scalar",
+              "value": 1
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Nick Blaettler"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🐱"
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 0
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 1
+            },
+            "apps": {
+              "type": "scalar",
+              "value": 1
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Robby"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🎸"
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 0
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 1
+            },
+            "apps": {
+              "type": "scalar",
+              "value": 1
+            }
+          }
+        }
+      ]
+    },
+    "eliminations": {
+      "type": "dict",
+      "value": {
+        "pairs": {
+          "type": "list",
+          "length": 121,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 3
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 3
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 3
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 3
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Jamie"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 3
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 3
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 3
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Joe Tyszko"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Nick Blaettler"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Douglas"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Jamie"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Dan"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Joe Tyszko"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Nick Blaettler"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Nick Blaettler"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Robby"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Nick Blaettler"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Jeff"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Adam"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Joe Tyszko"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Adam"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Dale"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Douglas"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Nick Blaettler"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Rob"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Robby"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Bryan Kearney"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Bryan Kearney"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Dale"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Dan"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Adam"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Jeff"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Mike"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Douglas"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Douglas"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Douglas"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Douglas"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Douglas"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Eric"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Nick Blaettler"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Robby"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Adam"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Eric"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Rob"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Jamie"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Jamie"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Jamie"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Jamie"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Joe Tyszko"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Jamie"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Jamie"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Jamie"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Jeff"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Jeff"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Jeff"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Joe Tyszko"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Rob"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Joe Tyszko"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Bryan Kearney"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Jamie"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Joe Tyszko"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Douglas"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Joe Tyszko"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Mike"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Nick Blaettler"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Rob"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Robby"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Nick Blaettler"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Nick Blaettler"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Nick Blaettler"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Robby"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Nick Blaettler"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Robby"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Rob"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Douglas"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Mike"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Nick Blaettler"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Byron"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Eric"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Robby"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "winner": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "loser": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "eliminations": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "by_executioner": {
+          "type": "list",
+          "length": 20,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 22
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🏈"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 17
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🍺"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 17
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🍺"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 14
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🧔"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 13
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🐻"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Jamie"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 12
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "😇"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 11
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "👑"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 11
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🐻"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 9
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🎉"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Douglas"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 7
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "⚙️"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Nick Blaettler"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 6
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🐱"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 6
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🐝"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Joe Tyszko"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 4
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🌽"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Jeff"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 3
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "⚽"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Robby"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 3
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🎸"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Bryan Kearney"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 2
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "💪"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Adam"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 1
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🎯"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Dale"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 1
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🌪️"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Dan"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 1
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "📖"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Eric"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 1
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "⛳"
+                }
+              }
+            }
+          ]
+        },
+        "by_victim": {
+          "type": "list",
+          "length": 23,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 17
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🧔"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 16
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🐝"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 15
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "👑"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 13
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🍺"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 12
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🍺"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 12
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🎉"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 11
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🐻"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 11
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🐻"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Nick Blaettler"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 10
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🐱"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 8
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🏈"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Joe Tyszko"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 6
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🌽"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Rob"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 5
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "⚔️"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Robby"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 5
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🎸"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Adam"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 3
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🎯"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Douglas"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 3
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "⚙️"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Jeff"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 3
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "⚽"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Mike"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 3
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🍻"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Dan"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 2
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "📖"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Eric"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 2
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "⛳"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Bryan Kearney"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 1
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "💪"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Byron"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 1
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🏛️"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Dale"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 1
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🌪️"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Jamie"
+                },
+                "total": {
+                  "type": "scalar",
+                  "value": 1
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "😇"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "hall_of_pain": {
+      "type": "dict",
+      "value": {
+        "worst_matchups": {
+          "type": "list",
+          "length": 72,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 21
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 21
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 19
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 19
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 18
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 18
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 18
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 18
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 17
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 17
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 16
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 16
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 16
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 15
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 15
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 15
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 15
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 15
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 15
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 15
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 15
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 15
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Adam"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 14
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 14
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 14
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Douglas"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 14
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 14
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 14
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 14
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 14
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 14
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 14
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Adam"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 13
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 13
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 13
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 13
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 13
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 13
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 13
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 13
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 13
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 13
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Adam"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 12
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 12
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 12
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 12
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 12
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 12
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 12
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 12
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 12
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 12
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 12
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 12
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 12
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 11
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 11
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 11
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 11
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 11
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 11
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 11
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 11
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 11
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 11
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 10
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 10
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 10
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Nick Blaettler"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 10
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 10
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 10
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "loser": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "winner": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 10
+                }
+              }
+            }
+          ]
+        },
+        "finals_losses": {
+          "type": "list",
+          "length": 13,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 3
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "👑"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 3
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🍺"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 3
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🐻"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 2
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🍺"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 2
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🏈"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Joe Tyszko"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 2
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🌽"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 2
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🧔"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Shawn"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 2
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🐝"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 2
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🐻"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 1
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🎉"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Jeff"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 1
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "⚽"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Nick Blaettler"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 1
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🐱"
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Robby"
+                },
+                "losses": {
+                  "type": "scalar",
+                  "value": 1
+                },
+                "emoji": {
+                  "type": "scalar",
+                  "value": "🎸"
+                }
+              }
+            }
+          ]
+        },
+        "closest_final": {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2024
+            },
+            "winner_manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "winner_team": {
+              "type": "scalar",
+              "value": "This Is How We Do"
+            },
+            "winner_score": {
+              "type": "scalar",
+              "value": 98.86
+            },
+            "loser_manager": {
+              "type": "scalar",
+              "value": "Evan"
+            },
+            "loser_team": {
+              "type": "scalar",
+              "value": "Goood Times"
+            },
+            "loser_score": {
+              "type": "scalar",
+              "value": 98.74
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 0.12
+            }
+          }
+        }
+      }
+    },
+    "totals": {
+      "type": "dict",
+      "value": {
+        "pairs": {
+          "type": "scalar",
+          "value": 195
+        },
+        "managers": {
+          "type": "scalar",
+          "value": 24
+        },
+        "finals": {
+          "type": "scalar",
+          "value": 25
+        },
+        "playoff_eliminations": {
+          "type": "scalar",
+          "value": 161
+        }
+      }
+    }
+  }
+}

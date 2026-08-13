@@ -217,6 +217,12 @@ def build(out: Path) -> None:
     # ── Rivalries ────────────────────────────────────────────────────────────
     rivalries = verify.frame("get_all_rivalries", D.get_all_rivalries())
     riv_rows = records(rivalries)
+    rivalries_view = D.get_rivalries_view()
+    if normalize(rivalries_view) != load_fixture("get_rivalries_view"):
+        raise SystemExit("\n  rivalries view does not match its fixture — refusing to emit.\n")
+    verify.checked += 1
+    site.write("rivalries-view", rivalries_view)
+
     site.write("rivalries/index", [
         {**r, "slug": pair_slug(r["mgr_a"], r["mgr_b"])} for r in riv_rows
     ])
@@ -290,7 +296,8 @@ PAGE_LEVEL_WORK = {
     "franchise_profiles.py (page)": "rewire to get_franchise_profile()",
     # league_history.py: done 2026-08-13 -> get_league_history_view()
     # manager_profiles.py: done 2026-08-13 -> get_manager_profile()
-    "rivalries.py": "elimination/heartbreak sections built from raw frames",
+    # rivalries.py: derivations extracted 2026-08-13 -> get_rivalries_view(); page rewiring pending
+    "rivalries.py (page)": "rewire to get_rivalries_view()",
 }
 
 

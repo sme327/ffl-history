@@ -2938,3 +2938,160 @@ def get_keeper_hall_view() -> dict:
             "managers": len(dna),
         },
     }
+
+
+# ── RIVALRIES ─────────────────────────────────────────────────────────────────
+# Lifted out of pages/rivalries.py — the page this whole effort started with,
+# where the first test run caught get_all_rivalries() reordering itself between
+# restarts. The page also rebuilt the regular-season head-to-head dedup that
+# get_all_rivalries() already does internally; that logic now lives in one place.
+
+def rivalry_from_perspective(row: dict, manager: str) -> dict:
+    """Flip a rivalry row so it reads from one manager's point of view."""
+    is_a = row["mgr_a"] == manager
+    return {
+        "manager": manager,
+        "opponent": row["mgr_b"] if is_a else row["mgr_a"],
+        "wins": int(row["rs_a_wins"] if is_a else row["rs_b_wins"]),
+        "losses": int(row["rs_b_wins"] if is_a else row["rs_a_wins"]),
+        "win_pct": round(float(row["rs_a_pct"]) if is_a else 1.0 - float(row["rs_a_pct"]), 4),
+        "pl_wins": int(row["pl_a_wins"] if is_a else row["pl_b_wins"]),
+        "pl_losses": int(row["pl_b_wins"] if is_a else row["pl_a_wins"]),
+        "final_wins": int(row["final_a_wins"] if is_a else row["final_b_wins"]),
+        "final_losses": int(row["final_b_wins"] if is_a else row["final_a_wins"]),
+        "biggest_win": round(float(row["a_biggest_win"] if is_a else row["b_biggest_win"]), 2),
+        "biggest_loss": round(float(row["b_biggest_win"] if is_a else row["a_biggest_win"]), 2),
+        "rs_games": int(row["rs_games"]),
+        "pl_games": int(row["pl_games"]),
+        "close_games": int(row["close_games"]),
+        "rivalry_score": int(row["rivalry_score"]),
+    }
+
+
+@st.cache_data
+def get_head_to_head_losses() -> list[dict]:
+    """Regular-season losses by (loser, winner) across league history.
+
+    One row per game — the two-perspective source data is deduplicated on
+    (season, week, pair), the same way get_all_rivalries() does it.
+    """
+    data = load_all()
+    weekly = data["weekly_matchups"]
+    manager_of = data["team_name_history"].set_index(["season", "team_name"])["canonical_name"].to_dict()
+
+    games = weekly[~weekly["is_bye"].astype(bool) & ~weekly["is_playoff"].astype(bool)].copy()
+    games["mgr"] = [manager_of.get((int(s), t)) for s, t in zip(games["season"], games["team_name"])]
+    games["opp_mgr"] = [manager_of.get((int(s), t)) for s, t in zip(games["season"], games["opponent"])]
+    games = games.dropna(subset=["mgr", "opp_mgr"])
+    games["pair"] = [tuple(sorted([a, b])) for a, b in zip(games["mgr"], games["opp_mgr"])]
+    games = games.drop_duplicates(subset=["season", "week", "pair"])
+
+    tally: dict[tuple[str, str], int] = {}
+    for _, g in games.iterrows():
+        winner = g["mgr"] if g["result"] == "Win" else g["opp_mgr"]
+        loser = g["opp_mgr"] if g["result"] == "Win" else g["mgr"]
+        tally[(loser, winner)] = tally.get((loser, winner), 0) + 1
+
+    return sorted(
+        ({"loser": l, "winner": w, "losses": n} for (l, w), n in tally.items()),
+        key=lambda r: (-r["losses"], r["loser"], r["winner"]),
+    )
+
+
+@st.cache_data
+def get_rivalries_view() -> dict:
+    data = load_all()
+    playoff_games = data["playoff_games"]
+    manager_of = data["team_name_history"].set_index(["season", "team_name"])["canonical_name"].to_dict()
+
+    rivalries = get_all_rivalries()
+    eliminations = get_playoff_eliminations()
+
+    # ── Championship finals ──────────────────────────────────────────────────
+    bracket = playoff_games[
+        (playoff_games["bracket"] == "championship") & (playoff_games["game_type"] == "final")
+    ]
+    finals = []
+    for _, g in bracket.iterrows():
+        season = int(g["season"])
+        winner_team = g["winner"]
+        loser_team = g["team_2"] if winner_team == g["team_1"] else g["team_1"]
+        win_score = float(g["score_1"] if winner_team == g["team_1"] else g["score_2"])
+        loss_score = float(g["score_2"] if winner_team == g["team_1"] else g["score_1"])
+        finals.append({
+            "season": season,
+            "winner_manager": manager_of.get((season, winner_team)),
+            "winner_team": winner_team,
+            "winner_score": round(win_score, 2),
+            "loser_manager": manager_of.get((season, loser_team)),
+            "loser_team": loser_team,
+            "loser_score": round(loss_score, 2),
+            "margin": round(abs(float(g["score_1"]) - float(g["score_2"])), 2),
+        })
+    finals.sort(key=lambda f: -f["season"])
+
+    # ── Title-game records ───────────────────────────────────────────────────
+    title_records: dict[str, dict] = {}
+    for final in finals:
+        for manager, key in ((final["winner_manager"], "wins"), (final["loser_manager"], "losses")):
+            entry = title_records.setdefault(manager, {
+                "manager": manager, "emoji": MANAGER_EMOJI.get(manager, "👤"),
+                "wins": 0, "losses": 0,
+            })
+            entry[key] += 1
+    for entry in title_records.values():
+        entry["apps"] = entry["wins"] + entry["losses"]
+    ranked_titles = sorted(
+        title_records.values(), key=lambda r: (-r["wins"], -r["apps"], r["manager"])
+    )
+
+    # ── Playoff eliminations ─────────────────────────────────────────────────
+    elim_rows = [
+        {"winner": r["winner_mgr"], "loser": r["loser_mgr"], "eliminations": int(r["eliminations"])}
+        for _, r in eliminations.iterrows()
+    ]
+    by_executioner: dict[str, int] = {}
+    by_victim: dict[str, int] = {}
+    for r in elim_rows:
+        by_executioner[r["winner"]] = by_executioner.get(r["winner"], 0) + r["eliminations"]
+        by_victim[r["loser"]] = by_victim.get(r["loser"], 0) + r["eliminations"]
+
+    def _rank(counts: dict, label: str) -> list[dict]:
+        return sorted(
+            ({label: m, "total": n, "emoji": MANAGER_EMOJI.get(m, "👤")} for m, n in counts.items()),
+            key=lambda r: (-r["total"], r[label]),
+        )
+
+    top_pairs = sorted(elim_rows, key=lambda r: (-r["eliminations"], r["winner"], r["loser"]))
+
+    # ── Hall of pain ─────────────────────────────────────────────────────────
+    losses = get_head_to_head_losses()
+    finals_losses: dict[str, int] = {}
+    for final in finals:
+        finals_losses[final["loser_manager"]] = finals_losses.get(final["loser_manager"], 0) + 1
+
+    return {
+        "managers": sorted(set(rivalries["mgr_a"]) | set(rivalries["mgr_b"])),
+        "finals": finals,
+        "title_records": ranked_titles,
+        "eliminations": {
+            "pairs": top_pairs,
+            "by_executioner": _rank(by_executioner, "manager"),
+            "by_victim": _rank(by_victim, "manager"),
+        },
+        "hall_of_pain": {
+            "worst_matchups": [r for r in losses if r["losses"] >= 10],
+            "finals_losses": sorted(
+                ({"manager": m, "losses": n, "emoji": MANAGER_EMOJI.get(m, "👤")}
+                 for m, n in finals_losses.items()),
+                key=lambda r: (-r["losses"], r["manager"]),
+            ),
+            "closest_final": min(finals, key=lambda f: (f["margin"], -f["season"])) if finals else None,
+        },
+        "totals": {
+            "pairs": len(rivalries),
+            "managers": int(len(set(rivalries["mgr_a"]) | set(rivalries["mgr_b"]))),
+            "finals": len(finals),
+            "playoff_eliminations": sum(r["eliminations"] for r in elim_rows),
+        },
+    }
