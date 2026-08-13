@@ -174,6 +174,30 @@ class TestHome(FixtureAssertions):
             self.assertIn(manager, best["summary"], f"{manager} missing from best-season copy")
 
 
+class TestLeagueHistory(FixtureAssertions):
+    def test_season_scoring(self):
+        self.assert_matches("get_season_scoring", D.get_season_scoring())
+
+    def test_league_history_view(self):
+        """Covers the logic lifted out of pages/league_history.py."""
+        self.assert_matches("get_league_history_view", D.get_league_history_view())
+
+    def test_era_bands_match_the_era_cards(self):
+        """The chart used to shade eras from a second hardcoded list that had
+        already drifted from LEAGUE_ERAS."""
+        view = D.get_league_history_view()
+        self.assertEqual(
+            [(b["label"], b["start"], b["end"]) for b in view["era_bands"]],
+            [(e["short"], e["start"], e["end"]) for e in view["eras"]],
+            "era shading must come from the same definition as the era cards",
+        )
+
+    def test_title_counts_are_ordered_deterministically(self):
+        counts = D.get_league_history_view()["balance"]["title_counts"]
+        keys = [(-c["titles"], c["manager"]) for c in counts]
+        self.assertEqual(keys, sorted(keys), "title ranking must break ties by name")
+
+
 class TestSeasons(FixtureAssertions):
     def test_season_list(self):
         seasons = D.get_all_seasons()

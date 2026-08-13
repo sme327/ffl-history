@@ -120,6 +120,12 @@ def build(out: Path) -> None:
         "managerEmoji": D.MANAGER_EMOJI,
     })
 
+    history = D.get_league_history_view()
+    if normalize(history) != load_fixture("get_league_history_view"):
+        raise SystemExit("\n  league history does not match its fixture — refusing to emit.\n")
+    verify.checked += 1
+    site.write("league-history", history)
+
     home = D.get_home_view()
     if normalize(home) != load_fixture("get_home_view"):
         raise SystemExit("\n  home view does not match its fixture — refusing to emit.\n")
@@ -265,7 +271,7 @@ PAGE_LEVEL_WORK = {
     # app.py: done 2026-08-13 -> get_home_view()
     "champions.py": "title-game context and dynasty framing",
     "franchise_profiles.py": "per-franchise season tables and lineage narrative",
-    "league_history.py": "era summaries, competitive-balance trends",
+    # league_history.py: done 2026-08-13 -> get_league_history_view()
     "manager_profiles.py": "career plaque assembly",
     "rivalries.py": "elimination/heartbreak sections built from raw frames",
 }

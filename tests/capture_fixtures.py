@@ -112,6 +112,14 @@ def capture_home() -> None:
     print(f"  {'get_home_view':26} home")
 
 
+def capture_league_history() -> None:
+    """Eras, scoring evolution, competitive balance and league records —
+    lifted out of pages/league_history.py."""
+    dump("get_league_history_view", normalize(D.get_league_history_view()))
+    dump("get_season_scoring", normalize(D.get_season_scoring()))
+    print(f"  {'get_league_history_view':26} eras + records")
+
+
 def capture_timeline() -> None:
     """Enriched timeline events and the season grouping.
 
@@ -146,6 +154,7 @@ def main() -> None:
     capture_by_franchise()
     capture_seasons()
     capture_home()
+    capture_league_history()
     capture_timeline()
     capture_rivalry_detail()
     print("\nWrote tests/fixtures/. Review the diff before committing.")

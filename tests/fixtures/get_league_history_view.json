@@ -1,0 +1,2000 @@
+{
+  "type": "dict",
+  "value": {
+    "eras": {
+      "type": "list",
+      "length": 4,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "name": {
+              "type": "scalar",
+              "value": "THE FOUNDING ERA"
+            },
+            "short": {
+              "type": "scalar",
+              "value": "Founding"
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2001–2004"
+            },
+            "color": {
+              "type": "scalar",
+              "value": "#D4AF37"
+            },
+            "icon": {
+              "type": "scalar",
+              "value": "🏛️"
+            },
+            "headline": {
+              "type": "scalar",
+              "value": "The League Finds Its Identity"
+            },
+            "body": {
+              "type": "scalar",
+              "value": "The first four seasons were about establishing rules, rivalries, and rituals. No one knew what they were building — just that they wanted to keep playing. The NFL itself was in a golden age: Brady, Manning, and LaDainian Tomlinson were reshaping football. This league was figuring out who it was."
+            },
+            "start": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "end": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "titles_awarded": {
+              "type": "scalar",
+              "value": 4
+            },
+            "unique_champions": {
+              "type": "scalar",
+              "value": 1
+            },
+            "avg_score": {
+              "type": "scalar",
+              "value": 839.19
+            },
+            "champions": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2001
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Jamie"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "😇"
+                    }
+                  }
+                },
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2002
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Jamie"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "😇"
+                    }
+                  }
+                },
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2003
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Jamie"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "😇"
+                    }
+                  }
+                },
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2004
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Jamie"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "😇"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "name": {
+              "type": "scalar",
+              "value": "THE WORKHORSE ERA"
+            },
+            "short": {
+              "type": "scalar",
+              "value": "Workhorse"
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2005–2009"
+            },
+            "color": {
+              "type": "scalar",
+              "value": "#22C55E"
+            },
+            "icon": {
+              "type": "scalar",
+              "value": "🐎"
+            },
+            "headline": {
+              "type": "scalar",
+              "value": "The Bell Cow Runs the League"
+            },
+            "body": {
+              "type": "scalar",
+              "value": "Shaun Alexander. LaDainian Tomlinson. Adrian Peterson. Chris Johnson. The five seasons from 2005 to 2009 were defined by dominant rushing attacks — and managers who built rosters around a single backfield star. In the NFL, the ground game ruled. In this league, bell cows made dynasties."
+            },
+            "start": {
+              "type": "scalar",
+              "value": 2005
+            },
+            "end": {
+              "type": "scalar",
+              "value": 2009
+            },
+            "titles_awarded": {
+              "type": "scalar",
+              "value": 5
+            },
+            "unique_champions": {
+              "type": "scalar",
+              "value": 4
+            },
+            "avg_score": {
+              "type": "scalar",
+              "value": 893.69
+            },
+            "champions": {
+              "type": "list",
+              "length": 5,
+              "value": [
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2005
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Kevin O'Boyle"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "🍺"
+                    }
+                  }
+                },
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2006
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Kevin Swanson"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "🧔"
+                    }
+                  }
+                },
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2007
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Dominic"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "🏈"
+                    }
+                  }
+                },
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2008
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Dominic"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "🏈"
+                    }
+                  }
+                },
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2009
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Brian Clark"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "🍺"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "name": {
+              "type": "scalar",
+              "value": "THE KEEPER REVOLUTION"
+            },
+            "short": {
+              "type": "scalar",
+              "value": "Keepers"
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2010–2015"
+            },
+            "color": {
+              "type": "scalar",
+              "value": "#A78BFA"
+            },
+            "icon": {
+              "type": "scalar",
+              "value": "🔑"
+            },
+            "headline": {
+              "type": "scalar",
+              "value": "Strategy Enters the Draft Room"
+            },
+            "body": {
+              "type": "scalar",
+              "value": "When the keeper rules took hold, everything changed. Drafting became about the future as much as the present. Managers began hoarding young talent, protecting emerging stars, and building multi-year rosters. The league started rewarding patience and planning over luck and reactivity. Some managers adapted. Others were left behind."
+            },
+            "start": {
+              "type": "scalar",
+              "value": 2010
+            },
+            "end": {
+              "type": "scalar",
+              "value": 2015
+            },
+            "titles_awarded": {
+              "type": "scalar",
+              "value": 6
+            },
+            "unique_champions": {
+              "type": "scalar",
+              "value": 5
+            },
+            "avg_score": {
+              "type": "scalar",
+              "value": 1029.95
+            },
+            "champions": {
+              "type": "list",
+              "length": 6,
+              "value": [
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2010
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Brian Clark"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "🍺"
+                    }
+                  }
+                },
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2011
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Dominic"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "🏈"
+                    }
+                  }
+                },
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2012
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Evan"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "🎉"
+                    }
+                  }
+                },
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2013
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Evan"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "🎉"
+                    }
+                  }
+                },
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2014
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Thomas"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "🐻"
+                    }
+                  }
+                },
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2015
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Kevin O'Boyle"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "🍺"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "name": {
+              "type": "scalar",
+              "value": "THE MODERN ERA"
+            },
+            "short": {
+              "type": "scalar",
+              "value": "Modern"
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2016–Present"
+            },
+            "color": {
+              "type": "scalar",
+              "value": "#3B82F6"
+            },
+            "icon": {
+              "type": "scalar",
+              "value": "⚡"
+            },
+            "headline": {
+              "type": "scalar",
+              "value": "Speed, Receivers, and the New Game"
+            },
+            "body": {
+              "type": "scalar",
+              "value": "Patrick Mahomes. Alvin Kamara. Davante Adams. Justin Jefferson. Josh Allen. The NFL became a pass-first, points-everywhere league — and this one followed. Zero-RB strategies, TE premiums, and receiver kingdoms replaced the old bell-cow playbook. The managers who adapted to the new game are the ones still competing for titles."
+            },
+            "start": {
+              "type": "scalar",
+              "value": 2016
+            },
+            "end": {
+              "type": "scalar",
+              "value": 2025
+            },
+            "titles_awarded": {
+              "type": "scalar",
+              "value": 10
+            },
+            "unique_champions": {
+              "type": "scalar",
+              "value": 7
+            },
+            "avg_score": {
+              "type": "scalar",
+              "value": 1098.47
+            },
+            "champions": {
+              "type": "list",
+              "length": 10,
+              "value": [
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2016
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Brian Clark"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "🍺"
+                    }
+                  }
+                },
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2017
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Douglas"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "⚙️"
+                    }
+                  }
+                },
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2018
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Brian Clark"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "🍺"
+                    }
+                  }
+                },
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2019
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Steve Swanson"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "🐻"
+                    }
+                  }
+                },
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2020
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Douglas"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "⚙️"
+                    }
+                  }
+                },
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2021
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Dominic"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "🏈"
+                    }
+                  }
+                },
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2022
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Bryan Kearney"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "💪"
+                    }
+                  }
+                },
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2023
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Dominic"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "🏈"
+                    }
+                  }
+                },
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2024
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Fadi"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "👑"
+                    }
+                  }
+                },
+                {
+                  "type": "dict",
+                  "value": {
+                    "season": {
+                      "type": "scalar",
+                      "value": 2025
+                    },
+                    "manager": {
+                      "type": "scalar",
+                      "value": "Thomas"
+                    },
+                    "emoji": {
+                      "type": "scalar",
+                      "value": "🐻"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "era_bands": {
+      "type": "list",
+      "length": 4,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "start": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "end": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "label": {
+              "type": "scalar",
+              "value": "Founding"
+            },
+            "color": {
+              "type": "scalar",
+              "value": "#D4AF37"
+            },
+            "fill": {
+              "type": "scalar",
+              "value": "rgba(212,175,55,0.06)"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "start": {
+              "type": "scalar",
+              "value": 2005
+            },
+            "end": {
+              "type": "scalar",
+              "value": 2009
+            },
+            "label": {
+              "type": "scalar",
+              "value": "Workhorse"
+            },
+            "color": {
+              "type": "scalar",
+              "value": "#22C55E"
+            },
+            "fill": {
+              "type": "scalar",
+              "value": "rgba(34,197,94,0.06)"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "start": {
+              "type": "scalar",
+              "value": 2010
+            },
+            "end": {
+              "type": "scalar",
+              "value": 2015
+            },
+            "label": {
+              "type": "scalar",
+              "value": "Keepers"
+            },
+            "color": {
+              "type": "scalar",
+              "value": "#A78BFA"
+            },
+            "fill": {
+              "type": "scalar",
+              "value": "rgba(167,139,250,0.06)"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "start": {
+              "type": "scalar",
+              "value": 2016
+            },
+            "end": {
+              "type": "scalar",
+              "value": 2025
+            },
+            "label": {
+              "type": "scalar",
+              "value": "Modern"
+            },
+            "color": {
+              "type": "scalar",
+              "value": "#3B82F6"
+            },
+            "fill": {
+              "type": "scalar",
+              "value": "rgba(59,130,246,0.06)"
+            }
+          }
+        }
+      ]
+    },
+    "scoring": {
+      "type": "dict",
+      "value": {
+        "by_season": {
+          "type": "list",
+          "length": 25,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2001
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 711.8
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 912.4
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 556.2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2002
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 830.2
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 949.5
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 639.5
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2003
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 859.4
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 994.9
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 690.3
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2004
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 955.4
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 1191.5
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 761.3
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2005
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 847.2
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 996.6
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 658.4
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2006
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 828.7
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 1072.5
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 665.9
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2007
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 835.5
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 984.9
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 735.4
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2008
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 955.1
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 1094.1
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 803.3
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2009
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 1001.9
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 1164.3
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 838.6
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2010
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 1009.1
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 1182.2
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 896.1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2011
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 1029.9
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 1188.7
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 779.6
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2012
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 1036.7
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 1145.1
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 928.5
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2013
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 1039.2
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 1223.9
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 908.8
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2014
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 1029.2
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 1229.4
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 898.8
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2015
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 1035.6
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 1151.1
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 912.7
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2016
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 1065.5
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 1230.0
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 907.4
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2017
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 996.8
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 1118.5
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 788.3
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2018
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 1127.9
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 1347.2
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 965.1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2019
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 1058.7
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 1289.7
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 964.0
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2020
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 1078.1
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 1269.8
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 881.9
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2021
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 1156.1
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 1378.3
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 1014.1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2022
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 1120.8
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 1324.9
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 874.5
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2023
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 1128.4
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 1266.4
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 980.9
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2024
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 1128.5
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 1307.1
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 915.9
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2025
+                },
+                "avg": {
+                  "type": "scalar",
+                  "value": 1123.8
+                },
+                "high": {
+                  "type": "scalar",
+                  "value": 1199.7
+                },
+                "low": {
+                  "type": "scalar",
+                  "value": 993.1
+                }
+              }
+            }
+          ]
+        },
+        "champion_points": {
+          "type": "list",
+          "length": 25,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2001
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 775.56
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2002
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 866.26
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2003
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 931.58
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2004
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 942.66
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2005
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 874.56
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2006
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 765.84
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2007
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 984.88
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2008
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 954.1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2009
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 1164.32
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2010
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 1060.98
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2011
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 1055.81
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2012
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 1037.85
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2013
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 1083.24
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2014
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 1150.87
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2015
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 1040.38
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2016
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 1116.42
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2017
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 1118.55
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2018
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 1179.68
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2019
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 1086.61
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2020
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 1269.79
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2021
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 1244.64
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2022
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 1248.4
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2023
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 1141.33
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2024
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 1152.48
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "season": {
+                  "type": "scalar",
+                  "value": 2025
+                },
+                "points_for": {
+                  "type": "scalar",
+                  "value": 1184.59
+                }
+              }
+            }
+          ]
+        },
+        "peak": {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2021
+            },
+            "avg": {
+              "type": "scalar",
+              "value": 1156.1
+            }
+          }
+        },
+        "lean": {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "avg": {
+              "type": "scalar",
+              "value": 711.8
+            }
+          }
+        },
+        "rise": {
+          "type": "scalar",
+          "value": 444.3
+        }
+      }
+    },
+    "balance": {
+      "type": "dict",
+      "value": {
+        "unique_champions": {
+          "type": "scalar",
+          "value": 11
+        },
+        "total_seasons": {
+          "type": "scalar",
+          "value": 25
+        },
+        "diversity_rate": {
+          "type": "scalar",
+          "value": 0.44
+        },
+        "playoff_managers_ever": {
+          "type": "scalar",
+          "value": 23
+        },
+        "most_consistent": {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Kevin Swanson"
+            },
+            "appearances": {
+              "type": "scalar",
+              "value": 18
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🧔"
+            }
+          }
+        },
+        "title_counts": {
+          "type": "list",
+          "length": 11,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Dominic"
+                },
+                "titles": {
+                  "type": "scalar",
+                  "value": 5
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                "titles": {
+                  "type": "scalar",
+                  "value": 4
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Jamie"
+                },
+                "titles": {
+                  "type": "scalar",
+                  "value": 4
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Douglas"
+                },
+                "titles": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Evan"
+                },
+                "titles": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Kevin O'Boyle"
+                },
+                "titles": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Thomas"
+                },
+                "titles": {
+                  "type": "scalar",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Bryan Kearney"
+                },
+                "titles": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Fadi"
+                },
+                "titles": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Kevin Swanson"
+                },
+                "titles": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "manager": {
+                  "type": "scalar",
+                  "value": "Steve Swanson"
+                },
+                "titles": {
+                  "type": "scalar",
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "top1_pct": {
+          "type": "scalar",
+          "value": 20
+        },
+        "top3_pct": {
+          "type": "scalar",
+          "value": 52
+        }
+      }
+    },
+    "records": {
+      "type": "dict",
+      "value": {
+        "week_high": {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2013
+            },
+            "team": {
+              "type": "scalar",
+              "value": "Three Four D"
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Robby"
+            },
+            "week": {
+              "type": "scalar",
+              "value": 1
+            },
+            "points": {
+              "type": "scalar",
+              "value": 144.59
+            }
+          }
+        },
+        "blowout": {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2004
+            },
+            "team": {
+              "type": "scalar",
+              "value": "guy montag"
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Shawn"
+            },
+            "week": {
+              "type": "scalar",
+              "value": 13
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 116.57
+            }
+          }
+        },
+        "closest": {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2007
+            },
+            "team": {
+              "type": "scalar",
+              "value": "Minooka Bears"
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "week": {
+              "type": "scalar",
+              "value": 2
+            },
+            "margin": {
+              "type": "scalar",
+              "value": 0.03
+            },
+            "loser": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            }
+          }
+        },
+        "best_record": {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2009
+            },
+            "team": {
+              "type": "scalar",
+              "value": "team old style"
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "wins": {
+              "type": "scalar",
+              "value": 12
+            },
+            "losses": {
+              "type": "scalar",
+              "value": 1
+            }
+          }
+        },
+        "best_points": {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2021
+            },
+            "team": {
+              "type": "scalar",
+              "value": "Beast Mode"
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Bryan Kearney"
+            },
+            "points_for": {
+              "type": "scalar",
+              "value": 1378.3
+            }
+          }
+        }
+      }
+    }
+  }
+}

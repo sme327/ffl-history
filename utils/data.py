@@ -1698,3 +1698,208 @@ def get_home_view() -> dict:
             },
         },
     }
+
+
+# ── LEAGUE HISTORY VIEW ───────────────────────────────────────────────────────
+# Lifted out of pages/league_history.py.
+#
+# Two defects fixed on the way out:
+#   * The scoring chart shaded eras from a hardcoded ERA_SHADES list that
+#     duplicated LEAGUE_ERAS — and had already drifted, labelling the third era
+#     "Keeper Rev." where the era cards on the same page said "Keepers". Era
+#     bands are now derived from LEAGUE_ERAS, so there is one definition.
+#   * Championship counts are full of ties (two managers on 4, four on 2, four
+#     on 1) and were ranked with the default non-stable sort, so the bar chart
+#     reordered between restarts.
+
+def _rgba(hex_color: str, alpha: float) -> str:
+    """#RRGGBB -> rgba(r,g,b,alpha)."""
+    value = hex_color.lstrip("#")
+    r, g, b = (int(value[i:i + 2], 16) for i in (0, 2, 4))
+    return f"rgba({r},{g},{b},{alpha})"
+
+
+@st.cache_data
+def get_season_scoring() -> pd.DataFrame:
+    """Average, high and low points-for per season."""
+    return (
+        load_all()["standings"]
+        .groupby("season")["points_for"]
+        .agg(avg="mean", high="max", low="min")
+        .reset_index()
+        .sort_values("season")
+    )
+
+
+@st.cache_data
+def get_league_history_view() -> dict:
+    from utils import narratives
+
+    data = load_all()
+    champions = get_champions()
+    standings = data["standings"]
+    weekly = data["weekly_matchups"]
+    playoff_games = data["playoff_games"]
+    manager_by_team = (
+        data["team_name_history"].set_index(["season", "team_name"])["canonical_name"].to_dict()
+    )
+
+    def manager_of(season, team):
+        return manager_by_team.get((int(season), team), team)
+
+    scoring = get_season_scoring()
+    regular = weekly[~weekly["is_bye"].astype(bool) & ~weekly["is_playoff"].astype(bool)].copy()
+
+    # ── Eras ─────────────────────────────────────────────────────────────────
+    eras = []
+    for era in narratives.LEAGUE_ERAS:
+        start, end = era["start"], min(era["end"], CURRENT_SEASON)
+        era_champs = champions[champions["season"].between(start, end)].sort_values("season")
+        era_scoring = scoring[scoring["season"].between(start, end)]
+        eras.append({
+            "name": era["name"],
+            "short": era["short"],
+            "years": era["years"],
+            "color": era["color"],
+            "icon": era["icon"],
+            "headline": era["headline"],
+            "body": era["body"],
+            "start": start,
+            "end": end,
+            "titles_awarded": len(era_champs),
+            "unique_champions": int(era_champs["champion_manager"].nunique()),
+            "avg_score": round(float(era_scoring["avg"].mean()), 2) if len(era_scoring) else 0.0,
+            "champions": [
+                {
+                    "season": int(r["season"]),
+                    "manager": r["champion_manager"],
+                    "emoji": MANAGER_EMOJI.get(r["champion_manager"], "🏆"),
+                }
+                for _, r in era_champs.iterrows()
+            ],
+        })
+
+    # ── Scoring evolution ────────────────────────────────────────────────────
+    champion_pf = []
+    for _, ch in champions.iterrows():
+        row = standings[
+            (standings["season"] == ch["season"]) & (standings["team_name"] == ch["champion_team"])
+        ]
+        if len(row):
+            champion_pf.append({
+                "season": int(ch["season"]),
+                "points_for": round(float(row.iloc[0]["points_for"]), 2),
+            })
+
+    peak = scoring.loc[scoring["avg"].idxmax()]
+    lean = scoring.loc[scoring["avg"].idxmin()]
+
+    # ── Competitive balance ──────────────────────────────────────────────────
+    championship_bracket = playoff_games[playoff_games["bracket"] == "championship"]
+    playoff_managers: dict[int, list[str]] = {}
+    for season in sorted(champions["season"].unique()):
+        games = championship_bracket[championship_bracket["season"] == season]
+        teams = set(games["team_1"].tolist() + games["team_2"].tolist())
+        playoff_managers[int(season)] = sorted({manager_of(season, t) for t in teams})
+
+    appearances: dict[str, int] = {}
+    for managers in playoff_managers.values():
+        for manager in managers:
+            appearances[manager] = appearances.get(manager, 0) + 1
+    # Explicit tie-break: value_counts() ordered ties by set-iteration order.
+    ranked_playoff = sorted(appearances.items(), key=lambda kv: (-kv[1], kv[0]))
+
+    title_counts = sorted(
+        champions.groupby("champion_manager").size().items(),
+        key=lambda kv: (-kv[1], kv[0]),
+    )
+    total_titles = len(champions)
+    total_seasons = CURRENT_SEASON - FOUNDED + 1
+    unique_champions = int(champions["champion_manager"].nunique())
+
+    # ── Records ──────────────────────────────────────────────────────────────
+    wins = regular[regular["result"] == "Win"].copy()
+    wins["margin"] = wins["team_score"] - wins["opponent_score"]
+    week_high = regular.loc[regular["team_score"].idxmax()]
+    blowout = wins.loc[wins["margin"].idxmax()]
+    closest = wins.loc[wins["margin"].idxmin()]
+
+    played = standings.copy()
+    played["games"] = played["wins"] + played["losses"] + played["ties"]
+    played["win_pct"] = played["wins"] / played["games"].replace(0, float("nan"))
+    best_record = played.loc[played["win_pct"].idxmax()]
+    best_points = standings.loc[standings["points_for"].idxmax()]
+
+    def _record(row, extra=None) -> dict:
+        base = {
+            "season": int(row["season"]),
+            "team": row["team_name"],
+            "manager": manager_of(row["season"], row["team_name"]),
+        }
+        return {**base, **(extra or {})}
+
+    return {
+        "eras": eras,
+        "era_bands": [
+            {
+                "start": e["start"],
+                "end": e["end"],
+                "label": e["short"],
+                "color": e["color"],
+                # Pre-mixed for the chart: Plotly rejects 8-digit hex, and the
+                # page shouldn't be doing colour maths.
+                "fill": _rgba(e["color"], 0.06),
+            }
+            for e in eras
+        ],
+        "scoring": {
+            "by_season": [
+                {
+                    "season": int(r["season"]),
+                    "avg": round(float(r["avg"]), 1),
+                    "high": round(float(r["high"]), 1),
+                    "low": round(float(r["low"]), 1),
+                }
+                for _, r in scoring.iterrows()
+            ],
+            "champion_points": champion_pf,
+            "peak": {"season": int(peak["season"]), "avg": round(float(peak["avg"]), 1)},
+            "lean": {"season": int(lean["season"]), "avg": round(float(lean["avg"]), 1)},
+            "rise": round(float(peak["avg"]) - float(lean["avg"]), 1),
+        },
+        "balance": {
+            "unique_champions": unique_champions,
+            "total_seasons": int(total_seasons),
+            "diversity_rate": round(unique_champions / total_seasons, 4),
+            "playoff_managers_ever": len(appearances),
+            "most_consistent": (
+                {
+                    "manager": ranked_playoff[0][0],
+                    "appearances": ranked_playoff[0][1],
+                    "emoji": MANAGER_EMOJI.get(ranked_playoff[0][0], ""),
+                }
+                if ranked_playoff else None
+            ),
+            "title_counts": [{"manager": m, "titles": int(n)} for m, n in title_counts],
+            "top1_pct": int(title_counts[0][1] / total_titles * 100) if title_counts else 0,
+            "top3_pct": int(sum(n for _, n in title_counts[:3]) / total_titles * 100) if title_counts else 0,
+        },
+        "records": {
+            "week_high": _record(week_high, {
+                "week": int(week_high["week"]), "points": round(float(week_high["team_score"]), 2),
+            }),
+            "blowout": _record(blowout, {
+                "week": int(blowout["week"]), "margin": round(float(blowout["margin"]), 2),
+            }),
+            "closest": _record(closest, {
+                "week": int(closest["week"]), "margin": round(float(closest["margin"]), 2),
+                "loser": manager_of(closest["season"], closest["opponent"]),
+            }),
+            "best_record": _record(best_record, {
+                "wins": int(best_record["wins"]), "losses": int(best_record["losses"]),
+            }),
+            "best_points": _record(best_points, {
+                "points_for": round(float(best_points["points_for"]), 1),
+            }),
+        },
+    }
