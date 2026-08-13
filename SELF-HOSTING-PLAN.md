@@ -39,33 +39,32 @@ So this is **static site generation**, not a reimplementation. The data layer al
 
 ## Options
 
-### Option A — Static rewrite on Cloudflare (recommended)
+### Option A — Rewrite the presentation layer on Cloudflare ✅ **chosen**
 
-Port to the same stack as My Concert Archive: vinext / React on a Cloudflare Worker, data precomputed to JSON at build time, routes replacing dropdowns.
+Port to the same stack as My Concert Archive and the Draft Room: vinext / React on a Cloudflare Worker, with the **data layer staying in Python** and emitting JSON at build time. Routes replace dropdowns.
 
-- **Cost:** $0 forever. Free tier isn't even approached.
+- **Cost:** $0 forever. The free tier isn't approached.
 - **Never sleeps.** Loads in tens of milliseconds.
-- **You already have the template.** The concert archive is this exact shape — a read-only archive over static data, with routes for entities. Same problem, already solved once in your own portfolio.
-- **Effort:** real. See the estimate below.
+- **One stack across the portfolio.** Three projects, one set of idioms, one deploy story.
+- **The riskiest code is never rewritten.** Era-specific keeper rules, franchise lineage, playoff bracket reconstruction — all stay in pandas where they're already correct.
+- **Room for the roadmap.** Search, Player Histories, Ownership Trees and the rest of `CLAUDE.md`'s future priorities are client-side features. This stack supports them; exported HTML fights them.
+- **Effort:** real, but it's a *presentation* rewrite. See the estimate below.
 
-### Option B — Self-host Streamlit on Fly.io or Render
+### Option B — Static-export the Python (considered, rejected)
 
-Containerize the app as-is, point `iwnh.sme327.com` at it.
+Stub out `streamlit`, import the app, capture the HTML it generates, write files — the same trick `build.py` uses in `sme327-landing`. Technically viable: only 5 Streamlit DOM selectors appear in `styles.py`, Plotly exports to standalone HTML natively, and `st.columns` can be emulated with grid wrappers.
 
-- **Cost:** ~$5–7/month (~$60–85/year).
-- **No sleeping**, custom domain works, **code unchanged**.
-- **Effort:** an evening. A Dockerfile and a deploy.
-- Keeps every limitation of the current architecture, and the ~1 hour of deploy config is thrown away if you later do Option A.
+Rejected because it **ports the technical debt rather than paying it down**. The 698 inline styles and 376 `unsafe_allow_html` calls survive intact and become load-bearing for the build. It also creates a bespoke stub harness that only this project uses, and leaves you authoring against a framework you're no longer really running.
 
-### Option C — Reverse-proxy Streamlit Cloud behind a Worker
+Faster to reach, worse to live in.
 
-**Not recommended.** Streamlit needs a WebSocket (`/_stcore/stream`) and performs host/XSRF checks that fight proxying. Even if you get it working, the app still sleeps, because it's still running on Community Cloud. You'd add fragility and fix nothing.
+### Option C — Self-host Streamlit on Fly.io or Render
 
-### Recommendation
+Containerize as-is, point `iwnh.sme327.com` at it. ~$5–7/month, code unchanged, an evening of work. Kept on the record as the emergency path if the domain is needed before the rewrite lands — not the plan.
 
-**Option A**, unless you want it live next week — in which case **Option B now, Option A later** is a legitimate sequence. B is cheap enough that treating it as a bridge isn't wasteful.
+### Option D — Reverse-proxy Streamlit Cloud behind a Worker
 
-Do not do C.
+**Do not.** Streamlit needs a WebSocket (`/_stcore/stream`) and performs host/XSRF checks that fight proxying. Even working, the app still sleeps, because it's still on Community Cloud. Adds fragility, fixes nothing.
 
 ---
 
@@ -124,9 +123,28 @@ For rivalries, generate only pairs that actually played each other; a full 24×2
 
 ## Phase 4 — Port the presentation
 
-The bulk of the work. `utils/styles.py` (886 lines) already has the right instinct — `metric_card()`, `section_header()`, `html_table()`, `avatar_html()` — but most markup bypasses those helpers and inlines styles directly. The port is the moment to invert that: a real stylesheet with real class names, and components that take data.
+The bulk of the work. `utils/styles.py` (886 lines) already has the right instinct — `metric_card()`, `section_header()`, `html_table()`, `avatar_html()` — but most markup bypasses those helpers and inlines styles directly. The port is the moment to invert that: a real stylesheet with real class names, and components that take data. Expect this layer to **shrink**, not transfer — 698 inline style attributes collapse into a few dozen classes.
 
 `utils/narratives.py` (478 lines) is pure static content — `NFL_CONTEXT` and friends — and converts to JSON almost mechanically.
+
+**Port in order of ascending difficulty, not importance.** The goal early on is to establish the component vocabulary, so start where the page is simple and the patterns are obvious:
+
+| Order | Page | Lines | Why here |
+|---|---|---|---|
+| 1 | `season_archive.py` | 338 | Simplest page with a dropdown — proves the route pattern end to end |
+| 2 | `league_timeline.py` | 324 | Establishes the timeline component |
+| 3 | `app.py` (home) | 319 | Hero, metric cards, nav cards — the shared vocabulary |
+| 4 | `league_history.py` | 511 | First Plotly port |
+| 5 | `champions.py` | 577 | |
+| 6 | `manager_profiles.py` | 636 | First entity route with real depth |
+| 7 | `draft_center.py` | 896 | |
+| 8 | `franchise_profiles.py` | 966 | |
+| 9 | `keeper_hall.py` | 1,177 | Largest, and no existing entry points — worth redesigning, not transcribing |
+| 10 | `rivalries.py` | 1,215 | Most complex routing (pairwise) — do it once every pattern exists |
+
+**Keep the Streamlit app running the whole time.** Side-by-side visual diffing is the only practical way to catch regressions in a design this dense, and it means an unfinished rewrite never costs you a working site. Cut over only at parity.
+
+Mobile is a design decision to make *here*, not to port. The current `layout="wide"` plus fixed column counts is a desktop assumption, and the primary distribution channel for this site is a link in a group chat (see product review, F11).
 
 ## Phase 5 — Deploy and attach the domain
 
@@ -144,15 +162,19 @@ The bulk of the work. `utils/styles.py` (886 lines) already has the right instin
 
 ## Effort estimate
 
-Option A is honestly a multi-session project. Rough shape of the 9,585 lines:
+A multi-session project, but smaller than "rewrite 9,585 lines of Python in TypeScript" suggests — because most of it isn't rewritten:
 
-| Work | Share | Notes |
-|---|---|---|
-| Data layer port (`utils/data.py`, 1,262 lines) | ~20% | Highest risk, protected by Phase 1 fixtures |
-| Presentation port (pages + `styles.py`, ~7,800 lines) | ~60% | Bulk of it; mostly mechanical, tedious |
-| Routing, build, deploy | ~20% | Well-trodden — the concert archive is the template |
+| Component | Lines | What happens | Risk |
+|---|---|---|---|
+| `utils/data.py` | 1,262 | **Stays Python.** Becomes a build script emitting JSON | Low — protected by Phase 1 fixtures |
+| `utils/narratives.py` | 478 | Static dicts → JSON | Trivial |
+| `utils/styles.py` | 886 | → real stylesheet; expect it to shrink | Low |
+| `app.py` + `pages/` | ~6,600 | The genuine rewrite: HTML strings → JSX | Medium, mechanical |
+| Routing, build, deploy | new | Concert archive is the template | Low |
 
-Option B is one evening.
+The riskiest logic in the project — 25 years of era-specific keeper rules, franchise seat lineage, playoff bracket reconstruction — **is never rewritten at all.**
+
+The real failure mode is abandonment: a half-finished port sitting beside a Streamlit app that still works. Phase 1 fixtures, ascending-difficulty ordering, and keeping Streamlit live are all specifically there to prevent that.
 
 ---
 
@@ -160,7 +182,8 @@ Option B is one evening.
 
 | Step | Risk | Mitigation |
 |---|---|---|
-| Repo has untracked pipeline scripts | Total loss of the scraper if the laptop dies | **Commit them today**, before any migration work |
+| ~~Repo has untracked pipeline scripts~~ | ~~Total loss of the scraper if the laptop dies~~ | ✅ Resolved 2026-08-13 (`97deb37`) |
+| Rewrite stalls half-finished | Weeks spent, still on Streamlit | Port ascending-difficulty; keep Streamlit live; ship nothing until parity |
 | Porting 1,262 lines of derivations | Silent correctness drift — wrong champions, wrong records | Phase 1 golden-file fixtures as the acceptance gate |
 | Porting 698 inline styles | Visual regressions, inconsistency carried forward | Rebuild on a stylesheet rather than transcribing |
 | Rivalry route explosion | Hundreds of near-empty pages | Generate only pairs with real head-to-head history |
