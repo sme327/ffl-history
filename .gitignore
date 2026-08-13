@@ -27,3 +27,6 @@ data/ref_nfl_players.csv
 
 # JetBrains
 .idea/
+
+# Generated site data (rebuild with scripts/build_site_data.py)
+build/

@@ -93,7 +93,41 @@ This is the phase that protects the project, and it's worth doing **even if you 
 
 Without this, a rewrite of 1,262 lines of pandas derivations is an unverifiable leap. With it, it's a refactor with a pass/fail gate. The git log shows three separate human-discovered correctness bugs (`Fix Mike Williams 20yr career`, `Fix Evan vs Fadi rivalry plaque`, `Fix home page to acknowledge Clark & Fadi both went 12-1`) — that's the failure mode this prevents.
 
-## Phase 2 — Port the data layer to a build step
+## Phase 2 — Port the data layer to a build step ✅ **done (2026-08-13)**
+
+`scripts/build_site_data.py` emits 270 JSON files (2.5 MB) into `build/data/`, one per future route:
+
+```
+site.json  champions.json  timeline.json  draft.json  keepers.json
+player-ownership.json  franchise-rivalries.json  playoff-eliminations.json
+managers/index.json + 24    franchises/index.json + 12
+seasons/index.json + 25     rivalries/index.json + 195
+manifest.json
+```
+
+Every frame is checked against `tests/fixtures/` **before** it is written — the build exits non-zero rather than emit history the test suite hasn't approved (verified by corrupting a fixture and confirming the refusal). Slugs are stable and apostrophe-safe: `Kevin O'Boyle` → `kevin-oboyle`, rivalries → `dominic-vs-kevin-oboyle`.
+
+### What Phase 2 uncovered
+
+**Not all derivations live in `utils/data.py`.** Seven of ten pages call `load_all()` and compute from raw frames themselves, so that logic is covered by neither the JSON build nor the fixtures:
+
+| Page | Logic still trapped in the page |
+|---|---|
+| `app.py` | home storylines: best season, title droughts, top scorer |
+| `champions.py` | title-game context, dynasty framing |
+| `franchise_profiles.py` | per-franchise season tables, lineage narrative |
+| `league_history.py` | era summaries, competitive-balance trends |
+| `manager_profiles.py` | career plaque assembly |
+| `rivalries.py` | elimination/heartbreak sections |
+| `season_archive.py` | season recap assembly, playoff bracket rendering |
+
+Each needs lifting into `utils/data.py` with fixtures added, before that route can render from JSON alone. This is the real remaining work in the data layer, and it's best done **page by page during Phase 4** — extract the logic, add its fixture, then port the presentation. Doing it that way keeps every step verified instead of front-loading a large untested refactor.
+
+`build/` is gitignored; regenerate with `python3 scripts/build_site_data.py`.
+
+---
+
+## Phase 2 (original scope, for reference) — Port the data layer to a build step
 
 - Translate `utils/data.py` into a build-time script that reads the 15 CSVs and emits JSON artifacts — one per route, plus shared indexes.
 - Language choice: **keep it in Python.** `pandas` already does this work correctly, the derivations are subtle (era-specific keeper rules, franchise seat lineage, playoff bracket reconstruction), and rewriting them in TypeScript is pure risk for no gain. The build runs Python, emits JSON, and the site reads JSON. Your concert archive already mixes a Python data pipeline with a TypeScript front end.
