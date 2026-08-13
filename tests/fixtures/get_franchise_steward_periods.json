@@ -1,0 +1,185 @@
+{
+  "type": "dataframe",
+  "shape": [
+    24,
+    5
+  ],
+  "columns": [
+    "franchise_id",
+    "manager_name",
+    "start_season",
+    "end_season",
+    "years"
+  ],
+  "digest": "8e464072fb9acbe6d33b9f74bc1e612aa9e2f3e0bad256d8319815d186e40797",
+  "rows": [
+    {
+      "franchise_id": "F01",
+      "manager_name": "Adam",
+      "start_season": 2001,
+      "end_season": 2014,
+      "years": 14
+    },
+    {
+      "franchise_id": "F01",
+      "manager_name": "Douglas",
+      "start_season": 2015,
+      "end_season": 2025,
+      "years": 11
+    },
+    {
+      "franchise_id": "F02",
+      "manager_name": "Brian Clark",
+      "start_season": 2001,
+      "end_season": 2025,
+      "years": 25
+    },
+    {
+      "franchise_id": "F03",
+      "manager_name": "Byron",
+      "start_season": 2001,
+      "end_season": 2004,
+      "years": 4
+    },
+    {
+      "franchise_id": "F03",
+      "manager_name": "Dominic",
+      "start_season": 2005,
+      "end_season": 2025,
+      "years": 21
+    },
+    {
+      "franchise_id": "F04",
+      "manager_name": "Dale",
+      "start_season": 2001,
+      "end_season": 2002,
+      "years": 2
+    },
+    {
+      "franchise_id": "F04",
+      "manager_name": "Joe Tyszko",
+      "start_season": 2003,
+      "end_season": 2009,
+      "years": 7
+    },
+    {
+      "franchise_id": "F04",
+      "manager_name": "Nick Blaettler",
+      "start_season": 2010,
+      "end_season": 2020,
+      "years": 11
+    },
+    {
+      "franchise_id": "F04",
+      "manager_name": "Bryan Kearney",
+      "start_season": 2021,
+      "end_season": 2022,
+      "years": 2
+    },
+    {
+      "franchise_id": "F04",
+      "manager_name": "Eric",
+      "start_season": 2023,
+      "end_season": 2025,
+      "years": 3
+    },
+    {
+      "franchise_id": "F05",
+      "manager_name": "Dan",
+      "start_season": 2001,
+      "end_season": 2003,
+      "years": 3
+    },
+    {
+      "franchise_id": "F05",
+      "manager_name": "Evan",
+      "start_season": 2004,
+      "end_season": 2025,
+      "years": 22
+    },
+    {
+      "franchise_id": "F06",
+      "manager_name": "Fadi",
+      "start_season": 2001,
+      "end_season": 2025,
+      "years": 25
+    },
+    {
+      "franchise_id": "F07",
+      "manager_name": "Jamie",
+      "start_season": 2001,
+      "end_season": 2005,
+      "years": 5
+    },
+    {
+      "franchise_id": "F07",
+      "manager_name": "Mike",
+      "start_season": 2006,
+      "end_season": 2009,
+      "years": 4
+    },
+    {
+      "franchise_id": "F07",
+      "manager_name": "BV",
+      "start_season": 2010,
+      "end_season": 2010,
+      "years": 1
+    },
+    {
+      "franchise_id": "F07",
+      "manager_name": "Robby",
+      "start_season": 2011,
+      "end_season": 2016,
+      "years": 6
+    },
+    {
+      "franchise_id": "F07",
+      "manager_name": "Jeff",
+      "start_season": 2017,
+      "end_season": 2025,
+      "years": 9
+    },
+    {
+      "franchise_id": "F08",
+      "manager_name": "Rob",
+      "start_season": 2001,
+      "end_season": 2006,
+      "years": 6
+    },
+    {
+      "franchise_id": "F08",
+      "manager_name": "Steve Swanson",
+      "start_season": 2007,
+      "end_season": 2025,
+      "years": 19
+    },
+    {
+      "franchise_id": "F09",
+      "manager_name": "Shawn",
+      "start_season": 2001,
+      "end_season": 2025,
+      "years": 25
+    },
+    {
+      "franchise_id": "F10",
+      "manager_name": "Kevin O'Boyle",
+      "start_season": 2002,
+      "end_season": 2025,
+      "years": 24
+    },
+    {
+      "franchise_id": "F11",
+      "manager_name": "Kevin Swanson",
+      "start_season": 2002,
+      "end_season": 2025,
+      "years": 24
+    },
+    {
+      "franchise_id": "F12",
+      "manager_name": "Thomas",
+      "start_season": 2003,
+      "end_season": 2025,
+      "years": 23
+    }
+  ]
+}

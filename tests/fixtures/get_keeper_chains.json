@@ -1,0 +1,2763 @@
+{
+  "type": "dataframe",
+  "shape": [
+    176,
+    9
+  ],
+  "columns": [
+    "player_name",
+    "primary_manager",
+    "all_managers",
+    "franchise_id",
+    "seasons",
+    "streak_len",
+    "first_season",
+    "last_season",
+    "multi_manager"
+  ],
+  "digest": "c0138cb59ad5cce9f75ebcf81732c21d806adeb16bc3c13e9ee5e6196aa5afb0",
+  "rows": [
+    {
+      "player_name": "LaDainian Tomlinson",
+      "primary_manager": "Jamie",
+      "all_managers": [
+        "Jamie",
+        "Mike"
+      ],
+      "franchise_id": "F07",
+      "seasons": [
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008
+      ],
+      "streak_len": 6,
+      "first_season": 2003,
+      "last_season": 2008,
+      "multi_manager": true
+    },
+    {
+      "player_name": "David Johnson",
+      "primary_manager": "Fadi",
+      "all_managers": [
+        "Fadi"
+      ],
+      "franchise_id": "F06",
+      "seasons": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "streak_len": 5,
+      "first_season": 2016,
+      "last_season": 2020,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Alvin Kamara",
+      "primary_manager": "Brian Clark",
+      "all_managers": [
+        "Brian Clark"
+      ],
+      "franchise_id": "F02",
+      "seasons": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "streak_len": 5,
+      "first_season": 2018,
+      "last_season": 2022,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Shaun Alexander",
+      "primary_manager": "Rob",
+      "all_managers": [
+        "Rob",
+        "Steve Swanson"
+      ],
+      "franchise_id": "F08",
+      "seasons": [
+        2003,
+        2004,
+        2005,
+        2006,
+        2007
+      ],
+      "streak_len": 5,
+      "first_season": 2003,
+      "last_season": 2007,
+      "multi_manager": true
+    },
+    {
+      "player_name": "Maurice Jones-Drew",
+      "primary_manager": "Kevin Swanson",
+      "all_managers": [
+        "Kevin Swanson"
+      ],
+      "franchise_id": "F11",
+      "seasons": [
+        2009,
+        2010,
+        2011,
+        2012
+      ],
+      "streak_len": 4,
+      "first_season": 2009,
+      "last_season": 2012,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Ja'Marr Chase",
+      "primary_manager": "Evan",
+      "all_managers": [
+        "Evan"
+      ],
+      "franchise_id": "F05",
+      "seasons": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "streak_len": 4,
+      "first_season": 2022,
+      "last_season": 2025,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Darren Waller",
+      "primary_manager": "Douglas",
+      "all_managers": [
+        "Douglas"
+      ],
+      "franchise_id": "F01",
+      "seasons": [
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "streak_len": 4,
+      "first_season": 2020,
+      "last_season": 2023,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Adrian Peterson",
+      "primary_manager": "Steve Swanson",
+      "all_managers": [
+        "Steve Swanson"
+      ],
+      "franchise_id": "F08",
+      "seasons": [
+        2008,
+        2009,
+        2010,
+        2011
+      ],
+      "streak_len": 4,
+      "first_season": 2008,
+      "last_season": 2011,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Chris Johnson",
+      "primary_manager": "Brian Clark",
+      "all_managers": [
+        "Brian Clark"
+      ],
+      "franchise_id": "F02",
+      "seasons": [
+        2009,
+        2010,
+        2011,
+        2012
+      ],
+      "streak_len": 4,
+      "first_season": 2009,
+      "last_season": 2012,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Nick Chubb",
+      "primary_manager": "Nick Blaettler",
+      "all_managers": [
+        "Nick Blaettler",
+        "Bryan Kearney"
+      ],
+      "franchise_id": "F04",
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "streak_len": 4,
+      "first_season": 2019,
+      "last_season": 2022,
+      "multi_manager": true
+    },
+    {
+      "player_name": "Drew Brees",
+      "primary_manager": "Kevin O'Boyle",
+      "all_managers": [
+        "Kevin O'Boyle"
+      ],
+      "franchise_id": "F10",
+      "seasons": [
+        2008,
+        2009,
+        2010,
+        2011
+      ],
+      "streak_len": 4,
+      "first_season": 2008,
+      "last_season": 2011,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Davante Adams",
+      "primary_manager": "Douglas",
+      "all_managers": [
+        "Douglas"
+      ],
+      "franchise_id": "F01",
+      "seasons": [
+        2017,
+        2018,
+        2019
+      ],
+      "streak_len": 3,
+      "first_season": 2017,
+      "last_season": 2019,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Rudi Johnson",
+      "primary_manager": "Thomas",
+      "all_managers": [
+        "Thomas"
+      ],
+      "franchise_id": "F12",
+      "seasons": [
+        2005,
+        2006,
+        2007
+      ],
+      "streak_len": 3,
+      "first_season": 2005,
+      "last_season": 2007,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Calvin Ridley",
+      "primary_manager": "Steve Swanson",
+      "all_managers": [
+        "Steve Swanson"
+      ],
+      "franchise_id": "F08",
+      "seasons": [
+        2019,
+        2020,
+        2021
+      ],
+      "streak_len": 3,
+      "first_season": 2019,
+      "last_season": 2021,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Mike Evans",
+      "primary_manager": "Robby",
+      "all_managers": [
+        "Robby",
+        "Jeff"
+      ],
+      "franchise_id": "F07",
+      "seasons": [
+        2015,
+        2016,
+        2017
+      ],
+      "streak_len": 3,
+      "first_season": 2015,
+      "last_season": 2017,
+      "multi_manager": true
+    },
+    {
+      "player_name": "Breece Hall",
+      "primary_manager": "Dominic",
+      "all_managers": [
+        "Dominic"
+      ],
+      "franchise_id": "F03",
+      "seasons": [
+        2023,
+        2024,
+        2025
+      ],
+      "streak_len": 3,
+      "first_season": 2023,
+      "last_season": 2025,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Clinton Portis",
+      "primary_manager": "Brian Clark",
+      "all_managers": [
+        "Brian Clark"
+      ],
+      "franchise_id": "F02",
+      "seasons": [
+        2004,
+        2005,
+        2006
+      ],
+      "streak_len": 3,
+      "first_season": 2004,
+      "last_season": 2006,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Garrett Wilson",
+      "primary_manager": "Jeff",
+      "all_managers": [
+        "Jeff"
+      ],
+      "franchise_id": "F07",
+      "seasons": [
+        2023,
+        2024,
+        2025
+      ],
+      "streak_len": 3,
+      "first_season": 2023,
+      "last_season": 2025,
+      "multi_manager": false
+    },
+    {
+      "player_name": "George Kittle",
+      "primary_manager": "Dominic",
+      "all_managers": [
+        "Dominic"
+      ],
+      "franchise_id": "F03",
+      "seasons": [
+        2019,
+        2020,
+        2021
+      ],
+      "streak_len": 3,
+      "first_season": 2019,
+      "last_season": 2021,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Larry Johnson",
+      "primary_manager": "Joe Tyszko",
+      "all_managers": [
+        "Joe Tyszko"
+      ],
+      "franchise_id": "F04",
+      "seasons": [
+        2006,
+        2007,
+        2008
+      ],
+      "streak_len": 3,
+      "first_season": 2006,
+      "last_season": 2008,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Aaron Rodgers",
+      "primary_manager": "Shawn",
+      "all_managers": [
+        "Shawn"
+      ],
+      "franchise_id": "F09",
+      "seasons": [
+        2011,
+        2012,
+        2013
+      ],
+      "streak_len": 3,
+      "first_season": 2011,
+      "last_season": 2013,
+      "multi_manager": false
+    },
+    {
+      "player_name": "LeSean McCoy",
+      "primary_manager": "Kevin O'Boyle",
+      "all_managers": [
+        "Kevin O'Boyle"
+      ],
+      "franchise_id": "F10",
+      "seasons": [
+        2012,
+        2013,
+        2014
+      ],
+      "streak_len": 3,
+      "first_season": 2012,
+      "last_season": 2014,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Josh Allen",
+      "primary_manager": "Thomas",
+      "all_managers": [
+        "Thomas"
+      ],
+      "franchise_id": "F12",
+      "seasons": [
+        2021,
+        2022,
+        2023
+      ],
+      "streak_len": 3,
+      "first_season": 2021,
+      "last_season": 2023,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Arian Foster",
+      "primary_manager": "Thomas",
+      "all_managers": [
+        "Thomas"
+      ],
+      "franchise_id": "F12",
+      "seasons": [
+        2011,
+        2012,
+        2013
+      ],
+      "streak_len": 3,
+      "first_season": 2011,
+      "last_season": 2013,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Priest Holmes",
+      "primary_manager": "Kevin Swanson",
+      "all_managers": [
+        "Kevin Swanson"
+      ],
+      "franchise_id": "F11",
+      "seasons": [
+        2004,
+        2005
+      ],
+      "streak_len": 2,
+      "first_season": 2004,
+      "last_season": 2005,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Devonta Freeman",
+      "primary_manager": "Brian Clark",
+      "all_managers": [
+        "Brian Clark"
+      ],
+      "franchise_id": "F02",
+      "seasons": [
+        2016,
+        2017
+      ],
+      "streak_len": 2,
+      "first_season": 2016,
+      "last_season": 2017,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Patrick Mahomes",
+      "primary_manager": "Eric",
+      "all_managers": [
+        "Eric"
+      ],
+      "franchise_id": "F04",
+      "seasons": [
+        2023,
+        2024
+      ],
+      "streak_len": 2,
+      "first_season": 2023,
+      "last_season": 2024,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Frank Gore",
+      "primary_manager": "Joe Tyszko",
+      "all_managers": [
+        "Joe Tyszko",
+        "Nick Blaettler"
+      ],
+      "franchise_id": "F04",
+      "seasons": [
+        2009,
+        2010
+      ],
+      "streak_len": 2,
+      "first_season": 2009,
+      "last_season": 2010,
+      "multi_manager": true
+    },
+    {
+      "player_name": "Randy Moss",
+      "primary_manager": "Byron",
+      "all_managers": [
+        "Byron",
+        "Dominic"
+      ],
+      "franchise_id": "F03",
+      "seasons": [
+        2004,
+        2005
+      ],
+      "streak_len": 2,
+      "first_season": 2004,
+      "last_season": 2005,
+      "multi_manager": true
+    },
+    {
+      "player_name": "Roddy White",
+      "primary_manager": "Fadi",
+      "all_managers": [
+        "Fadi"
+      ],
+      "franchise_id": "F06",
+      "seasons": [
+        2010,
+        2011
+      ],
+      "streak_len": 2,
+      "first_season": 2010,
+      "last_season": 2011,
+      "multi_manager": false
+    },
+    {
+      "player_name": "DeMarco Murray",
+      "primary_manager": "Dominic",
+      "all_managers": [
+        "Dominic"
+      ],
+      "franchise_id": "F03",
+      "seasons": [
+        2014,
+        2015
+      ],
+      "streak_len": 2,
+      "first_season": 2014,
+      "last_season": 2015,
+      "multi_manager": false
+    },
+    {
+      "player_name": "De'Von Achane",
+      "primary_manager": "Fadi",
+      "all_managers": [
+        "Fadi"
+      ],
+      "franchise_id": "F06",
+      "seasons": [
+        2024,
+        2025
+      ],
+      "streak_len": 2,
+      "first_season": 2024,
+      "last_season": 2025,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Peyton Manning",
+      "primary_manager": "Evan",
+      "all_managers": [
+        "Evan"
+      ],
+      "franchise_id": "F05",
+      "seasons": [
+        2005,
+        2006
+      ],
+      "streak_len": 2,
+      "first_season": 2005,
+      "last_season": 2006,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Jamaal Charles",
+      "primary_manager": "Steve Swanson",
+      "all_managers": [
+        "Steve Swanson"
+      ],
+      "franchise_id": "F08",
+      "seasons": [
+        2013,
+        2014
+      ],
+      "streak_len": 2,
+      "first_season": 2013,
+      "last_season": 2014,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Nico Collins",
+      "primary_manager": "Kevin O'Boyle",
+      "all_managers": [
+        "Kevin O'Boyle"
+      ],
+      "franchise_id": "F10",
+      "seasons": [
+        2024,
+        2025
+      ],
+      "streak_len": 2,
+      "first_season": 2024,
+      "last_season": 2025,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Rachaad White",
+      "primary_manager": "Shawn",
+      "all_managers": [
+        "Shawn"
+      ],
+      "franchise_id": "F09",
+      "seasons": [
+        2023,
+        2024
+      ],
+      "streak_len": 2,
+      "first_season": 2023,
+      "last_season": 2024,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Eddie Lacy",
+      "primary_manager": "Evan",
+      "all_managers": [
+        "Evan"
+      ],
+      "franchise_id": "F05",
+      "seasons": [
+        2014,
+        2015
+      ],
+      "streak_len": 2,
+      "first_season": 2014,
+      "last_season": 2015,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Derrick Henry",
+      "primary_manager": "Kevin Swanson",
+      "all_managers": [
+        "Kevin Swanson"
+      ],
+      "franchise_id": "F11",
+      "seasons": [
+        2020,
+        2021
+      ],
+      "streak_len": 2,
+      "first_season": 2020,
+      "last_season": 2021,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Justin Jefferson",
+      "primary_manager": "Kevin Swanson",
+      "all_managers": [
+        "Kevin Swanson"
+      ],
+      "franchise_id": "F11",
+      "seasons": [
+        2022,
+        2023
+      ],
+      "streak_len": 2,
+      "first_season": 2022,
+      "last_season": 2023,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Marvin Harrison",
+      "primary_manager": "Shawn",
+      "all_managers": [
+        "Shawn"
+      ],
+      "franchise_id": "F09",
+      "seasons": [
+        2003,
+        2004
+      ],
+      "streak_len": 2,
+      "first_season": 2003,
+      "last_season": 2004,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Marshawn Lynch",
+      "primary_manager": "Adam",
+      "all_managers": [
+        "Adam"
+      ],
+      "franchise_id": "F01",
+      "seasons": [
+        2013,
+        2014
+      ],
+      "streak_len": 2,
+      "first_season": 2013,
+      "last_season": 2014,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Brian Westbrook",
+      "primary_manager": "Evan",
+      "all_managers": [
+        "Evan"
+      ],
+      "franchise_id": "F05",
+      "seasons": [
+        2008,
+        2009
+      ],
+      "streak_len": 2,
+      "first_season": 2008,
+      "last_season": 2009,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Jordy Nelson",
+      "primary_manager": "Nick Blaettler",
+      "all_managers": [
+        "Nick Blaettler"
+      ],
+      "franchise_id": "F04",
+      "seasons": [
+        2016,
+        2017
+      ],
+      "streak_len": 2,
+      "first_season": 2016,
+      "last_season": 2017,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Terry McLaurin",
+      "primary_manager": "Jeff",
+      "all_managers": [
+        "Jeff"
+      ],
+      "franchise_id": "F07",
+      "seasons": [
+        2020,
+        2021
+      ],
+      "streak_len": 2,
+      "first_season": 2020,
+      "last_season": 2021,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Calvin Johnson",
+      "primary_manager": "Thomas",
+      "all_managers": [
+        "Thomas"
+      ],
+      "franchise_id": "F12",
+      "seasons": [
+        2009,
+        2010
+      ],
+      "streak_len": 2,
+      "first_season": 2009,
+      "last_season": 2010,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Terrell Owens",
+      "primary_manager": "Shawn",
+      "all_managers": [
+        "Shawn"
+      ],
+      "franchise_id": "F09",
+      "seasons": [
+        2008,
+        2009
+      ],
+      "streak_len": 2,
+      "first_season": 2008,
+      "last_season": 2009,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Cam Newton",
+      "primary_manager": "Shawn",
+      "all_managers": [
+        "Shawn"
+      ],
+      "franchise_id": "F09",
+      "seasons": [
+        2016,
+        2017
+      ],
+      "streak_len": 2,
+      "first_season": 2016,
+      "last_season": 2017,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Antonio Brown",
+      "primary_manager": "Fadi",
+      "all_managers": [
+        "Fadi"
+      ],
+      "franchise_id": "F06",
+      "seasons": [
+        2014,
+        2015
+      ],
+      "streak_len": 2,
+      "first_season": 2014,
+      "last_season": 2015,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Tom Brady",
+      "primary_manager": "Dominic",
+      "all_managers": [
+        "Dominic"
+      ],
+      "franchise_id": "F03",
+      "seasons": [
+        2012,
+        2013
+      ],
+      "streak_len": 2,
+      "first_season": 2012,
+      "last_season": 2013,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Jordan Howard",
+      "primary_manager": "Kevin O'Boyle",
+      "all_managers": [
+        "Kevin O'Boyle"
+      ],
+      "franchise_id": "F10",
+      "seasons": [
+        2017,
+        2018
+      ],
+      "streak_len": 2,
+      "first_season": 2017,
+      "last_season": 2018,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Chad Johnson",
+      "primary_manager": "Shawn",
+      "all_managers": [
+        "Shawn"
+      ],
+      "franchise_id": "F09",
+      "seasons": [
+        2006,
+        2007
+      ],
+      "streak_len": 2,
+      "first_season": 2006,
+      "last_season": 2007,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Chase Edmonds",
+      "primary_manager": "Kevin O'Boyle",
+      "all_managers": [
+        "Kevin O'Boyle"
+      ],
+      "franchise_id": "F10",
+      "seasons": [
+        2021,
+        2022
+      ],
+      "streak_len": 2,
+      "first_season": 2021,
+      "last_season": 2022,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Tee Higgins",
+      "primary_manager": "Fadi",
+      "all_managers": [
+        "Fadi"
+      ],
+      "franchise_id": "F06",
+      "seasons": [
+        2021,
+        2022
+      ],
+      "streak_len": 2,
+      "first_season": 2021,
+      "last_season": 2022,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Warrick Dunn",
+      "primary_manager": "Adam",
+      "all_managers": [
+        "Adam"
+      ],
+      "franchise_id": "F01",
+      "seasons": [
+        2005,
+        2006
+      ],
+      "streak_len": 2,
+      "first_season": 2005,
+      "last_season": 2006,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Matt Forte",
+      "primary_manager": "Kevin Swanson",
+      "all_managers": [
+        "Kevin Swanson"
+      ],
+      "franchise_id": "F11",
+      "seasons": [
+        2014,
+        2015
+      ],
+      "streak_len": 2,
+      "first_season": 2014,
+      "last_season": 2015,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Steven Jackson",
+      "primary_manager": "Dominic",
+      "all_managers": [
+        "Dominic"
+      ],
+      "franchise_id": "F03",
+      "seasons": [
+        2006,
+        2007
+      ],
+      "streak_len": 2,
+      "first_season": 2006,
+      "last_season": 2007,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Marion Barber",
+      "primary_manager": "Kevin Swanson",
+      "all_managers": [
+        "Kevin Swanson"
+      ],
+      "franchise_id": "F11",
+      "seasons": [
+        2008
+      ],
+      "streak_len": 1,
+      "first_season": 2008,
+      "last_season": 2008,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Marshall Faulk",
+      "primary_manager": "Byron",
+      "all_managers": [
+        "Byron"
+      ],
+      "franchise_id": "F03",
+      "seasons": [
+        2003
+      ],
+      "streak_len": 1,
+      "first_season": 2003,
+      "last_season": 2003,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Leonard Fournette",
+      "primary_manager": "Dominic",
+      "all_managers": [
+        "Dominic"
+      ],
+      "franchise_id": "F03",
+      "seasons": [
+        2022
+      ],
+      "streak_len": 1,
+      "first_season": 2022,
+      "last_season": 2022,
+      "multi_manager": false
+    },
+    {
+      "player_name": "LeSean McCoy",
+      "primary_manager": "Steve Swanson",
+      "all_managers": [
+        "Steve Swanson"
+      ],
+      "franchise_id": "F08",
+      "seasons": [
+        2017
+      ],
+      "streak_len": 1,
+      "first_season": 2017,
+      "last_season": 2017,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Matt Hasselbeck",
+      "primary_manager": "Adam",
+      "all_managers": [
+        "Adam"
+      ],
+      "franchise_id": "F01",
+      "seasons": [
+        2004
+      ],
+      "streak_len": 1,
+      "first_season": 2004,
+      "last_season": 2004,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Mike Evans",
+      "primary_manager": "Thomas",
+      "all_managers": [
+        "Thomas"
+      ],
+      "franchise_id": "F12",
+      "seasons": [
+        2024
+      ],
+      "streak_len": 1,
+      "first_season": 2024,
+      "last_season": 2024,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Marvin Jones Jr.",
+      "primary_manager": "Shawn",
+      "all_managers": [
+        "Shawn"
+      ],
+      "franchise_id": "F09",
+      "seasons": [
+        2018
+      ],
+      "streak_len": 1,
+      "first_season": 2018,
+      "last_season": 2018,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Matt Hasselbeck",
+      "primary_manager": "Kevin O'Boyle",
+      "all_managers": [
+        "Kevin O'Boyle"
+      ],
+      "franchise_id": "F10",
+      "seasons": [
+        2007
+      ],
+      "streak_len": 1,
+      "first_season": 2007,
+      "last_season": 2007,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Michael Turner",
+      "primary_manager": "Dominic",
+      "all_managers": [
+        "Dominic"
+      ],
+      "franchise_id": "F03",
+      "seasons": [
+        2011
+      ],
+      "streak_len": 1,
+      "first_season": 2011,
+      "last_season": 2011,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Michael Turner",
+      "primary_manager": "Dominic",
+      "all_managers": [
+        "Dominic"
+      ],
+      "franchise_id": "F03",
+      "seasons": [
+        2009
+      ],
+      "streak_len": 1,
+      "first_season": 2009,
+      "last_season": 2009,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Matt Forte",
+      "primary_manager": "Fadi",
+      "all_managers": [
+        "Fadi"
+      ],
+      "franchise_id": "F06",
+      "seasons": [
+        2009
+      ],
+      "streak_len": 1,
+      "first_season": 2009,
+      "last_season": 2009,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Matt Forte",
+      "primary_manager": "Evan",
+      "all_managers": [
+        "Evan"
+      ],
+      "franchise_id": "F05",
+      "seasons": [
+        2012
+      ],
+      "streak_len": 1,
+      "first_season": 2012,
+      "last_season": 2012,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Mecole Hardman Jr.",
+      "primary_manager": "Thomas",
+      "all_managers": [
+        "Thomas"
+      ],
+      "franchise_id": "F12",
+      "seasons": [
+        2020
+      ],
+      "streak_len": 1,
+      "first_season": 2020,
+      "last_season": 2020,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Peyton Manning",
+      "primary_manager": "Dominic",
+      "all_managers": [
+        "Dominic"
+      ],
+      "franchise_id": "F03",
+      "seasons": [
+        2010
+      ],
+      "streak_len": 1,
+      "first_season": 2010,
+      "last_season": 2010,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Peyton Manning",
+      "primary_manager": "Adam",
+      "all_managers": [
+        "Adam"
+      ],
+      "franchise_id": "F01",
+      "seasons": [
+        2008
+      ],
+      "streak_len": 1,
+      "first_season": 2008,
+      "last_season": 2008,
+      "multi_manager": false
+    },
+    {
+      "player_name": "A.J. Brown",
+      "primary_manager": "Steve Swanson",
+      "all_managers": [
+        "Steve Swanson"
+      ],
+      "franchise_id": "F08",
+      "seasons": [
+        2024
+      ],
+      "streak_len": 1,
+      "first_season": 2024,
+      "last_season": 2024,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Phillip Lindsay",
+      "primary_manager": "Jeff",
+      "all_managers": [
+        "Jeff"
+      ],
+      "franchise_id": "F07",
+      "seasons": [
+        2019
+      ],
+      "streak_len": 1,
+      "first_season": 2019,
+      "last_season": 2019,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Plaxico Burress",
+      "primary_manager": "Adam",
+      "all_managers": [
+        "Adam"
+      ],
+      "franchise_id": "F01",
+      "seasons": [
+        2007
+      ],
+      "streak_len": 1,
+      "first_season": 2007,
+      "last_season": 2007,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Zac Stacy",
+      "primary_manager": "Shawn",
+      "all_managers": [
+        "Shawn"
+      ],
+      "franchise_id": "F09",
+      "seasons": [
+        2014
+      ],
+      "streak_len": 1,
+      "first_season": 2014,
+      "last_season": 2014,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Xavier Worthy",
+      "primary_manager": "Douglas",
+      "all_managers": [
+        "Douglas"
+      ],
+      "franchise_id": "F01",
+      "seasons": [
+        2025
+      ],
+      "streak_len": 1,
+      "first_season": 2025,
+      "last_season": 2025,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Willis McGahee",
+      "primary_manager": "Fadi",
+      "all_managers": [
+        "Fadi"
+      ],
+      "franchise_id": "F06",
+      "seasons": [
+        2005
+      ],
+      "streak_len": 1,
+      "first_season": 2005,
+      "last_season": 2005,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Will Fuller V",
+      "primary_manager": "Dominic",
+      "all_managers": [
+        "Dominic"
+      ],
+      "franchise_id": "F03",
+      "seasons": [
+        2018
+      ],
+      "streak_len": 1,
+      "first_season": 2018,
+      "last_season": 2018,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Trenton Richardson",
+      "primary_manager": "Robby",
+      "all_managers": [
+        "Robby"
+      ],
+      "franchise_id": "F07",
+      "seasons": [
+        2013
+      ],
+      "streak_len": 1,
+      "first_season": 2013,
+      "last_season": 2013,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Trent Green",
+      "primary_manager": "Thomas",
+      "all_managers": [
+        "Thomas"
+      ],
+      "franchise_id": "F12",
+      "seasons": [
+        2004
+      ],
+      "streak_len": 1,
+      "first_season": 2004,
+      "last_season": 2004,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Torry Holt",
+      "primary_manager": "Brian Clark",
+      "all_managers": [
+        "Brian Clark"
+      ],
+      "franchise_id": "F02",
+      "seasons": [
+        2008
+      ],
+      "streak_len": 1,
+      "first_season": 2008,
+      "last_season": 2008,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Torry Holt",
+      "primary_manager": "Kevin Swanson",
+      "all_managers": [
+        "Kevin Swanson"
+      ],
+      "franchise_id": "F11",
+      "seasons": [
+        2006
+      ],
+      "streak_len": 1,
+      "first_season": 2006,
+      "last_season": 2006,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Tony Romo",
+      "primary_manager": "Mike",
+      "all_managers": [
+        "Mike"
+      ],
+      "franchise_id": "F07",
+      "seasons": [
+        2009
+      ],
+      "streak_len": 1,
+      "first_season": 2009,
+      "last_season": 2009,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Tom Brady",
+      "primary_manager": "Dominic",
+      "all_managers": [
+        "Dominic"
+      ],
+      "franchise_id": "F03",
+      "seasons": [
+        2008
+      ],
+      "streak_len": 1,
+      "first_season": 2008,
+      "last_season": 2008,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Todd Gurley",
+      "primary_manager": "Douglas",
+      "all_managers": [
+        "Douglas"
+      ],
+      "franchise_id": "F01",
+      "seasons": [
+        2016
+      ],
+      "streak_len": 1,
+      "first_season": 2016,
+      "last_season": 2016,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Tiki Barber",
+      "primary_manager": "Kevin O'Boyle",
+      "all_managers": [
+        "Kevin O'Boyle"
+      ],
+      "franchise_id": "F10",
+      "seasons": [
+        2006
+      ],
+      "streak_len": 1,
+      "first_season": 2006,
+      "last_season": 2006,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Terrell Owens",
+      "primary_manager": "Shawn",
+      "all_managers": [
+        "Shawn"
+      ],
+      "franchise_id": "F09",
+      "seasons": [
+        2005
+      ],
+      "streak_len": 1,
+      "first_season": 2005,
+      "last_season": 2005,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Terrell Owens",
+      "primary_manager": "Fadi",
+      "all_managers": [
+        "Fadi"
+      ],
+      "franchise_id": "F06",
+      "seasons": [
+        2003
+      ],
+      "streak_len": 1,
+      "first_season": 2003,
+      "last_season": 2003,
+      "multi_manager": false
+    },
+    {
+      "player_name": "T.Y. Hilton",
+      "primary_manager": "Nick Blaettler",
+      "all_managers": [
+        "Nick Blaettler"
+      ],
+      "franchise_id": "F04",
+      "seasons": [
+        2015
+      ],
+      "streak_len": 1,
+      "first_season": 2015,
+      "last_season": 2015,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Steven Jackson",
+      "primary_manager": "Adam",
+      "all_managers": [
+        "Adam"
+      ],
+      "franchise_id": "F01",
+      "seasons": [
+        2011
+      ],
+      "streak_len": 1,
+      "first_season": 2011,
+      "last_season": 2011,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Steve Smith",
+      "primary_manager": "Brian Clark",
+      "all_managers": [
+        "Brian Clark"
+      ],
+      "franchise_id": "F02",
+      "seasons": [
+        2007
+      ],
+      "streak_len": 1,
+      "first_season": 2007,
+      "last_season": 2007,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Stefon Diggs",
+      "primary_manager": "Nick Blaettler",
+      "all_managers": [
+        "Nick Blaettler"
+      ],
+      "franchise_id": "F04",
+      "seasons": [
+        2018
+      ],
+      "streak_len": 1,
+      "first_season": 2018,
+      "last_season": 2018,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Shane Vereen",
+      "primary_manager": "Brian Clark",
+      "all_managers": [
+        "Brian Clark"
+      ],
+      "franchise_id": "F02",
+      "seasons": [
+        2014
+      ],
+      "streak_len": 1,
+      "first_season": 2014,
+      "last_season": 2014,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Russell Wilson",
+      "primary_manager": "Kevin Swanson",
+      "all_managers": [
+        "Kevin Swanson"
+      ],
+      "franchise_id": "F11",
+      "seasons": [
+        2018
+      ],
+      "streak_len": 1,
+      "first_season": 2018,
+      "last_season": 2018,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Rob Gronkowski",
+      "primary_manager": "Thomas",
+      "all_managers": [
+        "Thomas"
+      ],
+      "franchise_id": "F12",
+      "seasons": [
+        2015
+      ],
+      "streak_len": 1,
+      "first_season": 2015,
+      "last_season": 2015,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Ricky Williams",
+      "primary_manager": "Joe Tyszko",
+      "all_managers": [
+        "Joe Tyszko"
+      ],
+      "franchise_id": "F04",
+      "seasons": [
+        2003
+      ],
+      "streak_len": 1,
+      "first_season": 2003,
+      "last_season": 2003,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Rich Gannon",
+      "primary_manager": "Adam",
+      "all_managers": [
+        "Adam"
+      ],
+      "franchise_id": "F01",
+      "seasons": [
+        2003
+      ],
+      "streak_len": 1,
+      "first_season": 2003,
+      "last_season": 2003,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Reggie Wayne",
+      "primary_manager": "Evan",
+      "all_managers": [
+        "Evan"
+      ],
+      "franchise_id": "F05",
+      "seasons": [
+        2010
+      ],
+      "streak_len": 1,
+      "first_season": 2010,
+      "last_season": 2010,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Reggie Bush",
+      "primary_manager": "Kevin Swanson",
+      "all_managers": [
+        "Kevin Swanson"
+      ],
+      "franchise_id": "F11",
+      "seasons": [
+        2007
+      ],
+      "streak_len": 1,
+      "first_season": 2007,
+      "last_season": 2007,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Ray Rice",
+      "primary_manager": "Nick Blaettler",
+      "all_managers": [
+        "Nick Blaettler"
+      ],
+      "franchise_id": "F04",
+      "seasons": [
+        2012
+      ],
+      "streak_len": 1,
+      "first_season": 2012,
+      "last_season": 2012,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Rashard Mendenhall",
+      "primary_manager": "Robby",
+      "all_managers": [
+        "Robby"
+      ],
+      "franchise_id": "F07",
+      "seasons": [
+        2011
+      ],
+      "streak_len": 1,
+      "first_season": 2011,
+      "last_season": 2011,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Randy Moss",
+      "primary_manager": "Fadi",
+      "all_managers": [
+        "Fadi"
+      ],
+      "franchise_id": "F06",
+      "seasons": [
+        2008
+      ],
+      "streak_len": 1,
+      "first_season": 2008,
+      "last_season": 2008,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Priest Holmes",
+      "primary_manager": "Brian Clark",
+      "all_managers": [
+        "Brian Clark"
+      ],
+      "franchise_id": "F02",
+      "seasons": [
+        2003
+      ],
+      "streak_len": 1,
+      "first_season": 2003,
+      "last_season": 2003,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Lamar Jackson",
+      "primary_manager": "Kevin O'Boyle",
+      "all_managers": [
+        "Kevin O'Boyle"
+      ],
+      "franchise_id": "F10",
+      "seasons": [
+        2020
+      ],
+      "streak_len": 1,
+      "first_season": 2020,
+      "last_season": 2020,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Joe Burrow",
+      "primary_manager": "Brian Clark",
+      "all_managers": [
+        "Brian Clark"
+      ],
+      "franchise_id": "F02",
+      "seasons": [
+        2023
+      ],
+      "streak_len": 1,
+      "first_season": 2023,
+      "last_season": 2023,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Kyle Pitts Sr.",
+      "primary_manager": "Jeff",
+      "all_managers": [
+        "Jeff"
+      ],
+      "franchise_id": "F07",
+      "seasons": [
+        2022
+      ],
+      "streak_len": 1,
+      "first_season": 2022,
+      "last_season": 2022,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Damien Williams",
+      "primary_manager": "Kevin Swanson",
+      "all_managers": [
+        "Kevin Swanson"
+      ],
+      "franchise_id": "F11",
+      "seasons": [
+        2019
+      ],
+      "streak_len": 1,
+      "first_season": 2019,
+      "last_season": 2019,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Christian McCaffrey",
+      "primary_manager": "Kevin O'Boyle",
+      "all_managers": [
+        "Kevin O'Boyle"
+      ],
+      "franchise_id": "F10",
+      "seasons": [
+        2019
+      ],
+      "streak_len": 1,
+      "first_season": 2019,
+      "last_season": 2019,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Clinton Portis",
+      "primary_manager": "Kevin Swanson",
+      "all_managers": [
+        "Kevin Swanson"
+      ],
+      "franchise_id": "F11",
+      "seasons": [
+        2003
+      ],
+      "streak_len": 1,
+      "first_season": 2003,
+      "last_season": 2003,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Corey Coleman",
+      "primary_manager": "Dominic",
+      "all_managers": [
+        "Dominic"
+      ],
+      "franchise_id": "F03",
+      "seasons": [
+        2017
+      ],
+      "streak_len": 1,
+      "first_season": 2017,
+      "last_season": 2017,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Corey Dillon",
+      "primary_manager": "Kevin O'Boyle",
+      "all_managers": [
+        "Kevin O'Boyle"
+      ],
+      "franchise_id": "F10",
+      "seasons": [
+        2005
+      ],
+      "streak_len": 1,
+      "first_season": 2005,
+      "last_season": 2005,
+      "multi_manager": false
+    },
+    {
+      "player_name": "D'Andre Swift",
+      "primary_manager": "Shawn",
+      "all_managers": [
+        "Shawn"
+      ],
+      "franchise_id": "F09",
+      "seasons": [
+        2022
+      ],
+      "streak_len": 1,
+      "first_season": 2022,
+      "last_season": 2022,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Dalvin Cook",
+      "primary_manager": "Evan",
+      "all_managers": [
+        "Evan"
+      ],
+      "franchise_id": "F05",
+      "seasons": [
+        2021
+      ],
+      "streak_len": 1,
+      "first_season": 2021,
+      "last_season": 2021,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Darren McFadden",
+      "primary_manager": "Robby",
+      "all_managers": [
+        "Robby"
+      ],
+      "franchise_id": "F07",
+      "seasons": [
+        2012
+      ],
+      "streak_len": 1,
+      "first_season": 2012,
+      "last_season": 2012,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Carson Palmer",
+      "primary_manager": "Fadi",
+      "all_managers": [
+        "Fadi"
+      ],
+      "franchise_id": "F06",
+      "seasons": [
+        2006
+      ],
+      "streak_len": 1,
+      "first_season": 2006,
+      "last_season": 2006,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Daunte Culpepper",
+      "primary_manager": "Dan",
+      "all_managers": [
+        "Dan"
+      ],
+      "franchise_id": "F05",
+      "seasons": [
+        2003
+      ],
+      "streak_len": 1,
+      "first_season": 2003,
+      "last_season": 2003,
+      "multi_manager": false
+    },
+    {
+      "player_name": "David Montgomery",
+      "primary_manager": "Steve Swanson",
+      "all_managers": [
+        "Steve Swanson"
+      ],
+      "franchise_id": "F08",
+      "seasons": [
+        2025
+      ],
+      "streak_len": 1,
+      "first_season": 2025,
+      "last_season": 2025,
+      "multi_manager": false
+    },
+    {
+      "player_name": "DeMario Douglas",
+      "primary_manager": "Shawn",
+      "all_managers": [
+        "Shawn"
+      ],
+      "franchise_id": "F09",
+      "seasons": [
+        2025
+      ],
+      "streak_len": 1,
+      "first_season": 2025,
+      "last_season": 2025,
+      "multi_manager": false
+    },
+    {
+      "player_name": "DeSean Jackson",
+      "primary_manager": "Adam",
+      "all_managers": [
+        "Adam"
+      ],
+      "franchise_id": "F01",
+      "seasons": [
+        2010
+      ],
+      "streak_len": 1,
+      "first_season": 2010,
+      "last_season": 2010,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Demaryius Thomas",
+      "primary_manager": "Thomas",
+      "all_managers": [
+        "Thomas"
+      ],
+      "franchise_id": "F12",
+      "seasons": [
+        2014
+      ],
+      "streak_len": 1,
+      "first_season": 2014,
+      "last_season": 2014,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Deuce McAllister",
+      "primary_manager": "Thomas",
+      "all_managers": [
+        "Thomas"
+      ],
+      "franchise_id": "F12",
+      "seasons": [
+        2003
+      ],
+      "streak_len": 1,
+      "first_season": 2003,
+      "last_season": 2003,
+      "multi_manager": false
+    },
+    {
+      "player_name": "CeeDee Lamb",
+      "primary_manager": "Douglas",
+      "all_managers": [
+        "Douglas"
+      ],
+      "franchise_id": "F01",
+      "seasons": [
+        2024
+      ],
+      "streak_len": 1,
+      "first_season": 2024,
+      "last_season": 2024,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Calvin Johnson",
+      "primary_manager": "Fadi",
+      "all_managers": [
+        "Fadi"
+      ],
+      "franchise_id": "F06",
+      "seasons": [
+        2012
+      ],
+      "streak_len": 1,
+      "first_season": 2012,
+      "last_season": 2012,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Donovan McNabb",
+      "primary_manager": "Kevin O'Boyle",
+      "all_managers": [
+        "Kevin O'Boyle"
+      ],
+      "franchise_id": "F10",
+      "seasons": [
+        2003
+      ],
+      "streak_len": 1,
+      "first_season": 2003,
+      "last_season": 2003,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Andre Johnson",
+      "primary_manager": "Evan",
+      "all_managers": [
+        "Evan"
+      ],
+      "franchise_id": "F05",
+      "seasons": [
+        2011
+      ],
+      "streak_len": 1,
+      "first_season": 2011,
+      "last_season": 2011,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Aaron Hernandez",
+      "primary_manager": "Adam",
+      "all_managers": [
+        "Adam"
+      ],
+      "franchise_id": "F01",
+      "seasons": [
+        2012
+      ],
+      "streak_len": 1,
+      "first_season": 2012,
+      "last_season": 2012,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Aaron Rodgers",
+      "primary_manager": "Shawn",
+      "all_managers": [
+        "Shawn"
+      ],
+      "franchise_id": "F09",
+      "seasons": [
+        2021
+      ],
+      "streak_len": 1,
+      "first_season": 2021,
+      "last_season": 2021,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Adrian Peterson",
+      "primary_manager": "Nick Blaettler",
+      "all_managers": [
+        "Nick Blaettler"
+      ],
+      "franchise_id": "F04",
+      "seasons": [
+        2013
+      ],
+      "streak_len": 1,
+      "first_season": 2013,
+      "last_season": 2013,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Ahman Green",
+      "primary_manager": "Kevin O'Boyle",
+      "all_managers": [
+        "Kevin O'Boyle"
+      ],
+      "franchise_id": "F10",
+      "seasons": [
+        2004
+      ],
+      "streak_len": 1,
+      "first_season": 2004,
+      "last_season": 2004,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Allen Robinson",
+      "primary_manager": "Kevin O'Boyle",
+      "all_managers": [
+        "Kevin O'Boyle"
+      ],
+      "franchise_id": "F10",
+      "seasons": [
+        2016
+      ],
+      "streak_len": 1,
+      "first_season": 2016,
+      "last_season": 2016,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Andre Johnson",
+      "primary_manager": "Thomas",
+      "all_managers": [
+        "Thomas"
+      ],
+      "franchise_id": "F12",
+      "seasons": [
+        2008
+      ],
+      "streak_len": 1,
+      "first_season": 2008,
+      "last_season": 2008,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Arian Foster",
+      "primary_manager": "Steve Swanson",
+      "all_managers": [
+        "Steve Swanson"
+      ],
+      "franchise_id": "F08",
+      "seasons": [
+        2015
+      ],
+      "streak_len": 1,
+      "first_season": 2015,
+      "last_season": 2015,
+      "multi_manager": false
+    },
+    {
+      "player_name": "C.J. Anderson",
+      "primary_manager": "Kevin O'Boyle",
+      "all_managers": [
+        "Kevin O'Boyle"
+      ],
+      "franchise_id": "F10",
+      "seasons": [
+        2015
+      ],
+      "streak_len": 1,
+      "first_season": 2015,
+      "last_season": 2015,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Bears",
+      "primary_manager": "Evan",
+      "all_managers": [
+        "Evan"
+      ],
+      "franchise_id": "F05",
+      "seasons": [
+        2019
+      ],
+      "streak_len": 1,
+      "first_season": 2019,
+      "last_season": 2019,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Brandin Cooks",
+      "primary_manager": "Steve Swanson",
+      "all_managers": [
+        "Steve Swanson"
+      ],
+      "franchise_id": "F08",
+      "seasons": [
+        2016
+      ],
+      "streak_len": 1,
+      "first_season": 2016,
+      "last_season": 2016,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Brandon Marshall",
+      "primary_manager": "BV",
+      "all_managers": [
+        "BV"
+      ],
+      "franchise_id": "F07",
+      "seasons": [
+        2010
+      ],
+      "streak_len": 1,
+      "first_season": 2010,
+      "last_season": 2010,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Brandon Marshall",
+      "primary_manager": "Thomas",
+      "all_managers": [
+        "Thomas"
+      ],
+      "franchise_id": "F12",
+      "seasons": [
+        2016
+      ],
+      "streak_len": 1,
+      "first_season": 2016,
+      "last_season": 2016,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Brian Thomas Jr.",
+      "primary_manager": "Eric",
+      "all_managers": [
+        "Eric"
+      ],
+      "franchise_id": "F04",
+      "seasons": [
+        2025
+      ],
+      "streak_len": 1,
+      "first_season": 2025,
+      "last_season": 2025,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Bucky Irving",
+      "primary_manager": "Brian Clark",
+      "all_managers": [
+        "Brian Clark"
+      ],
+      "franchise_id": "F02",
+      "seasons": [
+        2025
+      ],
+      "streak_len": 1,
+      "first_season": 2025,
+      "last_season": 2025,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Deuce McAllister",
+      "primary_manager": "Fadi",
+      "all_managers": [
+        "Fadi"
+      ],
+      "franchise_id": "F06",
+      "seasons": [
+        2004
+      ],
+      "streak_len": 1,
+      "first_season": 2004,
+      "last_season": 2004,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Doug Martin",
+      "primary_manager": "Evan",
+      "all_managers": [
+        "Evan"
+      ],
+      "franchise_id": "F05",
+      "seasons": [
+        2013
+      ],
+      "streak_len": 1,
+      "first_season": 2013,
+      "last_season": 2013,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Kurt Warner",
+      "primary_manager": "Adam",
+      "all_managers": [
+        "Adam"
+      ],
+      "franchise_id": "F01",
+      "seasons": [
+        2009
+      ],
+      "streak_len": 1,
+      "first_season": 2009,
+      "last_season": 2009,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Joseph Addai",
+      "primary_manager": "Evan",
+      "all_managers": [
+        "Evan"
+      ],
+      "franchise_id": "F05",
+      "seasons": [
+        2007
+      ],
+      "streak_len": 1,
+      "first_season": 2007,
+      "last_season": 2007,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Jaylen Waddle",
+      "primary_manager": "Steve Swanson",
+      "all_managers": [
+        "Steve Swanson"
+      ],
+      "franchise_id": "F08",
+      "seasons": [
+        2023
+      ],
+      "streak_len": 1,
+      "first_season": 2023,
+      "last_season": 2023,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Jeremy Hill",
+      "primary_manager": "Douglas",
+      "all_managers": [
+        "Douglas"
+      ],
+      "franchise_id": "F01",
+      "seasons": [
+        2015
+      ],
+      "streak_len": 1,
+      "first_season": 2015,
+      "last_season": 2015,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Jeremy Langford",
+      "primary_manager": "Evan",
+      "all_managers": [
+        "Evan"
+      ],
+      "franchise_id": "F05",
+      "seasons": [
+        2016
+      ],
+      "streak_len": 1,
+      "first_season": 2016,
+      "last_season": 2016,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Jimmy Graham",
+      "primary_manager": "Nick Blaettler",
+      "all_managers": [
+        "Nick Blaettler"
+      ],
+      "franchise_id": "F04",
+      "seasons": [
+        2014
+      ],
+      "streak_len": 1,
+      "first_season": 2014,
+      "last_season": 2014,
+      "multi_manager": false
+    },
+    {
+      "player_name": "A.J. Green",
+      "primary_manager": "Fadi",
+      "all_managers": [
+        "Fadi"
+      ],
+      "franchise_id": "F06",
+      "seasons": [
+        2013
+      ],
+      "streak_len": 1,
+      "first_season": 2013,
+      "last_season": 2013,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Jordan Love",
+      "primary_manager": "Kevin Swanson",
+      "all_managers": [
+        "Kevin Swanson"
+      ],
+      "franchise_id": "F11",
+      "seasons": [
+        2024
+      ],
+      "streak_len": 1,
+      "first_season": 2024,
+      "last_season": 2024,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Josh Allen",
+      "primary_manager": "Thomas",
+      "all_managers": [
+        "Thomas"
+      ],
+      "franchise_id": "F12",
+      "seasons": [
+        2025
+      ],
+      "streak_len": 1,
+      "first_season": 2025,
+      "last_season": 2025,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Jared Goff",
+      "primary_manager": "Thomas",
+      "all_managers": [
+        "Thomas"
+      ],
+      "franchise_id": "F12",
+      "seasons": [
+        2019
+      ],
+      "streak_len": 1,
+      "first_season": 2019,
+      "last_season": 2019,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Julio Jones",
+      "primary_manager": "Brian Clark",
+      "all_managers": [
+        "Brian Clark"
+      ],
+      "franchise_id": "F02",
+      "seasons": [
+        2013
+      ],
+      "streak_len": 1,
+      "first_season": 2013,
+      "last_season": 2013,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Julius Thomas",
+      "primary_manager": "Robby",
+      "all_managers": [
+        "Robby"
+      ],
+      "franchise_id": "F07",
+      "seasons": [
+        2014
+      ],
+      "streak_len": 1,
+      "first_season": 2014,
+      "last_season": 2014,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Justin Forsett",
+      "primary_manager": "Brian Clark",
+      "all_managers": [
+        "Brian Clark"
+      ],
+      "franchise_id": "F02",
+      "seasons": [
+        2015
+      ],
+      "streak_len": 1,
+      "first_season": 2015,
+      "last_season": 2015,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Kenneth Walker III",
+      "primary_manager": "Fadi",
+      "all_managers": [
+        "Fadi"
+      ],
+      "franchise_id": "F06",
+      "seasons": [
+        2023
+      ],
+      "streak_len": 1,
+      "first_season": 2023,
+      "last_season": 2023,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Kenyan Drake",
+      "primary_manager": "Steve Swanson",
+      "all_managers": [
+        "Steve Swanson"
+      ],
+      "franchise_id": "F08",
+      "seasons": [
+        2018
+      ],
+      "streak_len": 1,
+      "first_season": 2018,
+      "last_season": 2018,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Kevin Jones",
+      "primary_manager": "Joe Tyszko",
+      "all_managers": [
+        "Joe Tyszko"
+      ],
+      "franchise_id": "F04",
+      "seasons": [
+        2005
+      ],
+      "streak_len": 1,
+      "first_season": 2005,
+      "last_season": 2005,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Jay Ajayi",
+      "primary_manager": "Evan",
+      "all_managers": [
+        "Evan"
+      ],
+      "franchise_id": "F05",
+      "seasons": [
+        2017
+      ],
+      "streak_len": 1,
+      "first_season": 2017,
+      "last_season": 2017,
+      "multi_manager": false
+    },
+    {
+      "player_name": "James Conner",
+      "primary_manager": "Steve Swanson",
+      "all_managers": [
+        "Steve Swanson"
+      ],
+      "franchise_id": "F08",
+      "seasons": [
+        2022
+      ],
+      "streak_len": 1,
+      "first_season": 2022,
+      "last_season": 2022,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Drew Brees",
+      "primary_manager": "Kevin Swanson",
+      "all_managers": [
+        "Kevin Swanson"
+      ],
+      "franchise_id": "F11",
+      "seasons": [
+        2013
+      ],
+      "streak_len": 1,
+      "first_season": 2013,
+      "last_season": 2013,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Greg Jennings",
+      "primary_manager": "Shawn",
+      "all_managers": [
+        "Shawn"
+      ],
+      "franchise_id": "F09",
+      "seasons": [
+        2010
+      ],
+      "streak_len": 1,
+      "first_season": 2010,
+      "last_season": 2010,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Eddie George",
+      "primary_manager": "Evan",
+      "all_managers": [
+        "Evan"
+      ],
+      "franchise_id": "F05",
+      "seasons": [
+        2004
+      ],
+      "streak_len": 1,
+      "first_season": 2004,
+      "last_season": 2004,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Eric Decker",
+      "primary_manager": "Kevin Swanson",
+      "all_managers": [
+        "Kevin Swanson"
+      ],
+      "franchise_id": "F11",
+      "seasons": [
+        2016
+      ],
+      "streak_len": 1,
+      "first_season": 2016,
+      "last_season": 2016,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Ezekiel Elliott",
+      "primary_manager": "Evan",
+      "all_managers": [
+        "Evan"
+      ],
+      "franchise_id": "F05",
+      "seasons": [
+        2018
+      ],
+      "streak_len": 1,
+      "first_season": 2018,
+      "last_season": 2018,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Ezekiel Elliott",
+      "primary_manager": "Shawn",
+      "all_managers": [
+        "Shawn"
+      ],
+      "franchise_id": "F09",
+      "seasons": [
+        2020
+      ],
+      "streak_len": 1,
+      "first_season": 2020,
+      "last_season": 2020,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Frank Gore",
+      "primary_manager": "Fadi",
+      "all_managers": [
+        "Fadi"
+      ],
+      "franchise_id": "F06",
+      "seasons": [
+        2007
+      ],
+      "streak_len": 1,
+      "first_season": 2007,
+      "last_season": 2007,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Gary Barnidge",
+      "primary_manager": "Dominic",
+      "all_managers": [
+        "Dominic"
+      ],
+      "franchise_id": "F03",
+      "seasons": [
+        2016
+      ],
+      "streak_len": 1,
+      "first_season": 2016,
+      "last_season": 2016,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Greg Jennings",
+      "primary_manager": "Steve Swanson",
+      "all_managers": [
+        "Steve Swanson"
+      ],
+      "franchise_id": "F08",
+      "seasons": [
+        2012
+      ],
+      "streak_len": 1,
+      "first_season": 2012,
+      "last_season": 2012,
+      "multi_manager": false
+    },
+    {
+      "player_name": "James Conner",
+      "primary_manager": "Evan",
+      "all_managers": [
+        "Evan"
+      ],
+      "franchise_id": "F05",
+      "seasons": [
+        2020
+      ],
+      "streak_len": 1,
+      "first_season": 2020,
+      "last_season": 2020,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Greg Olsen",
+      "primary_manager": "Shawn",
+      "all_managers": [
+        "Shawn"
+      ],
+      "franchise_id": "F09",
+      "seasons": [
+        2015
+      ],
+      "streak_len": 1,
+      "first_season": 2015,
+      "last_season": 2015,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Hakeem Nicks",
+      "primary_manager": "Nick Blaettler",
+      "all_managers": [
+        "Nick Blaettler"
+      ],
+      "franchise_id": "F04",
+      "seasons": [
+        2011
+      ],
+      "streak_len": 1,
+      "first_season": 2011,
+      "last_season": 2011,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Isaiah Crowell",
+      "primary_manager": "Kevin Swanson",
+      "all_managers": [
+        "Kevin Swanson"
+      ],
+      "franchise_id": "F11",
+      "seasons": [
+        2017
+      ],
+      "streak_len": 1,
+      "first_season": 2017,
+      "last_season": 2017,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Jakobi Meyers",
+      "primary_manager": "Kevin Swanson",
+      "all_managers": [
+        "Kevin Swanson"
+      ],
+      "franchise_id": "F11",
+      "seasons": [
+        2025
+      ],
+      "streak_len": 1,
+      "first_season": 2025,
+      "last_season": 2025,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Jamal Lewis",
+      "primary_manager": "Joe Tyszko",
+      "all_managers": [
+        "Joe Tyszko"
+      ],
+      "franchise_id": "F04",
+      "seasons": [
+        2004
+      ],
+      "streak_len": 1,
+      "first_season": 2004,
+      "last_season": 2004,
+      "multi_manager": false
+    },
+    {
+      "player_name": "James Conner",
+      "primary_manager": "Shawn",
+      "all_managers": [
+        "Shawn"
+      ],
+      "franchise_id": "F09",
+      "seasons": [
+        2019
+      ],
+      "streak_len": 1,
+      "first_season": 2019,
+      "last_season": 2019,
+      "multi_manager": false
+    },
+    {
+      "player_name": "Zamir White",
+      "primary_manager": "Brian Clark",
+      "all_managers": [
+        "Brian Clark"
+      ],
+      "franchise_id": "F02",
+      "seasons": [
+        2024
+      ],
+      "streak_len": 1,
+      "first_season": 2024,
+      "last_season": 2024,
+      "multi_manager": false
+    }
+  ]
+}

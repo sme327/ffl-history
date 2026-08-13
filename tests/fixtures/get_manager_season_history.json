@@ -1,0 +1,3765 @@
+{
+  "type": "dict",
+  "value": {
+    "Adam": {
+      "type": "dataframe",
+      "shape": [
+        14,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "8652a3f761b901029d46a2a82868920006949113473a1415b877144af1a8ab67",
+      "rows": [
+        {
+          "Season": 2014,
+          "Team Name": "AbsolutBritneySpears",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 898.79,
+          "PA": 1013.15,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2013,
+          "Team Name": "AbsolutBritneySpears",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 1007.2,
+          "PA": 1027.39,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2012,
+          "Team Name": "AbsolutBritneySpears",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 1051.77,
+          "PA": 1078.84,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2011,
+          "Team Name": "AbsolutBritneySpears",
+          "W": 3,
+          "L": 10,
+          "T": 0,
+          "PF": 779.63,
+          "PA": 1053.92,
+          "Rank": 12,
+          "Result": "—"
+        },
+        {
+          "Season": 2010,
+          "Team Name": "AmstelBoobies",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 898.75,
+          "PA": 989.39,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2009,
+          "Team Name": "AmstelAssLighters",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1038.26,
+          "PA": 977.61,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2008,
+          "Team Name": "PJH Hawks",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 803.26,
+          "PA": 959.44,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2007,
+          "Team Name": "RedShit",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 818.14,
+          "PA": 847.0,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2006,
+          "Team Name": "Firestarters",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 665.9,
+          "PA": 829.7,
+          "Rank": 12,
+          "Result": "—"
+        },
+        {
+          "Season": 2005,
+          "Team Name": "Team Firestorm",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 672.14,
+          "PA": 886.6,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2004,
+          "Team Name": "Suxors",
+          "W": 5,
+          "L": 9,
+          "T": 0,
+          "PF": 820.67,
+          "PA": 853.85,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2003,
+          "Team Name": "Budweiser",
+          "W": 8,
+          "L": 6,
+          "T": 0,
+          "PF": 853.73,
+          "PA": 831.77,
+          "Rank": 8,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2002,
+          "Team Name": "Atom Smashers",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 835.69,
+          "PA": 910.37,
+          "Rank": 8,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2001,
+          "Team Name": "Flatulent Quadroons",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 588.68,
+          "PA": 757.88,
+          "Rank": 9,
+          "Result": "—"
+        }
+      ]
+    },
+    "BV": {
+      "type": "dataframe",
+      "shape": [
+        1,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "aefb32a2c0506cc6dc97bcc73681c5780e871e973286ee08abb5adbbea10c60c",
+      "rows": [
+        {
+          "Season": 2010,
+          "Team Name": "BV",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 929.89,
+          "PA": 1013.59,
+          "Rank": 9,
+          "Result": "—"
+        }
+      ]
+    },
+    "Brian Clark": {
+      "type": "dataframe",
+      "shape": [
+        25,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "cf35f45ae553f915ab5c9ce0531c09a9c27e04f3a10188a79717a154787e10f4",
+      "rows": [
+        {
+          "Season": 2025,
+          "Team Name": "team old style",
+          "W": 7,
+          "L": 7,
+          "T": 0,
+          "PF": 1104.72,
+          "PA": 1060.11,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2024,
+          "Team Name": "team old style",
+          "W": 6,
+          "L": 8,
+          "T": 0,
+          "PF": 1021.48,
+          "PA": 1142.07,
+          "Rank": 7,
+          "Result": "—"
+        },
+        {
+          "Season": 2023,
+          "Team Name": "team old style",
+          "W": 8,
+          "L": 6,
+          "T": 0,
+          "PF": 1054.5,
+          "PA": 1108.99,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2022,
+          "Team Name": "team old style",
+          "W": 6,
+          "L": 8,
+          "T": 0,
+          "PF": 1124.27,
+          "PA": 1130.62,
+          "Rank": 8,
+          "Result": "—"
+        },
+        {
+          "Season": 2021,
+          "Team Name": "team old style",
+          "W": 8,
+          "L": 6,
+          "T": 0,
+          "PF": 1219.01,
+          "PA": 1107.78,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2020,
+          "Team Name": "team old style",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 1128.67,
+          "PA": 1113.39,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2019,
+          "Team Name": "team old style",
+          "W": 10,
+          "L": 3,
+          "T": 0,
+          "PF": 1032.88,
+          "PA": 898.32,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2018,
+          "Team Name": "team old style",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1179.68,
+          "PA": 1144.15,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2017,
+          "Team Name": "team old style",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 1042.83,
+          "PA": 1053.09,
+          "Rank": 9,
+          "Result": "—"
+        },
+        {
+          "Season": 2016,
+          "Team Name": "team old style",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 1116.42,
+          "PA": 1029.72,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2015,
+          "Team Name": "team old style",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 1125.71,
+          "PA": 1098.43,
+          "Rank": 9,
+          "Result": "—"
+        },
+        {
+          "Season": 2014,
+          "Team Name": "team old style",
+          "W": 10,
+          "L": 3,
+          "T": 0,
+          "PF": 1054.9,
+          "PA": 1031.27,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2013,
+          "Team Name": "team old style",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 1007.06,
+          "PA": 1073.46,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2012,
+          "Team Name": "team old style",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 961.68,
+          "PA": 1030.8,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2011,
+          "Team Name": "team old style",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 970.19,
+          "PA": 1057.7,
+          "Rank": 8,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2010,
+          "Team Name": "team old style",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 1060.98,
+          "PA": 1027.64,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2009,
+          "Team Name": "team old style",
+          "W": 12,
+          "L": 1,
+          "T": 0,
+          "PF": 1164.32,
+          "PA": 982.85,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2008,
+          "Team Name": "old style",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 955.51,
+          "PA": 979.26,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2007,
+          "Team Name": "Old Style",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 794.96,
+          "PA": 877.94,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2006,
+          "Team Name": "team old style",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 840.4,
+          "PA": 739.03,
+          "Rank": 8,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2005,
+          "Team Name": "what's an end zone?",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 675.15,
+          "PA": 883.49,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2004,
+          "Team Name": "team old style",
+          "W": 5,
+          "L": 9,
+          "T": 0,
+          "PF": 986.47,
+          "PA": 1050.43,
+          "Rank": 9,
+          "Result": "—"
+        },
+        {
+          "Season": 2003,
+          "Team Name": "team old style",
+          "W": 8,
+          "L": 6,
+          "T": 0,
+          "PF": 994.93,
+          "PA": 885.9,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2002,
+          "Team Name": "Team Old Style",
+          "W": 9,
+          "L": 4,
+          "T": 0,
+          "PF": 949.47,
+          "PA": 790.36,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2001,
+          "Team Name": "clark",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 647.14,
+          "PA": 685.3,
+          "Rank": 7,
+          "Result": "—"
+        }
+      ]
+    },
+    "Bryan Kearney": {
+      "type": "dataframe",
+      "shape": [
+        2,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "c86191bf6e5a586aba4c3adcbb5acd4de30cf3337c9d5dc1a99425b7061446c4",
+      "rows": [
+        {
+          "Season": 2022,
+          "Team Name": "Good Douche Bag",
+          "W": 10,
+          "L": 4,
+          "T": 0,
+          "PF": 1248.4,
+          "PA": 1042.37,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2021,
+          "Team Name": "Beast Mode",
+          "W": 12,
+          "L": 2,
+          "T": 0,
+          "PF": 1378.3,
+          "PA": 1108.3,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        }
+      ]
+    },
+    "Byron": {
+      "type": "dataframe",
+      "shape": [
+        4,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "b98bc9f4d522496ef8ea7ffbb68917e721955b3d89815b806c6e39118ae4e5f1",
+      "rows": [
+        {
+          "Season": 2004,
+          "Team Name": "crown",
+          "W": 8,
+          "L": 6,
+          "T": 0,
+          "PF": 887.26,
+          "PA": 848.28,
+          "Rank": 8,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2003,
+          "Team Name": "crown",
+          "W": 3,
+          "L": 11,
+          "T": 0,
+          "PF": 792.89,
+          "PA": 919.53,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2002,
+          "Team Name": "crown",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 881.06,
+          "PA": 876.51,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2001,
+          "Team Name": "crown",
+          "W": 7,
+          "L": 7,
+          "T": 0,
+          "PF": 738.91,
+          "PA": 734.79,
+          "Rank": 8,
+          "Result": "—"
+        }
+      ]
+    },
+    "Dale": {
+      "type": "dataframe",
+      "shape": [
+        2,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "27725323bfa8b81bd4bc7eb73d41dfe04cceec08a05bc680cfc8564383ccd2a9",
+      "rows": [
+        {
+          "Season": 2002,
+          "Team Name": "watch yourself",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 829.97,
+          "PA": 803.78,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2001,
+          "Team Name": "No Mercy",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 556.18,
+          "PA": 766.73,
+          "Rank": 5,
+          "Result": "—"
+        }
+      ]
+    },
+    "Dan": {
+      "type": "dataframe",
+      "shape": [
+        3,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "77190b92a83f3908f3b607a4df0bf502a34fd5218aa671f34533deab50190c61",
+      "rows": [
+        {
+          "Season": 2003,
+          "Team Name": "Pilsner Urquell FC",
+          "W": 7,
+          "L": 7,
+          "T": 0,
+          "PF": 690.34,
+          "PA": 819.76,
+          "Rank": 9,
+          "Result": "—"
+        },
+        {
+          "Season": 2002,
+          "Team Name": "Pilsner Urquell FC",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 844.42,
+          "PA": 842.64,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2001,
+          "Team Name": "Marx Brothers",
+          "W": 9,
+          "L": 4,
+          "T": 0,
+          "PF": 846.49,
+          "PA": 706.5,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        }
+      ]
+    },
+    "Dominic": {
+      "type": "dataframe",
+      "shape": [
+        21,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "064d7e0ffd0a9c2009cc91cae4ed11c36e708ee5b27eb958e26cff1f046c57a4",
+      "rows": [
+        {
+          "Season": 2025,
+          "Team Name": "“I’ll take Kittle”",
+          "W": 6,
+          "L": 8,
+          "T": 0,
+          "PF": 1127.35,
+          "PA": 1190.79,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2024,
+          "Team Name": "“I’ll take Kittle”",
+          "W": 7,
+          "L": 7,
+          "T": 0,
+          "PF": 1074.33,
+          "PA": 1096.27,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2023,
+          "Team Name": "“I’ll take Kittle”",
+          "W": 9,
+          "L": 5,
+          "T": 0,
+          "PF": 1141.33,
+          "PA": 1120.33,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2022,
+          "Team Name": "“I’ll take Kittle”",
+          "W": 6,
+          "L": 8,
+          "T": 0,
+          "PF": 1042.97,
+          "PA": 1112.74,
+          "Rank": 9,
+          "Result": "—"
+        },
+        {
+          "Season": 2021,
+          "Team Name": "“I’ll take Kittle”",
+          "W": 10,
+          "L": 4,
+          "T": 0,
+          "PF": 1244.64,
+          "PA": 1181.47,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2020,
+          "Team Name": "“I’ll take Kittle”",
+          "W": 3,
+          "L": 10,
+          "T": 0,
+          "PF": 881.93,
+          "PA": 1106.05,
+          "Rank": 12,
+          "Result": "—"
+        },
+        {
+          "Season": 2019,
+          "Team Name": "Mahomies",
+          "W": 3,
+          "L": 10,
+          "T": 0,
+          "PF": 994.2,
+          "PA": 1218.52,
+          "Rank": 12,
+          "Result": "—"
+        },
+        {
+          "Season": 2018,
+          "Team Name": "Melvin&The Chipmunks",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1149.21,
+          "PA": 1113.56,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2017,
+          "Team Name": "The Great CornJulio",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 962.07,
+          "PA": 947.8,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2016,
+          "Team Name": "Just My Luck",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1017.85,
+          "PA": 1004.24,
+          "Rank": 8,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2015,
+          "Team Name": "Romo Cop",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 912.69,
+          "PA": 1039.89,
+          "Rank": 12,
+          "Result": "—"
+        },
+        {
+          "Season": 2014,
+          "Team Name": "Second Draft Pick",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 966.39,
+          "PA": 987.62,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2013,
+          "Team Name": "First Draft Pick",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 919.82,
+          "PA": 1074.13,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2012,
+          "Team Name": "Last Draft Pick",
+          "W": 3,
+          "L": 10,
+          "T": 0,
+          "PF": 1013.52,
+          "PA": 1129.04,
+          "Rank": 12,
+          "Result": "—"
+        },
+        {
+          "Season": 2011,
+          "Team Name": "Sub .500!!!",
+          "W": 9,
+          "L": 4,
+          "T": 0,
+          "PF": 1055.81,
+          "PA": 952.32,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2010,
+          "Team Name": "Return to Glory?",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 896.13,
+          "PA": 918.98,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2009,
+          "Team Name": "3-PEAT??",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 1015.37,
+          "PA": 954.17,
+          "Rank": 8,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2008,
+          "Team Name": "First to Worst",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 954.1,
+          "PA": 1022.64,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2007,
+          "Team Name": "South of 55 is mine!",
+          "W": 10,
+          "L": 3,
+          "T": 0,
+          "PF": 984.88,
+          "PA": 873.58,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2006,
+          "Team Name": "Branch Davidians",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 772.94,
+          "PA": 812.0,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2005,
+          "Team Name": "Hi I'm new here",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 754.95,
+          "PA": 828.45,
+          "Rank": 9,
+          "Result": "—"
+        }
+      ]
+    },
+    "Douglas": {
+      "type": "dataframe",
+      "shape": [
+        11,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "30bb28b140e1df53462f617c1053e259745f3ff509b2694e10c258bcc530dd0f",
+      "rows": [
+        {
+          "Season": 2025,
+          "Team Name": "Mean Machine 22",
+          "W": 5,
+          "L": 9,
+          "T": 0,
+          "PF": 1080.74,
+          "PA": 1125.16,
+          "Rank": 7,
+          "Result": "—"
+        },
+        {
+          "Season": 2024,
+          "Team Name": "Mean Machine 22",
+          "W": 7,
+          "L": 7,
+          "T": 0,
+          "PF": 1267.16,
+          "PA": 1197.71,
+          "Rank": 9,
+          "Result": "—"
+        },
+        {
+          "Season": 2023,
+          "Team Name": "Mean Machine 22",
+          "W": 8,
+          "L": 6,
+          "T": 0,
+          "PF": 1189.66,
+          "PA": 1197.85,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2022,
+          "Team Name": "Mean Machine 22",
+          "W": 3,
+          "L": 11,
+          "T": 0,
+          "PF": 874.49,
+          "PA": 1197.66,
+          "Rank": 12,
+          "Result": "—"
+        },
+        {
+          "Season": 2021,
+          "Team Name": "Mean Machine 22",
+          "W": 5,
+          "L": 9,
+          "T": 0,
+          "PF": 1042.49,
+          "PA": 1150.4,
+          "Rank": 7,
+          "Result": "—"
+        },
+        {
+          "Season": 2020,
+          "Team Name": "Mean Machine 22",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 1269.79,
+          "PA": 1082.55,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2019,
+          "Team Name": "Mean Machine 22",
+          "W": 9,
+          "L": 4,
+          "T": 0,
+          "PF": 1125.12,
+          "PA": 978.0,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2018,
+          "Team Name": "Mean Machine 22",
+          "W": 9,
+          "L": 4,
+          "T": 0,
+          "PF": 1347.24,
+          "PA": 1148.48,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2017,
+          "Team Name": "Mean Machine 22",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1118.55,
+          "PA": 1014.53,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2016,
+          "Team Name": "Mean Machine 2",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 907.39,
+          "PA": 1108.05,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2015,
+          "Team Name": "Mean Machine 2",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 926.36,
+          "PA": 1040.02,
+          "Rank": 11,
+          "Result": "—"
+        }
+      ]
+    },
+    "Eric": {
+      "type": "dataframe",
+      "shape": [
+        3,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "7542130765ba7828a8c5771b72ff85392a246b448928c885e71740cf60b19fe6",
+      "rows": [
+        {
+          "Season": 2025,
+          "Team Name": "Guntry Club",
+          "W": 8,
+          "L": 6,
+          "T": 0,
+          "PF": 1091.61,
+          "PA": 1095.52,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2024,
+          "Team Name": "Guntry Club",
+          "W": 10,
+          "L": 4,
+          "T": 0,
+          "PF": 1227.84,
+          "PA": 1122.48,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2023,
+          "Team Name": "Guntry Club",
+          "W": 7,
+          "L": 7,
+          "T": 0,
+          "PF": 980.91,
+          "PA": 1023.44,
+          "Rank": 8,
+          "Result": "—"
+        }
+      ]
+    },
+    "Evan": {
+      "type": "dataframe",
+      "shape": [
+        22,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "d655d26eb1df449903dede140a979dd7a8a77b1262731e1e669424cc05c30966",
+      "rows": [
+        {
+          "Season": 2025,
+          "Team Name": "Goood Times",
+          "W": 6,
+          "L": 8,
+          "T": 0,
+          "PF": 1113.86,
+          "PA": 1164.58,
+          "Rank": 12,
+          "Result": "—"
+        },
+        {
+          "Season": 2024,
+          "Team Name": "Goood Times",
+          "W": 9,
+          "L": 5,
+          "T": 0,
+          "PF": 1307.11,
+          "PA": 1056.34,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2023,
+          "Team Name": "Goood Times",
+          "W": 12,
+          "L": 2,
+          "T": 0,
+          "PF": 1266.36,
+          "PA": 1003.06,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2022,
+          "Team Name": "Goood Times",
+          "W": 5,
+          "L": 9,
+          "T": 0,
+          "PF": 1078.7,
+          "PA": 1195.41,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2021,
+          "Team Name": "Goood Times",
+          "W": 5,
+          "L": 9,
+          "T": 0,
+          "PF": 1127.32,
+          "PA": 1186.9,
+          "Rank": 9,
+          "Result": "—"
+        },
+        {
+          "Season": 2020,
+          "Team Name": "Goood Times",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 1105.62,
+          "PA": 1060.55,
+          "Rank": 7,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2019,
+          "Team Name": "Goood Times",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 967.9,
+          "PA": 1018.27,
+          "Rank": 9,
+          "Result": "—"
+        },
+        {
+          "Season": 2018,
+          "Team Name": "Goood Times",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 1144.34,
+          "PA": 1044.41,
+          "Rank": 8,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2017,
+          "Team Name": "Goood Times",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 1032.71,
+          "PA": 983.17,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2016,
+          "Team Name": "Goood Times",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 1156.83,
+          "PA": 1156.57,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2015,
+          "Team Name": "Goood Times",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 977.93,
+          "PA": 1030.95,
+          "Rank": 8,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2014,
+          "Team Name": "Goood Times",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 970.35,
+          "PA": 1062.2,
+          "Rank": 9,
+          "Result": "—"
+        },
+        {
+          "Season": 2013,
+          "Team Name": "Goood Times",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1083.24,
+          "PA": 1032.21,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2012,
+          "Team Name": "Goood Times",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1037.85,
+          "PA": 1065.08,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2011,
+          "Team Name": "Bad Times",
+          "W": 3,
+          "L": 10,
+          "T": 0,
+          "PF": 865.49,
+          "PA": 1022.41,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2010,
+          "Team Name": "Good Times",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 1097.03,
+          "PA": 1122.81,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2009,
+          "Team Name": "Good Times",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 860.63,
+          "PA": 1016.18,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2008,
+          "Team Name": "Good Times",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 952.69,
+          "PA": 967.3,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2007,
+          "Team Name": "Good Times",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 828.97,
+          "PA": 836.9,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2006,
+          "Team Name": "Two and Eight",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 777.08,
+          "PA": 889.26,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2005,
+          "Team Name": "Good Times",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 940.58,
+          "PA": 810.73,
+          "Rank": 8,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2004,
+          "Team Name": "Good Times",
+          "W": 10,
+          "L": 4,
+          "T": 0,
+          "PF": 1191.54,
+          "PA": 923.33,
+          "Rank": 6,
+          "Result": "Playoffs"
+        }
+      ]
+    },
+    "Fadi": {
+      "type": "dataframe",
+      "shape": [
+        25,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "859d1b4bda4d65974dbddeead0d3fb01cbcb8abe680c723fd03e4f7c56aff882",
+      "rows": [
+        {
+          "Season": 2025,
+          "Team Name": "This Is How We Do",
+          "W": 9,
+          "L": 5,
+          "T": 0,
+          "PF": 1199.69,
+          "PA": 1115.94,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2024,
+          "Team Name": "This Is How We Do",
+          "W": 8,
+          "L": 6,
+          "T": 0,
+          "PF": 1152.48,
+          "PA": 1123.35,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2023,
+          "Team Name": "This Is How We Do",
+          "W": 5,
+          "L": 9,
+          "T": 0,
+          "PF": 1060.78,
+          "PA": 1079.39,
+          "Rank": 9,
+          "Result": "—"
+        },
+        {
+          "Season": 2022,
+          "Team Name": "This Is How We Do",
+          "W": 6,
+          "L": 8,
+          "T": 0,
+          "PF": 1141.39,
+          "PA": 1110.83,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2021,
+          "Team Name": "This Is How We Do",
+          "W": 3,
+          "L": 11,
+          "T": 0,
+          "PF": 1014.11,
+          "PA": 1305.65,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2020,
+          "Team Name": "This Is How We Do",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 1040.75,
+          "PA": 1069.33,
+          "Rank": 9,
+          "Result": "—"
+        },
+        {
+          "Season": 2019,
+          "Team Name": "This Is How We Do",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 971.61,
+          "PA": 1041.49,
+          "Rank": 7,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2018,
+          "Team Name": "This Is How We Do",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 1032.63,
+          "PA": 1181.79,
+          "Rank": 9,
+          "Result": "—"
+        },
+        {
+          "Season": 2017,
+          "Team Name": "This Is How We Do",
+          "W": 3,
+          "L": 10,
+          "T": 0,
+          "PF": 983.02,
+          "PA": 1142.94,
+          "Rank": 12,
+          "Result": "—"
+        },
+        {
+          "Season": 2016,
+          "Team Name": "This Is How We Do",
+          "W": 10,
+          "L": 3,
+          "T": 0,
+          "PF": 1106.14,
+          "PA": 1010.31,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2015,
+          "Team Name": "This Is How We Do",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 1102.05,
+          "PA": 1020.92,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2014,
+          "Team Name": "This Is How We Do",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 1044.33,
+          "PA": 1036.45,
+          "Rank": 7,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2013,
+          "Team Name": "Quakes and Canes",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 1072.14,
+          "PA": 1055.08,
+          "Rank": 9,
+          "Result": "—"
+        },
+        {
+          "Season": 2012,
+          "Team Name": "Quakes and Canes",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 1055.28,
+          "PA": 1114.15,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2011,
+          "Team Name": "Quakes and Canes",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 1075.14,
+          "PA": 1083.17,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2010,
+          "Team Name": "Minooka Bears",
+          "W": 12,
+          "L": 1,
+          "T": 0,
+          "PF": 1182.15,
+          "PA": 891.44,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2009,
+          "Team Name": "Minooka Bears",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 1002.18,
+          "PA": 1040.45,
+          "Rank": 9,
+          "Result": "—"
+        },
+        {
+          "Season": 2008,
+          "Team Name": "Minooka Bears",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1024.41,
+          "PA": 960.86,
+          "Rank": 8,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2007,
+          "Team Name": "Minooka Bears",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 952.47,
+          "PA": 879.11,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2006,
+          "Team Name": "Ricky Williams",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 764.11,
+          "PA": 903.69,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2005,
+          "Team Name": "Ricky Williams",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 828.04,
+          "PA": 882.55,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2004,
+          "Team Name": "Ricky Williams",
+          "W": 4,
+          "L": 10,
+          "T": 0,
+          "PF": 863.98,
+          "PA": 1136.21,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2003,
+          "Team Name": "Cammuffs",
+          "W": 8,
+          "L": 6,
+          "T": 0,
+          "PF": 823.52,
+          "PA": 822.52,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2002,
+          "Team Name": "Cammuffs",
+          "W": 7,
+          "L": 5,
+          "T": 0,
+          "PF": 912.1,
+          "PA": 784.17,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2001,
+          "Team Name": "Cammuffs",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 719.34,
+          "PA": 680.65,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        }
+      ]
+    },
+    "Jamie": {
+      "type": "dataframe",
+      "shape": [
+        5,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "e8fd8519fcdc937c0810b2bced6029c4f7b5c17e19d93ed2154facb5b7bfe1da",
+      "rows": [
+        {
+          "Season": 2005,
+          "Team Name": "crabby jamie",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 976.84,
+          "PA": 888.91,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2004,
+          "Team Name": "crabby jamie",
+          "W": 6,
+          "L": 8,
+          "T": 0,
+          "PF": 942.66,
+          "PA": 1019.91,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2003,
+          "Team Name": "crabby jamie",
+          "W": 9,
+          "L": 5,
+          "T": 0,
+          "PF": 931.58,
+          "PA": 762.1,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2002,
+          "Team Name": "angel",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 866.26,
+          "PA": 867.68,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2001,
+          "Team Name": "angel",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 775.56,
+          "PA": 645.32,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        }
+      ]
+    },
+    "Jeff": {
+      "type": "dataframe",
+      "shape": [
+        9,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "372225d8d028ec33295d334ff74defdcd3802d1807912328472e1cce3e974290",
+      "rows": [
+        {
+          "Season": 2025,
+          "Team Name": "Futball in the Groin",
+          "W": 8,
+          "L": 6,
+          "T": 0,
+          "PF": 1189.69,
+          "PA": 1073.32,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2024,
+          "Team Name": "Futball in the Groin",
+          "W": 4,
+          "L": 10,
+          "T": 0,
+          "PF": 1002.6,
+          "PA": 1230.66,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2023,
+          "Team Name": "Futball in the Groin",
+          "W": 9,
+          "L": 5,
+          "T": 0,
+          "PF": 1185.85,
+          "PA": 1067.04,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2022,
+          "Team Name": "Futball in the Groin",
+          "W": 9,
+          "L": 5,
+          "T": 0,
+          "PF": 1188.47,
+          "PA": 1004.36,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2021,
+          "Team Name": "Futball in the Groin",
+          "W": 5,
+          "L": 9,
+          "T": 0,
+          "PF": 1087.38,
+          "PA": 1193.71,
+          "Rank": 12,
+          "Result": "—"
+        },
+        {
+          "Season": 2020,
+          "Team Name": "Futball in the Groin",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 1050.98,
+          "PA": 1156.03,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2019,
+          "Team Name": "Futball in the Groin",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 1087.35,
+          "PA": 1171.54,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2018,
+          "Team Name": "Futball in the Groin",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 1143.64,
+          "PA": 1143.48,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2017,
+          "Team Name": "Futball in the Groin",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 819.5,
+          "PA": 1003.95,
+          "Rank": 10,
+          "Result": "—"
+        }
+      ]
+    },
+    "Joe Tyszko": {
+      "type": "dataframe",
+      "shape": [
+        7,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "a13885f6e03f96d11492bcac3b91ef4729c42bd1bfa9c3f5d5d2a8406178a062",
+      "rows": [
+        {
+          "Season": 2009,
+          "Team Name": "NewLenoxFightinCorn",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1049.0,
+          "PA": 1059.13,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2008,
+          "Team Name": "Nw Lnx Fightin' Corn",
+          "W": 10,
+          "L": 3,
+          "T": 0,
+          "PF": 1015.43,
+          "PA": 914.72,
+          "Rank": 7,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2007,
+          "Team Name": "Nw Lnx Fightin' Corn",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 861.14,
+          "PA": 847.3,
+          "Rank": 7,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2006,
+          "Team Name": "Nw Lnx Fighting Corn",
+          "W": 10,
+          "L": 3,
+          "T": 0,
+          "PF": 1041.95,
+          "PA": 792.0,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2005,
+          "Team Name": "giant",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 952.04,
+          "PA": 906.2,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2004,
+          "Team Name": "2005 #1 draft pick",
+          "W": 4,
+          "L": 10,
+          "T": 0,
+          "PF": 761.32,
+          "PA": 989.16,
+          "Rank": 12,
+          "Result": "—"
+        },
+        {
+          "Season": 2003,
+          "Team Name": "1043",
+          "W": 7,
+          "L": 7,
+          "T": 0,
+          "PF": 864.68,
+          "PA": 929.78,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        }
+      ]
+    },
+    "Kevin O'Boyle": {
+      "type": "dataframe",
+      "shape": [
+        24,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "d82a8918a1e5178fe5e29af95ab826cdfae548aeefadbccedbd6035f98bc82dc",
+      "rows": [
+        {
+          "Season": 2025,
+          "Team Name": "Guinness",
+          "W": 4,
+          "L": 10,
+          "T": 0,
+          "PF": 1179.58,
+          "PA": 1253.91,
+          "Rank": 9,
+          "Result": "—"
+        },
+        {
+          "Season": 2024,
+          "Team Name": "Guinness",
+          "W": 5,
+          "L": 9,
+          "T": 0,
+          "PF": 1107.06,
+          "PA": 1183.7,
+          "Rank": 8,
+          "Result": "—"
+        },
+        {
+          "Season": 2023,
+          "Team Name": "Guinness",
+          "W": 5,
+          "L": 9,
+          "T": 0,
+          "PF": 1067.66,
+          "PA": 1168.53,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2022,
+          "Team Name": "Guinness",
+          "W": 5,
+          "L": 9,
+          "T": 0,
+          "PF": 1016.2,
+          "PA": 1144.53,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2021,
+          "Team Name": "Guinness",
+          "W": 7,
+          "L": 7,
+          "T": 0,
+          "PF": 1157.11,
+          "PA": 1123.71,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2020,
+          "Team Name": "Guinness",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 1084.2,
+          "PA": 1078.31,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2019,
+          "Team Name": "Guinness",
+          "W": 10,
+          "L": 3,
+          "T": 0,
+          "PF": 1289.68,
+          "PA": 1062.73,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2018,
+          "Team Name": "Guinness",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1034.82,
+          "PA": 1128.51,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2017,
+          "Team Name": "Guinness",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 1105.75,
+          "PA": 972.58,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2016,
+          "Team Name": "Guinness",
+          "W": 9,
+          "L": 4,
+          "T": 0,
+          "PF": 1230.02,
+          "PA": 1031.24,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2015,
+          "Team Name": "Guinness",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 1040.38,
+          "PA": 1039.14,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2014,
+          "Team Name": "Guinness",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 967.05,
+          "PA": 1102.73,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2013,
+          "Team Name": "Guinness",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 1030.08,
+          "PA": 1051.99,
+          "Rank": 7,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2012,
+          "Team Name": "Guinness",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 1017.18,
+          "PA": 921.15,
+          "Rank": 8,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2011,
+          "Team Name": "Guinness",
+          "W": 10,
+          "L": 3,
+          "T": 0,
+          "PF": 1126.65,
+          "PA": 933.77,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2010,
+          "Team Name": "Guinness",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 903.9,
+          "PA": 1044.0,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2009,
+          "Team Name": "Guinness",
+          "W": 9,
+          "L": 4,
+          "T": 0,
+          "PF": 1159.59,
+          "PA": 889.22,
+          "Rank": 7,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2008,
+          "Team Name": "Guinness",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 885.24,
+          "PA": 979.9,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2007,
+          "Team Name": "Guinness",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 744.25,
+          "PA": 858.73,
+          "Rank": 12,
+          "Result": "—"
+        },
+        {
+          "Season": 2006,
+          "Team Name": "Guinness",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 813.45,
+          "PA": 894.0,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2005,
+          "Team Name": "Guinness",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 874.56,
+          "PA": 887.64,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2004,
+          "Team Name": "Guinness",
+          "W": 7,
+          "L": 7,
+          "T": 0,
+          "PF": 953.18,
+          "PA": 982.48,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2003,
+          "Team Name": "Guinness on Tap",
+          "W": 8,
+          "L": 6,
+          "T": 0,
+          "PF": 782.5,
+          "PA": 789.73,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2002,
+          "Team Name": "Guinness On Tap",
+          "W": 5,
+          "L": 7,
+          "T": 0,
+          "PF": 639.48,
+          "PA": 696.14,
+          "Rank": 9,
+          "Result": "—"
+        }
+      ]
+    },
+    "Kevin Swanson": {
+      "type": "dataframe",
+      "shape": [
+        24,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "1e1a893f81f3a8557275575d0ec5c8f5ecd1058894d4a47e782b35f5504998fe",
+      "rows": [
+        {
+          "Season": 2025,
+          "Team Name": "miniDITKAS",
+          "W": 5,
+          "L": 9,
+          "T": 0,
+          "PF": 1045.72,
+          "PA": 1145.36,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2024,
+          "Team Name": "miniDITKAS",
+          "W": 5,
+          "L": 9,
+          "T": 0,
+          "PF": 1073.73,
+          "PA": 1152.31,
+          "Rank": 12,
+          "Result": "—"
+        },
+        {
+          "Season": 2023,
+          "Team Name": "miniDITKAS",
+          "W": 8,
+          "L": 6,
+          "T": 0,
+          "PF": 1116.08,
+          "PA": 1037.67,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2022,
+          "Team Name": "miniDITKAS",
+          "W": 10,
+          "L": 4,
+          "T": 0,
+          "PF": 1184.62,
+          "PA": 1100.67,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2021,
+          "Team Name": "miniDITKAS",
+          "W": 8,
+          "L": 6,
+          "T": 0,
+          "PF": 1190.86,
+          "PA": 1160.51,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2020,
+          "Team Name": "miniDITKAS",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 1067.18,
+          "PA": 1084.89,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2019,
+          "Team Name": "miniDITKAS",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 1070.31,
+          "PA": 972.25,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2018,
+          "Team Name": "miniDITKAS",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 1180.78,
+          "PA": 1136.59,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2017,
+          "Team Name": "miniDITKAS",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 1042.47,
+          "PA": 963.07,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2016,
+          "Team Name": "miniDITKAS",
+          "W": 3,
+          "L": 10,
+          "T": 0,
+          "PF": 1040.83,
+          "PA": 1132.25,
+          "Rank": 12,
+          "Result": "—"
+        },
+        {
+          "Season": 2015,
+          "Team Name": "miniDITKAS",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1049.64,
+          "PA": 1016.97,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2014,
+          "Team Name": "miniDITKAS",
+          "W": 9,
+          "L": 4,
+          "T": 0,
+          "PF": 1040.12,
+          "PA": 972.18,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2013,
+          "Team Name": "miniDITKAS",
+          "W": 9,
+          "L": 4,
+          "T": 0,
+          "PF": 1148.15,
+          "PA": 983.5,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2012,
+          "Team Name": "miniDITKAS",
+          "W": 9,
+          "L": 4,
+          "T": 0,
+          "PF": 1145.13,
+          "PA": 1020.21,
+          "Rank": 7,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2011,
+          "Team Name": "miniDITKAS",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 933.85,
+          "PA": 1109.85,
+          "Rank": 9,
+          "Result": "—"
+        },
+        {
+          "Season": 2010,
+          "Team Name": "miniDITKAS",
+          "W": 9,
+          "L": 4,
+          "T": 0,
+          "PF": 1004.09,
+          "PA": 980.22,
+          "Rank": 8,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2009,
+          "Team Name": "miniDITKAS",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 1061.45,
+          "PA": 1042.94,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2008,
+          "Team Name": "MiniDitkas",
+          "W": 10,
+          "L": 3,
+          "T": 0,
+          "PF": 1043.74,
+          "PA": 922.97,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2007,
+          "Team Name": "MiniDitkas",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 870.32,
+          "PA": 748.31,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2006,
+          "Team Name": "MiniDitkas",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 765.84,
+          "PA": 804.79,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2005,
+          "Team Name": "miniDITKAS",
+          "W": 9,
+          "L": 4,
+          "T": 0,
+          "PF": 987.65,
+          "PA": 792.41,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2004,
+          "Team Name": "mini ditkas",
+          "W": 8,
+          "L": 6,
+          "T": 0,
+          "PF": 991.14,
+          "PA": 990.37,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2003,
+          "Team Name": "Ditkas Mustache",
+          "W": 7,
+          "L": 7,
+          "T": 0,
+          "PF": 928.05,
+          "PA": 876.92,
+          "Rank": 7,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2002,
+          "Team Name": "mini ditka's bitches",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 786.47,
+          "PA": 955.14,
+          "Rank": 11,
+          "Result": "—"
+        }
+      ]
+    },
+    "Mike": {
+      "type": "dataframe",
+      "shape": [
+        4,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "33a56d233c719d531d2b96ae558a0bdb78bf288d6a24da8196ff7711ed22a836",
+      "rows": [
+        {
+          "Season": 2009,
+          "Team Name": "Beer Gut",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 846.81,
+          "PA": 969.47,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2008,
+          "Team Name": "Beer Gut",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 895.72,
+          "PA": 911.48,
+          "Rank": 9,
+          "Result": "—"
+        },
+        {
+          "Season": 2007,
+          "Team Name": "Beer Gut",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 735.43,
+          "PA": 762.67,
+          "Rank": 8,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2006,
+          "Team Name": "Beer Gut",
+          "W": 11,
+          "L": 2,
+          "T": 0,
+          "PF": 1072.53,
+          "PA": 759.07,
+          "Rank": 5,
+          "Result": "Playoffs"
+        }
+      ]
+    },
+    "Nick Blaettler": {
+      "type": "dataframe",
+      "shape": [
+        11,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "73755c812076befd1d3559f3a4e498a004b2d55e7327ee52c0c155b11d15b4d9",
+      "rows": [
+        {
+          "Season": 2020,
+          "Team Name": "angry cat",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1156.45,
+          "PA": 1083.58,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2019,
+          "Team Name": "angry cat",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1080.1,
+          "PA": 1154.21,
+          "Rank": 8,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2018,
+          "Team Name": "No Diggity",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 1193.57,
+          "PA": 1076.98,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2017,
+          "Team Name": "Who Diggs Nelson?",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1014.68,
+          "PA": 964.96,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2016,
+          "Team Name": "Saved by Le'Bell",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 1123.46,
+          "PA": 1076.28,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2015,
+          "Team Name": "angry cat",
+          "W": 10,
+          "L": 3,
+          "T": 0,
+          "PF": 1061.38,
+          "PA": 999.78,
+          "Rank": 7,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2014,
+          "Team Name": "angry cat",
+          "W": 9,
+          "L": 4,
+          "T": 0,
+          "PF": 1229.41,
+          "PA": 965.77,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2013,
+          "Team Name": "angry cat",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 992.21,
+          "PA": 1067.22,
+          "Rank": 8,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2012,
+          "Team Name": "angry cat",
+          "W": 9,
+          "L": 4,
+          "T": 0,
+          "PF": 1095.46,
+          "PA": 1070.11,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2011,
+          "Team Name": "angry cat",
+          "W": 10,
+          "L": 3,
+          "T": 0,
+          "PF": 1188.7,
+          "PA": 959.53,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2010,
+          "Team Name": "angry cat",
+          "W": 3,
+          "L": 10,
+          "T": 0,
+          "PF": 963.91,
+          "PA": 1092.23,
+          "Rank": 12,
+          "Result": "—"
+        }
+      ]
+    },
+    "Rob": {
+      "type": "dataframe",
+      "shape": [
+        6,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "596ea82f2f477420b82dde7de99ba679d6c1a2462a3fff07cfeac85350f90c23",
+      "rows": [
+        {
+          "Season": 2006,
+          "Team Name": "Team Duff",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 866.68,
+          "PA": 847.46,
+          "Rank": 7,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2005,
+          "Team Name": "Team Duff",
+          "W": 11,
+          "L": 2,
+          "T": 0,
+          "PF": 996.59,
+          "PA": 800.04,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2004,
+          "Team Name": "Enraged Swedes",
+          "W": 8,
+          "L": 6,
+          "T": 0,
+          "PF": 891.34,
+          "PA": 849.46,
+          "Rank": 7,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2003,
+          "Team Name": "Team Duff",
+          "W": 11,
+          "L": 3,
+          "T": 0,
+          "PF": 951.55,
+          "PA": 829.58,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2002,
+          "Team Name": "Team Duff",
+          "W": 5,
+          "L": 7,
+          "T": 0,
+          "PF": 771.66,
+          "PA": 778.51,
+          "Rank": 7,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2001,
+          "Team Name": "Recruits",
+          "W": 6,
+          "L": 8,
+          "T": 0,
+          "PF": 621.27,
+          "PA": 665.49,
+          "Rank": 6,
+          "Result": "—"
+        }
+      ]
+    },
+    "Robby": {
+      "type": "dataframe",
+      "shape": [
+        6,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "4cacf7211548e851247bb592fb122a430a96897942ef0ccf992ee6f512f1a5a7",
+      "rows": [
+        {
+          "Season": 2016,
+          "Team Name": "Swami Singer",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 1078.32,
+          "PA": 1046.42,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2015,
+          "Team Name": "Swami Singer",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 1012.65,
+          "PA": 1086.57,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2014,
+          "Team Name": "Swami Singer",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 1052.08,
+          "PA": 1021.56,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2013,
+          "Team Name": "Three Four D",
+          "W": 11,
+          "L": 2,
+          "T": 0,
+          "PF": 1223.9,
+          "PA": 998.04,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2012,
+          "Team Name": "Three Four D",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1069.66,
+          "PA": 973.67,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2011,
+          "Team Name": "Three Four D",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 1041.85,
+          "PA": 1096.87,
+          "Rank": 7,
+          "Result": "Playoffs"
+        }
+      ]
+    },
+    "Shawn": {
+      "type": "dataframe",
+      "shape": [
+        25,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "184097eeb25fdac89de71b6901317a7f03def653b842494a04f2e45a26089064",
+      "rows": [
+        {
+          "Season": 2025,
+          "Team Name": "G’day Bumblenuts",
+          "W": 7,
+          "L": 7,
+          "T": 0,
+          "PF": 993.11,
+          "PA": 1086.42,
+          "Rank": 8,
+          "Result": "—"
+        },
+        {
+          "Season": 2024,
+          "Team Name": "G’day Bumblenuts",
+          "W": 6,
+          "L": 8,
+          "T": 0,
+          "PF": 915.9,
+          "PA": 1043.94,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2023,
+          "Team Name": "G’day Bumblenuts",
+          "W": 4,
+          "L": 10,
+          "T": 0,
+          "PF": 1136.08,
+          "PA": 1227.18,
+          "Rank": 12,
+          "Result": "—"
+        },
+        {
+          "Season": 2022,
+          "Team Name": "G’day Bumblenuts",
+          "W": 9,
+          "L": 5,
+          "T": 0,
+          "PF": 1100.5,
+          "PA": 1041.66,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2021,
+          "Team Name": "West Coast Infirmary",
+          "W": 8,
+          "L": 6,
+          "T": 0,
+          "PF": 1224.87,
+          "PA": 1143.73,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2020,
+          "Team Name": "West Coast Infirmary",
+          "W": 10,
+          "L": 3,
+          "T": 0,
+          "PF": 1059.3,
+          "PA": 942.76,
+          "Rank": 8,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2019,
+          "Team Name": "West Coast Infirmary",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1034.83,
+          "PA": 1061.14,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2018,
+          "Team Name": "Los Pollos Hermanos",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 1023.79,
+          "PA": 1163.45,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2017,
+          "Team Name": "los pollos hermanos",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1079.03,
+          "PA": 984.11,
+          "Rank": 8,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2016,
+          "Team Name": "los pollos hermanos",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 977.87,
+          "PA": 1148.87,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2015,
+          "Team Name": "los pollos hermanos",
+          "W": 9,
+          "L": 4,
+          "T": 0,
+          "PF": 1117.19,
+          "PA": 1005.24,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2014,
+          "Team Name": "los pollos hermanos",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1022.67,
+          "PA": 977.07,
+          "Rank": 8,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2013,
+          "Team Name": "los pollos hermanos",
+          "W": 3,
+          "L": 10,
+          "T": 0,
+          "PF": 908.8,
+          "PA": 1009.53,
+          "Rank": 12,
+          "Result": "—"
+        },
+        {
+          "Season": 2012,
+          "Team Name": "los pollos hermanos",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 966.34,
+          "PA": 1026.91,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2011,
+          "Team Name": "chad 86",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 1072.04,
+          "PA": 1042.67,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2010,
+          "Team Name": "chad 86",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 1091.14,
+          "PA": 960.8,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2009,
+          "Team Name": "at least i beat fadi",
+          "W": 3,
+          "L": 10,
+          "T": 0,
+          "PF": 930.73,
+          "PA": 1114.29,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2008,
+          "Team Name": "who is john galt?",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 994.9,
+          "PA": 880.4,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2007,
+          "Team Name": "who is john galt?",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 830.56,
+          "PA": 814.69,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2006,
+          "Team Name": "who is john galt?",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 776.05,
+          "PA": 817.99,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2005,
+          "Team Name": "who is john galt?",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 849.84,
+          "PA": 784.4,
+          "Rank": 7,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2004,
+          "Team Name": "guy montag",
+          "W": 10,
+          "L": 4,
+          "T": 0,
+          "PF": 1115.41,
+          "PA": 868.34,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2003,
+          "Team Name": "vimilakirti",
+          "W": 6,
+          "L": 8,
+          "T": 0,
+          "PF": 920.23,
+          "PA": 896.38,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2002,
+          "Team Name": "sme",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 815.23,
+          "PA": 826.51,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2001,
+          "Team Name": "sme",
+          "W": 10,
+          "L": 4,
+          "T": 0,
+          "PF": 912.41,
+          "PA": 763.32,
+          "Rank": 4,
+          "Result": "4th Place"
+        }
+      ]
+    },
+    "Steve Swanson": {
+      "type": "dataframe",
+      "shape": [
+        19,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "d755339f835f8669acb80d1fd9ee943ed17753dea8ec46ffc256f5d334623c37",
+      "rows": [
+        {
+          "Season": 2025,
+          "Team Name": "Bears",
+          "W": 8,
+          "L": 6,
+          "T": 0,
+          "PF": 1175.44,
+          "PA": 1117.13,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2024,
+          "Team Name": "Bears",
+          "W": 9,
+          "L": 5,
+          "T": 0,
+          "PF": 1177.35,
+          "PA": 1076.06,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2023,
+          "Team Name": "Bears",
+          "W": 6,
+          "L": 8,
+          "T": 0,
+          "PF": 1247.53,
+          "PA": 1255.14,
+          "Rank": 7,
+          "Result": "—"
+        },
+        {
+          "Season": 2022,
+          "Team Name": "Bears",
+          "W": 5,
+          "L": 9,
+          "T": 0,
+          "PF": 1125.03,
+          "PA": 1199.47,
+          "Rank": 7,
+          "Result": "—"
+        },
+        {
+          "Season": 2021,
+          "Team Name": "Bears",
+          "W": 7,
+          "L": 7,
+          "T": 0,
+          "PF": 1140.48,
+          "PA": 1101.24,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2020,
+          "Team Name": "Bears",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 1067.27,
+          "PA": 1177.61,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2019,
+          "Team Name": "Bears",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 1086.61,
+          "PA": 1106.75,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2018,
+          "Team Name": "Bears",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 1139.61,
+          "PA": 1133.84,
+          "Rank": 7,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2017,
+          "Team Name": "cubs killed harry",
+          "W": 9,
+          "L": 4,
+          "T": 0,
+          "PF": 973.12,
+          "PA": 918.42,
+          "Rank": 7,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2016,
+          "Team Name": "cubs killed harry",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 1038.35,
+          "PA": 1027.57,
+          "Rank": 9,
+          "Result": "—"
+        },
+        {
+          "Season": 2015,
+          "Team Name": "cubs killed harry",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 950.47,
+          "PA": 1034.01,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2014,
+          "Team Name": "cubs killed harry",
+          "W": 3,
+          "L": 10,
+          "T": 0,
+          "PF": 953.93,
+          "PA": 1120.77,
+          "Rank": 12,
+          "Result": "—"
+        },
+        {
+          "Season": 2013,
+          "Team Name": "cubs killed harry",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1052.94,
+          "PA": 999.07,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2012,
+          "Team Name": "cubs killed harry",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 928.49,
+          "PA": 974.26,
+          "Rank": 9,
+          "Result": "—"
+        },
+        {
+          "Season": 2011,
+          "Team Name": "cubs killed harry",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 1112.56,
+          "PA": 1050.63,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2010,
+          "Team Name": "cubs killed harry",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 1053.86,
+          "PA": 1016.16,
+          "Rank": 7,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2009,
+          "Team Name": "cubs killed harry",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1055.6,
+          "PA": 1010.15,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2008,
+          "Team Name": "long live the goat",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1094.12,
+          "PA": 961.09,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2007,
+          "Team Name": "vick's dog pound",
+          "W": 5,
+          "L": 8,
+          "T": 0,
+          "PF": 844.27,
+          "PA": 814.7,
+          "Rank": 9,
+          "Result": "—"
+        }
+      ]
+    },
+    "Thomas": {
+      "type": "dataframe",
+      "shape": [
+        23,
+        9
+      ],
+      "columns": [
+        "Season",
+        "Team Name",
+        "W",
+        "L",
+        "T",
+        "PF",
+        "PA",
+        "Rank",
+        "Result"
+      ],
+      "digest": "dea1094e3ab9fa3cfd8f45fc2b27683be5025a00a28cb2b75534c7ef7d103e36",
+      "rows": [
+        {
+          "Season": 2025,
+          "Team Name": "Fuzzy Bears",
+          "W": 11,
+          "L": 3,
+          "T": 0,
+          "PF": 1184.59,
+          "PA": 1057.86,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2024,
+          "Team Name": "Fuzzy Bears",
+          "W": 8,
+          "L": 6,
+          "T": 0,
+          "PF": 1214.81,
+          "PA": 1116.96,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2023,
+          "Team Name": "Fuzzy Bears",
+          "W": 3,
+          "L": 11,
+          "T": 0,
+          "PF": 1093.51,
+          "PA": 1251.63,
+          "Rank": 10,
+          "Result": "—"
+        },
+        {
+          "Season": 2022,
+          "Team Name": "Fuzzy Bears",
+          "W": 10,
+          "L": 4,
+          "T": 0,
+          "PF": 1324.9,
+          "PA": 1169.62,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2021,
+          "Team Name": "Fuzzy Bears",
+          "W": 6,
+          "L": 8,
+          "T": 0,
+          "PF": 1046.85,
+          "PA": 1110.02,
+          "Rank": 8,
+          "Result": "—"
+        },
+        {
+          "Season": 2020,
+          "Team Name": "Fuzzy Bears",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1025.45,
+          "PA": 982.54,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2019,
+          "Team Name": "Fuzzy Bears",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 964.04,
+          "PA": 1021.41,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2018,
+          "Team Name": "Fuzzy Bears",
+          "W": 3,
+          "L": 10,
+          "T": 0,
+          "PF": 965.15,
+          "PA": 1119.22,
+          "Rank": 12,
+          "Result": "—"
+        },
+        {
+          "Season": 2017,
+          "Team Name": "Fuzzy Bears",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 788.32,
+          "PA": 1013.43,
+          "Rank": 11,
+          "Result": "—"
+        },
+        {
+          "Season": 2016,
+          "Team Name": "Fuzzy Bears",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 992.75,
+          "PA": 1014.71,
+          "Rank": 7,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2015,
+          "Team Name": "Fuzzy Bears",
+          "W": 9,
+          "L": 4,
+          "T": 0,
+          "PF": 1151.08,
+          "PA": 1015.61,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2014,
+          "Team Name": "Fuzzy Bears",
+          "W": 8,
+          "L": 5,
+          "T": 0,
+          "PF": 1150.87,
+          "PA": 1060.12,
+          "Rank": 1,
+          "Result": "🏆 Champion"
+        },
+        {
+          "Season": 2013,
+          "Team Name": "Fuzzy Bears",
+          "W": 6,
+          "L": 7,
+          "T": 0,
+          "PF": 1025.05,
+          "PA": 1098.97,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2012,
+          "Team Name": "Fuzzy Bears",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1097.56,
+          "PA": 1035.7,
+          "Rank": 4,
+          "Result": "4th Place"
+        },
+        {
+          "Season": 2011,
+          "Team Name": "Fuzzy Bears",
+          "W": 9,
+          "L": 4,
+          "T": 0,
+          "PF": 1136.6,
+          "PA": 995.67,
+          "Rank": 5,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2010,
+          "Team Name": "Fuzzy Bears",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 1027.2,
+          "PA": 1051.77,
+          "Rank": 3,
+          "Result": "🥉 3rd Place"
+        },
+        {
+          "Season": 2009,
+          "Team Name": "Fuzzy Bears",
+          "W": 3,
+          "L": 10,
+          "T": 0,
+          "PF": 838.65,
+          "PA": 966.13,
+          "Rank": 12,
+          "Result": "—"
+        },
+        {
+          "Season": 2008,
+          "Team Name": "you're all screwed",
+          "W": 3,
+          "L": 10,
+          "T": 0,
+          "PF": 842.15,
+          "PA": 1001.21,
+          "Rank": 12,
+          "Result": "—"
+        },
+        {
+          "Season": 2007,
+          "Team Name": "you're all screwed",
+          "W": 7,
+          "L": 6,
+          "T": 0,
+          "PF": 760.63,
+          "PA": 865.09,
+          "Rank": 6,
+          "Result": "Playoffs"
+        },
+        {
+          "Season": 2006,
+          "Team Name": "thebestteamever",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 787.72,
+          "PA": 855.66,
+          "Rank": 9,
+          "Result": "—"
+        },
+        {
+          "Season": 2005,
+          "Team Name": "shootinfor.750",
+          "W": 4,
+          "L": 9,
+          "T": 0,
+          "PF": 658.38,
+          "PA": 815.34,
+          "Rank": 12,
+          "Result": "—"
+        },
+        {
+          "Season": 2004,
+          "Team Name": "shootinfor.500",
+          "W": 9,
+          "L": 5,
+          "T": 0,
+          "PF": 1060.17,
+          "PA": 953.32,
+          "Rank": 2,
+          "Result": "🥈 Runner-Up"
+        },
+        {
+          "Season": 2003,
+          "Team Name": "Team Tupa",
+          "W": 2,
+          "L": 12,
+          "T": 0,
+          "PF": 778.53,
+          "PA": 948.56,
+          "Rank": 12,
+          "Result": "—"
+        }
+      ]
+    }
+  }
+}

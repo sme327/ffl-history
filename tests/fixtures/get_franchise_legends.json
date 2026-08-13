@@ -1,0 +1,4417 @@
+{
+  "type": "dict",
+  "value": {
+    "F01": {
+      "type": "list",
+      "length": 8,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Darren Waller"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 4
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 12
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2020
+                },
+                {
+                  "type": "scalar",
+                  "value": 2021
+                },
+                {
+                  "type": "scalar",
+                  "value": 2022
+                },
+                {
+                  "type": "scalar",
+                  "value": 2023
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Davante Adams"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 10
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2017
+                },
+                {
+                  "type": "scalar",
+                  "value": 2018
+                },
+                {
+                  "type": "scalar",
+                  "value": 2019
+                },
+                {
+                  "type": "scalar",
+                  "value": 2020
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Warrick Dunn"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 8
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2003
+                },
+                {
+                  "type": "scalar",
+                  "value": 2004
+                },
+                {
+                  "type": "scalar",
+                  "value": 2005
+                },
+                {
+                  "type": "scalar",
+                  "value": 2006
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Marshawn Lynch"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 7
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2012
+                },
+                {
+                  "type": "scalar",
+                  "value": 2013
+                },
+                {
+                  "type": "scalar",
+                  "value": 2014
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "DeSean Jackson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 5
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2009
+                },
+                {
+                  "type": "scalar",
+                  "value": 2010
+                },
+                {
+                  "type": "scalar",
+                  "value": 2011
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Steven Jackson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 5
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2010
+                },
+                {
+                  "type": "scalar",
+                  "value": 2011
+                },
+                {
+                  "type": "scalar",
+                  "value": 2013
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Kurt Warner"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 5
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2006
+                },
+                {
+                  "type": "scalar",
+                  "value": 2008
+                },
+                {
+                  "type": "scalar",
+                  "value": 2009
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Plaxico Burress"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 4
+            },
+            "seasons": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2006
+                },
+                {
+                  "type": "scalar",
+                  "value": 2007
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "F02": {
+      "type": "list",
+      "length": 8,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Alvin Kamara"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 5
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 16
+            },
+            "seasons": {
+              "type": "list",
+              "length": 6,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2017
+                },
+                {
+                  "type": "scalar",
+                  "value": 2018
+                },
+                {
+                  "type": "scalar",
+                  "value": 2019
+                },
+                {
+                  "type": "scalar",
+                  "value": 2020
+                },
+                {
+                  "type": "scalar",
+                  "value": 2021
+                },
+                {
+                  "type": "scalar",
+                  "value": 2022
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Chris Johnson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 4
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 13
+            },
+            "seasons": {
+              "type": "list",
+              "length": 5,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2008
+                },
+                {
+                  "type": "scalar",
+                  "value": 2009
+                },
+                {
+                  "type": "scalar",
+                  "value": 2010
+                },
+                {
+                  "type": "scalar",
+                  "value": 2011
+                },
+                {
+                  "type": "scalar",
+                  "value": 2012
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Clinton Portis"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 9
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2004
+                },
+                {
+                  "type": "scalar",
+                  "value": 2005
+                },
+                {
+                  "type": "scalar",
+                  "value": 2006
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Devonta Freeman"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 7
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2015
+                },
+                {
+                  "type": "scalar",
+                  "value": 2016
+                },
+                {
+                  "type": "scalar",
+                  "value": 2017
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Julio Jones"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 5
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2012
+                },
+                {
+                  "type": "scalar",
+                  "value": 2013
+                },
+                {
+                  "type": "scalar",
+                  "value": 2016
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Steve Smith"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 5
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2006
+                },
+                {
+                  "type": "scalar",
+                  "value": 2007
+                },
+                {
+                  "type": "scalar",
+                  "value": 2011
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Shane Vereen"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 5
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2013
+                },
+                {
+                  "type": "scalar",
+                  "value": 2014
+                },
+                {
+                  "type": "scalar",
+                  "value": 2015
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Aaron Rodgers"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 4
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 4
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2009
+                },
+                {
+                  "type": "scalar",
+                  "value": 2017
+                },
+                {
+                  "type": "scalar",
+                  "value": 2018
+                },
+                {
+                  "type": "scalar",
+                  "value": 2022
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "F03": {
+      "type": "list",
+      "length": 8,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Tom Brady"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 11
+            },
+            "seasons": {
+              "type": "list",
+              "length": 5,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2007
+                },
+                {
+                  "type": "scalar",
+                  "value": 2008
+                },
+                {
+                  "type": "scalar",
+                  "value": 2011
+                },
+                {
+                  "type": "scalar",
+                  "value": 2012
+                },
+                {
+                  "type": "scalar",
+                  "value": 2013
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Breece Hall"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 9
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2023
+                },
+                {
+                  "type": "scalar",
+                  "value": 2024
+                },
+                {
+                  "type": "scalar",
+                  "value": 2025
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "George Kittle"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 9
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2019
+                },
+                {
+                  "type": "scalar",
+                  "value": 2020
+                },
+                {
+                  "type": "scalar",
+                  "value": 2021
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Michael Turner"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 8
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2008
+                },
+                {
+                  "type": "scalar",
+                  "value": 2009
+                },
+                {
+                  "type": "scalar",
+                  "value": 2010
+                },
+                {
+                  "type": "scalar",
+                  "value": 2011
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "DeMarco Murray"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 7
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2013
+                },
+                {
+                  "type": "scalar",
+                  "value": 2014
+                },
+                {
+                  "type": "scalar",
+                  "value": 2015
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Steven Jackson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 7
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2005
+                },
+                {
+                  "type": "scalar",
+                  "value": 2006
+                },
+                {
+                  "type": "scalar",
+                  "value": 2007
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Matt Prater"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "K"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 4
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 4
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2012
+                },
+                {
+                  "type": "scalar",
+                  "value": 2013
+                },
+                {
+                  "type": "scalar",
+                  "value": 2016
+                },
+                {
+                  "type": "scalar",
+                  "value": 2022
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Randy Moss"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 4
+            },
+            "seasons": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2003
+                },
+                {
+                  "type": "scalar",
+                  "value": 2004
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "F04": {
+      "type": "list",
+      "length": 8,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Larry Johnson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 10
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2005
+                },
+                {
+                  "type": "scalar",
+                  "value": 2006
+                },
+                {
+                  "type": "scalar",
+                  "value": 2007
+                },
+                {
+                  "type": "scalar",
+                  "value": 2008
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Jordy Nelson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 7
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2014
+                },
+                {
+                  "type": "scalar",
+                  "value": 2016
+                },
+                {
+                  "type": "scalar",
+                  "value": 2017
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Nick Chubb"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 6
+            },
+            "seasons": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2019
+                },
+                {
+                  "type": "scalar",
+                  "value": 2020
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Nick Chubb"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 6
+            },
+            "seasons": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2021
+                },
+                {
+                  "type": "scalar",
+                  "value": 2022
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Patrick Mahomes"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 6
+            },
+            "seasons": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2023
+                },
+                {
+                  "type": "scalar",
+                  "value": 2024
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Jamal Lewis"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 5
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2003
+                },
+                {
+                  "type": "scalar",
+                  "value": 2004
+                },
+                {
+                  "type": "scalar",
+                  "value": 2009
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Stefon Diggs"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 4
+            },
+            "seasons": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2017
+                },
+                {
+                  "type": "scalar",
+                  "value": 2018
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Ray Rice"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 4
+            },
+            "seasons": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2011
+                },
+                {
+                  "type": "scalar",
+                  "value": 2012
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "F05": {
+      "type": "list",
+      "length": 8,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Ja'Marr Chase"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 4
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 13
+            },
+            "seasons": {
+              "type": "list",
+              "length": 5,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2021
+                },
+                {
+                  "type": "scalar",
+                  "value": 2022
+                },
+                {
+                  "type": "scalar",
+                  "value": 2023
+                },
+                {
+                  "type": "scalar",
+                  "value": 2024
+                },
+                {
+                  "type": "scalar",
+                  "value": 2025
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Peyton Manning"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 8
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2004
+                },
+                {
+                  "type": "scalar",
+                  "value": 2005
+                },
+                {
+                  "type": "scalar",
+                  "value": 2006
+                },
+                {
+                  "type": "scalar",
+                  "value": 2012
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Eddie Lacy"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 7
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2013
+                },
+                {
+                  "type": "scalar",
+                  "value": 2014
+                },
+                {
+                  "type": "scalar",
+                  "value": 2015
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Brian Westbrook"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 7
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2007
+                },
+                {
+                  "type": "scalar",
+                  "value": 2008
+                },
+                {
+                  "type": "scalar",
+                  "value": 2009
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Ben Roethlisberger"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 6
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 6
+            },
+            "seasons": {
+              "type": "list",
+              "length": 6,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2006
+                },
+                {
+                  "type": "scalar",
+                  "value": 2012
+                },
+                {
+                  "type": "scalar",
+                  "value": 2014
+                },
+                {
+                  "type": "scalar",
+                  "value": 2016
+                },
+                {
+                  "type": "scalar",
+                  "value": 2018
+                },
+                {
+                  "type": "scalar",
+                  "value": 2020
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Matt Forte"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 6
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2010
+                },
+                {
+                  "type": "scalar",
+                  "value": 2011
+                },
+                {
+                  "type": "scalar",
+                  "value": 2012
+                },
+                {
+                  "type": "scalar",
+                  "value": 2016
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Cooper Kupp"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 5
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 5
+            },
+            "seasons": {
+              "type": "list",
+              "length": 5,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2017
+                },
+                {
+                  "type": "scalar",
+                  "value": 2018
+                },
+                {
+                  "type": "scalar",
+                  "value": 2021
+                },
+                {
+                  "type": "scalar",
+                  "value": 2022
+                },
+                {
+                  "type": "scalar",
+                  "value": 2023
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Dalvin Cook"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 5
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2018
+                },
+                {
+                  "type": "scalar",
+                  "value": 2020
+                },
+                {
+                  "type": "scalar",
+                  "value": 2021
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "F06": {
+      "type": "list",
+      "length": 8,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "David Johnson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 5
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 15
+            },
+            "seasons": {
+              "type": "list",
+              "length": 5,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2016
+                },
+                {
+                  "type": "scalar",
+                  "value": 2017
+                },
+                {
+                  "type": "scalar",
+                  "value": 2018
+                },
+                {
+                  "type": "scalar",
+                  "value": 2019
+                },
+                {
+                  "type": "scalar",
+                  "value": 2020
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Randy Moss"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 4
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 7
+            },
+            "seasons": {
+              "type": "list",
+              "length": 5,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2007
+                },
+                {
+                  "type": "scalar",
+                  "value": 2008
+                },
+                {
+                  "type": "scalar",
+                  "value": 2009
+                },
+                {
+                  "type": "scalar",
+                  "value": 2010
+                },
+                {
+                  "type": "scalar",
+                  "value": 2012
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Roddy White"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 7
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2009
+                },
+                {
+                  "type": "scalar",
+                  "value": 2010
+                },
+                {
+                  "type": "scalar",
+                  "value": 2011
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Antonio Brown"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 7
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2014
+                },
+                {
+                  "type": "scalar",
+                  "value": 2015
+                },
+                {
+                  "type": "scalar",
+                  "value": 2018
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "De'Von Achane"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 7
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2023
+                },
+                {
+                  "type": "scalar",
+                  "value": 2024
+                },
+                {
+                  "type": "scalar",
+                  "value": 2025
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Terrell Owens"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 6
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2002
+                },
+                {
+                  "type": "scalar",
+                  "value": 2003
+                },
+                {
+                  "type": "scalar",
+                  "value": 2006
+                },
+                {
+                  "type": "scalar",
+                  "value": 2010
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Tee Higgins"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 6
+            },
+            "seasons": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2021
+                },
+                {
+                  "type": "scalar",
+                  "value": 2022
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "A.J. Green"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 5
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2012
+                },
+                {
+                  "type": "scalar",
+                  "value": 2013
+                },
+                {
+                  "type": "scalar",
+                  "value": 2019
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "F07": {
+      "type": "list",
+      "length": 8,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "LaDainian Tomlinson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 10
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2002
+                },
+                {
+                  "type": "scalar",
+                  "value": 2003
+                },
+                {
+                  "type": "scalar",
+                  "value": 2004
+                },
+                {
+                  "type": "scalar",
+                  "value": 2005
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Garrett Wilson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 9
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2023
+                },
+                {
+                  "type": "scalar",
+                  "value": 2024
+                },
+                {
+                  "type": "scalar",
+                  "value": 2025
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "LaDainian Tomlinson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 9
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2006
+                },
+                {
+                  "type": "scalar",
+                  "value": 2007
+                },
+                {
+                  "type": "scalar",
+                  "value": 2008
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Mike Evans"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 6
+            },
+            "seasons": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2015
+                },
+                {
+                  "type": "scalar",
+                  "value": 2016
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Terry McLaurin"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 6
+            },
+            "seasons": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2020
+                },
+                {
+                  "type": "scalar",
+                  "value": 2021
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Darren McFadden"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 4
+            },
+            "seasons": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2011
+                },
+                {
+                  "type": "scalar",
+                  "value": 2012
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Tony Romo"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 4
+            },
+            "seasons": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2008
+                },
+                {
+                  "type": "scalar",
+                  "value": 2009
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Trenton Richardson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 4
+            },
+            "seasons": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2012
+                },
+                {
+                  "type": "scalar",
+                  "value": 2013
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "F08": {
+      "type": "list",
+      "length": 8,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Adrian Peterson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 4
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 15
+            },
+            "seasons": {
+              "type": "list",
+              "length": 7,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2007
+                },
+                {
+                  "type": "scalar",
+                  "value": 2007
+                },
+                {
+                  "type": "scalar",
+                  "value": 2008
+                },
+                {
+                  "type": "scalar",
+                  "value": 2009
+                },
+                {
+                  "type": "scalar",
+                  "value": 2010
+                },
+                {
+                  "type": "scalar",
+                  "value": 2011
+                },
+                {
+                  "type": "scalar",
+                  "value": 2020
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Shaun Alexander"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 4
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 13
+            },
+            "seasons": {
+              "type": "list",
+              "length": 5,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2002
+                },
+                {
+                  "type": "scalar",
+                  "value": 2003
+                },
+                {
+                  "type": "scalar",
+                  "value": 2004
+                },
+                {
+                  "type": "scalar",
+                  "value": 2005
+                },
+                {
+                  "type": "scalar",
+                  "value": 2006
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Calvin Ridley"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 10
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2018
+                },
+                {
+                  "type": "scalar",
+                  "value": 2019
+                },
+                {
+                  "type": "scalar",
+                  "value": 2020
+                },
+                {
+                  "type": "scalar",
+                  "value": 2021
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Jamaal Charles"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 7
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2012
+                },
+                {
+                  "type": "scalar",
+                  "value": 2013
+                },
+                {
+                  "type": "scalar",
+                  "value": 2014
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Brandin Cooks"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 5
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2015
+                },
+                {
+                  "type": "scalar",
+                  "value": 2016
+                },
+                {
+                  "type": "scalar",
+                  "value": 2021
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Greg Jennings"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 5
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2008
+                },
+                {
+                  "type": "scalar",
+                  "value": 2011
+                },
+                {
+                  "type": "scalar",
+                  "value": 2012
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Jaylen Waddle"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 5
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2022
+                },
+                {
+                  "type": "scalar",
+                  "value": 2023
+                },
+                {
+                  "type": "scalar",
+                  "value": 2025
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Dallas Clark"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 4
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 4
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2008
+                },
+                {
+                  "type": "scalar",
+                  "value": 2009
+                },
+                {
+                  "type": "scalar",
+                  "value": 2010
+                },
+                {
+                  "type": "scalar",
+                  "value": 2012
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "F09": {
+      "type": "list",
+      "length": 8,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Aaron Rodgers"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 4
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 15
+            },
+            "seasons": {
+              "type": "list",
+              "length": 7,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2010
+                },
+                {
+                  "type": "scalar",
+                  "value": 2011
+                },
+                {
+                  "type": "scalar",
+                  "value": 2012
+                },
+                {
+                  "type": "scalar",
+                  "value": 2013
+                },
+                {
+                  "type": "scalar",
+                  "value": 2014
+                },
+                {
+                  "type": "scalar",
+                  "value": 2020
+                },
+                {
+                  "type": "scalar",
+                  "value": 2021
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Terrell Owens"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 11
+            },
+            "seasons": {
+              "type": "list",
+              "length": 5,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2001
+                },
+                {
+                  "type": "scalar",
+                  "value": 2005
+                },
+                {
+                  "type": "scalar",
+                  "value": 2007
+                },
+                {
+                  "type": "scalar",
+                  "value": 2008
+                },
+                {
+                  "type": "scalar",
+                  "value": 2009
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Cam Newton"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 8
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2015
+                },
+                {
+                  "type": "scalar",
+                  "value": 2016
+                },
+                {
+                  "type": "scalar",
+                  "value": 2017
+                },
+                {
+                  "type": "scalar",
+                  "value": 2019
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Rachaad White"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 7
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2022
+                },
+                {
+                  "type": "scalar",
+                  "value": 2023
+                },
+                {
+                  "type": "scalar",
+                  "value": 2024
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Chad Johnson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 7
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2005
+                },
+                {
+                  "type": "scalar",
+                  "value": 2006
+                },
+                {
+                  "type": "scalar",
+                  "value": 2007
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "DeSean Jackson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 6
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 6
+            },
+            "seasons": {
+              "type": "list",
+              "length": 6,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2012
+                },
+                {
+                  "type": "scalar",
+                  "value": 2013
+                },
+                {
+                  "type": "scalar",
+                  "value": 2014
+                },
+                {
+                  "type": "scalar",
+                  "value": 2015
+                },
+                {
+                  "type": "scalar",
+                  "value": 2016
+                },
+                {
+                  "type": "scalar",
+                  "value": 2017
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Marvin Jones Jr."
+            },
+            "position": {
+              "type": "scalar",
+              "value": "LB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 6
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2017
+                },
+                {
+                  "type": "scalar",
+                  "value": 2018
+                },
+                {
+                  "type": "scalar",
+                  "value": 2019
+                },
+                {
+                  "type": "scalar",
+                  "value": 2021
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Marvin Harrison"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 6
+            },
+            "seasons": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2003
+                },
+                {
+                  "type": "scalar",
+                  "value": 2004
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "F10": {
+      "type": "list",
+      "length": 8,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Drew Brees"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 4
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 12
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2008
+                },
+                {
+                  "type": "scalar",
+                  "value": 2009
+                },
+                {
+                  "type": "scalar",
+                  "value": 2010
+                },
+                {
+                  "type": "scalar",
+                  "value": 2011
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "LeSean McCoy"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 11
+            },
+            "seasons": {
+              "type": "list",
+              "length": 5,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2009
+                },
+                {
+                  "type": "scalar",
+                  "value": 2011
+                },
+                {
+                  "type": "scalar",
+                  "value": 2012
+                },
+                {
+                  "type": "scalar",
+                  "value": 2013
+                },
+                {
+                  "type": "scalar",
+                  "value": 2014
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Nico Collins"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 7
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2023
+                },
+                {
+                  "type": "scalar",
+                  "value": 2024
+                },
+                {
+                  "type": "scalar",
+                  "value": 2025
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Chase Edmonds"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 7
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2020
+                },
+                {
+                  "type": "scalar",
+                  "value": 2021
+                },
+                {
+                  "type": "scalar",
+                  "value": 2022
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Allen Robinson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 6
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2015
+                },
+                {
+                  "type": "scalar",
+                  "value": 2016
+                },
+                {
+                  "type": "scalar",
+                  "value": 2018
+                },
+                {
+                  "type": "scalar",
+                  "value": 2022
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Corey Dillon"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 6
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2002
+                },
+                {
+                  "type": "scalar",
+                  "value": 2004
+                },
+                {
+                  "type": "scalar",
+                  "value": 2005
+                },
+                {
+                  "type": "scalar",
+                  "value": 2006
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Jordan Howard"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 6
+            },
+            "seasons": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2017
+                },
+                {
+                  "type": "scalar",
+                  "value": 2018
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Ahman Green"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 5
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2002
+                },
+                {
+                  "type": "scalar",
+                  "value": 2003
+                },
+                {
+                  "type": "scalar",
+                  "value": 2004
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "F11": {
+      "type": "list",
+      "length": 8,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Maurice Jones-Drew"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 4
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 14
+            },
+            "seasons": {
+              "type": "list",
+              "length": 6,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2007
+                },
+                {
+                  "type": "scalar",
+                  "value": 2008
+                },
+                {
+                  "type": "scalar",
+                  "value": 2009
+                },
+                {
+                  "type": "scalar",
+                  "value": 2010
+                },
+                {
+                  "type": "scalar",
+                  "value": 2011
+                },
+                {
+                  "type": "scalar",
+                  "value": 2012
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Matt Forte"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 8
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2013
+                },
+                {
+                  "type": "scalar",
+                  "value": 2014
+                },
+                {
+                  "type": "scalar",
+                  "value": 2015
+                },
+                {
+                  "type": "scalar",
+                  "value": 2017
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Reggie Bush"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 4
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 7
+            },
+            "seasons": {
+              "type": "list",
+              "length": 5,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2006
+                },
+                {
+                  "type": "scalar",
+                  "value": 2007
+                },
+                {
+                  "type": "scalar",
+                  "value": 2010
+                },
+                {
+                  "type": "scalar",
+                  "value": 2012
+                },
+                {
+                  "type": "scalar",
+                  "value": 2015
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Derrick Henry"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 7
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2019
+                },
+                {
+                  "type": "scalar",
+                  "value": 2020
+                },
+                {
+                  "type": "scalar",
+                  "value": 2021
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Priest Holmes"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 7
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2004
+                },
+                {
+                  "type": "scalar",
+                  "value": 2005
+                },
+                {
+                  "type": "scalar",
+                  "value": 2006
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Justin Jefferson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 7
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2021
+                },
+                {
+                  "type": "scalar",
+                  "value": 2022
+                },
+                {
+                  "type": "scalar",
+                  "value": 2023
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Drew Brees"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 6
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2012
+                },
+                {
+                  "type": "scalar",
+                  "value": 2013
+                },
+                {
+                  "type": "scalar",
+                  "value": 2014
+                },
+                {
+                  "type": "scalar",
+                  "value": 2015
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Torry Holt"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 6
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2003
+                },
+                {
+                  "type": "scalar",
+                  "value": 2004
+                },
+                {
+                  "type": "scalar",
+                  "value": 2005
+                },
+                {
+                  "type": "scalar",
+                  "value": 2006
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "F12": {
+      "type": "list",
+      "length": 8,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Josh Allen"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "QB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 4
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 14
+            },
+            "seasons": {
+              "type": "list",
+              "length": 6,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2020
+                },
+                {
+                  "type": "scalar",
+                  "value": 2021
+                },
+                {
+                  "type": "scalar",
+                  "value": 2022
+                },
+                {
+                  "type": "scalar",
+                  "value": 2023
+                },
+                {
+                  "type": "scalar",
+                  "value": 2024
+                },
+                {
+                  "type": "scalar",
+                  "value": 2025
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Arian Foster"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 10
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2010
+                },
+                {
+                  "type": "scalar",
+                  "value": 2011
+                },
+                {
+                  "type": "scalar",
+                  "value": 2012
+                },
+                {
+                  "type": "scalar",
+                  "value": 2013
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Rudi Johnson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 3
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 10
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2004
+                },
+                {
+                  "type": "scalar",
+                  "value": 2005
+                },
+                {
+                  "type": "scalar",
+                  "value": 2006
+                },
+                {
+                  "type": "scalar",
+                  "value": 2007
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Calvin Johnson"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 7
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2008
+                },
+                {
+                  "type": "scalar",
+                  "value": 2009
+                },
+                {
+                  "type": "scalar",
+                  "value": 2010
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Rob Gronkowski"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 5
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2014
+                },
+                {
+                  "type": "scalar",
+                  "value": 2015
+                },
+                {
+                  "type": "scalar",
+                  "value": 2020
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Mike Evans"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "WR"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 2
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 1
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 5
+            },
+            "seasons": {
+              "type": "list",
+              "length": 3,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2020
+                },
+                {
+                  "type": "scalar",
+                  "value": 2023
+                },
+                {
+                  "type": "scalar",
+                  "value": 2024
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Darren Sproles"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "RB"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 4
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 4
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2009
+                },
+                {
+                  "type": "scalar",
+                  "value": 2011
+                },
+                {
+                  "type": "scalar",
+                  "value": 2014
+                },
+                {
+                  "type": "scalar",
+                  "value": 2017
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "player_name": {
+              "type": "scalar",
+              "value": "Travis Kelce"
+            },
+            "position": {
+              "type": "scalar",
+              "value": "TE"
+            },
+            "draft_count": {
+              "type": "scalar",
+              "value": 4
+            },
+            "keeper_count": {
+              "type": "scalar",
+              "value": 0
+            },
+            "legend_score": {
+              "type": "scalar",
+              "value": 4
+            },
+            "seasons": {
+              "type": "list",
+              "length": 4,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2017
+                },
+                {
+                  "type": "scalar",
+                  "value": 2019
+                },
+                {
+                  "type": "scalar",
+                  "value": 2022
+                },
+                {
+                  "type": "scalar",
+                  "value": 2025
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

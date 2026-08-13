@@ -1,0 +1,4507 @@
+{
+  "type": "dict",
+  "value": {
+    "Kevin O'Boyle vs Kevin Swanson": {
+      "type": "dict",
+      "value": {
+        "rs": {
+          "type": "dataframe",
+          "shape": [
+            35,
+            6
+          ],
+          "columns": [
+            "season",
+            "week",
+            "winner",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "4a723808713ffd03b04e80f7fb56afbe2f4ee2c85c13a1176a59af1eb449b88a",
+          "rows": [
+            {
+              "season": 2002,
+              "week": 3,
+              "winner": "Kevin O'Boyle",
+              "a_score": 47.27,
+              "b_score": 35.67,
+              "margin": 11.6
+            },
+            {
+              "season": 2002,
+              "week": 14,
+              "winner": "Kevin Swanson",
+              "a_score": 33.23,
+              "b_score": 50.6,
+              "margin": 17.37
+            },
+            {
+              "season": 2003,
+              "week": 6,
+              "winner": "Kevin O'Boyle",
+              "a_score": 57.07,
+              "b_score": 50.53,
+              "margin": 6.54
+            },
+            {
+              "season": 2004,
+              "week": 6,
+              "winner": "Kevin Swanson",
+              "a_score": 63.79,
+              "b_score": 96.74,
+              "margin": 32.95
+            },
+            {
+              "season": 2004,
+              "week": 13,
+              "winner": "Kevin Swanson",
+              "a_score": 62.09,
+              "b_score": 70.13,
+              "margin": 8.04
+            },
+            {
+              "season": 2005,
+              "week": 1,
+              "winner": "Kevin O'Boyle",
+              "a_score": 75.39,
+              "b_score": 46.24,
+              "margin": 29.15
+            },
+            {
+              "season": 2005,
+              "week": 8,
+              "winner": "Kevin O'Boyle",
+              "a_score": 78.06,
+              "b_score": 72.57,
+              "margin": 5.49
+            },
+            {
+              "season": 2006,
+              "week": 6,
+              "winner": "Kevin Swanson",
+              "a_score": 79.96,
+              "b_score": 87.55,
+              "margin": 7.59
+            },
+            {
+              "season": 2006,
+              "week": 13,
+              "winner": "Kevin Swanson",
+              "a_score": 59.65,
+              "b_score": 62.48,
+              "margin": 2.83
+            },
+            {
+              "season": 2007,
+              "week": 6,
+              "winner": "Kevin Swanson",
+              "a_score": 48.79,
+              "b_score": 91.3,
+              "margin": 42.51
+            },
+            {
+              "season": 2007,
+              "week": 13,
+              "winner": "Kevin Swanson",
+              "a_score": 53.69,
+              "b_score": 72.08,
+              "margin": 18.39
+            },
+            {
+              "season": 2008,
+              "week": 3,
+              "winner": "Kevin Swanson",
+              "a_score": 87.77,
+              "b_score": 89.05,
+              "margin": 1.28
+            },
+            {
+              "season": 2008,
+              "week": 12,
+              "winner": "Kevin Swanson",
+              "a_score": 79.96,
+              "b_score": 104.86,
+              "margin": 24.9
+            },
+            {
+              "season": 2009,
+              "week": 8,
+              "winner": "Kevin O'Boyle",
+              "a_score": 96.86,
+              "b_score": 86.14,
+              "margin": 10.72
+            },
+            {
+              "season": 2010,
+              "week": 3,
+              "winner": "Kevin Swanson",
+              "a_score": 76.9,
+              "b_score": 85.83,
+              "margin": 8.93
+            },
+            {
+              "season": 2010,
+              "week": 12,
+              "winner": "Kevin Swanson",
+              "a_score": 61.69,
+              "b_score": 85.24,
+              "margin": 23.55
+            },
+            {
+              "season": 2011,
+              "week": 1,
+              "winner": "Kevin O'Boyle",
+              "a_score": 103.28,
+              "b_score": 63.19,
+              "margin": 40.09
+            },
+            {
+              "season": 2011,
+              "week": 13,
+              "winner": "Kevin O'Boyle",
+              "a_score": 100.39,
+              "b_score": 66.58,
+              "margin": 33.81
+            },
+            {
+              "season": 2012,
+              "week": 7,
+              "winner": "Kevin Swanson",
+              "a_score": 71.59,
+              "b_score": 92.24,
+              "margin": 20.65
+            },
+            {
+              "season": 2013,
+              "week": 8,
+              "winner": "Kevin Swanson",
+              "a_score": 55.42,
+              "b_score": 85.04,
+              "margin": 29.62
+            },
+            {
+              "season": 2014,
+              "week": 1,
+              "winner": "Kevin O'Boyle",
+              "a_score": 79.76,
+              "b_score": 71.41,
+              "margin": 8.35
+            },
+            {
+              "season": 2015,
+              "week": 9,
+              "winner": "Kevin O'Boyle",
+              "a_score": 104.44,
+              "b_score": 94.77,
+              "margin": 9.67
+            },
+            {
+              "season": 2016,
+              "week": 10,
+              "winner": "Kevin O'Boyle",
+              "a_score": 92.87,
+              "b_score": 77.57,
+              "margin": 15.3
+            },
+            {
+              "season": 2017,
+              "week": 9,
+              "winner": "Kevin O'Boyle",
+              "a_score": 93.68,
+              "b_score": 87.89,
+              "margin": 5.79
+            },
+            {
+              "season": 2018,
+              "week": 3,
+              "winner": "Kevin O'Boyle",
+              "a_score": 83.97,
+              "b_score": 63.98,
+              "margin": 19.99
+            },
+            {
+              "season": 2019,
+              "week": 7,
+              "winner": "Kevin O'Boyle",
+              "a_score": 65.26,
+              "b_score": 60.43,
+              "margin": 4.83
+            },
+            {
+              "season": 2020,
+              "week": 8,
+              "winner": "Kevin O'Boyle",
+              "a_score": 93.21,
+              "b_score": 79.98,
+              "margin": 13.23
+            },
+            {
+              "season": 2021,
+              "week": 2,
+              "winner": "Kevin Swanson",
+              "a_score": 88.45,
+              "b_score": 115.4,
+              "margin": 26.95
+            },
+            {
+              "season": 2021,
+              "week": 13,
+              "winner": "Kevin Swanson",
+              "a_score": 76.32,
+              "b_score": 110.11,
+              "margin": 33.79
+            },
+            {
+              "season": 2022,
+              "week": 8,
+              "winner": "Kevin Swanson",
+              "a_score": 83.88,
+              "b_score": 94.8,
+              "margin": 10.92
+            },
+            {
+              "season": 2023,
+              "week": 8,
+              "winner": "Kevin O'Boyle",
+              "a_score": 107.56,
+              "b_score": 64.78,
+              "margin": 42.78
+            },
+            {
+              "season": 2024,
+              "week": 2,
+              "winner": "Kevin O'Boyle",
+              "a_score": 103.38,
+              "b_score": 77.92,
+              "margin": 25.46
+            },
+            {
+              "season": 2024,
+              "week": 13,
+              "winner": "Kevin Swanson",
+              "a_score": 94.12,
+              "b_score": 99.98,
+              "margin": 5.86
+            },
+            {
+              "season": 2025,
+              "week": 1,
+              "winner": "Kevin O'Boyle",
+              "a_score": 78.51,
+              "b_score": 76.19,
+              "margin": 2.32
+            },
+            {
+              "season": 2025,
+              "week": 9,
+              "winner": "Kevin Swanson",
+              "a_score": 82.27,
+              "b_score": 89.3,
+              "margin": 7.03
+            }
+          ]
+        },
+        "playoffs": {
+          "type": "dataframe",
+          "shape": [
+            5,
+            6
+          ],
+          "columns": [
+            "season",
+            "game_type",
+            "winner_mgr",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "ede002d1c5df8f8de05cb7ab09b69383a66f322e18c7d766e5b92ca569a7050c",
+          "rows": [
+            {
+              "season": 2004,
+              "game_type": "3rd_place",
+              "winner_mgr": "Kevin Swanson",
+              "a_score": 63.57,
+              "b_score": 69.97,
+              "margin": 6.4
+            },
+            {
+              "season": 2006,
+              "game_type": "final",
+              "winner_mgr": "Kevin Swanson",
+              "a_score": 76.13,
+              "b_score": 101.31,
+              "margin": 25.18
+            },
+            {
+              "season": 2009,
+              "game_type": "quarterfinal",
+              "winner_mgr": "Kevin Swanson",
+              "a_score": 75.47,
+              "b_score": 83.69,
+              "margin": 8.22
+            },
+            {
+              "season": 2017,
+              "game_type": "semifinal",
+              "winner_mgr": "Kevin Swanson",
+              "a_score": 84.45,
+              "b_score": 85.84,
+              "margin": 1.39
+            },
+            {
+              "season": 2021,
+              "game_type": "quarterfinal",
+              "winner_mgr": "Kevin O'Boyle",
+              "a_score": 122.97,
+              "b_score": 70.74,
+              "margin": 52.23
+            }
+          ]
+        }
+      }
+    },
+    "Shawn vs Thomas": {
+      "type": "dict",
+      "value": {
+        "rs": {
+          "type": "dataframe",
+          "shape": [
+            34,
+            6
+          ],
+          "columns": [
+            "season",
+            "week",
+            "winner",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "1b934b89f2b989e43c91203684c1a5cc329227d9e05c14390a8b2df07f68da8c",
+          "rows": [
+            {
+              "season": 2003,
+              "week": 11,
+              "winner": "Shawn",
+              "a_score": 61.12,
+              "b_score": 50.98,
+              "margin": 10.14
+            },
+            {
+              "season": 2004,
+              "week": 10,
+              "winner": "Shawn",
+              "a_score": 115.61,
+              "b_score": 93.92,
+              "margin": 21.69
+            },
+            {
+              "season": 2005,
+              "week": 4,
+              "winner": "Shawn",
+              "a_score": 53.54,
+              "b_score": 46.36,
+              "margin": 7.18
+            },
+            {
+              "season": 2006,
+              "week": 9,
+              "winner": "Shawn",
+              "a_score": 72.94,
+              "b_score": 32.1,
+              "margin": 40.84
+            },
+            {
+              "season": 2007,
+              "week": 2,
+              "winner": "Shawn",
+              "a_score": 99.44,
+              "b_score": 68.77,
+              "margin": 30.67
+            },
+            {
+              "season": 2007,
+              "week": 11,
+              "winner": "Thomas",
+              "a_score": 73.83,
+              "b_score": 92.21,
+              "margin": 18.38
+            },
+            {
+              "season": 2008,
+              "week": 2,
+              "winner": "Shawn",
+              "a_score": 99.17,
+              "b_score": 52.78,
+              "margin": 46.39
+            },
+            {
+              "season": 2008,
+              "week": 11,
+              "winner": "Shawn",
+              "a_score": 74.78,
+              "b_score": 40.66,
+              "margin": 34.12
+            },
+            {
+              "season": 2009,
+              "week": 11,
+              "winner": "Thomas",
+              "a_score": 74.61,
+              "b_score": 97.13,
+              "margin": 22.52
+            },
+            {
+              "season": 2010,
+              "week": 1,
+              "winner": "Shawn",
+              "a_score": 88.36,
+              "b_score": 60.21,
+              "margin": 28.15
+            },
+            {
+              "season": 2010,
+              "week": 11,
+              "winner": "Shawn",
+              "a_score": 112.42,
+              "b_score": 77.32,
+              "margin": 35.1
+            },
+            {
+              "season": 2011,
+              "week": 2,
+              "winner": "Thomas",
+              "a_score": 93.71,
+              "b_score": 109.23,
+              "margin": 15.52
+            },
+            {
+              "season": 2011,
+              "week": 11,
+              "winner": "Thomas",
+              "a_score": 76.03,
+              "b_score": 88.15,
+              "margin": 12.12
+            },
+            {
+              "season": 2012,
+              "week": 1,
+              "winner": "Thomas",
+              "a_score": 66.96,
+              "b_score": 84.41,
+              "margin": 17.45
+            },
+            {
+              "season": 2012,
+              "week": 12,
+              "winner": "Thomas",
+              "a_score": 59.88,
+              "b_score": 96.92,
+              "margin": 37.04
+            },
+            {
+              "season": 2013,
+              "week": 5,
+              "winner": "Shawn",
+              "a_score": 85.23,
+              "b_score": 78.62,
+              "margin": 6.61
+            },
+            {
+              "season": 2014,
+              "week": 7,
+              "winner": "Thomas",
+              "a_score": 89.4,
+              "b_score": 91.77,
+              "margin": 2.37
+            },
+            {
+              "season": 2015,
+              "week": 2,
+              "winner": "Thomas",
+              "a_score": 49.47,
+              "b_score": 90.32,
+              "margin": 40.85
+            },
+            {
+              "season": 2015,
+              "week": 13,
+              "winner": "Shawn",
+              "a_score": 100.37,
+              "b_score": 94.94,
+              "margin": 5.43
+            },
+            {
+              "season": 2016,
+              "week": 11,
+              "winner": "Thomas",
+              "a_score": 58.64,
+              "b_score": 67.3,
+              "margin": 8.66
+            },
+            {
+              "season": 2017,
+              "week": 7,
+              "winner": "Shawn",
+              "a_score": 90.19,
+              "b_score": 60.41,
+              "margin": 29.78
+            },
+            {
+              "season": 2018,
+              "week": 9,
+              "winner": "Shawn",
+              "a_score": 60.73,
+              "b_score": 59.89,
+              "margin": 0.84
+            },
+            {
+              "season": 2019,
+              "week": 7,
+              "winner": "Thomas",
+              "a_score": 79.77,
+              "b_score": 89.56,
+              "margin": 9.79
+            },
+            {
+              "season": 2020,
+              "week": 5,
+              "winner": "Shawn",
+              "a_score": 85.94,
+              "b_score": 69.12,
+              "margin": 16.82
+            },
+            {
+              "season": 2021,
+              "week": 11,
+              "winner": "Shawn",
+              "a_score": 107.8,
+              "b_score": 70.28,
+              "margin": 37.52
+            },
+            {
+              "season": 2021,
+              "week": 13,
+              "winner": "Shawn",
+              "a_score": 61.3,
+              "b_score": 59.2,
+              "margin": 2.1
+            },
+            {
+              "season": 2022,
+              "week": 1,
+              "winner": "Thomas",
+              "a_score": 81.73,
+              "b_score": 104.04,
+              "margin": 22.31
+            },
+            {
+              "season": 2022,
+              "week": 12,
+              "winner": "Shawn",
+              "a_score": 82.43,
+              "b_score": 81.51,
+              "margin": 0.92
+            },
+            {
+              "season": 2023,
+              "week": 2,
+              "winner": "Thomas",
+              "a_score": 92.59,
+              "b_score": 99.58,
+              "margin": 6.99
+            },
+            {
+              "season": 2023,
+              "week": 13,
+              "winner": "Shawn",
+              "a_score": 104.71,
+              "b_score": 90.61,
+              "margin": 14.1
+            },
+            {
+              "season": 2024,
+              "week": 1,
+              "winner": "Thomas",
+              "a_score": 68.33,
+              "b_score": 99.69,
+              "margin": 31.36
+            },
+            {
+              "season": 2024,
+              "week": 4,
+              "winner": "Shawn",
+              "a_score": 70.35,
+              "b_score": 53.7,
+              "margin": 16.65
+            },
+            {
+              "season": 2025,
+              "week": 2,
+              "winner": "Thomas",
+              "a_score": 46.07,
+              "b_score": 60.56,
+              "margin": 14.49
+            },
+            {
+              "season": 2025,
+              "week": 14,
+              "winner": "Thomas",
+              "a_score": 68.53,
+              "b_score": 84.52,
+              "margin": 15.99
+            }
+          ]
+        },
+        "playoffs": {
+          "type": "dataframe",
+          "shape": [
+            2,
+            6
+          ],
+          "columns": [
+            "season",
+            "game_type",
+            "winner_mgr",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "8020ce8ba584a96323b8b4c237c77b32a7601bc8faf14624b9c78b2482637f77",
+          "rows": [
+            {
+              "season": 2010,
+              "game_type": "quarterfinal",
+              "winner_mgr": "Thomas",
+              "a_score": 69.82,
+              "b_score": 85.9,
+              "margin": 16.08
+            },
+            {
+              "season": 2014,
+              "game_type": "quarterfinal",
+              "winner_mgr": "Thomas",
+              "a_score": 74.44,
+              "b_score": 84.54,
+              "margin": 10.1
+            }
+          ]
+        }
+      }
+    },
+    "Kevin Swanson vs Thomas": {
+      "type": "dict",
+      "value": {
+        "rs": {
+          "type": "dataframe",
+          "shape": [
+            31,
+            6
+          ],
+          "columns": [
+            "season",
+            "week",
+            "winner",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "53fb115333ac93611e01c5db50128daaf6b6812cc9fd44acb685f661fbf75d43",
+          "rows": [
+            {
+              "season": 2003,
+              "week": 5,
+              "winner": "Kevin Swanson",
+              "a_score": 84.43,
+              "b_score": 67.86,
+              "margin": 16.57
+            },
+            {
+              "season": 2004,
+              "week": 1,
+              "winner": "Kevin Swanson",
+              "a_score": 68.66,
+              "b_score": 44.93,
+              "margin": 23.73
+            },
+            {
+              "season": 2004,
+              "week": 8,
+              "winner": "Kevin Swanson",
+              "a_score": 85.03,
+              "b_score": 66.48,
+              "margin": 18.55
+            },
+            {
+              "season": 2005,
+              "week": 7,
+              "winner": "Kevin Swanson",
+              "a_score": 77.8,
+              "b_score": 14.05,
+              "margin": 63.75
+            },
+            {
+              "season": 2006,
+              "week": 1,
+              "winner": "Thomas",
+              "a_score": 36.94,
+              "b_score": 77.12,
+              "margin": 40.18
+            },
+            {
+              "season": 2006,
+              "week": 8,
+              "winner": "Kevin Swanson",
+              "a_score": 76.64,
+              "b_score": 54.83,
+              "margin": 21.81
+            },
+            {
+              "season": 2007,
+              "week": 3,
+              "winner": "Thomas",
+              "a_score": 50.92,
+              "b_score": 66.68,
+              "margin": 15.76
+            },
+            {
+              "season": 2007,
+              "week": 12,
+              "winner": "Kevin Swanson",
+              "a_score": 83.96,
+              "b_score": 40.27,
+              "margin": 43.69
+            },
+            {
+              "season": 2008,
+              "week": 1,
+              "winner": "Kevin Swanson",
+              "a_score": 89.08,
+              "b_score": 77.0,
+              "margin": 12.08
+            },
+            {
+              "season": 2008,
+              "week": 8,
+              "winner": "Kevin Swanson",
+              "a_score": 64.82,
+              "b_score": 56.22,
+              "margin": 8.6
+            },
+            {
+              "season": 2009,
+              "week": 4,
+              "winner": "Kevin Swanson",
+              "a_score": 101.61,
+              "b_score": 90.24,
+              "margin": 11.37
+            },
+            {
+              "season": 2010,
+              "week": 2,
+              "winner": "Kevin Swanson",
+              "a_score": 74.93,
+              "b_score": 65.13,
+              "margin": 9.8
+            },
+            {
+              "season": 2011,
+              "week": 9,
+              "winner": "Kevin Swanson",
+              "a_score": 82.13,
+              "b_score": 78.76,
+              "margin": 3.37
+            },
+            {
+              "season": 2012,
+              "week": 3,
+              "winner": "Kevin Swanson",
+              "a_score": 82.1,
+              "b_score": 80.99,
+              "margin": 1.11
+            },
+            {
+              "season": 2012,
+              "week": 5,
+              "winner": "Kevin Swanson",
+              "a_score": 126.45,
+              "b_score": 75.12,
+              "margin": 51.33
+            },
+            {
+              "season": 2013,
+              "week": 3,
+              "winner": "Kevin Swanson",
+              "a_score": 104.86,
+              "b_score": 59.97,
+              "margin": 44.89
+            },
+            {
+              "season": 2013,
+              "week": 13,
+              "winner": "Kevin Swanson",
+              "a_score": 105.94,
+              "b_score": 80.04,
+              "margin": 25.9
+            },
+            {
+              "season": 2014,
+              "week": 6,
+              "winner": "Thomas",
+              "a_score": 88.41,
+              "b_score": 97.12,
+              "margin": 8.71
+            },
+            {
+              "season": 2015,
+              "week": 8,
+              "winner": "Kevin Swanson",
+              "a_score": 119.7,
+              "b_score": 94.27,
+              "margin": 25.43
+            },
+            {
+              "season": 2016,
+              "week": 5,
+              "winner": "Thomas",
+              "a_score": 79.28,
+              "b_score": 93.85,
+              "margin": 14.57
+            },
+            {
+              "season": 2016,
+              "week": 12,
+              "winner": "Thomas",
+              "a_score": 65.56,
+              "b_score": 71.67,
+              "margin": 6.11
+            },
+            {
+              "season": 2017,
+              "week": 4,
+              "winner": "Thomas",
+              "a_score": 70.2,
+              "b_score": 73.14,
+              "margin": 2.94
+            },
+            {
+              "season": 2018,
+              "week": 2,
+              "winner": "Kevin Swanson",
+              "a_score": 84.07,
+              "b_score": 64.45,
+              "margin": 19.62
+            },
+            {
+              "season": 2018,
+              "week": 11,
+              "winner": "Kevin Swanson",
+              "a_score": 96.44,
+              "b_score": 93.16,
+              "margin": 3.28
+            },
+            {
+              "season": 2019,
+              "week": 12,
+              "winner": "Kevin Swanson",
+              "a_score": 64.81,
+              "b_score": 59.4,
+              "margin": 5.41
+            },
+            {
+              "season": 2020,
+              "week": 9,
+              "winner": "Thomas",
+              "a_score": 67.37,
+              "b_score": 101.1,
+              "margin": 33.73
+            },
+            {
+              "season": 2021,
+              "week": 5,
+              "winner": "Thomas",
+              "a_score": 101.08,
+              "b_score": 110.45,
+              "margin": 9.37
+            },
+            {
+              "season": 2022,
+              "week": 9,
+              "winner": "Thomas",
+              "a_score": 72.6,
+              "b_score": 101.0,
+              "margin": 28.4
+            },
+            {
+              "season": 2023,
+              "week": 9,
+              "winner": "Kevin Swanson",
+              "a_score": 116.05,
+              "b_score": 83.21,
+              "margin": 32.84
+            },
+            {
+              "season": 2024,
+              "week": 9,
+              "winner": "Kevin Swanson",
+              "a_score": 71.36,
+              "b_score": 69.25,
+              "margin": 2.11
+            },
+            {
+              "season": 2025,
+              "week": 4,
+              "winner": "Thomas",
+              "a_score": 74.46,
+              "b_score": 95.78,
+              "margin": 21.32
+            }
+          ]
+        },
+        "playoffs": {
+          "type": "dataframe",
+          "shape": [
+            2,
+            6
+          ],
+          "columns": [
+            "season",
+            "game_type",
+            "winner_mgr",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "3b77c73d916b9a915d26cf7dce459a18b32550d68f3d328985b117bd52eb5a27",
+          "rows": [
+            {
+              "season": 2013,
+              "game_type": "semifinal",
+              "winner_mgr": "Kevin Swanson",
+              "a_score": 75.71,
+              "b_score": 69.65,
+              "margin": 6.06
+            },
+            {
+              "season": 2014,
+              "game_type": "semifinal",
+              "winner_mgr": "Thomas",
+              "a_score": 83.6,
+              "b_score": 91.04,
+              "margin": 7.44
+            }
+          ]
+        }
+      }
+    },
+    "Fadi vs Thomas": {
+      "type": "dict",
+      "value": {
+        "rs": {
+          "type": "dataframe",
+          "shape": [
+            31,
+            6
+          ],
+          "columns": [
+            "season",
+            "week",
+            "winner",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "00d5c427ac84feff9832a96be8c86fddbd0f68fe5aab4ed781369d4ea63df09e",
+          "rows": [
+            {
+              "season": 2003,
+              "week": 3,
+              "winner": "Fadi",
+              "a_score": 42.3,
+              "b_score": 39.64,
+              "margin": 2.66
+            },
+            {
+              "season": 2003,
+              "week": 14,
+              "winner": "Fadi",
+              "a_score": 81.42,
+              "b_score": 48.46,
+              "margin": 32.96
+            },
+            {
+              "season": 2004,
+              "week": 5,
+              "winner": "Thomas",
+              "a_score": 63.0,
+              "b_score": 75.22,
+              "margin": 12.22
+            },
+            {
+              "season": 2006,
+              "week": 5,
+              "winner": "Thomas",
+              "a_score": 57.45,
+              "b_score": 72.5,
+              "margin": 15.05
+            },
+            {
+              "season": 2007,
+              "week": 5,
+              "winner": "Fadi",
+              "a_score": 74.21,
+              "b_score": 25.59,
+              "margin": 48.62
+            },
+            {
+              "season": 2008,
+              "week": 5,
+              "winner": "Thomas",
+              "a_score": 69.28,
+              "b_score": 96.45,
+              "margin": 27.17
+            },
+            {
+              "season": 2009,
+              "week": 1,
+              "winner": "Thomas",
+              "a_score": 50.99,
+              "b_score": 67.73,
+              "margin": 16.74
+            },
+            {
+              "season": 2009,
+              "week": 13,
+              "winner": "Fadi",
+              "a_score": 79.45,
+              "b_score": 51.21,
+              "margin": 28.24
+            },
+            {
+              "season": 2010,
+              "week": 5,
+              "winner": "Fadi",
+              "a_score": 104.45,
+              "b_score": 74.92,
+              "margin": 29.53
+            },
+            {
+              "season": 2011,
+              "week": 3,
+              "winner": "Thomas",
+              "a_score": 75.93,
+              "b_score": 91.71,
+              "margin": 15.78
+            },
+            {
+              "season": 2012,
+              "week": 4,
+              "winner": "Thomas",
+              "a_score": 85.04,
+              "b_score": 105.9,
+              "margin": 20.86
+            },
+            {
+              "season": 2013,
+              "week": 2,
+              "winner": "Thomas",
+              "a_score": 55.69,
+              "b_score": 75.25,
+              "margin": 19.56
+            },
+            {
+              "season": 2013,
+              "week": 12,
+              "winner": "Fadi",
+              "a_score": 80.63,
+              "b_score": 61.16,
+              "margin": 19.47
+            },
+            {
+              "season": 2014,
+              "week": 9,
+              "winner": "Fadi",
+              "a_score": 99.68,
+              "b_score": 91.26,
+              "margin": 8.42
+            },
+            {
+              "season": 2015,
+              "week": 12,
+              "winner": "Thomas",
+              "a_score": 92.16,
+              "b_score": 117.0,
+              "margin": 24.84
+            },
+            {
+              "season": 2016,
+              "week": 1,
+              "winner": "Fadi",
+              "a_score": 76.1,
+              "b_score": 72.25,
+              "margin": 3.85
+            },
+            {
+              "season": 2016,
+              "week": 8,
+              "winner": "Fadi",
+              "a_score": 75.54,
+              "b_score": 67.05,
+              "margin": 8.49
+            },
+            {
+              "season": 2017,
+              "week": 1,
+              "winner": "Fadi",
+              "a_score": 96.92,
+              "b_score": 50.62,
+              "margin": 46.3
+            },
+            {
+              "season": 2017,
+              "week": 13,
+              "winner": "Thomas",
+              "a_score": 67.85,
+              "b_score": 82.01,
+              "margin": 14.16
+            },
+            {
+              "season": 2018,
+              "week": 1,
+              "winner": "Fadi",
+              "a_score": 103.12,
+              "b_score": 70.02,
+              "margin": 33.1
+            },
+            {
+              "season": 2019,
+              "week": 1,
+              "winner": "Fadi",
+              "a_score": 95.95,
+              "b_score": 76.82,
+              "margin": 19.13
+            },
+            {
+              "season": 2019,
+              "week": 13,
+              "winner": "Thomas",
+              "a_score": 44.56,
+              "b_score": 78.12,
+              "margin": 33.56
+            },
+            {
+              "season": 2020,
+              "week": 1,
+              "winner": "Fadi",
+              "a_score": 82.03,
+              "b_score": 77.69,
+              "margin": 4.34
+            },
+            {
+              "season": 2020,
+              "week": 8,
+              "winner": "Fadi",
+              "a_score": 74.78,
+              "b_score": 47.33,
+              "margin": 27.45
+            },
+            {
+              "season": 2021,
+              "week": 14,
+              "winner": "Thomas",
+              "a_score": 81.21,
+              "b_score": 106.11,
+              "margin": 24.9
+            },
+            {
+              "season": 2022,
+              "week": 3,
+              "winner": "Thomas",
+              "a_score": 80.71,
+              "b_score": 92.9,
+              "margin": 12.19
+            },
+            {
+              "season": 2022,
+              "week": 14,
+              "winner": "Thomas",
+              "a_score": 96.1,
+              "b_score": 105.84,
+              "margin": 9.74
+            },
+            {
+              "season": 2023,
+              "week": 3,
+              "winner": "Fadi",
+              "a_score": 89.6,
+              "b_score": 76.06,
+              "margin": 13.54
+            },
+            {
+              "season": 2023,
+              "week": 14,
+              "winner": "Fadi",
+              "a_score": 91.56,
+              "b_score": 56.59,
+              "margin": 34.97
+            },
+            {
+              "season": 2024,
+              "week": 5,
+              "winner": "Fadi",
+              "a_score": 91.26,
+              "b_score": 71.57,
+              "margin": 19.69
+            },
+            {
+              "season": 2025,
+              "week": 9,
+              "winner": "Fadi",
+              "a_score": 115.69,
+              "b_score": 84.56,
+              "margin": 31.13
+            }
+          ]
+        },
+        "playoffs": {
+          "type": "dataframe",
+          "shape": [
+            3,
+            6
+          ],
+          "columns": [
+            "season",
+            "game_type",
+            "winner_mgr",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "fe0841dd3c45008648649986bd8f39e65e1e198bc73c979d3a75c8dd515f741a",
+          "rows": [
+            {
+              "season": 2007,
+              "game_type": "quarterfinal",
+              "winner_mgr": "Fadi",
+              "a_score": 92.83,
+              "b_score": 81.47,
+              "margin": 11.36
+            },
+            {
+              "season": 2010,
+              "game_type": "3rd_place",
+              "winner_mgr": "Thomas",
+              "a_score": 76.91,
+              "b_score": 103.19,
+              "margin": 26.28
+            },
+            {
+              "season": 2012,
+              "game_type": "semifinal",
+              "winner_mgr": "Fadi",
+              "a_score": 85.72,
+              "b_score": 78.02,
+              "margin": 7.7
+            }
+          ]
+        }
+      }
+    },
+    "Brian Clark vs Shawn": {
+      "type": "dict",
+      "value": {
+        "rs": {
+          "type": "dataframe",
+          "shape": [
+            30,
+            6
+          ],
+          "columns": [
+            "season",
+            "week",
+            "winner",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "25a1fe21d4246ee7bef4b61555bd4980be55abc2c81cd9285a05bdf071b3e580",
+          "rows": [
+            {
+              "season": 2001,
+              "week": 5,
+              "winner": "Shawn",
+              "a_score": 61.7,
+              "b_score": 88.39,
+              "margin": 26.69
+            },
+            {
+              "season": 2001,
+              "week": 14,
+              "winner": "Brian Clark",
+              "a_score": 56.86,
+              "b_score": 56.82,
+              "margin": 0.04
+            },
+            {
+              "season": 2002,
+              "week": 4,
+              "winner": "Brian Clark",
+              "a_score": 62.54,
+              "b_score": 53.95,
+              "margin": 8.59
+            },
+            {
+              "season": 2003,
+              "week": 3,
+              "winner": "Brian Clark",
+              "a_score": 72.87,
+              "b_score": 37.05,
+              "margin": 35.82
+            },
+            {
+              "season": 2003,
+              "week": 14,
+              "winner": "Brian Clark",
+              "a_score": 74.73,
+              "b_score": 66.68,
+              "margin": 8.05
+            },
+            {
+              "season": 2006,
+              "week": 4,
+              "winner": "Brian Clark",
+              "a_score": 76.76,
+              "b_score": 42.63,
+              "margin": 34.13
+            },
+            {
+              "season": 2007,
+              "week": 5,
+              "winner": "Shawn",
+              "a_score": 36.84,
+              "b_score": 46.15,
+              "margin": 9.31
+            },
+            {
+              "season": 2008,
+              "week": 5,
+              "winner": "Brian Clark",
+              "a_score": 75.16,
+              "b_score": 73.67,
+              "margin": 1.49
+            },
+            {
+              "season": 2009,
+              "week": 4,
+              "winner": "Brian Clark",
+              "a_score": 67.38,
+              "b_score": 58.98,
+              "margin": 8.4
+            },
+            {
+              "season": 2010,
+              "week": 7,
+              "winner": "Brian Clark",
+              "a_score": 74.88,
+              "b_score": 58.35,
+              "margin": 16.53
+            },
+            {
+              "season": 2011,
+              "week": 9,
+              "winner": "Brian Clark",
+              "a_score": 123.2,
+              "b_score": 102.69,
+              "margin": 20.51
+            },
+            {
+              "season": 2012,
+              "week": 4,
+              "winner": "Shawn",
+              "a_score": 59.03,
+              "b_score": 60.73,
+              "margin": 1.7
+            },
+            {
+              "season": 2013,
+              "week": 6,
+              "winner": "Brian Clark",
+              "a_score": 82.26,
+              "b_score": 70.75,
+              "margin": 11.51
+            },
+            {
+              "season": 2014,
+              "week": 2,
+              "winner": "Brian Clark",
+              "a_score": 93.42,
+              "b_score": 82.67,
+              "margin": 10.75
+            },
+            {
+              "season": 2014,
+              "week": 12,
+              "winner": "Brian Clark",
+              "a_score": 82.31,
+              "b_score": 64.33,
+              "margin": 17.98
+            },
+            {
+              "season": 2015,
+              "week": 9,
+              "winner": "Shawn",
+              "a_score": 80.99,
+              "b_score": 86.35,
+              "margin": 5.36
+            },
+            {
+              "season": 2016,
+              "week": 10,
+              "winner": "Brian Clark",
+              "a_score": 84.51,
+              "b_score": 82.92,
+              "margin": 1.59
+            },
+            {
+              "season": 2017,
+              "week": 6,
+              "winner": "Shawn",
+              "a_score": 71.46,
+              "b_score": 106.62,
+              "margin": 35.16
+            },
+            {
+              "season": 2018,
+              "week": 3,
+              "winner": "Shawn",
+              "a_score": 74.65,
+              "b_score": 75.07,
+              "margin": 0.42
+            },
+            {
+              "season": 2018,
+              "week": 12,
+              "winner": "Shawn",
+              "a_score": 72.61,
+              "b_score": 86.39,
+              "margin": 13.78
+            },
+            {
+              "season": 2019,
+              "week": 4,
+              "winner": "Brian Clark",
+              "a_score": 82.3,
+              "b_score": 80.04,
+              "margin": 2.26
+            },
+            {
+              "season": 2020,
+              "week": 9,
+              "winner": "Shawn",
+              "a_score": 62.6,
+              "b_score": 76.05,
+              "margin": 13.45
+            },
+            {
+              "season": 2021,
+              "week": 3,
+              "winner": "Shawn",
+              "a_score": 95.27,
+              "b_score": 114.17,
+              "margin": 18.9
+            },
+            {
+              "season": 2021,
+              "week": 8,
+              "winner": "Brian Clark",
+              "a_score": 77.01,
+              "b_score": 66.98,
+              "margin": 10.03
+            },
+            {
+              "season": 2022,
+              "week": 6,
+              "winner": "Shawn",
+              "a_score": 62.0,
+              "b_score": 81.16,
+              "margin": 19.16
+            },
+            {
+              "season": 2023,
+              "week": 10,
+              "winner": "Brian Clark",
+              "a_score": 90.14,
+              "b_score": 88.46,
+              "margin": 1.68
+            },
+            {
+              "season": 2024,
+              "week": 3,
+              "winner": "Brian Clark",
+              "a_score": 73.93,
+              "b_score": 45.05,
+              "margin": 28.88
+            },
+            {
+              "season": 2024,
+              "week": 8,
+              "winner": "Brian Clark",
+              "a_score": 90.47,
+              "b_score": 59.55,
+              "margin": 30.92
+            },
+            {
+              "season": 2025,
+              "week": 1,
+              "winner": "Brian Clark",
+              "a_score": 76.51,
+              "b_score": 51.01,
+              "margin": 25.5
+            },
+            {
+              "season": 2025,
+              "week": 12,
+              "winner": "Shawn",
+              "a_score": 72.89,
+              "b_score": 77.83,
+              "margin": 4.94
+            }
+          ]
+        },
+        "playoffs": {
+          "type": "dataframe",
+          "shape": [
+            2,
+            6
+          ],
+          "columns": [
+            "season",
+            "game_type",
+            "winner_mgr",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "0595057f529843216004b3814285fe72cde3329c305ce144b94aa7ec847ffc6f",
+          "rows": [
+            {
+              "season": 2008,
+              "game_type": "quarterfinal",
+              "winner_mgr": "Shawn",
+              "a_score": 77.35,
+              "b_score": 85.87,
+              "margin": 8.52
+            },
+            {
+              "season": 2019,
+              "game_type": "quarterfinal",
+              "winner_mgr": "Shawn",
+              "a_score": 97.4,
+              "b_score": 106.04,
+              "margin": 8.64
+            }
+          ]
+        }
+      }
+    },
+    "Fadi vs Shawn": {
+      "type": "dict",
+      "value": {
+        "rs": {
+          "type": "dataframe",
+          "shape": [
+            30,
+            6
+          ],
+          "columns": [
+            "season",
+            "week",
+            "winner",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "c4caefee6adc19799825f5a7948bf27885b8a63c33a963238ff0699b310bcd8c",
+          "rows": [
+            {
+              "season": 2001,
+              "week": 6,
+              "winner": "Shawn",
+              "a_score": 43.65,
+              "b_score": 46.95,
+              "margin": 3.3
+            },
+            {
+              "season": 2001,
+              "week": 15,
+              "winner": "Shawn",
+              "a_score": 63.26,
+              "b_score": 69.03,
+              "margin": 5.77
+            },
+            {
+              "season": 2002,
+              "week": 1,
+              "winner": "Shawn",
+              "a_score": 71.77,
+              "b_score": 93.48,
+              "margin": 21.71
+            },
+            {
+              "season": 2002,
+              "week": 12,
+              "winner": "Fadi",
+              "a_score": 94.32,
+              "b_score": 36.32,
+              "margin": 58.0
+            },
+            {
+              "season": 2003,
+              "week": 7,
+              "winner": "Fadi",
+              "a_score": 68.68,
+              "b_score": 62.51,
+              "margin": 6.17
+            },
+            {
+              "season": 2004,
+              "week": 6,
+              "winner": "Shawn",
+              "a_score": 61.35,
+              "b_score": 102.05,
+              "margin": 40.7
+            },
+            {
+              "season": 2004,
+              "week": 13,
+              "winner": "Shawn",
+              "a_score": 26.31,
+              "b_score": 142.88,
+              "margin": 116.57
+            },
+            {
+              "season": 2005,
+              "week": 7,
+              "winner": "Shawn",
+              "a_score": 58.24,
+              "b_score": 64.87,
+              "margin": 6.63
+            },
+            {
+              "season": 2006,
+              "week": 7,
+              "winner": "Shawn",
+              "a_score": 58.0,
+              "b_score": 72.12,
+              "margin": 14.12
+            },
+            {
+              "season": 2007,
+              "week": 10,
+              "winner": "Fadi",
+              "a_score": 46.72,
+              "b_score": 44.18,
+              "margin": 2.54
+            },
+            {
+              "season": 2008,
+              "week": 10,
+              "winner": "Fadi",
+              "a_score": 100.74,
+              "b_score": 72.73,
+              "margin": 28.01
+            },
+            {
+              "season": 2009,
+              "week": 10,
+              "winner": "Shawn",
+              "a_score": 61.49,
+              "b_score": 81.88,
+              "margin": 20.39
+            },
+            {
+              "season": 2010,
+              "week": 4,
+              "winner": "Fadi",
+              "a_score": 63.73,
+              "b_score": 57.17,
+              "margin": 6.56
+            },
+            {
+              "season": 2011,
+              "week": 4,
+              "winner": "Shawn",
+              "a_score": 73.68,
+              "b_score": 122.61,
+              "margin": 48.93
+            },
+            {
+              "season": 2012,
+              "week": 3,
+              "winner": "Fadi",
+              "a_score": 113.35,
+              "b_score": 50.86,
+              "margin": 62.49
+            },
+            {
+              "season": 2013,
+              "week": 3,
+              "winner": "Fadi",
+              "a_score": 39.7,
+              "b_score": 35.78,
+              "margin": 3.92
+            },
+            {
+              "season": 2014,
+              "week": 6,
+              "winner": "Shawn",
+              "a_score": 81.67,
+              "b_score": 83.38,
+              "margin": 1.71
+            },
+            {
+              "season": 2015,
+              "week": 5,
+              "winner": "Fadi",
+              "a_score": 88.14,
+              "b_score": 75.75,
+              "margin": 12.39
+            },
+            {
+              "season": 2016,
+              "week": 5,
+              "winner": "Fadi",
+              "a_score": 112.79,
+              "b_score": 68.3,
+              "margin": 44.49
+            },
+            {
+              "season": 2017,
+              "week": 10,
+              "winner": "Shawn",
+              "a_score": 63.34,
+              "b_score": 109.58,
+              "margin": 46.24
+            },
+            {
+              "season": 2018,
+              "week": 8,
+              "winner": "Fadi",
+              "a_score": 112.65,
+              "b_score": 86.48,
+              "margin": 26.17
+            },
+            {
+              "season": 2019,
+              "week": 10,
+              "winner": "Shawn",
+              "a_score": 65.82,
+              "b_score": 80.66,
+              "margin": 14.84
+            },
+            {
+              "season": 2020,
+              "week": 11,
+              "winner": "Shawn",
+              "a_score": 63.87,
+              "b_score": 92.92,
+              "margin": 29.05
+            },
+            {
+              "season": 2021,
+              "week": 6,
+              "winner": "Shawn",
+              "a_score": 66.49,
+              "b_score": 111.05,
+              "margin": 44.56
+            },
+            {
+              "season": 2022,
+              "week": 2,
+              "winner": "Shawn",
+              "a_score": 89.91,
+              "b_score": 103.98,
+              "margin": 14.07
+            },
+            {
+              "season": 2022,
+              "week": 13,
+              "winner": "Shawn",
+              "a_score": 71.77,
+              "b_score": 75.25,
+              "margin": 3.48
+            },
+            {
+              "season": 2023,
+              "week": 1,
+              "winner": "Shawn",
+              "a_score": 57.3,
+              "b_score": 60.93,
+              "margin": 3.63
+            },
+            {
+              "season": 2023,
+              "week": 12,
+              "winner": "Fadi",
+              "a_score": 84.28,
+              "b_score": 81.69,
+              "margin": 2.59
+            },
+            {
+              "season": 2024,
+              "week": 14,
+              "winner": "Shawn",
+              "a_score": 73.98,
+              "b_score": 81.66,
+              "margin": 7.68
+            },
+            {
+              "season": 2025,
+              "week": 10,
+              "winner": "Fadi",
+              "a_score": 90.75,
+              "b_score": 68.55,
+              "margin": 22.2
+            }
+          ]
+        },
+        "playoffs": {
+          "type": "dataframe",
+          "shape": [
+            1,
+            6
+          ],
+          "columns": [
+            "season",
+            "game_type",
+            "winner_mgr",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "e3957a3a2ff66f62f28c2f09d4035d1161140ca86a67fe9453f55a8331d8f3ad",
+          "rows": [
+            {
+              "season": 2001,
+              "game_type": "semifinal",
+              "winner_mgr": "Fadi",
+              "a_score": 75.52,
+              "b_score": 59.08,
+              "margin": 16.44
+            }
+          ]
+        }
+      }
+    },
+    "Brian Clark vs Kevin O'Boyle": {
+      "type": "dict",
+      "value": {
+        "rs": {
+          "type": "dataframe",
+          "shape": [
+            30,
+            6
+          ],
+          "columns": [
+            "season",
+            "week",
+            "winner",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "425bb7544a01188e719604011bfcdf5d963ca10343cdf52aa49ce96926bcb25e",
+          "rows": [
+            {
+              "season": 2002,
+              "week": 10,
+              "winner": "Brian Clark",
+              "a_score": 73.4,
+              "b_score": 36.46,
+              "margin": 36.94
+            },
+            {
+              "season": 2003,
+              "week": 1,
+              "winner": "Brian Clark",
+              "a_score": 67.19,
+              "b_score": 39.76,
+              "margin": 27.43
+            },
+            {
+              "season": 2003,
+              "week": 12,
+              "winner": "Brian Clark",
+              "a_score": 96.96,
+              "b_score": 56.18,
+              "margin": 40.78
+            },
+            {
+              "season": 2004,
+              "week": 2,
+              "winner": "Kevin O'Boyle",
+              "a_score": 66.05,
+              "b_score": 72.61,
+              "margin": 6.56
+            },
+            {
+              "season": 2004,
+              "week": 11,
+              "winner": "Kevin O'Boyle",
+              "a_score": 68.94,
+              "b_score": 82.19,
+              "margin": 13.25
+            },
+            {
+              "season": 2005,
+              "week": 2,
+              "winner": "Kevin O'Boyle",
+              "a_score": 57.64,
+              "b_score": 81.64,
+              "margin": 24.0
+            },
+            {
+              "season": 2005,
+              "week": 11,
+              "winner": "Brian Clark",
+              "a_score": 50.49,
+              "b_score": 50.12,
+              "margin": 0.37
+            },
+            {
+              "season": 2006,
+              "week": 2,
+              "winner": "Kevin O'Boyle",
+              "a_score": 62.39,
+              "b_score": 62.57,
+              "margin": 0.18
+            },
+            {
+              "season": 2006,
+              "week": 11,
+              "winner": "Brian Clark",
+              "a_score": 55.69,
+              "b_score": 40.29,
+              "margin": 15.4
+            },
+            {
+              "season": 2007,
+              "week": 4,
+              "winner": "Kevin O'Boyle",
+              "a_score": 43.83,
+              "b_score": 55.82,
+              "margin": 11.99
+            },
+            {
+              "season": 2008,
+              "week": 4,
+              "winner": "Kevin O'Boyle",
+              "a_score": 82.49,
+              "b_score": 99.21,
+              "margin": 16.72
+            },
+            {
+              "season": 2009,
+              "week": 6,
+              "winner": "Kevin O'Boyle",
+              "a_score": 85.81,
+              "b_score": 131.23,
+              "margin": 45.42
+            },
+            {
+              "season": 2010,
+              "week": 6,
+              "winner": "Kevin O'Boyle",
+              "a_score": 74.39,
+              "b_score": 88.96,
+              "margin": 14.57
+            },
+            {
+              "season": 2011,
+              "week": 6,
+              "winner": "Kevin O'Boyle",
+              "a_score": 44.69,
+              "b_score": 61.06,
+              "margin": 16.37
+            },
+            {
+              "season": 2012,
+              "week": 9,
+              "winner": "Brian Clark",
+              "a_score": 75.5,
+              "b_score": 66.75,
+              "margin": 8.75
+            },
+            {
+              "season": 2013,
+              "week": 5,
+              "winner": "Kevin O'Boyle",
+              "a_score": 83.39,
+              "b_score": 96.28,
+              "margin": 12.89
+            },
+            {
+              "season": 2014,
+              "week": 10,
+              "winner": "Brian Clark",
+              "a_score": 96.23,
+              "b_score": 76.33,
+              "margin": 19.9
+            },
+            {
+              "season": 2015,
+              "week": 2,
+              "winner": "Kevin O'Boyle",
+              "a_score": 66.7,
+              "b_score": 92.07,
+              "margin": 25.37
+            },
+            {
+              "season": 2015,
+              "week": 5,
+              "winner": "Brian Clark",
+              "a_score": 129.16,
+              "b_score": 64.31,
+              "margin": 64.85
+            },
+            {
+              "season": 2016,
+              "week": 9,
+              "winner": "Brian Clark",
+              "a_score": 79.86,
+              "b_score": 71.88,
+              "margin": 7.98
+            },
+            {
+              "season": 2017,
+              "week": 8,
+              "winner": "Kevin O'Boyle",
+              "a_score": 50.46,
+              "b_score": 100.32,
+              "margin": 49.86
+            },
+            {
+              "season": 2018,
+              "week": 8,
+              "winner": "Brian Clark",
+              "a_score": 111.07,
+              "b_score": 66.7,
+              "margin": 44.37
+            },
+            {
+              "season": 2019,
+              "week": 8,
+              "winner": "Kevin O'Boyle",
+              "a_score": 97.89,
+              "b_score": 103.5,
+              "margin": 5.61
+            },
+            {
+              "season": 2020,
+              "week": 7,
+              "winner": "Brian Clark",
+              "a_score": 86.31,
+              "b_score": 60.05,
+              "margin": 26.26
+            },
+            {
+              "season": 2021,
+              "week": 5,
+              "winner": "Brian Clark",
+              "a_score": 121.61,
+              "b_score": 98.96,
+              "margin": 22.65
+            },
+            {
+              "season": 2022,
+              "week": 4,
+              "winner": "Brian Clark",
+              "a_score": 95.79,
+              "b_score": 79.31,
+              "margin": 16.48
+            },
+            {
+              "season": 2023,
+              "week": 2,
+              "winner": "Kevin O'Boyle",
+              "a_score": 56.64,
+              "b_score": 58.76,
+              "margin": 2.12
+            },
+            {
+              "season": 2023,
+              "week": 13,
+              "winner": "Brian Clark",
+              "a_score": 86.72,
+              "b_score": 69.8,
+              "margin": 16.92
+            },
+            {
+              "season": 2024,
+              "week": 11,
+              "winner": "Kevin O'Boyle",
+              "a_score": 66.07,
+              "b_score": 103.49,
+              "margin": 37.42
+            },
+            {
+              "season": 2025,
+              "week": 5,
+              "winner": "Brian Clark",
+              "a_score": 106.36,
+              "b_score": 99.57,
+              "margin": 6.79
+            }
+          ]
+        },
+        "playoffs": {
+          "type": "dataframe",
+          "shape": [
+            5,
+            6
+          ],
+          "columns": [
+            "season",
+            "game_type",
+            "winner_mgr",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "66afee09e827762ff5a803d8d0589f82dcaf5ff13e8769355acd661c6c66fad3",
+          "rows": [
+            {
+              "season": 2003,
+              "game_type": "quarterfinal",
+              "winner_mgr": "Kevin O'Boyle",
+              "a_score": 55.78,
+              "b_score": 74.27,
+              "margin": 18.49
+            },
+            {
+              "season": 2006,
+              "game_type": "quarterfinal",
+              "winner_mgr": "Kevin O'Boyle",
+              "a_score": 40.35,
+              "b_score": 109.11,
+              "margin": 68.76
+            },
+            {
+              "season": 2011,
+              "game_type": "quarterfinal",
+              "winner_mgr": "Kevin O'Boyle",
+              "a_score": 77.6,
+              "b_score": 96.84,
+              "margin": 19.24
+            },
+            {
+              "season": 2016,
+              "game_type": "semifinal",
+              "winner_mgr": "Brian Clark",
+              "a_score": 106.53,
+              "b_score": 92.06,
+              "margin": 14.47
+            },
+            {
+              "season": 2020,
+              "game_type": "3rd_place",
+              "winner_mgr": "Brian Clark",
+              "a_score": 120.8,
+              "b_score": 74.16,
+              "margin": 46.64
+            }
+          ]
+        }
+      }
+    },
+    "Evan vs Fadi": {
+      "type": "dict",
+      "value": {
+        "rs": {
+          "type": "dataframe",
+          "shape": [
+            30,
+            6
+          ],
+          "columns": [
+            "season",
+            "week",
+            "winner",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "dd414d226b1b127753a5c5cd7e4a346f18e3f0d2dc9ca87d545257d9cfb69085",
+          "rows": [
+            {
+              "season": 2004,
+              "week": 4,
+              "winner": "Evan",
+              "a_score": 81.75,
+              "b_score": 29.09,
+              "margin": 52.66
+            },
+            {
+              "season": 2005,
+              "week": 9,
+              "winner": "Evan",
+              "a_score": 76.72,
+              "b_score": 47.61,
+              "margin": 29.11
+            },
+            {
+              "season": 2006,
+              "week": 2,
+              "winner": "Evan",
+              "a_score": 66.45,
+              "b_score": 49.24,
+              "margin": 17.21
+            },
+            {
+              "season": 2006,
+              "week": 11,
+              "winner": "Fadi",
+              "a_score": 39.88,
+              "b_score": 96.95,
+              "margin": 57.07
+            },
+            {
+              "season": 2007,
+              "week": 6,
+              "winner": "Evan",
+              "a_score": 80.49,
+              "b_score": 65.83,
+              "margin": 14.66
+            },
+            {
+              "season": 2007,
+              "week": 13,
+              "winner": "Fadi",
+              "a_score": 42.17,
+              "b_score": 52.56,
+              "margin": 10.39
+            },
+            {
+              "season": 2008,
+              "week": 1,
+              "winner": "Fadi",
+              "a_score": 67.84,
+              "b_score": 84.28,
+              "margin": 16.44
+            },
+            {
+              "season": 2008,
+              "week": 8,
+              "winner": "Evan",
+              "a_score": 104.95,
+              "b_score": 84.3,
+              "margin": 20.65
+            },
+            {
+              "season": 2009,
+              "week": 9,
+              "winner": "Fadi",
+              "a_score": 57.55,
+              "b_score": 82.92,
+              "margin": 25.37
+            },
+            {
+              "season": 2010,
+              "week": 2,
+              "winner": "Fadi",
+              "a_score": 86.14,
+              "b_score": 113.53,
+              "margin": 27.39
+            },
+            {
+              "season": 2010,
+              "week": 13,
+              "winner": "Fadi",
+              "a_score": 80.79,
+              "b_score": 117.14,
+              "margin": 36.35
+            },
+            {
+              "season": 2011,
+              "week": 1,
+              "winner": "Fadi",
+              "a_score": 92.64,
+              "b_score": 94.54,
+              "margin": 1.9
+            },
+            {
+              "season": 2011,
+              "week": 6,
+              "winner": "Evan",
+              "a_score": 74.54,
+              "b_score": 52.89,
+              "margin": 21.65
+            },
+            {
+              "season": 2012,
+              "week": 11,
+              "winner": "Fadi",
+              "a_score": 90.2,
+              "b_score": 91.94,
+              "margin": 1.74
+            },
+            {
+              "season": 2013,
+              "week": 1,
+              "winner": "Evan",
+              "a_score": 108.65,
+              "b_score": 99.09,
+              "margin": 9.56
+            },
+            {
+              "season": 2014,
+              "week": 2,
+              "winner": "Fadi",
+              "a_score": 59.89,
+              "b_score": 61.98,
+              "margin": 2.09
+            },
+            {
+              "season": 2014,
+              "week": 12,
+              "winner": "Evan",
+              "a_score": 95.7,
+              "b_score": 64.05,
+              "margin": 31.65
+            },
+            {
+              "season": 2015,
+              "week": 7,
+              "winner": "Evan",
+              "a_score": 78.42,
+              "b_score": 71.0,
+              "margin": 7.42
+            },
+            {
+              "season": 2016,
+              "week": 7,
+              "winner": "Evan",
+              "a_score": 103.57,
+              "b_score": 63.38,
+              "margin": 40.19
+            },
+            {
+              "season": 2017,
+              "week": 4,
+              "winner": "Evan",
+              "a_score": 102.75,
+              "b_score": 71.02,
+              "margin": 31.73
+            },
+            {
+              "season": 2018,
+              "week": 9,
+              "winner": "Evan",
+              "a_score": 125.26,
+              "b_score": 58.18,
+              "margin": 67.08
+            },
+            {
+              "season": 2019,
+              "week": 5,
+              "winner": "Fadi",
+              "a_score": 77.76,
+              "b_score": 84.77,
+              "margin": 7.01
+            },
+            {
+              "season": 2020,
+              "week": 7,
+              "winner": "Fadi",
+              "a_score": 83.85,
+              "b_score": 98.88,
+              "margin": 15.03
+            },
+            {
+              "season": 2021,
+              "week": 13,
+              "winner": "Evan",
+              "a_score": 88.47,
+              "b_score": 74.53,
+              "margin": 13.94
+            },
+            {
+              "season": 2022,
+              "week": 8,
+              "winner": "Fadi",
+              "a_score": 88.22,
+              "b_score": 124.16,
+              "margin": 35.94
+            },
+            {
+              "season": 2023,
+              "week": 9,
+              "winner": "Evan",
+              "a_score": 65.6,
+              "b_score": 53.24,
+              "margin": 12.36
+            },
+            {
+              "season": 2024,
+              "week": 1,
+              "winner": "Fadi",
+              "a_score": 55.38,
+              "b_score": 66.71,
+              "margin": 11.33
+            },
+            {
+              "season": 2024,
+              "week": 4,
+              "winner": "Fadi",
+              "a_score": 77.34,
+              "b_score": 78.32,
+              "margin": 0.98
+            },
+            {
+              "season": 2025,
+              "week": 3,
+              "winner": "Evan",
+              "a_score": 72.47,
+              "b_score": 52.71,
+              "margin": 19.76
+            },
+            {
+              "season": 2025,
+              "week": 6,
+              "winner": "Fadi",
+              "a_score": 98.32,
+              "b_score": 104.98,
+              "margin": 6.66
+            }
+          ]
+        },
+        "playoffs": {
+          "type": "dataframe",
+          "shape": [
+            2,
+            6
+          ],
+          "columns": [
+            "season",
+            "game_type",
+            "winner_mgr",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "7b6921f7636084ea71aed9ddc67e8dc8694f1bab4d6c625bd1f1f52a3e917f99",
+          "rows": [
+            {
+              "season": 2012,
+              "game_type": "final",
+              "winner_mgr": "Evan",
+              "a_score": 109.28,
+              "b_score": 69.01,
+              "margin": 40.27
+            },
+            {
+              "season": 2024,
+              "game_type": "final",
+              "winner_mgr": "Fadi",
+              "a_score": 98.74,
+              "b_score": 98.86,
+              "margin": 0.12
+            }
+          ]
+        }
+      }
+    },
+    "Evan vs Shawn": {
+      "type": "dict",
+      "value": {
+        "rs": {
+          "type": "dataframe",
+          "shape": [
+            29,
+            6
+          ],
+          "columns": [
+            "season",
+            "week",
+            "winner",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "195cb34bf8ceb5d8068fb9c11318c6d07de514c641035c476b95b41422625829",
+          "rows": [
+            {
+              "season": 2004,
+              "week": 9,
+              "winner": "Evan",
+              "a_score": 101.81,
+              "b_score": 51.43,
+              "margin": 50.38
+            },
+            {
+              "season": 2005,
+              "week": 10,
+              "winner": "Shawn",
+              "a_score": 59.64,
+              "b_score": 60.42,
+              "margin": 0.78
+            },
+            {
+              "season": 2006,
+              "week": 6,
+              "winner": "Evan",
+              "a_score": 68.86,
+              "b_score": 36.21,
+              "margin": 32.65
+            },
+            {
+              "season": 2006,
+              "week": 13,
+              "winner": "Shawn",
+              "a_score": 53.17,
+              "b_score": 60.5,
+              "margin": 7.33
+            },
+            {
+              "season": 2007,
+              "week": 9,
+              "winner": "Evan",
+              "a_score": 69.09,
+              "b_score": 56.09,
+              "margin": 13.0
+            },
+            {
+              "season": 2009,
+              "week": 2,
+              "winner": "Evan",
+              "a_score": 81.45,
+              "b_score": 77.65,
+              "margin": 3.8
+            },
+            {
+              "season": 2009,
+              "week": 12,
+              "winner": "Shawn",
+              "a_score": 64.93,
+              "b_score": 94.29,
+              "margin": 29.36
+            },
+            {
+              "season": 2010,
+              "week": 6,
+              "winner": "Shawn",
+              "a_score": 70.58,
+              "b_score": 111.06,
+              "margin": 40.48
+            },
+            {
+              "season": 2011,
+              "week": 5,
+              "winner": "Shawn",
+              "a_score": 56.53,
+              "b_score": 61.37,
+              "margin": 4.84
+            },
+            {
+              "season": 2012,
+              "week": 9,
+              "winner": "Evan",
+              "a_score": 97.57,
+              "b_score": 77.31,
+              "margin": 20.26
+            },
+            {
+              "season": 2013,
+              "week": 9,
+              "winner": "Evan",
+              "a_score": 90.68,
+              "b_score": 88.09,
+              "margin": 2.59
+            },
+            {
+              "season": 2014,
+              "week": 3,
+              "winner": "Shawn",
+              "a_score": 65.29,
+              "b_score": 85.7,
+              "margin": 20.41
+            },
+            {
+              "season": 2015,
+              "week": 1,
+              "winner": "Evan",
+              "a_score": 89.51,
+              "b_score": 89.48,
+              "margin": 0.03
+            },
+            {
+              "season": 2015,
+              "week": 12,
+              "winner": "Shawn",
+              "a_score": 75.15,
+              "b_score": 104.65,
+              "margin": 29.5
+            },
+            {
+              "season": 2016,
+              "week": 1,
+              "winner": "Evan",
+              "a_score": 98.0,
+              "b_score": 72.73,
+              "margin": 25.27
+            },
+            {
+              "season": 2016,
+              "week": 12,
+              "winner": "Shawn",
+              "a_score": 74.07,
+              "b_score": 101.27,
+              "margin": 27.2
+            },
+            {
+              "season": 2017,
+              "week": 11,
+              "winner": "Evan",
+              "a_score": 109.54,
+              "b_score": 76.29,
+              "margin": 33.25
+            },
+            {
+              "season": 2018,
+              "week": 1,
+              "winner": "Evan",
+              "a_score": 78.8,
+              "b_score": 58.88,
+              "margin": 19.92
+            },
+            {
+              "season": 2018,
+              "week": 11,
+              "winner": "Evan",
+              "a_score": 76.08,
+              "b_score": 58.31,
+              "margin": 17.77
+            },
+            {
+              "season": 2019,
+              "week": 1,
+              "winner": "Evan",
+              "a_score": 107.1,
+              "b_score": 50.5,
+              "margin": 56.6
+            },
+            {
+              "season": 2019,
+              "week": 12,
+              "winner": "Shawn",
+              "a_score": 49.94,
+              "b_score": 78.79,
+              "margin": 28.85
+            },
+            {
+              "season": 2020,
+              "week": 1,
+              "winner": "Shawn",
+              "a_score": 84.68,
+              "b_score": 101.74,
+              "margin": 17.06
+            },
+            {
+              "season": 2020,
+              "week": 12,
+              "winner": "Shawn",
+              "a_score": 54.26,
+              "b_score": 87.37,
+              "margin": 33.11
+            },
+            {
+              "season": 2021,
+              "week": 2,
+              "winner": "Evan",
+              "a_score": 109.91,
+              "b_score": 92.45,
+              "margin": 17.46
+            },
+            {
+              "season": 2021,
+              "week": 14,
+              "winner": "Evan",
+              "a_score": 110.2,
+              "b_score": 90.97,
+              "margin": 19.23
+            },
+            {
+              "season": 2022,
+              "week": 11,
+              "winner": "Shawn",
+              "a_score": 72.51,
+              "b_score": 77.3,
+              "margin": 4.79
+            },
+            {
+              "season": 2023,
+              "week": 3,
+              "winner": "Evan",
+              "a_score": 121.02,
+              "b_score": 102.24,
+              "margin": 18.78
+            },
+            {
+              "season": 2024,
+              "week": 6,
+              "winner": "Shawn",
+              "a_score": 77.36,
+              "b_score": 79.89,
+              "margin": 2.53
+            },
+            {
+              "season": 2025,
+              "week": 4,
+              "winner": "Shawn",
+              "a_score": 77.51,
+              "b_score": 85.91,
+              "margin": 8.4
+            }
+          ]
+        },
+        "playoffs": {
+          "type": "dataframe",
+          "shape": [
+            2,
+            6
+          ],
+          "columns": [
+            "season",
+            "game_type",
+            "winner_mgr",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "788b039409a228785ced3bdbe8241569558f43cdf93c06309d559470a55906aa",
+          "rows": [
+            {
+              "season": 2007,
+              "game_type": "quarterfinal",
+              "winner_mgr": "Evan",
+              "a_score": 83.05,
+              "b_score": 80.46,
+              "margin": 2.59
+            },
+            {
+              "season": 2008,
+              "game_type": "3rd_place",
+              "winner_mgr": "Evan",
+              "a_score": 84.2,
+              "b_score": 54.7,
+              "margin": 29.5
+            }
+          ]
+        }
+      }
+    },
+    "Brian Clark vs Dominic": {
+      "type": "dict",
+      "value": {
+        "rs": {
+          "type": "dataframe",
+          "shape": [
+            29,
+            6
+          ],
+          "columns": [
+            "season",
+            "week",
+            "winner",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "4b850a50579d6a90cfd432238d22a74819f4043bd42b8238176e31e48ad6fc31",
+          "rows": [
+            {
+              "season": 2005,
+              "week": 10,
+              "winner": "Dominic",
+              "a_score": 45.99,
+              "b_score": 56.17,
+              "margin": 10.18
+            },
+            {
+              "season": 2006,
+              "week": 1,
+              "winner": "Brian Clark",
+              "a_score": 78.7,
+              "b_score": 41.24,
+              "margin": 37.46
+            },
+            {
+              "season": 2006,
+              "week": 8,
+              "winner": "Brian Clark",
+              "a_score": 82.37,
+              "b_score": 49.66,
+              "margin": 32.71
+            },
+            {
+              "season": 2007,
+              "week": 3,
+              "winner": "Dominic",
+              "a_score": 62.69,
+              "b_score": 72.02,
+              "margin": 9.33
+            },
+            {
+              "season": 2007,
+              "week": 12,
+              "winner": "Brian Clark",
+              "a_score": 79.28,
+              "b_score": 62.15,
+              "margin": 17.13
+            },
+            {
+              "season": 2008,
+              "week": 1,
+              "winner": "Dominic",
+              "a_score": 44.78,
+              "b_score": 87.07,
+              "margin": 42.29
+            },
+            {
+              "season": 2008,
+              "week": 8,
+              "winner": "Brian Clark",
+              "a_score": 51.84,
+              "b_score": 51.26,
+              "margin": 0.58
+            },
+            {
+              "season": 2009,
+              "week": 1,
+              "winner": "Brian Clark",
+              "a_score": 72.98,
+              "b_score": 55.07,
+              "margin": 17.91
+            },
+            {
+              "season": 2009,
+              "week": 13,
+              "winner": "Brian Clark",
+              "a_score": 89.16,
+              "b_score": 78.25,
+              "margin": 10.91
+            },
+            {
+              "season": 2010,
+              "week": 2,
+              "winner": "Dominic",
+              "a_score": 55.56,
+              "b_score": 74.5,
+              "margin": 18.94
+            },
+            {
+              "season": 2010,
+              "week": 12,
+              "winner": "Brian Clark",
+              "a_score": 86.22,
+              "b_score": 64.65,
+              "margin": 21.57
+            },
+            {
+              "season": 2011,
+              "week": 2,
+              "winner": "Brian Clark",
+              "a_score": 91.66,
+              "b_score": 80.11,
+              "margin": 11.55
+            },
+            {
+              "season": 2011,
+              "week": 11,
+              "winner": "Brian Clark",
+              "a_score": 84.05,
+              "b_score": 69.08,
+              "margin": 14.97
+            },
+            {
+              "season": 2012,
+              "week": 10,
+              "winner": "Brian Clark",
+              "a_score": 93.68,
+              "b_score": 74.24,
+              "margin": 19.44
+            },
+            {
+              "season": 2013,
+              "week": 4,
+              "winner": "Brian Clark",
+              "a_score": 94.19,
+              "b_score": 70.17,
+              "margin": 24.02
+            },
+            {
+              "season": 2013,
+              "week": 11,
+              "winner": "Dominic",
+              "a_score": 53.89,
+              "b_score": 65.02,
+              "margin": 11.13
+            },
+            {
+              "season": 2014,
+              "week": 4,
+              "winner": "Brian Clark",
+              "a_score": 89.6,
+              "b_score": 83.16,
+              "margin": 6.44
+            },
+            {
+              "season": 2015,
+              "week": 6,
+              "winner": "Brian Clark",
+              "a_score": 112.19,
+              "b_score": 87.31,
+              "margin": 24.88
+            },
+            {
+              "season": 2016,
+              "week": 7,
+              "winner": "Brian Clark",
+              "a_score": 93.29,
+              "b_score": 60.21,
+              "margin": 33.08
+            },
+            {
+              "season": 2017,
+              "week": 3,
+              "winner": "Dominic",
+              "a_score": 66.11,
+              "b_score": 74.7,
+              "margin": 8.59
+            },
+            {
+              "season": 2017,
+              "week": 13,
+              "winner": "Brian Clark",
+              "a_score": 105.28,
+              "b_score": 64.03,
+              "margin": 41.25
+            },
+            {
+              "season": 2018,
+              "week": 9,
+              "winner": "Brian Clark",
+              "a_score": 93.03,
+              "b_score": 92.72,
+              "margin": 0.31
+            },
+            {
+              "season": 2019,
+              "week": 13,
+              "winner": "Brian Clark",
+              "a_score": 61.6,
+              "b_score": 50.45,
+              "margin": 11.15
+            },
+            {
+              "season": 2020,
+              "week": 6,
+              "winner": "Brian Clark",
+              "a_score": 82.56,
+              "b_score": 82.42,
+              "margin": 0.14
+            },
+            {
+              "season": 2021,
+              "week": 14,
+              "winner": "Dominic",
+              "a_score": 88.85,
+              "b_score": 98.57,
+              "margin": 9.72
+            },
+            {
+              "season": 2022,
+              "week": 11,
+              "winner": "Brian Clark",
+              "a_score": 82.55,
+              "b_score": 71.91,
+              "margin": 10.64
+            },
+            {
+              "season": 2023,
+              "week": 5,
+              "winner": "Dominic",
+              "a_score": 57.28,
+              "b_score": 73.3,
+              "margin": 16.02
+            },
+            {
+              "season": 2024,
+              "week": 14,
+              "winner": "Brian Clark",
+              "a_score": 79.25,
+              "b_score": 40.01,
+              "margin": 39.24
+            },
+            {
+              "season": 2025,
+              "week": 11,
+              "winner": "Brian Clark",
+              "a_score": 67.82,
+              "b_score": 58.7,
+              "margin": 9.12
+            }
+          ]
+        },
+        "playoffs": {
+          "type": "dataframe",
+          "shape": [
+            5,
+            6
+          ],
+          "columns": [
+            "season",
+            "game_type",
+            "winner_mgr",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "8e2ae6ff1c969f6fc75484fa08a385a46ee3fc6f77dae8e071c32006beb6bcd9",
+          "rows": [
+            {
+              "season": 2009,
+              "game_type": "quarterfinal",
+              "winner_mgr": "Brian Clark",
+              "a_score": 108.15,
+              "b_score": 84.85,
+              "margin": 23.3
+            },
+            {
+              "season": 2010,
+              "game_type": "final",
+              "winner_mgr": "Brian Clark",
+              "a_score": 122.75,
+              "b_score": 77.53,
+              "margin": 45.22
+            },
+            {
+              "season": 2014,
+              "game_type": "quarterfinal",
+              "winner_mgr": "Dominic",
+              "a_score": 60.3,
+              "b_score": 105.97,
+              "margin": 45.67
+            },
+            {
+              "season": 2021,
+              "game_type": "semifinal",
+              "winner_mgr": "Dominic",
+              "a_score": 59.67,
+              "b_score": 119.05,
+              "margin": 59.38
+            },
+            {
+              "season": 2023,
+              "game_type": "final",
+              "winner_mgr": "Dominic",
+              "a_score": 55.14,
+              "b_score": 113.18,
+              "margin": 58.04
+            }
+          ]
+        }
+      }
+    },
+    "Brian Clark vs Kevin Swanson": {
+      "type": "dict",
+      "value": {
+        "rs": {
+          "type": "dataframe",
+          "shape": [
+            28,
+            6
+          ],
+          "columns": [
+            "season",
+            "week",
+            "winner",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "4064967bed92599d7258415779b6aecd213334aed64a87933de0336548655aec",
+          "rows": [
+            {
+              "season": 2002,
+              "week": 1,
+              "winner": "Kevin Swanson",
+              "a_score": 64.82,
+              "b_score": 68.9,
+              "margin": 4.08
+            },
+            {
+              "season": 2002,
+              "week": 12,
+              "winner": "Brian Clark",
+              "a_score": 100.48,
+              "b_score": 77.79,
+              "margin": 22.69
+            },
+            {
+              "season": 2003,
+              "week": 11,
+              "winner": "Kevin Swanson",
+              "a_score": 54.11,
+              "b_score": 68.53,
+              "margin": 14.42
+            },
+            {
+              "season": 2004,
+              "week": 7,
+              "winner": "Kevin Swanson",
+              "a_score": 71.27,
+              "b_score": 77.16,
+              "margin": 5.89
+            },
+            {
+              "season": 2004,
+              "week": 14,
+              "winner": "Brian Clark",
+              "a_score": 85.45,
+              "b_score": 67.21,
+              "margin": 18.24
+            },
+            {
+              "season": 2005,
+              "week": 6,
+              "winner": "Brian Clark",
+              "a_score": 53.04,
+              "b_score": 50.19,
+              "margin": 2.85
+            },
+            {
+              "season": 2005,
+              "week": 13,
+              "winner": "Kevin Swanson",
+              "a_score": 44.07,
+              "b_score": 109.83,
+              "margin": 65.76
+            },
+            {
+              "season": 2006,
+              "week": 3,
+              "winner": "Kevin Swanson",
+              "a_score": 43.49,
+              "b_score": 55.83,
+              "margin": 12.34
+            },
+            {
+              "season": 2006,
+              "week": 12,
+              "winner": "Brian Clark",
+              "a_score": 70.58,
+              "b_score": 49.44,
+              "margin": 21.14
+            },
+            {
+              "season": 2007,
+              "week": 10,
+              "winner": "Kevin Swanson",
+              "a_score": 28.94,
+              "b_score": 99.16,
+              "margin": 70.22
+            },
+            {
+              "season": 2009,
+              "week": 11,
+              "winner": "Brian Clark",
+              "a_score": 76.48,
+              "b_score": 69.55,
+              "margin": 6.93
+            },
+            {
+              "season": 2010,
+              "week": 5,
+              "winner": "Kevin Swanson",
+              "a_score": 77.0,
+              "b_score": 87.87,
+              "margin": 10.87
+            },
+            {
+              "season": 2011,
+              "week": 12,
+              "winner": "Brian Clark",
+              "a_score": 77.16,
+              "b_score": 60.42,
+              "margin": 16.74
+            },
+            {
+              "season": 2012,
+              "week": 8,
+              "winner": "Brian Clark",
+              "a_score": 104.84,
+              "b_score": 62.16,
+              "margin": 42.68
+            },
+            {
+              "season": 2013,
+              "week": 2,
+              "winner": "Brian Clark",
+              "a_score": 95.36,
+              "b_score": 68.34,
+              "margin": 27.02
+            },
+            {
+              "season": 2014,
+              "week": 11,
+              "winner": "Brian Clark",
+              "a_score": 82.35,
+              "b_score": 62.15,
+              "margin": 20.2
+            },
+            {
+              "season": 2015,
+              "week": 7,
+              "winner": "Kevin Swanson",
+              "a_score": 69.06,
+              "b_score": 70.8,
+              "margin": 1.74
+            },
+            {
+              "season": 2016,
+              "week": 3,
+              "winner": "Kevin Swanson",
+              "a_score": 88.12,
+              "b_score": 117.9,
+              "margin": 29.78
+            },
+            {
+              "season": 2017,
+              "week": 1,
+              "winner": "Brian Clark",
+              "a_score": 89.62,
+              "b_score": 55.96,
+              "margin": 33.66
+            },
+            {
+              "season": 2018,
+              "week": 10,
+              "winner": "Brian Clark",
+              "a_score": 123.78,
+              "b_score": 84.87,
+              "margin": 38.91
+            },
+            {
+              "season": 2019,
+              "week": 5,
+              "winner": "Kevin Swanson",
+              "a_score": 90.64,
+              "b_score": 95.7,
+              "margin": 5.06
+            },
+            {
+              "season": 2020,
+              "week": 1,
+              "winner": "Kevin Swanson",
+              "a_score": 82.47,
+              "b_score": 92.95,
+              "margin": 10.48
+            },
+            {
+              "season": 2021,
+              "week": 4,
+              "winner": "Brian Clark",
+              "a_score": 105.09,
+              "b_score": 69.26,
+              "margin": 35.83
+            },
+            {
+              "season": 2022,
+              "week": 2,
+              "winner": "Kevin Swanson",
+              "a_score": 57.48,
+              "b_score": 70.94,
+              "margin": 13.46
+            },
+            {
+              "season": 2022,
+              "week": 13,
+              "winner": "Brian Clark",
+              "a_score": 103.92,
+              "b_score": 66.37,
+              "margin": 37.55
+            },
+            {
+              "season": 2023,
+              "week": 7,
+              "winner": "Brian Clark",
+              "a_score": 58.91,
+              "b_score": 47.6,
+              "margin": 11.31
+            },
+            {
+              "season": 2024,
+              "week": 12,
+              "winner": "Brian Clark",
+              "a_score": 79.1,
+              "b_score": 71.26,
+              "margin": 7.84
+            },
+            {
+              "season": 2025,
+              "week": 8,
+              "winner": "Brian Clark",
+              "a_score": 97.38,
+              "b_score": 66.29,
+              "margin": 31.09
+            }
+          ]
+        },
+        "playoffs": {
+          "type": "dataframe",
+          "shape": [
+            3,
+            6
+          ],
+          "columns": [
+            "season",
+            "game_type",
+            "winner_mgr",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "5b77a43932bccb542cab182e55c958284fa6dbbe4d09637513ba54bec60c70f2",
+          "rows": [
+            {
+              "season": 2010,
+              "game_type": "quarterfinal",
+              "winner_mgr": "Brian Clark",
+              "a_score": 89.63,
+              "b_score": 60.77,
+              "margin": 28.86
+            },
+            {
+              "season": 2013,
+              "game_type": "quarterfinal",
+              "winner_mgr": "Kevin Swanson",
+              "a_score": 68.97,
+              "b_score": 122.56,
+              "margin": 53.59
+            },
+            {
+              "season": 2018,
+              "game_type": "semifinal",
+              "winner_mgr": "Brian Clark",
+              "a_score": 101.13,
+              "b_score": 46.44,
+              "margin": 54.69
+            }
+          ]
+        }
+      }
+    },
+    "Kevin O'Boyle vs Shawn": {
+      "type": "dict",
+      "value": {
+        "rs": {
+          "type": "dataframe",
+          "shape": [
+            28,
+            6
+          ],
+          "columns": [
+            "season",
+            "week",
+            "winner",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "d8fe2bb640132403027040579b27dda1ddb3c11ddb7c25a34f24e3a7032c00eb",
+          "rows": [
+            {
+              "season": 2002,
+              "week": 6,
+              "winner": "Shawn",
+              "a_score": 39.85,
+              "b_score": 63.74,
+              "margin": 23.89
+            },
+            {
+              "season": 2003,
+              "week": 9,
+              "winner": "Kevin O'Boyle",
+              "a_score": 74.29,
+              "b_score": 68.43,
+              "margin": 5.86
+            },
+            {
+              "season": 2004,
+              "week": 5,
+              "winner": "Shawn",
+              "a_score": 68.33,
+              "b_score": 78.22,
+              "margin": 9.89
+            },
+            {
+              "season": 2005,
+              "week": 5,
+              "winner": "Shawn",
+              "a_score": 65.57,
+              "b_score": 104.18,
+              "margin": 38.61
+            },
+            {
+              "season": 2007,
+              "week": 1,
+              "winner": "Shawn",
+              "a_score": 33.64,
+              "b_score": 66.35,
+              "margin": 32.71
+            },
+            {
+              "season": 2007,
+              "week": 8,
+              "winner": "Shawn",
+              "a_score": 68.97,
+              "b_score": 72.35,
+              "margin": 3.38
+            },
+            {
+              "season": 2008,
+              "week": 1,
+              "winner": "Shawn",
+              "a_score": 72.51,
+              "b_score": 74.12,
+              "margin": 1.61
+            },
+            {
+              "season": 2008,
+              "week": 8,
+              "winner": "Shawn",
+              "a_score": 76.33,
+              "b_score": 79.41,
+              "margin": 3.08
+            },
+            {
+              "season": 2009,
+              "week": 1,
+              "winner": "Kevin O'Boyle",
+              "a_score": 123.86,
+              "b_score": 63.25,
+              "margin": 60.61
+            },
+            {
+              "season": 2009,
+              "week": 13,
+              "winner": "Shawn",
+              "a_score": 72.28,
+              "b_score": 78.15,
+              "margin": 5.87
+            },
+            {
+              "season": 2010,
+              "week": 13,
+              "winner": "Shawn",
+              "a_score": 72.96,
+              "b_score": 100.76,
+              "margin": 27.8
+            },
+            {
+              "season": 2011,
+              "week": 7,
+              "winner": "Kevin O'Boyle",
+              "a_score": 88.5,
+              "b_score": 78.95,
+              "margin": 9.55
+            },
+            {
+              "season": 2012,
+              "week": 10,
+              "winner": "Shawn",
+              "a_score": 65.35,
+              "b_score": 72.86,
+              "margin": 7.51
+            },
+            {
+              "season": 2013,
+              "week": 2,
+              "winner": "Kevin O'Boyle",
+              "a_score": 104.93,
+              "b_score": 82.6,
+              "margin": 22.33
+            },
+            {
+              "season": 2013,
+              "week": 12,
+              "winner": "Kevin O'Boyle",
+              "a_score": 66.14,
+              "b_score": 61.13,
+              "margin": 5.01
+            },
+            {
+              "season": 2014,
+              "week": 4,
+              "winner": "Shawn",
+              "a_score": 54.66,
+              "b_score": 80.69,
+              "margin": 26.03
+            },
+            {
+              "season": 2015,
+              "week": 10,
+              "winner": "Shawn",
+              "a_score": 75.4,
+              "b_score": 76.64,
+              "margin": 1.24
+            },
+            {
+              "season": 2016,
+              "week": 4,
+              "winner": "Kevin O'Boyle",
+              "a_score": 120.13,
+              "b_score": 49.6,
+              "margin": 70.53
+            },
+            {
+              "season": 2017,
+              "week": 1,
+              "winner": "Kevin O'Boyle",
+              "a_score": 87.14,
+              "b_score": 77.82,
+              "margin": 9.32
+            },
+            {
+              "season": 2017,
+              "week": 12,
+              "winner": "Shawn",
+              "a_score": 59.14,
+              "b_score": 82.26,
+              "margin": 23.12
+            },
+            {
+              "season": 2018,
+              "week": 5,
+              "winner": "Kevin O'Boyle",
+              "a_score": 81.33,
+              "b_score": 76.17,
+              "margin": 5.16
+            },
+            {
+              "season": 2019,
+              "week": 2,
+              "winner": "Shawn",
+              "a_score": 81.84,
+              "b_score": 90.45,
+              "margin": 8.61
+            },
+            {
+              "season": 2020,
+              "week": 4,
+              "winner": "Shawn",
+              "a_score": 69.51,
+              "b_score": 73.55,
+              "margin": 4.04
+            },
+            {
+              "season": 2021,
+              "week": 4,
+              "winner": "Kevin O'Boyle",
+              "a_score": 104.69,
+              "b_score": 72.56,
+              "margin": 32.13
+            },
+            {
+              "season": 2022,
+              "week": 10,
+              "winner": "Shawn",
+              "a_score": 43.09,
+              "b_score": 72.42,
+              "margin": 29.33
+            },
+            {
+              "season": 2023,
+              "week": 9,
+              "winner": "Kevin O'Boyle",
+              "a_score": 70.72,
+              "b_score": 66.39,
+              "margin": 4.33
+            },
+            {
+              "season": 2024,
+              "week": 12,
+              "winner": "Shawn",
+              "a_score": 62.73,
+              "b_score": 85.19,
+              "margin": 22.46
+            },
+            {
+              "season": 2025,
+              "week": 8,
+              "winner": "Shawn",
+              "a_score": 77.41,
+              "b_score": 77.73,
+              "margin": 0.32
+            }
+          ]
+        },
+        "playoffs": {
+          "type": "dataframe",
+          "shape": [
+            2,
+            6
+          ],
+          "columns": [
+            "season",
+            "game_type",
+            "winner_mgr",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "c67d61d8c1b53fb9bc698cadd647acde50161299a289d6336313b74db4433ecf",
+          "rows": [
+            {
+              "season": 2004,
+              "game_type": "quarterfinal",
+              "winner_mgr": "Kevin O'Boyle",
+              "a_score": 85.91,
+              "b_score": 82.33,
+              "margin": 3.58
+            },
+            {
+              "season": 2015,
+              "game_type": "final",
+              "winner_mgr": "Kevin O'Boyle",
+              "a_score": 113.03,
+              "b_score": 59.14,
+              "margin": 53.89
+            }
+          ]
+        }
+      }
+    },
+    "Kevin Swanson vs Shawn": {
+      "type": "dict",
+      "value": {
+        "rs": {
+          "type": "dataframe",
+          "shape": [
+            28,
+            6
+          ],
+          "columns": [
+            "season",
+            "week",
+            "winner",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "a441fb33e2cfdca5c4a2b0e2e76704f38dc8bfdeb67a3dcde10bdba2e62b2582",
+          "rows": [
+            {
+              "season": 2002,
+              "week": 8,
+              "winner": "Kevin Swanson",
+              "a_score": 73.95,
+              "b_score": 58.18,
+              "margin": 15.77
+            },
+            {
+              "season": 2003,
+              "week": 8,
+              "winner": "Shawn",
+              "a_score": 72.03,
+              "b_score": 76.02,
+              "margin": 3.99
+            },
+            {
+              "season": 2005,
+              "week": 9,
+              "winner": "Kevin Swanson",
+              "a_score": 50.36,
+              "b_score": 41.39,
+              "margin": 8.97
+            },
+            {
+              "season": 2006,
+              "week": 5,
+              "winner": "Kevin Swanson",
+              "a_score": 53.85,
+              "b_score": 37.51,
+              "margin": 16.34
+            },
+            {
+              "season": 2007,
+              "week": 7,
+              "winner": "Shawn",
+              "a_score": 69.7,
+              "b_score": 82.86,
+              "margin": 13.16
+            },
+            {
+              "season": 2008,
+              "week": 6,
+              "winner": "Kevin Swanson",
+              "a_score": 111.17,
+              "b_score": 59.3,
+              "margin": 51.87
+            },
+            {
+              "season": 2008,
+              "week": 13,
+              "winner": "Shawn",
+              "a_score": 73.43,
+              "b_score": 79.23,
+              "margin": 5.8
+            },
+            {
+              "season": 2009,
+              "week": 3,
+              "winner": "Kevin Swanson",
+              "a_score": 79.89,
+              "b_score": 77.0,
+              "margin": 2.89
+            },
+            {
+              "season": 2010,
+              "week": 10,
+              "winner": "Kevin Swanson",
+              "a_score": 104.52,
+              "b_score": 86.93,
+              "margin": 17.59
+            },
+            {
+              "season": 2011,
+              "week": 6,
+              "winner": "Kevin Swanson",
+              "a_score": 85.49,
+              "b_score": 77.17,
+              "margin": 8.32
+            },
+            {
+              "season": 2012,
+              "week": 2,
+              "winner": "Kevin Swanson",
+              "a_score": 97.8,
+              "b_score": 51.23,
+              "margin": 46.57
+            },
+            {
+              "season": 2012,
+              "week": 13,
+              "winner": "Shawn",
+              "a_score": 65.07,
+              "b_score": 87.62,
+              "margin": 22.55
+            },
+            {
+              "season": 2013,
+              "week": 10,
+              "winner": "Kevin Swanson",
+              "a_score": 75.49,
+              "b_score": 71.0,
+              "margin": 4.49
+            },
+            {
+              "season": 2014,
+              "week": 8,
+              "winner": "Kevin Swanson",
+              "a_score": 80.32,
+              "b_score": 71.86,
+              "margin": 8.46
+            },
+            {
+              "season": 2015,
+              "week": 4,
+              "winner": "Shawn",
+              "a_score": 64.73,
+              "b_score": 79.93,
+              "margin": 15.2
+            },
+            {
+              "season": 2016,
+              "week": 8,
+              "winner": "Kevin Swanson",
+              "a_score": 104.67,
+              "b_score": 49.24,
+              "margin": 55.43
+            },
+            {
+              "season": 2017,
+              "week": 8,
+              "winner": "Kevin Swanson",
+              "a_score": 105.24,
+              "b_score": 88.71,
+              "margin": 16.53
+            },
+            {
+              "season": 2018,
+              "week": 4,
+              "winner": "Shawn",
+              "a_score": 96.83,
+              "b_score": 109.34,
+              "margin": 12.51
+            },
+            {
+              "season": 2019,
+              "week": 3,
+              "winner": "Kevin Swanson",
+              "a_score": 80.13,
+              "b_score": 51.35,
+              "margin": 28.78
+            },
+            {
+              "season": 2019,
+              "week": 13,
+              "winner": "Kevin Swanson",
+              "a_score": 74.31,
+              "b_score": 55.97,
+              "margin": 18.34
+            },
+            {
+              "season": 2020,
+              "week": 2,
+              "winner": "Shawn",
+              "a_score": 69.84,
+              "b_score": 70.55,
+              "margin": 0.71
+            },
+            {
+              "season": 2020,
+              "week": 13,
+              "winner": "Shawn",
+              "a_score": 69.32,
+              "b_score": 72.6,
+              "margin": 3.28
+            },
+            {
+              "season": 2021,
+              "week": 12,
+              "winner": "Shawn",
+              "a_score": 78.44,
+              "b_score": 93.74,
+              "margin": 15.3
+            },
+            {
+              "season": 2022,
+              "week": 3,
+              "winner": "Shawn",
+              "a_score": 61.18,
+              "b_score": 84.89,
+              "margin": 23.71
+            },
+            {
+              "season": 2022,
+              "week": 14,
+              "winner": "Kevin Swanson",
+              "a_score": 71.86,
+              "b_score": 60.54,
+              "margin": 11.32
+            },
+            {
+              "season": 2023,
+              "week": 5,
+              "winner": "Kevin Swanson",
+              "a_score": 65.64,
+              "b_score": 55.67,
+              "margin": 9.97
+            },
+            {
+              "season": 2024,
+              "week": 5,
+              "winner": "Kevin Swanson",
+              "a_score": 78.08,
+              "b_score": 70.23,
+              "margin": 7.85
+            },
+            {
+              "season": 2025,
+              "week": 5,
+              "winner": "Shawn",
+              "a_score": 79.72,
+              "b_score": 93.11,
+              "margin": 13.39
+            }
+          ]
+        },
+        "playoffs": {
+          "type": "dataframe",
+          "shape": [
+            4,
+            6
+          ],
+          "columns": [
+            "season",
+            "game_type",
+            "winner_mgr",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "862de367b466276b10f5a8f7f63f1129a3ab635f866571cd397a3e4340d14a35",
+          "rows": [
+            {
+              "season": 2006,
+              "game_type": "semifinal",
+              "winner_mgr": "Kevin Swanson",
+              "a_score": 59.44,
+              "b_score": 49.23,
+              "margin": 10.21
+            },
+            {
+              "season": 2015,
+              "game_type": "quarterfinal",
+              "winner_mgr": "Shawn",
+              "a_score": 95.94,
+              "b_score": 113.5,
+              "margin": 17.56
+            },
+            {
+              "season": 2017,
+              "game_type": "quarterfinal",
+              "winner_mgr": "Kevin Swanson",
+              "a_score": 67.52,
+              "b_score": 66.62,
+              "margin": 0.9
+            },
+            {
+              "season": 2019,
+              "game_type": "semifinal",
+              "winner_mgr": "Shawn",
+              "a_score": 87.41,
+              "b_score": 94.9,
+              "margin": 7.49
+            }
+          ]
+        }
+      }
+    },
+    "Brian Clark vs Evan": {
+      "type": "dict",
+      "value": {
+        "rs": {
+          "type": "dataframe",
+          "shape": [
+            27,
+            6
+          ],
+          "columns": [
+            "season",
+            "week",
+            "winner",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "15f11d8d5376a7e5557df7c384d0f98eb37444f0d7e8b7ec52d30ece46fbbc5c",
+          "rows": [
+            {
+              "season": 2004,
+              "week": 6,
+              "winner": "Evan",
+              "a_score": 57.28,
+              "b_score": 84.16,
+              "margin": 26.88
+            },
+            {
+              "season": 2004,
+              "week": 13,
+              "winner": "Evan",
+              "a_score": 84.23,
+              "b_score": 97.0,
+              "margin": 12.77
+            },
+            {
+              "season": 2005,
+              "week": 3,
+              "winner": "Evan",
+              "a_score": 40.75,
+              "b_score": 58.96,
+              "margin": 18.21
+            },
+            {
+              "season": 2005,
+              "week": 12,
+              "winner": "Evan",
+              "a_score": 51.22,
+              "b_score": 66.8,
+              "margin": 15.58
+            },
+            {
+              "season": 2007,
+              "week": 7,
+              "winner": "Brian Clark",
+              "a_score": 72.42,
+              "b_score": 42.0,
+              "margin": 30.42
+            },
+            {
+              "season": 2008,
+              "week": 6,
+              "winner": "Evan",
+              "a_score": 66.88,
+              "b_score": 81.66,
+              "margin": 14.78
+            },
+            {
+              "season": 2008,
+              "week": 13,
+              "winner": "Evan",
+              "a_score": 80.24,
+              "b_score": 101.36,
+              "margin": 21.12
+            },
+            {
+              "season": 2009,
+              "week": 5,
+              "winner": "Brian Clark",
+              "a_score": 77.49,
+              "b_score": 74.27,
+              "margin": 3.22
+            },
+            {
+              "season": 2010,
+              "week": 11,
+              "winner": "Evan",
+              "a_score": 87.92,
+              "b_score": 97.15,
+              "margin": 9.23
+            },
+            {
+              "season": 2011,
+              "week": 4,
+              "winner": "Brian Clark",
+              "a_score": 92.14,
+              "b_score": 55.54,
+              "margin": 36.6
+            },
+            {
+              "season": 2012,
+              "week": 7,
+              "winner": "Brian Clark",
+              "a_score": 92.16,
+              "b_score": 58.31,
+              "margin": 33.85
+            },
+            {
+              "season": 2013,
+              "week": 3,
+              "winner": "Evan",
+              "a_score": 60.0,
+              "b_score": 118.94,
+              "margin": 58.94
+            },
+            {
+              "season": 2013,
+              "week": 13,
+              "winner": "Evan",
+              "a_score": 74.8,
+              "b_score": 87.55,
+              "margin": 12.75
+            },
+            {
+              "season": 2014,
+              "week": 5,
+              "winner": "Evan",
+              "a_score": 66.39,
+              "b_score": 80.91,
+              "margin": 14.52
+            },
+            {
+              "season": 2015,
+              "week": 13,
+              "winner": "Brian Clark",
+              "a_score": 100.14,
+              "b_score": 73.51,
+              "margin": 26.63
+            },
+            {
+              "season": 2016,
+              "week": 11,
+              "winner": "Brian Clark",
+              "a_score": 94.35,
+              "b_score": 55.04,
+              "margin": 39.31
+            },
+            {
+              "season": 2017,
+              "week": 7,
+              "winner": "Evan",
+              "a_score": 85.09,
+              "b_score": 97.21,
+              "margin": 12.12
+            },
+            {
+              "season": 2018,
+              "week": 2,
+              "winner": "Evan",
+              "a_score": 98.52,
+              "b_score": 109.49,
+              "margin": 10.97
+            },
+            {
+              "season": 2018,
+              "week": 13,
+              "winner": "Brian Clark",
+              "a_score": 76.78,
+              "b_score": 69.57,
+              "margin": 7.21
+            },
+            {
+              "season": 2019,
+              "week": 7,
+              "winner": "Brian Clark",
+              "a_score": 70.27,
+              "b_score": 58.58,
+              "margin": 11.69
+            },
+            {
+              "season": 2020,
+              "week": 13,
+              "winner": "Evan",
+              "a_score": 65.81,
+              "b_score": 98.26,
+              "margin": 32.45
+            },
+            {
+              "season": 2021,
+              "week": 11,
+              "winner": "Brian Clark",
+              "a_score": 81.54,
+              "b_score": 78.29,
+              "margin": 3.25
+            },
+            {
+              "season": 2021,
+              "week": 12,
+              "winner": "Brian Clark",
+              "a_score": 90.96,
+              "b_score": 72.54,
+              "margin": 18.42
+            },
+            {
+              "season": 2022,
+              "week": 9,
+              "winner": "Evan",
+              "a_score": 74.87,
+              "b_score": 89.01,
+              "margin": 14.14
+            },
+            {
+              "season": 2023,
+              "week": 8,
+              "winner": "Brian Clark",
+              "a_score": 83.81,
+              "b_score": 83.28,
+              "margin": 0.53
+            },
+            {
+              "season": 2024,
+              "week": 5,
+              "winner": "Evan",
+              "a_score": 88.51,
+              "b_score": 123.49,
+              "margin": 34.98
+            },
+            {
+              "season": 2025,
+              "week": 9,
+              "winner": "Brian Clark",
+              "a_score": 73.6,
+              "b_score": 70.48,
+              "margin": 3.12
+            }
+          ]
+        },
+        "playoffs": {
+          "type": "dataframe",
+          "shape": [
+            1,
+            6
+          ],
+          "columns": [
+            "season",
+            "game_type",
+            "winner_mgr",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "2dc6b189cda446d45a4b652ab151d832657e7f721358ab0653247ff651aad1fe",
+          "rows": [
+            {
+              "season": 2023,
+              "game_type": "semifinal",
+              "winner_mgr": "Brian Clark",
+              "a_score": 97.01,
+              "b_score": 91.59,
+              "margin": 5.42
+            }
+          ]
+        }
+      }
+    },
+    "Brian Clark vs Fadi": {
+      "type": "dict",
+      "value": {
+        "rs": {
+          "type": "dataframe",
+          "shape": [
+            27,
+            6
+          ],
+          "columns": [
+            "season",
+            "week",
+            "winner",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "7323b96ac6ae922dfce188b20f7743a6b464c8c2ef685030c183a2caa04b3800",
+          "rows": [
+            {
+              "season": 2001,
+              "week": 2,
+              "winner": "Fadi",
+              "a_score": 47.08,
+              "b_score": 56.37,
+              "margin": 9.29
+            },
+            {
+              "season": 2001,
+              "week": 11,
+              "winner": "Fadi",
+              "a_score": 35.22,
+              "b_score": 77.51,
+              "margin": 42.29
+            },
+            {
+              "season": 2002,
+              "week": 5,
+              "winner": "Brian Clark",
+              "a_score": 92.98,
+              "b_score": 64.24,
+              "margin": 28.74
+            },
+            {
+              "season": 2003,
+              "week": 10,
+              "winner": "Fadi",
+              "a_score": 48.89,
+              "b_score": 69.78,
+              "margin": 20.89
+            },
+            {
+              "season": 2004,
+              "week": 10,
+              "winner": "Brian Clark",
+              "a_score": 114.0,
+              "b_score": 72.53,
+              "margin": 41.47
+            },
+            {
+              "season": 2007,
+              "week": 2,
+              "winner": "Fadi",
+              "a_score": 95.32,
+              "b_score": 95.35,
+              "margin": 0.03
+            },
+            {
+              "season": 2007,
+              "week": 11,
+              "winner": "Fadi",
+              "a_score": 77.27,
+              "b_score": 81.53,
+              "margin": 4.26
+            },
+            {
+              "season": 2008,
+              "week": 2,
+              "winner": "Brian Clark",
+              "a_score": 65.98,
+              "b_score": 58.22,
+              "margin": 7.76
+            },
+            {
+              "season": 2008,
+              "week": 11,
+              "winner": "Fadi",
+              "a_score": 81.05,
+              "b_score": 89.0,
+              "margin": 7.95
+            },
+            {
+              "season": 2009,
+              "week": 8,
+              "winner": "Brian Clark",
+              "a_score": 99.24,
+              "b_score": 73.05,
+              "margin": 26.19
+            },
+            {
+              "season": 2010,
+              "week": 3,
+              "winner": "Fadi",
+              "a_score": 94.34,
+              "b_score": 101.47,
+              "margin": 7.13
+            },
+            {
+              "season": 2011,
+              "week": 10,
+              "winner": "Brian Clark",
+              "a_score": 73.33,
+              "b_score": 71.91,
+              "margin": 1.42
+            },
+            {
+              "season": 2012,
+              "week": 1,
+              "winner": "Fadi",
+              "a_score": 66.1,
+              "b_score": 81.97,
+              "margin": 15.87
+            },
+            {
+              "season": 2012,
+              "week": 12,
+              "winner": "Fadi",
+              "a_score": 76.37,
+              "b_score": 94.95,
+              "margin": 18.58
+            },
+            {
+              "season": 2013,
+              "week": 7,
+              "winner": "Brian Clark",
+              "a_score": 79.19,
+              "b_score": 72.24,
+              "margin": 6.95
+            },
+            {
+              "season": 2014,
+              "week": 1,
+              "winner": "Brian Clark",
+              "a_score": 97.84,
+              "b_score": 81.78,
+              "margin": 16.06
+            },
+            {
+              "season": 2015,
+              "week": 4,
+              "winner": "Brian Clark",
+              "a_score": 102.91,
+              "b_score": 67.42,
+              "margin": 35.49
+            },
+            {
+              "season": 2016,
+              "week": 6,
+              "winner": "Fadi",
+              "a_score": 74.55,
+              "b_score": 91.11,
+              "margin": 16.56
+            },
+            {
+              "season": 2017,
+              "week": 12,
+              "winner": "Fadi",
+              "a_score": 94.88,
+              "b_score": 102.77,
+              "margin": 7.89
+            },
+            {
+              "season": 2018,
+              "week": 4,
+              "winner": "Brian Clark",
+              "a_score": 89.81,
+              "b_score": 60.0,
+              "margin": 29.81
+            },
+            {
+              "season": 2019,
+              "week": 9,
+              "winner": "Brian Clark",
+              "a_score": 75.98,
+              "b_score": 47.6,
+              "margin": 28.38
+            },
+            {
+              "season": 2020,
+              "week": 4,
+              "winner": "Brian Clark",
+              "a_score": 115.94,
+              "b_score": 96.85,
+              "margin": 19.09
+            },
+            {
+              "season": 2021,
+              "week": 9,
+              "winner": "Brian Clark",
+              "a_score": 78.87,
+              "b_score": 58.22,
+              "margin": 20.65
+            },
+            {
+              "season": 2022,
+              "week": 5,
+              "winner": "Brian Clark",
+              "a_score": 102.19,
+              "b_score": 39.98,
+              "margin": 62.21
+            },
+            {
+              "season": 2023,
+              "week": 6,
+              "winner": "Brian Clark",
+              "a_score": 81.1,
+              "b_score": 77.68,
+              "margin": 3.42
+            },
+            {
+              "season": 2024,
+              "week": 10,
+              "winner": "Fadi",
+              "a_score": 62.04,
+              "b_score": 93.35,
+              "margin": 31.31
+            },
+            {
+              "season": 2025,
+              "week": 7,
+              "winner": "Fadi",
+              "a_score": 74.77,
+              "b_score": 83.58,
+              "margin": 8.81
+            }
+          ]
+        },
+        "playoffs": {
+          "type": "dataframe",
+          "shape": [
+            0,
+            6
+          ],
+          "columns": [
+            "season",
+            "game_type",
+            "winner_mgr",
+            "a_score",
+            "b_score",
+            "margin"
+          ],
+          "digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "rows": []
+        }
+      }
+    }
+  }
+}

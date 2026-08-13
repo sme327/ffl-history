@@ -1,0 +1,1018 @@
+{
+  "type": "dict",
+  "value": {
+    "most_drafted_players": {
+      "type": "list",
+      "length": 10,
+      "value": [
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Tom Brady"
+            },
+            {
+              "type": "scalar",
+              "value": 18
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Larry Fitzgerald"
+            },
+            {
+              "type": "scalar",
+              "value": 16
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Ben Roethlisberger"
+            },
+            {
+              "type": "scalar",
+              "value": 16
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Matthew Stafford"
+            },
+            {
+              "type": "scalar",
+              "value": 15
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Adam Vinatieri"
+            },
+            {
+              "type": "scalar",
+              "value": 14
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Mike Williams"
+            },
+            {
+              "type": "scalar",
+              "value": 14
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Steve Smith"
+            },
+            {
+              "type": "scalar",
+              "value": 14
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Jason Witten"
+            },
+            {
+              "type": "scalar",
+              "value": 13
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Tony Gonzalez"
+            },
+            {
+              "type": "scalar",
+              "value": 13
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Eli Manning"
+            },
+            {
+              "type": "scalar",
+              "value": 13
+            }
+          ]
+        }
+      ]
+    },
+    "most_drafted_def": {
+      "type": "list",
+      "length": 5,
+      "value": [
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Ravens"
+            },
+            {
+              "type": "scalar",
+              "value": 23
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Patriots"
+            },
+            {
+              "type": "scalar",
+              "value": 23
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Eagles"
+            },
+            {
+              "type": "scalar",
+              "value": 20
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Steelers"
+            },
+            {
+              "type": "scalar",
+              "value": 20
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Broncos"
+            },
+            {
+              "type": "scalar",
+              "value": 20
+            }
+          ]
+        }
+      ]
+    },
+    "most_mgrs_one_player": {
+      "type": "list",
+      "length": 5,
+      "value": [
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Tom Brady"
+            },
+            {
+              "type": "scalar",
+              "value": 13
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Steve Smith"
+            },
+            {
+              "type": "scalar",
+              "value": 11
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Eli Manning"
+            },
+            {
+              "type": "scalar",
+              "value": 11
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Tony Gonzalez"
+            },
+            {
+              "type": "scalar",
+              "value": 11
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Adam Vinatieri"
+            },
+            {
+              "type": "scalar",
+              "value": 10
+            }
+          ]
+        }
+      ]
+    },
+    "most_kept_players": {
+      "type": "list",
+      "length": 10,
+      "value": [
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "LaDainian Tomlinson"
+            },
+            {
+              "type": "scalar",
+              "value": 6
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Drew Brees"
+            },
+            {
+              "type": "scalar",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Adrian Peterson"
+            },
+            {
+              "type": "scalar",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Alvin Kamara"
+            },
+            {
+              "type": "scalar",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Shaun Alexander"
+            },
+            {
+              "type": "scalar",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "David Johnson"
+            },
+            {
+              "type": "scalar",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "LeSean McCoy"
+            },
+            {
+              "type": "scalar",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Clinton Portis"
+            },
+            {
+              "type": "scalar",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Chris Johnson"
+            },
+            {
+              "type": "scalar",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "scalar",
+              "value": "Terrell Owens"
+            },
+            {
+              "type": "scalar",
+              "value": 4
+            }
+          ]
+        }
+      ]
+    },
+    "earliest_qb": {
+      "type": "list",
+      "length": 5,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2014
+            },
+            "overall_pick": {
+              "type": "scalar",
+              "value": 1
+            },
+            "round": {
+              "type": "scalar",
+              "value": 1
+            },
+            "pick_in_round": {
+              "type": "scalar",
+              "value": 1
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Shawn"
+            },
+            "player_name": {
+              "type": "scalar",
+              "value": "Aaron Rodgers"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "overall_pick": {
+              "type": "scalar",
+              "value": 1
+            },
+            "round": {
+              "type": "scalar",
+              "value": 1
+            },
+            "pick_in_round": {
+              "type": "scalar",
+              "value": 1
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Shawn"
+            },
+            "player_name": {
+              "type": "scalar",
+              "value": "Brett Favre"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2007
+            },
+            "overall_pick": {
+              "type": "scalar",
+              "value": 1
+            },
+            "round": {
+              "type": "scalar",
+              "value": 1
+            },
+            "pick_in_round": {
+              "type": "scalar",
+              "value": 1
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Adam"
+            },
+            "player_name": {
+              "type": "scalar",
+              "value": "Peyton Manning"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "overall_pick": {
+              "type": "scalar",
+              "value": 2
+            },
+            "round": {
+              "type": "scalar",
+              "value": 1
+            },
+            "pick_in_round": {
+              "type": "scalar",
+              "value": 2
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Adam"
+            },
+            "player_name": {
+              "type": "scalar",
+              "value": "Daunte Culpepper"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "overall_pick": {
+              "type": "scalar",
+              "value": 2
+            },
+            "round": {
+              "type": "scalar",
+              "value": 1
+            },
+            "pick_in_round": {
+              "type": "scalar",
+              "value": 2
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Byron"
+            },
+            "player_name": {
+              "type": "scalar",
+              "value": "Aaron Brooks"
+            }
+          }
+        }
+      ]
+    },
+    "earliest_te": {
+      "type": "list",
+      "length": 5,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2023
+            },
+            "overall_pick": {
+              "type": "scalar",
+              "value": 6
+            },
+            "round": {
+              "type": "scalar",
+              "value": 1
+            },
+            "pick_in_round": {
+              "type": "scalar",
+              "value": 6
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "player_name": {
+              "type": "scalar",
+              "value": "Travis Kelce"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2012
+            },
+            "overall_pick": {
+              "type": "scalar",
+              "value": 6
+            },
+            "round": {
+              "type": "scalar",
+              "value": 1
+            },
+            "pick_in_round": {
+              "type": "scalar",
+              "value": 6
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Robby"
+            },
+            "player_name": {
+              "type": "scalar",
+              "value": "Jimmy Graham"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2016
+            },
+            "overall_pick": {
+              "type": "scalar",
+              "value": 7
+            },
+            "round": {
+              "type": "scalar",
+              "value": 1
+            },
+            "pick_in_round": {
+              "type": "scalar",
+              "value": 7
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Kevin Swanson"
+            },
+            "player_name": {
+              "type": "scalar",
+              "value": "Rob Gronkowski"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2020
+            },
+            "overall_pick": {
+              "type": "scalar",
+              "value": 13
+            },
+            "round": {
+              "type": "scalar",
+              "value": 2
+            },
+            "pick_in_round": {
+              "type": "scalar",
+              "value": 1
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Nick Blaettler"
+            },
+            "player_name": {
+              "type": "scalar",
+              "value": "Travis Kelce"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2025
+            },
+            "overall_pick": {
+              "type": "scalar",
+              "value": 13
+            },
+            "round": {
+              "type": "scalar",
+              "value": 2
+            },
+            "pick_in_round": {
+              "type": "scalar",
+              "value": 1
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "player_name": {
+              "type": "scalar",
+              "value": "Brock Bowers"
+            }
+          }
+        }
+      ]
+    },
+    "earliest_k": {
+      "type": "list",
+      "length": 3,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "overall_pick": {
+              "type": "scalar",
+              "value": 24
+            },
+            "round": {
+              "type": "scalar",
+              "value": 3
+            },
+            "pick_in_round": {
+              "type": "scalar",
+              "value": 2
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Byron"
+            },
+            "player_name": {
+              "type": "scalar",
+              "value": "David Akers"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2003
+            },
+            "overall_pick": {
+              "type": "scalar",
+              "value": 31
+            },
+            "round": {
+              "type": "scalar",
+              "value": 3
+            },
+            "pick_in_round": {
+              "type": "scalar",
+              "value": 7
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Adam"
+            },
+            "player_name": {
+              "type": "scalar",
+              "value": "Sebastian Janikowski"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2001
+            },
+            "overall_pick": {
+              "type": "scalar",
+              "value": 32
+            },
+            "round": {
+              "type": "scalar",
+              "value": 4
+            },
+            "pick_in_round": {
+              "type": "scalar",
+              "value": 5
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Byron"
+            },
+            "player_name": {
+              "type": "scalar",
+              "value": "Mike Hollis"
+            }
+          }
+        }
+      ]
+    },
+    "earliest_def_r1": {
+      "type": "list",
+      "length": 1,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2002
+            },
+            "overall_pick": {
+              "type": "scalar",
+              "value": 9
+            },
+            "round": {
+              "type": "scalar",
+              "value": 1
+            },
+            "pick_in_round": {
+              "type": "scalar",
+              "value": 9
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Jamie"
+            },
+            "player_name": {
+              "type": "scalar",
+              "value": "49ers"
+            }
+          }
+        }
+      ]
+    },
+    "keeper_pos_breakdown": {
+      "type": "dict",
+      "value": {
+        "RB": {
+          "type": "scalar",
+          "value": 142
+        },
+        "WR": {
+          "type": "scalar",
+          "value": 76
+        },
+        "QB": {
+          "type": "scalar",
+          "value": 38
+        },
+        "TE": {
+          "type": "scalar",
+          "value": 14
+        },
+        "LB": {
+          "type": "scalar",
+          "value": 1
+        },
+        "DEF": {
+          "type": "scalar",
+          "value": 1
+        }
+      }
+    },
+    "total_picks": {
+      "type": "scalar",
+      "value": 4164
+    },
+    "total_keepers": {
+      "type": "scalar",
+      "value": 272
+    },
+    "total_unique_players": {
+      "type": "scalar",
+      "value": 1089
+    },
+    "keeper_seasons": {
+      "type": "list",
+      "length": 23,
+      "value": [
+        {
+          "type": "scalar",
+          "value": 2003
+        },
+        {
+          "type": "scalar",
+          "value": 2004
+        },
+        {
+          "type": "scalar",
+          "value": 2005
+        },
+        {
+          "type": "scalar",
+          "value": 2006
+        },
+        {
+          "type": "scalar",
+          "value": 2007
+        },
+        {
+          "type": "scalar",
+          "value": 2008
+        },
+        {
+          "type": "scalar",
+          "value": 2009
+        },
+        {
+          "type": "scalar",
+          "value": 2010
+        },
+        {
+          "type": "scalar",
+          "value": 2011
+        },
+        {
+          "type": "scalar",
+          "value": 2012
+        },
+        {
+          "type": "scalar",
+          "value": 2013
+        },
+        {
+          "type": "scalar",
+          "value": 2014
+        },
+        {
+          "type": "scalar",
+          "value": 2015
+        },
+        {
+          "type": "scalar",
+          "value": 2016
+        },
+        {
+          "type": "scalar",
+          "value": 2017
+        },
+        {
+          "type": "scalar",
+          "value": 2018
+        },
+        {
+          "type": "scalar",
+          "value": 2019
+        },
+        {
+          "type": "scalar",
+          "value": 2020
+        },
+        {
+          "type": "scalar",
+          "value": 2021
+        },
+        {
+          "type": "scalar",
+          "value": 2022
+        },
+        {
+          "type": "scalar",
+          "value": 2023
+        },
+        {
+          "type": "scalar",
+          "value": 2024
+        },
+        {
+          "type": "scalar",
+          "value": 2025
+        }
+      ]
+    }
+  }
+}

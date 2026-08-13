@@ -1,0 +1,546 @@
+{
+  "type": "dataframe",
+  "shape": [
+    66,
+    6
+  ],
+  "columns": [
+    "fid_a",
+    "fid_b",
+    "games",
+    "a_wins",
+    "b_wins",
+    "a_pct"
+  ],
+  "digest": "4e9d80d04c00b0cc1e2eb1985474234ce15c51b1dac425c1e104449dac092bac",
+  "rows": [
+    {
+      "fid_a": "F02",
+      "fid_b": "F04",
+      "games": 38,
+      "a_wins": 18,
+      "b_wins": 20,
+      "a_pct": 0.474
+    },
+    {
+      "fid_a": "F01",
+      "fid_b": "F06",
+      "games": 36,
+      "a_wins": 13,
+      "b_wins": 23,
+      "a_pct": 0.361
+    },
+    {
+      "fid_a": "F10",
+      "fid_b": "F11",
+      "games": 35,
+      "a_wins": 17,
+      "b_wins": 18,
+      "a_pct": 0.486
+    },
+    {
+      "fid_a": "F04",
+      "fid_b": "F08",
+      "games": 34,
+      "a_wins": 20,
+      "b_wins": 14,
+      "a_pct": 0.588
+    },
+    {
+      "fid_a": "F06",
+      "fid_b": "F08",
+      "games": 34,
+      "a_wins": 17,
+      "b_wins": 17,
+      "a_pct": 0.5
+    },
+    {
+      "fid_a": "F03",
+      "fid_b": "F08",
+      "games": 34,
+      "a_wins": 15,
+      "b_wins": 19,
+      "a_pct": 0.441
+    },
+    {
+      "fid_a": "F05",
+      "fid_b": "F09",
+      "games": 34,
+      "a_wins": 15,
+      "b_wins": 19,
+      "a_pct": 0.441
+    },
+    {
+      "fid_a": "F03",
+      "fid_b": "F04",
+      "games": 34,
+      "a_wins": 19,
+      "b_wins": 15,
+      "a_pct": 0.559
+    },
+    {
+      "fid_a": "F01",
+      "fid_b": "F09",
+      "games": 34,
+      "a_wins": 13,
+      "b_wins": 21,
+      "a_pct": 0.382
+    },
+    {
+      "fid_a": "F07",
+      "fid_b": "F10",
+      "games": 34,
+      "a_wins": 17,
+      "b_wins": 17,
+      "a_pct": 0.5
+    },
+    {
+      "fid_a": "F07",
+      "fid_b": "F11",
+      "games": 34,
+      "a_wins": 13,
+      "b_wins": 21,
+      "a_pct": 0.382
+    },
+    {
+      "fid_a": "F09",
+      "fid_b": "F12",
+      "games": 34,
+      "a_wins": 19,
+      "b_wins": 15,
+      "a_pct": 0.559
+    },
+    {
+      "fid_a": "F05",
+      "fid_b": "F06",
+      "games": 33,
+      "a_wins": 17,
+      "b_wins": 16,
+      "a_pct": 0.515
+    },
+    {
+      "fid_a": "F02",
+      "fid_b": "F03",
+      "games": 33,
+      "a_wins": 23,
+      "b_wins": 10,
+      "a_pct": 0.697
+    },
+    {
+      "fid_a": "F03",
+      "fid_b": "F05",
+      "games": 32,
+      "a_wins": 16,
+      "b_wins": 16,
+      "a_pct": 0.5
+    },
+    {
+      "fid_a": "F02",
+      "fid_b": "F07",
+      "games": 32,
+      "a_wins": 17,
+      "b_wins": 15,
+      "a_pct": 0.531
+    },
+    {
+      "fid_a": "F04",
+      "fid_b": "F09",
+      "games": 32,
+      "a_wins": 20,
+      "b_wins": 12,
+      "a_pct": 0.625
+    },
+    {
+      "fid_a": "F03",
+      "fid_b": "F06",
+      "games": 32,
+      "a_wins": 12,
+      "b_wins": 20,
+      "a_pct": 0.375
+    },
+    {
+      "fid_a": "F06",
+      "fid_b": "F12",
+      "games": 31,
+      "a_wins": 18,
+      "b_wins": 13,
+      "a_pct": 0.581
+    },
+    {
+      "fid_a": "F05",
+      "fid_b": "F07",
+      "games": 31,
+      "a_wins": 17,
+      "b_wins": 14,
+      "a_pct": 0.548
+    },
+    {
+      "fid_a": "F01",
+      "fid_b": "F03",
+      "games": 31,
+      "a_wins": 16,
+      "b_wins": 15,
+      "a_pct": 0.516
+    },
+    {
+      "fid_a": "F04",
+      "fid_b": "F06",
+      "games": 31,
+      "a_wins": 17,
+      "b_wins": 14,
+      "a_pct": 0.548
+    },
+    {
+      "fid_a": "F11",
+      "fid_b": "F12",
+      "games": 31,
+      "a_wins": 21,
+      "b_wins": 10,
+      "a_pct": 0.677
+    },
+    {
+      "fid_a": "F01",
+      "fid_b": "F07",
+      "games": 31,
+      "a_wins": 15,
+      "b_wins": 16,
+      "a_pct": 0.484
+    },
+    {
+      "fid_a": "F08",
+      "fid_b": "F11",
+      "games": 30,
+      "a_wins": 18,
+      "b_wins": 12,
+      "a_pct": 0.6
+    },
+    {
+      "fid_a": "F02",
+      "fid_b": "F10",
+      "games": 30,
+      "a_wins": 15,
+      "b_wins": 15,
+      "a_pct": 0.5
+    },
+    {
+      "fid_a": "F05",
+      "fid_b": "F08",
+      "games": 30,
+      "a_wins": 15,
+      "b_wins": 15,
+      "a_pct": 0.5
+    },
+    {
+      "fid_a": "F02",
+      "fid_b": "F05",
+      "games": 30,
+      "a_wins": 13,
+      "b_wins": 17,
+      "a_pct": 0.433
+    },
+    {
+      "fid_a": "F01",
+      "fid_b": "F08",
+      "games": 30,
+      "a_wins": 14,
+      "b_wins": 16,
+      "a_pct": 0.467
+    },
+    {
+      "fid_a": "F06",
+      "fid_b": "F09",
+      "games": 30,
+      "a_wins": 12,
+      "b_wins": 18,
+      "a_pct": 0.4
+    },
+    {
+      "fid_a": "F02",
+      "fid_b": "F08",
+      "games": 30,
+      "a_wins": 12,
+      "b_wins": 18,
+      "a_pct": 0.4
+    },
+    {
+      "fid_a": "F02",
+      "fid_b": "F09",
+      "games": 30,
+      "a_wins": 19,
+      "b_wins": 11,
+      "a_pct": 0.633
+    },
+    {
+      "fid_a": "F04",
+      "fid_b": "F05",
+      "games": 30,
+      "a_wins": 22,
+      "b_wins": 8,
+      "a_pct": 0.733
+    },
+    {
+      "fid_a": "F01",
+      "fid_b": "F04",
+      "games": 30,
+      "a_wins": 11,
+      "b_wins": 19,
+      "a_pct": 0.367
+    },
+    {
+      "fid_a": "F04",
+      "fid_b": "F07",
+      "games": 29,
+      "a_wins": 18,
+      "b_wins": 11,
+      "a_pct": 0.621
+    },
+    {
+      "fid_a": "F05",
+      "fid_b": "F11",
+      "games": 29,
+      "a_wins": 15,
+      "b_wins": 14,
+      "a_pct": 0.517
+    },
+    {
+      "fid_a": "F04",
+      "fid_b": "F10",
+      "games": 29,
+      "a_wins": 16,
+      "b_wins": 13,
+      "a_pct": 0.552
+    },
+    {
+      "fid_a": "F03",
+      "fid_b": "F11",
+      "games": 29,
+      "a_wins": 13,
+      "b_wins": 16,
+      "a_pct": 0.448
+    },
+    {
+      "fid_a": "F01",
+      "fid_b": "F10",
+      "games": 29,
+      "a_wins": 11,
+      "b_wins": 18,
+      "a_pct": 0.379
+    },
+    {
+      "fid_a": "F07",
+      "fid_b": "F08",
+      "games": 29,
+      "a_wins": 16,
+      "b_wins": 13,
+      "a_pct": 0.552
+    },
+    {
+      "fid_a": "F03",
+      "fid_b": "F07",
+      "games": 29,
+      "a_wins": 15,
+      "b_wins": 14,
+      "a_pct": 0.517
+    },
+    {
+      "fid_a": "F07",
+      "fid_b": "F12",
+      "games": 28,
+      "a_wins": 14,
+      "b_wins": 14,
+      "a_pct": 0.5
+    },
+    {
+      "fid_a": "F08",
+      "fid_b": "F09",
+      "games": 28,
+      "a_wins": 16,
+      "b_wins": 12,
+      "a_pct": 0.571
+    },
+    {
+      "fid_a": "F01",
+      "fid_b": "F02",
+      "games": 28,
+      "a_wins": 15,
+      "b_wins": 13,
+      "a_pct": 0.536
+    },
+    {
+      "fid_a": "F05",
+      "fid_b": "F10",
+      "games": 28,
+      "a_wins": 16,
+      "b_wins": 12,
+      "a_pct": 0.571
+    },
+    {
+      "fid_a": "F01",
+      "fid_b": "F12",
+      "games": 28,
+      "a_wins": 15,
+      "b_wins": 13,
+      "a_pct": 0.536
+    },
+    {
+      "fid_a": "F09",
+      "fid_b": "F10",
+      "games": 28,
+      "a_wins": 18,
+      "b_wins": 10,
+      "a_pct": 0.643
+    },
+    {
+      "fid_a": "F09",
+      "fid_b": "F11",
+      "games": 28,
+      "a_wins": 11,
+      "b_wins": 17,
+      "a_pct": 0.393
+    },
+    {
+      "fid_a": "F01",
+      "fid_b": "F05",
+      "games": 28,
+      "a_wins": 9,
+      "b_wins": 19,
+      "a_pct": 0.321
+    },
+    {
+      "fid_a": "F02",
+      "fid_b": "F11",
+      "games": 28,
+      "a_wins": 16,
+      "b_wins": 12,
+      "a_pct": 0.571
+    },
+    {
+      "fid_a": "F07",
+      "fid_b": "F09",
+      "games": 28,
+      "a_wins": 10,
+      "b_wins": 18,
+      "a_pct": 0.357
+    },
+    {
+      "fid_a": "F08",
+      "fid_b": "F10",
+      "games": 27,
+      "a_wins": 14,
+      "b_wins": 13,
+      "a_pct": 0.519
+    },
+    {
+      "fid_a": "F10",
+      "fid_b": "F12",
+      "games": 27,
+      "a_wins": 13,
+      "b_wins": 14,
+      "a_pct": 0.481
+    },
+    {
+      "fid_a": "F05",
+      "fid_b": "F12",
+      "games": 27,
+      "a_wins": 13,
+      "b_wins": 14,
+      "a_pct": 0.481
+    },
+    {
+      "fid_a": "F01",
+      "fid_b": "F11",
+      "games": 27,
+      "a_wins": 9,
+      "b_wins": 18,
+      "a_pct": 0.333
+    },
+    {
+      "fid_a": "F06",
+      "fid_b": "F07",
+      "games": 27,
+      "a_wins": 9,
+      "b_wins": 18,
+      "a_pct": 0.333
+    },
+    {
+      "fid_a": "F02",
+      "fid_b": "F06",
+      "games": 27,
+      "a_wins": 14,
+      "b_wins": 13,
+      "a_pct": 0.519
+    },
+    {
+      "fid_a": "F03",
+      "fid_b": "F10",
+      "games": 27,
+      "a_wins": 12,
+      "b_wins": 15,
+      "a_pct": 0.444
+    },
+    {
+      "fid_a": "F03",
+      "fid_b": "F09",
+      "games": 27,
+      "a_wins": 13,
+      "b_wins": 14,
+      "a_pct": 0.481
+    },
+    {
+      "fid_a": "F06",
+      "fid_b": "F11",
+      "games": 26,
+      "a_wins": 11,
+      "b_wins": 15,
+      "a_pct": 0.423
+    },
+    {
+      "fid_a": "F08",
+      "fid_b": "F12",
+      "games": 26,
+      "a_wins": 12,
+      "b_wins": 14,
+      "a_pct": 0.462
+    },
+    {
+      "fid_a": "F02",
+      "fid_b": "F12",
+      "games": 26,
+      "a_wins": 12,
+      "b_wins": 14,
+      "a_pct": 0.462
+    },
+    {
+      "fid_a": "F03",
+      "fid_b": "F12",
+      "games": 25,
+      "a_wins": 14,
+      "b_wins": 11,
+      "a_pct": 0.56
+    },
+    {
+      "fid_a": "F06",
+      "fid_b": "F10",
+      "games": 24,
+      "a_wins": 8,
+      "b_wins": 16,
+      "a_pct": 0.333
+    },
+    {
+      "fid_a": "F04",
+      "fid_b": "F12",
+      "games": 23,
+      "a_wins": 14,
+      "b_wins": 9,
+      "a_pct": 0.609
+    },
+    {
+      "fid_a": "F04",
+      "fid_b": "F11",
+      "games": 22,
+      "a_wins": 13,
+      "b_wins": 9,
+      "a_pct": 0.591
+    }
+  ]
+}

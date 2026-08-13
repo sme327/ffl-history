@@ -1069,7 +1069,9 @@ def get_all_rivalries() -> pd.DataFrame:
     champ["margin"] = (champ["score_1"] - champ["score_2"]).abs()
 
     RECENT_CUTOFF = CURRENT_SEASON - 4
-    all_pairs = set(rs_dedup["pair"].unique()) | set(champ["pair"].unique())
+    # sorted() is load-bearing: iterating a set of name tuples follows Python's
+    # randomized string hashing, so row order changed on every app restart.
+    all_pairs = sorted(set(rs_dedup["pair"].unique()) | set(champ["pair"].unique()))
 
     rows = []
     raw_scores = []
@@ -1135,7 +1137,17 @@ def get_all_rivalries() -> pd.DataFrame:
     df = pd.DataFrame(rows)
     mx = df["rivalry_raw"].max()
     df["rivalry_score"] = (df["rivalry_raw"] / mx * 100).round(0).astype(int)
-    return df.sort_values("rivalry_score", ascending=False).reset_index(drop=True)
+    # rivalry_score is rounded to an integer, so ties are common and the default
+    # quicksort is not stable. Break ties on the raw score, then on names, so the
+    # Top 10 on the rivalries page is the same list every time it renders.
+    return (
+        df.sort_values(
+            ["rivalry_score", "rivalry_raw", "mgr_a", "mgr_b"],
+            ascending=[False, False, True, True],
+            kind="mergesort",
+        )
+        .reset_index(drop=True)
+    )
 
 
 @st.cache_data

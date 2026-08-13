@@ -1,0 +1,187 @@
+{
+  "type": "schema",
+  "value": {
+    "draft_picks": {
+      "shape": [
+        4440,
+        7
+      ],
+      "columns": [
+        "season",
+        "round",
+        "pick_in_round",
+        "overall_pick",
+        "team_name",
+        "player_name",
+        "is_keeper"
+      ]
+    },
+    "franchise_history": {
+      "shape": [
+        296,
+        3
+      ],
+      "columns": [
+        "franchise_id",
+        "season",
+        "manager_name"
+      ]
+    },
+    "league_settings": {
+      "shape": [
+        25,
+        15
+      ],
+      "columns": [
+        "season",
+        "num_teams",
+        "scoring_type",
+        "draft_type",
+        "roster_slots",
+        "play_against_median",
+        "divisions",
+        "trade_deadline",
+        "waiver_type",
+        "max_acquisitions_season",
+        "max_acquisitions_week",
+        "draft_pick_trades",
+        "fractional_points",
+        "negative_points",
+        "playoff_tiebreaker"
+      ]
+    },
+    "manager_lookup": {
+      "shape": [
+        26,
+        3
+      ],
+      "columns": [
+        "email",
+        "canonical_name",
+        "notes"
+      ]
+    },
+    "managers": {
+      "shape": [
+        24,
+        6
+      ],
+      "columns": [
+        "canonical_name",
+        "display_name",
+        "first_season",
+        "last_season",
+        "seasons_played",
+        "notes"
+      ]
+    },
+    "player_positions": {
+      "shape": [
+        1128,
+        3
+      ],
+      "columns": [
+        "player_name",
+        "position",
+        "match_source"
+      ]
+    },
+    "playoff_games": {
+      "shape": [
+        281,
+        12
+      ],
+      "columns": [
+        "season",
+        "bracket",
+        "week",
+        "round",
+        "game_type",
+        "seed_1",
+        "team_1",
+        "score_1",
+        "seed_2",
+        "team_2",
+        "score_2",
+        "winner"
+      ]
+    },
+    "season_managers": {
+      "shape": [
+        296,
+        7
+      ],
+      "columns": [
+        "season",
+        "team_name",
+        "manager_name",
+        "email",
+        "waiver_priority",
+        "moves",
+        "trades"
+      ]
+    },
+    "season_trades": {
+      "shape": [
+        247,
+        7
+      ],
+      "columns": [
+        "season",
+        "trade_id",
+        "date",
+        "team_name",
+        "player_name",
+        "player_pos",
+        "trade_partner"
+      ]
+    },
+    "standings": {
+      "shape": [
+        296,
+        11
+      ],
+      "columns": [
+        "season",
+        "rank",
+        "team_name",
+        "wins",
+        "losses",
+        "ties",
+        "points_for",
+        "points_against",
+        "streak",
+        "waiver_priority",
+        "moves"
+      ]
+    },
+    "team_name_history": {
+      "shape": [
+        296,
+        3
+      ],
+      "columns": [
+        "canonical_name",
+        "season",
+        "team_name"
+      ]
+    },
+    "weekly_matchups": {
+      "shape": [
+        4573,
+        9
+      ],
+      "columns": [
+        "season",
+        "week",
+        "team_name",
+        "opponent",
+        "result",
+        "team_score",
+        "opponent_score",
+        "is_bye",
+        "is_playoff"
+      ]
+    }
+  }
+}

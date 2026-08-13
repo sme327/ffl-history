@@ -1,0 +1,620 @@
+{
+  "type": "dataframe",
+  "shape": [
+    121,
+    3
+  ],
+  "columns": [
+    "winner_mgr",
+    "loser_mgr",
+    "eliminations"
+  ],
+  "digest": "c2ff381a4671e10019c650ce5a3fa5b4bca4a27588590c0b5d2b1a0d12a3eec7",
+  "rows": [
+    {
+      "winner_mgr": "Kevin Swanson",
+      "loser_mgr": "Kevin O'Boyle",
+      "eliminations": 3
+    },
+    {
+      "winner_mgr": "Jamie",
+      "loser_mgr": "Kevin Swanson",
+      "eliminations": 3
+    },
+    {
+      "winner_mgr": "Dominic",
+      "loser_mgr": "Fadi",
+      "eliminations": 3
+    },
+    {
+      "winner_mgr": "Dominic",
+      "loser_mgr": "Evan",
+      "eliminations": 3
+    },
+    {
+      "winner_mgr": "Dominic",
+      "loser_mgr": "Brian Clark",
+      "eliminations": 3
+    },
+    {
+      "winner_mgr": "Kevin O'Boyle",
+      "loser_mgr": "Brian Clark",
+      "eliminations": 3
+    },
+    {
+      "winner_mgr": "Brian Clark",
+      "loser_mgr": "Thomas",
+      "eliminations": 3
+    },
+    {
+      "winner_mgr": "Dominic",
+      "loser_mgr": "Nick Blaettler",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Dominic",
+      "loser_mgr": "Shawn",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Dominic",
+      "loser_mgr": "Steve Swanson",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Douglas",
+      "loser_mgr": "Evan",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Kevin O'Boyle",
+      "loser_mgr": "Evan",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Dominic",
+      "loser_mgr": "Kevin O'Boyle",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Jamie",
+      "loser_mgr": "Dan",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Shawn",
+      "loser_mgr": "Kevin Swanson",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Evan",
+      "loser_mgr": "Kevin Swanson",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Shawn",
+      "loser_mgr": "Brian Clark",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Robby",
+      "loser_mgr": "Nick Blaettler",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Fadi",
+      "loser_mgr": "Thomas",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Kevin Swanson",
+      "loser_mgr": "Shawn",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Fadi",
+      "loser_mgr": "Kevin Swanson",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Nick Blaettler",
+      "loser_mgr": "Dominic",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Dominic",
+      "loser_mgr": "Joe Tyszko",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Thomas",
+      "loser_mgr": "Shawn",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Steve Swanson",
+      "loser_mgr": "Shawn",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Kevin O'Boyle",
+      "loser_mgr": "Shawn",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Joe Tyszko",
+      "loser_mgr": "Fadi",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Kevin O'Boyle",
+      "loser_mgr": "Nick Blaettler",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Brian Clark",
+      "loser_mgr": "Steve Swanson",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Brian Clark",
+      "loser_mgr": "Dominic",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Thomas",
+      "loser_mgr": "Jeff",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Brian Clark",
+      "loser_mgr": "Kevin Swanson",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Thomas",
+      "loser_mgr": "Kevin O'Boyle",
+      "eliminations": 2
+    },
+    {
+      "winner_mgr": "Kevin O'Boyle",
+      "loser_mgr": "Joe Tyszko",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Kevin Swanson",
+      "loser_mgr": "Robby",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Kevin Swanson",
+      "loser_mgr": "Rob",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Kevin Swanson",
+      "loser_mgr": "Nick Blaettler",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Kevin O'Boyle",
+      "loser_mgr": "Jamie",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Kevin Swanson",
+      "loser_mgr": "Mike",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Kevin O'Boyle",
+      "loser_mgr": "Steve Swanson",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Kevin O'Boyle",
+      "loser_mgr": "Kevin Swanson",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Kevin Swanson",
+      "loser_mgr": "Joe Tyszko",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Kevin Swanson",
+      "loser_mgr": "Fadi",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Kevin Swanson",
+      "loser_mgr": "Douglas",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Kevin Swanson",
+      "loser_mgr": "Brian Clark",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Kevin O'Boyle",
+      "loser_mgr": "Thomas",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Adam",
+      "loser_mgr": "Joe Tyszko",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Kevin Swanson",
+      "loser_mgr": "Thomas",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Nick Blaettler",
+      "loser_mgr": "Fadi",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Thomas",
+      "loser_mgr": "Robby",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Thomas",
+      "loser_mgr": "Kevin Swanson",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Thomas",
+      "loser_mgr": "Evan",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Thomas",
+      "loser_mgr": "Eric",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Thomas",
+      "loser_mgr": "Dominic",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Thomas",
+      "loser_mgr": "Byron",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Steve Swanson",
+      "loser_mgr": "Thomas",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Steve Swanson",
+      "loser_mgr": "Nick Blaettler",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Steve Swanson",
+      "loser_mgr": "Mike",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Steve Swanson",
+      "loser_mgr": "Kevin Swanson",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Steve Swanson",
+      "loser_mgr": "Kevin O'Boyle",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Steve Swanson",
+      "loser_mgr": "Fadi",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Steve Swanson",
+      "loser_mgr": "Evan",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Steve Swanson",
+      "loser_mgr": "Douglas",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Steve Swanson",
+      "loser_mgr": "Brian Clark",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Shawn",
+      "loser_mgr": "Steve Swanson",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Kevin O'Boyle",
+      "loser_mgr": "Fadi",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Robby",
+      "loser_mgr": "Fadi",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Nick Blaettler",
+      "loser_mgr": "Shawn",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Nick Blaettler",
+      "loser_mgr": "Robby",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Nick Blaettler",
+      "loser_mgr": "Kevin O'Boyle",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Shawn",
+      "loser_mgr": "Rob",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Jamie",
+      "loser_mgr": "Thomas",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Kevin O'Boyle",
+      "loser_mgr": "Dominic",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Evan",
+      "loser_mgr": "Nick Blaettler",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Evan",
+      "loser_mgr": "Fadi",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Eric",
+      "loser_mgr": "Steve Swanson",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Douglas",
+      "loser_mgr": "Steve Swanson",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Douglas",
+      "loser_mgr": "Kevin Swanson",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Douglas",
+      "loser_mgr": "Kevin O'Boyle",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Douglas",
+      "loser_mgr": "Fadi",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Douglas",
+      "loser_mgr": "Dominic",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Dominic",
+      "loser_mgr": "Mike",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Dominic",
+      "loser_mgr": "Kevin Swanson",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Dominic",
+      "loser_mgr": "Jeff",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Dan",
+      "loser_mgr": "Adam",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Dale",
+      "loser_mgr": "Fadi",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Bryan Kearney",
+      "loser_mgr": "Thomas",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Bryan Kearney",
+      "loser_mgr": "Kevin Swanson",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Brian Clark",
+      "loser_mgr": "Robby",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Brian Clark",
+      "loser_mgr": "Rob",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Brian Clark",
+      "loser_mgr": "Nick Blaettler",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Brian Clark",
+      "loser_mgr": "Kevin O'Boyle",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Brian Clark",
+      "loser_mgr": "Evan",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Brian Clark",
+      "loser_mgr": "Douglas",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Brian Clark",
+      "loser_mgr": "Dale",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Evan",
+      "loser_mgr": "Kevin O'Boyle",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Evan",
+      "loser_mgr": "Robby",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Kevin O'Boyle",
+      "loser_mgr": "Bryan Kearney",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Evan",
+      "loser_mgr": "Shawn",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Joe Tyszko",
+      "loser_mgr": "Shawn",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Joe Tyszko",
+      "loser_mgr": "Rob",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Jeff",
+      "loser_mgr": "Shawn",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Jeff",
+      "loser_mgr": "Fadi",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Jeff",
+      "loser_mgr": "Brian Clark",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Brian Clark",
+      "loser_mgr": "Adam",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Jamie",
+      "loser_mgr": "Shawn",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Jamie",
+      "loser_mgr": "Kevin O'Boyle",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Jamie",
+      "loser_mgr": "Joe Tyszko",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Jamie",
+      "loser_mgr": "Fadi",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Jamie",
+      "loser_mgr": "Evan",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Jamie",
+      "loser_mgr": "Brian Clark",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Fadi",
+      "loser_mgr": "Steve Swanson",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Fadi",
+      "loser_mgr": "Shawn",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Fadi",
+      "loser_mgr": "Rob",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Fadi",
+      "loser_mgr": "Evan",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Fadi",
+      "loser_mgr": "Eric",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Fadi",
+      "loser_mgr": "Dominic",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Fadi",
+      "loser_mgr": "Adam",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Evan",
+      "loser_mgr": "Thomas",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Evan",
+      "loser_mgr": "Steve Swanson",
+      "eliminations": 1
+    },
+    {
+      "winner_mgr": "Thomas",
+      "loser_mgr": "Steve Swanson",
+      "eliminations": 1
+    }
+  ]
+}

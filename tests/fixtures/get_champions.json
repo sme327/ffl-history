@@ -1,0 +1,244 @@
+{
+  "type": "dataframe",
+  "shape": [
+    25,
+    7
+  ],
+  "columns": [
+    "season",
+    "champion_team",
+    "champion_manager",
+    "champion_score",
+    "runner_up_team",
+    "runner_up_manager",
+    "runner_up_score"
+  ],
+  "digest": "42082365abc08e6a481229bd2f75ba02169609b7eb14229be514967db67bfa53",
+  "rows": [
+    {
+      "season": 2001,
+      "champion_team": "angel",
+      "champion_manager": "Jamie",
+      "champion_score": 59.01,
+      "runner_up_team": "Cammuffs",
+      "runner_up_manager": "Fadi",
+      "runner_up_score": 55.46
+    },
+    {
+      "season": 2002,
+      "champion_team": "angel",
+      "champion_manager": "Jamie",
+      "champion_score": 75.63,
+      "runner_up_team": "Team Old Style",
+      "runner_up_manager": "Brian Clark",
+      "runner_up_score": 49.1
+    },
+    {
+      "season": 2003,
+      "champion_team": "crabby jamie",
+      "champion_manager": "Jamie",
+      "champion_score": 66.45,
+      "runner_up_team": "1043",
+      "runner_up_manager": "Joe Tyszko",
+      "runner_up_score": 53.95
+    },
+    {
+      "season": 2004,
+      "champion_team": "crabby jamie",
+      "champion_manager": "Jamie",
+      "champion_score": 84.38,
+      "runner_up_team": "shootinfor.500",
+      "runner_up_manager": "Thomas",
+      "runner_up_score": 59.41
+    },
+    {
+      "season": 2005,
+      "champion_team": "Guinness",
+      "champion_manager": "Kevin O'Boyle",
+      "champion_score": 73.81,
+      "runner_up_team": "giant",
+      "runner_up_manager": "Joe Tyszko",
+      "runner_up_score": 61.82
+    },
+    {
+      "season": 2006,
+      "champion_team": "MiniDitkas",
+      "champion_manager": "Kevin Swanson",
+      "champion_score": 101.31,
+      "runner_up_team": "Guinness",
+      "runner_up_manager": "Kevin O'Boyle",
+      "runner_up_score": 76.13
+    },
+    {
+      "season": 2007,
+      "champion_team": "South of 55 is mine!",
+      "champion_manager": "Dominic",
+      "champion_score": 95.55,
+      "runner_up_team": "Minooka Bears",
+      "runner_up_manager": "Fadi",
+      "runner_up_score": 79.5
+    },
+    {
+      "season": 2008,
+      "champion_team": "First to Worst",
+      "champion_manager": "Dominic",
+      "champion_score": 75.84,
+      "runner_up_team": "long live the goat",
+      "runner_up_manager": "Steve Swanson",
+      "runner_up_score": 61.68
+    },
+    {
+      "season": 2009,
+      "champion_team": "team old style",
+      "champion_manager": "Brian Clark",
+      "champion_score": 101.34,
+      "runner_up_team": "cubs killed harry",
+      "runner_up_manager": "Steve Swanson",
+      "runner_up_score": 77.23
+    },
+    {
+      "season": 2010,
+      "champion_team": "team old style",
+      "champion_manager": "Brian Clark",
+      "champion_score": 122.75,
+      "runner_up_team": "Return to Glory?",
+      "runner_up_manager": "Dominic",
+      "runner_up_score": 77.53
+    },
+    {
+      "season": 2011,
+      "champion_team": "Sub .500!!!",
+      "champion_manager": "Dominic",
+      "champion_score": 81.18,
+      "runner_up_team": "Guinness",
+      "runner_up_manager": "Kevin O'Boyle",
+      "runner_up_score": 70.14
+    },
+    {
+      "season": 2012,
+      "champion_team": "Goood Times",
+      "champion_manager": "Evan",
+      "champion_score": 109.28,
+      "runner_up_team": "Quakes and Canes",
+      "runner_up_manager": "Fadi",
+      "runner_up_score": 69.01
+    },
+    {
+      "season": 2013,
+      "champion_team": "Goood Times",
+      "champion_manager": "Evan",
+      "champion_score": 87.11,
+      "runner_up_team": "miniDITKAS",
+      "runner_up_manager": "Kevin Swanson",
+      "runner_up_score": 74.47
+    },
+    {
+      "season": 2014,
+      "champion_team": "Fuzzy Bears",
+      "champion_manager": "Thomas",
+      "champion_score": 79.74,
+      "runner_up_team": "Second Draft Pick",
+      "runner_up_manager": "Dominic",
+      "runner_up_score": 58.86
+    },
+    {
+      "season": 2015,
+      "champion_team": "Guinness",
+      "champion_manager": "Kevin O'Boyle",
+      "champion_score": 113.03,
+      "runner_up_team": "los pollos hermanos",
+      "runner_up_manager": "Shawn",
+      "runner_up_score": 59.14
+    },
+    {
+      "season": 2016,
+      "champion_team": "team old style",
+      "champion_manager": "Brian Clark",
+      "champion_score": 76.38,
+      "runner_up_team": "Swami Singer",
+      "runner_up_manager": "Robby",
+      "runner_up_score": 68.44
+    },
+    {
+      "season": 2017,
+      "champion_team": "Mean Machine 22",
+      "champion_manager": "Douglas",
+      "champion_score": 90.42,
+      "runner_up_team": "miniDITKAS",
+      "runner_up_manager": "Kevin Swanson",
+      "runner_up_score": 74.51
+    },
+    {
+      "season": 2018,
+      "champion_team": "team old style",
+      "champion_manager": "Brian Clark",
+      "champion_score": 120.94,
+      "runner_up_team": "No Diggity",
+      "runner_up_manager": "Nick Blaettler",
+      "runner_up_score": 84.81
+    },
+    {
+      "season": 2019,
+      "champion_team": "Bears",
+      "champion_manager": "Steve Swanson",
+      "champion_score": 89.23,
+      "runner_up_team": "West Coast Infirmary",
+      "runner_up_manager": "Shawn",
+      "runner_up_score": 85.96
+    },
+    {
+      "season": 2020,
+      "champion_team": "Mean Machine 22",
+      "champion_manager": "Douglas",
+      "champion_score": 89.36,
+      "runner_up_team": "Bears",
+      "runner_up_manager": "Steve Swanson",
+      "runner_up_score": 83.94
+    },
+    {
+      "season": 2021,
+      "champion_team": "“I’ll take Kittle”",
+      "champion_manager": "Dominic",
+      "champion_score": 86.87,
+      "runner_up_team": "Guinness",
+      "runner_up_manager": "Kevin O'Boyle",
+      "runner_up_score": 65.93
+    },
+    {
+      "season": 2022,
+      "champion_team": "Good Douche Bag",
+      "champion_manager": "Bryan Kearney",
+      "champion_score": 77.76,
+      "runner_up_team": "Fuzzy Bears",
+      "runner_up_manager": "Thomas",
+      "runner_up_score": 75.5
+    },
+    {
+      "season": 2023,
+      "champion_team": "“I’ll take Kittle”",
+      "champion_manager": "Dominic",
+      "champion_score": 113.18,
+      "runner_up_team": "team old style",
+      "runner_up_manager": "Brian Clark",
+      "runner_up_score": 55.14
+    },
+    {
+      "season": 2024,
+      "champion_team": "This Is How We Do",
+      "champion_manager": "Fadi",
+      "champion_score": 98.86,
+      "runner_up_team": "Goood Times",
+      "runner_up_manager": "Evan",
+      "runner_up_score": 98.74
+    },
+    {
+      "season": 2025,
+      "champion_team": "Fuzzy Bears",
+      "champion_manager": "Thomas",
+      "champion_score": 97.34,
+      "runner_up_team": "Futball in the Groin",
+      "runner_up_manager": "Jeff",
+      "runner_up_score": 79.65
+    }
+  ]
+}

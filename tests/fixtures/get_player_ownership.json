@@ -1,0 +1,673 @@
+{
+  "type": "dataframe",
+  "shape": [
+    3448,
+    10
+  ],
+  "columns": [
+    "player_name",
+    "manager",
+    "franchise_id",
+    "position",
+    "draft_count",
+    "keeper_count",
+    "total_seasons",
+    "seasons",
+    "first_season",
+    "last_season"
+  ],
+  "digest": "f01628adb7674e234d6b4908368047ea5270b0626165c7d0b8ea0c910c03e1c5",
+  "head": [
+    {
+      "player_name": "Aaron Rodgers",
+      "manager": "Shawn",
+      "franchise_id": "F09",
+      "position": "QB",
+      "draft_count": 3,
+      "keeper_count": 4,
+      "total_seasons": 7,
+      "seasons": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2020,
+        2021
+      ],
+      "first_season": 2010,
+      "last_season": 2021
+    },
+    {
+      "player_name": "Adrian Peterson",
+      "manager": "Steve Swanson",
+      "franchise_id": "F08",
+      "position": "RB",
+      "draft_count": 3,
+      "keeper_count": 4,
+      "total_seasons": 7,
+      "seasons": [
+        2007,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2020
+      ],
+      "first_season": 2007,
+      "last_season": 2020
+    },
+    {
+      "player_name": "Alvin Kamara",
+      "manager": "Brian Clark",
+      "franchise_id": "F02",
+      "position": "RB",
+      "draft_count": 1,
+      "keeper_count": 5,
+      "total_seasons": 6,
+      "seasons": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "first_season": 2017,
+      "last_season": 2022
+    },
+    {
+      "player_name": "Maurice Jones-Drew",
+      "manager": "Kevin Swanson",
+      "franchise_id": "F11",
+      "position": "RB",
+      "draft_count": 2,
+      "keeper_count": 4,
+      "total_seasons": 6,
+      "seasons": [
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012
+      ],
+      "first_season": 2007,
+      "last_season": 2012
+    },
+    {
+      "player_name": "Josh Allen",
+      "manager": "Thomas",
+      "franchise_id": "F12",
+      "position": "QB",
+      "draft_count": 2,
+      "keeper_count": 4,
+      "total_seasons": 6,
+      "seasons": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "first_season": 2020,
+      "last_season": 2025
+    },
+    {
+      "player_name": "DeSean Jackson",
+      "manager": "Shawn",
+      "franchise_id": "F09",
+      "position": "WR",
+      "draft_count": 6,
+      "keeper_count": 0,
+      "total_seasons": 6,
+      "seasons": [
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017
+      ],
+      "first_season": 2012,
+      "last_season": 2017
+    },
+    {
+      "player_name": "Ben Roethlisberger",
+      "manager": "Evan",
+      "franchise_id": "F05",
+      "position": "QB",
+      "draft_count": 6,
+      "keeper_count": 0,
+      "total_seasons": 6,
+      "seasons": [
+        2006,
+        2012,
+        2014,
+        2016,
+        2018,
+        2020
+      ],
+      "first_season": 2006,
+      "last_season": 2020
+    },
+    {
+      "player_name": "Tom Brady",
+      "manager": "Dominic",
+      "franchise_id": "F03",
+      "position": "QB",
+      "draft_count": 2,
+      "keeper_count": 3,
+      "total_seasons": 5,
+      "seasons": [
+        2007,
+        2008,
+        2011,
+        2012,
+        2013
+      ],
+      "first_season": 2007,
+      "last_season": 2013
+    },
+    {
+      "player_name": "LeSean McCoy",
+      "manager": "Kevin O'Boyle",
+      "franchise_id": "F10",
+      "position": "RB",
+      "draft_count": 2,
+      "keeper_count": 3,
+      "total_seasons": 5,
+      "seasons": [
+        2009,
+        2011,
+        2012,
+        2013,
+        2014
+      ],
+      "first_season": 2009,
+      "last_season": 2014
+    },
+    {
+      "player_name": "Terrell Owens",
+      "manager": "Shawn",
+      "franchise_id": "F09",
+      "position": "WR",
+      "draft_count": 2,
+      "keeper_count": 3,
+      "total_seasons": 5,
+      "seasons": [
+        2001,
+        2005,
+        2007,
+        2008,
+        2009
+      ],
+      "first_season": 2001,
+      "last_season": 2009
+    },
+    {
+      "player_name": "Randy Moss",
+      "manager": "Fadi",
+      "franchise_id": "F06",
+      "position": "WR",
+      "draft_count": 4,
+      "keeper_count": 1,
+      "total_seasons": 5,
+      "seasons": [
+        2007,
+        2008,
+        2009,
+        2010,
+        2012
+      ],
+      "first_season": 2007,
+      "last_season": 2012
+    },
+    {
+      "player_name": "Ja'Marr Chase",
+      "manager": "Evan",
+      "franchise_id": "F05",
+      "position": "WR",
+      "draft_count": 1,
+      "keeper_count": 4,
+      "total_seasons": 5,
+      "seasons": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "first_season": 2021,
+      "last_season": 2025
+    },
+    {
+      "player_name": "Reggie Bush",
+      "manager": "Kevin Swanson",
+      "franchise_id": "F11",
+      "position": "RB",
+      "draft_count": 4,
+      "keeper_count": 1,
+      "total_seasons": 5,
+      "seasons": [
+        2006,
+        2007,
+        2010,
+        2012,
+        2015
+      ],
+      "first_season": 2006,
+      "last_season": 2015
+    },
+    {
+      "player_name": "David Johnson",
+      "manager": "Fadi",
+      "franchise_id": "F06",
+      "position": "RB",
+      "draft_count": 0,
+      "keeper_count": 5,
+      "total_seasons": 5,
+      "seasons": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "first_season": 2016,
+      "last_season": 2020
+    },
+    {
+      "player_name": "Shaun Alexander",
+      "manager": "Rob",
+      "franchise_id": "F08",
+      "position": "RB",
+      "draft_count": 1,
+      "keeper_count": 4,
+      "total_seasons": 5,
+      "seasons": [
+        2002,
+        2003,
+        2004,
+        2005,
+        2006
+      ],
+      "first_season": 2002,
+      "last_season": 2006
+    },
+    {
+      "player_name": "Mark Ingram II",
+      "manager": "Shawn",
+      "franchise_id": "F09",
+      "position": "RB",
+      "draft_count": 5,
+      "keeper_count": 0,
+      "total_seasons": 5,
+      "seasons": [
+        2013,
+        2015,
+        2016,
+        2017,
+        2020
+      ],
+      "first_season": 2013,
+      "last_season": 2020
+    },
+    {
+      "player_name": "Bears",
+      "manager": "Evan",
+      "franchise_id": "F05",
+      "position": "DEF",
+      "draft_count": 4,
+      "keeper_count": 1,
+      "total_seasons": 5,
+      "seasons": [
+        2010,
+        2013,
+        2014,
+        2018,
+        2019
+      ],
+      "first_season": 2010,
+      "last_season": 2019
+    },
+    {
+      "player_name": "Patriots",
+      "manager": "Kevin Swanson",
+      "franchise_id": "F11",
+      "position": "DEF",
+      "draft_count": 5,
+      "keeper_count": 0,
+      "total_seasons": 5,
+      "seasons": [
+        2002,
+        2009,
+        2012,
+        2015,
+        2018
+      ],
+      "first_season": 2002,
+      "last_season": 2018
+    },
+    {
+      "player_name": "Cooper Kupp",
+      "manager": "Evan",
+      "franchise_id": "F05",
+      "position": "WR",
+      "draft_count": 5,
+      "keeper_count": 0,
+      "total_seasons": 5,
+      "seasons": [
+        2017,
+        2018,
+        2021,
+        2022,
+        2023
+      ],
+      "first_season": 2017,
+      "last_season": 2023
+    },
+    {
+      "player_name": "Chris Johnson",
+      "manager": "Brian Clark",
+      "franchise_id": "F02",
+      "position": "RB",
+      "draft_count": 1,
+      "keeper_count": 4,
+      "total_seasons": 5,
+      "seasons": [
+        2008,
+        2009,
+        2010,
+        2011,
+        2012
+      ],
+      "first_season": 2008,
+      "last_season": 2012
+    }
+  ],
+  "tail": [
+    {
+      "player_name": "Giants",
+      "manager": "Byron",
+      "franchise_id": "F03",
+      "position": "DEF",
+      "draft_count": 1,
+      "keeper_count": 0,
+      "total_seasons": 1,
+      "seasons": [
+        2001
+      ],
+      "first_season": 2001,
+      "last_season": 2001
+    },
+    {
+      "player_name": "Giants",
+      "manager": "Dominic",
+      "franchise_id": "F03",
+      "position": "DEF",
+      "draft_count": 1,
+      "keeper_count": 0,
+      "total_seasons": 1,
+      "seasons": [
+        2009
+      ],
+      "first_season": 2009,
+      "last_season": 2009
+    },
+    {
+      "player_name": "Giants",
+      "manager": "Evan",
+      "franchise_id": "F05",
+      "position": "DEF",
+      "draft_count": 1,
+      "keeper_count": 0,
+      "total_seasons": 1,
+      "seasons": [
+        2006
+      ],
+      "first_season": 2006,
+      "last_season": 2006
+    },
+    {
+      "player_name": "Giants",
+      "manager": "Nick Blaettler",
+      "franchise_id": "F04",
+      "position": "DEF",
+      "draft_count": 1,
+      "keeper_count": 0,
+      "total_seasons": 1,
+      "seasons": [
+        2013
+      ],
+      "first_season": 2013,
+      "last_season": 2013
+    },
+    {
+      "player_name": "Giants",
+      "manager": "Shawn",
+      "franchise_id": "F09",
+      "position": "DEF",
+      "draft_count": 1,
+      "keeper_count": 0,
+      "total_seasons": 1,
+      "seasons": [
+        2011
+      ],
+      "first_season": 2011,
+      "last_season": 2011
+    },
+    {
+      "player_name": "Giants",
+      "manager": "Steve Swanson",
+      "franchise_id": "F08",
+      "position": "DEF",
+      "draft_count": 1,
+      "keeper_count": 0,
+      "total_seasons": 1,
+      "seasons": [
+        2008
+      ],
+      "first_season": 2008,
+      "last_season": 2008
+    },
+    {
+      "player_name": "Giants",
+      "manager": "Thomas",
+      "franchise_id": "F12",
+      "position": "DEF",
+      "draft_count": 1,
+      "keeper_count": 0,
+      "total_seasons": 1,
+      "seasons": [
+        2015
+      ],
+      "first_season": 2015,
+      "last_season": 2015
+    },
+    {
+      "player_name": "Giorgio Tavecchio",
+      "manager": "Steve Swanson",
+      "franchise_id": "F08",
+      "position": "K",
+      "draft_count": 1,
+      "keeper_count": 0,
+      "total_seasons": 1,
+      "seasons": [
+        2019
+      ],
+      "first_season": 2019,
+      "last_season": 2019
+    },
+    {
+      "player_name": "Giovani Bernard",
+      "manager": "Brian Clark",
+      "franchise_id": "F02",
+      "position": "RB",
+      "draft_count": 1,
+      "keeper_count": 0,
+      "total_seasons": 1,
+      "seasons": [
+        2014
+      ],
+      "first_season": 2014,
+      "last_season": 2014
+    },
+    {
+      "player_name": "Giovani Bernard",
+      "manager": "Dominic",
+      "franchise_id": "F03",
+      "position": "RB",
+      "draft_count": 1,
+      "keeper_count": 0,
+      "total_seasons": 1,
+      "seasons": [
+        2018
+      ],
+      "first_season": 2018,
+      "last_season": 2018
+    },
+    {
+      "player_name": "Giovani Bernard",
+      "manager": "Robby",
+      "franchise_id": "F07",
+      "position": "RB",
+      "draft_count": 1,
+      "keeper_count": 0,
+      "total_seasons": 1,
+      "seasons": [
+        2015
+      ],
+      "first_season": 2015,
+      "last_season": 2015
+    },
+    {
+      "player_name": "Giovani Bernard",
+      "manager": "Steve Swanson",
+      "franchise_id": "F08",
+      "position": "RB",
+      "draft_count": 1,
+      "keeper_count": 0,
+      "total_seasons": 1,
+      "seasons": [
+        2016
+      ],
+      "first_season": 2016,
+      "last_season": 2016
+    },
+    {
+      "player_name": "Giovani Bernard",
+      "manager": "Thomas",
+      "franchise_id": "F12",
+      "position": "RB",
+      "draft_count": 1,
+      "keeper_count": 0,
+      "total_seasons": 1,
+      "seasons": [
+        2017
+      ],
+      "first_season": 2017,
+      "last_season": 2017
+    },
+    {
+      "player_name": "Golden Tate",
+      "manager": "Adam",
+      "franchise_id": "F01",
+      "position": "WR",
+      "draft_count": 1,
+      "keeper_count": 0,
+      "total_seasons": 1,
+      "seasons": [
+        2014
+      ],
+      "first_season": 2014,
+      "last_season": 2014
+    },
+    {
+      "player_name": "Golden Tate",
+      "manager": "Dominic",
+      "franchise_id": "F03",
+      "position": "WR",
+      "draft_count": 1,
+      "keeper_count": 0,
+      "total_seasons": 1,
+      "seasons": [
+        2016
+      ],
+      "first_season": 2016,
+      "last_season": 2016
+    },
+    {
+      "player_name": "Golden Tate",
+      "manager": "Evan",
+      "franchise_id": "F05",
+      "position": "WR",
+      "draft_count": 1,
+      "keeper_count": 0,
+      "total_seasons": 1,
+      "seasons": [
+        2018
+      ],
+      "first_season": 2018,
+      "last_season": 2018
+    },
+    {
+      "player_name": "Golden Tate",
+      "manager": "Jeff",
+      "franchise_id": "F07",
+      "position": "WR",
+      "draft_count": 1,
+      "keeper_count": 0,
+      "total_seasons": 1,
+      "seasons": [
+        2017
+      ],
+      "first_season": 2017,
+      "last_season": 2017
+    },
+    {
+      "player_name": "Golden Tate",
+      "manager": "Kevin Swanson",
+      "franchise_id": "F11",
+      "position": "WR",
+      "draft_count": 1,
+      "keeper_count": 0,
+      "total_seasons": 1,
+      "seasons": [
+        2019
+      ],
+      "first_season": 2019,
+      "last_season": 2019
+    },
+    {
+      "player_name": "Golden Tate",
+      "manager": "Nick Blaettler",
+      "franchise_id": "F04",
+      "position": "WR",
+      "draft_count": 1,
+      "keeper_count": 0,
+      "total_seasons": 1,
+      "seasons": [
+        2013
+      ],
+      "first_season": 2013,
+      "last_season": 2013
+    },
+    {
+      "player_name": "Zay Jones",
+      "manager": "Steve Swanson",
+      "franchise_id": "F08",
+      "position": "WR",
+      "draft_count": 1,
+      "keeper_count": 0,
+      "total_seasons": 1,
+      "seasons": [
+        2023
+      ],
+      "first_season": 2023,
+      "last_season": 2023
+    }
+  ]
+}

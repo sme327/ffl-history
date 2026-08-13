@@ -8,6 +8,33 @@ For detailed methodology, data quirks, and the reasoning behind decisions, see *
 
 ---
 
+## Tests
+
+```
+python3 -m unittest discover -s tests -p 'test_*.py'
+```
+
+Golden-file tests over every derivation in `utils/data.py`, plus a handful of
+invariants (one champion per season, champions outscored their runner-up, no
+rivalry with more wins than games, every drafted player has a position). They
+run without Streamlit — `tests/_harness.py` stubs it out.
+
+They don't encode what the numbers *should* be. They encode what they *were*,
+which is the question that matters for a 25-year archive: **did anything change
+that nobody meant to change?**
+
+When a change *is* intended — a new season, a data correction, a deliberately
+reworked derivation — re-record it:
+
+```
+python3 tests/capture_fixtures.py
+```
+
+Then review the diff in `tests/fixtures/` before committing. A fixture diff in
+a commit is the signal that league history moved; an unexplained one is a bug.
+
+---
+
 ## Scripts
 
 ### `fetch_yahoo_data.py`

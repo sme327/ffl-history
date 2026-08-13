@@ -60,6 +60,30 @@ Every one of those is a correctness bug found by a human reading the site — on
 
 **Fix:** golden-file tests. Capture the current output of the ~20 derivation functions as JSON fixtures and assert against them. This costs an afternoon, immediately protects the most subtle logic in the project, and — per the self-hosting plan — becomes the acceptance gate if you ever port off Streamlit. Your concert archive already does exactly this.
 
+**Status: done** — `tests/` now covers all 20 derivations plus five invariants, 25 tests total. It caught a live bug on its first run; see F2a.
+
+### F2a — The rivalries ranking rearranged itself on every restart ✅ **fixed**
+
+The first run of the new suite failed by comparing the app against itself: `get_all_rivalries()` returned rows in a different order across two runs over identical data.
+
+Root cause, `utils/data.py:1072`:
+
+```python
+all_pairs = set(rs_dedup["pair"].unique()) | set(champ["pair"].unique())
+...
+for pair in all_pairs:
+```
+
+Iterating a Python `set` of `(name, name)` tuples follows string hashing, which is **randomized per process**. Rows were therefore assembled in a different order on every restart. Compounding it, `rivalry_score` is rounded to an integer — producing many ties — and `sort_values` defaults to a **non-stable** quicksort, leaving tied rivalries in whatever order they happened to arrive.
+
+The numbers themselves were never wrong: every rivalry's games and win totals were identical across runs. What moved was **the ranking**. And `pages/rivalries.py:365` renders `all_rivalries.head(10)` as the Top 10 Rivalries, with `:301` featuring `iloc[0]` in the hero. A rivalry sitting at #10 one week would silently vanish from the page the next — no data change, nothing in the git log to explain it.
+
+For a museum, that's a serious defect: the exhibit was quietly rearranging itself between visits. It's also a plausible source of the kind of "this plaque looks wrong" report behind commit `d865496`.
+
+**Fixed** by sorting `all_pairs` before iteration and giving the final sort a total, stable ordering (`rivalry_score` → `rivalry_raw` → both names, `kind="mergesort"`). Verified byte-identical output across four `PYTHONHASHSEED` values.
+
+The general lesson is worth keeping: **`set` iteration order is not a stable foundation for anything a reader will see.** The other `set` uses in `data.py` (lines 688, 931) are membership tests rather than iteration, so they're unaffected — but it's the pattern to watch for.
+
 ### F3 — Hardcoded prose inside a dynamically computed branch
 
 `app.py:54–66` correctly detects at runtime whether the best regular season is a tie, then hardcodes the explanation:
@@ -170,9 +194,9 @@ Every page uses `layout="wide"`, and the home page renders `st.columns(5)` for r
 
 | # | Action | Effort | Why |
 |---|---|---|---|
-| 1 | **Commit the untracked pipeline scripts and docs** (F1) | 2 min | Data pipeline currently exists on one machine |
-| 2 | Editorial pass over `NFL_CONTEXT` (F4) | ~1 hr | Two errors in four sampled seasons; copy is the product |
-| 3 | Golden-file tests for `utils/data.py` (F2) | ~1 afternoon | Stops league members from finding your bugs |
+| ~~1~~ | ~~**Commit the untracked pipeline scripts and docs** (F1)~~ | — | ✅ Done — `97deb37` |
+| ~~2~~ | ~~Golden-file tests for `utils/data.py` (F2)~~ | — | ✅ Done — found and fixed F2a on the first run |
+| 3 | Editorial pass over `NFL_CONTEXT` (F4) | ~1 hr | Two errors in four sampled seasons; copy is the product |
 | 4 | Raise minimum font size, check grey contrast (F10) | ~1 hr | Widens the audience; your readers are older now |
 | 5 | Fix the hardcoded 12-1 prose (F3) | 15 min | Latent wrong-claim bug |
 | 6 | Self-invalidating cache key (F5) | 15 min | Silent stale-data risk during routine edits |

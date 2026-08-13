@@ -1,0 +1,166 @@
+{
+  "type": "dataframe",
+  "shape": [
+    12,
+    10
+  ],
+  "columns": [
+    "franchise_id",
+    "established",
+    "current_manager",
+    "wins",
+    "losses",
+    "ties",
+    "championships",
+    "playoff_apps",
+    "win_pct",
+    "seasons"
+  ],
+  "digest": "9afc07cc43a29cdf71df3f8a3c1080035f181484230d3df58e5691705f63a3e0",
+  "rows": [
+    {
+      "franchise_id": "F01",
+      "established": 2001,
+      "current_manager": "Douglas",
+      "wins": 141,
+      "losses": 191,
+      "ties": 0,
+      "championships": 2,
+      "playoff_apps": 8,
+      "win_pct": 0.425,
+      "seasons": 25
+    },
+    {
+      "franchise_id": "F02",
+      "established": 2001,
+      "current_manager": "Brian Clark",
+      "wins": 172,
+      "losses": 160,
+      "ties": 0,
+      "championships": 4,
+      "playoff_apps": 16,
+      "win_pct": 0.518,
+      "seasons": 25
+    },
+    {
+      "franchise_id": "F03",
+      "established": 2001,
+      "current_manager": "Dominic",
+      "wins": 154,
+      "losses": 179,
+      "ties": 0,
+      "championships": 5,
+      "playoff_apps": 14,
+      "win_pct": 0.462,
+      "seasons": 25
+    },
+    {
+      "franchise_id": "F04",
+      "established": 2001,
+      "current_manager": "Eric",
+      "wins": 194,
+      "losses": 138,
+      "ties": 0,
+      "championships": 1,
+      "playoff_apps": 21,
+      "win_pct": 0.584,
+      "seasons": 25
+    },
+    {
+      "franchise_id": "F05",
+      "established": 2001,
+      "current_manager": "Evan",
+      "wins": 168,
+      "losses": 164,
+      "ties": 0,
+      "championships": 2,
+      "playoff_apps": 16,
+      "win_pct": 0.506,
+      "seasons": 25
+    },
+    {
+      "franchise_id": "F06",
+      "established": 2001,
+      "current_manager": "Fadi",
+      "wins": 161,
+      "losses": 170,
+      "ties": 0,
+      "championships": 1,
+      "playoff_apps": 16,
+      "win_pct": 0.486,
+      "seasons": 25
+    },
+    {
+      "franchise_id": "F07",
+      "established": 2001,
+      "current_manager": "Jeff",
+      "wins": 158,
+      "losses": 174,
+      "ties": 0,
+      "championships": 4,
+      "playoff_apps": 16,
+      "win_pct": 0.476,
+      "seasons": 25
+    },
+    {
+      "franchise_id": "F08",
+      "established": 2001,
+      "current_manager": "Steve Swanson",
+      "wins": 172,
+      "losses": 160,
+      "ties": 0,
+      "championships": 1,
+      "playoff_apps": 17,
+      "win_pct": 0.518,
+      "seasons": 25
+    },
+    {
+      "franchise_id": "F09",
+      "established": 2001,
+      "current_manager": "Shawn",
+      "wins": 173,
+      "losses": 160,
+      "ties": 0,
+      "championships": 0,
+      "playoff_apps": 16,
+      "win_pct": 0.52,
+      "seasons": 25
+    },
+    {
+      "franchise_id": "F10",
+      "established": 2002,
+      "current_manager": "Kevin O'Boyle",
+      "wins": 159,
+      "losses": 159,
+      "ties": 0,
+      "championships": 2,
+      "playoff_apps": 15,
+      "win_pct": 0.5,
+      "seasons": 24
+    },
+    {
+      "franchise_id": "F11",
+      "established": 2002,
+      "current_manager": "Kevin Swanson",
+      "wins": 173,
+      "losses": 146,
+      "ties": 0,
+      "championships": 1,
+      "playoff_apps": 18,
+      "win_pct": 0.542,
+      "seasons": 24
+    },
+    {
+      "franchise_id": "F12",
+      "established": 2003,
+      "current_manager": "Thomas",
+      "wins": 141,
+      "losses": 165,
+      "ties": 0,
+      "championships": 2,
+      "playoff_apps": 13,
+      "win_pct": 0.461,
+      "seasons": 23
+    }
+  ]
+}

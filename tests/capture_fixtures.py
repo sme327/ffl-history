@@ -1,0 +1,118 @@
+"""Capture the current derived outputs of utils/data.py as golden fixtures.
+
+    python3 tests/capture_fixtures.py
+
+Run this deliberately, never automatically. The fixtures record what the app
+computes *today*, and tests/test_derivations.py asserts nothing has drifted
+since. Regenerating them is how you accept a change — so a diff on
+tests/fixtures/ in code review is the signal that league history moved.
+
+Legitimate reasons to regenerate:
+  - new season added to data/
+  - a data correction (see git log for the running list of those)
+  - a derivation was deliberately changed, and the new numbers were eyeballed
+
+If the fixtures change and none of those apply, that's the bug this suite exists
+to catch.
+"""
+
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from _harness import dump, install_streamlit_stub, normalize  # noqa: E402
+
+install_streamlit_stub()
+
+from utils import data as D  # noqa: E402
+
+# Every no-argument derivation. If you add one to utils/data.py, add it here.
+GLOBAL_DERIVATIONS = [
+    "get_champions",
+    "get_manager_stats",
+    "get_all_time_manager_stats",
+    "get_manager_season_history",  # parameterized — handled below, listed for the audit
+    "get_franchise_steward_periods",
+    "get_franchise_stats",
+    "get_timeline_events",
+    "get_draft_picks_with_pos",
+    "get_position_trends_data",
+    "get_draft_records",
+    "get_keeper_chains",
+    "get_player_ownership",
+    "get_keeper_enriched",
+    "get_all_rivalries",
+    "get_franchise_rivalries",
+    "get_playoff_eliminations",
+]
+
+PARAMETERIZED = {"get_manager_season_history", "get_manager_h2h", "get_franchise_legends", "get_h2h_detail"}
+
+# How many rivalries get full game-by-game capture. The pairwise space is 195
+# rows; the ones with real history are what the site actually surfaces.
+TOP_RIVALRIES = 15
+
+
+def capture_schema() -> None:
+    """Row counts and columns of the raw CSVs — catches a schema change early."""
+    payload = {
+        key: {"shape": list(df.shape), "columns": [str(c) for c in df.columns]}
+        for key, df in sorted(D.load_all().items())
+    }
+    dump("00_source_schema", {"type": "schema", "value": payload})
+    print(f"  00_source_schema           {len(payload)} tables")
+
+
+def capture_globals() -> None:
+    for name in GLOBAL_DERIVATIONS:
+        if name in PARAMETERIZED:
+            continue
+        payload = normalize(getattr(D, name)())
+        dump(name, payload)
+        shape = payload.get("shape") or payload.get("length") or "—"
+        print(f"  {name:26} {shape}")
+
+
+def capture_by_manager() -> None:
+    managers = sorted(D.get_manager_stats()["canonical_name"].tolist())
+
+    for fn_name in ("get_manager_season_history", "get_manager_h2h"):
+        fn = getattr(D, fn_name)
+        payload = {"type": "dict", "value": {m: normalize(fn(m)) for m in managers}}
+        dump(fn_name, payload)
+        print(f"  {fn_name:26} {len(managers)} managers")
+
+
+def capture_by_franchise() -> None:
+    franchises = sorted(D.get_franchise_stats()["franchise_id"].tolist())
+    payload = {"type": "dict", "value": {f: normalize(D.get_franchise_legends(f)) for f in franchises}}
+    dump("get_franchise_legends", payload)
+    print(f"  {'get_franchise_legends':26} {len(franchises)} franchises")
+
+
+def capture_rivalry_detail() -> None:
+    riv = D.get_all_rivalries().sort_values("rs_games", ascending=False).head(TOP_RIVALRIES)
+    pairs = [(row["mgr_a"], row["mgr_b"]) for _, row in riv.iterrows()]
+    payload = {
+        "type": "dict",
+        "value": {f"{a} vs {b}": normalize(D.get_h2h_detail(a, b)) for a, b in pairs},
+    }
+    dump("get_h2h_detail", payload)
+    print(f"  {'get_h2h_detail':26} {len(pairs)} rivalries")
+
+
+def main() -> None:
+    print("Capturing fixtures from data/ ...")
+    capture_schema()
+    capture_globals()
+    capture_by_manager()
+    capture_by_franchise()
+    capture_rivalry_detail()
+    print("\nWrote tests/fixtures/. Review the diff before committing.")
+
+
+if __name__ == "__main__":
+    main()
