@@ -4,6 +4,8 @@
 This folder contains the data pipeline that scrapes and normalizes historical league data
 for use in a Streamlit history app.
 
+For detailed methodology, data quirks, and the reasoning behind decisions, see **[DATA_GUIDE.md](DATA_GUIDE.md)**.
+
 ---
 
 ## Scripts
@@ -73,13 +75,15 @@ Final regular-season standings for each year.
 ### `draft_picks.csv`
 Every pick from every draft.
 **Columns:** `season, round, pick_in_round, overall_pick, team_name, player_name, is_keeper`
-**Coverage:** 2001–2025, except **2011** (Yahoo shows it as auction; real data being sourced from a friend's Excel file)
+**Coverage:** 2001–2025 (complete)
+- 2011: Yahoo incorrectly displays this draft in auction format, but picks are in chronological snake order. Parsed with snake correction for even rounds (`pick_in_round = 12 - pos_in_group`).
 - `is_keeper` detection by era:
   - **2001–2002**: always `False` — no keeper system yet
-  - **2003**: `round == 1` — Yahoo entered keepers as round 1 picks (conceptually the "15th round" keeper slot)
+  - **2003**: Yahoo entered keepers as round 1 picks; normalized to `round = 15` in the scraper so they don't pollute first-round analysis
   - **2004–2009**: `round == 15` and player not `--empty--` — no Yahoo indicator; empty round-15 slots mean keeper not exercised
-  - **2010+**: derived from Yahoo's "K" marker (`<span title="Keeper Salary: ...">` or `"This player is a keeper."` in older years)
-- Keeper cost = the draft round the player is kept at (one round earlier than they were drafted the prior year). No separate FAAB cost column — Yahoo's "Keeper Salary" field reflects internal encoding, not a real dollar cost.
+  - **2010–2013**: Yahoo "K" marker detected; keepers appearing in R1 (2013 transition year) normalized to R15
+  - **2014+**: Yahoo "K" marker; keepers appear at their true cost round (one round earlier than drafted the prior year)
+- Keeper cost = the draft round the player is kept at. No separate FAAB cost column — Yahoo's "Keeper Salary" field reflects internal encoding, not a real dollar cost.
 - No `player_pos` column — Yahoo's draft results page does not expose position; join to `player_positions.csv` on `player_name` to get position
 
 ---
@@ -89,7 +93,7 @@ Position lookup for every player ever drafted. Built by `build_player_positions.
 **Columns:** `player_name, position, match_source`
 - `position`: NFL position abbreviation (`QB`, `RB`, `WR`, `TE`, `K`, `DEF`)
 - `match_source`: how the position was resolved — `nflverse`, `nflverse_ambiguous`, `nflverse_no_suffix`, `nflverse_nickname`, `defense`, or `manual`
-- 1,140 rows; 100% coverage of drafted players
+- 1,128 rows; 100% coverage of drafted players
 - Join to `draft_picks.csv` on `player_name`
 
 ---
@@ -202,15 +206,19 @@ Final week roster snapshots. Currently only has 2001 week 17 data — deferred.
 
 ---
 
-## Reference Images
-
-- **`history of finishes.png`** — original screenshot of historical finish table (pre-scraper reference)
-- **`history of managers.png`** — original screenshot of historical manager list (pre-scraper reference)
+### `manual_timeline_events.csv`
+Hand-authored narrative events for the league timeline. Supplements scraped data with editorial milestones, dynasty markers, heartbreak moments, and franchise transitions that have no structured data source.
+**Columns:** `season, event_date, event_type, title, description, manager, franchise_id, team_name, player_name, importance, source, show_on_homepage, show_on_league_timeline, show_on_franchise_page, show_on_manager_page`
+- `event_type`: `milestone`, `dynasty`, `heartbreak`, `note`, `rule_change`, `steward_change`, `breakthrough`
+- `importance`: `high`, `medium`, `low` — controls display prominence
+- `show_on_*` flags: control which pages surface the event
+- `source` is always `editorial` for this file (as opposed to scraped events added by other pages)
 
 ---
 
-## Hidden Files
+## Other Files
 
+- **`archive/`** — completed one-time migration scripts; kept for documentation of methodology but not intended to be run again
 - **`.yahoo_cookies.json`** — saved Yahoo login session; delete to force fresh login
 - **`.claude/`** — Claude Code project memory (do not delete)
 
@@ -220,7 +228,7 @@ Final week roster snapshots. Currently only has 2001 week 17 data — deferred.
 
 | Item | Status |
 |------|--------|
-| 2011 draft picks | Pending — sourcing from friend's Excel file |
+| 2011 draft picks | Complete — scraped from Yahoo auction-format page with snake correction |
 | `roster_moves.csv` | Not yet built — FA adds/drops/waivers from transactions page |
 | `league_settings.csv` | Built manually; requires manual updates if league settings change |
 | Consolation bracket matchups | Not captured in `weekly_matchups` (only championship bracket) |

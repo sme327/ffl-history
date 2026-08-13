@@ -21,3 +21,9 @@ env/
 
 # iCloud
 *.icloud
+
+# Large reference files (re-downloadable)
+data/ref_nfl_players.csv
+
+# JetBrains
+.idea/
