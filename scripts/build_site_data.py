@@ -120,6 +120,12 @@ def build(out: Path) -> None:
         "managerEmoji": D.MANAGER_EMOJI,
     })
 
+    home = D.get_home_view()
+    if normalize(home) != load_fixture("get_home_view"):
+        raise SystemExit("\n  home view does not match its fixture — refusing to emit.\n")
+    verify.checked += 1
+    site.write("home", home)
+
     # ── Champions & timeline ─────────────────────────────────────────────────
     champions = verify.frame("get_champions", D.get_champions())
     site.write("champions", records(champions))
@@ -256,7 +262,7 @@ def build(out: Path) -> None:
 PAGE_LEVEL_WORK = {
     # season_archive.py: done 2026-08-13 -> utils.data.get_season_detail()
     # league_timeline.py: done 2026-08-13 -> get_timeline_view() + group_timeline_by_season()
-    "app.py": "home-page storylines: best season, title droughts, top scorer",
+    # app.py: done 2026-08-13 -> get_home_view()
     "champions.py": "title-game context and dynasty framing",
     "franchise_profiles.py": "per-franchise season tables and lineage narrative",
     "league_history.py": "era summaries, competitive-balance trends",

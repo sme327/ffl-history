@@ -591,3 +591,35 @@ IMPORTANCE_LABELS: dict[str, str] = {"high": "MAJOR", "medium": "NOTABLE", "low"
 
 # Sort weight for laying out a season's events; unknown values sit with medium.
 IMPORTANCE_ORDER: dict[str, int] = {"high": 0, "medium": 1, "low": 2}
+
+
+def best_season_summary(entries: list[dict], record: str) -> str:
+    """Copy for the best regular season in league history.
+
+    `entries` is one dict per manager tied for the record:
+    {"manager": str, "season": int, "won_title": bool}.
+
+    Replaces a hardcoded sentence that named Clark and Fadi directly. The
+    headline above it was always computed, so the moment a third manager
+    matched the record — or the record itself was broken — the numbers would
+    have updated while the prose kept describing the old pair.
+    """
+    if not entries:
+        return ""
+
+    if len(entries) == 1:
+        return f"{entries[0]['manager']} — the most dominant regular season in league history."
+
+    counts = {2: "two", 3: "three", 4: "four", 5: "five"}
+    names = " & ".join(e["manager"] for e in entries)
+    lead = (
+        f"{names} — the only {counts.get(len(entries), len(entries))} managers "
+        f"in league history to go {record}."
+    )
+    clauses = [
+        f"{e['manager']} won the title in {e['season']}."
+        if e["won_title"]
+        else f"{e['manager']} went {record} in {e['season']} and still lost in the playoffs."
+        for e in entries
+    ]
+    return " ".join([lead, *clauses])

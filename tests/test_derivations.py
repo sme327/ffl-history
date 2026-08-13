@@ -157,6 +157,23 @@ class TestDraftAndKeepers(FixtureAssertions):
         self.assert_matches("get_player_ownership", D.get_player_ownership())
 
 
+class TestHome(FixtureAssertions):
+    def test_home_view(self):
+        """Covers the logic lifted out of app.py."""
+        self.assert_matches("get_home_view", D.get_home_view())
+
+    def test_legends_are_ordered_deterministically(self):
+        legends = D.get_home_view()["legends"]
+        keys = [(-l["titles"], l["manager"]) for l in legends]
+        self.assertEqual(keys, sorted(keys), "legends must sort by titles then name")
+
+    def test_best_season_copy_names_every_tied_manager(self):
+        """The old copy hardcoded two names; regenerating must cover them all."""
+        best = D.get_home_view()["storylines"]["best_season"]
+        for manager in best["managers"]:
+            self.assertIn(manager, best["summary"], f"{manager} missing from best-season copy")
+
+
 class TestSeasons(FixtureAssertions):
     def test_season_list(self):
         seasons = D.get_all_seasons()

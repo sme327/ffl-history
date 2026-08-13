@@ -101,6 +101,8 @@ This is the fix for `63b4355` having introduced a latent bug of the same species
 
 **Fix:** move the editorial line into `narratives.py`, keyed by season, and select it from the computed result — or generate it from data. The pattern to avoid is *computed number, hardcoded explanation*.
 
+**Status: fixed** — `narratives.best_season_summary()` now generates the sentence from the tied managers and whether each won the title that year, so a third 12-1 season or a broken record updates the prose with the numbers. A test asserts every tied manager is named in the copy.
+
 ### F4 — Factual errors in the NFL context copy
 
 Spot-checking `narratives.py`'s `NFL_CONTEXT` surfaced two errors in the first four seasons:
@@ -198,7 +200,7 @@ Every page uses `layout="wide"`, and the home page renders `st.columns(5)` for r
 | ~~2~~ | ~~Golden-file tests for `utils/data.py` (F2)~~ | — | ✅ Done — found and fixed F2a on the first run |
 | 3 | Editorial pass over `NFL_CONTEXT` (F4) | ~1 hr | Two errors in four sampled seasons; copy is the product |
 | 4 | Raise minimum font size, check grey contrast (F10) | ~1 hr | Widens the audience; your readers are older now |
-| 5 | Fix the hardcoded 12-1 prose (F3) | 15 min | Latent wrong-claim bug |
+| ~~5~~ | ~~Fix the hardcoded 12-1 prose (F3)~~ | — | ✅ Done |
 | 6 | Self-invalidating cache key (F5) | 15 min | Silent stale-data risk during routine edits |
 | 7 | Palette + fonts into CSS custom properties (F8) | ~1 hr | Removes the worst of the find-and-replace tax |
 | 8 | Start `manager_lore.csv` (F6) | ongoing | The highest-value work in the project |

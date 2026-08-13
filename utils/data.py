@@ -1567,3 +1567,134 @@ def group_timeline_by_season(events: list[dict], newest_first: bool = True) -> l
             "other": [e for e in season_events if e["importance"] != "high"],
         })
     return blocks
+
+
+# ── HOME VIEW ─────────────────────────────────────────────────────────────────
+# Lifted out of app.py. Every ranking here carries an explicit tie-break: the
+# originals used the default non-stable quicksort, so a tie could reorder the
+# league legends or change which manager was named between restarts.
+
+@st.cache_data
+def get_home_view() -> dict:
+    from utils import narratives
+
+    data = load_all()
+    champions = get_champions()
+    manager_stats = get_manager_stats()
+    standings = data["standings"]
+    weekly = data["weekly_matchups"]
+    manager_by_team = (
+        data["team_name_history"].set_index(["season", "team_name"])["canonical_name"].to_dict()
+    )
+
+    # ── Headline counts ──────────────────────────────────────────────────────
+    stats = {
+        "seasons": int(CURRENT_SEASON - FOUNDED + 1),
+        "active_managers": int((manager_stats["last_season"] == CURRENT_SEASON).sum()),
+        "unique_champions": int(champions["champion_manager"].nunique()),
+        "total_games": int(len(weekly[~weekly["is_bye"].astype(bool)]) // 2),
+    }
+
+    def _champion_entry(row) -> dict:
+        manager = row["champion_manager"]
+        return {
+            "season": int(row["season"]),
+            "manager": manager,
+            "team": row["champion_team"],
+            "emoji": MANAGER_EMOJI.get(manager, "🏆"),
+            "score": round(float(row["champion_score"]), 2),
+            "runner_up_team": row["runner_up_team"],
+            "runner_up_score": round(float(row["runner_up_score"]), 2),
+            "titles_to_date": int(
+                ((champions["champion_manager"] == manager)
+                 & (champions["season"] <= row["season"])).sum()
+            ),
+            "titles_all_time": int((champions["champion_manager"] == manager).sum()),
+        }
+
+    current_rows = champions[champions["season"] == CURRENT_SEASON]
+    current_champion = _champion_entry(current_rows.iloc[0]) if len(current_rows) else None
+
+    recent = champions[champions["season"] < CURRENT_SEASON].tail(5).iloc[::-1]
+    recent_champions = [_champion_entry(r) for _, r in recent.iterrows()]
+
+    # ── League legends ───────────────────────────────────────────────────────
+    grouped = (
+        champions.groupby("champion_manager")
+        .agg(titles=("season", "count"),
+             years=("season", lambda s: ", ".join(str(y) for y in sorted(s))))
+        .reset_index()
+        .sort_values(["titles", "champion_manager"], ascending=[False, True], kind="mergesort")
+    )
+    legends = [
+        {
+            "manager": r["champion_manager"],
+            "titles": int(r["titles"]),
+            "years": r["years"],
+            "emoji": MANAGER_EMOJI.get(r["champion_manager"], "👤"),
+        }
+        for _, r in grouped.iterrows()
+    ]
+
+    # ── Best regular season ever ─────────────────────────────────────────────
+    played = standings.copy()
+    played["games"] = played["wins"] + played["losses"] + played["ties"]
+    played["win_pct"] = played["wins"] / played["games"].replace(0, float("nan"))
+    best = played[played["win_pct"] == played["win_pct"].max()].sort_values(
+        ["season", "team_name"], kind="mergesort"
+    )
+    champion_by_season = dict(zip(champions["season"], champions["champion_manager"]))
+    best_entries = [
+        {
+            "manager": manager_by_team.get((int(r["season"]), r["team_name"]), r["team_name"]),
+            "season": int(r["season"]),
+            "won_title": champion_by_season.get(int(r["season"]))
+                         == manager_by_team.get((int(r["season"]), r["team_name"])),
+        }
+        for _, r in best.iterrows()
+    ]
+    best_record = (
+        f"{int(best.iloc[0]['wins'])}-{int(best.iloc[0]['losses'])}" if len(best) else ""
+    )
+
+    # ── Storylines ───────────────────────────────────────────────────────────
+    droughts = manager_stats[
+        (manager_stats["championships"] == 0) & (manager_stats["active"])
+    ].sort_values(["playoff_apps", "canonical_name"], ascending=[False, True], kind="mergesort")
+    drought = None
+    if len(droughts) and int(droughts.iloc[0]["playoff_apps"]) >= 3:
+        row = droughts.iloc[0]
+        drought = {
+            "manager": row["canonical_name"],
+            "playoff_apps": int(row["playoff_apps"]),
+            "emoji": MANAGER_EMOJI.get(row["canonical_name"], "👤"),
+        }
+
+    scorer = manager_stats.sort_values(
+        ["points_for", "canonical_name"], ascending=[False, True], kind="mergesort"
+    ).iloc[0]
+
+    return {
+        "stats": stats,
+        "current_champion": current_champion,
+        "recent_champions": recent_champions,
+        "legends": legends,
+        "drought": drought,
+        "storylines": {
+            "most_championships": {
+                "manager": legends[0]["manager"],
+                "titles": legends[0]["titles"],
+                "years": legends[0]["years"],
+            } if legends else None,
+            "best_season": {
+                "record": best_record,
+                "seasons": [e["season"] for e in best_entries],
+                "managers": [e["manager"] for e in best_entries],
+                "summary": narratives.best_season_summary(best_entries, best_record),
+            },
+            "top_scorer": {
+                "manager": scorer["canonical_name"],
+                "points_for": round(float(scorer["points_for"]), 2),
+            },
+        },
+    }

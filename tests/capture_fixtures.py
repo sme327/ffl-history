@@ -105,6 +105,13 @@ def capture_seasons() -> None:
     print(f"  {'get_season_detail':26} {len(seasons)} seasons")
 
 
+def capture_home() -> None:
+    """Home page view, including the generated best-season copy that replaced
+    a hardcoded sentence naming two managers (product review, F3)."""
+    dump("get_home_view", normalize(D.get_home_view()))
+    print(f"  {'get_home_view':26} home")
+
+
 def capture_timeline() -> None:
     """Enriched timeline events and the season grouping.
 
@@ -138,6 +145,7 @@ def main() -> None:
     capture_by_manager()
     capture_by_franchise()
     capture_seasons()
+    capture_home()
     capture_timeline()
     capture_rivalry_detail()
     print("\nWrote tests/fixtures/. Review the diff before committing.")

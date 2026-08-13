@@ -1,0 +1,608 @@
+{
+  "type": "dict",
+  "value": {
+    "stats": {
+      "type": "dict",
+      "value": {
+        "seasons": {
+          "type": "scalar",
+          "value": 25
+        },
+        "active_managers": {
+          "type": "scalar",
+          "value": 12
+        },
+        "unique_champions": {
+          "type": "scalar",
+          "value": 11
+        },
+        "total_games": {
+          "type": "scalar",
+          "value": 2272
+        }
+      }
+    },
+    "current_champion": {
+      "type": "dict",
+      "value": {
+        "season": {
+          "type": "scalar",
+          "value": 2025
+        },
+        "manager": {
+          "type": "scalar",
+          "value": "Thomas"
+        },
+        "team": {
+          "type": "scalar",
+          "value": "Fuzzy Bears"
+        },
+        "emoji": {
+          "type": "scalar",
+          "value": "🐻"
+        },
+        "score": {
+          "type": "scalar",
+          "value": 97.34
+        },
+        "runner_up_team": {
+          "type": "scalar",
+          "value": "Futball in the Groin"
+        },
+        "runner_up_score": {
+          "type": "scalar",
+          "value": 79.65
+        },
+        "titles_to_date": {
+          "type": "scalar",
+          "value": 2
+        },
+        "titles_all_time": {
+          "type": "scalar",
+          "value": 2
+        }
+      }
+    },
+    "recent_champions": {
+      "type": "list",
+      "length": 5,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2024
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "team": {
+              "type": "scalar",
+              "value": "This Is How We Do"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "👑"
+            },
+            "score": {
+              "type": "scalar",
+              "value": 98.86
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Goood Times"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 98.74
+            },
+            "titles_to_date": {
+              "type": "scalar",
+              "value": 1
+            },
+            "titles_all_time": {
+              "type": "scalar",
+              "value": 1
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2023
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "team": {
+              "type": "scalar",
+              "value": "“I’ll take Kittle”"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🏈"
+            },
+            "score": {
+              "type": "scalar",
+              "value": 113.18
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "team old style"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 55.14
+            },
+            "titles_to_date": {
+              "type": "scalar",
+              "value": 5
+            },
+            "titles_all_time": {
+              "type": "scalar",
+              "value": 5
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2022
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Bryan Kearney"
+            },
+            "team": {
+              "type": "scalar",
+              "value": "Good Douche Bag"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "💪"
+            },
+            "score": {
+              "type": "scalar",
+              "value": 77.76
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Fuzzy Bears"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 75.5
+            },
+            "titles_to_date": {
+              "type": "scalar",
+              "value": 1
+            },
+            "titles_all_time": {
+              "type": "scalar",
+              "value": 1
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2021
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "team": {
+              "type": "scalar",
+              "value": "“I’ll take Kittle”"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🏈"
+            },
+            "score": {
+              "type": "scalar",
+              "value": 86.87
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Guinness"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 65.93
+            },
+            "titles_to_date": {
+              "type": "scalar",
+              "value": 4
+            },
+            "titles_all_time": {
+              "type": "scalar",
+              "value": 5
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "season": {
+              "type": "scalar",
+              "value": 2020
+            },
+            "manager": {
+              "type": "scalar",
+              "value": "Douglas"
+            },
+            "team": {
+              "type": "scalar",
+              "value": "Mean Machine 22"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "⚙️"
+            },
+            "score": {
+              "type": "scalar",
+              "value": 89.36
+            },
+            "runner_up_team": {
+              "type": "scalar",
+              "value": "Bears"
+            },
+            "runner_up_score": {
+              "type": "scalar",
+              "value": 83.94
+            },
+            "titles_to_date": {
+              "type": "scalar",
+              "value": 2
+            },
+            "titles_all_time": {
+              "type": "scalar",
+              "value": 2
+            }
+          }
+        }
+      ]
+    },
+    "legends": {
+      "type": "list",
+      "length": 11,
+      "value": [
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 5
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2007, 2008, 2011, 2021, 2023"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🏈"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 4
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2009, 2010, 2016, 2018"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Jamie"
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 4
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2001, 2002, 2003, 2004"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "😇"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Douglas"
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 2
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2017, 2020"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "⚙️"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Evan"
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 2
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2012, 2013"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🎉"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Kevin O'Boyle"
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 2
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2005, 2015"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🍺"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Thomas"
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 2
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2014, 2025"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🐻"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Bryan Kearney"
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 1
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2022"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "💪"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Fadi"
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 1
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2024"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "👑"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Kevin Swanson"
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 1
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2006"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🧔"
+            }
+          }
+        },
+        {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Steve Swanson"
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 1
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2019"
+            },
+            "emoji": {
+              "type": "scalar",
+              "value": "🐻"
+            }
+          }
+        }
+      ]
+    },
+    "drought": {
+      "type": "dict",
+      "value": {
+        "manager": {
+          "type": "scalar",
+          "value": "Shawn"
+        },
+        "playoff_apps": {
+          "type": "scalar",
+          "value": 16
+        },
+        "emoji": {
+          "type": "scalar",
+          "value": "🐝"
+        }
+      }
+    },
+    "storylines": {
+      "type": "dict",
+      "value": {
+        "most_championships": {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Dominic"
+            },
+            "titles": {
+              "type": "scalar",
+              "value": 5
+            },
+            "years": {
+              "type": "scalar",
+              "value": "2007, 2008, 2011, 2021, 2023"
+            }
+          }
+        },
+        "best_season": {
+          "type": "dict",
+          "value": {
+            "record": {
+              "type": "scalar",
+              "value": "12-1"
+            },
+            "seasons": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": 2009
+                },
+                {
+                  "type": "scalar",
+                  "value": 2010
+                }
+              ]
+            },
+            "managers": {
+              "type": "list",
+              "length": 2,
+              "value": [
+                {
+                  "type": "scalar",
+                  "value": "Brian Clark"
+                },
+                {
+                  "type": "scalar",
+                  "value": "Fadi"
+                }
+              ]
+            },
+            "summary": {
+              "type": "scalar",
+              "value": "Brian Clark & Fadi — the only two managers in league history to go 12-1. Brian Clark won the title in 2009. Fadi went 12-1 in 2010 and still lost in the playoffs."
+            }
+          }
+        },
+        "top_scorer": {
+          "type": "dict",
+          "value": {
+            "manager": {
+              "type": "scalar",
+              "value": "Brian Clark"
+            },
+            "points_for": {
+              "type": "scalar",
+              "value": 25213.33
+            }
+          }
+        }
+      }
+    }
+  }
+}

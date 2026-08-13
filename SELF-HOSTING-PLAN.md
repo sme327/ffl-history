@@ -166,7 +166,7 @@ The bulk of the work. `utils/styles.py` (886 lines) already has the right instin
 |---|---|---|---|
 | ~~1~~ | ~~`season_archive.py`~~ | 338 | ✅ **Logic extracted 2026-08-13** → `get_season_detail()`, fixture-covered for all 25 seasons, page is now presentation-only. Presentation port pending the site scaffold |
 | ~~2~~ | ~~`league_timeline.py`~~ | 324 | ✅ **Logic extracted 2026-08-13** → `get_timeline_view()` + `group_timeline_by_season()`, verified across 192 filter combinations |
-| 3 | `app.py` (home) | 319 | Hero, metric cards, nav cards — the shared vocabulary |
+| ~~3~~ | ~~`app.py` (home)~~ | 319 | ✅ **Logic extracted 2026-08-13** → `get_home_view()`; also retired the hardcoded best-season prose (review F3) |
 | 4 | `league_history.py` | 511 | First Plotly port |
 | 5 | `champions.py` | 577 | |
 | 6 | `manager_profiles.py` | 636 | First entity route with real depth |
