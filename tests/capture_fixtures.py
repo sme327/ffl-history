@@ -112,6 +112,13 @@ def capture_home() -> None:
     print(f"  {'get_home_view':26} home")
 
 
+def capture_keeper_hall() -> None:
+    """Immortal keeper chains, championship keepers and per-manager keeper DNA —
+    lifted out of pages/keeper_hall.py."""
+    dump("get_keeper_hall_view", normalize(D.get_keeper_hall_view()))
+    print(f"  {'get_keeper_hall_view':26} chains + DNA")
+
+
 def capture_franchise_profiles() -> None:
     """Per-franchise history and the generated legacy story —
     lifted out of pages/franchise_profiles.py."""
@@ -196,6 +203,7 @@ def main() -> None:
     capture_by_franchise()
     capture_seasons()
     capture_home()
+    capture_keeper_hall()
     capture_franchise_profiles()
     capture_draft_center()
     capture_manager_profiles()

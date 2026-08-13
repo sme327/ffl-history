@@ -174,6 +174,36 @@ class TestHome(FixtureAssertions):
             self.assertIn(manager, best["summary"], f"{manager} missing from best-season copy")
 
 
+class TestKeeperHall(FixtureAssertions):
+    def test_keeper_hall_view(self):
+        """Covers the logic lifted out of pages/keeper_hall.py."""
+        self.assert_matches("get_keeper_hall_view", D.get_keeper_hall_view())
+
+    def test_chains_are_ranked_totally(self):
+        chains = D.get_keeper_hall_view()["immortals"]
+        keys = [(-c["streak_len"], -c["score"], c["player_name"]) for c in chains]
+        self.assertEqual(keys, sorted(keys))
+
+    def test_chain_scoring_formula(self):
+        """streak x2 + titles x5 + playoffs x0.5 — the museum's own metric."""
+        for chain in D.get_keeper_hall_view()["immortals"]:
+            expected = chain["streak_len"] * 2 + chain["titles"] * 5 + chain["playoffs"] * 0.5
+            self.assertAlmostEqual(chain["score"], expected, places=2, msg=chain["player_name"])
+
+    def test_streak_length_matches_season_run(self):
+        for chain in D.get_keeper_hall_view()["immortals"]:
+            self.assertEqual(
+                chain["streak_len"], len(chain["seasons"]),
+                f'{chain["player_name"]}: streak length disagrees with its season list',
+            )
+
+    def test_active_and_alumni_partition_managers(self):
+        view = D.get_keeper_hall_view()
+        self.assertEqual(
+            len(view["active_dna"]) + len(view["alumni_dna"]), len(view["manager_dna"])
+        )
+
+
 class TestFranchiseProfiles(FixtureAssertions):
     def test_profiles(self):
         """Covers the logic lifted out of pages/franchise_profiles.py."""

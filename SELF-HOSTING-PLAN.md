@@ -171,7 +171,7 @@ The bulk of the work. `utils/styles.py` (886 lines) already has the right instin
 | ~~6~~ | ~~`manager_profiles.py`~~ | 636 | ✅ **Logic extracted 2026-08-13** → `get_manager_profile()` + `manager_h2h_highlights()`; plaque copy moved to narratives |
 | 7 | `draft_center.py` | 896 | ⚠️ **Derivations extracted 2026-08-13** → `get_draft_center_view()` + `get_draft_loyalty_board()`, fixture-covered. **Page rewiring still pending** — the page runs on its own inline copy for now |
 | 8 | `franchise_profiles.py` | 966 | ⚠️ **Derivations extracted 2026-08-13** → `get_franchise_profile()` + `narratives.franchise_story()`, fixture-covered. **Page rewiring pending** |
-| 9 | `keeper_hall.py` | 1,177 | Largest, and no existing entry points — worth redesigning, not transcribing |
+| 9 | `keeper_hall.py` | 1,177 | ⚠️ **Derivations extracted 2026-08-13** → `get_keeper_hall_view()`, fixture-covered. **Page rewiring pending** — worth redesigning rather than transcribing, since it still has no entry points (review F7) |
 | 10 | `rivalries.py` | 1,215 | Most complex routing (pairwise) — do it once every pattern exists |
 
 **Keep the Streamlit app running the whole time.** Side-by-side visual diffing is the only practical way to catch regressions in a design this dense, and it means an unfinished rewrite never costs you a working site. Cut over only at parity.

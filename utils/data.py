@@ -2772,3 +2772,169 @@ def get_franchise_profile(franchise_id: str) -> dict:
             total_championships=len(champion_seasons),
         ),
     }
+
+
+# ── KEEPER HALL ───────────────────────────────────────────────────────────────
+# Lifted out of pages/keeper_hall.py. Five more rankings gained explicit
+# tie-breaks: the immortal chains, championship keepers, per-manager DNA order,
+# favourite keeper, and the most-kept player board.
+
+KEEPER_DNA_BLURBS = {
+    "BELL COW HUNTER": "Staked the franchise on elite RBs. Kept the workhorse, season after season.",
+    "RECEIVER KINGDOM": "Built through the pass-catchers. Wide receivers were the currency.",
+    "SIGNAL CALLER": "Bet on quarterbacks at a position most managers left to the draft.",
+    "TIGHT END LOYALIST": "Found the value others ignored. Elite TEs don't hit free agency.",
+    "SKILL POSITION SNIPER": "No positional bias. Any skill player, any round, any season.",
+    "BALANCED CURATOR": "A methodical approach. Position was secondary to player quality.",
+}
+
+_KEEPER_POSITIONS = ["RB", "WR", "QB", "TE", "DEF", "K"]
+
+
+def _keeper_dna_label(position_counts: dict) -> str:
+    total = sum(position_counts.values())
+    if total == 0:
+        return "BALANCED CURATOR"
+    rb = position_counts.get("RB", 0) / total
+    wr = position_counts.get("WR", 0) / total
+    qb = position_counts.get("QB", 0) / total
+    te = position_counts.get("TE", 0) / total
+    if rb >= 0.55:
+        return "BELL COW HUNTER"
+    if wr >= 0.50:
+        return "RECEIVER KINGDOM"
+    if qb >= 0.25:
+        return "SIGNAL CALLER"
+    if te >= 0.20:
+        return "TIGHT END LOYALIST"
+    if rb + wr >= 0.80:
+        return "SKILL POSITION SNIPER"
+    return "BALANCED CURATOR"
+
+
+@st.cache_data
+def get_keeper_hall_view() -> dict:
+    picks = get_draft_picks_with_pos()
+    chains = get_keeper_chains()
+    enriched = get_keeper_enriched()
+    keepers = picks[picks["is_keeper"]]
+
+    positions_by_player = (
+        enriched.dropna(subset=["position"]).groupby("player_name")["position"].first().to_dict()
+    )
+
+    # ── Immortal chains: streak x2 + titles x5 + playoffs x0.5 ───────────────
+    immortals = []
+    for _, chain in chains.iterrows():
+        player = chain["player_name"]
+        run = enriched[
+            (enriched["player_name"] == player) & (enriched["season"].isin(chain["seasons"]))
+        ]
+        titles = int(run["won_title"].sum())
+        playoffs = int(run["made_playoffs"].sum())
+        immortals.append({
+            "player_name": player,
+            "position": str(positions_by_player.get(player, "?")),
+            "primary_manager": chain["primary_manager"],
+            "all_managers": list(chain["all_managers"]),
+            "franchise_id": chain["franchise_id"],
+            "seasons": [int(s) for s in chain["seasons"]],
+            "streak_len": int(chain["streak_len"]),
+            "titles": titles,
+            "playoffs": playoffs,
+            "score": round(int(chain["streak_len"]) * 2 + titles * 5 + playoffs * 0.5, 2),
+            "multi_manager": bool(chain["multi_manager"]),
+        })
+    immortals.sort(key=lambda c: (-c["streak_len"], -c["score"], c["player_name"]))
+
+    # ── Keeper volume by season ──────────────────────────────────────────────
+    by_season = [
+        {"season": int(s), "count": int(n)}
+        for s, n in keepers.groupby("season").size().items()
+    ]
+
+    # ── Players kept on championship rosters ─────────────────────────────────
+    title_keepers = enriched[enriched["won_title"]]
+    champions_kept = sorted(
+        (
+            {
+                "player_name": player,
+                "position": str(positions_by_player.get(player, "?")),
+                "title_count": len(group),
+                "seasons": sorted(int(s) for s in group["season"]),
+                "managers": sorted(set(group["manager"])),
+            }
+            for player, group in title_keepers.groupby("player_name")
+        ),
+        key=lambda p: (-p["title_count"], p["player_name"]),
+    )
+
+    # ── Per-manager keeper DNA ───────────────────────────────────────────────
+    dna = []
+    for manager, group in keepers.groupby("manager"):
+        total_picks = len(picks[picks["manager"] == manager])
+        if not len(group):
+            continue
+        named = group[group["position"] != "DEF"]
+        favourite, favourite_count = "—", 0
+        if len(named):
+            tally = sorted(named["player_name"].value_counts().items(), key=lambda kv: (-kv[1], kv[0]))
+            favourite, favourite_count = tally[0][0], int(tally[0][1])
+
+        theirs = chains[chains["all_managers"].apply(lambda m: manager in m)]
+        longest, longest_player = 1, "—"
+        if len(theirs):
+            ranked = sorted(
+                ((int(r["streak_len"]), r["player_name"]) for _, r in theirs.iterrows()),
+                key=lambda kv: (-kv[0], kv[1]),
+            )
+            longest, longest_player = ranked[0]
+
+        counts = {
+            p: int(n) for p, n in
+            group[group["position"].isin(_KEEPER_POSITIONS)]["position"].value_counts().items()
+        }
+        label = _keeper_dna_label(counts)
+        dna.append({
+            "manager": manager,
+            "emoji": MANAGER_EMOJI.get(manager, "👤"),
+            "color": MANAGER_COLORS.get(manager, "#6B7280"),
+            "keeper_count": len(group),
+            "keeper_rate": round(len(group) / total_picks, 4) if total_picks else 0.0,
+            "favourite": {"player": favourite, "count": favourite_count},
+            "longest_streak": longest,
+            "longest_streak_player": longest_player,
+            "titles": int(enriched[enriched["manager"] == manager]["won_title"].sum()),
+            "dna": label,
+            "dna_blurb": KEEPER_DNA_BLURBS[label],
+            "position_counts": counts,
+            "last_season": int(picks[picks["manager"] == manager]["season"].max()),
+        })
+    dna.sort(key=lambda d: (-d["keeper_count"], d["manager"]))
+
+    # ── Most-kept players ────────────────────────────────────────────────────
+    most_kept = sorted(
+        (
+            {"player_name": p, "position": str(positions_by_player.get(p, "?")), "count": int(n)}
+            for p, n in keepers[keepers["position"] != "DEF"].groupby("player_name").size().items()
+        ),
+        key=lambda p: (-p["count"], p["player_name"]),
+    )
+
+    return {
+        "immortals": immortals,
+        "notable_chains": [c for c in immortals if c["streak_len"] >= 3],
+        "by_season": by_season,
+        "champions_kept": champions_kept,
+        "manager_dna": dna,
+        "active_dna": [d for d in dna if d["last_season"] >= CURRENT_SEASON],
+        "alumni_dna": [d for d in dna if d["last_season"] < CURRENT_SEASON],
+        "most_kept": most_kept,
+        "keeper_seasons": sorted({int(s) for s in keepers["season"]}),
+        "totals": {
+            "keepers": len(keepers),
+            "unique_players": int(keepers["player_name"].nunique()),
+            "chains": len(chains),
+            "managers": len(dna),
+        },
+    }

@@ -167,9 +167,14 @@ def build(out: Path) -> None:
         "positionTrends": records(verify.frame("get_position_trends_data", D.get_position_trends_data())),
         "picks": records(verify.frame("get_draft_picks_with_pos", D.get_draft_picks_with_pos())),
     })
+    keeper_hall = D.get_keeper_hall_view()
+    if normalize(keeper_hall) != load_fixture("get_keeper_hall_view"):
+        raise SystemExit("\n  keeper hall does not match its fixture — refusing to emit.\n")
+    verify.checked += 1
     site.write("keepers", {
         "chains": records(verify.frame("get_keeper_chains", D.get_keeper_chains())),
         "enriched": records(verify.frame("get_keeper_enriched", D.get_keeper_enriched())),
+        **keeper_hall,
     })
     site.write("player-ownership", records(verify.frame("get_player_ownership", D.get_player_ownership())))
 
