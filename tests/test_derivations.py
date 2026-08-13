@@ -157,6 +157,23 @@ class TestDraftAndKeepers(FixtureAssertions):
         self.assert_matches("get_player_ownership", D.get_player_ownership())
 
 
+class TestSeasons(FixtureAssertions):
+    def test_season_list(self):
+        seasons = D.get_all_seasons()
+        self.assertEqual(seasons, sorted(seasons, reverse=True), "seasons must be newest-first")
+        self.assertEqual(len(seasons), len(set(seasons)), "duplicate season")
+
+    def test_season_detail(self):
+        """Covers the logic lifted out of pages/season_archive.py, including
+        the generated season titles and narrative copy."""
+        expected = load("get_season_detail")
+        actual = {
+            "type": "dict",
+            "value": {year: normalize(D.get_season_detail(int(year))) for year in expected["value"]},
+        }
+        self.assert_payload("get_season_detail", actual, expected)
+
+
 class TestRivalriesAndTimeline(FixtureAssertions):
     def test_all_rivalries(self):
         self.assert_matches("get_all_rivalries", D.get_all_rivalries())

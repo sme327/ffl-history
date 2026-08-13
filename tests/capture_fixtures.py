@@ -93,6 +93,18 @@ def capture_by_franchise() -> None:
     print(f"  {'get_franchise_legends':26} {len(franchises)} franchises")
 
 
+def capture_seasons() -> None:
+    """Season pages, including the generated title and narrative copy.
+
+    Extracted from pages/season_archive.py — this fixture is what stops the
+    editorial voice drifting during the port.
+    """
+    seasons = sorted(D.get_all_seasons())
+    payload = {"type": "dict", "value": {str(s): normalize(D.get_season_detail(s)) for s in seasons}}
+    dump("get_season_detail", payload)
+    print(f"  {'get_season_detail':26} {len(seasons)} seasons")
+
+
 def capture_rivalry_detail() -> None:
     riv = D.get_all_rivalries().sort_values("rs_games", ascending=False).head(TOP_RIVALRIES)
     pairs = [(row["mgr_a"], row["mgr_b"]) for _, row in riv.iterrows()]
@@ -110,6 +122,7 @@ def main() -> None:
     capture_globals()
     capture_by_manager()
     capture_by_franchise()
+    capture_seasons()
     capture_rivalry_detail()
     print("\nWrote tests/fixtures/. Review the diff before committing.")
 

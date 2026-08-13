@@ -191,24 +191,30 @@ def build(out: Path) -> None:
     site.write("playoff-eliminations", records(verify.frame("get_playoff_eliminations", D.get_playoff_eliminations())))
 
     # ── Seasons ──────────────────────────────────────────────────────────────
-    # Slices of verified source data, not new derivations. The season page's
-    # narrative assembly still lives in pages/season_archive.py — see the
-    # inventory printed at the end of this build.
-    standings, playoffs, trades = raw["standings"], raw["playoff_games"], raw["season_trades"]
-    champ_by_season = {r["season"]: r for r in records(champions)}
+    # get_season_detail() carries the standings, bracket, scorers, and the
+    # generated title/narrative copy — all fixture-covered since the logic was
+    # lifted out of pages/season_archive.py.
+    trades = raw["season_trades"]
+    season_fixtures = load_fixture("get_season_detail")["value"]
+    seasons = sorted(D.get_all_seasons())
 
-    seasons = sorted(int(s) for s in standings["season"].unique())
     for year in seasons:
+        detail = D.get_season_detail(year)
+        if normalize(detail) != season_fixtures[str(year)]:
+            raise SystemExit(f"\n  seasons/{year} does not match its fixture — refusing to emit.\n")
         site.write(f"seasons/{year}", {
-            "season": year,
-            "champion": champ_by_season.get(year),
-            "standings": records(standings[standings["season"] == year]),
-            "playoffGames": records(playoffs[playoffs["season"] == year]),
+            **detail,
             "trades": records(trades[trades["season"] == year]),
-            "nflContext": N.NFL_CONTEXT.get(year, []),
         })
+    verify.checked += 1
+
     site.write("seasons/index", [
-        {"season": y, "champion": (champ_by_season.get(y) or {}).get("champion_manager")} for y in seasons
+        {
+            "season": y,
+            "title": D.get_season_detail(y)["title"],
+            "champion": (D.get_season_detail(y)["champion"] or {}).get("manager"),
+        }
+        for y in seasons
     ])
 
     # ── Manifest ─────────────────────────────────────────────────────────────
@@ -238,13 +244,13 @@ def build(out: Path) -> None:
 # its logic lifted into utils/data.py (with fixtures) before the port can render
 # that route from JSON alone.
 PAGE_LEVEL_WORK = {
+    # season_archive.py: done 2026-08-13 -> utils.data.get_season_detail()
     "app.py": "home-page storylines: best season, title droughts, top scorer",
     "champions.py": "title-game context and dynasty framing",
     "franchise_profiles.py": "per-franchise season tables and lineage narrative",
     "league_history.py": "era summaries, competitive-balance trends",
     "manager_profiles.py": "career plaque assembly",
     "rivalries.py": "elimination/heartbreak sections built from raw frames",
-    "season_archive.py": "season recap assembly, playoff bracket rendering",
 }
 
 

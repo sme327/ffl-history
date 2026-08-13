@@ -119,7 +119,6 @@ Every frame is checked against `tests/fixtures/` **before** it is written — th
 | `league_history.py` | era summaries, competitive-balance trends |
 | `manager_profiles.py` | career plaque assembly |
 | `rivalries.py` | elimination/heartbreak sections |
-| `season_archive.py` | season recap assembly, playoff bracket rendering |
 
 Each needs lifting into `utils/data.py` with fixtures added, before that route can render from JSON alone. This is the real remaining work in the data layer, and it's best done **page by page during Phase 4** — extract the logic, add its fixture, then port the presentation. Doing it that way keeps every step verified instead of front-loading a large untested refactor.
 
@@ -165,7 +164,7 @@ The bulk of the work. `utils/styles.py` (886 lines) already has the right instin
 
 | Order | Page | Lines | Why here |
 |---|---|---|---|
-| 1 | `season_archive.py` | 338 | Simplest page with a dropdown — proves the route pattern end to end |
+| ~~1~~ | ~~`season_archive.py`~~ | 338 | ✅ **Logic extracted 2026-08-13** → `get_season_detail()`, fixture-covered for all 25 seasons, page is now presentation-only. Presentation port pending the site scaffold |
 | 2 | `league_timeline.py` | 324 | Establishes the timeline component |
 | 3 | `app.py` (home) | 319 | Hero, metric cards, nav cards — the shared vocabulary |
 | 4 | `league_history.py` | 511 | First Plotly port |

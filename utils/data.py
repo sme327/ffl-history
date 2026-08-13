@@ -1272,3 +1272,190 @@ def get_playoff_eliminations() -> pd.DataFrame:
         .reset_index(drop=True)
     )
     return pair_counts
+
+
+# ── SEASON DETAIL ─────────────────────────────────────────────────────────────
+# Lifted out of pages/season_archive.py so the page and the static build share
+# one implementation, and so the logic is covered by tests/.
+
+# Postseason finish ranks above regular-season rank when ordering the table:
+# a champion who limped in as the 6th seed still belongs at the top.
+_PLAYOFF_RESULT_ORDER = {
+    "🏆 Champion": 1, "🥈 Runner-Up": 2, "🥉 3rd Place": 3, "4th Place": 4,
+    "Semifinals": 5, "Playoffs": 6,
+}
+
+_BRACKET_ROUNDS = [
+    ("quarterfinal", "Quarterfinals"),
+    ("semifinal", "Semifinals"),
+    ("final", "Championship"),
+]
+
+
+def _seed(value) -> int | None:
+    if value is None or pd.isna(value) or str(value) == "":
+        return None
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def _game(row: pd.Series) -> dict:
+    return {
+        "game_type": row["game_type"],
+        "round": int(row["round"]) if not pd.isna(row["round"]) else None,
+        "seed_1": _seed(row.get("seed_1")),
+        "team_1": row["team_1"],
+        "score_1": round(float(row["score_1"]), 2),
+        "seed_2": _seed(row.get("seed_2")),
+        "team_2": row["team_2"],
+        "score_2": round(float(row["score_2"]), 2),
+        "winner": row["winner"],
+    }
+
+
+@st.cache_data
+def get_season_detail(season: int) -> dict:
+    """Everything the season archive shows for one year.
+
+    Facts and generated copy, no markup — so both the Streamlit page and the
+    static build render the same season from the same source.
+    """
+    from utils import narratives  # local import: narratives is pure content
+
+    season = int(season)
+    data = load_all()
+    standings = data["standings"]
+    playoff_games = data["playoff_games"]
+    weekly = data["weekly_matchups"]
+    tnh = data["team_name_history"]
+
+    champions = get_champions()
+    manager_by_team = (
+        tnh[tnh["season"] == season].set_index("team_name")["canonical_name"].to_dict()
+    )
+
+    # ── Champion and the copy generated from it ──────────────────────────────
+    champ_rows = champions[champions["season"] == season]
+    champion = title = narrative = hook = None
+    if len(champ_rows):
+        c = champ_rows.iloc[0]
+        prior = champions[champions["season"] < season]
+        prev_rows = champions[champions["season"] == season - 1]
+        previous_champion = prev_rows.iloc[0]["champion_manager"] if len(prev_rows) else None
+        prior_titles = int((prior["champion_manager"] == c["champion_manager"]).sum())
+        margin = float(c["champion_score"]) - float(c["runner_up_score"])
+
+        champion = {
+            "manager": c["champion_manager"],
+            "team": c["champion_team"],
+            "score": round(float(c["champion_score"]), 2),
+            "runner_up_manager": c["runner_up_manager"],
+            "runner_up_team": c["runner_up_team"],
+            "runner_up_score": round(float(c["runner_up_score"]), 2),
+            "margin": round(margin, 2),
+            "prior_titles": prior_titles,
+            "is_repeat": previous_champion == c["champion_manager"],
+            "emoji": MANAGER_EMOJI.get(c["champion_manager"], "🏆"),
+        }
+        title = narratives.season_title(
+            season,
+            margin=margin,
+            is_repeat=champion["is_repeat"],
+            prior_titles=prior_titles,
+        )
+        narrative = narratives.season_narrative(
+            champion_manager=c["champion_manager"],
+            champion_team=c["champion_team"],
+            runner_up_manager=c["runner_up_manager"],
+            runner_up_team=c["runner_up_team"],
+            champion_score=float(c["champion_score"]),
+            runner_up_score=float(c["runner_up_score"]),
+            is_first_title=prior_titles == 0,
+            previous_champion_manager=previous_champion,
+        )
+        hook = narratives.SEASON_HOOKS.get(season, "")
+
+    # ── Final standings, ordered by how the season actually ended ────────────
+    table = []
+    for _, row in standings[standings["season"] == season].sort_values("rank").iterrows():
+        manager = manager_by_team.get(row["team_name"], "—")
+        result = get_playoff_result_for_team(season, row["team_name"], playoff_games)
+        rs_rank = int(row["rank"])
+        table.append({
+            "result": result,
+            "team": row["team_name"],
+            "manager": manager,
+            "emoji": MANAGER_EMOJI.get(manager, ""),
+            "wins": int(row["wins"]),
+            "losses": int(row["losses"]),
+            "ties": int(row["ties"]),
+            "points_for": round(float(row["points_for"]), 2),
+            "points_against": round(float(row["points_against"]), 2),
+            "rs_rank": rs_rank,
+            "_order": _PLAYOFF_RESULT_ORDER.get(result, 100 + rs_rank),
+        })
+    table.sort(key=lambda r: r["_order"])
+    for entry in table:
+        del entry["_order"]
+
+    # ── Championship bracket ─────────────────────────────────────────────────
+    bracket_games = playoff_games[
+        (playoff_games["season"] == season) & (playoff_games["bracket"] == "championship")
+    ].sort_values(["round", "game_type"])
+
+    rounds = []
+    for game_type, label in _BRACKET_ROUNDS:
+        games = bracket_games[bracket_games["game_type"] == game_type]
+        if len(games):
+            rounds.append({
+                "type": game_type,
+                "label": label,
+                "games": [_game(g) for _, g in games.iterrows()],
+            })
+    third = bracket_games[bracket_games["game_type"] == "3rd_place"]
+
+    # ── Regular-season scoring leaders ───────────────────────────────────────
+    regular = weekly[
+        (weekly["season"] == season)
+        & (~weekly["is_bye"].astype(bool))
+        & (~weekly["is_playoff"].astype(bool))
+    ]
+    totals = (
+        regular.groupby("team_name")["team_score"].sum()
+        .reset_index(name="points_for")
+        .sort_values(["points_for", "team_name"], ascending=[False, True])
+        .reset_index(drop=True)
+    )
+    top_scorers = [
+        {
+            "rank": i + 1,
+            "team": row["team_name"],
+            "manager": manager_by_team.get(row["team_name"], "—"),
+            "emoji": MANAGER_EMOJI.get(manager_by_team.get(row["team_name"], "—"), ""),
+            "points_for": round(float(row["points_for"]), 2),
+        }
+        for i, (_, row) in enumerate(totals.iterrows())
+    ]
+
+    return {
+        "season": season,
+        "champion": champion,
+        "title": title,
+        "hook": hook,
+        "narrative": narrative,
+        "nfl_context": list(narratives.NFL_CONTEXT.get(season, [])),
+        "standings": table,
+        "bracket": {
+            "rounds": rounds,
+            "third_place": _game(third.iloc[0]) if len(third) else None,
+        },
+        "top_scorers": top_scorers,
+    }
+
+
+@st.cache_data
+def get_all_seasons() -> list[int]:
+    """Every season with recorded standings, newest first."""
+    return sorted((int(s) for s in load_all()["standings"]["season"].unique()), reverse=True)

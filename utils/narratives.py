@@ -4,6 +4,8 @@ All hardcoded text lives here so pages stay clean and editorial voice stays cons
 """
 from __future__ import annotations
 
+FOUNDING_SEASON = 2001
+
 # ── NFL CONTEXT PER SEASON ─────────────────────────────────────────────────────
 # 2–3 bullet points of real NFL color to anchor each fantasy season in football history.
 NFL_CONTEXT: dict[int, list[str]] = {
@@ -476,3 +478,77 @@ RIVALRY_PLAQUES: dict[tuple[str, str], str] = {
         "balanced long-term matchups the league has ever produced."
     ),
 }
+
+
+# ── GENERATED SEASON COPY ──────────────────────────────────────────────────────
+# Prose assembled from championship facts. Lifted out of pages/season_archive.py
+# so the season page and the static build produce identical copy — and so the
+# editorial voice stays in this file, where an editor would look for it.
+#
+# Every input is an explicit parameter. The originals read the previous season's
+# champion from module scope, which quietly tied the copy to whichever page had
+# imported it.
+
+def season_title(
+    season: int,
+    *,
+    margin: float,
+    is_repeat: bool,
+    prior_titles: int,
+) -> str:
+    """The headline for a season — 'The Repeat', 'No Contest', and friends."""
+    if season == FOUNDING_SEASON:
+        return "The Beginning"
+    if is_repeat:
+        return "The Repeat"
+    if prior_titles == 0:
+        # A first title is a breakthrough regardless of margin, unless it was a rout.
+        return "The Coronation" if margin > 60 else "The Breakthrough"
+    if margin < 3:
+        return "Down to the Wire"
+    if margin > 70:
+        return "No Contest"
+    if prior_titles >= 3:
+        return "The Dynasty Continues"
+    return f"The {season} Championship"
+
+
+def season_narrative(
+    *,
+    champion_manager: str,
+    champion_team: str,
+    runner_up_manager: str,
+    runner_up_team: str,
+    champion_score: float,
+    runner_up_score: float,
+    is_first_title: bool,
+    previous_champion_manager: str | None,
+) -> str:
+    """Two sentences on how a championship was won."""
+    margin = champion_score - runner_up_score
+
+    if is_first_title:
+        opener = f"{champion_manager} had been working toward this moment."
+    elif previous_champion_manager == champion_manager:
+        opener = f"Back-to-back. {champion_manager} didn't let go of the trophy."
+    else:
+        opener = f"{champion_manager} knew what it took."
+
+    if margin < 5:
+        closer = (
+            f"{champion_team} survived {runner_up_team} by just {margin:.2f} points — "
+            f"the kind of margin that keeps you up at night if you're {runner_up_manager}."
+        )
+    elif margin > 60:
+        closer = (
+            f"It wasn't close. {champion_team} dismantled {runner_up_team} by "
+            f"{margin:.2f} points in one of the most dominant championship "
+            f"performances in league history."
+        )
+    else:
+        closer = (
+            f"{champion_team} handled {runner_up_team} in the final, "
+            f"{champion_score:.2f}–{runner_up_score:.2f}. {runner_up_manager} came up just short."
+        )
+
+    return f"{opener} {closer}"
