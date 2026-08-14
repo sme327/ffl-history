@@ -13,6 +13,9 @@ const NAV = [
   { href: "/history", label: "League History" },
   { href: "/seasons", label: "Seasons" },
   { href: "/managers", label: "Managers" },
+  { href: "/franchises", label: "Franchises" },
+  { href: "/draft", label: "Draft" },
+  { href: "/rivalries", label: "Rivalries" },
   { href: "/keepers", label: "Keeper Hall" },
 ];
 

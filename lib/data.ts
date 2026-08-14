@@ -248,6 +248,84 @@ export type LeagueHistory = {
   records: Record<string, any>;
 };
 
+export type DraftCenter = {
+  legends: {
+    player_name: string; position: string; total_drafts: number;
+    unique_managers: number; career_span: number; first_season: number;
+    last_season: number; most_loyal: string | null; story: string;
+    drafters: { manager: string; count: number; emoji: string; color: string }[];
+  }[];
+  manager_dna: {
+    manager: string; emoji: string; color: string; counts: Record<string, number>;
+    total: number; keeper_rate: number; championships: number; playoff_rate: number;
+    archetype: string; archetype_color: string; archetype_blurb: string;
+    top_position: string; top_position_pct: number; best_round_one_find: string;
+  }[];
+  round_one: {
+    most_taken: { player_name: string; position: string; count: number }[];
+    first_overall: { player_name: string; count: number }[];
+  };
+  totals: { picks: number; real_drafts: number; keepers: number; unique_players: number };
+};
+
+export type FranchiseIndexEntry = {
+  id: string; currentManager: string; established: number; championships: number;
+};
+
+export type FranchiseProfile = {
+  franchise_id: string; established: number;
+  first_manager: string; current_manager: string; story: string;
+  seasons: number[];
+  totals: {
+    seasons: number; championships: number; runner_ups: number;
+    playoff_apps: number; finals_apps: number; third_places: number;
+    longest_playoff_streak: number; winning_seasons: number;
+  };
+  championship_seasons: number[];
+  stewards: {
+    manager: string; emoji: string; color: string;
+    start_season: number; end_season: number; seasons: number;
+    wins: number; losses: number; playoff_apps: number;
+    championships: number; championship_years: number[];
+  }[];
+  best_steward: string | null;
+  season_records: {
+    season: number; manager: string; team_name: string;
+    wins: number; losses: number; points_for: number;
+  }[];
+  rivals: {
+    opponent: string; emoji: string; games: number; wins: number; losses: number;
+    playoff_games: number; playoff_wins: number;
+  }[];
+  legends: { player_name: string; position: string; draft_count: number; keeper_count: number }[];
+};
+
+export type RivalrySummary = {
+  mgr_a: string; mgr_b: string; slug: string;
+  rs_games: number; rs_a_wins: number; rs_b_wins: number;
+  pl_games: number; close_games: number; rivalry_score: number;
+  first_meeting: number; last_meeting: number;
+};
+
+export type RivalriesView = {
+  managers: string[];
+  finals: {
+    season: number; winner_manager: string; loser_manager: string; margin: number;
+  }[];
+  title_records: { manager: string; emoji: string; wins: number; losses: number; apps: number }[];
+  eliminations: {
+    pairs: { winner: string; loser: string; eliminations: number }[];
+    by_executioner: { manager: string; total: number; emoji: string }[];
+    by_victim: { manager: string; total: number; emoji: string }[];
+  };
+  hall_of_pain: {
+    worst_matchups: { loser: string; winner: string; losses: number }[];
+    finals_losses: { manager: string; losses: number; emoji: string }[];
+    closest_final: { season: number; winner_manager: string; loser_manager: string; margin: number };
+  };
+  totals: { pairs: number; managers: number; finals: number; playoff_eliminations: number };
+};
+
 export type SeasonIndexEntry = { season: number; title: string | null; champion: string | null };
 
 export type SeasonDetail = {
@@ -309,6 +387,14 @@ export const championsView = read<ChampionsView>("champions-view");
 export const seasonIndex = read<SeasonIndexEntry[]>("seasons/index");
 export const timeline = read<Timeline>("timeline");
 export const leagueHistory = read<LeagueHistory>("league-history");
+export const draftCenter = read<DraftCenter>("draft-center");
+export const franchiseIndex = read<FranchiseIndexEntry[]>("franchises/index");
+export const rivalriesView = read<RivalriesView>("rivalries-view");
+export const rivalryIndex = read<RivalrySummary[]>("rivalries/index");
+
+export function franchiseProfile(id: string): FranchiseProfile | null {
+  return readMaybe<FranchiseProfile>(`franchises/${id}`);
+}
 
 export function seasonDetail(year: string | number): SeasonDetail | null {
   return readMaybe<SeasonDetail>(`seasons/${year}`);

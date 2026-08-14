@@ -134,6 +134,9 @@ Routes live so far:
 | `/timeline` | All 160 events, grouped by season with era badges |
 | `/seasons`, `/seasons/:year` | Season archive with title, narrative, standings, bracket |
 | `/history` | Eras, scoring evolution, competitive balance, records |
+| `/draft` | Player obsessions, draft DNA, round-one history |
+| `/franchises`, `/franchises/:id` | Lineage, stewards, rivals, season table |
+| `/rivalries` | Top matchups, title records, executioners, hall of pain |
 
 The last two are the entry points the product review flagged as missing (F7).
 `/players/:slug` also lays the groundwork for Player Histories and Ownership
@@ -150,9 +153,11 @@ control over type and colour. The whole site currently ships **484KB of
 JavaScript total**, most of it the React runtime. The trade is hover tooltips,
 replaced by drawn-on labels.
 
-Still to port: draft center, franchise profiles, rivalries — plus the full
-visual pass against the Streamlit design. The current styling is a faithful
-skeleton, not a finished match.
+**Every page is ported.** Fifteen routes, all server-rendered, all
+cross-linked. What remains before cutover is the visual pass — the current
+styling reads as the museum but is a faithful skeleton, not a match for the
+Streamlit design's richness — then `wrangler login`, deploy, attach
+`iwnh.sme327.com`, and update `FANTASY_APP_URL` in the landing page repo.
 
 ### What Phase 2 uncovered
 
