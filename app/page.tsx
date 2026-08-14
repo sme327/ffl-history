@@ -5,12 +5,15 @@ export default function HomePage() {
 
   return (
     <>
-      <div className="eyebrow">{site.subtitle}</div>
-      <h1>THE LONG GAME</h1>
-      <p>
-        Built by friendship. Defined by competition. Occasionally ruined by a
-        waiver wire mistake.
-      </p>
+      <header className="hero">
+        <h1>THE LONG GAME</h1>
+        <div className="hero-subtitle">{site.subtitle}</div>
+        <p style={{ fontStyle: "italic", marginTop: "0.75rem" }}>
+          Built by friendship. Defined by competition. Occasionally ruined by a
+          waiver wire mistake.
+        </p>
+      </header>
+      <hr className="divider" />
 
       <div className="grid cols-4" style={{ marginTop: "1.5rem" }}>
         {[
@@ -29,8 +32,8 @@ export default function HomePage() {
       {champ && (
         <>
           <h2>Reigning Champion</h2>
-          <div className="card">
-            <div style={{ fontSize: "2.5rem" }}>{champ.emoji}</div>
+          <div className="card card-feature">
+            <div style={{ fontSize: "3rem" }}>{champ.emoji}</div>
             <h3 className="gold">{champ.team}</h3>
             <p>
               <a href={`/managers/${slugify(champ.manager)}`}>{champ.manager}</a>

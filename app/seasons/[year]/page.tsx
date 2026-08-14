@@ -24,8 +24,8 @@ export default async function SeasonPage({
 
       <div className="grid cols-2" style={{ marginTop: "1.25rem" }}>
         {champ && (
-          <div className="card plaque">
-            <div style={{ fontSize: "2rem" }}>{champ.emoji}</div>
+          <div className="card card-feature">
+            <div style={{ fontSize: "2.5rem" }}>{champ.emoji}</div>
             <div className="eyebrow">🏆 {season.season} Champion</div>
             <h3 className="gold">{champ.team}</h3>
             <div>
@@ -87,18 +87,14 @@ export default async function SeasonPage({
               <div key={round.type}>
                 <div className="eyebrow">{round.label}</div>
                 {round.games.map((game) => (
-                  <div className="card" key={`${game.team_1}-${game.team_2}`} style={{ marginBottom: "0.5rem" }}>
+                  <div className="matchup" key={`${game.team_1}-${game.team_2}`}>
                     {[
                       [game.seed_1, game.team_1, game.score_1] as const,
                       [game.seed_2, game.team_2, game.score_2] as const,
                     ].map(([seed, team, score]) => (
                       <div
                         key={team}
-                        style={{
-                          display: "flex", justifyContent: "space-between", gap: "0.5rem",
-                          color: game.winner === team ? "var(--gold)" : "var(--muted)",
-                          fontWeight: game.winner === team ? 600 : 400,
-                        }}
+                        className={`matchup-team${game.winner === team ? " winner" : ""}`}
                       >
                         <span>{seed ? `#${seed} ` : ""}{team}</span>
                         <span>{score.toFixed(1)}</span>

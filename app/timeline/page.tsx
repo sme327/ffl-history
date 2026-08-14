@@ -41,12 +41,17 @@ export default function TimelinePage() {
 
           {[...block.high, ...block.other].map((event, i) => (
             <div
-              className="card"
+              className={`event${event.importance === "high" ? " event-major" : ""}`}
               key={`${event.title}-${i}`}
-              style={{ borderLeft: `4px solid ${event.color}`, marginBottom: "0.5rem" }}
+              style={{
+                borderLeft: `${event.importance === "high" ? 5 : 3}px solid ${event.color}`,
+                background: event.importance === "high"
+                  ? `color-mix(in srgb, ${event.color} 6%, var(--surface))`
+                  : "var(--surface)",
+              }}
             >
               <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
-                <div style={{ fontSize: "1.4rem" }}>{event.icon}</div>
+                <div style={{ fontSize: event.importance === "high" ? "1.8rem" : "1.3rem" }}>{event.icon}</div>
                 <div>
                   <div className="eyebrow" style={{ color: event.color, marginBottom: "0.2rem" }}>
                     {event.importance_label} · {event.label}

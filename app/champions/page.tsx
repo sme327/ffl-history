@@ -34,8 +34,8 @@ export default function ChampionsPage() {
       <h2>Dynasties</h2>
       <div className="grid cols-2">
         {dynasties.map((d) => (
-          <div className="card" key={d.manager}>
-            <div style={{ fontSize: "1.75rem" }}>{d.emoji}</div>
+          <div className="card card-feature" key={d.manager}>
+            <div style={{ fontSize: "2.25rem" }}>{d.emoji}</div>
             <h3>
               <a href={`/managers/${slugify(d.manager)}`}>{d.manager}</a>
             </h3>

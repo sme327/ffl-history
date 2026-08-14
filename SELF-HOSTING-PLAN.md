@@ -153,11 +153,20 @@ control over type and colour. The whole site currently ships **484KB of
 JavaScript total**, most of it the React runtime. The trade is hover tooltips,
 replaced by drawn-on labels.
 
-**Every page is ported.** Fifteen routes, all server-rendered, all
-cross-linked. What remains before cutover is the visual pass — the current
-styling reads as the museum but is a faithful skeleton, not a match for the
-Streamlit design's richness — then `wrangler login`, deploy, attach
-`iwnh.sme327.com`, and update `FANTASY_APP_URL` in the landing page repo.
+**Every page is ported and styled.** Fifteen routes, all server-rendered, all
+cross-linked. The design is ported from `utils/styles.py` — Bebas display type,
+gold on navy, gold-bordered cards, the glowing champion treatment, bracket
+winners highlighted — rebuilt on custom properties rather than inline literals.
+
+What remains before cutover:
+
+1. `npx wrangler login` (interactive — must be run by hand)
+2. `npm run deploy`, then attach `iwnh.sme327.com` as a Worker custom domain
+3. Update `FANTASY_APP_URL` in the sme327-landing repo
+4. Decide the fate of `insertwittynamehere.streamlit.app`
+
+The Streamlit app keeps running throughout and stays the fallback until the
+new site is verified.
 
 ### What Phase 2 uncovered
 
