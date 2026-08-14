@@ -144,6 +144,14 @@ a.card:hover { border-color: var(--gold); transform: translateY(-2px); text-deco
   box-shadow: 0 0 50px rgba(212, 175, 55, 0.12);
   max-width: 620px; margin: 0 auto;
 }
+/* The home page's reigning champion carries a heavier halo — layered so the
+   falloff stays soft rather than reading as a hard ring. */
+.champion-card.champion-hero {
+  box-shadow:
+    0 0 24px rgba(212, 175, 55, 0.20),
+    0 0 60px rgba(212, 175, 55, 0.16),
+    0 0 120px rgba(212, 175, 55, 0.10);
+}
 .champion-emoji { font-size: 4rem; line-height: 1; margin-bottom: 0.5rem; }
 .champion-season {
   font-size: 0.7rem; color: var(--muted);

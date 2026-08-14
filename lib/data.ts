@@ -334,6 +334,7 @@ export type SeasonDetail = {
   hook: string | null;
   narrative: string | null;
   nfl_context: string[];
+  nfl_league_links: { player: string; managers: { manager: string; kept: boolean; emoji: string }[] }[];
   champion: {
     manager: string; team: string; emoji: string; score: number; margin: number;
     runner_up_manager: string; runner_up_team: string; runner_up_score: number;

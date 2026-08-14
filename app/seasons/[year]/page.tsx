@@ -45,6 +45,24 @@ export default async function SeasonPage({
                 🏈 {line}
               </div>
             ))}
+            {season.nfl_league_links.length > 0 && (
+              <div style={{ marginTop: "0.6rem" }}>
+                <div className="eyebrow" style={{ marginBottom: "0.2rem" }}>On our rosters</div>
+                {season.nfl_league_links.map((link) => (
+                  <div key={link.player} className="muted" style={{ fontSize: "var(--step--1)" }}>
+                    <a href={`/players/${slugify(link.player)}`}>{link.player}</a>
+                    {" — "}
+                    {link.managers.map((m, i) => (
+                      <span key={m.manager}>
+                        {i > 0 && ", "}
+                        <a href={`/managers/${slugify(m.manager)}`}>{m.manager}</a>
+                        {m.kept && " (kept)"}
+                      </span>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         )}
       </div>

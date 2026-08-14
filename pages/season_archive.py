@@ -83,6 +83,22 @@ if champion:
                 f'line-height:1.6;padding:8px 0;border-bottom:1px solid #1E2D40;">🏈 {bullet}</div>',
                 unsafe_allow_html=True,
             )
+        if detail["nfl_league_links"]:
+            links = "".join(
+                f'<div style="font-family:\'Inter\',sans-serif;font-size:0.66rem;color:#A7B0BC;padding:3px 0;">'
+                f'<span style="color:#F5F5F5;">{l["player"]}</span> — '
+                + ", ".join(f'{m["emoji"]} {m["manager"]}' + (" (kept)" if m["kept"] else "")
+                            for m in l["managers"])
+                + '</div>'
+                for l in detail["nfl_league_links"]
+            )
+            st.markdown(
+                f'<div style="margin-top:10px;padding-top:8px;border-top:1px solid #1E2D40;">'
+                f'<div style="font-family:\'Inter\',sans-serif;font-size:0.55rem;color:#A7B0BC;'
+                f'letter-spacing:3px;text-transform:uppercase;margin-bottom:4px;">On our rosters</div>'
+                f'{links}</div>',
+                unsafe_allow_html=True,
+            )
         st.markdown('</div>', unsafe_allow_html=True)
 else:
     st.markdown(

@@ -16,22 +16,22 @@ NFL_CONTEXT: dict[int, list[str]] = {
     ],
     2002: [
         "Rich Gannon wins MVP but Tampa Bay's historic defense wins the Super Bowl.",
-        "Michael Vick becomes the first QB to rush for 1,000 yards.",
+        "Michael Vick's Falcons win at Lambeau Field — the first home playoff loss in Packers history.",
         "The Houston Texans play their inaugural season.",
     ],
     2003: [
-        "Peyton Manning breaks Dan Marino's single-season TD record with 49.",
+        "Peyton Manning and Steve McNair share the MVP award — the first tie in over two decades.",
         "Patriots beat Carolina on a last-second Vinatieri field goal — the dynasty rolls on.",
         "Priest Holmes rushes for 27 TDs, the most in NFL history at the time.",
     ],
     2004: [
         "Peyton Manning throws 49 TDs and the Colts go 12-4 — then lose to the Patriots again.",
-        "Terrell Owens catches 77 balls in a Super Bowl before breaking his leg.",
+        "Terrell Owens breaks his leg in December, then catches nine passes in the Super Bowl seven weeks later.",
         "Shaun Alexander and the Seahawks emerge as NFC contenders.",
     ],
     2005: [
         "Shaun Alexander rushes for 1,880 yards and 27 TDs, wins MVP.",
-        "The Pittsburgh Steelers win Super Bowl XL behind rookie Ben Roethlisberger.",
+        "The Pittsburgh Steelers win Super Bowl XL behind second-year Ben Roethlisberger.",
         "Steve Smith explodes for 1,563 yards after a slow start to his career.",
     ],
     2006: [
@@ -55,9 +55,9 @@ NFL_CONTEXT: dict[int, list[str]] = {
         "Chris Johnson rushes for 2,006 yards, only the sixth player to crack 2,000.",
     ],
     2010: [
-        "Aaron Rodgers wins Super Bowl XLV in his first full year as a starter.",
-        "Michael Vick is reborn in Philadelphia — 21 TDs, 6 rushing TDs, a Pro Bowl season.",
-        "Roddy White and Julio Jones give Matt Ryan two of the best WRs in the NFC.",
+        "Aaron Rodgers wins Super Bowl XLV in his third season as a starter.",
+        "Michael Vick is reborn in Philadelphia — 21 touchdown passes, 9 rushing scores, a Pro Bowl season.",
+        "Roddy White catches 115 passes for 1,389 yards — the best season of his career.",
     ],
     2011: [
         "Eli Manning wins his second Super Bowl title, dismantling the Patriots' historic offense.",
@@ -66,7 +66,7 @@ NFL_CONTEXT: dict[int, list[str]] = {
     ],
     2012: [
         "Ray Lewis retires as a champion — Baltimore beats San Francisco in Super Bowl XLVII.",
-        "Adrian Peterson rushes for 2,097 yards, just nine yards short of the all-time record.",
+        "Adrian Peterson rushes for 2,097 yards, eight short of Eric Dickerson's all-time record.",
         "Colin Kaepernick and the read-option offense reshapes the NFC West.",
     ],
     2013: [
@@ -86,7 +86,7 @@ NFL_CONTEXT: dict[int, list[str]] = {
     ],
     2016: [
         "Tom Brady returns from a four-game suspension to orchestrate the greatest Super Bowl comeback ever — 28-3.",
-        "Matt Ryan wins MVP with 9,317 total yards — then watches the lead evaporate.",
+        "Matt Ryan wins MVP with 4,944 passing yards and 38 touchdowns — then watches a 28-3 lead evaporate.",
         "Dak Prescott and Ezekiel Elliott storm out of the draft into Dallas' best season in years.",
     ],
     2017: [
@@ -112,7 +112,7 @@ NFL_CONTEXT: dict[int, list[str]] = {
     2021: [
         "Cooper Kupp wins the receiving triple crown; the Rams win the Super Bowl on their home field.",
         "Joe Burrow and the Bengals rise from 4-11 to the Super Bowl in one season.",
-        "Justin Jefferson surpasses Randy Moss's rookie receiving record in his second year.",
+        "Justin Jefferson follows his record-setting rookie year with 1,616 receiving yards.",
     ],
     2022: [
         "Patrick Mahomes wins his second Super Bowl despite a high-ankle sprain.",
@@ -122,12 +122,12 @@ NFL_CONTEXT: dict[int, list[str]] = {
     2023: [
         "Travis Kelce and Taylor Swift dominate every headline not about Patrick Mahomes.",
         "Mahomes wins his third Super Bowl; the dynasty conversation begins in earnest.",
-        "Tyreek Hill shatters the single-season receiving yard record with 1,710.",
+        "Tyreek Hill piles up 1,799 receiving yards, the most by any receiver in nearly a decade.",
     ],
     2024: [
         "Saquon Barkley runs for 2,005 yards in his first season in Philadelphia — then wins a Super Bowl.",
         "The Eagles go 14-3, obliterate the Chiefs in the Super Bowl 40-22.",
-        "Patrick Mahomes and the Chiefs fall in the Super Bowl for the first time together.",
+        "Patrick Mahomes and the Chiefs lose their second Super Bowl together — the three-peat ends 40-22.",
     ],
     2025: [
         "The 2025 NFL season is underway.",

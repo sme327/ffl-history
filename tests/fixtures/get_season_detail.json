@@ -83,6 +83,140 @@
             }
           ]
         },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 4,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Drew Bledsoe"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Shawn"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🐝"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Edgerrin James"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Byron"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🏛️"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Kurt Warner"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Fadi"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "👑"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Marshall Faulk"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Dan"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "📖"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
         "standings": {
           "type": "list",
           "length": 9,
@@ -1014,11 +1148,113 @@
             },
             {
               "type": "scalar",
-              "value": "Michael Vick becomes the first QB to rush for 1,000 yards."
+              "value": "Michael Vick's Falcons win at Lambeau Field — the first home playoff loss in Packers history."
             },
             {
               "type": "scalar",
               "value": "The Houston Texans play their inaugural season."
+            }
+          ]
+        },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 3,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Michael Vick"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Kevin Swanson"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🧔"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Packers"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Shawn"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🐝"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Rich Gannon"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Adam"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🎯"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
             }
           ]
         },
@@ -2272,7 +2508,7 @@
           "value": [
             {
               "type": "scalar",
-              "value": "Peyton Manning breaks Dan Marino's single-season TD record with 49."
+              "value": "Peyton Manning and Steve McNair share the MVP award — the first tie in over two decades."
             },
             {
               "type": "scalar",
@@ -2281,6 +2517,140 @@
             {
               "type": "scalar",
               "value": "Priest Holmes rushes for 27 TDs, the most in NFL history at the time."
+            }
+          ]
+        },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 4,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Patriots"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Fadi"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "👑"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Peyton Manning"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Jamie"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "😇"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Priest Holmes"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Brian Clark"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": true
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🍺"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Steve McNair"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Rob"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "⚔️"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
             }
           ]
         },
@@ -3608,11 +3978,177 @@
             },
             {
               "type": "scalar",
-              "value": "Terrell Owens catches 77 balls in a Super Bowl before breaking his leg."
+              "value": "Terrell Owens breaks his leg in December, then catches nine passes in the Super Bowl seven weeks later."
             },
             {
               "type": "scalar",
               "value": "Shaun Alexander and the Seahawks emerge as NFC contenders."
+            }
+          ]
+        },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 5,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Patriots"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Evan"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🎉"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Peyton Manning"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Evan"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🎉"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Seahawks"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Kevin O'Boyle"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🍺"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Shaun Alexander"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Rob"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": true
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "⚔️"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Terrell Owens"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Adam"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🎯"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
             }
           ]
         },
@@ -4940,11 +5476,145 @@
             },
             {
               "type": "scalar",
-              "value": "The Pittsburgh Steelers win Super Bowl XL behind rookie Ben Roethlisberger."
+              "value": "The Pittsburgh Steelers win Super Bowl XL behind second-year Ben Roethlisberger."
             },
             {
               "type": "scalar",
               "value": "Steve Smith explodes for 1,563 yards after a slow start to his career."
+            }
+          ]
+        },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 4,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Ben Roethlisberger"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Joe Tyszko"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🌽"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Shaun Alexander"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Rob"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": true
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "⚔️"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Steelers"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Brian Clark"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🍺"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Steve Smith"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Joe Tyszko"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🌽"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
             }
           ]
         },
@@ -6280,6 +6950,76 @@
             }
           ]
         },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "LaDainian Tomlinson"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Mike"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": true
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🍻"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Peyton Manning"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Evan"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": true
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🎉"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
         "standings": {
           "type": "list",
           "length": 12,
@@ -7609,6 +8349,140 @@
             {
               "type": "scalar",
               "value": "Brett Favre lights it up at age 38, reviving talk of a return."
+            }
+          ]
+        },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 4,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Brett Favre"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Thomas"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🐻"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Patriots"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Mike"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🍻"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Randy Moss"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Fadi"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "👑"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Tom Brady"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Dominic"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🏈"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
             }
           ]
         },
@@ -8944,6 +9818,76 @@
             }
           ]
         },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Kurt Warner"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Adam"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🎯"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Michael Turner"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Dominic"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🏈"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
         "standings": {
           "type": "list",
           "length": 12,
@@ -10276,6 +11220,108 @@
             }
           ]
         },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 3,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Brett Favre"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Shawn"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🐝"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Chris Johnson"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Brian Clark"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": true
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🍺"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Drew Brees"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Kevin O'Boyle"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": true
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🍺"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
         "standings": {
           "type": "list",
           "length": 12,
@@ -11596,15 +12642,85 @@
           "value": [
             {
               "type": "scalar",
-              "value": "Aaron Rodgers wins Super Bowl XLV in his first full year as a starter."
+              "value": "Aaron Rodgers wins Super Bowl XLV in his third season as a starter."
             },
             {
               "type": "scalar",
-              "value": "Michael Vick is reborn in Philadelphia — 21 TDs, 6 rushing TDs, a Pro Bowl season."
+              "value": "Michael Vick is reborn in Philadelphia — 21 touchdown passes, 9 rushing scores, a Pro Bowl season."
             },
             {
               "type": "scalar",
-              "value": "Roddy White and Julio Jones give Matt Ryan two of the best WRs in the NFC."
+              "value": "Roddy White catches 115 passes for 1,389 yards — the best season of his career."
+            }
+          ]
+        },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Aaron Rodgers"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Shawn"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🐝"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Roddy White"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Fadi"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": true
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "👑"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
             }
           ]
         },
@@ -12940,6 +14056,140 @@
             }
           ]
         },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 4,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Aaron Rodgers"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Shawn"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": true
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🐝"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Eli Manning"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Steve Swanson"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🐻"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Patriots"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Evan"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🎉"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Rob Gronkowski"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Nick Blaettler"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🐱"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
         "standings": {
           "type": "list",
           "length": 12,
@@ -14264,11 +15514,49 @@
             },
             {
               "type": "scalar",
-              "value": "Adrian Peterson rushes for 2,097 yards, just nine yards short of the all-time record."
+              "value": "Adrian Peterson rushes for 2,097 yards, eight short of Eric Dickerson's all-time record."
             },
             {
               "type": "scalar",
               "value": "Colin Kaepernick and the read-option offense reshapes the NFC West."
+            }
+          ]
+        },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 1,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Adrian Peterson"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Nick Blaettler"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🐱"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
             }
           ]
         },
@@ -15604,6 +16892,44 @@
             }
           ]
         },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 1,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Peyton Manning"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Robby"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🎸"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
         "standings": {
           "type": "list",
           "length": 12,
@@ -16933,6 +18259,76 @@
             {
               "type": "scalar",
               "value": "They should have run it. The call that will haunt Pete Carroll forever."
+            }
+          ]
+        },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "DeMarco Murray"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Dominic"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": true
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🏈"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Patriots"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Evan"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🎉"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
             }
           ]
         },
@@ -18268,6 +19664,140 @@
             }
           ]
         },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 4,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Broncos"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Evan"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🎉"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Cam Newton"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Shawn"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🐝"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Panthers"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Shawn"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🐝"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Peyton Manning"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Steve Swanson"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🐻"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
         "standings": {
           "type": "list",
           "length": 12,
@@ -19592,11 +21122,113 @@
             },
             {
               "type": "scalar",
-              "value": "Matt Ryan wins MVP with 9,317 total yards — then watches the lead evaporate."
+              "value": "Matt Ryan wins MVP with 4,944 passing yards and 38 touchdowns — then watches a 28-3 lead evaporate."
             },
             {
               "type": "scalar",
               "value": "Dak Prescott and Ezekiel Elliott storm out of the draft into Dallas' best season in years."
+            }
+          ]
+        },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 3,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Dak Prescott"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Nick Blaettler"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🐱"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Ezekiel Elliott"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Fadi"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "👑"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Tom Brady"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Nick Blaettler"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🐱"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
             }
           ]
         },
@@ -20932,6 +22564,76 @@
             }
           ]
         },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Carson Wentz"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Kevin O'Boyle"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🍺"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Todd Gurley"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Nick Blaettler"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🐱"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
         "standings": {
           "type": "list",
           "length": 12,
@@ -22261,6 +23963,108 @@
             {
               "type": "scalar",
               "value": "Todd Gurley leads the Rams to the NFC title; Sony Michel wins the Super Bowl for New England."
+            }
+          ]
+        },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 3,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Patrick Mahomes"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Nick Blaettler"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🐱"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Sony Michel"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Douglas"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "⚙️"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Todd Gurley"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Shawn"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🐝"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
             }
           ]
         },
@@ -23596,6 +25400,108 @@
             }
           ]
         },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 3,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Christian McCaffrey"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Kevin O'Boyle"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": true
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🍺"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Lamar Jackson"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Kevin O'Boyle"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🍺"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Patrick Mahomes"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Dominic"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🏈"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
         "standings": {
           "type": "list",
           "length": 12,
@@ -24928,6 +26834,140 @@
             }
           ]
         },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 4,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Davante Adams"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Douglas"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "⚙️"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Derrick Henry"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Kevin Swanson"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": true
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🧔"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Patrick Mahomes"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Douglas"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "⚙️"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Tom Brady"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Fadi"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "👑"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
         "standings": {
           "type": "list",
           "length": 12,
@@ -26256,7 +28296,109 @@
             },
             {
               "type": "scalar",
-              "value": "Justin Jefferson surpasses Randy Moss's rookie receiving record in his second year."
+              "value": "Justin Jefferson follows his record-setting rookie year with 1,616 receiving yards."
+            }
+          ]
+        },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 3,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Cooper Kupp"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Evan"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🎉"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Joe Burrow"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Jeff"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "⚽"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Justin Jefferson"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Kevin Swanson"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🧔"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
             }
           ]
         },
@@ -27510,6 +29652,140 @@
             }
           ]
         },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 4,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "A.J. Brown"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Fadi"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "👑"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Jalen Hurts"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Jeff"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "⚽"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Patrick Mahomes"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Dominic"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🏈"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Travis Kelce"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Thomas"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🐻"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
         "standings": {
           "type": "list",
           "length": 12,
@@ -28756,7 +31032,109 @@
             },
             {
               "type": "scalar",
-              "value": "Tyreek Hill shatters the single-season receiving yard record with 1,710."
+              "value": "Tyreek Hill piles up 1,799 receiving yards, the most by any receiver in nearly a decade."
+            }
+          ]
+        },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 3,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Patrick Mahomes"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Eric"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": true
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "⛳"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Travis Kelce"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Fadi"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "👑"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Tyreek Hill"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Evan"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🎉"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
             }
           ]
         },
@@ -30006,7 +32384,77 @@
             },
             {
               "type": "scalar",
-              "value": "Patrick Mahomes and the Chiefs fall in the Super Bowl for the first time together."
+              "value": "Patrick Mahomes and the Chiefs lose their second Super Bowl together — the three-peat ends 40-22."
+            }
+          ]
+        },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 2,
+          "value": [
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Patrick Mahomes"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Eric"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": true
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "⛳"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "dict",
+              "value": {
+                "player": {
+                  "type": "scalar",
+                  "value": "Saquon Barkley"
+                },
+                "managers": {
+                  "type": "list",
+                  "length": 1,
+                  "value": [
+                    {
+                      "type": "dict",
+                      "value": {
+                        "manager": {
+                          "type": "scalar",
+                          "value": "Dominic"
+                        },
+                        "kept": {
+                          "type": "scalar",
+                          "value": false
+                        },
+                        "emoji": {
+                          "type": "scalar",
+                          "value": "🏈"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
             }
           ]
         },
@@ -31255,6 +33703,11 @@
               "value": "Another year of fantasy feuds, league-winning decisions, and crushing waiver wire misses."
             }
           ]
+        },
+        "nfl_league_links": {
+          "type": "list",
+          "length": 0,
+          "value": []
         },
         "standings": {
           "type": "list",

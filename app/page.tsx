@@ -20,7 +20,7 @@ export default function HomePage() {
           <div className="section-centre">
             <div className="eyebrow">Reigning Champion</div>
           </div>
-          <div className="champion-card">
+          <div className="champion-card champion-hero">
             <div className="champion-emoji">{champ.emoji}</div>
             <div className="champion-season">🏆 {champ.season} League Champion 🏆</div>
             <div className="champion-team">{champ.team}</div>

@@ -4,6 +4,16 @@ import { site } from "@/lib/data";
 export const metadata = {
   title: "The Long Game",
   description: `${site.subtitle} — a digital museum of a fantasy football league running since ${site.founded}.`,
+  icons: {
+    // Real PNGs, not an SVG emoji: browsers rasterise SVG favicons without
+    // reliably resolving a colour-emoji font, so the tab falls back to a default.
+    icon: [
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/favicon-32.png",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 const NAV = [

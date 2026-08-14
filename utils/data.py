@@ -1316,6 +1316,42 @@ def _game(row: pd.Series) -> dict:
 
 
 @st.cache_data
+def get_nfl_league_links(season: int) -> list[dict]:
+    """Players named in a season's NFL context who were on a league roster.
+
+    Derived rather than hand-written, so the connection can never drift from
+    the draft record. This is the museum's own test applied to the NFL bullets:
+    the league story is the point, the NFL is the backdrop.
+    """
+    from utils import narratives
+
+    lines = narratives.NFL_CONTEXT.get(int(season), [])
+    if not lines:
+        return []
+
+    picks = get_draft_picks_with_pos()
+    season_picks = picks[picks["season"] == int(season)]
+    text = " ".join(lines)
+
+    links = []
+    for player in sorted(set(season_picks["player_name"].dropna())):
+        # Guard against short names matching mid-sentence.
+        if len(player) <= 6 or player not in text:
+            continue
+        rows = season_picks[season_picks["player_name"] == player]
+        owners = sorted(
+            {(r["manager"], bool(r["is_keeper"])) for _, r in rows.iterrows() if r["manager"]},
+            key=lambda o: o[0],
+        )
+        if owners:
+            links.append({
+                "player": player,
+                "managers": [{"manager": m, "kept": k, "emoji": MANAGER_EMOJI.get(m, "")} for m, k in owners],
+            })
+    return links
+
+
+@st.cache_data
 def get_season_detail(season: int) -> dict:
     """Everything the season archive shows for one year.
 
@@ -1446,6 +1482,7 @@ def get_season_detail(season: int) -> dict:
         "hook": hook,
         "narrative": narrative,
         "nfl_context": list(narratives.NFL_CONTEXT.get(season, [])),
+        "nfl_league_links": get_nfl_league_links(season),
         "standings": table,
         "bracket": {
             "rounds": rounds,
