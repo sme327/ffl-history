@@ -70,7 +70,7 @@ export default async function FranchisePage({
       <div className="scroll-x">
         <table>
           <thead>
-            <tr><th>Opponent</th><th className="num">Games</th><th>W-L</th><th>Playoffs</th></tr>
+            <tr><th>Opponent</th><th className="num">Games</th><th>W-L</th><th className="num">Playoffs</th></tr>
           </thead>
           <tbody>
             {franchise.rivals.map((r) => (

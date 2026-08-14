@@ -100,10 +100,14 @@ export default async function SeasonPage({
       {season.bracket.rounds.length > 0 && (
         <>
           <h2>Playoff Bracket</h2>
-          <div className="grid cols-3">
+          <div
+            className="bracket"
+            style={{ gridTemplateColumns: `repeat(${season.bracket.rounds.length}, 1fr)` }}
+          >
             {season.bracket.rounds.map((round) => (
-              <div key={round.type}>
+              <div className="bracket-round" key={round.type}>
                 <div className="eyebrow">{round.label}</div>
+                <div className="bracket-games">
                 {round.games.map((game) => (
                   <div className="matchup" key={`${game.team_1}-${game.team_2}`}>
                     {[
@@ -120,6 +124,7 @@ export default async function SeasonPage({
                     ))}
                   </div>
                 ))}
+                </div>
               </div>
             ))}
           </div>

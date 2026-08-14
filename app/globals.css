@@ -176,7 +176,8 @@ th {
   letter-spacing: 2px; font-weight: 600; font-size: var(--step--1);
 }
 tbody tr:hover { background: rgba(212, 175, 55, 0.04); }
-td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td.num, th.num { text-align: right; }
+td.num { font-variant-numeric: tabular-nums; }
 .gold { color: var(--gold); }
 .muted { color: var(--muted); }
 
@@ -190,8 +191,16 @@ td.num { text-align: right; font-variant-numeric: tabular-nums; }
 /* ── Bracket ────────────────────────────────────────────────────────────── */
 .matchup {
   background: var(--surface); border: 1px solid var(--gold-dim);
-  border-radius: 8px; overflow: hidden; margin-bottom: 0.6rem;
+  border-radius: 8px; overflow: hidden;
 }
+
+/* A bracket should look like a bracket: each round holds half as many games as
+   the one feeding it, so distributing them evenly down an equal-height column
+   centres every game between the two it came from. */
+.bracket { display: grid; gap: 1rem; align-items: stretch; }
+.bracket-round { display: flex; flex-direction: column; justify-content: space-around; gap: 0.6rem; }
+.bracket-round > .eyebrow { flex: 0 0 auto; }
+.bracket-games { display: flex; flex-direction: column; justify-content: space-around; flex: 1; gap: 0.6rem; }
 .matchup-team {
   display: flex; justify-content: space-between; gap: 0.5rem;
   padding: 0.5rem 0.75rem; color: var(--muted);
