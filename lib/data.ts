@@ -200,6 +200,79 @@ export type HomeView = {
   };
 };
 
+export type ChampionsView = {
+  totals: { seasons: number; titles_awarded: number; unique_managers: number };
+  manager_leaders: {
+    manager: string; emoji: string; championships: number; years: string;
+    finals_apps: number; titles: number; runner_ups: number; win_pct: number;
+  }[];
+  dynasties: {
+    manager: string; emoji: string; championships: number; years: string;
+    era_desc: string; consecutive: boolean; titles: number; finals_apps: number;
+  }[];
+  chronological: {
+    manager: string; emoji: string; championships: number; year_list: number[];
+  }[];
+  trivia: Record<string, any>;
+  pain: Record<string, any>;
+  finals: {
+    season: number; emoji: string;
+    champion_manager: string; champion_team: string; champion_score: number;
+    runner_up_manager: string; runner_up_team: string; runner_up_score: number;
+    margin: number;
+  }[];
+};
+
+export type SeasonIndexEntry = { season: number; title: string | null; champion: string | null };
+
+export type SeasonDetail = {
+  season: number;
+  title: string | null;
+  hook: string | null;
+  narrative: string | null;
+  nfl_context: string[];
+  champion: {
+    manager: string; team: string; emoji: string; score: number; margin: number;
+    runner_up_manager: string; runner_up_team: string; runner_up_score: number;
+  } | null;
+  standings: {
+    result: string; team: string; manager: string; emoji: string;
+    wins: number; losses: number; ties: number; points_for: number; rs_rank: number;
+  }[];
+  bracket: {
+    rounds: {
+      type: string; label: string;
+      games: {
+        seed_1: number | null; team_1: string; score_1: number;
+        seed_2: number | null; team_2: string; score_2: number; winner: string;
+      }[];
+    }[];
+    third_place: unknown | null;
+  };
+  top_scorers: { rank: number; team: string; manager: string; emoji: string; points_for: number }[];
+};
+
+export type TimelineEvent = {
+  season: number; icon: string; color: string; label: string;
+  importance: string; importance_label: string;
+  title: string; description: string;
+  manager: string; manager_emoji: string; franchise_id: string;
+  is_editorial: boolean; era: { name: string; color: string };
+  show_on_league_timeline: boolean;
+};
+
+export type Timeline = {
+  events: TimelineEvent[];
+  stats: {
+    total_events: number; total_seasons: number;
+    computed_events: number; editorial_events: number;
+  };
+  bySeason: {
+    season: number; era: { name: string; color: string };
+    count_label: string; high: TimelineEvent[]; other: TimelineEvent[];
+  }[];
+};
+
 // ── Accessors ─────────────────────────────────────────────────────────────────
 
 export const site = read<Site>("site");
@@ -207,6 +280,13 @@ export const home = read<HomeView>("home");
 export const keeperHall = read<KeeperHall>("keepers");
 export const managerIndex = read<ManagerIndexEntry[]>("managers/index");
 export const playerOwnership = read<PlayerOwnership[]>("player-ownership");
+export const championsView = read<ChampionsView>("champions-view");
+export const seasonIndex = read<SeasonIndexEntry[]>("seasons/index");
+export const timeline = read<Timeline>("timeline");
+
+export function seasonDetail(year: string | number): SeasonDetail | null {
+  return readMaybe<SeasonDetail>(`seasons/${year}`);
+}
 
 export function managerProfile(slug: string): ManagerProfile | null {
   return readMaybe<ManagerProfile>(`managers/${slug}`);

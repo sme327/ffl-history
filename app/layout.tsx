@@ -8,6 +8,9 @@ export const metadata = {
 
 const NAV = [
   { href: "/", label: "Home" },
+  { href: "/champions", label: "Champions" },
+  { href: "/timeline", label: "Timeline" },
+  { href: "/seasons", label: "Seasons" },
   { href: "/managers", label: "Managers" },
   { href: "/keepers", label: "Keeper Hall" },
 ];

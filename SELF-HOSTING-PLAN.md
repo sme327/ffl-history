@@ -130,6 +130,9 @@ Routes live so far:
 | `/keepers` | Keeper Hall, now with a manager grid as the way in |
 | `/keepers/:manager` | **New** — "my keepers": DNA, chains, favourites |
 | `/players/:slug` | **New** — player history across every manager who owned them |
+| `/champions` | Leaders, dynasties, championship pain, every final |
+| `/timeline` | All 160 events, grouped by season with era badges |
+| `/seasons`, `/seasons/:year` | Season archive with title, narrative, standings, bracket |
 
 The last two are the entry points the product review flagged as missing (F7).
 `/players/:slug` also lays the groundwork for Player Histories and Ownership
@@ -138,9 +141,9 @@ Trees, both named in `CLAUDE.md`'s roadmap.
 The stylesheet moves the palette and type scale into CSS custom properties
 (review F8) and sets a 0.75rem floor on body text (review F10).
 
-Still to port: champions, timeline, league history, season archive, draft
-center, franchise profiles, rivalries — plus the full visual pass against the
-Streamlit design.
+Still to port: league history, draft center, franchise profiles, rivalries —
+plus the full visual pass against the Streamlit design. The current styling is
+a faithful skeleton, not a finished match.
 
 ### What Phase 2 uncovered
 
