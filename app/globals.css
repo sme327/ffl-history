@@ -71,6 +71,26 @@ a:hover { text-decoration: underline; }
 }
 .nav a:not(.nav-brand):hover { color: var(--gold); border-bottom-color: var(--gold); text-decoration: none; }
 
+/* Hamburger below the width where the full menu fits on one line. A checkbox
+   toggle keeps this working with no client JavaScript. */
+.nav-toggle { display: none; }
+.nav-burger {
+  display: none; margin-left: auto; cursor: pointer;
+  font-size: 1.5rem; color: var(--gold); line-height: 1; padding: 0.25rem 0.4rem;
+}
+.nav-links { display: flex; align-items: center; gap: 0.95rem; flex-wrap: wrap; }
+
+@media (max-width: 1100px) {
+  .nav-brand { margin-right: 0; }
+  .nav-burger { display: block; }
+  .nav-links {
+    display: none; flex-basis: 100%; flex-direction: column;
+    align-items: flex-start; gap: 0; padding-bottom: 0.5rem;
+  }
+  .nav-toggle:checked ~ .nav-links { display: flex; }
+  .nav-links a { width: 100%; padding: 0.55rem 0; border-bottom: 1px solid var(--border); }
+}
+
 /* ── Headings ───────────────────────────────────────────────────────────── */
 h1 {
   font-family: var(--display); font-size: var(--step-3);
@@ -80,9 +100,11 @@ h1 {
 h2 {
   font-family: var(--display); font-size: var(--step-2);
   color: var(--text); letter-spacing: 3px;
-  margin: 2.75rem 0 1rem; padding-bottom: 0.4rem;
+  margin: 2.25rem 0 1rem; padding-bottom: 0.4rem;
   border-bottom: 1px solid var(--border);
 }
+/* The first heading on a page follows intro copy, not another section. */
+p + h2, .eyebrow + h2 { margin-top: 1.5rem; }
 /* Centred section heading, as the original used above hero moments */
 .section-centre { text-align: center; margin: 2.5rem 0 1rem; }
 .section-centre h2 { border: 0; padding: 0; margin: 0.1rem 0 0; }
@@ -125,6 +147,9 @@ a.card:hover { border-color: var(--gold); transform: translateY(-2px); text-deco
 .grid { display: grid; gap: 0.85rem; }
 .grid.cols-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 .grid.cols-3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+/* Era KPIs read better side by side than stacked, even when narrow. */
+.grid.inline-stats { grid-template-columns: repeat(3, auto); justify-content: start; gap: 1.75rem; }
+.grid.inline-stats .metric { text-align: left; }
 .grid.cols-4 { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
 /* Fixed three-up, as the exhibits were laid out originally — auto-fit spread
    them five across and orphaned the sixth. */
@@ -198,6 +223,22 @@ a.card:hover { border-color: var(--gold); transform: translateY(-2px); text-deco
   letter-spacing: 4px; text-transform: uppercase;
   border-bottom: 1px solid rgba(212, 175, 55, 0.6); padding-bottom: 3px;
 }
+
+/* Championship timeline — one row per manager, year pills across */
+.chron-row {
+  display: grid; grid-template-columns: 13rem 1fr; gap: 1rem;
+  align-items: center; padding: 0.5rem 0; border-bottom: 1px solid var(--border);
+}
+.chron-row:last-child { border-bottom: 0; }
+.chron-mgr { display: flex; align-items: center; gap: 0.45rem; font-weight: 600; }
+.chron-years { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.year-pill {
+  display: inline-block; padding: 2px 9px; border-radius: 4px;
+  font-size: var(--step--1); border: 1px solid var(--border); color: var(--muted);
+}
+.year-pill.gold-pill { border-color: var(--gold-dim); color: var(--gold); }
+.year-pill:hover { border-color: var(--gold); color: var(--gold); text-decoration: none; }
+@media (max-width: 640px) { .chron-row { grid-template-columns: 1fr; gap: 0.3rem; } }
 
 .plaque { border-left: 5px solid var(--gold); }
 .plaque p { color: var(--text); }

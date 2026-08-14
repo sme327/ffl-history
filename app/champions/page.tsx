@@ -31,6 +31,30 @@ export default function ChampionsPage() {
         ))}
       </div>
 
+      <h2>Championship Timeline</h2>
+      <div className="card">
+        {championsView.chronological.map((entry) => (
+          <div key={entry.manager} className="chron-row">
+            <div className="chron-mgr">
+              <span style={{ fontSize: "1.1rem" }}>{entry.emoji}</span>
+              <a href={`/managers/${slugify(entry.manager)}`}>{entry.manager}</a>
+              <span className="muted">({entry.championships})</span>
+            </div>
+            <div className="chron-years">
+              {entry.year_list.map((year) => (
+                <a
+                  className={entry.championships > 1 ? "year-pill gold-pill" : "year-pill"}
+                  key={year}
+                  href={`/seasons/${year}`}
+                >
+                  {year}
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
       <h2>Dynasties</h2>
       <div className="grid cols-2">
         {dynasties.map((d) => (
@@ -42,6 +66,38 @@ export default function ChampionsPage() {
             <div className="metric-value">{d.championships}</div>
             <p style={{ margin: "0.25rem 0" }}>{d.era_desc}</p>
             <div className="gold">{d.years}</div>
+          </div>
+        ))}
+      </div>
+
+      <h2>Championship Trivia</h2>
+      <div className="grid cols-3">
+        {[
+          ["Biggest Blowout", String(trivia.biggest_blowout.season),
+           `${trivia.biggest_blowout.champion_team} won by ${trivia.biggest_blowout.margin.toFixed(2)} pts`],
+          ["Closest Title Game", String(trivia.closest_final.season),
+           `${trivia.closest_final.champion_team} survived by ${trivia.closest_final.margin.toFixed(2)} pts`],
+          ["Most Runner-Up Finishes", trivia.most_runner_up.manager,
+           `${trivia.most_runner_up.count}× runner-up — still waiting`],
+          ["Highest-Scoring Final", String(trivia.highest_scoring_final.season),
+           `${trivia.highest_scoring_final.combined.toFixed(2)} combined points`],
+          ["Defensive Masterclass", String(trivia.lowest_scoring_final.season),
+           `Only ${trivia.lowest_scoring_final.combined.toFixed(2)} pts combined — ${trivia.lowest_scoring_final.champion_team} edged it`],
+          ["Most Finals Appearances", trivia.most_finals.manager,
+           `${trivia.most_finals.finals_apps} trips (${trivia.most_finals.titles}W–${trivia.most_finals.runner_ups}L)`],
+          trivia.back_to_back
+            ? ["Back-to-Back Champion", trivia.back_to_back.manager,
+               `Repeated in ${trivia.back_to_back.season} with ${trivia.back_to_back.team}`]
+            : ["Back-to-Back", "No Repeat Yet", "Nobody has successfully defended their title"],
+          ["Highest Winning Score", String(trivia.highest_winning_score.season),
+           `${trivia.highest_winning_score.champion_team} dropped ${trivia.highest_winning_score.champion_score.toFixed(2)} pts`],
+          ["The Original", String(trivia.first_champion.season),
+           `${trivia.first_champion.champion_team} — ${trivia.first_champion.champion_manager} — the first to hoist it`],
+        ].map(([label, headline, sub]) => (
+          <div className="card" key={label}>
+            <div className="eyebrow">{label}</div>
+            <h3 className="gold">{headline}</h3>
+            <p style={{ margin: 0 }}>{sub}</p>
           </div>
         ))}
       </div>

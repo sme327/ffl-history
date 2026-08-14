@@ -1,10 +1,14 @@
-import { rivalriesView, rivalryIndex, slugify } from "@/lib/data";
+import { franchiseIndex, franchiseRivalries, rivalriesView, rivalryIndex, slugify } from "@/lib/data";
 
 export const metadata = { title: "Rivalries · The Long Game" };
 
 export default function RivalriesPage() {
   const { totals, title_records, eliminations, hall_of_pain } = rivalriesView;
   const top = rivalryIndex.slice(0, 10);
+  const franchiseNames = new Map(franchiseIndex.map((f) => [f.id, f.currentManager]));
+  const topFranchisePairs = [...franchiseRivalries]
+    .sort((a, b) => b.games - a.games || a.fid_a.localeCompare(b.fid_a))
+    .slice(0, 10);
 
   return (
     <>
@@ -116,6 +120,73 @@ export default function RivalriesPage() {
             </a>
           </p>
         </div>
+      </div>
+      <h2>Franchise Rivalries</h2>
+      <p style={{ marginTop: "-0.5rem" }}>
+        Franchises are institutions — these are the seats that have met most
+        often, whoever was holding them.
+      </p>
+      <div className="scroll-x">
+        <table>
+          <thead>
+            <tr>
+              <th>Franchise</th><th>Opponent</th>
+              <th className="num">Games</th><th>Record</th><th className="num">Win %</th>
+            </tr>
+          </thead>
+          <tbody>
+            {topFranchisePairs.map((pair) => (
+              <tr key={`${pair.fid_a}-${pair.fid_b}`}>
+                <td>
+                  <a href={`/franchises/${pair.fid_a}`}>{pair.fid_a}</a>{" "}
+                  <span className="muted">{franchiseNames.get(pair.fid_a)}</span>
+                </td>
+                <td>
+                  <a href={`/franchises/${pair.fid_b}`}>{pair.fid_b}</a>{" "}
+                  <span className="muted">{franchiseNames.get(pair.fid_b)}</span>
+                </td>
+                <td className="num muted">{pair.games}</td>
+                <td className="gold">{pair.a_wins}-{pair.b_wins}</td>
+                <td className="num">{Math.round(pair.a_pct * 100)}%</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Every Matchup</h2>
+      <p style={{ marginTop: "-0.5rem" }}>
+        All {totals.pairs} manager pairings, ranked by rivalry score. The
+        Streamlit explorer was a pair of dropdowns; here every matchup is on the
+        page, and every name links to its manager.
+      </p>
+      <div className="scroll-x">
+        <table>
+          <thead>
+            <tr>
+              <th>Matchup</th><th className="num">Games</th><th>Record</th>
+              <th className="num">Playoffs</th><th className="num">Close</th>
+              <th className="num">Span</th><th className="num">Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rivalryIndex.map((r) => (
+              <tr key={r.slug}>
+                <td>
+                  <a href={`/managers/${slugify(r.mgr_a)}`}>{r.mgr_a}</a>
+                  <span className="muted"> vs </span>
+                  <a href={`/managers/${slugify(r.mgr_b)}`}>{r.mgr_b}</a>
+                </td>
+                <td className="num muted">{r.rs_games}</td>
+                <td className="gold">{r.rs_a_wins}–{r.rs_b_wins}</td>
+                <td className="num">{r.pl_games || "—"}</td>
+                <td className="num">{r.close_games}</td>
+                <td className="num muted">{r.first_meeting}–{r.last_meeting}</td>
+                <td className="num gold">{r.rivalry_score}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </>
   );

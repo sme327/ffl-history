@@ -39,9 +39,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <nav className="nav">
           <div className="nav-inner">
             <a className="nav-brand" href="/">THE LONG GAME</a>
-            {NAV.map((item) => (
-              <a key={item.href} href={item.href}>{item.label}</a>
-            ))}
+            <input type="checkbox" id="nav-toggle" className="nav-toggle" hidden />
+            <label className="nav-burger" htmlFor="nav-toggle" aria-label="Toggle navigation">☰</label>
+            <div className="nav-links">
+              {NAV.map((item) => (
+                <a key={item.href} href={item.href}>{item.label}</a>
+              ))}
+            </div>
           </div>
         </nav>
         <main className="wrap">{children}</main>

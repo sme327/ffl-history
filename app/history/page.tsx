@@ -4,7 +4,7 @@ import { leagueHistory, slugify } from "@/lib/data";
 export const metadata = { title: "League History · The Long Game" };
 
 export default function HistoryPage() {
-  const { eras, era_bands, scoring, balance, records } = leagueHistory;
+  const { eras, era_bands, scoring, balance, records, allTimeManagers } = leagueHistory;
 
   return (
     <>
@@ -31,7 +31,7 @@ export default function HistoryPage() {
             {era.headline}
           </div>
           <p>{era.body}</p>
-          <div className="grid cols-3" style={{ maxWidth: 420 }}>
+          <div className="grid inline-stats">
             {[
               [era.titles_awarded, "Titles"],
               [era.unique_champions, "Unique Champions"],
@@ -132,6 +132,40 @@ export default function HistoryPage() {
             <p style={{ margin: 0 }}>{sub}</p>
           </div>
         ))}
+      </div>
+      <h2>All-Time Manager Stats</h2>
+      <p style={{ marginTop: "-0.5rem" }}>Raw data lives here. The stories live above.</p>
+      <div className="scroll-x">
+        <table>
+          <thead>
+            <tr>
+              <th>Manager</th><th className="num">Seasons</th><th>RS W-L</th>
+              <th className="num">RS PF</th><th className="num">RS PA</th><th>PL W-L</th>
+              <th className="num">Playoffs</th><th className="num">Finals</th>
+              <th>Titles</th><th className="num">Best/Worst</th>
+            </tr>
+          </thead>
+          <tbody>
+            {allTimeManagers.map((m) => (
+              <tr key={m.canonical_name}>
+                <td>
+                  <a href={`/managers/${slugify(m.canonical_name)}`}>{m.canonical_name}</a>
+                </td>
+                <td className="num muted">{m.seasons}</td>
+                <td>{m.rs_wins}-{m.rs_losses}</td>
+                <td className="num">{m.rs_pf.toLocaleString(undefined, { maximumFractionDigits: 1 })}</td>
+                <td className="num muted">{m.rs_pa.toLocaleString(undefined, { maximumFractionDigits: 1 })}</td>
+                <td>{m.pl_wins}-{m.pl_losses}</td>
+                <td className="num">{m.playoff_apps}</td>
+                <td className="num">{m.finals_apps}</td>
+                <td className="gold">{m.championships > 0 ? "🏆".repeat(m.championships) : "—"}</td>
+                <td className="num muted">
+                  {m.best_finish ? `#${m.best_finish}` : "—"} / {m.worst_finish ? `#${m.worst_finish}` : "—"}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </>
   );

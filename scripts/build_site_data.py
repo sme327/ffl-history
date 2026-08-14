@@ -126,11 +126,15 @@ def build(out: Path) -> None:
     verify.checked += 1
     site.write("champions-view", champions_view)
 
+    all_time_frame = verify.frame("get_all_time_manager_stats", D.get_all_time_manager_stats())
     history = D.get_league_history_view()
     if normalize(history) != load_fixture("get_league_history_view"):
         raise SystemExit("\n  league history does not match its fixture — refusing to emit.\n")
     verify.checked += 1
-    site.write("league-history", history)
+    site.write("league-history", {
+        **history,
+        "allTimeManagers": records(all_time_frame),
+    })
 
     home = D.get_home_view()
     if normalize(home) != load_fixture("get_home_view"):
@@ -180,7 +184,7 @@ def build(out: Path) -> None:
 
     # ── Managers ─────────────────────────────────────────────────────────────
     stats = verify.frame("get_manager_stats", D.get_manager_stats())
-    all_time = verify.frame("get_all_time_manager_stats", D.get_all_time_manager_stats())
+    all_time = all_time_frame
     all_time_by_name = {r["canonical_name"]: r for r in records(all_time)}
 
     index = []

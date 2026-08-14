@@ -14,6 +14,12 @@ export default async function FranchisePage({
   if (!franchise) return <h1>Franchise not found</h1>;
 
   const t = franchise.totals;
+  // Career totals across every steward — the franchise's own record, not any
+  // one manager's.
+  const allTimeWins = franchise.stewards.reduce((sum, s) => sum + s.wins, 0);
+  const allTimeLosses = franchise.stewards.reduce((sum, s) => sum + s.losses, 0);
+  const played = allTimeWins + allTimeLosses;
+  const winPct = played ? (allTimeWins / played).toFixed(3).replace(/^0/, "") : "—";
 
   return (
     <>
@@ -31,8 +37,10 @@ export default async function FranchisePage({
           [t.finals_apps, "Finals Apps"],
           [t.playoff_apps, "Playoff Apps"],
           [t.winning_seasons, "Winning Seasons"],
+          [`${allTimeWins}-${allTimeLosses}`, "All-Time Record"],
+          [winPct, "All-Time Win %"],
+          [t.longest_playoff_streak, "Longest PO Streak"],
           [t.seasons, "Seasons"],
-          [t.longest_playoff_streak, "Best PO Streak"],
           [t.runner_ups, "Runner-Ups"],
           [t.third_places, "Third Places"],
         ].map(([value, label]) => (
@@ -88,6 +96,101 @@ export default async function FranchisePage({
           </tbody>
         </table>
       </div>
+
+      <h2>Franchise Records</h2>
+      <div className="grid cols-3">
+        {franchise.peaks.best_record && (
+          <div className="card">
+            <div className="eyebrow">Best Season Record</div>
+            <h3 className="gold">
+              {franchise.peaks.best_record.wins}-{franchise.peaks.best_record.losses}
+            </h3>
+            <p style={{ margin: 0 }}>
+              {franchise.peaks.best_record.manager} ·{" "}
+              <a href={`/seasons/${franchise.peaks.best_record.season}`}>
+                {franchise.peaks.best_record.season}
+              </a>
+            </p>
+          </div>
+        )}
+        {franchise.peaks.most_points && (
+          <div className="card">
+            <div className="eyebrow">Most Points in a Season</div>
+            <h3 className="gold">{franchise.peaks.most_points.points_for.toFixed(1)}</h3>
+            <p style={{ margin: 0 }}>
+              {franchise.peaks.most_points.manager} ·{" "}
+              <a href={`/seasons/${franchise.peaks.most_points.season}`}>
+                {franchise.peaks.most_points.season}
+              </a>
+            </p>
+          </div>
+        )}
+        {franchise.peaks.best_week && (
+          <div className="card">
+            <div className="eyebrow">Best Single Week</div>
+            <h3 className="gold">{franchise.peaks.best_week.points.toFixed(2)}</h3>
+            <p style={{ margin: 0 }}>
+              {franchise.peaks.best_week.manager} ·{" "}
+              <a href={`/seasons/${franchise.peaks.best_week.season}`}>
+                {franchise.peaks.best_week.season}
+              </a>{" "}
+              Week {franchise.peaks.best_week.week}
+            </p>
+          </div>
+        )}
+      </div>
+
+      <h2>Franchise Milestones</h2>
+      <div className="card">
+        <div className="chron-row">
+          <div className="chron-mgr">Championships</div>
+          <div className="chron-years">
+            {franchise.championship_seasons.length
+              ? franchise.championship_seasons.map((year) => (
+                  <a className="year-pill gold-pill" key={year} href={`/seasons/${year}`}>{year}</a>
+                ))
+              : <span className="muted">None yet</span>}
+          </div>
+        </div>
+        <div className="chron-row">
+          <div className="chron-mgr">Runner-up</div>
+          <div className="chron-years">
+            {franchise.runner_up_seasons.length
+              ? franchise.runner_up_seasons.map((year) => (
+                  <a className="year-pill" key={year} href={`/seasons/${year}`}>{year}</a>
+                ))
+              : <span className="muted">None</span>}
+          </div>
+        </div>
+        <div className="chron-row">
+          <div className="chron-mgr">Playoff seasons</div>
+          <div className="chron-years">
+            {franchise.playoff_seasons.map((year) => (
+              <a className="year-pill" key={year} href={`/seasons/${year}`}>{year}</a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {franchise.legends.length > 0 && (
+        <>
+          <h2>Franchise Legends</h2>
+          <div className="grid cols-3">
+            {franchise.legends.map((player) => (
+              <div className="card" key={player.player_name}>
+                <h3>
+                  <a href={`/players/${slugify(player.player_name)}`}>{player.player_name}</a>{" "}
+                  <span className="pill">{player.position}</span>
+                </h3>
+                <div className="muted">
+                  Drafted {player.draft_count}×
+                  {player.keeper_count > 0 && ` · kept ${player.keeper_count}×`}
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
 
       <h2>Season by Season</h2>
       <div className="scroll-x">

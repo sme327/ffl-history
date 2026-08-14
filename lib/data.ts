@@ -251,6 +251,13 @@ export type LeagueHistory = {
     top1_pct: number; top3_pct: number;
   };
   records: Record<string, any>;
+  allTimeManagers: {
+    canonical_name: string; display_name: string; seasons: number;
+    rs_wins: number; rs_losses: number; rs_pf: number; rs_pa: number;
+    pl_wins: number; pl_losses: number; playoff_apps: number;
+    finals_apps: number; championships: number;
+    best_finish: number | null; worst_finish: number | null;
+  }[];
 };
 
 export type DraftCenter = {
@@ -302,7 +309,14 @@ export type FranchiseProfile = {
     opponent: string; emoji: string; games: number; wins: number; losses: number;
     playoff_games: number; playoff_wins: number;
   }[];
-  legends: { player_name: string; position: string; draft_count: number; keeper_count: number }[];
+  legends: { player_name: string; position: string; draft_count: number; keeper_count: number; seasons: number[] }[];
+  peaks: {
+    best_record: { season: number; manager: string; wins: number; losses: number } | null;
+    most_points: { season: number; manager: string; points_for: number } | null;
+    best_week: { season: number; manager: string; week: number; points: number } | null;
+  };
+  runner_up_seasons: number[];
+  playoff_seasons: number[];
 };
 
 export type RivalrySummary = {
@@ -397,6 +411,9 @@ export const draftCenter = read<DraftCenter>("draft-center");
 export const franchiseIndex = read<FranchiseIndexEntry[]>("franchises/index");
 export const rivalriesView = read<RivalriesView>("rivalries-view");
 export const rivalryIndex = read<RivalrySummary[]>("rivalries/index");
+export const franchiseRivalries = read<
+  { fid_a: string; fid_b: string; games: number; a_wins: number; b_wins: number; a_pct: number }[]
+>("franchise-rivalries");
 
 export function franchiseProfile(id: string): FranchiseProfile | null {
   return readMaybe<FranchiseProfile>(`franchises/${id}`);
