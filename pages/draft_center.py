@@ -308,8 +308,10 @@ st.markdown('<hr class="tl-divider-full">', unsafe_allow_html=True)
 st.markdown(section_header("THE IDENTITY PROFILE", "Draft DNA"), unsafe_allow_html=True)
 st.markdown(
     '<p style="font-family:\'Inter\',sans-serif;color:#A7B0BC;font-size:0.78rem;margin:-0.5rem 0 1.5rem;">'
-    'Every manager has tells. This is 25 years of first-round evidence — who they were, '
-    'what they valued, and whether it worked.</p>',
+    'Every manager has tells. This is 25 years of first-pick evidence — the player each '
+    'manager took with their earliest live selection. In 2003, 2011 and 2013 every team '
+    'kept a player at round-one cost, so live drafting began in round two; those years '
+    'count too.</p>',
     unsafe_allow_html=True,
 )
 

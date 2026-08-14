@@ -68,8 +68,10 @@ export default function DraftPage() {
 
       <h2>Draft DNA</h2>
       <p>
-        Every manager has tells. This is 25 years of first-round evidence — who
-        they were, what they valued, and whether it worked.
+        Every manager has tells. This is 25 years of first-pick evidence — the
+        player each manager took with their earliest live selection. In 2003,
+        2011 and 2013 every team kept a player at round-one cost, so live
+        drafting began in round two; those years count too.
       </p>
       <div className="grid cols-2">
         {dna.map((entry) => (
@@ -96,10 +98,10 @@ export default function DraftPage() {
         ))}
       </div>
 
-      <h2>Round One History</h2>
+      <h2>First Picks</h2>
       <div className="grid cols-2">
         <div className="card">
-          <div className="eyebrow">Most Taken in Round 1</div>
+          <div className="eyebrow">Most Taken With a First Pick</div>
           <table>
             <tbody>
               {round_one.most_taken.slice(0, 10).map((p) => (
@@ -113,7 +115,7 @@ export default function DraftPage() {
           </table>
         </div>
         <div className="card">
-          <div className="eyebrow">Most #1 Overall Picks</div>
+          <div className="eyebrow">Most Opening Picks of a Draft</div>
           <table>
             <tbody>
               {round_one.first_overall.slice(0, 10).map((p) => (

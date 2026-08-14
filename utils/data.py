@@ -2268,9 +2268,11 @@ def get_manager_profile(name: str) -> dict:
     kept = mine[mine["is_keeper"]]
     draft = None
     if len(drafted):
-        round_one = drafted[
-            (drafted["round"] == 1)
-            & drafted["position"].isin(_DRAFT_SKILL_POSITIONS + ["DEF", "K"])
+        # Each season's first live pick — a keeper consumes the round-1 slot in
+        # several eras, so literal round 1 undercounts (see get_draft_center_view).
+        first_picks = drafted.loc[drafted.groupby("season")["overall_pick"].idxmin()]
+        round_one = first_picks[
+            first_picks["position"].isin(_DRAFT_SKILL_POSITIONS + ["DEF", "K"])
         ]
         counts = {p: int(n) for p, n in round_one["position"].value_counts().items()}
         total = len(round_one)
@@ -2450,17 +2452,28 @@ def get_draft_center_view() -> dict:
     ))
 
     # ── Manager draft DNA ────────────────────────────────────────────────────
-    r1_named = drafted[(drafted["round"] == 1) & drafted["position"].notna()].copy()
+    # A keeper consumes a draft slot, so a manager's first *live* pick is their
+    # first real choice of that draft — which is not always round 1.
+    #
+    # In 2003, 2011 and 2013 every team kept a player at round-1 cost, so live
+    # drafting began in round 2; reading literal round 1 lost those seasons
+    # entirely. From 2014 the same thing happens to individual managers whose
+    # keeper costs round 1. Taking each manager's earliest non-keeper pick
+    # covers all 25 seasons and treats every era the same way.
+    r1_named = drafted[drafted["position"].notna()].copy()
+    r1_named = r1_named.loc[
+        r1_named.groupby(["season", "manager"])["overall_pick"].idxmin()
+    ]
     r1_named["pos_group"] = r1_named["position"].apply(
         lambda p: p if p in DRAFT_SKILL_POSITIONS + ["DEF", "K"] else "Other"
     )
     grid = r1_named.groupby(["manager", "pos_group"]).size().unstack(fill_value=0)
     keeper_rates = (kept.groupby("manager").size() / picks.groupby("manager").size()).fillna(0)
 
-    # Best round-one find: the manager's R1 skill pick with the most league-wide
-    # ownership. Ties now resolved by player name rather than iteration order.
+    # Best first-pick find: the manager's first-pick skill selection with the
+    # most league-wide ownership. Ties resolved by player name.
     best_find: dict[str, str] = {}
-    r1_skill = round_one[round_one["position"].isin(DRAFT_SKILL_POSITIONS)]
+    r1_skill = r1_named[r1_named["position"].isin(DRAFT_SKILL_POSITIONS)]
     for manager, group in r1_skill.groupby("manager"):
         players = sorted(set(group["player_name"]))
         if players:
@@ -2470,7 +2483,7 @@ def get_draft_center_view() -> dict:
     for manager in grid.index:
         counts = {pos: int(grid.loc[manager].get(pos, 0)) for pos in DRAFT_POSITION_ORDER}
         total = sum(counts.values())
-        if total < 4:  # not enough first-round evidence to profile
+        if total < 4:  # not enough evidence to read a pattern
             continue
         shares = {pos: counts[pos] / total for pos in counts}
         shares["total"] = total
@@ -2500,6 +2513,7 @@ def get_draft_center_view() -> dict:
             "top_position": top_position,
             "top_position_pct": int(counts.get(top_position, 0) / total * 100),
             "best_round_one_find": best_find.get(manager, "—"),
+            "seasons_sampled": total,
         })
     dna.sort(key=lambda d: (-d["total"], d["manager"]))
 
@@ -2507,17 +2521,19 @@ def get_draft_center_view() -> dict:
     r1_counts = sorted(
         (
             {"player_name": p, "position": pos, "count": int(n)}
-            for (p, pos), n in round_one[
-                round_one["position"].isin(DRAFT_SKILL_POSITIONS)
+            for (p, pos), n in r1_named[
+                r1_named["position"].isin(DRAFT_SKILL_POSITIONS)
             ].groupby(["player_name", "position"]).size().items()
         ),
         key=lambda r: (-r["count"], r["player_name"]),
     )
+    # The first live pick of each draft — again not always overall pick 1, since
+    # keepers occupy the earliest slots in several eras.
+    opening_picks = drafted.loc[drafted.groupby("season")["overall_pick"].idxmin()]
     first_overall = sorted(
         (
             {"player_name": p, "count": int(n)}
-            for p, n in drafted[drafted["overall_pick"] == 1]
-            .groupby("player_name").size().items()
+            for p, n in opening_picks.groupby("player_name").size().items()
         ),
         key=lambda r: (-r["count"], r["player_name"]),
     )

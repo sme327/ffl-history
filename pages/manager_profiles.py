@@ -322,7 +322,7 @@ if draft:
             )
         st.markdown(
             '<div style="margin-bottom:1rem;">'
-            '<div style="font-size:0.65rem;color:#A7B0BC;font-family:\'Inter\',sans-serif;margin-bottom:6px;">ROUND 1 PICK BREAKDOWN</div>'
+            '<div style="font-size:0.65rem;color:#A7B0BC;font-family:\'Inter\',sans-serif;margin-bottom:6px;">FIRST-PICK BREAKDOWN</div>'
             f'<div style="display:flex;height:18px;border-radius:4px;overflow:hidden;width:100%;">{bars}</div>'
             f'<div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;">{legend}</div>'
             '</div>',

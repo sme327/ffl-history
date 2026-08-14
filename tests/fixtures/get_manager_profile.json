@@ -1575,7 +1575,7 @@
               "value": {
                 "RB": {
                   "type": "scalar",
-                  "value": 5
+                  "value": 8
                 },
                 "WR": {
                   "type": "scalar",
@@ -1584,20 +1584,24 @@
                 "QB": {
                   "type": "scalar",
                   "value": 2
+                },
+                "DEF": {
+                  "type": "scalar",
+                  "value": 1
                 }
               }
             },
             "round_one_total": {
               "type": "scalar",
-              "value": 10
+              "value": 14
             },
             "style": {
               "type": "scalar",
-              "value": "BALANCED DRAFTER"
+              "value": "RB HOARDER"
             },
             "style_color": {
               "type": "scalar",
-              "value": "#A7B0BC"
+              "value": "#22C55E"
             },
             "keeper_rate": {
               "type": "scalar",
@@ -4850,11 +4854,11 @@
               "value": {
                 "WR": {
                   "type": "scalar",
-                  "value": 10
+                  "value": 11
                 },
                 "RB": {
                   "type": "scalar",
-                  "value": 8
+                  "value": 10
                 },
                 "QB": {
                   "type": "scalar",
@@ -4864,15 +4868,15 @@
             },
             "round_one_total": {
               "type": "scalar",
-              "value": 22
+              "value": 25
             },
             "style": {
               "type": "scalar",
-              "value": "WR COLLECTOR"
+              "value": "BALANCED DRAFTER"
             },
             "style_color": {
               "type": "scalar",
-              "value": "#3B82F6"
+              "value": "#A7B0BC"
             },
             "keeper_rate": {
               "type": "scalar",
@@ -6683,6 +6687,10 @@
                   "type": "scalar",
                   "value": 2
                 },
+                "WR": {
+                  "type": "scalar",
+                  "value": 1
+                },
                 "RB": {
                   "type": "scalar",
                   "value": 1
@@ -6691,7 +6699,7 @@
             },
             "round_one_total": {
               "type": "scalar",
-              "value": 3
+              "value": 4
             },
             "style": {
               "type": "scalar",
@@ -8229,7 +8237,7 @@
               "value": {
                 "RB": {
                   "type": "scalar",
-                  "value": 1
+                  "value": 2
                 },
                 "QB": {
                   "type": "scalar",
@@ -8239,15 +8247,15 @@
             },
             "round_one_total": {
               "type": "scalar",
-              "value": 2
+              "value": 3
             },
             "style": {
               "type": "scalar",
-              "value": "QB LOYALIST"
+              "value": "RB HOARDER"
             },
             "style_color": {
               "type": "scalar",
-              "value": "#EF4444"
+              "value": "#22C55E"
             },
             "keeper_rate": {
               "type": "scalar",
@@ -10310,11 +10318,11 @@
               "value": {
                 "RB": {
                   "type": "scalar",
-                  "value": 9
+                  "value": 10
                 },
                 "WR": {
                   "type": "scalar",
-                  "value": 7
+                  "value": 8
                 },
                 "QB": {
                   "type": "scalar",
@@ -10324,7 +10332,7 @@
             },
             "round_one_total": {
               "type": "scalar",
-              "value": 19
+              "value": 21
             },
             "style": {
               "type": "scalar",
@@ -11941,7 +11949,7 @@
               "value": {
                 "RB": {
                   "type": "scalar",
-                  "value": 6
+                  "value": 7
                 },
                 "WR": {
                   "type": "scalar",
@@ -11955,7 +11963,7 @@
             },
             "round_one_total": {
               "type": "scalar",
-              "value": 10
+              "value": 11
             },
             "style": {
               "type": "scalar",
@@ -12755,12 +12763,16 @@
                 "RB": {
                   "type": "scalar",
                   "value": 2
+                },
+                "TE": {
+                  "type": "scalar",
+                  "value": 1
                 }
               }
             },
             "round_one_total": {
               "type": "scalar",
-              "value": 2
+              "value": 3
             },
             "style": {
               "type": "scalar",
@@ -14888,7 +14900,7 @@
               "value": {
                 "RB": {
                   "type": "scalar",
-                  "value": 10
+                  "value": 12
                 },
                 "WR": {
                   "type": "scalar",
@@ -14902,15 +14914,15 @@
             },
             "round_one_total": {
               "type": "scalar",
-              "value": 20
+              "value": 22
             },
             "style": {
               "type": "scalar",
-              "value": "WR COLLECTOR"
+              "value": "BALANCED DRAFTER"
             },
             "style_color": {
               "type": "scalar",
-              "value": "#3B82F6"
+              "value": "#A7B0BC"
             },
             "keeper_rate": {
               "type": "scalar",
@@ -17339,7 +17351,7 @@
               "value": {
                 "WR": {
                   "type": "scalar",
-                  "value": 14
+                  "value": 17
                 },
                 "RB": {
                   "type": "scalar",
@@ -17357,7 +17369,7 @@
             },
             "round_one_total": {
               "type": "scalar",
-              "value": 22
+              "value": 25
             },
             "style": {
               "type": "scalar",
@@ -18455,13 +18467,13 @@
             "round_one_counts": {
               "type": "dict",
               "value": {
-                "WR": {
+                "QB": {
                   "type": "scalar",
                   "value": 2
                 },
-                "QB": {
+                "WR": {
                   "type": "scalar",
-                  "value": 1
+                  "value": 2
                 },
                 "DEF": {
                   "type": "scalar",
@@ -18471,15 +18483,15 @@
             },
             "round_one_total": {
               "type": "scalar",
-              "value": 4
+              "value": 5
             },
             "style": {
               "type": "scalar",
-              "value": "WR COLLECTOR"
+              "value": "QB LOYALIST"
             },
             "style_color": {
               "type": "scalar",
-              "value": "#3B82F6"
+              "value": "#EF4444"
             },
             "keeper_rate": {
               "type": "scalar",
@@ -20794,13 +20806,13 @@
               "value": {
                 "RB": {
                   "type": "scalar",
-                  "value": 6
+                  "value": 7
                 }
               }
             },
             "round_one_total": {
               "type": "scalar",
-              "value": 6
+              "value": 7
             },
             "style": {
               "type": "scalar",
@@ -23213,11 +23225,11 @@
               "value": {
                 "RB": {
                   "type": "scalar",
-                  "value": 10
+                  "value": 14
                 },
                 "WR": {
                   "type": "scalar",
-                  "value": 6
+                  "value": 7
                 },
                 "QB": {
                   "type": "scalar",
@@ -23227,15 +23239,15 @@
             },
             "round_one_total": {
               "type": "scalar",
-              "value": 19
+              "value": 24
             },
             "style": {
               "type": "scalar",
-              "value": "BALANCED DRAFTER"
+              "value": "RB HOARDER"
             },
             "style_color": {
               "type": "scalar",
-              "value": "#A7B0BC"
+              "value": "#22C55E"
             },
             "keeper_rate": {
               "type": "scalar",
@@ -25573,15 +25585,15 @@
               "value": {
                 "RB": {
                   "type": "scalar",
-                  "value": 8
+                  "value": 11
                 },
                 "WR": {
                   "type": "scalar",
-                  "value": 6
+                  "value": 7
                 },
                 "QB": {
                   "type": "scalar",
-                  "value": 3
+                  "value": 5
                 },
                 "TE": {
                   "type": "scalar",
@@ -25591,7 +25603,7 @@
             },
             "round_one_total": {
               "type": "scalar",
-              "value": 18
+              "value": 24
             },
             "style": {
               "type": "scalar",
@@ -27830,7 +27842,7 @@
               "value": {
                 "RB": {
                   "type": "scalar",
-                  "value": 4
+                  "value": 6
                 },
                 "QB": {
                   "type": "scalar",
@@ -27844,7 +27856,7 @@
             },
             "round_one_total": {
               "type": "scalar",
-              "value": 9
+              "value": 11
             },
             "style": {
               "type": "scalar",
@@ -28976,7 +28988,7 @@
               "value": {
                 "RB": {
                   "type": "scalar",
-                  "value": 3
+                  "value": 4
                 },
                 "QB": {
                   "type": "scalar",
@@ -28990,7 +29002,7 @@
             },
             "round_one_total": {
               "type": "scalar",
-              "value": 5
+              "value": 6
             },
             "style": {
               "type": "scalar",
@@ -30021,7 +30033,15 @@
                   "type": "scalar",
                   "value": 3
                 },
+                "RB": {
+                  "type": "scalar",
+                  "value": 1
+                },
                 "TE": {
+                  "type": "scalar",
+                  "value": 1
+                },
+                "QB": {
                   "type": "scalar",
                   "value": 1
                 }
@@ -30029,7 +30049,7 @@
             },
             "round_one_total": {
               "type": "scalar",
-              "value": 4
+              "value": 6
             },
             "style": {
               "type": "scalar",
@@ -32398,7 +32418,7 @@
               "value": {
                 "RB": {
                   "type": "scalar",
-                  "value": 9
+                  "value": 12
                 },
                 "WR": {
                   "type": "scalar",
@@ -32406,13 +32426,13 @@
                 },
                 "QB": {
                   "type": "scalar",
-                  "value": 4
+                  "value": 5
                 }
               }
             },
             "round_one_total": {
               "type": "scalar",
-              "value": 21
+              "value": 25
             },
             "style": {
               "type": "scalar",
@@ -34455,29 +34475,29 @@
               "value": {
                 "RB": {
                   "type": "scalar",
-                  "value": 8
+                  "value": 10
                 },
                 "WR": {
                   "type": "scalar",
-                  "value": 3
+                  "value": 6
                 },
                 "QB": {
                   "type": "scalar",
-                  "value": 1
+                  "value": 3
                 }
               }
             },
             "round_one_total": {
               "type": "scalar",
-              "value": 12
+              "value": 19
             },
             "style": {
               "type": "scalar",
-              "value": "RB HOARDER"
+              "value": "BALANCED DRAFTER"
             },
             "style_color": {
               "type": "scalar",
-              "value": "#22C55E"
+              "value": "#A7B0BC"
             },
             "keeper_rate": {
               "type": "scalar",
@@ -36750,21 +36770,21 @@
               "value": {
                 "RB": {
                   "type": "scalar",
-                  "value": 16
+                  "value": 17
                 },
                 "WR": {
                   "type": "scalar",
-                  "value": 2
+                  "value": 3
                 },
                 "QB": {
                   "type": "scalar",
-                  "value": 1
+                  "value": 3
                 }
               }
             },
             "round_one_total": {
               "type": "scalar",
-              "value": 19
+              "value": 23
             },
             "style": {
               "type": "scalar",
