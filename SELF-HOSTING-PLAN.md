@@ -109,12 +109,14 @@ Every frame is checked against `tests/fixtures/` **before** it is written — th
 
 ### Phase 4 status (2026-08-13)
 
-All ten pages have had their derivations extracted into `utils/data.py` and
-`utils/narratives.py`, every one verified against the original inline logic and
-covered by fixtures. Six pages are also fully rewired to consume them; four
-still run their own copy and are listed as pending in the table above and in
-the build output. **No derivation logic remains undiscovered** — the audit is
-complete even where the rewiring is not.
+**Phase 4 is complete.** All ten pages have had their derivations extracted into
+`utils/data.py` and `utils/narratives.py`, every one verified against the
+original inline logic, covered by fixtures, and every page rewired to consume
+them. No page computes its own history any more, and no derivation logic
+remains outside the test suite.
+
+What remains for the migration itself is the presentation port — the vinext /
+React scaffold and the route work in Phases 3–6. The data layer is done.
 
 ### What Phase 2 uncovered
 
@@ -181,7 +183,7 @@ The bulk of the work. `utils/styles.py` (886 lines) already has the right instin
 | ~~7~~ | ~~`draft_center.py`~~ | 896→772 | ✅ **Done 2026-08-13** → `get_draft_center_view()` + `get_draft_loyalty_board()`; page rewired, 124 lines of duplicate derivation removed |
 | ~~8~~ | ~~`franchise_profiles.py`~~ | 966→702 | ✅ **Done 2026-08-13** → `get_franchise_profile()` + `narratives.franchise_story()`; page rewired, 264 lines of duplicate derivation removed |
 | ~~9~~ | ~~`keeper_hall.py`~~ | 1,177→1,105 | ✅ **Done 2026-08-13** → `get_keeper_hall_view()`; page rewired. Still has no entry points (review F7) — worth redesigning during the presentation port |
-| 10 | `rivalries.py` | 1,215 | ⚠️ **Derivations extracted 2026-08-13** → `get_rivalries_view()` + `get_head_to_head_losses()`, fixture-covered. **Page rewiring pending** |
+| ~~10~~ | ~~`rivalries.py`~~ | 1,215→1,146 | ✅ **Done 2026-08-13** → `get_rivalries_view()` + `get_head_to_head_losses()`; page rewired |
 
 **Keep the Streamlit app running the whole time.** Side-by-side visual diffing is the only practical way to catch regressions in a design this dense, and it means an unfinished rewrite never costs you a working site. Cut over only at parity.
 

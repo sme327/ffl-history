@@ -5,6 +5,9 @@ import pandas as pd
 import plotly.graph_objects as go
 from utils.data import (
     get_all_rivalries,
+    get_rivalries_view,
+    get_head_to_head_losses,
+    rivalry_from_perspective,
     get_h2h_detail,
     get_franchise_rivalries,
     get_playoff_eliminations,
@@ -42,23 +45,12 @@ champ_pg = pg[pg["bracket"] == "championship"].copy()
 # All managers who have appeared in rivalry data
 all_mgrs = sorted(set(all_rivalries["mgr_a"].tolist() + all_rivalries["mgr_b"].tolist()))
 
-# Finals data for championship section
-finals = champ_pg[champ_pg["game_type"] == "final"].copy()
-finals["winner_mgr"] = finals.apply(lambda r: mgr_lu.get((r["season"], r["winner"])), axis=1)
-finals["loser_team"] = finals.apply(
-    lambda r: r["team_2"] if r["winner"] == r["team_1"] else r["team_1"], axis=1
-)
-finals["loser_mgr"] = finals.apply(
-    lambda r: mgr_lu.get((r["season"], r["loser_team"])), axis=1
-)
-finals["margin"] = (finals["score_1"] - finals["score_2"]).abs()
-finals["win_score"] = finals.apply(
-    lambda r: float(r["score_1"]) if r["winner"] == r["team_1"] else float(r["score_2"]), axis=1
-)
-finals["loss_score"] = finals.apply(
-    lambda r: float(r["score_2"]) if r["winner"] == r["team_1"] else float(r["score_1"]), axis=1
-)
-
+# All derivation lives in utils.data.get_rivalries_view(); this page renders it.
+view = get_rivalries_view()
+finals = view["finals"]
+title_records = view["title_records"]
+_elims = view["eliminations"]
+_pain = view["hall_of_pain"]
 
 # ── HELPERS ───────────────────────────────────────────────────────────────────
 def _color(mgr: str) -> str:
@@ -402,28 +394,6 @@ mgr_rivals = all_rivalries[
     (all_rivalries["mgr_a"] == selected_mgr) | (all_rivalries["mgr_b"] == selected_mgr)
 ].copy()
 
-def _from_perspective(row: pd.Series, mgr: str) -> dict:
-    if row["mgr_a"] == mgr:
-        return {
-            "opponent": row["mgr_b"],
-            "wins": int(row["rs_a_wins"]), "losses": int(row["rs_b_wins"]),
-            "win_pct": float(row["rs_a_pct"]),
-            "pl_wins": int(row["pl_a_wins"]), "pl_losses": int(row["pl_b_wins"]),
-            "final_wins": int(row["final_a_wins"]), "final_losses": int(row["final_b_wins"]),
-            "biggest_win": float(row["a_biggest_win"]),
-            "biggest_loss": float(row["b_biggest_win"]),
-        }
-    else:
-        return {
-            "opponent": row["mgr_a"],
-            "wins": int(row["rs_b_wins"]), "losses": int(row["rs_a_wins"]),
-            "win_pct": 1.0 - float(row["rs_a_pct"]),
-            "pl_wins": int(row["pl_b_wins"]), "pl_losses": int(row["pl_a_wins"]),
-            "final_wins": int(row["final_b_wins"]), "final_losses": int(row["final_a_wins"]),
-            "biggest_win": float(row["b_biggest_win"]),
-            "biggest_loss": float(row["a_biggest_win"]),
-        }
-
 mgr_color = _color(selected_mgr)
 mgr_em = _emoji(selected_mgr)
 
@@ -431,7 +401,7 @@ if len(mgr_rivals) == 0:
     st.info("No rivalry data found for this manager.")
 else:
     # Build perspective rows
-    rows_persp = [_from_perspective(r, selected_mgr) for _, r in mgr_rivals.iterrows()]
+    rows_persp = [rivalry_from_perspective(r.to_dict(), selected_mgr) for _, r in mgr_rivals.iterrows()]
     persp_df = pd.DataFrame(rows_persp)
     persp_df["rs_games"] = mgr_rivals["rs_games"].values
     persp_df["pl_games"] = mgr_rivals["pl_games"].values
@@ -617,22 +587,13 @@ with pc2:
         'text-transform:uppercase;margin-bottom:0.8rem;">MOST PLAYOFF ELIMINATIONS</div>',
         unsafe_allow_html=True,
     )
-    total_elim = (
-        elim_df.groupby("winner_mgr")["eliminations"]
-        .sum()
-        .reset_index(name="total")
-        .sort_values("total", ascending=False)
-        .head(10)
-        .reset_index(drop=True)
-    )
-    for rank_i, (_, er) in enumerate(total_elim.iterrows()):
-        mgr = str(er["winner_mgr"])
-        n = int(er["total"])
+    for rank_i, er in enumerate(_elims["by_executioner"][:10]):
+        mgr = er["manager"]
+        n = er["total"]
         col = _color(mgr)
-        top_victims = elim_df[elim_df["winner_mgr"] == mgr].nlargest(2, "eliminations")
+        top_victims = [e for e in _elims["pairs"] if e["winner"] == mgr][:2]
         victim_str = " · ".join(
-            f"{int(r['eliminations'])}× vs {r['loser_mgr']}"
-            for _, r in top_victims.iterrows()
+            f"{r['eliminations']}× vs {r['loser']}" for r in top_victims
         )
         st.markdown(
             f"""<div style="background:#0F1B2D;border:1px solid #1E3A5F;border-radius:8px;
@@ -654,11 +615,10 @@ with pc2:
         'text-transform:uppercase;margin:1rem 0 0.6rem;">MOST TIMES ELIMINATED BY ONE PERSON</div>',
         unsafe_allow_html=True,
     )
-    top_elim_pair = elim_df.nlargest(5, "eliminations")
-    for _, er in top_elim_pair.iterrows():
-        killer = str(er["winner_mgr"])
-        victim = str(er["loser_mgr"])
-        n = int(er["eliminations"])
+    for er in _elims["pairs"][:5]:
+        killer = er["winner"]
+        victim = er["loser"]
+        n = er["eliminations"]
         k_col = _color(killer)
         v_col = _color(victim)
         st.markdown(
@@ -692,12 +652,12 @@ with cc1:
         'text-transform:uppercase;margin-bottom:1rem;">TITLE GAME HISTORY</div>',
         unsafe_allow_html=True,
     )
-    for _, fin in finals.sort_values("season", ascending=False).iterrows():
-        w = str(fin["winner_mgr"])
-        l = str(fin["loser_mgr"])
-        szn = int(fin["season"])
-        ws = float(fin["win_score"])
-        ls = float(fin["loss_score"])
+    for fin in finals:
+        w = fin["winner_manager"]
+        l = fin["loser_manager"]
+        szn = fin["season"]
+        ws = fin["winner_score"]
+        ls = fin["loser_score"]
         margin = float(fin["margin"])
         wcol = _color(w)
         lcol = _color(l)
@@ -734,24 +694,11 @@ with cc1:
 
 with cc2:
     # Most title game appearances
-    title_wins = finals.groupby("winner_mgr").size().reset_index(name="wins").rename(columns={"winner_mgr": "mgr"})
-    title_loss = finals.groupby("loser_mgr").size().reset_index(name="losses").rename(columns={"loser_mgr": "mgr"})
-    title_rec = title_wins.merge(title_loss, on="mgr", how="outer").fillna(0)
-    title_rec["wins"] = title_rec["wins"].astype(int)
-    title_rec["losses"] = title_rec["losses"].astype(int)
-    title_rec["apps"] = title_rec["wins"] + title_rec["losses"]
-    title_rec = title_rec.sort_values(["wins", "apps"], ascending=False).reset_index(drop=True)
-
-    st.markdown(
-        '<div style="font-size:0.65rem;letter-spacing:3px;color:#D4AF37;'
-        'text-transform:uppercase;margin-bottom:0.8rem;">CHAMPIONSHIP GAME RECORD</div>',
-        unsafe_allow_html=True,
-    )
-    for _, tr in title_rec.head(10).iterrows():
-        mgr = str(tr["mgr"])
-        w = int(tr["wins"])
-        l = int(tr["losses"])
-        apps = int(tr["apps"])
+    for tr in title_records[:10]:
+        mgr = tr["manager"]
+        w = tr["wins"]
+        l = tr["losses"]
+        apps = tr["apps"]
         col = _color(mgr)
         fill_w = round(w / apps * 100) if apps else 0
         fill_l = 100 - fill_w
@@ -792,38 +739,21 @@ st.markdown(
 hp1, hp2 = st.columns(2)
 
 with hp1:
-    # Most RS losses to one opponent
-    rs_all = data_raw["weekly_matchups"].copy()
-    rs_all["mgr"] = rs_all.apply(lambda r: mgr_lu.get((r["season"], r["team_name"])), axis=1)
-    rs_all["opp_mgr"] = rs_all.apply(lambda r: mgr_lu.get((r["season"], r["opponent"])), axis=1)
-    rs_only = rs_all[~rs_all["is_bye"].astype(bool) & ~rs_all["is_playoff"].astype(bool)].copy()
-    rs_only = rs_only.dropna(subset=["mgr", "opp_mgr"])
-    rs_only["pair"] = rs_only.apply(lambda r: tuple(sorted([r["mgr"], r["opp_mgr"]])), axis=1)
-    rs_dedup2 = rs_only.drop_duplicates(subset=["season", "week", "pair"])
-    rs_dedup2["winner"] = rs_dedup2.apply(
-        lambda r: r["mgr"] if r["result"] == "Win" else r["opp_mgr"], axis=1
-    )
-    rs_dedup2["loser"] = rs_dedup2.apply(
-        lambda r: r["opp_mgr"] if r["result"] == "Win" else r["mgr"], axis=1
-    )
-    loss_ct = (
-        rs_dedup2.groupby(["loser", "winner"])
-        .size()
-        .reset_index(name="losses")
-        .sort_values("losses", ascending=False)
-    )
-    top_losses = loss_ct[loss_ct["losses"] >= 10].head(6)
+    # Most RS losses to one opponent — the dedup lives in utils.data now,
+    # where get_all_rivalries() already does the same work.
+    loss_ct = get_head_to_head_losses()
+    top_losses = _pain["worst_matchups"][:6]
     st.markdown(
         _pain_entry("😩", "MOST LOSSES TO ONE OPPONENT",
-            f"{loss_ct.iloc[0]['loser']} lost {loss_ct.iloc[0]['losses']} times to {loss_ct.iloc[0]['winner']}",
+            f"{loss_ct[0]['loser']} lost {loss_ct[0]['losses']} times to {loss_ct[0]['winner']}",
             "The most lopsided long-term regular season record in league history.",
             "#EF4444"),
         unsafe_allow_html=True,
     )
-    for _, r in top_losses.iterrows():
-        loser = str(r["loser"])
-        winner = str(r["winner"])
-        losses = int(r["losses"])
+    for r in top_losses:
+        loser = r["loser"]
+        winner = r["winner"]
+        losses = r["losses"]
         lc = _color(loser)
         wc = _color(winner)
         st.markdown(
@@ -838,20 +768,22 @@ with hp1:
         )
 
     # Closest championship loss
-    closest_final = finals.nsmallest(3, "margin")
+    closest_final = sorted(finals, key=lambda f: (f["margin"], -f["season"]))[:3]
     st.markdown("<div style='margin-top:1rem;'></div>", unsafe_allow_html=True)
     st.markdown(
         _pain_entry("💔", "CLOSEST CHAMPIONSHIP LOSS",
-            f"{finals.nsmallest(1,'margin').iloc[0]['loser_mgr']} lost the title by {finals.nsmallest(1,'margin').iloc[0]['margin']:.2f} pts",
-            f"The 2024 championship: {finals.nsmallest(1,'margin').iloc[0]['loser_mgr']} vs {finals.nsmallest(1,'margin').iloc[0]['winner_mgr']}. 0.12 points. The cruelest margin in league history.",
+            f"{_pain['closest_final']['loser_manager']} lost the title by {_pain['closest_final']['margin']:.2f} pts",
+            f"The {_pain['closest_final']['season']} championship: {_pain['closest_final']['loser_manager']} vs "
+            f"{_pain['closest_final']['winner_manager']}. {_pain['closest_final']['margin']:.2f} points. "
+            f"The cruelest margin in league history.",
             "#F59E0B"),
         unsafe_allow_html=True,
     )
-    for _, r in closest_final.iterrows():
-        loser = str(r["loser_mgr"])
-        winner = str(r["winner_mgr"])
-        szn = int(r["season"])
-        margin = float(r["margin"])
+    for r in closest_final:
+        loser = r["loser_manager"]
+        winner = r["winner_manager"]
+        szn = r["season"]
+        margin = r["margin"]
         lc = _color(loser)
         wc = _color(winner)
         st.markdown(
@@ -872,21 +804,26 @@ with hp1:
 
 with hp2:
     # Most championship losses overall
-    champ_losers = finals.groupby("loser_mgr").size().reset_index(name="losses").sort_values("losses", ascending=False)
-    worst_ru = champ_losers.iloc[0]
+    champ_losers = _pain["finals_losses"]
+    worst_ru = champ_losers[0]
     st.markdown(
         _pain_entry("🥈", "MOST CHAMPIONSHIP LOSSES",
-            f"{worst_ru['loser_mgr']} has lost {worst_ru['losses']} title games",
+            f"{worst_ru['manager']} has lost {worst_ru['losses']} title games",
             "Close enough to touch the trophy. Never close enough to keep it.",
             "#94A3B8"),
         unsafe_allow_html=True,
     )
-    for _, r in champ_losers.head(6).iterrows():
-        loser = str(r["loser_mgr"])
-        losses = int(r["losses"])
+    for r in champ_losers[:6]:
+        loser = r["manager"]
+        losses = r["losses"]
         # Find who they lost to
-        against = finals[finals["loser_mgr"] == loser]["winner_mgr"].value_counts()
-        against_str = ", ".join([f"{n}× vs {m}" for m, n in against.items()])
+        _beaten_by: dict[str, int] = {}
+        for _f in finals:
+            if _f["loser_manager"] == loser:
+                _beaten_by[_f["winner_manager"]] = _beaten_by.get(_f["winner_manager"], 0) + 1
+        against_str = ", ".join(
+            f"{n}× vs {m}" for m, n in sorted(_beaten_by.items(), key=lambda kv: (-kv[1], kv[0]))
+        )
         lc = _color(loser)
         st.markdown(
             f"""<div style="background:#0F1B2D;border:1px solid #1E3A5F;border-radius:6px;
@@ -902,29 +839,23 @@ with hp2:
 
     # Most playoff eliminations received
     st.markdown("<div style='margin-top:1rem;'></div>", unsafe_allow_html=True)
-    most_eliminated = (
-        elim_df.groupby("loser_mgr")["eliminations"]
-        .sum()
-        .reset_index(name="times_eliminated")
-        .sort_values("times_eliminated", ascending=False)
-        .head(6)
-    )
-    worst_elim = most_eliminated.iloc[0]
+    most_eliminated = _elims["by_victim"][:6]
+    worst_elim = most_eliminated[0]
     st.markdown(
         _pain_entry("⛔", "MOST PLAYOFF ELIMINATIONS RECEIVED",
-            f"{worst_elim['loser_mgr']} eliminated from the bracket {int(worst_elim['times_eliminated'])} times",
+            f"{worst_elim['manager']} eliminated from the bracket {worst_elim['total']} times",
             "A fixture of the postseason. Not always in the way you'd want to be remembered.",
             "#8B5CF6"),
         unsafe_allow_html=True,
     )
-    for _, r in most_eliminated.iterrows():
-        victim = str(r["loser_mgr"])
-        n = int(r["times_eliminated"])
+    for r in most_eliminated:
+        victim = r["manager"]
+        n = r["total"]
         vc = _color(victim)
-        top_killer = elim_df[elim_df["loser_mgr"] == victim].nlargest(1, "eliminations")
+        _killers = [e for e in _elims["pairs"] if e["loser"] == victim]
         killer_str = (
-            f"most often by {top_killer.iloc[0]['winner_mgr']} ({int(top_killer.iloc[0]['eliminations'])}×)"
-            if len(top_killer) else ""
+            f"most often by {_killers[0]['winner']} ({_killers[0]['eliminations']}×)"
+            if _killers else ""
         )
         st.markdown(
             f"""<div style="background:#0F1B2D;border:1px solid #1E3A5F;border-radius:6px;
@@ -1035,7 +966,7 @@ else:
         st.info("No matchup history found between these managers.")
     else:
         riv_row = riv_rows.iloc[0]
-        persp = _from_perspective(riv_row, mgr_a_sel)
+        persp = rivalry_from_perspective(riv_row.to_dict(), mgr_a_sel)
         a_wins = persp["wins"]
         a_losses = persp["losses"]
         a_pct = persp["win_pct"]

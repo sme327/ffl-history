@@ -279,20 +279,16 @@ def build(out: Path) -> None:
     print(f"  {len(index)} managers · {len(fran_index)} franchises · "
           f"{len(seasons)} seasons · {len(riv_rows)} rivalries")
 
-    print("\nPages still rendering from their own copy (derivations extracted, rewiring pending):")
-    for page, note in PAGE_LEVEL_WORK.items():
-        print(f"  {page:24} {note}")
+    if PAGE_LEVEL_WORK:
+        print("\nPages still rendering from their own copy (rewiring pending):")
+        for page, note in PAGE_LEVEL_WORK.items():
+            print(f"  {page:24} {note}")
 
 
 # Pages that call load_all() and derive from raw frames themselves. Each needs
 # its logic lifted into utils/data.py (with fixtures) before the port can render
 # that route from JSON alone.
-# Pages whose derivations are extracted and fixture-covered, but which still
-# render from their own inline copy. Until rewired, the two can drift apart —
-# only the extracted version is under test.
-PAGE_LEVEL_WORK = {
-    "rivalries.py": "rewire to get_rivalries_view()",
-}
+PAGE_LEVEL_WORK: dict[str, str] = {}  # Phase 4 audit complete — every page rewired.
 
 
 def main() -> None:
