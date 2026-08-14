@@ -25,9 +25,9 @@
   --step--1: 0.75rem;
   --step-0: 0.875rem;
   --step-1: 1.125rem;
-  --step-2: 1.6rem;
-  --step-3: 2.5rem;
-  --step-4: 4rem;
+  --step-2: 1.8rem;   /* section titles */
+  --step-3: 3.2rem;   /* page titles, metric values */
+  --step-4: 5rem;     /* hero */
 }
 
 * { box-sizing: border-box; }
@@ -55,17 +55,17 @@ a:hover { text-decoration: underline; }
 }
 .nav-inner {
   max-width: 1280px; margin: 0 auto;
-  padding: 0 2.5rem; min-height: 62px;
-  display: flex; align-items: center; gap: 1.1rem; flex-wrap: wrap;
+  padding: 0 2rem; min-height: 62px;
+  display: flex; align-items: center; gap: 0.95rem; flex-wrap: wrap;
 }
 .nav-brand {
-  font-family: var(--display); font-size: 1.35rem;
-  color: var(--gold); letter-spacing: 5px; margin-right: auto;
+  font-family: var(--display); font-size: 1.3rem;
+  color: var(--gold); letter-spacing: 4px; margin-right: auto;
 }
 .nav-brand:hover { text-decoration: none; }
 .nav a:not(.nav-brand) {
-  font-size: var(--step--1); font-weight: 500; color: var(--muted);
-  letter-spacing: 1.5px; text-transform: uppercase;
+  font-size: 0.72rem; font-weight: 500; color: var(--muted);
+  letter-spacing: 1px; text-transform: uppercase;
   padding: 4px 0; border-bottom: 2px solid transparent;
   transition: color 0.2s, border-color 0.2s; white-space: nowrap;
 }
@@ -74,7 +74,7 @@ a:hover { text-decoration: underline; }
 /* ── Headings ───────────────────────────────────────────────────────────── */
 h1 {
   font-family: var(--display); font-size: var(--step-3);
-  color: var(--gold); letter-spacing: 6px; line-height: 1.05;
+  color: var(--gold); letter-spacing: 6px; line-height: 1;
   margin: 0 0 0.5rem;
 }
 h2 {
@@ -83,6 +83,9 @@ h2 {
   margin: 2.75rem 0 1rem; padding-bottom: 0.4rem;
   border-bottom: 1px solid var(--border);
 }
+/* Centred section heading, as the original used above hero moments */
+.section-centre { text-align: center; margin: 2.5rem 0 1rem; }
+.section-centre h2 { border: 0; padding: 0; margin: 0.1rem 0 0; }
 h3 { font-family: var(--display); font-size: var(--step-1); letter-spacing: 2px; margin: 0 0 0.4rem; }
 p { color: var(--muted); margin: 0.5rem 0; }
 
@@ -90,11 +93,15 @@ p { color: var(--muted); margin: 0.5rem 0; }
   font-size: var(--step--1); letter-spacing: 4px; text-transform: uppercase;
   color: var(--muted); margin-bottom: 0.3rem;
 }
-.hero { text-align: center; padding: 2rem 0 1.25rem; }
+.hero { text-align: center; padding: 2.5rem 0 1.5rem; }
 .hero h1 { font-size: var(--step-4); letter-spacing: 10px; }
 .hero-subtitle {
-  font-family: var(--serif); font-size: var(--step-1);
-  color: var(--muted); letter-spacing: 1px;
+  font-size: 0.78rem; color: var(--muted);
+  letter-spacing: 6px; text-transform: uppercase; margin-top: 0.5rem;
+}
+.hero-tagline {
+  font-size: 0.88rem; color: var(--muted); font-style: italic;
+  letter-spacing: 1px; line-height: 1.8; margin-top: 1.1rem;
 }
 .divider {
   height: 1px; border: 0; margin: 2rem auto;
@@ -122,13 +129,32 @@ a.card:hover { border-color: var(--gold); transform: translateY(-2px); text-deco
 
 .metric { text-align: center; }
 .metric-value {
-  font-family: var(--display); font-size: var(--step-2);
-  color: var(--gold); line-height: 1.1; letter-spacing: 2px;
+  font-family: var(--display); font-size: var(--step-3);
+  color: var(--gold); line-height: 1; letter-spacing: 2px;
 }
 .metric-label {
   font-size: var(--step--1); color: var(--muted);
-  text-transform: uppercase; letter-spacing: 2px;
+  text-transform: uppercase; letter-spacing: 3px; margin-top: 0.4rem;
 }
+
+/* ── Champion card — the hero moment of the home and season pages ────────── */
+.champion-card {
+  background: var(--surface); border: 2px solid var(--gold);
+  border-radius: 12px; padding: 2.5rem 2rem; text-align: center;
+  box-shadow: 0 0 50px rgba(212, 175, 55, 0.12);
+  max-width: 620px; margin: 0 auto;
+}
+.champion-emoji { font-size: 4rem; line-height: 1; margin-bottom: 0.5rem; }
+.champion-season {
+  font-size: 0.7rem; color: var(--muted);
+  letter-spacing: 4px; text-transform: uppercase;
+}
+.champion-team {
+  font-family: var(--display); font-size: 3.2rem; color: var(--gold);
+  letter-spacing: 4px; line-height: 1; margin: 0.4rem 0 0.2rem;
+}
+.champion-manager { font-size: 1rem; color: var(--text); font-weight: 500; }
+.champion-score { font-size: 0.8rem; color: var(--muted); margin-top: 0.75rem; }
 
 .plaque { border-left: 5px solid var(--gold); }
 .plaque p { color: var(--text); }

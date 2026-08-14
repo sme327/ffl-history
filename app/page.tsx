@@ -8,14 +8,36 @@ export default function HomePage() {
       <header className="hero">
         <h1>THE LONG GAME</h1>
         <div className="hero-subtitle">{site.subtitle}</div>
-        <p style={{ fontStyle: "italic", marginTop: "0.75rem" }}>
-          Built by friendship. Defined by competition. Occasionally ruined by a
-          waiver wire mistake.
-        </p>
+        <div className="hero-tagline">
+          Built by friendship.&nbsp; Defined by competition.&nbsp; Occasionally
+          ruined by a waiver wire mistake.
+        </div>
       </header>
       <hr className="divider" />
 
-      <div className="grid cols-4" style={{ marginTop: "1.5rem" }}>
+      {champ && (
+        <>
+          <div className="section-centre">
+            <div className="eyebrow">Reigning Champion</div>
+          </div>
+          <div className="champion-card">
+            <div className="champion-emoji">{champ.emoji}</div>
+            <div className="champion-season">🏆 {champ.season} League Champion 🏆</div>
+            <div className="champion-team">{champ.team}</div>
+            <div className="champion-manager">
+              <a href={`/managers/${slugify(champ.manager)}`}>{champ.manager}</a>
+              {champ.titles_all_time > 1 && ` · ${champ.titles_all_time}× Champion`}
+            </div>
+            <div className="champion-score">
+              {champ.score.toFixed(2)} – {champ.runner_up_score.toFixed(2)} over{" "}
+              {champ.runner_up_team}
+            </div>
+          </div>
+          <hr className="divider" />
+        </>
+      )}
+
+      <div className="grid cols-4">
         {[
           [stats.seasons, "Seasons"],
           [stats.active_managers, "Active Members"],
@@ -29,24 +51,10 @@ export default function HomePage() {
         ))}
       </div>
 
-      {champ && (
-        <>
-          <h2>Reigning Champion</h2>
-          <div className="card card-feature">
-            <div style={{ fontSize: "3rem" }}>{champ.emoji}</div>
-            <h3 className="gold">{champ.team}</h3>
-            <p>
-              <a href={`/managers/${slugify(champ.manager)}`}>{champ.manager}</a>
-              {champ.titles_all_time > 1 && ` · ${champ.titles_all_time}× champion`}
-              {" — "}
-              {champ.score.toFixed(2)}–{champ.runner_up_score.toFixed(2)} over{" "}
-              {champ.runner_up_team}
-            </p>
-          </div>
-        </>
-      )}
-
-      <h2>League Legends</h2>
+      <div className="section-centre">
+        <div className="eyebrow">All-Time</div>
+        <h2>League Legends</h2>
+      </div>
       <div className="grid cols-4">
         {legends.slice(0, 4).map((legend) => (
           <div className="card metric" key={legend.manager}>
@@ -76,7 +84,10 @@ export default function HomePage() {
         )}
       </div>
 
-      <h2>League Storylines</h2>
+      <div className="section-centre">
+        <div className="eyebrow">The Numbers Behind the Legend</div>
+        <h2>League Storylines</h2>
+      </div>
       <div className="grid cols-2">
         <div className="card">
           <div className="eyebrow">Best Regular Season</div>

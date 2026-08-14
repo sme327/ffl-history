@@ -24,14 +24,14 @@ export default async function SeasonPage({
 
       <div className="grid cols-2" style={{ marginTop: "1.25rem" }}>
         {champ && (
-          <div className="card card-feature">
-            <div style={{ fontSize: "2.5rem" }}>{champ.emoji}</div>
-            <div className="eyebrow">🏆 {season.season} Champion</div>
-            <h3 className="gold">{champ.team}</h3>
-            <div>
+          <div className="champion-card">
+            <div className="champion-emoji">{champ.emoji}</div>
+            <div className="champion-season">🏆 {season.season} Champion 🏆</div>
+            <div className="champion-team">{champ.team}</div>
+            <div className="champion-manager">
               <a href={`/managers/${slugify(champ.manager)}`}>{champ.manager}</a>
             </div>
-            <div className="muted">
+            <div className="champion-score">
               {champ.score.toFixed(2)} – {champ.runner_up_score.toFixed(2)} over{" "}
               {champ.runner_up_team}
             </div>
