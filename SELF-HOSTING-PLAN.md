@@ -115,8 +115,32 @@ original inline logic, covered by fixtures, and every page rewired to consume
 them. No page computes its own history any more, and no derivation logic
 remains outside the test suite.
 
-What remains for the migration itself is the presentation port — the vinext /
-React scaffold and the route work in Phases 3–6. The data layer is done.
+### Phase 4 presentation port — started 2026-08-14
+
+The vinext / React / Cloudflare Worker scaffold is up, reading the JSON the
+Python pipeline emits. `lib/data.ts` bundles the whole archive into the Worker
+(~0.3MB gzipped, far inside the limit), so there is no runtime fetch.
+
+Routes live so far:
+
+| Route | Notes |
+|---|---|
+| `/` | Home — metrics, reigning champion, legends, storylines |
+| `/managers`, `/managers/:slug` | Profile with plaque, seasons, head-to-head |
+| `/keepers` | Keeper Hall, now with a manager grid as the way in |
+| `/keepers/:manager` | **New** — "my keepers": DNA, chains, favourites |
+| `/players/:slug` | **New** — player history across every manager who owned them |
+
+The last two are the entry points the product review flagged as missing (F7).
+`/players/:slug` also lays the groundwork for Player Histories and Ownership
+Trees, both named in `CLAUDE.md`'s roadmap.
+
+The stylesheet moves the palette and type scale into CSS custom properties
+(review F8) and sets a 0.75rem floor on body text (review F10).
+
+Still to port: champions, timeline, league history, season archive, draft
+center, franchise profiles, rivalries — plus the full visual pass against the
+Streamlit design.
 
 ### What Phase 2 uncovered
 

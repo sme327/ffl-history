@@ -30,3 +30,11 @@ data/ref_nfl_players.csv
 
 # Generated site data (rebuild with scripts/build_site_data.py)
 build/
+
+# Node / vinext site
+node_modules/
+.next/
+.vinext/
+.wrangler/
+dist/
+tsconfig.tsbuildinfo

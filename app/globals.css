@@ -1,0 +1,102 @@
+/* The Long Game — museum design tokens.
+   Replaces the palette and font stack that were repeated as literals across
+   698 inline style attributes in the Streamlit build (product review, F8). */
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg: #081120;
+  --surface: #0f1b2d;
+  --border: #1e2d40;
+  --gold: #d4af37;
+  --gold-dim: #b8902e;
+  --text: #f5f5f5;
+  --muted: #a7b0bc;
+  --faint: #6b7280;
+
+  --display: "Bebas Neue", sans-serif;
+  --body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Type scale — floors at 0.75rem. The Streamlit build went to 0.5rem (8px),
+     which is below comfortable reading for this league's audience (F10). */
+  --step-0: 0.875rem;
+  --step--1: 0.75rem;
+  --step-1: 1.125rem;
+  --step-2: 1.5rem;
+  --step-3: 2.25rem;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--gold); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.wrap { max-width: 1100px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+
+.nav {
+  border-bottom: 1px solid var(--border);
+  background: rgba(8, 17, 32, 0.9);
+  position: sticky; top: 0; z-index: 10;
+  backdrop-filter: blur(8px);
+}
+.nav-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0.75rem 1.25rem;
+  display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap;
+}
+.nav-brand { font-family: var(--display); font-size: var(--step-1); letter-spacing: 3px; color: var(--gold); }
+.nav a { color: var(--muted); font-size: var(--step--1); letter-spacing: 2px; text-transform: uppercase; }
+.nav a:hover, .nav a[aria-current="page"] { color: var(--text); text-decoration: none; }
+
+.eyebrow {
+  font-size: var(--step--1); letter-spacing: 3px; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 0.35rem;
+}
+h1 { font-family: var(--display); font-size: var(--step-3); letter-spacing: 3px; margin: 0 0 0.25rem; color: var(--gold); }
+h2 { font-family: var(--display); font-size: var(--step-2); letter-spacing: 2px; margin: 2.5rem 0 1rem; }
+h3 { font-family: var(--display); font-size: var(--step-1); letter-spacing: 2px; margin: 0 0 0.5rem; }
+p { color: var(--muted); }
+
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 8px; padding: 1rem 1.25rem;
+}
+.grid { display: grid; gap: 0.75rem; }
+.grid.cols-2 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.grid.cols-3 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.grid.cols-4 { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+
+.metric { text-align: center; }
+.metric-value { font-family: var(--display); font-size: var(--step-2); color: var(--gold); line-height: 1.1; }
+.metric-label { font-size: var(--step--1); color: var(--muted); text-transform: uppercase; letter-spacing: 2px; }
+
+.plaque { border-left: 4px solid var(--gold-dim); }
+.plaque p { color: var(--text); }
+.identity { font-style: italic; color: var(--gold); margin-top: 0.6rem; }
+
+table { width: 100%; border-collapse: collapse; font-size: var(--step--1); }
+th, td { padding: 0.45rem 0.6rem; text-align: left; border-bottom: 1px solid var(--border); }
+th { color: var(--muted); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.gold { color: var(--gold); }
+.muted { color: var(--muted); }
+
+.pill {
+  display: inline-block; padding: 2px 8px; border-radius: 999px;
+  font-size: var(--step--1); border: 1px solid var(--border); color: var(--muted);
+}
+.scroll-x { overflow-x: auto; }
+
+@media (max-width: 640px) {
+  :root { --step-3: 1.75rem; --step-2: 1.25rem; }
+  .wrap { padding: 1.25rem 1rem 3rem; }
+}
