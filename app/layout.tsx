@@ -10,6 +10,7 @@ const NAV = [
   { href: "/", label: "Home" },
   { href: "/champions", label: "Champions" },
   { href: "/timeline", label: "Timeline" },
+  { href: "/history", label: "League History" },
   { href: "/seasons", label: "Seasons" },
   { href: "/managers", label: "Managers" },
   { href: "/keepers", label: "Keeper Hall" },

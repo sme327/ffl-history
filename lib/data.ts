@@ -223,6 +223,31 @@ export type ChampionsView = {
   }[];
 };
 
+export type LeagueHistory = {
+  eras: {
+    name: string; short: string; years: string; color: string; icon: string;
+    headline: string; body: string; titles_awarded: number;
+    unique_champions: number; avg_score: number;
+    champions: { season: number; manager: string; emoji: string }[];
+  }[];
+  era_bands: { start: number; end: number; label: string; color: string; fill: string }[];
+  scoring: {
+    by_season: { season: number; avg: number; high: number; low: number }[];
+    champion_points: { season: number; points_for: number }[];
+    peak: { season: number; avg: number };
+    lean: { season: number; avg: number };
+    rise: number;
+  };
+  balance: {
+    unique_champions: number; total_seasons: number; diversity_rate: number;
+    playoff_managers_ever: number;
+    most_consistent: { manager: string; appearances: number; emoji: string } | null;
+    title_counts: { manager: string; titles: number }[];
+    top1_pct: number; top3_pct: number;
+  };
+  records: Record<string, any>;
+};
+
 export type SeasonIndexEntry = { season: number; title: string | null; champion: string | null };
 
 export type SeasonDetail = {
@@ -283,6 +308,7 @@ export const playerOwnership = read<PlayerOwnership[]>("player-ownership");
 export const championsView = read<ChampionsView>("champions-view");
 export const seasonIndex = read<SeasonIndexEntry[]>("seasons/index");
 export const timeline = read<Timeline>("timeline");
+export const leagueHistory = read<LeagueHistory>("league-history");
 
 export function seasonDetail(year: string | number): SeasonDetail | null {
   return readMaybe<SeasonDetail>(`seasons/${year}`);
