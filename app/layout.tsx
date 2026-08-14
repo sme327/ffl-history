@@ -8,6 +8,9 @@ export const metadata = {
     // Real PNGs, not an SVG emoji: browsers rasterise SVG favicons without
     // reliably resolving a colour-emoji font, so the tab falls back to a default.
     icon: [
+      // Browsers request /favicon.ico regardless of what is declared here; a
+      // 404 there leaves them showing whatever icon they had cached.
+      { url: "/favicon.ico", sizes: "any" },
       { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
       { url: "/icon.png", sizes: "512x512", type: "image/png" },
     ],
