@@ -52,6 +52,31 @@ export default function HomePage() {
       </div>
 
       <div className="section-centre">
+        <div className="eyebrow">Recent Champions</div>
+      </div>
+      <div className="grid cols-4">
+        {home.recent_champions.map((champion) => (
+          <div className="card mini-champ" key={champion.season}>
+            <div style={{ fontSize: "1.4rem" }}>{champion.emoji}</div>
+            <div className="mini-champ-year">
+              <a href={`/seasons/${champion.season}`}>{champion.season}</a>
+            </div>
+            <div className="mini-champ-team">{champion.team}</div>
+            <div className="mini-champ-mgr">
+              <a href={`/managers/${slugify(champion.manager)}`}>{champion.manager}</a>
+            </div>
+            {champion.titles_to_date > 1 && (
+              <div className="gold" style={{ fontSize: "var(--step--1)" }}>
+                {"🏆".repeat(champion.titles_to_date)} — {champion.titles_to_date}× champ
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <hr className="divider" />
+
+      <div className="section-centre">
         <div className="eyebrow">All-Time</div>
         <h2>League Legends</h2>
       </div>
@@ -88,12 +113,35 @@ export default function HomePage() {
         <div className="eyebrow">The Numbers Behind the Legend</div>
         <h2>League Storylines</h2>
       </div>
-      <div className="grid cols-2">
+      <div className="grid cols-4">
+        {storylines.most_championships && (
+          <div className="card">
+            <div className="eyebrow">Most Championships</div>
+            <h3 className="gold">
+              {storylines.most_championships.titles}× —{" "}
+              {storylines.most_championships.manager}
+            </h3>
+            <p>
+              Won in {storylines.most_championships.years}. The benchmark
+              everyone is chasing.
+            </p>
+          </div>
+        )}
         <div className="card">
           <div className="eyebrow">Best Regular Season</div>
           <h3 className="gold">{storylines.best_season.record}</h3>
           <p>{storylines.best_season.summary}</p>
         </div>
+        {drought && (
+          <div className="card">
+            <div className="eyebrow">Most Trips Without a Title</div>
+            <h3 className="gold">{drought.playoff_apps} Appearances</h3>
+            <p>
+              <a href={`/managers/${slugify(drought.manager)}`}>{drought.manager}</a>{" "}
+              — the playoffs keep calling. The trophy doesn’t.
+            </p>
+          </div>
+        )}
         <div className="card">
           <div className="eyebrow">All-Time Scoring Leader</div>
           <h3 className="gold">
@@ -106,6 +154,42 @@ export default function HomePage() {
             — more fantasy points than anyone in league history.
           </p>
         </div>
+      </div>
+      <div className="section-centre">
+        <div className="eyebrow">Museum Destinations</div>
+        <h2>Explore the Exhibits</h2>
+        <p style={{ marginTop: 0 }}>Every section is a destination. Start anywhere.</p>
+      </div>
+      <div className="grid three-up">
+        {[
+          ["🏆", "Trophy Room", "Every champion. Every dynasty. The immortal record of who won and how.", "/champions"],
+          ["📅", "Timeline", "The historical spine of the league — every era, every turning point.", "/timeline"],
+          ["🔑", "Keeper Hall", "25 years of attachment, loyalty, and the players nobody could let go.", "/keepers"],
+          ["📋", "Draft Legends", "The obsessions, the archetypes, and the players everyone had to have.", "/draft"],
+          ["👤", "Manager Files", "Career plaques, rivalries, and records for every competitor.", "/managers"],
+          ["🏟️", "Franchise Files", "Lineages, stewardship eras, and the franchises that built this league.", "/franchises"],
+        ].map(([icon, title, desc, href]) => (
+          <a className="card nav-card" key={href} href={href}>
+            <div className="eyebrow">Exhibit</div>
+            <div className="nav-card-icon">{icon}</div>
+            <div className="nav-card-title">{title}</div>
+            <div className="nav-card-desc">{desc}</div>
+          </a>
+        ))}
+      </div>
+
+      <div className="teaser">
+        <hr className="divider" style={{ maxWidth: 400 }} />
+        <div className="teaser-line">
+          {stats.seasons} SEASONS.
+          <br />
+          {stats.unique_champions} DIFFERENT CHAMPIONS.
+          <br />
+          ONE LEAGUE THAT NEVER QUIT.
+        </div>
+        <a className="teaser-cta" href="/champions">
+          Enter the Trophy Room &rarr;
+        </a>
       </div>
     </>
   );

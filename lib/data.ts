@@ -192,9 +192,14 @@ export type HomeView = {
     runner_up_score: number;
     titles_all_time: number;
   } | null;
+  recent_champions: {
+    season: number; manager: string; team: string; emoji: string;
+    titles_to_date: number;
+  }[];
   legends: { manager: string; titles: number; years: string; emoji: string }[];
   drought: { manager: string; playoff_apps: number; emoji: string } | null;
   storylines: {
+    most_championships: { manager: string; titles: number; years: string } | null;
     best_season: { record: string; seasons: number[]; summary: string };
     top_scorer: { manager: string; points_for: number };
   };

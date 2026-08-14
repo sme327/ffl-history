@@ -126,6 +126,11 @@ a.card:hover { border-color: var(--gold); transform: translateY(-2px); text-deco
 .grid.cols-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 .grid.cols-3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 .grid.cols-4 { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+/* Fixed three-up, as the exhibits were laid out originally — auto-fit spread
+   them five across and orphaned the sixth. */
+.grid.three-up { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) { .grid.three-up { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid.three-up { grid-template-columns: 1fr; } }
 
 .metric { text-align: center; }
 .metric-value {
@@ -163,6 +168,36 @@ a.card:hover { border-color: var(--gold); transform: translateY(-2px); text-deco
 }
 .champion-manager { font-size: 1rem; color: var(--text); font-weight: 500; }
 .champion-score { font-size: 0.8rem; color: var(--muted); margin-top: 0.75rem; }
+
+/* Recent champions — small, one per season */
+.mini-champ { text-align: center; padding: 1rem 0.75rem; }
+.mini-champ-year {
+  font-family: var(--display); font-size: var(--step-1);
+  color: var(--gold); letter-spacing: 2px;
+}
+.mini-champ-team { font-size: var(--step--1); color: var(--text); font-weight: 600; }
+.mini-champ-mgr { font-size: var(--step--1); color: var(--muted); }
+
+/* Museum destinations */
+.nav-card { display: block; text-align: center; padding: 1.4rem 1rem; }
+.nav-card-icon { font-size: 2rem; line-height: 1; margin-bottom: 0.4rem; }
+.nav-card-title {
+  font-family: var(--display); font-size: var(--step-1);
+  color: var(--gold); letter-spacing: 2px;
+}
+.nav-card-desc { font-size: var(--step--1); color: var(--muted); line-height: 1.5; margin-top: 0.3rem; }
+
+.teaser { text-align: center; padding: 3rem 0 1rem; }
+.teaser-line {
+  font-family: var(--display); font-size: var(--step-2);
+  color: var(--text); letter-spacing: 4px; line-height: 1.8;
+}
+.teaser-cta {
+  display: inline-block; margin-top: 1.5rem;
+  font-size: var(--step--1); color: var(--gold);
+  letter-spacing: 4px; text-transform: uppercase;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.6); padding-bottom: 3px;
+}
 
 .plaque { border-left: 5px solid var(--gold); }
 .plaque p { color: var(--text); }
