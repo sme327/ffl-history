@@ -1,7 +1,7 @@
 import { ScoringEvolution, TitleBars } from "@/app/components/charts";
 import { leagueHistory, slugify } from "@/lib/data";
 
-export const metadata = { title: "League History · The Long Game" };
+export const metadata = { title: "League History · {insert witty name here} Museum" };
 
 export default function HistoryPage() {
   const { eras, era_bands, scoring, balance, records, allTimeManagers } = leagueHistory;

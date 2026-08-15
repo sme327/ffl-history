@@ -1,6 +1,6 @@
 import { championsView, slugify } from "@/lib/data";
 
-export const metadata = { title: "Champions · The Long Game" };
+export const metadata = { title: "Champions · {insert witty name here} Museum" };
 
 export default function ChampionsPage() {
   const { totals, manager_leaders: leaders, dynasties, finals, trivia, pain } = championsView;

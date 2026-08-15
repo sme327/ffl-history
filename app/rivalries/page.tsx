@@ -1,6 +1,6 @@
 import { franchiseIndex, franchiseRivalries, rivalriesView, rivalryIndex, slugify } from "@/lib/data";
 
-export const metadata = { title: "Rivalries · The Long Game" };
+export const metadata = { title: "Rivalries · {insert witty name here} Museum" };
 
 export default function RivalriesPage() {
   const { totals, title_records, eliminations, hall_of_pain } = rivalriesView;

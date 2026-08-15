@@ -2,7 +2,7 @@ import "./globals.css";
 import { site } from "@/lib/data";
 
 export const metadata = {
-  title: "The Long Game",
+  title: "{insert witty name here} Museum",
   description: `${site.subtitle} — a digital museum of a fantasy football league running since ${site.founded}.`,
   icons: {
     // Real PNGs, not an SVG emoji: browsers rasterise SVG favicons without
@@ -38,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <nav className="nav">
           <div className="nav-inner">
-            <a className="nav-brand" href="/">THE LONG GAME</a>
+            <a className="nav-brand" href="/">{"{insert witty name here}"}</a>
             <input type="checkbox" id="nav-toggle" className="nav-toggle" hidden />
             <label className="nav-burger" htmlFor="nav-toggle" aria-label="Toggle navigation">☰</label>
             <div className="nav-links">

@@ -1,6 +1,6 @@
 import { franchiseIndex, slugify } from "@/lib/data";
 
-export const metadata = { title: "Franchises · The Long Game" };
+export const metadata = { title: "Franchises · {insert witty name here} Museum" };
 
 export default function FranchisesPage() {
   return (

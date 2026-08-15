@@ -97,6 +97,74 @@ export default async function FranchisePage({
         </table>
       </div>
 
+      <h2>Era Breakdown</h2>
+      <div className="scroll-x">
+        <table>
+          <thead>
+            <tr>
+              <th>Steward</th><th>Years</th><th className="num">Seasons</th>
+              <th>Record</th><th className="num">Win %</th>
+              <th className="num">Playoffs</th><th>Titles</th>
+            </tr>
+          </thead>
+          <tbody>
+            {franchise.stewards.map((steward) => {
+              const played = steward.wins + steward.losses;
+              return (
+                <tr key={steward.manager}>
+                  <td>
+                    {steward.emoji}{" "}
+                    <a href={`/managers/${slugify(steward.manager)}`}>{steward.manager}</a>
+                  </td>
+                  <td className="muted">
+                    {steward.start_season}–
+                    {steward.end_season === Math.max(...franchise.seasons) ? "Present" : steward.end_season}
+                  </td>
+                  <td className="num muted">{steward.seasons}</td>
+                  <td>{steward.wins}-{steward.losses}</td>
+                  <td className="num">
+                    {played ? (steward.wins / played).toFixed(3).replace(/^0/, "") : "—"}
+                  </td>
+                  <td className="num">{steward.playoff_apps}</td>
+                  <td className="gold">
+                    {steward.championships > 0 ? "🏆".repeat(steward.championships) : "—"}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Franchise Achievements</h2>
+      <div className="grid cols-3">
+        {[
+          ["🏆", t.championships, "Championship Seasons",
+           franchise.championship_seasons.join(" · ") || "—"],
+          ["🥈", t.runner_ups, "Runner-Up Seasons",
+           franchise.runner_up_seasons.join(" · ") || "—"],
+          ["🥉", t.third_places, "Third-Place Finishes",
+           franchise.third_place_seasons.join(" · ") || "—"],
+          ["🔥", t.longest_playoff_streak, "Best Playoff Streak",
+           "Consecutive postseason appearances"],
+          ["📈", t.winning_seasons, "Winning Seasons",
+           `Out of ${t.seasons} total seasons`],
+          ["🏟️", t.playoff_apps, "Total Playoff Appearances",
+           `${Math.round((t.playoff_apps / t.seasons) * 100)}% of all seasons`],
+        ].map(([icon, value, label, detail]) => (
+          <div className="card" key={label as string}>
+            <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
+              <span style={{ fontSize: "1.5rem" }}>{icon as string}</span>
+              <div>
+                <div className="metric-value" style={{ fontSize: "var(--step-2)" }}>{value as number}</div>
+                <div className="metric-label">{label as string}</div>
+                <div className="muted" style={{ fontSize: "var(--step--1)" }}>{detail as string}</div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
       <h2>Franchise Records</h2>
       <div className="grid cols-3">
         {franchise.peaks.best_record && (

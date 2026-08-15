@@ -1,7 +1,7 @@
 import { PositionShareBar, PositionTrends } from "@/app/components/charts";
 import { draftCenter, draftExtras, slugify } from "@/lib/data";
 
-export const metadata = { title: "Draft Center · The Long Game" };
+export const metadata = { title: "Draft Center · {insert witty name here} Museum" };
 
 const POSITION_COLORS: Record<string, string> = {
   RB: "#22C55E", WR: "#3B82F6", QB: "#EF4444",

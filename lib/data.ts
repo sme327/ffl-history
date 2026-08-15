@@ -161,6 +161,7 @@ export type KeeperHall = {
   }[];
   manager_dna: KeeperDna[];
   most_kept: { player_name: string; position: string; count: number }[];
+  keeper_seasons: number[];
   totals: { keepers: number; unique_players: number; chains: number; managers: number };
 };
 
@@ -319,6 +320,7 @@ export type FranchiseProfile = {
   };
   runner_up_seasons: number[];
   playoff_seasons: number[];
+  third_place_seasons: number[];
 };
 
 export type RivalrySummary = {

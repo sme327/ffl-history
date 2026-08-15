@@ -6,11 +6,16 @@ const POSITION_COLORS: Record<string, string> = {
   TE: "#F59E0B", DEF: "#8B5CF6", K: "#6B7280",
 };
 
-export const metadata = { title: "Keeper Hall · The Long Game" };
+export const metadata = { title: "Keeper Hall · {insert witty name here} Museum" };
 
 export default function KeeperHallPage() {
   const { totals, notable_chains: chains, manager_dna: dna, most_kept, lore, champions_kept: championsKept, by_season: bySeason } = keeperHall;
   const peakSeason = [...bySeason].sort((a, b) => b.count - a.count || a.season - b.season)[0];
+  // The longest run and the highest-scoring run are different questions; the
+  // Streamlit page read one row for both.
+  const bestChain = [...keeperHall.immortals].sort((a, b) => b.score - a.score || b.streak_len - a.streak_len)[0];
+  const topKeeper = dna[0];
+  const mostTitles = [...dna].sort((a, b) => b.titles - a.titles || a.manager.localeCompare(b.manager))[0];
 
   return (
     <>
@@ -155,6 +160,83 @@ export default function KeeperHallPage() {
             <PositionShareBar counts={entry.position_counts} colors={POSITION_COLORS} />
           </div>
         ))}
+      </div>
+
+      <h2>When Great Keeper Runs Ended</h2>
+      <p style={{ marginTop: "-0.5rem" }}>
+        Every multi-season run that has already finished — and the year the
+        manager finally let go.
+      </p>
+      <div className="grid cols-3">
+        {chains
+          .filter((chain) => Math.max(...chain.seasons) < Math.max(...keeperHall.keeper_seasons))
+          .slice(0, 9)
+          .map((chain) => (
+            <div className="card" key={`${chain.player_name}-${chain.seasons[0]}`}>
+              <h3>
+                <a href={`/players/${slugify(chain.player_name)}`}>{chain.player_name}</a>
+              </h3>
+              <div className="gold">
+                {chain.seasons[0]}–{chain.seasons[chain.seasons.length - 1]} ·{" "}
+                {chain.streak_len} seasons
+              </div>
+              <div className="muted">
+                Released after{" "}
+                <a href={`/seasons/${chain.seasons[chain.seasons.length - 1]}`}>
+                  {chain.seasons[chain.seasons.length - 1]}
+                </a>{" "}
+                by{" "}
+                <a href={`/keepers/${slugify(chain.primary_manager)}`}>
+                  {chain.primary_manager}
+                </a>
+              </div>
+            </div>
+          ))}
+      </div>
+
+      <h2>Keeper Records &amp; Superlatives</h2>
+      <div className="grid cols-3">
+        {[
+          ["Longest Single Streak", `${chains[0].streak_len} seasons`,
+           `${chains[0].player_name} · ${chains[0].seasons[0]}–${chains[0].seasons[chains[0].seasons.length - 1]}`],
+          ["Most Valuable Keeper Run", `Score ${bestChain.score.toFixed(1)}`,
+           `${bestChain.player_name} — ${bestChain.titles} title${bestChain.titles === 1 ? "" : "s"} while kept`],
+          ["Most Kept Player", `${most_kept[0].count}×`, most_kept[0].player_name],
+          ["Most Keepers Named", `${topKeeper.keeper_count}`,
+           `${topKeeper.manager} — ${(topKeeper.keeper_rate * 100).toFixed(1)}% of their picks`],
+          ["Most Titles With Keepers", `${mostTitles.titles}`, mostTitles.manager],
+          ["Busiest Keeper Season", `${peakSeason.count} keepers`, `${peakSeason.season}`],
+        ].map(([label, headline, sub]) => (
+          <div className="card" key={label}>
+            <div className="eyebrow">{label}</div>
+            <h3 className="gold">{headline}</h3>
+            <p style={{ margin: 0 }}>{sub}</p>
+          </div>
+        ))}
+      </div>
+
+      <h2>Player Keeper Timelines</h2>
+      <p style={{ marginTop: "-0.5rem" }}>
+        The most-kept players and the seasons they were protected.
+      </p>
+      <div className="card">
+        {most_kept.slice(0, 15).map((player) => {
+          const runs = keeperHall.immortals.filter((c) => c.player_name === player.player_name);
+          const seasons = [...new Set(runs.flatMap((c) => c.seasons))].sort();
+          return (
+            <div className="chron-row" key={player.player_name}>
+              <div className="chron-mgr">
+                <a href={`/players/${slugify(player.player_name)}`}>{player.player_name}</a>
+                <span className="pill">{player.position}</span>
+              </div>
+              <div className="chron-years">
+                {seasons.map((year) => (
+                  <a className="year-pill gold-pill" key={year} href={`/seasons/${year}`}>{year}</a>
+                ))}
+              </div>
+            </div>
+          );
+        })}
       </div>
 
       <h2>Most Kept</h2>

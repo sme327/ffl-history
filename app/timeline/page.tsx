@@ -1,6 +1,6 @@
 import { timeline, slugify } from "@/lib/data";
 
-export const metadata = { title: "Timeline · The Long Game" };
+export const metadata = { title: "Timeline · {insert witty name here} Museum" };
 
 export default function TimelinePage() {
   const { stats, bySeason } = timeline;

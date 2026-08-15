@@ -6,8 +6,8 @@ export default function HomePage() {
   return (
     <>
       <header className="hero">
-        <h1>THE LONG GAME</h1>
-        <div className="hero-subtitle">{site.subtitle}</div>
+        <h1>{"{INSERT WITTY NAME HERE}"}</h1>
+        <div className="hero-subtitle">Museum · {site.subtitle}</div>
         <div className="hero-tagline">
           Built by friendship.&nbsp; Defined by competition.&nbsp; Occasionally
           ruined by a waiver wire mistake.

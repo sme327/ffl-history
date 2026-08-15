@@ -1,6 +1,6 @@
 import { seasonIndex, slugify } from "@/lib/data";
 
-export const metadata = { title: "Season Archive · The Long Game" };
+export const metadata = { title: "Season Archive · {insert witty name here} Museum" };
 
 export default function SeasonsPage() {
   return (

@@ -1,6 +1,6 @@
 import { managerIndex } from "@/lib/data";
 
-export const metadata = { title: "Managers · The Long Game" };
+export const metadata = { title: "Managers · {insert witty name here} Museum" };
 
 export default function ManagersPage() {
   const active = managerIndex.filter((m) => m.active);
