@@ -1,3 +1,4 @@
+import { SeasonTrends } from "@/app/components/charts";
 import { managerIndex, managerProfile, slugify } from "@/lib/data";
 
 export function generateStaticParams() {
@@ -46,6 +47,28 @@ export default async function ManagerPage({
 
       {/* The entry point Keeper Hall was missing: a way in from the page where
           people already go to find themselves (product review, F7). */}
+      <h2>Draft Identity</h2>
+      {profile.draft ? (
+        <div className="card">
+          <div className="eyebrow" style={{ color: profile.draft.style_color }}>
+            {profile.draft.style}
+          </div>
+          <p style={{ marginTop: "0.3rem" }}>
+            Most drafted:{" "}
+            <a href={`/players/${slugify(profile.draft.most_drafted.player)}`}>
+              {profile.draft.most_drafted.player}
+            </a>{" "}
+            ({profile.draft.most_drafted.count}×) · keeper rate{" "}
+            {(profile.draft.keeper_rate * 100).toFixed(1)}%
+          </p>
+          <p style={{ marginBottom: 0 }}>
+            <a href="/draft">See the full draft profile →</a>
+          </p>
+        </div>
+      ) : (
+        <p>No draft history recorded.</p>
+      )}
+
       <h2>Keepers</h2>
       <div className="card">
         <p style={{ margin: 0 }}>
@@ -58,6 +81,11 @@ export default async function ManagerPage({
             See every player {profile.name} couldn’t let go →
           </a>
         </p>
+      </div>
+
+      <h2>Season Trends</h2>
+      <div className="card">
+        <SeasonTrends seasons={profile.seasons} />
       </div>
 
       <h2>Season by Season</h2>

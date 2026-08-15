@@ -80,6 +80,27 @@ class Verifier:
         return df
 
 
+def unwrap(value):
+    """Strip the {type, value} envelopes normalize() adds.
+
+    normalize() exists to make fixture comparison stable, so it tags every
+    value with its type. Site data wants the plain values underneath.
+    """
+    if isinstance(value, dict):
+        kind = value.get("type")
+        if kind == "dataframe":
+            return value.get("rows", [])
+        if kind in {"list", "dict"}:
+            inner = value.get("value")
+            return unwrap(inner)
+        if kind in {"scalar", "series"}:
+            return unwrap(value.get("value", value.get("values")))
+        return {k: unwrap(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [unwrap(v) for v in value]
+    return value
+
+
 def records(df) -> list[dict]:
     return normalize(df).get("rows") or [
         {str(k): v for k, v in rec.items()} for rec in json.loads(df.to_json(orient="records"))
@@ -167,7 +188,7 @@ def build(out: Path) -> None:
         site.write(f"draft-loyalty/{slugify(board)}", D.get_draft_loyalty_board(board))
 
     site.write("draft", {
-        "records": normalize(D.get_draft_records())["value"],
+        "records": unwrap(normalize(D.get_draft_records())),
         "positionTrends": records(verify.frame("get_position_trends_data", D.get_position_trends_data())),
         "picks": records(verify.frame("get_draft_picks_with_pos", D.get_draft_picks_with_pos())),
     })

@@ -1,5 +1,5 @@
-import { PositionShareBar } from "@/app/components/charts";
-import { draftCenter, slugify } from "@/lib/data";
+import { PositionShareBar, PositionTrends } from "@/app/components/charts";
+import { draftCenter, draftExtras, slugify } from "@/lib/data";
 
 export const metadata = { title: "Draft Center · The Long Game" };
 
@@ -10,6 +10,7 @@ const POSITION_COLORS: Record<string, string> = {
 
 export default function DraftPage() {
   const { legends, manager_dna: dna, round_one, totals } = draftCenter;
+  const { positionTrends, records } = draftExtras;
 
   return (
     <>
@@ -98,6 +99,15 @@ export default function DraftPage() {
         ))}
       </div>
 
+      <h2>Position Trends</h2>
+      <p style={{ marginTop: "-0.5rem" }}>
+        How first-round strategy shifted: the rise of zero-RB, the TE premium,
+        the quarterback golden age.
+      </p>
+      <div className="card">
+        <PositionTrends rows={positionTrends} colors={POSITION_COLORS} />
+      </div>
+
       <h2>First Picks</h2>
       <div className="grid cols-2">
         <div className="card">
@@ -127,6 +137,53 @@ export default function DraftPage() {
             </tbody>
           </table>
         </div>
+      </div>
+      <h2>Draft Records</h2>
+      <div className="grid cols-3">
+        {[
+          ["Most Drafted Players", records.most_drafted_players],
+          ["Most Managers to Own One Player", records.most_mgrs_one_player],
+          ["Most Kept Players", records.most_kept_players],
+        ].map(([label, entries]) => (
+          <div className="card" key={label as string}>
+            <div className="eyebrow">{label as string}</div>
+            {(entries as [string, number][]).slice(0, 5).map(([name, count], i) => (
+              <div
+                key={name}
+                style={{ display: "flex", justifyContent: "space-between", padding: "0.25rem 0", borderBottom: "1px solid var(--border)" }}
+              >
+                <span>{["🥇", "🥈", "🥉", "4.", "5."][i]} <a href={`/players/${slugify(name)}`}>{name}</a></span>
+                <span className="gold">{count}×</span>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+
+      <h2>Draft Hall of Fame &amp; Shame</h2>
+      <div className="grid cols-2">
+        {[
+          ["Earliest QB Ever Taken", records.earliest_qb?.[0]],
+          ["Earliest TE Ever Taken", records.earliest_te?.[0]],
+          ["Earliest K Ever Taken", records.earliest_k?.[0]],
+          ["Earliest DEF in Round 1", records.earliest_def_r1?.[0]],
+        ].map(([label, pick]) =>
+          pick ? (
+            <div className="card" key={label as string}>
+              <div className="eyebrow">{label as string}</div>
+              <h3 className="gold">
+                <a href={`/players/${slugify((pick as any).player_name)}`}>
+                  {(pick as any).player_name}
+                </a>
+              </h3>
+              <p style={{ margin: 0 }}>
+                <a href={`/seasons/${(pick as any).season}`}>{(pick as any).season}</a>
+                {" · pick #"}{(pick as any).overall_pick}
+                {" · "}{(pick as any).manager}
+              </p>
+            </div>
+          ) : null,
+        )}
       </div>
     </>
   );

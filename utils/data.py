@@ -2974,7 +2974,25 @@ def get_keeper_hall_view() -> dict:
         key=lambda p: (-p["count"], p["player_name"]),
     )
 
+    # Hand-written lore, attached to the players it is about. This is the most
+    # human content in the project and belongs on the page, not in a dict.
+    from utils import narratives
+    keep_counts = {p: int(n) for p, n in keepers.groupby("player_name").size().items()}
+    lore = sorted(
+        (
+            {
+                "player_name": player,
+                "position": str(positions_by_player.get(player, "?")),
+                "times_kept": keep_counts.get(player, 0),
+                "lore": text,
+            }
+            for player, text in narratives.KEEPER_LORE.items()
+        ),
+        key=lambda entry: (-entry["times_kept"], entry["player_name"]),
+    )
+
     return {
+        "lore": lore,
         "immortals": immortals,
         "notable_chains": [c for c in immortals if c["streak_len"] >= 3],
         "by_season": by_season,

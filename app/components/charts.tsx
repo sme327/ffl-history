@@ -219,3 +219,145 @@ export function PositionShareBar({
     </>
   );
 }
+
+
+export function PositionTrends({
+  rows,
+  colors,
+}: {
+  rows: Record<string, number>[];
+  colors: Record<string, string>;
+}) {
+  const width = 900;
+  const height = 260;
+  const pad = { top: 16, right: 16, bottom: 30, left: 40 };
+  const positions = ["RB", "WR", "QB", "TE"];
+
+  const seasons = rows.map((r) => r.season);
+  const minSeason = Math.min(...seasons);
+  const maxSeason = Math.max(...seasons);
+
+  const x = (season: number) =>
+    pad.left + ((season - minSeason) / (maxSeason - minSeason)) * (width - pad.left - pad.right);
+  const y = (pct: number) =>
+    height - pad.bottom - (pct / 100) * (height - pad.top - pad.bottom);
+
+  return (
+    <>
+      <svg
+        viewBox={`0 0 ${width} ${height}`}
+        role="img"
+        aria-label="Share of first-round picks by position, per season"
+        style={{ width: "100%", height: "auto", display: "block" }}
+      >
+        {[0, 25, 50, 75, 100].map((pct) => (
+          <g key={pct}>
+            <line x1={pad.left} x2={width - pad.right} y1={y(pct)} y2={y(pct)} stroke="var(--border)" />
+            <text x={6} y={y(pct) + 4} fill="var(--muted)" fontSize="11">{pct}%</text>
+          </g>
+        ))}
+        {positions.map((pos) => (
+          <polyline
+            key={pos}
+            points={rows.map((r) => `${x(r.season)},${y(r[pos] ?? 0)}`).join(" ")}
+            fill="none"
+            stroke={colors[pos]}
+            strokeWidth={2}
+          />
+        ))}
+        {rows
+          .filter((_, i) => i % 4 === 0 || i === rows.length - 1)
+          .map((r) => (
+            <text key={r.season} x={x(r.season)} y={height - 10} fill="var(--muted)" fontSize="11" textAnchor="middle">
+              {r.season}
+            </text>
+          ))}
+      </svg>
+      <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", marginTop: "0.4rem" }}>
+        {positions.map((pos) => (
+          <span key={pos} style={{ fontSize: "var(--step--1)", color: colors[pos] }}>■ {pos}</span>
+        ))}
+      </div>
+    </>
+  );
+}
+
+
+export function SeasonTrends({
+  seasons,
+}: {
+  seasons: { season: number; rank: number | null; category: string; result: string }[];
+}) {
+  const rows = seasons.filter((s) => s.rank).sort((a, b) => a.season - b.season);
+  if (rows.length < 2) return null;
+
+  const width = 900;
+  const height = 220;
+  const pad = { top: 18, right: 16, bottom: 28, left: 34 };
+  const years = rows.map((r) => r.season);
+  const minYear = Math.min(...years);
+  const maxYear = Math.max(...years);
+  const worst = Math.max(...rows.map((r) => r.rank!));
+
+  const x = (season: number) =>
+    pad.left + ((season - minYear) / (maxYear - minYear || 1)) * (width - pad.left - pad.right);
+  // Rank 1 at the top: a better finish should sit higher.
+  const y = (rank: number) =>
+    pad.top + ((rank - 1) / (worst - 1 || 1)) * (height - pad.top - pad.bottom);
+
+  const MARKS: Record<string, string> = {
+    Champion: "🏆", "Runner-Up": "🥈", "3rd / 4th": "🥉",
+  };
+
+  return (
+    <>
+      <svg
+        viewBox={`0 0 ${width} ${height}`}
+        role="img"
+        aria-label="Season-ending finish by year"
+        style={{ width: "100%", height: "auto", display: "block" }}
+      >
+        {[1, Math.ceil(worst / 2), worst].map((rank) => (
+          <g key={rank}>
+            <line x1={pad.left} x2={width - pad.right} y1={y(rank)} y2={y(rank)} stroke="var(--border)" />
+            <text x={6} y={y(rank) + 4} fill="var(--muted)" fontSize="11">#{rank}</text>
+          </g>
+        ))}
+        <polyline
+          points={rows.map((r) => `${x(r.season)},${y(r.rank!)}`).join(" ")}
+          fill="none"
+          stroke="var(--gold-dim)"
+          strokeWidth={1.5}
+          opacity={0.6}
+        />
+        {rows.map((r) =>
+          MARKS[r.category] ? (
+            <text key={r.season} x={x(r.season)} y={y(r.rank!) + 6} fontSize="16" textAnchor="middle">
+              {MARKS[r.category]}
+            </text>
+          ) : (
+            <circle
+              key={r.season}
+              cx={x(r.season)}
+              cy={y(r.rank!)}
+              r={5}
+              fill={r.category === "Playoffs" ? "#4A90D9" : "transparent"}
+              stroke={r.category === "Playoffs" ? "#081120" : "rgba(220,50,50,0.85)"}
+              strokeWidth={r.category === "Playoffs" ? 1.5 : 2.5}
+            />
+          ),
+        )}
+        {rows
+          .filter((_, i) => i % 3 === 0 || i === rows.length - 1)
+          .map((r) => (
+            <text key={r.season} x={x(r.season)} y={height - 8} fill="var(--muted)" fontSize="11" textAnchor="middle">
+              {r.season}
+            </text>
+          ))}
+      </svg>
+      <div className="muted" style={{ fontSize: "var(--step--1)", marginTop: "0.35rem" }}>
+        🏆 champion · 🥈 runner-up · 🥉 third or fourth · ● playoffs · ○ missed
+      </div>
+    </>
+  );
+}

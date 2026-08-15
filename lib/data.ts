@@ -148,6 +148,8 @@ export type KeeperDna = {
 };
 
 export type KeeperHall = {
+  lore: { player_name: string; position: string; times_kept: number; lore: string }[];
+  by_season: { season: number; count: number }[];
   immortals: KeeperChain[];
   notable_chains: KeeperChain[];
   champions_kept: {
@@ -408,6 +410,10 @@ export const seasonIndex = read<SeasonIndexEntry[]>("seasons/index");
 export const timeline = read<Timeline>("timeline");
 export const leagueHistory = read<LeagueHistory>("league-history");
 export const draftCenter = read<DraftCenter>("draft-center");
+export const draftExtras = read<{
+  positionTrends: Record<string, number>[];
+  records: Record<string, any>;
+}>("draft");
 export const franchiseIndex = read<FranchiseIndexEntry[]>("franchises/index");
 export const rivalriesView = read<RivalriesView>("rivalries-view");
 export const rivalryIndex = read<RivalrySummary[]>("rivalries/index");
