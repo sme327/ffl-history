@@ -11,7 +11,7 @@ from utils.styles import inject_css, render_nav, render_page_footer, html_table
 
 st.set_page_config(
     page_title="Season Archive · The Long Game",
-    page_icon="📅",
+    page_icon="🏈",
     layout="wide",
     initial_sidebar_state="collapsed",
 )

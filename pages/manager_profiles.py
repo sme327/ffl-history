@@ -14,7 +14,7 @@ from utils.styles import (
 
 st.set_page_config(
     page_title="Managers · The Long Game",
-    page_icon="👤",
+    page_icon="🏈",
     layout="wide",
     initial_sidebar_state="collapsed",
 )

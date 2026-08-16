@@ -23,7 +23,7 @@ from utils.narratives import RIVALRY_PLAQUES
 
 st.set_page_config(
     page_title="Rivalries · The Long Game",
-    page_icon="⚔️",
+    page_icon="🏈",
     layout="wide",
     initial_sidebar_state="collapsed",
 )

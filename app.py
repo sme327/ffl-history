@@ -8,7 +8,7 @@ from utils.styles import inject_css, render_nav, metric_card
 
 st.set_page_config(
     page_title="The Long Game",
-    page_icon="🏆",
+    page_icon="🏈",
     layout="wide",
     initial_sidebar_state="collapsed",
 )

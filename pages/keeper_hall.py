@@ -14,7 +14,7 @@ from utils.narratives import KEEPER_LORE, LEAGUE_ERAS
 
 st.set_page_config(
     page_title="Keeper Hall · The Long Game",
-    page_icon="🔒",
+    page_icon="🏈",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
