@@ -305,8 +305,11 @@ export function SeasonTrends({
   const y = (rank: number) =>
     pad.top + ((rank - 1) / (worst - 1 || 1)) * (height - pad.top - pad.bottom);
 
-  const MARKS: Record<string, string> = {
-    Champion: "🏆", "Runner-Up": "🥈", "3rd / 4th": "🥉",
+  // Championship and runner-up have a matching brass icon in public/museum/;
+  // third/fourth has no dedicated asset yet, so it stays a plain marker below.
+  const MARK_ICONS: Record<string, string> = {
+    Champion: "/museum/icons/events/championship.svg",
+    "Runner-Up": "/museum/icons/events/runner-up.svg",
   };
 
   return (
@@ -331,9 +334,18 @@ export function SeasonTrends({
           opacity={0.6}
         />
         {rows.map((r) =>
-          MARKS[r.category] ? (
+          MARK_ICONS[r.category] ? (
+            <image
+              key={r.season}
+              href={MARK_ICONS[r.category]}
+              x={x(r.season) - 9}
+              y={y(r.rank!) - 9}
+              width={18}
+              height={18}
+            />
+          ) : r.category === "3rd / 4th" ? (
             <text key={r.season} x={x(r.season)} y={y(r.rank!) + 6} fontSize="16" textAnchor="middle">
-              {MARKS[r.category]}
+              🥉
             </text>
           ) : (
             <circle
@@ -341,8 +353,8 @@ export function SeasonTrends({
               cx={x(r.season)}
               cy={y(r.rank!)}
               r={5}
-              fill={r.category === "Playoffs" ? "#4A90D9" : "transparent"}
-              stroke={r.category === "Playoffs" ? "#081120" : "rgba(220,50,50,0.85)"}
+              fill={r.category === "Playoffs" ? "var(--gold-dim)" : "transparent"}
+              stroke={r.category === "Playoffs" ? "var(--bg)" : "var(--faint)"}
               strokeWidth={r.category === "Playoffs" ? 1.5 : 2.5}
             />
           ),
@@ -355,8 +367,10 @@ export function SeasonTrends({
             </text>
           ))}
       </svg>
-      <div className="muted" style={{ fontSize: "var(--step--1)", marginTop: "0.35rem" }}>
-        🏆 champion · 🥈 runner-up · 🥉 third or fourth · ● playoffs · ○ missed
+      <div className="muted" style={{ fontSize: "var(--step--1)", marginTop: "0.35rem", display: "flex", alignItems: "center", gap: "0.4rem", flexWrap: "wrap" }}>
+        <img src="/museum/icons/events/championship.svg" alt="" className="mgr-icon" /> champion ·
+        <img src="/museum/icons/events/runner-up.svg" alt="" className="mgr-icon" /> runner-up ·
+        🥉 third or fourth · ● playoffs · ○ missed
       </div>
     </>
   );
