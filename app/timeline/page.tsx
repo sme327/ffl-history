@@ -1,4 +1,4 @@
-import { timeline, slugify } from "@/lib/data";
+import { timeline, slugify, eventIconPath, eraIconPath } from "@/lib/data";
 
 export const metadata = { title: "Timeline · {insert witty name here} Museum" };
 
@@ -30,7 +30,10 @@ export default function TimelinePage() {
           <h2 style={{ display: "flex", alignItems: "baseline", gap: "0.75rem", flexWrap: "wrap" }}>
             <a href={`/seasons/${block.season}`}>{block.season}</a>
             {block.era.name && (
-              <span className="pill" style={{ color: block.era.color, borderColor: block.era.color }}>
+              <span className="pill" style={{ color: block.era.color, borderColor: block.era.color, display: "inline-flex", alignItems: "center", gap: "0.35rem" }}>
+                {eraIconPath(block.era.name) && (
+                  <img src={eraIconPath(block.era.name)!} alt="" style={{ width: "1rem", height: "1rem" }} />
+                )}
                 {block.era.name}
               </span>
             )}
@@ -51,7 +54,15 @@ export default function TimelinePage() {
               }}
             >
               <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
-                <div style={{ fontSize: event.importance === "high" ? "1.8rem" : "1.3rem" }}>{event.icon}</div>
+                <img
+                  src={eventIconPath(event.event_type)}
+                  alt=""
+                  style={{
+                    width: event.importance === "high" ? "2.25rem" : "1.6rem",
+                    height: event.importance === "high" ? "2.25rem" : "1.6rem",
+                    flexShrink: 0,
+                  }}
+                />
                 <div>
                   <div className="eyebrow" style={{ color: event.color, marginBottom: "0.2rem" }}>
                     {event.importance_label} · {event.label}

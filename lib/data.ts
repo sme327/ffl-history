@@ -380,7 +380,7 @@ export type SeasonDetail = {
 };
 
 export type TimelineEvent = {
-  season: number; icon: string; color: string; label: string;
+  season: number; event_type: string; icon: string; color: string; label: string;
   importance: string; importance_label: string;
   title: string; description: string;
   manager: string; manager_emoji: string; franchise_id: string;
@@ -444,6 +444,25 @@ export function slugify(value: string): string {
     .replace(/[^a-zA-Z0-9]+/g, "-")
     .replace(/^-|-$/g, "")
     .toLowerCase();
+}
+
+// ── Museum icon paths ───────────────────────────────────────────────────────
+// event_type/era.short are stable taxonomy keys from utils/narratives.py;
+// these map them to the corresponding asset in public/museum/.
+
+export function eventIconPath(eventType: string): string {
+  return `/museum/icons/events/${eventType.replace(/_/g, "-")}.svg`;
+}
+
+const ERA_ICON_SLUGS: Record<string, string> = {
+  Founding: "founding",
+  Workhorse: "workhorse",
+  Keeper: "keeper-revolution",
+  Modern: "modern",
+};
+export function eraIconPath(eraShort: string): string | null {
+  const slug = ERA_ICON_SLUGS[eraShort];
+  return slug ? `/museum/medallions/eras/${slug}.svg` : null;
 }
 
 const slugToManager = new Map(managerIndex.map((m) => [m.slug, m.name]));

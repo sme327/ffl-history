@@ -1,5 +1,5 @@
 import { ScoringEvolution, TitleBars } from "@/app/components/charts";
-import { leagueHistory, slugify } from "@/lib/data";
+import { leagueHistory, slugify, eraIconPath } from "@/lib/data";
 
 export const metadata = { title: "League History · {insert witty name here} Museum" };
 
@@ -23,7 +23,9 @@ export default function HistoryPage() {
           style={{ borderLeft: `5px solid ${era.color}`, marginBottom: "0.75rem" }}
         >
           <div style={{ display: "flex", alignItems: "baseline", gap: "0.75rem", flexWrap: "wrap" }}>
-            <span style={{ fontSize: "1.5rem" }}>{era.icon}</span>
+            {eraIconPath(era.short) && (
+              <img src={eraIconPath(era.short)!} alt="" style={{ width: "2rem", height: "2rem" }} />
+            )}
             <h3 style={{ color: era.color, margin: 0 }}>{era.name}</h3>
             <span className="muted">{era.years}</span>
           </div>
