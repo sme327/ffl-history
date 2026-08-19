@@ -34,13 +34,18 @@
 
 body {
   margin: 0;
-  /* Ambient overhead spotlight, pinned to the viewport so it's present at
-     any scroll position on any page — not just a banner at the top of one
-     page, an actual persistent lighting condition for the whole site. */
+  /* A gallery has light fixtures spaced down its whole length, not one lamp
+     at the door. The previous version only lit the first ~550px of every
+     page (and did it at background-attachment: fixed, which pins a glow to
+     the viewport, not the page — it never actually followed scroll at all).
+     This tiles a light pool every 900px, on every page, for its entire
+     length, so scrolling past the header doesn't mean scrolling out of the
+     room. */
   background:
-    radial-gradient(ellipse 1100px 550px at 50% -8%, rgba(212, 175, 55, 0.09), transparent 65%),
+    radial-gradient(circle 260px at 50% 70px, rgba(212, 175, 55, 0.16), transparent 72%),
     var(--bg) url("/museum/textures/gallery-wall-tile.webp") repeat;
-  background-attachment: fixed, scroll;
+  background-size: 100% 900px, auto;
+  background-repeat: repeat-y, repeat;
   color: var(--text);
   font-family: var(--body);
   font-size: var(--step-0);
@@ -125,6 +130,10 @@ h2 {
   color: var(--text); letter-spacing: 3px;
   margin: 2.25rem 0 1rem; padding-bottom: 0.4rem;
   border-bottom: 1px solid var(--border);
+  /* Every section gets its own small pool of light, not just the page
+     title once at the top — this is what makes each section of a long
+     page feel lit as you reach it, not just the first screenful. */
+  text-shadow: 0 0 24px rgba(212, 175, 55, 0.22);
 }
 /* The first heading on a page follows intro copy, not another section. */
 p + h2, .eyebrow + h2 { margin-top: 1.5rem; }
