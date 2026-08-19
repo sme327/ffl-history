@@ -18,12 +18,14 @@ export default async function ManagerPage({
 
   return (
     <>
-      <header className="room-header" style={{ backgroundImage: "url(/museum/rooms/portrait-gallery.webp)" }}>
+      <div className="room-photo" style={{ backgroundImage: "url(/museum/rooms/portrait-gallery.webp)" }} />
+      <div className="room-scrim" />
+      <div className="room-title">
         <div className="eyebrow">{profile.status_label}</div>
         <h1>
           <img src={managerIconPath(profile.name)} alt="" className="mgr-icon" /> {profile.display_name}
         </h1>
-      </header>
+      </div>
 
       <div className="card plaque" style={{ marginTop: "1rem" }}>
         <div className="eyebrow">Hall of Fame Plaque</div>

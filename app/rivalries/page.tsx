@@ -12,11 +12,13 @@ export default function RivalriesPage() {
 
   return (
     <>
-      <header className="room-header" style={{ backgroundImage: "url(/museum/rooms/the-arena.webp)" }}>
+      <div className="room-photo" style={{ backgroundImage: "url(/museum/rooms/the-arena.webp)" }} />
+      <div className="room-scrim" />
+      <div className="room-title">
         <div className="eyebrow">Who still hates each other?</div>
         <h1>RIVALRIES</h1>
         <p>The emotional center of 25 years of competition.</p>
-      </header>
+      </div>
 
       <div className="grid cols-4">
         {[

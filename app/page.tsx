@@ -5,6 +5,11 @@ export default function HomePage() {
 
   return (
     <>
+      <div
+        className="room-photo"
+        style={{ backgroundImage: "url(/museum/textures/trophy-case-side-panels.webp)", aspectRatio: "900 / 480" }}
+      />
+      <div className="room-scrim" />
       <header className="hero">
         <h1>{"{INSERT WITTY NAME HERE}"}</h1>
         <div className="hero-subtitle">Museum · {site.subtitle}</div>

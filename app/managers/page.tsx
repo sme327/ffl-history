@@ -8,11 +8,13 @@ export default function ManagersPage() {
 
   return (
     <>
-      <header className="room-header" style={{ backgroundImage: "url(/museum/rooms/portrait-gallery.webp)" }}>
+      <div className="room-photo" style={{ backgroundImage: "url(/museum/rooms/portrait-gallery.webp)" }} />
+      <div className="room-scrim" />
+      <div className="room-title">
         <div className="eyebrow">Who are these people?</div>
         <h1>MANAGERS</h1>
         <p>Career records for every competitor in league history.</p>
-      </header>
+      </div>
 
       {[
         ["Active", active] as const,

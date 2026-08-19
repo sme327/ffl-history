@@ -7,11 +7,13 @@ export default function TimelinePage() {
 
   return (
     <>
-      <header className="room-header" style={{ backgroundImage: "url(/museum/rooms/history-corridor.webp)" }}>
+      <div className="room-photo" style={{ backgroundImage: "url(/museum/rooms/history-corridor.webp)" }} />
+      <div className="room-scrim" />
+      <div className="room-title">
         <div className="eyebrow">What happened?</div>
         <h1>LEAGUE TIMELINE</h1>
         <p>The historical spine of the league — every era, every turning point.</p>
-      </header>
+      </div>
 
       <div className="grid cols-4">
         {[

@@ -15,7 +15,9 @@ export default async function PlayerPage({
 
   return (
     <>
-      <header className="room-header" style={{ backgroundImage: "url(/museum/rooms/war-room.webp)" }}>
+      <div className="room-photo" style={{ backgroundImage: "url(/museum/rooms/war-room.webp)" }} />
+      <div className="room-scrim" />
+      <div className="room-title">
         <div className="eyebrow">Player History</div>
         <h1>{player.playerName}</h1>
         <p>
@@ -23,7 +25,7 @@ export default async function PlayerPage({
           {player.firstSeason}–{player.lastSeason} · owned by{" "}
           {player.owners.length} manager{player.owners.length === 1 ? "" : "s"}
         </p>
-      </header>
+      </div>
 
       <div className="grid cols-3">
         {[

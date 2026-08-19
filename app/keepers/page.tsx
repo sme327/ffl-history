@@ -19,11 +19,13 @@ export default function KeeperHallPage() {
 
   return (
     <>
-      <header className="room-header" style={{ backgroundImage: "url(/museum/rooms/the-vault.webp)" }}>
+      <div className="room-photo" style={{ backgroundImage: "url(/museum/rooms/the-vault.webp)" }} />
+      <div className="room-scrim" />
+      <div className="room-title">
         <div className="eyebrow">Who couldn’t let go?</div>
         <h1>KEEPER HALL</h1>
         <p>25 years of attachment, loyalty, and the players nobody could release.</p>
-      </header>
+      </div>
 
       <div className="grid cols-4">
         {[

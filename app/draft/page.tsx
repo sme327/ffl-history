@@ -14,11 +14,13 @@ export default function DraftPage() {
 
   return (
     <>
-      <header className="room-header" style={{ backgroundImage: "url(/museum/rooms/war-room.webp)" }}>
+      <div className="room-photo" style={{ backgroundImage: "url(/museum/rooms/war-room.webp)" }} />
+      <div className="room-scrim" />
+      <div className="room-title">
         <div className="eyebrow">How were contenders built?</div>
         <h1>DRAFT CENTER</h1>
         <p>25 years of picks, patterns, and obsessions.</p>
-      </header>
+      </div>
 
       <div className="grid cols-4">
         {[

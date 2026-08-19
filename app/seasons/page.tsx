@@ -5,11 +5,13 @@ export const metadata = { title: "Season Archive · {insert witty name here} Mus
 export default function SeasonsPage() {
   return (
     <>
-      <header className="room-header" style={{ backgroundImage: "url(/museum/rooms/chronicle-vault.webp)" }}>
+      <div className="room-photo" style={{ backgroundImage: "url(/museum/rooms/chronicle-vault.webp)" }} />
+      <div className="room-scrim" />
+      <div className="room-title">
         <div className="eyebrow">What happened in a specific year?</div>
         <h1>SEASON ARCHIVE</h1>
         <p>Every season is its own chapter. Start anywhere.</p>
-      </header>
+      </div>
 
       <div className="grid cols-3" style={{ marginTop: "1.5rem" }}>
         {[...seasonIndex].reverse().map((s) => (

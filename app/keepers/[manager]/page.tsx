@@ -22,7 +22,9 @@ export default async function ManagerKeepersPage({
 
   return (
     <>
-      <header className="room-header" style={{ backgroundImage: "url(/museum/rooms/the-vault.webp)" }}>
+      <div className="room-photo" style={{ backgroundImage: "url(/museum/rooms/the-vault.webp)" }} />
+      <div className="room-scrim" />
+      <div className="room-title">
         <div className="eyebrow">Keeper Hall</div>
         <h1>
           <img src={managerIconPath(manager)} alt="" className="mgr-icon" /> {manager}
@@ -30,7 +32,7 @@ export default async function ManagerKeepersPage({
         <p>
           <a href={`/managers/${slug}`}>← Back to {manager}’s profile</a>
         </p>
-      </header>
+      </div>
 
       {dna ? (
         <>

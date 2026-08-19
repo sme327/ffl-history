@@ -5,14 +5,16 @@ export const metadata = { title: "Franchises · {insert witty name here} Museum"
 export default function FranchisesPage() {
   return (
     <>
-      <header className="room-header" style={{ backgroundImage: "url(/museum/rooms/dynasty-wing.webp)" }}>
+      <div className="room-photo" style={{ backgroundImage: "url(/museum/rooms/dynasty-wing.webp)" }} />
+      <div className="room-scrim" />
+      <div className="room-title">
         <div className="eyebrow">What happened to this seat over time?</div>
         <h1>FRANCHISES</h1>
         <p>
           Franchises are not managers. Franchises are institutions — a seat that
           persists as one manager replaces another.
         </p>
-      </header>
+      </div>
 
       <div className="grid cols-3" style={{ marginTop: "1.5rem" }}>
         {franchiseIndex.map((f) => (

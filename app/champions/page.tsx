@@ -7,14 +7,16 @@ export default function ChampionsPage() {
 
   return (
     <>
-      <header className="room-header" style={{ backgroundImage: "url(/museum/rooms/trophy-room.webp)" }}>
+      <div className="room-photo" style={{ backgroundImage: "url(/museum/rooms/trophy-room.webp)" }} />
+      <div className="room-scrim" />
+      <div className="room-title">
         <div className="eyebrow">Who won?</div>
         <h1>CHAMPIONS</h1>
         <p>
           {totals.seasons} seasons · {totals.titles_awarded} champions crowned ·
           only {totals.unique_managers} managers have ever lifted the trophy.
         </p>
-      </header>
+      </div>
 
       <h2>Championship Leaders</h2>
       <div className="grid cols-3">
