@@ -172,23 +172,26 @@ p { color: var(--muted); margin: 0.5rem 0; }
 .divider::after { right: 0; }
 
 /* ── Cards ──────────────────────────────────────────────────────────────── */
-/* "Museum, lit properly": every card reads as a raised, lit object rather
-   than a flat rectangle — a faint top-lit gradient plus an inset highlight
-   along the top edge and a real drop shadow for lift. This is the change
-   that was missing from the first re-skin pass; it's what actually
-   differentiates a card from the page behind it, not just an icon swap. */
+/* "Museum, lit properly": every card is framed with the actual brass
+   plaque-frame asset (border-image, not a flat CSS border) so the corner
+   rivets render undistorted at any card size, plus a top-lit gradient fill
+   and a real drop shadow for lift. This is the pass that puts the
+   commissioned frame asset on every surface, not just the hero. */
 .card {
   background: linear-gradient(180deg, color-mix(in srgb, var(--surface) 100%, #fff 5%), var(--surface) 65%);
-  border: 1px solid var(--gold-dim);
-  border-radius: 8px; padding: 1.2rem 1.4rem;
+  border-style: solid; border-width: 12px; border-color: var(--gold-dim);
+  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 12px stretch;
+  border-radius: 8px; padding: 0.6rem 0.8rem;
   box-shadow: inset 0 1px 0 rgba(255, 240, 168, 0.12), 0 6px 18px rgba(0, 0, 0, 0.45);
 }
-a.card { display: block; color: inherit; transition: border-color 0.2s, transform 0.15s; }
-a.card:hover { border-color: var(--gold); transform: translateY(-2px); text-decoration: none; }
+a.card { display: block; color: inherit; transition: transform 0.15s, filter 0.2s; }
+a.card:hover { transform: translateY(-2px); filter: brightness(1.15); text-decoration: none; }
 
 .card-feature {
-  border: 2px solid var(--gold); border-radius: 12px;
-  padding: 2rem 1.5rem; text-align: center;
+  border-style: solid; border-width: 16px; border-color: var(--gold);
+  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 16px stretch;
+  border-radius: 12px;
+  padding: 1.4rem 0.9rem; text-align: center;
   box-shadow: 0 0 40px var(--gold-glow);
 }
 
@@ -225,27 +228,12 @@ a.card:hover { border-color: var(--gold); transform: translateY(-2px); text-deco
 .metric { display: flex; flex-direction: column; }
 .metric-label { order: 2; }
 
-/* Four small brass "rivets," built as background layers rather than an
-   image so they hold their position at any card height instead of
-   stretching a fixed-aspect frame asset across variable content. */
-.plaque, .champion-card {
-  position: relative;
-  background-image:
-    radial-gradient(circle at 35% 35%, #f1d47c 0%, #c9a24b 55%, #5d4212 100%),
-    radial-gradient(circle at 35% 35%, #f1d47c 0%, #c9a24b 55%, #5d4212 100%),
-    radial-gradient(circle at 35% 35%, #f1d47c 0%, #c9a24b 55%, #5d4212 100%),
-    radial-gradient(circle at 35% 35%, #f1d47c 0%, #c9a24b 55%, #5d4212 100%);
-  background-repeat: no-repeat;
-  background-size: 7px 7px;
-  background-position:
-    12px 12px, calc(100% - 12px) 12px,
-    12px calc(100% - 12px), calc(100% - 12px) calc(100% - 12px);
-}
-
 /* ── Champion card — the hero moment of the home and season pages ────────── */
 .champion-card {
-  background-color: var(--surface); border: 2px solid var(--gold);
-  border-radius: 12px; padding: 2.5rem 2rem; text-align: center;
+  background-color: var(--surface);
+  border-style: solid; border-width: 18px; border-color: var(--gold);
+  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 18px stretch;
+  border-radius: 12px; padding: 1.6rem 1.2rem; text-align: center;
   box-shadow: 0 0 50px rgba(212, 175, 55, 0.12), inset 0 0 0 1px rgba(255, 240, 168, 0.15);
   max-width: 620px; margin: 0 auto;
 }
@@ -317,7 +305,9 @@ a.card:hover { border-color: var(--gold); transform: translateY(-2px); text-deco
 .year-pill:hover { border-color: var(--gold); color: var(--gold); text-decoration: none; }
 @media (max-width: 640px) { .chron-row { grid-template-columns: 1fr; gap: 0.3rem; } }
 
-.plaque { border-left: 5px solid var(--gold); }
+/* .plaque already inherits the full brass frame from .card (they're always
+   combined in markup: className="card plaque") — no separate accent needed,
+   a left-stripe would fight the border-image frame on that one edge. */
 .plaque p { color: var(--text); }
 .identity { font-style: italic; color: var(--gold); margin-top: 0.6rem; }
 
