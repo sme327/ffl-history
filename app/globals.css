@@ -34,7 +34,7 @@
 
 body {
   margin: 0;
-  background: var(--bg);
+  background: var(--bg) url("/museum/textures/navy-walnut-panel.png") repeat;
   color: var(--text);
   font-family: var(--body);
   font-size: var(--step-0);
@@ -157,9 +157,16 @@ p { color: var(--muted); margin: 0.5rem 0; }
 .divider::after { right: 0; }
 
 /* ── Cards ──────────────────────────────────────────────────────────────── */
+/* "Museum, lit properly": every card reads as a raised, lit object rather
+   than a flat rectangle — a faint top-lit gradient plus an inset highlight
+   along the top edge and a real drop shadow for lift. This is the change
+   that was missing from the first re-skin pass; it's what actually
+   differentiates a card from the page behind it, not just an icon swap. */
 .card {
-  background: var(--surface); border: 1px solid var(--gold-dim);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--surface) 100%, #fff 5%), var(--surface) 65%);
+  border: 1px solid var(--gold-dim);
   border-radius: 8px; padding: 1.2rem 1.4rem;
+  box-shadow: inset 0 1px 0 rgba(255, 240, 168, 0.12), 0 6px 18px rgba(0, 0, 0, 0.45);
 }
 a.card { display: block; color: inherit; transition: border-color 0.2s, transform 0.15s; }
 a.card:hover { border-color: var(--gold); transform: translateY(-2px); text-decoration: none; }
@@ -188,11 +195,20 @@ a.card:hover { border-color: var(--gold); transform: translateY(-2px); text-deco
   font-family: var(--display); font-size: var(--step-3);
   color: var(--gold); line-height: 1; letter-spacing: 2px;
 }
-.metric-value + .stat-diamond { display: block; margin: 0.35rem auto 0; width: 9px; height: 9px; }
 .metric-label {
   font-size: var(--step--1); color: var(--muted);
   text-transform: uppercase; letter-spacing: 3px; margin-top: 0.4rem;
 }
+/* Self-applying — every .metric on the site gets the brass divider glyph
+   automatically, no per-page JSX needed (the earlier version required a
+   sibling element that no page ever actually rendered). */
+.metric::after {
+  content: ""; display: block; margin: 0.4rem auto 0; width: 9px; height: 9px;
+  background: url("/museum/chrome/stat-diamond.svg") center / contain no-repeat;
+  order: 1;
+}
+.metric { display: flex; flex-direction: column; }
+.metric-label { order: 2; }
 
 /* Four small brass "rivets," built as background layers rather than an
    image so they hold their position at any card height instead of
