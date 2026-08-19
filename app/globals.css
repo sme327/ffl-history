@@ -204,19 +204,19 @@ p { color: var(--muted); margin: 0.5rem 0; }
    commissioned frame asset on every surface, not just the hero. */
 .card {
   background: linear-gradient(180deg, color-mix(in srgb, var(--surface) 100%, #fff 5%), var(--surface) 65%);
-  border-style: solid; border-width: 12px; border-color: var(--gold-dim);
-  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 12px stretch;
-  border-radius: 8px; padding: 0.6rem 0.8rem;
+  border-style: solid; border-width: 7px; border-color: var(--gold-dim);
+  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 7px stretch;
+  border-radius: 8px; padding: 1rem 1.2rem;
   box-shadow: inset 0 1px 0 rgba(255, 240, 168, 0.12), 0 6px 18px rgba(0, 0, 0, 0.45);
 }
 a.card { display: block; color: inherit; transition: transform 0.15s, filter 0.2s; }
 a.card:hover { transform: translateY(-2px); filter: brightness(1.15); text-decoration: none; }
 
 .card-feature {
-  border-style: solid; border-width: 16px; border-color: var(--gold);
-  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 16px stretch;
+  border-style: solid; border-width: 9px; border-color: var(--gold);
+  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 9px stretch;
   border-radius: 12px;
-  padding: 1.4rem 0.9rem; text-align: center;
+  padding: 1.8rem 1.2rem; text-align: center;
   box-shadow: 0 0 40px var(--gold-glow);
 }
 
@@ -256,9 +256,9 @@ a.card:hover { transform: translateY(-2px); filter: brightness(1.15); text-decor
 /* ── Champion card — the hero moment of the home and season pages ────────── */
 .champion-card {
   background-color: var(--surface);
-  border-style: solid; border-width: 18px; border-color: var(--gold);
-  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 18px stretch;
-  border-radius: 12px; padding: 1.6rem 1.2rem; text-align: center;
+  border-style: solid; border-width: 10px; border-color: var(--gold);
+  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 10px stretch;
+  border-radius: 12px; padding: 2rem 1.5rem; text-align: center;
   box-shadow: 0 0 50px rgba(212, 175, 55, 0.12), inset 0 0 0 1px rgba(255, 240, 168, 0.15);
   max-width: 620px; margin: 0 auto;
 }
