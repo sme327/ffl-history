@@ -1,5 +1,6 @@
 import "./globals.css";
 import { site } from "@/lib/data";
+import { NavLinks } from "@/app/components/nav-links";
 
 export const metadata = {
   title: "{insert witty name here} Museum",
@@ -19,19 +20,6 @@ export const metadata = {
   },
 };
 
-const NAV = [
-  { href: "/", label: "Home" },
-  { href: "/champions", label: "Champions" },
-  { href: "/timeline", label: "Timeline" },
-  { href: "/history", label: "League History" },
-  { href: "/seasons", label: "Seasons" },
-  { href: "/managers", label: "Managers" },
-  { href: "/franchises", label: "Franchises" },
-  { href: "/draft", label: "Draft" },
-  { href: "/rivalries", label: "Rivalries" },
-  { href: "/keepers", label: "Keeper Hall" },
-];
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -41,14 +29,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <a className="nav-brand" href="/">{"{insert witty name here}"}</a>
             <input type="checkbox" id="nav-toggle" className="nav-toggle" hidden />
             <label className="nav-burger" htmlFor="nav-toggle" aria-label="Toggle navigation">☰</label>
-            <div className="nav-links">
-              {NAV.map((item) => (
-                <a key={item.href} href={item.href}>{item.label}</a>
-              ))}
-            </div>
+            <NavLinks />
           </div>
         </nav>
         <main className="wrap">{children}</main>
+        <footer className="site-footer">
+          <img
+            src="/museum/chrome/footer-plaque.svg"
+            alt={`Est. ${site.founded} · A private collection · Report a misfiled exhibit`}
+            className="footer-plaque"
+          />
+        </footer>
       </body>
     </html>
   );

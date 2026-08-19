@@ -70,6 +70,8 @@ a:hover { text-decoration: underline; }
   transition: color 0.2s, border-color 0.2s; white-space: nowrap;
 }
 .nav a:not(.nav-brand):hover { color: var(--gold); border-bottom-color: var(--gold); text-decoration: none; }
+.nav a.active { color: var(--gold); border-bottom-color: var(--gold); }
+.nav-active-tick { width: 8px; height: 8px; margin-right: 5px; vertical-align: middle; }
 
 /* Hamburger below the width where the full menu fits on one line. A checkbox
    toggle keeps this working with no client JavaScript. */
@@ -125,10 +127,28 @@ p { color: var(--muted); margin: 0.5rem 0; }
   font-size: 0.88rem; color: var(--muted); font-style: italic;
   letter-spacing: 1px; line-height: 1.8; margin-top: 1.1rem;
 }
+/* Trophy-case flanking panels: a wide-canvas flourish only, per the asset
+   plan's mobile guidance — dropped below the tablet breakpoint rather than
+   shrunk, since the two lit alcoves have no room to read at phone width. */
+@media (min-width: 900px) {
+  .hero {
+    background-image: url("/museum/textures/trophy-case-side-panels.webp");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+  }
+}
 .divider {
-  height: 1px; border: 0; margin: 2rem auto;
+  height: 1px; border: 0; margin: 2rem auto; position: relative;
   background: linear-gradient(to right, transparent, var(--gold-dim), transparent);
 }
+.divider::before, .divider::after {
+  content: ""; position: absolute; top: 50%; width: 12px; height: 12px;
+  transform: translateY(-50%);
+  background: url("/museum/chrome/divider-cap.svg") center / contain no-repeat;
+}
+.divider::before { left: 0; transform: translateY(-50%) rotate(180deg); }
+.divider::after { right: 0; }
 
 /* ── Cards ──────────────────────────────────────────────────────────────── */
 .card {
@@ -162,16 +182,34 @@ a.card:hover { border-color: var(--gold); transform: translateY(-2px); text-deco
   font-family: var(--display); font-size: var(--step-3);
   color: var(--gold); line-height: 1; letter-spacing: 2px;
 }
+.metric-value + .stat-diamond { display: block; margin: 0.35rem auto 0; width: 9px; height: 9px; }
 .metric-label {
   font-size: var(--step--1); color: var(--muted);
   text-transform: uppercase; letter-spacing: 3px; margin-top: 0.4rem;
 }
 
+/* Four small brass "rivets," built as background layers rather than an
+   image so they hold their position at any card height instead of
+   stretching a fixed-aspect frame asset across variable content. */
+.plaque, .champion-card {
+  position: relative;
+  background-image:
+    radial-gradient(circle at 35% 35%, #f1d47c 0%, #c9a24b 55%, #5d4212 100%),
+    radial-gradient(circle at 35% 35%, #f1d47c 0%, #c9a24b 55%, #5d4212 100%),
+    radial-gradient(circle at 35% 35%, #f1d47c 0%, #c9a24b 55%, #5d4212 100%),
+    radial-gradient(circle at 35% 35%, #f1d47c 0%, #c9a24b 55%, #5d4212 100%);
+  background-repeat: no-repeat;
+  background-size: 7px 7px;
+  background-position:
+    12px 12px, calc(100% - 12px) 12px,
+    12px calc(100% - 12px), calc(100% - 12px) calc(100% - 12px);
+}
+
 /* ── Champion card — the hero moment of the home and season pages ────────── */
 .champion-card {
-  background: var(--surface); border: 2px solid var(--gold);
+  background-color: var(--surface); border: 2px solid var(--gold);
   border-radius: 12px; padding: 2.5rem 2rem; text-align: center;
-  box-shadow: 0 0 50px rgba(212, 175, 55, 0.12);
+  box-shadow: 0 0 50px rgba(212, 175, 55, 0.12), inset 0 0 0 1px rgba(255, 240, 168, 0.15);
   max-width: 620px; margin: 0 auto;
 }
 /* The home page's reigning champion carries a heavier halo — layered so the
@@ -180,7 +218,8 @@ a.card:hover { border-color: var(--gold); transform: translateY(-2px); text-deco
   box-shadow:
     0 0 24px rgba(212, 175, 55, 0.20),
     0 0 60px rgba(212, 175, 55, 0.16),
-    0 0 120px rgba(212, 175, 55, 0.10);
+    0 0 120px rgba(212, 175, 55, 0.10),
+    inset 0 0 0 1px rgba(255, 240, 168, 0.15);
 }
 .champion-emoji { font-size: 4rem; line-height: 1; margin-bottom: 0.5rem; }
 .champion-season {
@@ -206,6 +245,7 @@ a.card:hover { border-color: var(--gold); transform: translateY(-2px); text-deco
 /* Museum destinations */
 .nav-card { display: block; text-align: center; padding: 1.4rem 1rem; }
 .nav-card-icon { font-size: 2rem; line-height: 1; margin-bottom: 0.4rem; }
+.nav-card-icon img { width: 2.5rem; height: 2.5rem; }
 .nav-card-title {
   font-family: var(--display); font-size: var(--step-1);
   color: var(--gold); letter-spacing: 2px;
@@ -284,6 +324,14 @@ td.num { font-variant-numeric: tabular-nums; }
 }
 .matchup-team:last-child { border-bottom: 0; }
 .matchup-team.winner { color: var(--gold); font-weight: 600; background: rgba(212, 175, 55, 0.06); }
+/* Targets the first of the two flex-item spans (team name), not the flex
+   container itself — a ::before on the container would become a third flex
+   item and break the space-between layout between name and score. */
+.matchup-team.winner span:first-child::before {
+  content: ""; display: inline-block; width: 12px; height: 12px; margin-right: 6px;
+  background: url("/museum/chrome/winner-tick.svg") center / contain no-repeat;
+  vertical-align: middle;
+}
 
 /* ── Timeline ───────────────────────────────────────────────────────────── */
 .event {
@@ -292,6 +340,10 @@ td.num { font-variant-numeric: tabular-nums; }
   margin-bottom: 0.5rem;
 }
 .event-major { padding: 1.1rem 1.25rem; }
+
+/* ── Footer ─────────────────────────────────────────────────────────────── */
+.site-footer { display: flex; justify-content: center; padding: 1rem 1.5rem 2.5rem; }
+.footer-plaque { width: 100%; max-width: 640px; height: auto; }
 
 @media (max-width: 700px) {
   :root { --step-4: 2.5rem; --step-3: 1.9rem; --step-2: 1.3rem; }

@@ -162,16 +162,18 @@ export default function HomePage() {
       </div>
       <div className="grid three-up">
         {[
-          ["🏆", "Trophy Room", "Every champion. Every dynasty. The immortal record of who won and how.", "/champions"],
-          ["📅", "Timeline", "The historical spine of the league — every era, every turning point.", "/timeline"],
-          ["🔑", "Keeper Hall", "25 years of attachment, loyalty, and the players nobody could let go.", "/keepers"],
-          ["📋", "Draft Legends", "The obsessions, the archetypes, and the players everyone had to have.", "/draft"],
-          ["👤", "Manager Files", "Career plaques, rivalries, and records for every competitor.", "/managers"],
-          ["🏟️", "Franchise Files", "Lineages, stewardship eras, and the franchises that built this league.", "/franchises"],
+          ["trophy-room", "Trophy Room", "Every champion. Every dynasty. The immortal record of who won and how.", "/champions"],
+          ["timeline", "Timeline", "The historical spine of the league — every era, every turning point.", "/timeline"],
+          ["keeper-hall", "Keeper Hall", "25 years of attachment, loyalty, and the players nobody could let go.", "/keepers"],
+          ["draft-legends", "Draft Legends", "The obsessions, the archetypes, and the players everyone had to have.", "/draft"],
+          ["manager-files", "Manager Files", "Career plaques, rivalries, and records for every competitor.", "/managers"],
+          ["franchise-files", "Franchise Files", "Lineages, stewardship eras, and the franchises that built this league.", "/franchises"],
         ].map(([icon, title, desc, href]) => (
           <a className="card nav-card" key={href} href={href}>
             <div className="eyebrow">Exhibit</div>
-            <div className="nav-card-icon">{icon}</div>
+            <div className="nav-card-icon">
+              <img src={`/museum/icons/exhibits/${icon}.svg`} alt="" />
+            </div>
             <div className="nav-card-title">{title}</div>
             <div className="nav-card-desc">{desc}</div>
           </a>
