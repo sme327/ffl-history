@@ -8,12 +8,14 @@ export default function HistoryPage() {
 
   return (
     <>
-      <div className="eyebrow">How did the league evolve?</div>
-      <h1>THE EVOLUTION OF THE LEAGUE</h1>
-      <p>
-        This is not a statistics page. It’s a history page. The numbers exist to
-        support the story of how this league changed over 25 years.
-      </p>
+      <header className="room-header" style={{ backgroundImage: "url(/museum/rooms/archive-library.webp)" }}>
+        <div className="eyebrow">How did the league evolve?</div>
+        <h1>THE EVOLUTION OF THE LEAGUE</h1>
+        <p>
+          This is not a statistics page. It’s a history page. The numbers exist to
+          support the story of how this league changed over 25 years.
+        </p>
+      </header>
 
       <h2>The Four Eras</h2>
       {eras.map((era) => (

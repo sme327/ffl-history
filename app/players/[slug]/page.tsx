@@ -15,13 +15,15 @@ export default async function PlayerPage({
 
   return (
     <>
-      <div className="eyebrow">Player History</div>
-      <h1>{player.playerName}</h1>
-      <p>
-        {player.position && <span className="pill">{player.position}</span>}{" "}
-        {player.firstSeason}–{player.lastSeason} · owned by{" "}
-        {player.owners.length} manager{player.owners.length === 1 ? "" : "s"}
-      </p>
+      <header className="room-header" style={{ backgroundImage: "url(/museum/rooms/war-room.webp)" }}>
+        <div className="eyebrow">Player History</div>
+        <h1>{player.playerName}</h1>
+        <p>
+          {player.position && <span className="pill">{player.position}</span>}{" "}
+          {player.firstSeason}–{player.lastSeason} · owned by{" "}
+          {player.owners.length} manager{player.owners.length === 1 ? "" : "s"}
+        </p>
+      </header>
 
       <div className="grid cols-3">
         {[

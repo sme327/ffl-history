@@ -22,13 +22,15 @@ export default async function ManagerKeepersPage({
 
   return (
     <>
-      <div className="eyebrow">Keeper Hall</div>
-      <h1>
-        <img src={managerIconPath(manager)} alt="" className="mgr-icon" /> {manager}
-      </h1>
-      <p>
-        <a href={`/managers/${slug}`}>← Back to {manager}’s profile</a>
-      </p>
+      <header className="room-header" style={{ backgroundImage: "url(/museum/rooms/the-vault.webp)" }}>
+        <div className="eyebrow">Keeper Hall</div>
+        <h1>
+          <img src={managerIconPath(manager)} alt="" className="mgr-icon" /> {manager}
+        </h1>
+        <p>
+          <a href={`/managers/${slug}`}>← Back to {manager}’s profile</a>
+        </p>
+      </header>
 
       {dna ? (
         <>

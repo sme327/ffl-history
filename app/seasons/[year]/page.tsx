@@ -17,10 +17,12 @@ export default async function SeasonPage({
 
   return (
     <>
-      <div className="eyebrow">{season.season} Season</div>
-      <h1>{season.title ?? season.season}</h1>
-      {season.hook && <p style={{ fontStyle: "italic" }}>{season.hook}</p>}
-      {season.narrative && <p style={{ color: "var(--text)" }}>{season.narrative}</p>}
+      <header className="room-header" style={{ backgroundImage: "url(/museum/rooms/chronicle-vault.webp)" }}>
+        <div className="eyebrow">{season.season} Season</div>
+        <h1>{season.title ?? season.season}</h1>
+        {season.hook && <p style={{ fontStyle: "italic" }}>{season.hook}</p>}
+        {season.narrative && <p style={{ color: "var(--text)" }}>{season.narrative}</p>}
+      </header>
 
       <div className="grid cols-2" style={{ marginTop: "1.25rem" }}>
         {champ && (

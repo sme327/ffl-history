@@ -39,7 +39,7 @@ body {
      page, an actual persistent lighting condition for the whole site. */
   background:
     radial-gradient(ellipse 1100px 550px at 50% -8%, rgba(212, 175, 55, 0.09), transparent 65%),
-    var(--bg) url("/museum/textures/navy-walnut-panel.png") repeat;
+    var(--bg) url("/museum/textures/gallery-wall-tile.webp") repeat;
   background-attachment: fixed, scroll;
   color: var(--text);
   font-family: var(--body);
@@ -158,6 +158,33 @@ p { color: var(--muted); margin: 0.5rem 0; }
     background-position: center top;
     background-size: 100% auto;
   }
+}
+
+/* ── Room headers — every non-Home page gets its own "place" ──────────────
+   Per VISUAL-ASSETS-ROOMS-2026-08-19.md: each section renders a distinct
+   room scene behind its eyebrow/h1/intro. The image itself is set per page
+   (inline style — it differs by route); this class supplies the shared
+   frame: sizing, the dark scrim that keeps text readable over a photo, and
+   text-shadow so headings hold up over the busier rooms. Unlike the Home
+   hero's flanking side-panels (which need real width to read as two
+   alcoves and so are dropped below 900px), these are single wide scenes —
+   `cover` lets them crop down to a legible slice at any width instead of
+   disappearing on mobile. */
+.room-header {
+  margin: 0 0 1.5rem; padding: 2.75rem 2rem 2rem;
+  border-radius: 8px; position: relative;
+  background-size: cover; background-position: center;
+  background-color: var(--surface);
+}
+.room-header::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  background: linear-gradient(180deg, rgba(8, 17, 32, 0.35) 0%, rgba(8, 17, 32, 0.72) 55%, rgba(8, 17, 32, 0.35) 100%);
+}
+.room-header > * { position: relative; z-index: 1; margin-left: 0; margin-right: 0; }
+.room-header h1, .room-header .eyebrow { text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75); }
+.room-header p { color: var(--text); text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75); }
+@media (max-width: 700px) {
+  .room-header { padding: 2rem 1.25rem 1.5rem; min-height: 220px; display: flex; flex-direction: column; justify-content: center; }
 }
 .divider {
   height: 1px; border: 0; margin: 2rem auto; position: relative;

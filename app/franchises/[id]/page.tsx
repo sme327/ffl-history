@@ -23,15 +23,17 @@ export default async function FranchisePage({
 
   return (
     <>
-      <div className="eyebrow">Franchise {franchise.franchise_id} · established {franchise.established}</div>
-      <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-        <img
-          src={franchiseBadgePath(franchise.franchise_id)}
-          alt=""
-          style={{ width: "4.5rem", height: "4.5rem", flexShrink: 0 }}
-        />
-        <h1 style={{ margin: 0 }}>THE {franchise.current_manager.toUpperCase()} FRANCHISE</h1>
-      </div>
+      <header className="room-header" style={{ backgroundImage: "url(/museum/rooms/dynasty-wing.webp)" }}>
+        <div className="eyebrow">Franchise {franchise.franchise_id} · established {franchise.established}</div>
+        <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+          <img
+            src={franchiseBadgePath(franchise.franchise_id)}
+            alt=""
+            style={{ width: "4.5rem", height: "4.5rem", flexShrink: 0 }}
+          />
+          <h1 style={{ margin: 0 }}>THE {franchise.current_manager.toUpperCase()} FRANCHISE</h1>
+        </div>
+      </header>
 
       <div className="card plaque">
         <div className="eyebrow">The Story of the Franchise</div>

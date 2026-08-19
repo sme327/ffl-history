@@ -8,9 +8,11 @@ export default function ManagersPage() {
 
   return (
     <>
-      <div className="eyebrow">Who are these people?</div>
-      <h1>MANAGERS</h1>
-      <p>Career records for every competitor in league history.</p>
+      <header className="room-header" style={{ backgroundImage: "url(/museum/rooms/portrait-gallery.webp)" }}>
+        <div className="eyebrow">Who are these people?</div>
+        <h1>MANAGERS</h1>
+        <p>Career records for every competitor in league history.</p>
+      </header>
 
       {[
         ["Active", active] as const,
