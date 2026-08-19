@@ -158,15 +158,15 @@ cross-linked. The design is ported from `utils/styles.py` — Bebas display type
 gold on navy, gold-bordered cards, the glowing champion treatment, bracket
 winners highlighted — rebuilt on custom properties rather than inline literals.
 
-What remains before cutover:
+What remained before cutover, now resolved (verified 2026-08-19):
 
-1. `npx wrangler login` (interactive — must be run by hand)
-2. `npm run deploy`, then attach `iwnh.sme327.com` as a Worker custom domain
-3. Update `FANTASY_APP_URL` in the sme327-landing repo
-4. Decide the fate of `insertwittynamehere.streamlit.app`
+1. ✅ `npx wrangler login` — done; `wrangler whoami` shows an authenticated OAuth session
+2. ✅ `npm run deploy` — done; the Worker (`the-long-game`) is attached to `iwnh.sme327.com` and confirmed live, serving correct content
+3. ✅ `FANTASY_APP_URL` in the sme327-landing repo already points at `https://iwnh.sme327.com`
+4. Still open: retiring `insertwittynamehere.streamlit.app` on Streamlit Cloud — see Phase 6
 
-The Streamlit app keeps running throughout and stays the fallback until the
-new site is verified.
+The Streamlit app ran throughout the port and stayed the fallback until the new
+site was verified, per plan. That verification is now done.
 
 ### What Phase 2 uncovered
 
@@ -239,17 +239,18 @@ The bulk of the work. `utils/styles.py` (886 lines) already has the right instin
 
 Mobile is a design decision to make *here*, not to port. The current `layout="wide"` plus fixed column counts is a desktop assumption, and the primary distribution channel for this site is a link in a group chat (see product review, F11).
 
-## Phase 5 — Deploy and attach the domain
+## Phase 5 — Deploy and attach the domain ✅ **done, verified 2026-08-19**
 
-- `wrangler deploy`, verify on the `*.workers.dev` URL first.
-- Attach `iwnh.sme327.com` as a Custom Domain. Cloudflare writes the DNS record and issues the certificate automatically — the zone is already yours.
-- Spot-check every route, including a few `/seasons/:year`, `/managers/:slug`, and a 404.
+- ✅ `wrangler deploy` — Worker name `the-long-game`.
+- ✅ `iwnh.sme327.com` attached as a Custom Domain and confirmed live — fetched directly, serving the correct title, nav, and stats (2,272 matchups, Dominic's 5 titles, etc.).
+- Route spot-checks beyond the home page (a `/seasons/:year`, a `/managers/:slug`, a 404) weren't re-verified in this pass, but `npm run build` succeeds cleanly for all 15 routes and the golden-file suite (64 tests) confirms every derivation matches the pre-port fixtures.
 
 ## Phase 6 — Cutover and cleanup
 
-- **Update the landing page.** `streamlit_app.py` in `sme327-landing` has `FANTASY_APP_URL = "https://insertwittynamehere.streamlit.app"` — it becomes `https://iwnh.sme327.com`. Easy to forget; it's in a different repo.
-- Decide the fate of the Streamlit deploy: retire it, or keep it running as a staging copy. There's no way to redirect from `*.streamlit.app`, so anyone with a bookmark keeps landing on the old one until it's taken down.
-- Update `README.md` to describe the new build-and-deploy flow.
+- ✅ **Landing page updated.** `sme327-landing/streamlit_app.py`'s `FANTASY_APP_URL` already reads `https://iwnh.sme327.com`, not the old Streamlit URL.
+- ⬜ **Fate of the Streamlit deploy — still open.** `insertwittynamehere.streamlit.app` currently redirects to Streamlit's login/wake screen rather than serving the app directly, consistent with a Community Cloud app gone dormant from disuse — but it isn't formally retired. There's no way to redirect from `*.streamlit.app`, so anyone with an old bookmark still lands there (and wakes it) until it's taken down on Streamlit's side. This requires logging into Streamlit Community Cloud directly — outside what a local repo change can do.
+- ✅ **`README.md` updated** to describe the build-and-deploy flow (`npm run data`/`dev`/`build`/`deploy`) and point at the live URL.
+- ✅ **The local Streamlit implementation is archived.** `app.py`, `pages/`, `utils/styles.py`, and `.streamlit/config.toml` moved to `archive/streamlit-site/` (git history preserved via `git mv`). `utils/data.py` and `utils/narratives.py` stayed at the repo root — `scripts/build_site_data.py` still imports both. Verified with a clean `npm run build` and `npm run typecheck` after the move.
 
 ---
 
@@ -280,7 +281,7 @@ The real failure mode is abandonment: a half-finished port sitting beside a Stre
 | Porting 1,262 lines of derivations | Silent correctness drift — wrong champions, wrong records | Phase 1 golden-file fixtures as the acceptance gate |
 | Porting 698 inline styles | Visual regressions, inconsistency carried forward | Rebuild on a stylesheet rather than transcribing |
 | Rivalry route explosion | Hundreds of near-empty pages | Generate only pairs with real head-to-head history |
-| Stale link on the landing page | Card points at the retired Streamlit URL | Phase 6, cross-repo — easy to forget |
+| ~~Stale link on the landing page~~ | ~~Card points at the retired Streamlit URL~~ | ✅ Resolved — `sme327-landing` already points at `iwnh.sme327.com` |
 | Data refresh workflow | Scrape → commit → rebuild is more steps than today | Document it in README; it's still simpler than a live server |
 
 ---
@@ -288,3 +289,15 @@ The real failure mode is abandonment: a half-finished port sitting beside a Stre
 ## What doesn't change
 
 `data/` stays the source of truth. `fetch_yahoo_data.py` keeps scraping Yahoo the same way. `DATA_GUIDE.md` remains the authoritative record of era quirks and stays accurate through the port. The museum vision in `CLAUDE.md` is untouched — if anything, routes serve it better than dropdowns, because an exhibit you can link to is an exhibit people actually share.
+
+---
+
+## Status: migration complete (2026-08-19)
+
+Every phase in this plan is done except retiring the Streamlit Cloud deployment
+itself, which lives outside this repo. `iwnh.sme327.com` is the live site, the
+landing page points at it, the local Streamlit implementation is archived at
+`archive/streamlit-site/`, and the golden-file suite (64 tests) plus a clean
+`npm run build`/`npm run typecheck` confirm nothing broke in the move. This
+plan document is kept as the historical record of the migration rather than
+an active checklist going forward.

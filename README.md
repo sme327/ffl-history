@@ -1,10 +1,62 @@
 # FFL History — Project Overview
 
 25-year fantasy football league (Yahoo, commissioner: Shawn, league slug `sme327`).
-This folder contains the data pipeline that scrapes and normalizes historical league data
-for use in a Streamlit history app.
+This repo contains both the data pipeline that scrapes and normalizes historical league
+data, and **{insert witty name here} Museum** — the site that presents it, live at
+**[iwnh.sme327.com](https://iwnh.sme327.com)**.
 
 For detailed methodology, data quirks, and the reasoning behind decisions, see **[DATA_GUIDE.md](DATA_GUIDE.md)**.
+For the product vision and page-by-page editorial brief, see **[CLAUDE.md](CLAUDE.md)**.
+
+---
+
+## Running the site
+
+The site is a Next.js app (via [vinext](https://github.com/) on a Cloudflare Worker,
+`app/`) that reads pre-built JSON rather than hitting a database or the CSVs at
+request time. The pipeline is: **CSV → Python build script → JSON → bundled into
+the Worker.**
+
+```
+data/*.csv  →  scripts/build_site_data.py  →  build/data/*.json  →  lib/data.ts  →  app/
+```
+
+```
+npm run data       # rebuild build/data/*.json from data/*.csv (also validates against tests/fixtures/)
+npm run dev        # local dev server (vinext dev)
+npm run build      # npm run data, then production build
+npm run typecheck  # tsc --noEmit
+npm run deploy     # build, then wrangler deploy
+```
+
+`build/` is gitignored — it's generated, not source. Run `npm run data` any time
+`data/*.csv` changes before running `npm run dev` or committing, or the site will
+serve stale history.
+
+The Worker deploys under the name `the-long-game` and is attached to
+`iwnh.sme327.com` as a Cloudflare custom domain on the `sme327.com` zone. Deploying
+requires `wrangler` to be authenticated (`npx wrangler login`) to the account that
+owns that zone.
+
+For the full migration story — why this stack, what was considered and rejected,
+and the phase-by-phase port off the original Streamlit app — see
+**[SELF-HOSTING-PLAN.md](SELF-HOSTING-PLAN.md)**.
+
+### The original Streamlit app
+
+`archive/streamlit-site/` holds the **original implementation** the current site
+was ported from — `app.py`, `pages/*.py`, `utils/styles.py`, and its
+`.streamlit/config.toml`. Cutover is complete: `iwnh.sme327.com` is live, the
+landing page's `FANTASY_APP_URL` points at it, and the golden-file test suite
+confirms the ported site reproduces every derivation byte-for-byte. It's kept
+for reference (the original visual design, and as a fallback if the port ever
+needs to be checked against) rather than run day to day — the Streamlit Cloud
+deployment at `insertwittynamehere.streamlit.app` should be retired separately
+whenever convenient.
+
+`utils/data.py` and `utils/narratives.py`, at the repo root, are **not**
+archived — `scripts/build_site_data.py` still imports both to build the JSON
+the live site reads.
 
 ---
 
@@ -245,7 +297,10 @@ Hand-authored narrative events for the league timeline. Supplements scraped data
 
 ## Other Files
 
-- **`archive/`** — completed one-time migration scripts; kept for documentation of methodology but not intended to be run again
+- **`app/`, `lib/data.ts`, `worker/`, `public/`** — the live site's source (see "Running the site" above)
+- **`archive/`** — retired code, kept for reference and not intended to be run day to day
+  - **`streamlit-site/`** — the original Streamlit app the current site was ported from (see "The original Streamlit app" above)
+  - **`fix_2005_keepers.py`** — completed one-time migration script; documents the 2005 keeper data methodology
 - **`.yahoo_cookies.json`** — saved Yahoo login session; delete to force fresh login
 - **`.claude/`** — Claude Code project memory (do not delete)
 
