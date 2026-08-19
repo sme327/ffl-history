@@ -117,4 +117,12 @@ Once delivered to `public/museum/rooms/` and `public/museum/textures/gallery-wal
 2. Wire the shared tileable wall into the page body behind everything, below each room's header band.
 3. Verify on **every** section, at both short and long page lengths, before calling it done — given the history in this thread, that verification step is not optional and I'll do it before reporting anything as live.
 
-I'm not building any of this yet — this file is the brief for what needs to exist first. Let me know if you want to adjust any room's concept before it goes to whoever's generating these, or if you're ready to send this as-is.
+---
+
+## Status: delivered, built, and live (2026-08-19)
+
+All 9 rooms plus the shared tileable wall were delivered, QA'd against §2's shared art direction and the per-room size/format ceilings, and wired into all 15 routes (all 9 rooms + Home).
+
+**One deliberate change from the plan above:** step 1's "header band" approach — the room image boxed into a bordered, rounded card near the top of the page — shipped first, but read as "a picture in a title box," not an actual place, and was called out as such. The corrected version replaces that with `position: fixed` room photos shown at their true aspect ratio: the image stays behind the page content for the entire scroll instead of scrolling away after the first screenful. Verified with a real `window.scrollTo()` simulation (not just a tall composite screenshot, which wouldn't have proven the fix) on both Home and Champions before shipping.
+
+Two items flagged in §3's room-by-room QA are still open, not blocking: The Arena never got its intended red-orange tint (still reads as the same amber as every other room), and the wall tile's relationship to the pre-existing `navy-walnut-panel.png` was never fully confirmed as a distinct design pass rather than a near-duplicate.

@@ -1,5 +1,7 @@
 # Site Review, Round 2 — 2026-08-19
 
+**Status (2026-08-19): the table-framing fix (§5, items 1–2) is done and live.** The findings below describe the site as it was found, at the start of this review — read §5 for current status on every recommendation, including what's still open.
+
 Full UI/UX pass on the live site (`iwnh.sme327.com`) after the re-skin work: room backdrops, manager medallions, franchise badges, card frames, ambient lighting. Scope: does this read as an actual museum, or a site with museum decoration applied on top of an unchanged structure. Grounded in full-page screenshots of every top-level section, not spot checks.
 
 **Direct answer to the question that prompted this: it's both, and the split is precise, not vague.** Everything built from `.card` — stat tiles, plaques, DNA cards, trivia cards, the reigning champion — is genuinely re-architected. Everything built from a raw `<table>` — and there's more of that on this site than there is of `.card` — never got touched. The costume seam is exactly at that boundary, and it's visible on every single page that has a table, which is most of them.
@@ -75,14 +77,12 @@ Every `.card` on the site — regardless of what it holds — gets the exact sam
 
 ## 5. Prioritized recommendations
 
-| # | Action | New assets? | Impact |
-|---|---|---|---|
-| 1 | Frame/style every `<table>` on the site using the existing `plaque-frame.svg` system | No | Highest — this is the most visible remaining "costume" seam, present on ~10 pages |
-| 2 | Specifically address Rivalries' 195-row "Every Matchup" table — it's the single worst offender | No (covered by #1, called out separately for size) | High |
-| 3 | Give tables their own calmer "reference archive" material, distinct from card display-cases | Yes — one small tileable texture | Medium — turns a fix into a real curatorial choice |
-| 4 | Rework Timeline's event hierarchy — real size/prominence difference for high-importance events, not just a border tweak | No | Medium — addresses the site's single longest, most repetitive page |
-| 5 | Audit other uniform-grid pages (Champions Trivia, League History stat blocks) for the same opportunity — not urgent, lower payoff than Timeline | No | Low–Medium |
+| # | Action | New assets? | Impact | Status |
+|---|---|---|---|---|
+| 1 | Frame/style every `<table>` on the site using the existing `plaque-frame.svg` system | No | Highest — this is the most visible remaining "costume" seam, present on ~10 pages | ✅ **Done 2026-08-19** — `.scroll-x` (the shared wrapper every standalone table uses) now gets the same `border-image` frame as `.card`, plus a brass rule under `th` and a faint zebra tint on `tbody`. One CSS change covered all 9 pages, no JSX edits. |
+| 2 | Specifically address Rivalries' 195-row "Every Matchup" table — it's the single worst offender | No (covered by #1, called out separately for size) | High | ✅ **Done 2026-08-19** — verified the frame holds without distortion at the top of the table and ~150 rows down; also checked the League History 10-column table on desktop and a 390px mobile viewport. |
+| 3 | Give tables their own calmer "reference archive" material, distinct from card display-cases | Yes — one small tileable texture | Medium — turns a fix into a real curatorial choice | ⬜ Open — tables currently reuse the exact `.card` display-case material (§4's original framing); still worth a distinct, calmer texture if the fully-uniform look feels too heavy at table scale once you've lived with it |
+| 4 | Rework Timeline's event hierarchy — real size/prominence difference for high-importance events, not just a border tweak | No | Medium — addresses the site's single longest, most repetitive page | ⬜ Open — Timeline is still 24,610px of near-uniformly-weighted event cards; not touched by the table fix, which only affects `<table>` elements and Timeline has none |
+| 5 | Audit other uniform-grid pages (Champions Trivia, League History stat blocks) for the same opportunity — not urgent, lower payoff than Timeline | No | Low–Medium | ⬜ Open |
 
-Items 1–2 are the ones I'd do first — they're the largest visible gap, they're cheap (no new commissioning, no round-trip), and they're the direct answer to "does this feel like a museum or a costume."
-
-Want me to start on the table treatment, or talk through the reference-archive material concept (§4, item 3) first since that's the one place I'd actually recommend a new asset?
+Items 1–2 shipped and are live on `iwnh.sme327.com`, verified against the deployed CSS, not just the dev server. Items 3–5 are the open work — 3 is the one place a new (small, cheap) asset would help; 4 and 5 are layout/editorial decisions, no commissioning needed.
