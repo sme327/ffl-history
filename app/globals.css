@@ -34,7 +34,13 @@
 
 body {
   margin: 0;
-  background: var(--bg) url("/museum/textures/navy-walnut-panel.png") repeat;
+  /* Ambient overhead spotlight, pinned to the viewport so it's present at
+     any scroll position on any page — not just a banner at the top of one
+     page, an actual persistent lighting condition for the whole site. */
+  background:
+    radial-gradient(ellipse 1100px 550px at 50% -8%, rgba(212, 175, 55, 0.09), transparent 65%),
+    var(--bg) url("/museum/textures/navy-walnut-panel.png") repeat;
+  background-attachment: fixed, scroll;
   color: var(--text);
   font-family: var(--body);
   font-size: var(--step-0);
@@ -50,8 +56,14 @@ a:hover { text-decoration: underline; }
 /* ── Navigation ─────────────────────────────────────────────────────────── */
 .nav {
   position: sticky; top: 0; z-index: 999;
-  background: var(--bg);
+  /* The one element present, in the same position, on every route at every
+     scroll depth — so this is where the case-lit material actually needs
+     to live for the effect to read as "the whole site," not one banner. */
+  background:
+    linear-gradient(180deg, rgba(255, 240, 168, 0.06), rgba(0, 0, 0, 0.2) 90%),
+    var(--bg) url("/museum/textures/navy-walnut-panel.png") repeat;
   border-bottom: 1px solid var(--gold-dim);
+  box-shadow: 0 1px 0 rgba(255, 240, 168, 0.08), 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 .nav-inner {
   max-width: 1280px; margin: 0 auto;
@@ -104,6 +116,9 @@ h1 {
   font-family: var(--display); font-size: var(--step-3);
   color: var(--gold); letter-spacing: 6px; line-height: 1;
   margin: 0 0 0.5rem;
+  /* Every page's title is the placard under the case light — this is the
+     one rule that puts "spotlit" on all 15 routes with no per-page markup. */
+  text-shadow: 0 0 40px rgba(212, 175, 55, 0.25);
 }
 h2 {
   font-family: var(--display); font-size: var(--step-2);
