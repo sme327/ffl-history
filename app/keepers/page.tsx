@@ -1,5 +1,5 @@
 import { PositionShareBar } from "@/app/components/charts";
-import { keeperHall, slugify } from "@/lib/data";
+import { keeperHall, slugify, managerIconPath } from "@/lib/data";
 
 const POSITION_COLORS: Record<string, string> = {
   RB: "#22C55E", WR: "#3B82F6", QB: "#EF4444",
@@ -42,7 +42,9 @@ export default function KeeperHallPage() {
       <div className="grid cols-4">
         {dna.map((d) => (
           <a className="card" key={d.manager} href={`/keepers/${slugify(d.manager)}`}>
-            <div style={{ fontSize: "1.5rem" }}>{d.emoji}</div>
+            <div style={{ fontSize: "1.5rem" }}>
+              <img src={managerIconPath(d.manager)} alt="" className="mgr-icon" />
+            </div>
             <h3>{d.manager}</h3>
             <div className="muted">{d.dna}</div>
             <div className="gold">{d.keeper_count} keepers</div>
@@ -153,7 +155,7 @@ export default function KeeperHallPage() {
         {dna.map((entry) => (
           <div className="card" key={entry.manager}>
             <h3>
-              {entry.emoji}{" "}
+              <img src={managerIconPath(entry.manager)} alt="" className="mgr-icon" />{" "}
               <a href={`/keepers/${slugify(entry.manager)}`}>{entry.manager}</a>
             </h3>
             <div className="eyebrow" style={{ marginBottom: "0.4rem" }}>{entry.dna}</div>

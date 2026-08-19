@@ -454,6 +454,14 @@ export function eventIconPath(eventType: string): string {
   return `/museum/icons/events/${eventType.replace(/_/g, "-")}.svg`;
 }
 
+export function managerIconPath(manager: string): string {
+  return `/museum/medallions/managers/manager-${slugify(manager)}.svg`;
+}
+
+export function franchiseBadgePath(franchiseId: string): string {
+  return `/museum/badges/franchise-${franchiseId.toLowerCase()}.svg`;
+}
+
 const ERA_ICON_SLUGS: Record<string, string> = {
   Founding: "founding",
   Workhorse: "workhorse",

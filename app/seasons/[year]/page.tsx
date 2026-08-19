@@ -1,4 +1,4 @@
-import { seasonDetail, seasonIndex, slugify } from "@/lib/data";
+import { seasonDetail, seasonIndex, slugify, managerIconPath } from "@/lib/data";
 
 export function generateStaticParams() {
   return seasonIndex.map((s) => ({ year: String(s.season) }));
@@ -25,7 +25,9 @@ export default async function SeasonPage({
       <div className="grid cols-2" style={{ marginTop: "1.25rem" }}>
         {champ && (
           <div className="champion-card">
-            <div className="champion-emoji">{champ.emoji}</div>
+            <div className="champion-emoji">
+              <img src={managerIconPath(champ.manager)} alt="" className="mgr-icon" />
+            </div>
             <div className="champion-season">🏆 {season.season} Champion 🏆</div>
             <div className="champion-team">{champ.team}</div>
             <div className="champion-manager">
@@ -80,7 +82,12 @@ export default async function SeasonPage({
             {season.standings.map((row) => (
               <tr key={row.team}>
                 <td className={row.result.includes("Champion") ? "gold" : "muted"}>{row.result}</td>
-                <td>{row.emoji} {row.team}</td>
+                <td>
+                  {row.manager !== "—" && (
+                    <img src={managerIconPath(row.manager)} alt="" className="mgr-icon" />
+                  )}{" "}
+                  {row.team}
+                </td>
                 <td>
                   {row.manager === "—" ? (
                     <span className="muted">—</span>
@@ -141,7 +148,12 @@ export default async function SeasonPage({
             {season.top_scorers.map((s) => (
               <tr key={s.team}>
                 <td className="num muted">#{s.rank}</td>
-                <td>{s.emoji} {s.team}</td>
+                <td>
+                  {s.manager !== "—" && (
+                    <img src={managerIconPath(s.manager)} alt="" className="mgr-icon" />
+                  )}{" "}
+                  {s.team}
+                </td>
                 <td>
                   {s.manager === "—" ? <span className="muted">—</span> :
                     <a href={`/managers/${slugify(s.manager)}`}>{s.manager}</a>}

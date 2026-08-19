@@ -1,4 +1,4 @@
-import { home, site, slugify } from "@/lib/data";
+import { home, site, slugify, managerIconPath } from "@/lib/data";
 
 export default function HomePage() {
   const { stats, current_champion: champ, legends, drought, storylines } = home;
@@ -21,7 +21,9 @@ export default function HomePage() {
             <div className="eyebrow">Reigning Champion</div>
           </div>
           <div className="champion-card champion-hero">
-            <div className="champion-emoji">{champ.emoji}</div>
+            <div className="champion-emoji">
+              <img src={managerIconPath(champ.manager)} alt="" className="mgr-icon" />
+            </div>
             <div className="champion-season">🏆 {champ.season} League Champion 🏆</div>
             <div className="champion-team">{champ.team}</div>
             <div className="champion-manager">
@@ -57,7 +59,9 @@ export default function HomePage() {
       <div className="grid cols-4">
         {home.recent_champions.map((champion) => (
           <div className="card mini-champ" key={champion.season}>
-            <div style={{ fontSize: "1.4rem" }}>{champion.emoji}</div>
+            <div style={{ fontSize: "1.4rem" }}>
+              <img src={managerIconPath(champion.manager)} alt="" className="mgr-icon" />
+            </div>
             <div className="mini-champ-year">
               <a href={`/seasons/${champion.season}`}>{champion.season}</a>
             </div>
@@ -83,7 +87,9 @@ export default function HomePage() {
       <div className="grid cols-4">
         {legends.slice(0, 4).map((legend) => (
           <div className="card metric" key={legend.manager}>
-            <div style={{ fontSize: "1.75rem" }}>{legend.emoji}</div>
+            <div style={{ fontSize: "1.75rem" }}>
+              <img src={managerIconPath(legend.manager)} alt="" className="mgr-icon" />
+            </div>
             <div className="metric-value">{legend.titles}</div>
             <div className="metric-label">
               Championship{legend.titles === 1 ? "" : "s"}
@@ -96,7 +102,9 @@ export default function HomePage() {
         ))}
         {drought && (
           <div className="card metric">
-            <div style={{ fontSize: "1.75rem" }}>{drought.emoji}</div>
+            <div style={{ fontSize: "1.75rem" }}>
+              <img src={managerIconPath(drought.manager)} alt="" className="mgr-icon" />
+            </div>
             <div className="metric-value" style={{ color: "var(--muted)" }}>
               {drought.playoff_apps}
             </div>

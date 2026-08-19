@@ -1,4 +1,4 @@
-import { franchiseIndex, slugify } from "@/lib/data";
+import { franchiseIndex, slugify, franchiseBadgePath } from "@/lib/data";
 
 export const metadata = { title: "Franchises · {insert witty name here} Museum" };
 
@@ -15,6 +15,7 @@ export default function FranchisesPage() {
       <div className="grid cols-3" style={{ marginTop: "1.5rem" }}>
         {franchiseIndex.map((f) => (
           <a className="card" key={f.id} href={`/franchises/${f.id}`}>
+            <img src={franchiseBadgePath(f.id)} alt="" style={{ width: "3rem", height: "3rem", marginBottom: "0.4rem" }} />
             <div className="eyebrow">{f.id} · est. {f.established}</div>
             <h3>{f.currentManager}</h3>
             <div className="gold">

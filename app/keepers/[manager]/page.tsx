@@ -1,5 +1,5 @@
 import {
-  keeperChainsFor, keeperDnaFor, managerFromSlug, managerIndex, slugify,
+  keeperChainsFor, keeperDnaFor, managerFromSlug, managerIndex, slugify, managerIconPath,
 } from "@/lib/data";
 
 export function generateStaticParams() {
@@ -24,7 +24,7 @@ export default async function ManagerKeepersPage({
     <>
       <div className="eyebrow">Keeper Hall</div>
       <h1>
-        {dna?.emoji} {manager}
+        <img src={managerIconPath(manager)} alt="" className="mgr-icon" /> {manager}
       </h1>
       <p>
         <a href={`/managers/${slug}`}>← Back to {manager}’s profile</a>

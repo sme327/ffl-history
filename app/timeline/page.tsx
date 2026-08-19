@@ -1,4 +1,4 @@
-import { timeline, slugify, eventIconPath, eraIconPath } from "@/lib/data";
+import { timeline, slugify, eventIconPath, eraIconPath, managerIconPath } from "@/lib/data";
 
 export const metadata = { title: "Timeline · {insert witty name here} Museum" };
 
@@ -72,7 +72,7 @@ export default function TimelinePage() {
                   {event.description && <p style={{ margin: "0.3rem 0 0" }}>{event.description}</p>}
                   {event.manager && (
                     <div className="muted" style={{ marginTop: "0.3rem" }}>
-                      {event.manager_emoji}{" "}
+                      <img src={managerIconPath(event.manager)} alt="" className="mgr-icon" />{" "}
                       <a href={`/managers/${slugify(event.manager)}`}>{event.manager}</a>
                       {event.franchise_id && ` · ${event.franchise_id}`}
                     </div>

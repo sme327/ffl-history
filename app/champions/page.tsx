@@ -1,4 +1,4 @@
-import { championsView, slugify } from "@/lib/data";
+import { championsView, slugify, managerIconPath } from "@/lib/data";
 
 export const metadata = { title: "Champions · {insert witty name here} Museum" };
 
@@ -18,7 +18,9 @@ export default function ChampionsPage() {
       <div className="grid cols-3">
         {leaders.map((m) => (
           <div className="card" key={m.manager}>
-            <div style={{ fontSize: "1.75rem" }}>{m.emoji}</div>
+            <div style={{ fontSize: "1.75rem" }}>
+              <img src={managerIconPath(m.manager)} alt="" className="mgr-icon" />
+            </div>
             <h3 className="gold">{m.championships}× </h3>
             <div>
               <a href={`/managers/${slugify(m.manager)}`}>{m.manager}</a>
@@ -36,7 +38,9 @@ export default function ChampionsPage() {
         {championsView.chronological.map((entry) => (
           <div key={entry.manager} className="chron-row">
             <div className="chron-mgr">
-              <span style={{ fontSize: "1.1rem" }}>{entry.emoji}</span>
+              <span style={{ fontSize: "1.1rem" }}>
+                <img src={managerIconPath(entry.manager)} alt="" className="mgr-icon" />
+              </span>
               <a href={`/managers/${slugify(entry.manager)}`}>{entry.manager}</a>
               <span className="muted">({entry.championships})</span>
             </div>
@@ -59,7 +63,9 @@ export default function ChampionsPage() {
       <div className="grid cols-2">
         {dynasties.map((d) => (
           <div className="card card-feature" key={d.manager}>
-            <div style={{ fontSize: "2.25rem" }}>{d.emoji}</div>
+            <div style={{ fontSize: "2.25rem" }}>
+              <img src={managerIconPath(d.manager)} alt="" className="mgr-icon" />
+            </div>
             <h3>
               <a href={`/managers/${slugify(d.manager)}`}>{d.manager}</a>
             </h3>
@@ -107,7 +113,8 @@ export default function ChampionsPage() {
         <div className="card">
           <div className="eyebrow">Most Runner-Up Finishes</div>
           <h3 className="gold">
-            {pain.most_runner_up.emoji} {pain.most_runner_up.manager} — {pain.most_runner_up.count}×
+            <img src={managerIconPath(pain.most_runner_up.manager)} alt="" className="mgr-icon" />{" "}
+            {pain.most_runner_up.manager} — {pain.most_runner_up.count}×
           </h3>
           <p>Runner-up in {pain.most_runner_up.years.join(", ")}.</p>
         </div>
@@ -149,7 +156,8 @@ export default function ChampionsPage() {
                   <a href={`/seasons/${f.season}`}>{f.season}</a>
                 </td>
                 <td>
-                  {f.emoji} {f.champion_team}{" "}
+                  <img src={managerIconPath(f.champion_manager)} alt="" className="mgr-icon" />{" "}
+                  {f.champion_team}{" "}
                   <span className="muted">
                     <a href={`/managers/${slugify(f.champion_manager)}`}>{f.champion_manager}</a>
                   </span>

@@ -1,5 +1,5 @@
 import { SeasonTrends } from "@/app/components/charts";
-import { managerIndex, managerProfile, slugify } from "@/lib/data";
+import { managerIndex, managerProfile, slugify, managerIconPath } from "@/lib/data";
 
 export function generateStaticParams() {
   return managerIndex.map((m) => ({ slug: m.slug }));
@@ -20,7 +20,7 @@ export default async function ManagerPage({
     <>
       <div className="eyebrow">{profile.status_label}</div>
       <h1>
-        {profile.emoji} {profile.display_name}
+        <img src={managerIconPath(profile.name)} alt="" className="mgr-icon" /> {profile.display_name}
       </h1>
 
       <div className="card plaque" style={{ marginTop: "1rem" }}>
@@ -125,7 +125,7 @@ export default async function ManagerPage({
             {profile.head_to_head.map((h) => (
               <tr key={h.opp_manager}>
                 <td>
-                  {h.opp_emoji}{" "}
+                  <img src={managerIconPath(h.opp_manager)} alt="" className="mgr-icon" />{" "}
                   <a href={`/managers/${slugify(h.opp_manager)}`}>{h.opp_manager}</a>
                 </td>
                 <td className="num muted">{h.games}</td>

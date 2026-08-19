@@ -1,4 +1,4 @@
-import { franchiseIndex, franchiseProfile, slugify } from "@/lib/data";
+import { franchiseIndex, franchiseProfile, slugify, managerIconPath, franchiseBadgePath } from "@/lib/data";
 
 export function generateStaticParams() {
   return franchiseIndex.map((f) => ({ id: f.id }));
@@ -24,7 +24,14 @@ export default async function FranchisePage({
   return (
     <>
       <div className="eyebrow">Franchise {franchise.franchise_id} · established {franchise.established}</div>
-      <h1>THE {franchise.current_manager.toUpperCase()} FRANCHISE</h1>
+      <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+        <img
+          src={franchiseBadgePath(franchise.franchise_id)}
+          alt=""
+          style={{ width: "4.5rem", height: "4.5rem", flexShrink: 0 }}
+        />
+        <h1 style={{ margin: 0 }}>THE {franchise.current_manager.toUpperCase()} FRANCHISE</h1>
+      </div>
 
       <div className="card plaque">
         <div className="eyebrow">The Story of the Franchise</div>
@@ -56,7 +63,7 @@ export default async function FranchisePage({
         {franchise.stewards.map((s) => (
           <div className="card" key={s.manager} style={{ borderLeft: `4px solid ${s.color}` }}>
             <h3>
-              {s.emoji}{" "}
+              <img src={managerIconPath(s.manager)} alt="" className="mgr-icon" />{" "}
               <a href={`/managers/${slugify(s.manager)}`}>{s.manager}</a>
               {s.manager === franchise.best_steward && (
                 <span className="pill" style={{ marginLeft: "0.5rem" }}>Most successful</span>
@@ -83,7 +90,7 @@ export default async function FranchisePage({
           <tbody>
             {franchise.rivals.map((r) => (
               <tr key={r.opponent}>
-                <td>{r.emoji} <a href={`/managers/${slugify(r.opponent)}`}>{r.opponent}</a></td>
+                <td><img src={managerIconPath(r.opponent)} alt="" className="mgr-icon" /> <a href={`/managers/${slugify(r.opponent)}`}>{r.opponent}</a></td>
                 <td className="num muted">{r.games}</td>
                 <td className="gold">{r.wins}-{r.losses}</td>
                 <td className="muted">
@@ -113,7 +120,7 @@ export default async function FranchisePage({
               return (
                 <tr key={steward.manager}>
                   <td>
-                    {steward.emoji}{" "}
+                    <img src={managerIconPath(steward.manager)} alt="" className="mgr-icon" />{" "}
                     <a href={`/managers/${slugify(steward.manager)}`}>{steward.manager}</a>
                   </td>
                   <td className="muted">

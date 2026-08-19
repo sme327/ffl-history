@@ -1,5 +1,5 @@
 import { PositionShareBar, PositionTrends } from "@/app/components/charts";
-import { draftCenter, draftExtras, slugify } from "@/lib/data";
+import { draftCenter, draftExtras, slugify, managerIconPath } from "@/lib/data";
 
 export const metadata = { title: "Draft Center · {insert witty name here} Museum" };
 
@@ -56,10 +56,10 @@ export default function DraftPage() {
                   title={`${d.manager} (${d.count}×)`}
                   style={{
                     width: 18, height: 18, borderRadius: "50%", background: d.color,
-                    fontSize: 10, lineHeight: "18px", textAlign: "center",
+                    display: "flex", alignItems: "center", justifyContent: "center",
                   }}
                 >
-                  {d.emoji}
+                  <img src={managerIconPath(d.manager)} alt="" style={{ width: 12, height: 12 }} />
                 </span>
               ))}
             </div>
@@ -78,7 +78,9 @@ export default function DraftPage() {
         {dna.map((entry) => (
           <div className="card" key={entry.manager} style={{ borderTop: `3px solid ${entry.color}` }}>
             <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem" }}>
-              <span style={{ fontSize: "1.4rem" }}>{entry.emoji}</span>
+              <span style={{ fontSize: "1.4rem" }}>
+                <img src={managerIconPath(entry.manager)} alt="" className="mgr-icon" />
+              </span>
               <h3 style={{ margin: 0 }}>
                 <a href={`/managers/${slugify(entry.manager)}`}>{entry.manager}</a>
               </h3>

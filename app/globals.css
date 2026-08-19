@@ -73,6 +73,12 @@ a:hover { text-decoration: underline; }
 .nav a.active { color: var(--gold); border-bottom-color: var(--gold); }
 .nav-active-tick { width: 8px; height: 8px; margin-right: 5px; vertical-align: middle; }
 
+/* Manager sigil medallions — sized in em so the same tag drops cleanly into
+   any context that used to hold a bare emoji character, from a table cell
+   to the 4rem champion-emoji hero slot, with no per-instance pixel tuning. */
+.mgr-icon { width: 1em; height: 1em; vertical-align: -0.15em; display: inline-block; }
+.champion-emoji .mgr-icon { vertical-align: -0.1em; }
+
 /* Hamburger below the width where the full menu fits on one line. A checkbox
    toggle keeps this working with no client JavaScript. */
 .nav-toggle { display: none; }

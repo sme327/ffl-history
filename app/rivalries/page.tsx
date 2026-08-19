@@ -1,4 +1,4 @@
-import { franchiseIndex, franchiseRivalries, rivalriesView, rivalryIndex, slugify } from "@/lib/data";
+import { franchiseIndex, franchiseRivalries, rivalriesView, rivalryIndex, slugify, managerIconPath, franchiseBadgePath } from "@/lib/data";
 
 export const metadata = { title: "Rivalries · {insert witty name here} Museum" };
 
@@ -60,7 +60,7 @@ export default function RivalriesPage() {
           <tbody>
             {title_records.map((t) => (
               <tr key={t.manager}>
-                <td>{t.emoji} <a href={`/managers/${slugify(t.manager)}`}>{t.manager}</a></td>
+                <td><img src={managerIconPath(t.manager)} alt="" className="mgr-icon" /> <a href={`/managers/${slugify(t.manager)}`}>{t.manager}</a></td>
                 <td className="num gold">{t.wins}</td>
                 <td className="num muted">{t.losses}</td>
                 <td className="num">{t.apps}</td>
@@ -76,7 +76,7 @@ export default function RivalriesPage() {
           <div className="eyebrow">Most Eliminations Delivered</div>
           {eliminations.by_executioner.slice(0, 8).map((e, i) => (
             <div key={e.manager} style={{ display: "flex", justifyContent: "space-between", padding: "0.25rem 0", borderBottom: "1px solid var(--border)" }}>
-              <span>{i + 1}. {e.emoji} <a href={`/managers/${slugify(e.manager)}`}>{e.manager}</a></span>
+              <span>{i + 1}. <img src={managerIconPath(e.manager)} alt="" className="mgr-icon" /> <a href={`/managers/${slugify(e.manager)}`}>{e.manager}</a></span>
               <span className="gold">{e.total}</span>
             </div>
           ))}
@@ -85,7 +85,7 @@ export default function RivalriesPage() {
           <div className="eyebrow">Most Times Eliminated</div>
           {eliminations.by_victim.slice(0, 8).map((e, i) => (
             <div key={e.manager} style={{ display: "flex", justifyContent: "space-between", padding: "0.25rem 0", borderBottom: "1px solid var(--border)" }}>
-              <span>{i + 1}. {e.emoji} <a href={`/managers/${slugify(e.manager)}`}>{e.manager}</a></span>
+              <span>{i + 1}. <img src={managerIconPath(e.manager)} alt="" className="mgr-icon" /> <a href={`/managers/${slugify(e.manager)}`}>{e.manager}</a></span>
               <span className="muted">{e.total}</span>
             </div>
           ))}
@@ -138,10 +138,12 @@ export default function RivalriesPage() {
             {topFranchisePairs.map((pair) => (
               <tr key={`${pair.fid_a}-${pair.fid_b}`}>
                 <td>
+                  <img src={franchiseBadgePath(pair.fid_a)} alt="" className="mgr-icon" />{" "}
                   <a href={`/franchises/${pair.fid_a}`}>{pair.fid_a}</a>{" "}
                   <span className="muted">{franchiseNames.get(pair.fid_a)}</span>
                 </td>
                 <td>
+                  <img src={franchiseBadgePath(pair.fid_b)} alt="" className="mgr-icon" />{" "}
                   <a href={`/franchises/${pair.fid_b}`}>{pair.fid_b}</a>{" "}
                   <span className="muted">{franchiseNames.get(pair.fid_b)}</span>
                 </td>
