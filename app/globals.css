@@ -337,13 +337,34 @@ a.card:hover { transform: translateY(-2px); filter: brightness(1.15); text-decor
 .identity { font-style: italic; color: var(--gold); margin-top: 0.6rem; }
 
 /* ── Tables ─────────────────────────────────────────────────────────────── */
+/* Every standalone data table on the site (as opposed to the couple that
+   already sit inside a .card) uses .scroll-x as its wrapper for horizontal
+   overflow — so framing that wrapper, rather than the bare <table>, covers
+   every large table on every page with one change. This was the biggest
+   remaining "costume" seam: the museum visibly stopped at the edge of
+   anything data-dense (Rivalries' 195-row Every Matchup table worst of
+   all). Same border-image frame as .card, so a table now reads as a bound
+   ledger sitting in the room, not a stray spreadsheet. */
+.scroll-x {
+  overflow-x: auto;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--surface) 100%, #fff 5%), var(--surface) 65%);
+  border-style: solid; border-width: 7px; border-color: var(--gold-dim);
+  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 7px stretch;
+  border-radius: 8px; padding: 0.4rem 0.9rem;
+  box-shadow: inset 0 1px 0 rgba(255, 240, 168, 0.12), 0 6px 18px rgba(0, 0, 0, 0.45);
+}
 table { width: 100%; border-collapse: collapse; font-size: var(--step--1); }
-th, td { padding: 0.5rem 0.7rem; text-align: left; border-bottom: 1px solid var(--border); }
+th, td { padding: 0.55rem 0.7rem; text-align: left; border-bottom: 1px solid var(--border); }
 th {
   color: var(--muted); text-transform: uppercase;
   letter-spacing: 2px; font-weight: 600; font-size: var(--step--1);
+  border-bottom: 2px solid var(--gold-dim);
 }
-tbody tr:hover { background: rgba(212, 175, 55, 0.04); }
+/* A faint alternating tint gives a long table (195 rows, in one case) a
+   readable rhythm instead of a wall of identical lines — the digital
+   equivalent of a ledger's ruled guide lines. */
+tbody tr:nth-child(even) { background: rgba(255, 255, 255, 0.02); }
+tbody tr:hover { background: rgba(212, 175, 55, 0.07); }
 td.num, th.num { text-align: right; }
 td.num { font-variant-numeric: tabular-nums; }
 .gold { color: var(--gold); }
@@ -354,7 +375,6 @@ td.num { font-variant-numeric: tabular-nums; }
   font-size: var(--step--1); border: 1px solid var(--border);
   color: var(--muted); letter-spacing: 1px;
 }
-.scroll-x { overflow-x: auto; }
 
 /* ── Bracket ────────────────────────────────────────────────────────────── */
 .matchup {
