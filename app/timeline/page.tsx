@@ -46,45 +46,51 @@ export default function TimelinePage() {
             </span>
           </h2>
 
-          {[...block.high, ...block.other].map((event, i) => (
-            <div
-              className={`event${event.importance === "high" ? " event-major" : ""}`}
-              key={`${event.title}-${i}`}
-              style={{
-                borderLeft: `${event.importance === "high" ? 5 : 3}px solid ${event.color}`,
-                background: event.importance === "high"
-                  ? `color-mix(in srgb, ${event.color} 6%, var(--surface))`
-                  : "var(--surface)",
-              }}
-            >
-              <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
-                <img
-                  src={eventIconPath(event.event_type)}
-                  alt=""
-                  style={{
-                    width: event.importance === "high" ? "2.25rem" : "1.6rem",
-                    height: event.importance === "high" ? "2.25rem" : "1.6rem",
-                    flexShrink: 0,
-                  }}
-                />
-                <div>
-                  <div className="eyebrow" style={{ color: event.color, marginBottom: "0.2rem" }}>
-                    {event.importance_label} · {event.label}
-                    {event.is_editorial && " · ✦ Editorial"}
-                  </div>
-                  <div style={{ fontWeight: 600 }}>{event.title}</div>
-                  {event.description && <p style={{ margin: "0.3rem 0 0" }}>{event.description}</p>}
-                  {event.manager && (
-                    <div className="muted" style={{ marginTop: "0.3rem" }}>
-                      <img src={managerIconPath(event.manager)} alt="" className="mgr-icon" />{" "}
-                      <a href={`/managers/${slugify(event.manager)}`}>{event.manager}</a>
-                      {event.franchise_id && ` · ${event.franchise_id}`}
-                    </div>
-                  )}
+          {block.high.map((event, i) => (
+            <div className="event-featured" key={`${event.title}-${i}`}>
+              <img
+                src={eventIconPath(event.event_type)}
+                alt=""
+                style={{ width: "2.75rem", height: "2.75rem", flexShrink: 0 }}
+              />
+              <div>
+                <div className="eyebrow" style={{ color: event.color, marginBottom: "0.2rem" }}>
+                  {event.importance_label} · {event.label}
+                  {event.is_editorial && " · ✦ Editorial"}
                 </div>
+                <div className="event-featured-title">{event.title}</div>
+                {event.description && <p style={{ margin: "0.3rem 0 0" }}>{event.description}</p>}
+                {event.manager && (
+                  <div className="muted" style={{ marginTop: "0.3rem" }}>
+                    <img src={managerIconPath(event.manager)} alt="" className="mgr-icon" />{" "}
+                    <a href={`/managers/${slugify(event.manager)}`}>{event.manager}</a>
+                    {event.franchise_id && ` · ${event.franchise_id}`}
+                  </div>
+                )}
               </div>
             </div>
           ))}
+
+          {block.other.length > 0 && (
+            <div className="event-ledger">
+              {block.other.map((event, i) => (
+                <div className="event-row" key={`${event.title}-${i}`}>
+                  <img src={eventIconPath(event.event_type)} alt="" className="evt-icon" />
+                  <span className="event-row-title">{event.title}</span>
+                  {event.manager && (
+                    <>
+                      <span className="muted">—</span>
+                      <img src={managerIconPath(event.manager)} alt="" className="mgr-icon" />
+                      <a href={`/managers/${slugify(event.manager)}`}>{event.manager}</a>
+                    </>
+                  )}
+                  <span className="muted" style={{ marginLeft: "auto", fontSize: "var(--step--1)" }}>
+                    {event.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
         </section>
       ))}
     </>
