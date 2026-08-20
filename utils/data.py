@@ -510,11 +510,11 @@ def _playoff_result(season: int, team: str, pg: pd.DataFrame) -> str:
     if len(games) == 0:
         return "—"
     if len(games[(games["game_type"] == "final") & (games["winner"] == team)]):
-        return "🏆 Champion"
+        return "Champion"
     if len(games[(games["game_type"] == "final") & (games["winner"] != team)]):
-        return "🥈 Runner-Up"
+        return "Runner-Up"
     if len(games[(games["game_type"] == "3rd_place") & (games["winner"] == team)]):
-        return "🥉 3rd Place"
+        return "3rd Place"
     if len(games[(games["game_type"] == "3rd_place") & (games["winner"] != team)]):
         return "4th Place"
     if len(games[games["game_type"] == "semifinal"]):
@@ -1281,7 +1281,7 @@ def get_playoff_eliminations() -> pd.DataFrame:
 # Postseason finish ranks above regular-season rank when ordering the table:
 # a champion who limped in as the 6th seed still belongs at the top.
 _PLAYOFF_RESULT_ORDER = {
-    "🏆 Champion": 1, "🥈 Runner-Up": 2, "🥉 3rd Place": 3, "4th Place": 4,
+    "Champion": 1, "Runner-Up": 2, "3rd Place": 3, "4th Place": 4,
     "Semifinals": 5, "Playoffs": 6,
 }
 

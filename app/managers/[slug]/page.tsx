@@ -1,5 +1,6 @@
 import { SeasonTrends } from "@/app/components/charts";
 import { managerIndex, managerProfile, slugify, managerIconPath } from "@/lib/data";
+import { Trophy } from "@/app/components/icons";
 
 export function generateStaticParams() {
   return managerIndex.map((m) => ({ slug: m.slug }));
@@ -109,7 +110,10 @@ export default async function ManagerPage({
                 <td>{s.wins}-{s.losses}{s.ties ? `-${s.ties}` : ""}</td>
                 <td className="num">{s.points_for.toFixed(2)}</td>
                 <td className="num muted">{s.rank ? `#${s.rank}` : "—"}</td>
-                <td className={s.result.includes("Champion") ? "gold" : "muted"}>{s.result}</td>
+                <td className={s.result.includes("Champion") ? "gold" : "muted"}>
+                  {s.result.includes("Champion") && <><Trophy />{" "}</>}
+                  {s.result}
+                </td>
               </tr>
             ))}
           </tbody>

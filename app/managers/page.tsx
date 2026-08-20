@@ -1,4 +1,4 @@
-import { managerIndex } from "@/lib/data";
+import { managerIndex, managerIconPath } from "@/lib/data";
 import { Trophies } from "@/app/components/icons";
 
 export const metadata = { title: "Managers · {insert witty name here} Museum" };
@@ -26,6 +26,11 @@ export default function ManagersPage() {
           <div className="grid cols-3">
             {group.map((m) => (
               <a className="card" key={m.slug} href={`/managers/${m.slug}`}>
+                {/* This page is the portrait gallery — it should show the
+                    portraits, not just nameplates. */}
+                <div style={{ fontSize: "2.5rem", lineHeight: 1, marginBottom: "0.4rem" }}>
+                  <img src={managerIconPath(m.name)} alt="" className="mgr-icon" />
+                </div>
                 <h3>{m.displayName}</h3>
                 <div className="muted">
                   {m.firstSeason}–{m.active ? "Present" : m.lastSeason}

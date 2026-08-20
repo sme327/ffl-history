@@ -1,4 +1,5 @@
 import { seasonDetail, seasonIndex, slugify, managerIconPath } from "@/lib/data";
+import { Trophy } from "@/app/components/icons";
 
 export function generateStaticParams() {
   return seasonIndex.map((s) => ({ year: String(s.season) }));
@@ -22,7 +23,7 @@ export default async function SeasonPage({
       <div className="room-title">
         <div className="eyebrow">{season.season} Season</div>
         <h1>{season.title ?? season.season}</h1>
-        {season.hook && <p style={{ fontStyle: "italic" }}>{season.hook}</p>}
+        {season.hook && <p className="identity" style={{ marginTop: 0 }}>{season.hook}</p>}
         {season.narrative && <p style={{ color: "var(--text)" }}>{season.narrative}</p>}
       </div>
 
@@ -85,7 +86,10 @@ export default async function SeasonPage({
           <tbody>
             {season.standings.map((row) => (
               <tr key={row.team}>
-                <td className={row.result.includes("Champion") ? "gold" : "muted"}>{row.result}</td>
+                <td className={row.result.includes("Champion") ? "gold" : "muted"}>
+                  {row.result.includes("Champion") && <><Trophy />{" "}</>}
+                  {row.result}
+                </td>
                 <td>
                   {row.manager !== "—" && (
                     <img src={managerIconPath(row.manager)} alt="" className="mgr-icon" />
