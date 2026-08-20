@@ -65,8 +65,11 @@ export default function ChampionsPage() {
 
       <h2>Dynasties</h2>
       <div className="grid cols-2">
-        {dynasties.map((d) => (
-          <div className="card card-feature" key={d.manager}>
+        {/* Only the league's defining dynasty gets the ornate artifact frame —
+            seven gilt frames in one grid was the exact "gold everywhere"
+            problem this skin pass removed. */}
+        {dynasties.map((d, i) => (
+          <div className={i === 0 ? "card card-feature" : "card"} key={d.manager}>
             <div style={{ fontSize: "2.25rem" }}>
               <img src={managerIconPath(d.manager)} alt="" className="mgr-icon" />
             </div>

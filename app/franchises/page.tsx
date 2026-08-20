@@ -1,4 +1,5 @@
 import { franchiseIndex, slugify, franchiseBadgePath } from "@/lib/data";
+import { Trophies } from "@/app/components/icons";
 
 export const metadata = { title: "Franchises · {insert witty name here} Museum" };
 
@@ -23,7 +24,7 @@ export default function FranchisesPage() {
             <div className="eyebrow">{f.id} · est. {f.established}</div>
             <h3>{f.currentManager}</h3>
             <div className="gold">
-              {f.championships > 0 ? "🏆".repeat(f.championships) : "No titles yet"}
+              {f.championships > 0 ? <Trophies count={f.championships} /> : "No titles yet"}
             </div>
           </a>
         ))}

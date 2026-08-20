@@ -1,5 +1,6 @@
 import { PositionShareBar, PositionTrends } from "@/app/components/charts";
 import { draftCenter, draftExtras, slugify, managerIconPath } from "@/lib/data";
+import { Trophies } from "@/app/components/icons";
 
 export const metadata = { title: "Draft Center · {insert witty name here} Museum" };
 
@@ -88,7 +89,7 @@ export default function DraftPage() {
               <h3 style={{ margin: 0 }}>
                 <a href={`/managers/${slugify(entry.manager)}`}>{entry.manager}</a>
               </h3>
-              {entry.championships > 0 && <span>{"🏆".repeat(entry.championships)}</span>}
+              {entry.championships > 0 && <span className="gold"><Trophies count={entry.championships} /></span>}
             </div>
             <div className="eyebrow" style={{ color: entry.archetype_color, marginTop: "0.35rem" }}>
               {entry.archetype}
@@ -158,7 +159,10 @@ export default function DraftPage() {
                 key={name}
                 style={{ display: "flex", justifyContent: "space-between", padding: "0.25rem 0", borderBottom: "1px solid var(--border)" }}
               >
-                <span>{["🥇", "🥈", "🥉", "4.", "5."][i]} <a href={`/players/${slugify(name)}`}>{name}</a></span>
+                <span>
+                  <span className={i < 3 ? "gold" : "muted"}>{i + 1}.</span>{" "}
+                  <a href={`/players/${slugify(name)}`}>{name}</a>
+                </span>
                 <span className="gold">{count}×</span>
               </div>
             ))}

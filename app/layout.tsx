@@ -28,17 +28,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="nav-inner">
             <a className="nav-brand" href="/">{"{insert witty name here}"}</a>
             <input type="checkbox" id="nav-toggle" className="nav-toggle" hidden />
-            <label className="nav-burger" htmlFor="nav-toggle" aria-label="Toggle navigation">☰</label>
+            <label className="nav-burger" htmlFor="nav-toggle" aria-label="Toggle navigation">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke="currentColor" strokeWidth="2" strokeLinecap="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </label>
             <NavLinks />
           </div>
         </nav>
         <main className="wrap">{children}</main>
+        {/* Real HTML, not a picture of text: the SVG plaque set its line in a
+            font that can never load inside an <img>, so every visitor got
+            Arial — and the text was unselectable besides. */}
         <footer className="site-footer">
-          <img
-            src="/museum/chrome/footer-plaque.svg"
-            alt={`Est. ${site.founded} · A private collection · Report a misfiled exhibit`}
-            className="footer-plaque"
-          />
+          <div className="footer-plaque">
+            Est. {site.founded} · A private collection · Report a misfiled exhibit
+          </div>
         </footer>
       </body>
     </html>

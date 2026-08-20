@@ -1,4 +1,5 @@
 import { managerIndex } from "@/lib/data";
+import { Trophies } from "@/app/components/icons";
 
 export const metadata = { title: "Managers · {insert witty name here} Museum" };
 
@@ -31,7 +32,7 @@ export default function ManagersPage() {
                 </div>
                 <div className="gold">
                   {m.championships > 0
-                    ? "🏆".repeat(m.championships)
+                    ? <Trophies count={m.championships} />
                     : "No titles yet"}
                 </div>
               </a>

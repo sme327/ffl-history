@@ -114,6 +114,7 @@ export function ScoringEvolution({
           y={y(c.points_for) + 4}
           fontSize="11"
           textAnchor="middle"
+          fill="var(--gold)"
         >
           ★
         </text>
@@ -344,9 +345,15 @@ export function SeasonTrends({
               height={18}
             />
           ) : r.category === "3rd / 4th" ? (
-            <text key={r.season} x={x(r.season)} y={y(r.rank!) + 6} fontSize="16" textAnchor="middle">
-              🥉
-            </text>
+            <circle
+              key={r.season}
+              cx={x(r.season)}
+              cy={y(r.rank!)}
+              r={5}
+              fill="#b08d57"
+              stroke="var(--bg)"
+              strokeWidth={1.5}
+            />
           ) : (
             <circle
               key={r.season}
@@ -370,7 +377,7 @@ export function SeasonTrends({
       <div className="muted" style={{ fontSize: "var(--step--1)", marginTop: "0.35rem", display: "flex", alignItems: "center", gap: "0.4rem", flexWrap: "wrap" }}>
         <img src="/museum/icons/events/championship.svg" alt="" className="mgr-icon" /> champion ·
         <img src="/museum/icons/events/runner-up.svg" alt="" className="mgr-icon" /> runner-up ·
-        🥉 third or fourth · ● playoffs · ○ missed
+        <span style={{ color: "#b08d57" }}>●</span> third or fourth · ● playoffs · ○ missed
       </div>
     </>
   );

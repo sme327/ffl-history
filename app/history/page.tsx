@@ -1,5 +1,6 @@
 import { ScoringEvolution, TitleBars } from "@/app/components/charts";
 import { leagueHistory, slugify, eraIconPath, managerIconPath } from "@/lib/data";
+import { Trophies } from "@/app/components/icons";
 
 export const metadata = { title: "League History · {insert witty name here} Museum" };
 
@@ -164,7 +165,7 @@ export default function HistoryPage() {
                 <td>{m.pl_wins}-{m.pl_losses}</td>
                 <td className="num">{m.playoff_apps}</td>
                 <td className="num">{m.finals_apps}</td>
-                <td className="gold">{m.championships > 0 ? "🏆".repeat(m.championships) : "—"}</td>
+                <td className="gold">{m.championships > 0 ? <Trophies count={m.championships} /> : "—"}</td>
                 <td className="num muted">
                   {m.best_finish ? `#${m.best_finish}` : "—"} / {m.worst_finish ? `#${m.worst_finish}` : "—"}
                 </td>

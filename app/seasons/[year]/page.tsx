@@ -29,10 +29,10 @@ export default async function SeasonPage({
       <div className="grid cols-2" style={{ marginTop: "1.25rem" }}>
         {champ && (
           <div className="champion-card">
-            <div className="champion-emoji">
+            <div className="champion-sigil">
               <img src={managerIconPath(champ.manager)} alt="" className="mgr-icon" />
             </div>
-            <div className="champion-season">🏆 {season.season} Champion 🏆</div>
+            <div className="champion-season">{season.season} Champion</div>
             <div className="champion-team">{champ.team}</div>
             <div className="champion-manager">
               <a href={`/managers/${slugify(champ.manager)}`}>{champ.manager}</a>
@@ -48,7 +48,7 @@ export default async function SeasonPage({
             <div className="eyebrow">NFL in {season.season}</div>
             {season.nfl_context.map((line) => (
               <div key={line} style={{ padding: "0.35rem 0", borderBottom: "1px solid var(--border)" }}>
-                🏈 {line}
+                {line}
               </div>
             ))}
             {season.nfl_league_links.length > 0 && (

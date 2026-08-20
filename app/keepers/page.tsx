@@ -1,5 +1,6 @@
 import { PositionShareBar } from "@/app/components/charts";
 import { keeperHall, slugify, managerIconPath } from "@/lib/data";
+import { Trophies } from "@/app/components/icons";
 
 const POSITION_COLORS: Record<string, string> = {
   RB: "#22C55E", WR: "#3B82F6", QB: "#EF4444",
@@ -135,7 +136,7 @@ export default function KeeperHallPage() {
         {championsKept.map((player) => (
           <div className="card" key={player.player_name}>
             <h3>
-              {"🏆".repeat(player.title_count)}{" "}
+              <span className="gold"><Trophies count={player.title_count} /></span>{" "}
               <a href={`/players/${slugify(player.player_name)}`}>{player.player_name}</a>
             </h3>
             <div className="muted">

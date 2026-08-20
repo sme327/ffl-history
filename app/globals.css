@@ -1,29 +1,49 @@
-/* The Long Game — museum design.
+/* The Long Game — museum design, "lit properly" pass (2026-08-20).
  *
- * Ported from utils/styles.py, with two deliberate changes from the Streamlit
- * original: the palette and type scale are custom properties rather than 698
- * inline literals (product review, F8), and body text floors at 0.75rem where
- * the original went down to 8px (F10). */
+ * Two ideas govern everything here (UI-VISUAL-REVIEW-2026-08-20.md):
+ *
+ * 1. A material hierarchy instead of one frame for everything. Four tiers:
+ *      1 — framed artifact (rare): champion cards, featured timeline events,
+ *          dynasty features. The only place the ornate border-image survives.
+ *      2 — display case (default .card): 1px brass hairline, glass top
+ *          highlight, shadow. Quiet.
+ *      3 — wall label (.metric/.mini-champ/.nav-card): no frame at all —
+ *          a numeral, a thin brass baseline rule, letterpress label.
+ *      4 — ledger (tables, timeline ledgers): calm dark paper, thin rules.
+ *          Interim CSS material until the parchment texture (A1) lands.
+ *
+ * 2. Light is warm white (--light), not gold. Gold is reserved for
+ *    achievement (champions, titles, records) and links. Brass is material.
+ */
 
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;1,500;1,600&display=swap");
 
 :root {
   --bg: #081120;
   --surface: #0f1b2d;
   --border: #1e2d40;
-  --gold: #d4af37;
-  --gold-dim: #b8902e;
-  --gold-glow: rgba(212, 175, 55, 0.12);
-  --text: #f5f5f5;
-  --muted: #a7b0bc;
+  /* One brass family, matching the ramp used in every SVG asset
+     (#fff0a8 → #c9a24b → #7f5b18) — the CSS previously ran a second,
+     cooler gold (#d4af37) that never quite matched the art. */
+  --gold: #c9a24b;
+  --gold-bright: #e5c66a;
+  --gold-dim: #8a6b28;
+  --hairline: rgba(201, 162, 75, 0.38);
+  /* Warm spotlight white — the signature the concept spec asked for and the
+     first implementation never used. This is "light"; gold is "achievement". */
+  --light: #fff6e0;
+  --bone: #f3ead8;
+  --gold-glow: rgba(255, 246, 224, 0.10);
+  --text: #f2f0ea;
+  --muted: #a9b1ba;
   --faint: #6b7280;
 
   --display: "Bebas Neue", sans-serif;
   --serif: "Playfair Display", Georgia, serif;
-  --body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --body: "Source Sans 3", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
 
-  --step--1: 0.75rem;
-  --step-0: 0.875rem;
+  --step--1: 0.8rem;
+  --step-0: 0.9375rem;
   --step-1: 1.125rem;
   --step-2: 1.8rem;   /* section titles */
   --step-3: 3.2rem;   /* page titles, metric values */
@@ -34,15 +54,11 @@
 
 body {
   margin: 0;
-  /* A gallery has light fixtures spaced down its whole length, not one lamp
-     at the door. The previous version only lit the first ~550px of every
-     page (and did it at background-attachment: fixed, which pins a glow to
-     the viewport, not the page — it never actually followed scroll at all).
-     This tiles a light pool every 900px, on every page, for its entire
-     length, so scrolling past the header doesn't mean scrolling out of the
-     room. */
+  /* Ceiling fixtures spaced down the whole gallery: a warm-white pool every
+     900px for the page's entire length. Warm white, not gold — gold-tinted
+     "light" reads as sepia haze; this reads as illumination. */
   background:
-    radial-gradient(circle 260px at 50% 70px, rgba(212, 175, 55, 0.16), transparent 72%),
+    radial-gradient(circle 300px at 50% 70px, rgba(255, 246, 224, 0.11), transparent 72%),
     var(--bg) url("/museum/textures/gallery-wall-tile.webp") repeat;
   background-size: 100% 900px, auto;
   background-repeat: repeat-y, repeat;
@@ -54,21 +70,18 @@ body {
 }
 
 a { color: var(--gold); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a:hover { color: var(--gold-bright); text-decoration: underline; }
 
 .wrap { max-width: 1280px; margin: 0 auto; padding: 2rem 2.5rem 5rem; }
 
 /* ── Navigation ─────────────────────────────────────────────────────────── */
 .nav {
   position: sticky; top: 0; z-index: 999;
-  /* The one element present, in the same position, on every route at every
-     scroll depth — so this is where the case-lit material actually needs
-     to live for the effect to read as "the whole site," not one banner. */
   background:
-    linear-gradient(180deg, rgba(255, 240, 168, 0.06), rgba(0, 0, 0, 0.2) 90%),
+    linear-gradient(180deg, rgba(255, 246, 224, 0.06), rgba(0, 0, 0, 0.2) 90%),
     var(--bg) url("/museum/textures/navy-walnut-panel.png") repeat;
   border-bottom: 1px solid var(--gold-dim);
-  box-shadow: 0 1px 0 rgba(255, 240, 168, 0.08), 0 8px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 0 rgba(255, 246, 224, 0.08), 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 .nav-inner {
   max-width: 1280px; margin: 0 auto;
@@ -81,7 +94,7 @@ a:hover { text-decoration: underline; }
 }
 .nav-brand:hover { text-decoration: none; }
 .nav a:not(.nav-brand) {
-  font-size: 0.72rem; font-weight: 500; color: var(--muted);
+  font-size: 0.75rem; font-weight: 500; color: var(--muted);
   letter-spacing: 1px; text-transform: uppercase;
   padding: 4px 0; border-bottom: 2px solid transparent;
   transition: color 0.2s, border-color 0.2s; white-space: nowrap;
@@ -91,18 +104,23 @@ a:hover { text-decoration: underline; }
 .nav-active-tick { width: 8px; height: 8px; margin-right: 5px; vertical-align: middle; }
 
 /* Manager sigil medallions — sized in em so the same tag drops cleanly into
-   any context that used to hold a bare emoji character, from a table cell
-   to the 4rem champion-emoji hero slot, with no per-instance pixel tuning. */
+   any context from a table cell to the champion-card hero slot. */
 .mgr-icon { width: 1em; height: 1em; vertical-align: -0.15em; display: inline-block; }
-.champion-emoji .mgr-icon { vertical-align: -0.1em; }
+.champion-sigil .mgr-icon { vertical-align: -0.1em; }
 
-/* Hamburger below the width where the full menu fits on one line. A checkbox
-   toggle keeps this working with no client JavaScript. */
+/* Inline trophy glyph (replaces the 🏆 emoji literals — the one OS-emoji
+   dependency the asset purge missed). currentColor, so it takes the gold of
+   whatever it sits in. */
+.trophy-glyph { width: 0.95em; height: 0.95em; vertical-align: -0.1em; }
+.trophy-glyph + .trophy-glyph { margin-left: 2px; }
+
+/* Hamburger below the width where the full menu fits on one line. */
 .nav-toggle { display: none; }
 .nav-burger {
   display: none; margin-left: auto; cursor: pointer;
-  font-size: 1.5rem; color: var(--gold); line-height: 1; padding: 0.25rem 0.4rem;
+  color: var(--gold); line-height: 1; padding: 0.25rem 0.4rem;
 }
+.nav-burger svg { width: 1.4rem; height: 1.4rem; display: block; }
 .nav-links { display: flex; align-items: center; gap: 0.95rem; flex-wrap: wrap; }
 
 @media (max-width: 1100px) {
@@ -117,61 +135,65 @@ a:hover { text-decoration: underline; }
 }
 
 /* ── Headings ───────────────────────────────────────────────────────────── */
+/* Display type is rationed the same way gold is: Bebas carries page titles,
+   section titles, and hero numerals. Card titles and years fall back to the
+   body face so that when the display voice appears, it means something. */
 h1 {
   font-family: var(--display); font-size: var(--step-3);
-  color: var(--gold); letter-spacing: 6px; line-height: 1;
+  color: var(--bone); letter-spacing: 6px; line-height: 1;
   margin: 0 0 0.5rem;
-  /* Every page's title is the placard under the case light — this is the
-     one rule that puts "spotlit" on all 15 routes with no per-page markup. */
-  text-shadow: 0 0 40px rgba(212, 175, 55, 0.25);
+  /* The placard under the case light — warm-white light falling on the
+     letters, not the letters glowing gold. */
+  text-shadow: 0 0 40px rgba(255, 246, 224, 0.22);
 }
 h2 {
   font-family: var(--display); font-size: var(--step-2);
   color: var(--text); letter-spacing: 3px;
   margin: 2.25rem 0 1rem; padding-bottom: 0.4rem;
   border-bottom: 1px solid var(--border);
-  /* Every section gets its own small pool of light, not just the page
-     title once at the top — this is what makes each section of a long
-     page feel lit as you reach it, not just the first screenful. */
-  text-shadow: 0 0 24px rgba(212, 175, 55, 0.22);
+  text-shadow: 0 0 24px rgba(255, 246, 224, 0.18);
 }
 /* The first heading on a page follows intro copy, not another section. */
 p + h2, .eyebrow + h2 { margin-top: 1.5rem; }
-/* Centred section heading, as the original used above hero moments */
+/* Centred section heading, as used above hero moments */
 .section-centre { text-align: center; margin: 2.5rem 0 1rem; }
 .section-centre h2 { border: 0; padding: 0; margin: 0.1rem 0 0; }
-h3 { font-family: var(--display); font-size: var(--step-1); letter-spacing: 2px; margin: 0 0 0.4rem; }
+h3 { font-family: var(--body); font-weight: 700; font-size: var(--step-1); letter-spacing: 0; margin: 0 0 0.4rem; }
 p { color: var(--muted); margin: 0.5rem 0; }
+
+/* The narrative voice — plaque quotes, lore lines, manager identities.
+   The one place the serif appears, which is what makes it read as a
+   curator's hand rather than a font choice. */
+.identity, blockquote {
+  font-family: var(--serif); font-style: italic;
+  color: var(--gold); font-size: 1.05em; line-height: 1.6;
+}
+.identity { margin-top: 0.6rem; }
+blockquote { margin: 1rem 0; padding-left: 1rem; border-left: 2px solid var(--hairline); }
 
 .eyebrow {
   font-size: var(--step--1); letter-spacing: 4px; text-transform: uppercase;
   color: var(--muted); margin-bottom: 0.3rem;
 }
-/* Home's photo is now .room-photo (a fixed page-wide backdrop, same
-   mechanism every other route uses) — .hero is text styling only. */
 .hero { text-align: center; padding: 2.5rem 0 1.5rem; }
-.hero h1 { font-size: var(--step-4); letter-spacing: 10px; text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85); }
+.hero h1 { font-size: var(--step-4); letter-spacing: 10px; text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85), 0 0 60px rgba(255, 246, 224, 0.18); }
 .hero-subtitle {
-  font-size: 0.78rem; color: var(--muted);
+  font-size: 0.82rem; color: var(--muted);
   letter-spacing: 6px; text-transform: uppercase; margin-top: 0.5rem;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
 }
 .hero-tagline {
-  font-size: 0.88rem; color: var(--muted); font-style: italic;
-  letter-spacing: 1px; line-height: 1.8; margin-top: 1.1rem;
+  font-family: var(--serif); font-style: italic;
+  font-size: 0.95rem; color: var(--muted);
+  letter-spacing: 0.5px; line-height: 1.8; margin-top: 1.1rem;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
 }
 
-/* ── Room backdrops — the actual page background, not a picture in a box ──
-   Previous version boxed the room photo into a small, rounded, bordered
-   card near the top of the page — it read as a picture *in* the page, not
-   as the page's place. This is the real fix: the photo is a fixed,
-   full-width backdrop (position: fixed, not scrolling with content), shown
-   at its true un-cropped aspect ratio rather than force-covered and
-   cropped, so it stays visible behind the content for the entire scroll
-   instead of disappearing after the first screenful. `.room-photo`'s
-   background-image is set inline per page — every route needs a different
-   room. */
+/* ── Room backdrops ──────────────────────────────────────────────────────
+   Fixed full-width backdrop per route, true aspect ratio. The scrim now
+   caps at 78% black instead of 92% — the previous curve meant the deeper
+   you scrolled, the darker the museum got, which is the exact opposite of
+   the theme. The room should stay faintly *a room* all the way down. */
 .room-photo {
   position: fixed; top: 0; left: 0; width: 100%; z-index: -2;
   aspect-ratio: 2200 / 640;
@@ -179,7 +201,7 @@ p { color: var(--muted); margin: 0.5rem 0; }
 }
 .room-scrim {
   position: fixed; inset: 0; z-index: -1;
-  background: linear-gradient(180deg, rgba(8, 17, 32, 0.12) 0%, rgba(8, 17, 32, 0.6) 55%, rgba(8, 17, 32, 0.92) 100%);
+  background: linear-gradient(180deg, rgba(8, 17, 32, 0.10) 0%, rgba(8, 17, 32, 0.55) 55%, rgba(8, 17, 32, 0.78) 100%);
 }
 .room-title { margin: 0 0 1.5rem; }
 .room-title h1, .room-title .eyebrow { text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85); }
@@ -196,25 +218,28 @@ p { color: var(--muted); margin: 0.5rem 0; }
 .divider::before { left: 0; transform: translateY(-50%) rotate(180deg); }
 .divider::after { right: 0; }
 
-/* ── Cards ──────────────────────────────────────────────────────────────── */
-/* "Museum, lit properly": every card is framed with the actual brass
-   plaque-frame asset (border-image, not a flat CSS border) so the corner
-   rivets render undistorted at any card size, plus a top-lit gradient fill
-   and a real drop shadow for lift. This is the pass that puts the
-   commissioned frame asset on every surface, not just the hero. */
+/* ── Tier 2 — display case (the default .card) ──────────────────────────── */
+/* A thin brass hairline and a glass-like top light. The ornate border-image
+   frame this used to carry now belongs to tier 1 only — when every stat
+   tile wears a 7px gilt frame, the champion's frame stops meaning anything. */
 .card {
-  background: linear-gradient(180deg, color-mix(in srgb, var(--surface) 100%, #fff 5%), var(--surface) 65%);
-  border-style: solid; border-width: 7px; border-color: var(--gold-dim);
-  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 7px stretch;
-  border-radius: 8px; padding: 1rem 1.2rem;
-  box-shadow: inset 0 1px 0 rgba(255, 240, 168, 0.12), 0 6px 18px rgba(0, 0, 0, 0.45);
+  background:
+    linear-gradient(180deg, rgba(255, 246, 224, 0.05), rgba(255, 246, 224, 0) 38%),
+    var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 6px; padding: 1rem 1.2rem;
+  box-shadow: inset 0 1px 0 rgba(255, 246, 224, 0.08), 0 8px 20px rgba(0, 0, 0, 0.35);
 }
-a.card { display: block; color: inherit; transition: transform 0.15s, filter 0.2s; }
-a.card:hover { transform: translateY(-2px); filter: brightness(1.15); text-decoration: none; }
+a.card { display: block; color: inherit; transition: transform 0.15s, filter 0.2s, border-color 0.2s; }
+a.card:hover { transform: translateY(-2px); filter: brightness(1.14); border-color: var(--gold); text-decoration: none; }
 
+/* ── Tier 1 — framed artifact ───────────────────────────────────────────── */
+/* The ornate plaque frame survives on exactly three surfaces: dynasty
+   features, champion cards, and featured timeline events. Slimmed — the
+   art itself is due for a thinner-railed replacement (assets brief A2a). */
 .card-feature {
-  border-style: solid; border-width: 9px; border-color: var(--gold);
-  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 9px stretch;
+  border-style: solid; border-width: 7px; border-color: var(--gold);
+  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 7px stretch;
   border-radius: 12px;
   padding: 1.8rem 1.2rem; text-align: center;
   box-shadow: 0 0 40px var(--gold-glow);
@@ -226,6 +251,7 @@ a.card:hover { transform: translateY(-2px); filter: brightness(1.15); text-decor
 /* Era KPIs read better side by side than stacked, even when narrow. */
 .grid.inline-stats { grid-template-columns: repeat(3, auto); justify-content: start; gap: 1.75rem; }
 .grid.inline-stats .metric { text-align: left; }
+.grid.inline-stats .metric::after { margin-left: 0; }
 .grid.cols-4 { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
 /* Fixed three-up, as the exhibits were laid out originally — auto-fit spread
    them five across and orphaned the sixth. */
@@ -233,47 +259,61 @@ a.card:hover { transform: translateY(-2px); filter: brightness(1.15); text-decor
 @media (max-width: 900px) { .grid.three-up { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .grid.three-up { grid-template-columns: 1fr; } }
 
+/* ── Tier 3 — wall labels ───────────────────────────────────────────────── */
+/* Stat tiles, mini-champions, and exhibit doorways lose their boxes
+   entirely and sit open on the wall: numeral, thin brass baseline, small
+   caps label — museum wall-label typography, which is what the concept
+   spec asked for before the frames took over. Overridden on the combined
+   class so no page markup has to change. */
+.card.metric, .card.mini-champ, .card.nav-card {
+  background: none; border: 0; box-shadow: none;
+}
 .metric { text-align: center; }
 .metric-value {
   font-family: var(--display); font-size: var(--step-3);
-  color: var(--gold); line-height: 1; letter-spacing: 2px;
+  color: var(--bone); line-height: 1; letter-spacing: 2px;
+  font-variant-numeric: tabular-nums;
+  /* Wall labels sit directly on the room photo — the dark shadow keeps the
+     numeral legible over a bright patch of scene, the warm one is the light. */
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 246, 224, 0.12);
 }
 .metric-label {
   font-size: var(--step--1); color: var(--muted);
   text-transform: uppercase; letter-spacing: 3px; margin-top: 0.4rem;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
 }
-/* Self-applying — every .metric on the site gets the brass divider glyph
-   automatically, no per-page JSX needed (the earlier version required a
-   sibling element that no page ever actually rendered). */
+/* The brass baseline rule under every numeral (replaces the stat-diamond
+   ornament — ornament-by-default was the disease this pass cures). */
 .metric::after {
-  content: ""; display: block; margin: 0.4rem auto 0; width: 9px; height: 9px;
-  background: url("/museum/chrome/stat-diamond.svg") center / contain no-repeat;
+  content: ""; display: block; margin: 0.5rem auto 0; width: 36px; height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
   order: 1;
 }
 .metric { display: flex; flex-direction: column; }
 .metric-label { order: 2; }
 
-/* ── Champion card — the hero moment of the home and season pages ────────── */
+/* ── Champion card — tier 1, the hero moment of home and season pages ───── */
 .champion-card {
   background-color: var(--surface);
-  border-style: solid; border-width: 10px; border-color: var(--gold);
-  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 10px stretch;
+  border-style: solid; border-width: 8px; border-color: var(--gold);
+  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 8px stretch;
   border-radius: 12px; padding: 2rem 1.5rem; text-align: center;
-  box-shadow: 0 0 50px rgba(212, 175, 55, 0.12), inset 0 0 0 1px rgba(255, 240, 168, 0.15);
-  max-width: 620px; margin: 0 auto;
+  box-shadow: 0 0 50px rgba(255, 246, 224, 0.10), inset 0 0 0 1px rgba(255, 246, 224, 0.15);
 }
-/* The home page's reigning champion carries a heavier halo — layered so the
-   falloff stays soft rather than reading as a hard ring. */
+.grid .champion-card { max-width: none; }
+.champion-card { max-width: 620px; margin: 0 auto; }
+/* The reigning champion sits under a visible warm-white spotlight — layered
+   falloff so it reads as light from above, not a hard ring. */
 .champion-card.champion-hero {
   box-shadow:
-    0 0 24px rgba(212, 175, 55, 0.20),
-    0 0 60px rgba(212, 175, 55, 0.16),
-    0 0 120px rgba(212, 175, 55, 0.10),
-    inset 0 0 0 1px rgba(255, 240, 168, 0.15);
+    0 0 24px rgba(255, 246, 224, 0.16),
+    0 0 60px rgba(255, 246, 224, 0.12),
+    0 0 130px rgba(255, 246, 224, 0.08),
+    inset 0 0 0 1px rgba(255, 246, 224, 0.15);
 }
-.champion-emoji { font-size: 4rem; line-height: 1; margin-bottom: 0.5rem; }
+.champion-sigil { font-size: 4rem; line-height: 1; margin-bottom: 0.5rem; }
 .champion-season {
-  font-size: 0.7rem; color: var(--muted);
+  font-size: 0.72rem; color: var(--muted);
   letter-spacing: 4px; text-transform: uppercase;
 }
 .champion-team {
@@ -281,9 +321,9 @@ a.card:hover { transform: translateY(-2px); filter: brightness(1.15); text-decor
   letter-spacing: 4px; line-height: 1; margin: 0.4rem 0 0.2rem;
 }
 .champion-manager { font-size: 1rem; color: var(--text); font-weight: 500; }
-.champion-score { font-size: 0.8rem; color: var(--muted); margin-top: 0.75rem; }
+.champion-score { font-size: var(--step--1); color: var(--muted); margin-top: 0.75rem; font-variant-numeric: tabular-nums; }
 
-/* Recent champions — small, one per season */
+/* Recent champions — small wall labels, one per season */
 .mini-champ { text-align: center; padding: 1rem 0.75rem; }
 .mini-champ-year {
   font-family: var(--display); font-size: var(--step-1);
@@ -292,8 +332,15 @@ a.card:hover { transform: translateY(-2px); filter: brightness(1.15); text-decor
 .mini-champ-team { font-size: var(--step--1); color: var(--text); font-weight: 600; }
 .mini-champ-mgr { font-size: var(--step--1); color: var(--muted); }
 
-/* Museum destinations */
-.nav-card { display: block; text-align: center; padding: 1.4rem 1rem; }
+/* Museum destinations — doorway placards, not framed cases. Hover answers
+   with light, not a border. */
+.nav-card { display: block; text-align: center; padding: 1.4rem 1rem; border-radius: 6px; }
+a.nav-card { transition: transform 0.15s, background-color 0.2s; }
+a.nav-card:hover {
+  transform: translateY(-2px); filter: none;
+  background: radial-gradient(circle at 50% 20%, rgba(255, 246, 224, 0.07), transparent 75%);
+  border-color: transparent;
+}
 .nav-card-icon { font-size: 2rem; line-height: 1; margin-bottom: 0.4rem; }
 .nav-card-icon img { width: 2.5rem; height: 2.5rem; }
 .nav-card-title {
@@ -305,13 +352,14 @@ a.card:hover { transform: translateY(-2px); filter: brightness(1.15); text-decor
 .teaser { text-align: center; padding: 3rem 0 1rem; }
 .teaser-line {
   font-family: var(--display); font-size: var(--step-2);
-  color: var(--text); letter-spacing: 4px; line-height: 1.8;
+  color: var(--bone); letter-spacing: 4px; line-height: 1.8;
+  text-shadow: 0 0 30px rgba(255, 246, 224, 0.14);
 }
 .teaser-cta {
   display: inline-block; margin-top: 1.5rem;
   font-size: var(--step--1); color: var(--gold);
   letter-spacing: 4px; text-transform: uppercase;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.6); padding-bottom: 3px;
+  border-bottom: 1px solid rgba(201, 162, 75, 0.6); padding-bottom: 3px;
 }
 
 /* Championship timeline — one row per manager, year pills across */
@@ -325,46 +373,40 @@ a.card:hover { transform: translateY(-2px); filter: brightness(1.15); text-decor
 .year-pill {
   display: inline-block; padding: 2px 9px; border-radius: 4px;
   font-size: var(--step--1); border: 1px solid var(--border); color: var(--muted);
+  font-variant-numeric: tabular-nums;
 }
 .year-pill.gold-pill { border-color: var(--gold-dim); color: var(--gold); }
 .year-pill:hover { border-color: var(--gold); color: var(--gold); text-decoration: none; }
 @media (max-width: 640px) { .chron-row { grid-template-columns: 1fr; gap: 0.3rem; } }
 
-/* .plaque already inherits the full brass frame from .card (they're always
-   combined in markup: className="card plaque") — no separate accent needed,
-   a left-stripe would fight the border-image frame on that one edge. */
+/* .plaque rides on .card (tier 2) — its voice comes from .identity's serif,
+   not from extra framing. */
 .plaque p { color: var(--text); }
-.identity { font-style: italic; color: var(--gold); margin-top: 0.6rem; }
 
-/* ── Tables ─────────────────────────────────────────────────────────────── */
-/* Every standalone data table on the site (as opposed to the couple that
-   already sit inside a .card) uses .scroll-x as its wrapper for horizontal
-   overflow — so framing that wrapper, rather than the bare <table>, covers
-   every large table on every page with one change. This was the biggest
-   remaining "costume" seam: the museum visibly stopped at the edge of
-   anything data-dense (Rivalries' 195-row Every Matchup table worst of
-   all). Same border-image frame as .card, so a table now reads as a bound
-   ledger sitting in the room, not a stray spreadsheet. */
+/* ── Tier 4 — ledgers (tables) ──────────────────────────────────────────── */
+/* The reference archive, not a display case: calm dark paper, thin rules,
+   no brass frame. A 195-row matchup table and a championship plaque should
+   never wear the same material. This fill is the interim CSS stand-in for
+   the parchment texture (assets brief A1); the ink-on-parchment recolor
+   lands with that asset. */
 .scroll-x {
   overflow-x: auto;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--surface) 100%, #fff 5%), var(--surface) 65%);
-  border-style: solid; border-width: 7px; border-color: var(--gold-dim);
-  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 7px stretch;
-  border-radius: 8px; padding: 0.4rem 0.9rem;
-  box-shadow: inset 0 1px 0 rgba(255, 240, 168, 0.12), 0 6px 18px rgba(0, 0, 0, 0.45);
+  background: #0c1524;
+  border: 1px solid #253549;
+  border-radius: 4px; padding: 0.4rem 0.9rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
 }
 table { width: 100%; border-collapse: collapse; font-size: var(--step--1); }
 th, td { padding: 0.55rem 0.7rem; text-align: left; border-bottom: 1px solid var(--border); }
 th {
   color: var(--muted); text-transform: uppercase;
   letter-spacing: 2px; font-weight: 600; font-size: var(--step--1);
-  border-bottom: 2px solid var(--gold-dim);
+  border-bottom: 1px solid var(--hairline);
 }
-/* A faint alternating tint gives a long table (195 rows, in one case) a
-   readable rhythm instead of a wall of identical lines — the digital
-   equivalent of a ledger's ruled guide lines. */
+/* A faint alternating tint gives a long table a readable rhythm — the
+   digital equivalent of a ledger's ruled guide lines. */
 tbody tr:nth-child(even) { background: rgba(255, 255, 255, 0.02); }
-tbody tr:hover { background: rgba(212, 175, 55, 0.07); }
+tbody tr:hover { background: rgba(255, 246, 224, 0.05); }
 td.num, th.num { text-align: right; }
 td.num { font-variant-numeric: tabular-nums; }
 .gold { color: var(--gold); }
@@ -378,8 +420,8 @@ td.num { font-variant-numeric: tabular-nums; }
 
 /* ── Bracket ────────────────────────────────────────────────────────────── */
 .matchup {
-  background: var(--surface); border: 1px solid var(--gold-dim);
-  border-radius: 8px; overflow: hidden;
+  background: var(--surface); border: 1px solid var(--hairline);
+  border-radius: 6px; overflow: hidden;
 }
 
 /* A bracket should look like a bracket: each round holds half as many games as
@@ -395,7 +437,7 @@ td.num { font-variant-numeric: tabular-nums; }
   border-bottom: 1px solid var(--border);
 }
 .matchup-team:last-child { border-bottom: 0; }
-.matchup-team.winner { color: var(--gold); font-weight: 600; background: rgba(212, 175, 55, 0.06); }
+.matchup-team.winner { color: var(--gold); font-weight: 600; background: rgba(201, 162, 75, 0.06); }
 /* Targets the first of the two flex-item spans (team name), not the flex
    container itself — a ::before on the container would become a third flex
    item and break the space-between layout between name and score. */
@@ -406,22 +448,17 @@ td.num { font-variant-numeric: tabular-nums; }
 }
 
 /* ── Timeline ───────────────────────────────────────────────────────────── */
-/* Two tiers, not one card repeated 160 times: "high" importance events (39
-   of 160 — championships, dynasties) get the same display-case framing as
-   everything else on the site. Everything else (121 events, most of the
-   page) collapses into a single compact ledger per season — a slim row
-   each, no individual card. This is the fix for Timeline reading as one
-   uniformly-weighted 24,000px list: a reader can now tell "this is the
-   moment to stop at" from "this is a footnote" at a glance, and the
-   routine events take a fraction of the vertical space they used to. */
+/* Featured events are tier-1 artifacts — the ~39 championship/dynasty
+   moments keep the ornate frame. The per-season ledgers of routine events
+   are tier-4 archive material, same as the data tables. */
 .event-featured {
   display: flex; gap: 1rem; align-items: flex-start;
   padding: 1.3rem 1.5rem; margin-bottom: 0.85rem;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--surface) 100%, #fff 5%), var(--surface) 65%);
-  border-style: solid; border-width: 7px; border-color: var(--gold-dim);
-  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 7px stretch;
+  background: linear-gradient(180deg, rgba(255, 246, 224, 0.05), rgba(255, 246, 224, 0) 45%), var(--surface);
+  border-style: solid; border-width: 6px; border-color: var(--gold);
+  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 6px stretch;
   border-radius: 8px;
-  box-shadow: inset 0 1px 0 rgba(255, 240, 168, 0.12), 0 6px 18px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0 30px rgba(255, 246, 224, 0.07), 0 6px 18px rgba(0, 0, 0, 0.45);
 }
 .event-featured-title {
   font-family: var(--display); font-size: var(--step-1); letter-spacing: 1px;
@@ -430,10 +467,9 @@ td.num { font-variant-numeric: tabular-nums; }
 
 .event-ledger {
   margin-bottom: 1.25rem;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--surface) 100%, #fff 5%), var(--surface) 65%);
-  border-style: solid; border-width: 7px; border-color: var(--gold-dim);
-  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 7px stretch;
-  border-radius: 8px; padding: 0.2rem 1rem;
+  background: #0c1524;
+  border: 1px solid #253549;
+  border-radius: 4px; padding: 0.2rem 1rem;
 }
 .event-row {
   display: flex; gap: 0.6rem; align-items: center;
@@ -444,9 +480,22 @@ td.num { font-variant-numeric: tabular-nums; }
 .event-row img.evt-icon { width: 1.15rem; height: 1.15rem; flex-shrink: 0; }
 .event-row .event-row-title { color: var(--text); }
 
-/* ── Footer ─────────────────────────────────────────────────────────────── */
+/* ── Footer — a real placard, not a picture of one ──────────────────────── */
 .site-footer { display: flex; justify-content: center; padding: 1rem 1.5rem 2.5rem; }
-.footer-plaque { width: 100%; max-width: 640px; height: auto; }
+.footer-plaque {
+  width: 100%; max-width: 640px;
+  display: flex; align-items: center; justify-content: center; gap: 0.75rem;
+  padding: 0.8rem 1.25rem;
+  background: #101c2a;
+  border: 1px solid var(--hairline); border-radius: 7px;
+  color: #e8dcc0; font-size: var(--step--1); letter-spacing: 1px;
+  text-align: center;
+}
+.footer-plaque::before, .footer-plaque::after {
+  content: ""; width: 8px; height: 8px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, var(--gold-bright), var(--gold-dim));
+  flex-shrink: 0;
+}
 
 @media (max-width: 700px) {
   :root { --step-4: 2.5rem; --step-3: 1.9rem; --step-2: 1.3rem; }

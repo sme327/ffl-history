@@ -1,4 +1,5 @@
 import { home, site, slugify, managerIconPath } from "@/lib/data";
+import { Trophies } from "@/app/components/icons";
 
 export default function HomePage() {
   const { stats, current_champion: champ, legends, drought, storylines } = home;
@@ -26,10 +27,10 @@ export default function HomePage() {
             <div className="eyebrow">Reigning Champion</div>
           </div>
           <div className="champion-card champion-hero">
-            <div className="champion-emoji">
+            <div className="champion-sigil">
               <img src={managerIconPath(champ.manager)} alt="" className="mgr-icon" />
             </div>
-            <div className="champion-season">🏆 {champ.season} League Champion 🏆</div>
+            <div className="champion-season">{champ.season} League Champion</div>
             <div className="champion-team">{champ.team}</div>
             <div className="champion-manager">
               <a href={`/managers/${slugify(champ.manager)}`}>{champ.manager}</a>
@@ -76,7 +77,7 @@ export default function HomePage() {
             </div>
             {champion.titles_to_date > 1 && (
               <div className="gold" style={{ fontSize: "var(--step--1)" }}>
-                {"🏆".repeat(champion.titles_to_date)} — {champion.titles_to_date}× champ
+                <Trophies count={champion.titles_to_date} /> — {champion.titles_to_date}× champ
               </div>
             )}
           </div>

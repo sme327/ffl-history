@@ -1,4 +1,5 @@
 import { franchiseIndex, franchiseProfile, slugify, managerIconPath, franchiseBadgePath } from "@/lib/data";
+import { Trophies } from "@/app/components/icons";
 
 export function generateStaticParams() {
   return franchiseIndex.map((f) => ({ id: f.id }));
@@ -79,7 +80,12 @@ export default async function FranchisePage({
             </div>
             <div className="muted">
               {s.wins}-{s.losses} · {s.playoff_apps} playoff appearances
-              {s.championships > 0 && ` · ${"🏆".repeat(s.championships)} ${s.championship_years.join(", ")}`}
+              {s.championships > 0 && (
+                <>
+                  {" · "}
+                  <Trophies count={s.championships} /> {s.championship_years.join(", ")}
+                </>
+              )}
             </div>
           </div>
         ))}
@@ -138,7 +144,7 @@ export default async function FranchisePage({
                   </td>
                   <td className="num">{steward.playoff_apps}</td>
                   <td className="gold">
-                    {steward.championships > 0 ? "🏆".repeat(steward.championships) : "—"}
+                    {steward.championships > 0 ? <Trophies count={steward.championships} /> : "—"}
                   </td>
                 </tr>
               );
@@ -150,28 +156,23 @@ export default async function FranchisePage({
       <h2>Franchise Achievements</h2>
       <div className="grid cols-3">
         {[
-          ["🏆", t.championships, "Championship Seasons",
+          [t.championships, "Championship Seasons",
            franchise.championship_seasons.join(" · ") || "—"],
-          ["🥈", t.runner_ups, "Runner-Up Seasons",
+          [t.runner_ups, "Runner-Up Seasons",
            franchise.runner_up_seasons.join(" · ") || "—"],
-          ["🥉", t.third_places, "Third-Place Finishes",
+          [t.third_places, "Third-Place Finishes",
            franchise.third_place_seasons.join(" · ") || "—"],
-          ["🔥", t.longest_playoff_streak, "Best Playoff Streak",
+          [t.longest_playoff_streak, "Best Playoff Streak",
            "Consecutive postseason appearances"],
-          ["📈", t.winning_seasons, "Winning Seasons",
+          [t.winning_seasons, "Winning Seasons",
            `Out of ${t.seasons} total seasons`],
-          ["🏟️", t.playoff_apps, "Total Playoff Appearances",
+          [t.playoff_apps, "Total Playoff Appearances",
            `${Math.round((t.playoff_apps / t.seasons) * 100)}% of all seasons`],
-        ].map(([icon, value, label, detail]) => (
+        ].map(([value, label, detail]) => (
           <div className="card" key={label as string}>
-            <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
-              <span style={{ fontSize: "1.5rem" }}>{icon as string}</span>
-              <div>
-                <div className="metric-value" style={{ fontSize: "var(--step-2)" }}>{value as number}</div>
-                <div className="metric-label">{label as string}</div>
-                <div className="muted" style={{ fontSize: "var(--step--1)" }}>{detail as string}</div>
-              </div>
-            </div>
+            <div className="metric-value" style={{ fontSize: "var(--step-2)" }}>{value as number}</div>
+            <div className="metric-label">{label as string}</div>
+            <div className="muted" style={{ fontSize: "var(--step--1)" }}>{detail as string}</div>
           </div>
         ))}
       </div>

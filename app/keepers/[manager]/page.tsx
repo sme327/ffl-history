@@ -1,6 +1,7 @@
 import {
   keeperChainsFor, keeperDnaFor, managerFromSlug, managerIndex, slugify, managerIconPath,
 } from "@/lib/data";
+import { Trophies } from "@/app/components/icons";
 
 export function generateStaticParams() {
   return managerIndex.map((m) => ({ manager: m.slug }));
@@ -94,7 +95,7 @@ export default async function ManagerKeepersPage({
               <div className="muted">{chain.seasons.join(" · ")}</div>
               {chain.titles > 0 && (
                 <div className="gold">
-                  {"🏆".repeat(chain.titles)} won while kept
+                  <Trophies count={chain.titles} /> won while kept
                 </div>
               )}
               {chain.multi_manager && (
