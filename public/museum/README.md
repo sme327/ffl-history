@@ -7,14 +7,14 @@ All imagery for the museum skin. Current design direction and the forward-lookin
 | Folder | Contents | Count |
 |---|---|---|
 | `badges/` | Franchise seat crests (F01–F12), keyed to each seat's founding steward | 12 |
-| `chrome/` | Site furniture: plaque-frame (the `border-image` on tier-1 artifact cards), divider caps, ticks. `wordmark.svg` and `footer-plaque.svg` are **retired** (nav and footer render real HTML text now); both are kept only until the A5 nameplate commission replaces the wordmark idea properly | 7 |
+| `chrome/` | Site furniture: plaque-frame (the `border-image` on tier-1 artifact cards), divider caps, ticks, and `spotlight.webp` (the alpha light-cone over the reigning champion). `wordmark.svg` and `footer-plaque.svg` are **retired** (nav and footer render real HTML text now); both are kept only until the A5 nameplate commission replaces the wordmark idea properly | 8 |
 | `icons/events/` | Timeline event-type icons (championship, heartbreak, keeper, etc.) | 15 |
 | `icons/exhibits/` | Home page's 6 exhibit-grid icons | 6 |
 | `icons/positions/` | QB/RB/WR/TE/DEF/K — vector helmet marks, no photo dependency | 6 |
 | `medallions/eras/` | The four league era medallions (Founding, Workhorse, Keeper Revolution, Modern) | 4 |
 | `medallions/managers/` | One sigil medallion per manager, `manager-{slug}.svg` | 24 |
-| `rooms/` | The distinct background scene for each section, rendered as a fixed full-width backdrop behind that section's pages. All nine are queued for the A3 re-light pass | 9 |
-| `textures/` | Site-wide tiled wall (`gallery-wall-tile.webp`), the nav's wood panel (`navy-walnut-panel.png` — **live in the nav**, not a leftover), and Home's hero scene (`trophy-case-side-panels.webp`) | 3 |
+| `rooms/` | The distinct background scene for each section (including Home's `entrance-hall.webp`), rendered as a fixed full-width backdrop behind that section's pages. All ten are the **re-lit A3 delivery** (2026-08-21): warm-white light pools, per-room signatures, the Arena's red heat, filled portrait frames | 10 |
+| `textures/` | Site-wide tiled wall (`gallery-wall-v2.webp`), the nav's wood panel (`navy-walnut-panel.png` — **live in the nav**, not a leftover), and the table parchment (`ledger-page.webp`, plus the unused dark fallback `ledger-page-dark.webp`) | 4 |
 
 ## Conventions
 

@@ -101,11 +101,17 @@ Only if real league artifacts exist (trophy, draft board, old printouts, league 
 
 All owner decisions are in (2026-08-20): league name confirmed as literally *"{insert witty name here}"* — design A5 as the deliberate joke; night-gallery lighting and full room regeneration approved for A3; parchment Option B confirmed for A1; A8 is limited to a handful of existing draft-day photos.
 
-| Wave | Items | Blocked on |
-|---|---|---|
-| 1 | A1 ledger paper · A2 frame system · A5 nameplate | Nothing — all approved, start any time |
-| 2 | A3 re-lit rooms (+Arena heat, filled gallery, home hall) · A4 spotlight | Nothing — approved |
-| 3 | A6 small medallions/de-Arial · A7 wall tile | Nothing — batch when convenient |
-| — | A8 object photos | Sourcing the draft-day photos from the owner |
+**Delivery status (2026-08-21): A1, A3 (all ten rooms incl. entrance hall), A4, and A7 delivered, QA'd (size ceilings, dimensions, alpha, Arena heat, filled portrait frames all verified), and live.** The parchment table material and ink recolor are implemented; the old wall tile and hero texture are retired.
+
+| Item | Status |
+|---|---|
+| A1 ledger paper | ✅ Delivered & live (light version in use; `-dark` kept as fallback) |
+| A2 frame system (artifact frame v2, case corners) | ⬜ **Still needed** — tier-1 cards still use the original chunky `plaque-frame.svg` |
+| A3 re-lit rooms | ✅ Delivered & live, all ten |
+| A4 spotlight | ✅ Delivered & live over the reigning champion |
+| A5 nameplate + monogram | ⬜ **Still needed** — highest-value remaining item; name is confirmed |
+| A6 small medallions / de-Arial pass | ⬜ Still needed (batch when convenient) |
+| A7 wall tile v2 | ✅ Delivered & live |
+| A8 object photos | ⬜ Blocked on owner sourcing draft-day photos |
 
 Delivery QA (same bar as previous rounds): tile seams checked at 4× repeat, size ceilings enforced, `grep` for `font-family` and unused `id=` in every SVG before wiring in.

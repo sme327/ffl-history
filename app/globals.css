@@ -59,7 +59,7 @@ body {
      "light" reads as sepia haze; this reads as illumination. */
   background:
     radial-gradient(circle 300px at 50% 70px, rgba(255, 246, 224, 0.11), transparent 72%),
-    var(--bg) url("/museum/textures/gallery-wall-tile.webp") repeat;
+    var(--bg) url("/museum/textures/gallery-wall-v2.webp") repeat;
   background-size: 100% 900px, auto;
   background-repeat: repeat-y, repeat;
   color: var(--text);
@@ -305,11 +305,21 @@ a.card:hover { transform: translateY(-2px); filter: brightness(1.14); border-col
 /* The reigning champion sits under a visible warm-white spotlight — layered
    falloff so it reads as light from above, not a hard ring. */
 .champion-card.champion-hero {
+  position: relative;
   box-shadow:
     0 0 24px rgba(255, 246, 224, 0.16),
     0 0 60px rgba(255, 246, 224, 0.12),
     0 0 130px rgba(255, 246, 224, 0.08),
     inset 0 0 0 1px rgba(255, 246, 224, 0.15);
+}
+/* The commissioned light cone (A4) falling from above the case — an alpha
+   overlay, so it reads as light in the air, not a graphic on the card. */
+.champion-card.champion-hero::before {
+  content: ""; position: absolute; left: 50%; top: -160px;
+  transform: translateX(-50%);
+  width: 560px; max-width: 90vw; height: 360px;
+  background: url("/museum/chrome/spotlight.webp") center top / contain no-repeat;
+  opacity: 0.5; pointer-events: none;
 }
 .champion-sigil { font-size: 4rem; line-height: 1; margin-bottom: 0.5rem; }
 .champion-season {
@@ -384,18 +394,34 @@ a.nav-card:hover {
 .plaque p { color: var(--text); }
 
 /* ── Tier 4 — ledgers (tables) ──────────────────────────────────────────── */
-/* The reference archive, not a display case: calm dark paper, thin rules,
-   no brass frame. A 195-row matchup table and a championship plaque should
-   never wear the same material. This fill is the interim CSS stand-in for
-   the parchment texture (assets brief A1); the ink-on-parchment recolor
-   lands with that asset. */
+/* The reference archive as a lit page in the dark room: the delivered
+   parchment texture (assets brief A1, Option B), with every color the
+   table's contents use re-scoped to ink tones. The descendants all read
+   through custom properties, so redefining them here retints text, links,
+   rules, trophies, and .gold/.muted cells without touching any page. */
+.scroll-x, .event-ledger {
+  background: #e3d5b3 url("/museum/textures/ledger-page.webp") repeat;
+  border: 1px solid #a08c60;
+  color: #2b2117;
+  --text: #241c10;
+  --muted: #5c5138;
+  --faint: #8a7c5e;
+  --gold: #7a5d1c;          /* bronze ink — achievement marks on paper */
+  --gold-bright: #8a6b28;
+  --gold-dim: #a08c60;
+  --bone: #241c10;
+  --border: rgba(43, 33, 23, 0.16);
+  --hairline: rgba(122, 93, 28, 0.55);
+}
 .scroll-x {
   overflow-x: auto;
-  background: #0c1524;
-  border: 1px solid #253549;
   border-radius: 4px; padding: 0.4rem 0.9rem;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45), 0 0 40px rgba(255, 246, 224, 0.05);
 }
+/* The page-tint rules under the dark theme are white-based and vanish on
+   parchment — ruled guide lines on paper are ink, faint and warm. */
+.scroll-x tbody tr:nth-child(even) { background: rgba(43, 33, 23, 0.05); }
+.scroll-x tbody tr:hover { background: rgba(122, 93, 28, 0.13); }
 table { width: 100%; border-collapse: collapse; font-size: var(--step--1); }
 th, td { padding: 0.55rem 0.7rem; text-align: left; border-bottom: 1px solid var(--border); }
 th {
@@ -467,9 +493,8 @@ td.num { font-variant-numeric: tabular-nums; }
 
 .event-ledger {
   margin-bottom: 1.25rem;
-  background: #0c1524;
-  border: 1px solid #253549;
   border-radius: 4px; padding: 0.2rem 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45), 0 0 40px rgba(255, 246, 224, 0.05);
 }
 .event-row {
   display: flex; gap: 0.6rem; align-items: center;

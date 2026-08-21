@@ -8,7 +8,7 @@ export default function HomePage() {
     <>
       <div
         className="room-photo"
-        style={{ backgroundImage: "url(/museum/textures/trophy-case-side-panels.webp)", aspectRatio: "900 / 480" }}
+        style={{ backgroundImage: "url(/museum/rooms/entrance-hall.webp)" }}
       />
       <div className="room-scrim" />
       <header className="hero">
