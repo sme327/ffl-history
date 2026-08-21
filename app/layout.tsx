@@ -9,8 +9,7 @@ export const metadata = {
     // The commissioned "Est. 2001" monogram roundel (A5b).
     icon: [
       // Browsers request /favicon.ico regardless of what is declared here; a
-      // 404 there leaves them showing whatever icon they had cached. Still
-      // the pre-monogram mark — regenerate when tooling allows.
+      // 404 there leaves them showing whatever icon they had cached.
       { url: "/favicon.ico", sizes: "any" },
       { url: "/museum/chrome/monogram-32.png", sizes: "32x32", type: "image/png" },
       { url: "/museum/chrome/monogram-512.png", sizes: "512x512", type: "image/png" },
