@@ -458,6 +458,13 @@ export function managerIconPath(manager: string): string {
   return `/museum/medallions/managers/manager-${slugify(manager)}.svg`;
 }
 
+// The full medallion's three concentric rings turn to mush below ~20px; the
+// -sm variant (accent-filled disc, simplified sigil) is drawn for table
+// cells, bylines, and list rows. Use the full medallion at 1.4rem and up.
+export function managerIconSmPath(manager: string): string {
+  return `/museum/medallions/managers/manager-${slugify(manager)}-sm.svg`;
+}
+
 export function franchiseBadgePath(franchiseId: string): string {
   return `/museum/badges/franchise-${franchiseId.toLowerCase()}.svg`;
 }

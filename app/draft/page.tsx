@@ -1,5 +1,5 @@
 import { PositionShareBar, PositionTrends } from "@/app/components/charts";
-import { draftCenter, draftExtras, slugify, managerIconPath } from "@/lib/data";
+import { draftCenter, draftExtras, slugify, managerIconPath, managerIconSmPath } from "@/lib/data";
 import { Trophies } from "@/app/components/icons";
 
 export const metadata = { title: "Draft Center · {insert witty name here} Museum" };
@@ -64,7 +64,7 @@ export default function DraftPage() {
                     display: "flex", alignItems: "center", justifyContent: "center",
                   }}
                 >
-                  <img src={managerIconPath(d.manager)} alt="" style={{ width: 12, height: 12 }} />
+                  <img src={managerIconSmPath(d.manager)} alt="" style={{ width: 12, height: 12 }} />
                 </span>
               ))}
             </div>

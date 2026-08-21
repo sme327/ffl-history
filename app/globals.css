@@ -91,8 +91,18 @@ a:hover { color: var(--gold-bright); text-decoration: underline; }
 .nav-brand {
   font-family: var(--display); font-size: 1.3rem;
   color: var(--gold); letter-spacing: 4px; margin-right: auto;
+  display: flex; align-items: center;
 }
 .nav-brand:hover { text-decoration: none; }
+.nav-plate { height: 30px; width: auto; display: block; }
+/* The hero nameplate — the engraved plaque under the entrance hall's lamps. */
+.hero-plate { margin: 0 0 0.5rem; text-shadow: none; }
+.hero-plate img {
+  width: min(720px, 92vw); height: auto;
+  filter:
+    drop-shadow(0 6px 22px rgba(0, 0, 0, 0.65))
+    drop-shadow(0 0 45px rgba(255, 246, 224, 0.14));
+}
 .nav a:not(.nav-brand) {
   font-size: 0.75rem; font-weight: 500; color: var(--muted);
   letter-spacing: 1px; text-transform: uppercase;

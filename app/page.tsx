@@ -12,7 +12,11 @@ export default function HomePage() {
       />
       <div className="room-scrim" />
       <header className="hero">
-        <h1>{"{INSERT WITTY NAME HERE}"}</h1>
+        {/* The engraved nameplate (A5a) — an <img> inside the h1 keeps the
+            league name in the document for search and screen readers. */}
+        <h1 className="hero-plate">
+          <img src="/museum/chrome/nameplate.svg" alt="{insert witty name here}" />
+        </h1>
         <div className="hero-subtitle">Museum · {site.subtitle}</div>
         <div className="hero-tagline">
           Built by friendship.&nbsp; Defined by competition.&nbsp; Occasionally

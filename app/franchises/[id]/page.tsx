@@ -1,4 +1,4 @@
-import { franchiseIndex, franchiseProfile, slugify, managerIconPath, franchiseBadgePath } from "@/lib/data";
+import { franchiseIndex, franchiseProfile, slugify, managerIconPath, managerIconSmPath, franchiseBadgePath } from "@/lib/data";
 import { Trophies } from "@/app/components/icons";
 
 export function generateStaticParams() {
@@ -68,7 +68,7 @@ export default async function FranchisePage({
         {franchise.stewards.map((s) => (
           <div className="card" key={s.manager} style={{ borderLeft: `4px solid ${s.color}` }}>
             <h3>
-              <img src={managerIconPath(s.manager)} alt="" className="mgr-icon" />{" "}
+              <img src={managerIconSmPath(s.manager)} alt="" className="mgr-icon" />{" "}
               <a href={`/managers/${slugify(s.manager)}`}>{s.manager}</a>
               {s.manager === franchise.best_steward && (
                 <span className="pill" style={{ marginLeft: "0.5rem" }}>Most successful</span>
@@ -100,7 +100,7 @@ export default async function FranchisePage({
           <tbody>
             {franchise.rivals.map((r) => (
               <tr key={r.opponent}>
-                <td><img src={managerIconPath(r.opponent)} alt="" className="mgr-icon" /> <a href={`/managers/${slugify(r.opponent)}`}>{r.opponent}</a></td>
+                <td><img src={managerIconSmPath(r.opponent)} alt="" className="mgr-icon" /> <a href={`/managers/${slugify(r.opponent)}`}>{r.opponent}</a></td>
                 <td className="num muted">{r.games}</td>
                 <td className="gold">{r.wins}-{r.losses}</td>
                 <td className="muted">
@@ -130,7 +130,7 @@ export default async function FranchisePage({
               return (
                 <tr key={steward.manager}>
                   <td>
-                    <img src={managerIconPath(steward.manager)} alt="" className="mgr-icon" />{" "}
+                    <img src={managerIconSmPath(steward.manager)} alt="" className="mgr-icon" />{" "}
                     <a href={`/managers/${slugify(steward.manager)}`}>{steward.manager}</a>
                   </td>
                   <td className="muted">

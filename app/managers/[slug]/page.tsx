@@ -1,5 +1,5 @@
 import { SeasonTrends } from "@/app/components/charts";
-import { managerIndex, managerProfile, slugify, managerIconPath } from "@/lib/data";
+import { managerIndex, managerProfile, slugify, managerIconPath, managerIconSmPath } from "@/lib/data";
 import { Trophy } from "@/app/components/icons";
 
 export function generateStaticParams() {
@@ -133,7 +133,7 @@ export default async function ManagerPage({
             {profile.head_to_head.map((h) => (
               <tr key={h.opp_manager}>
                 <td>
-                  <img src={managerIconPath(h.opp_manager)} alt="" className="mgr-icon" />{" "}
+                  <img src={managerIconSmPath(h.opp_manager)} alt="" className="mgr-icon" />{" "}
                   <a href={`/managers/${slugify(h.opp_manager)}`}>{h.opp_manager}</a>
                 </td>
                 <td className="num muted">{h.games}</td>

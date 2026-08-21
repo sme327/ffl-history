@@ -6,17 +6,17 @@ export const metadata = {
   title: "{insert witty name here} Museum",
   description: `${site.subtitle} — a digital museum of a fantasy football league running since ${site.founded}.`,
   icons: {
-    // Real PNGs, not an SVG emoji: browsers rasterise SVG favicons without
-    // reliably resolving a colour-emoji font, so the tab falls back to a default.
+    // The commissioned "Est. 2001" monogram roundel (A5b).
     icon: [
       // Browsers request /favicon.ico regardless of what is declared here; a
-      // 404 there leaves them showing whatever icon they had cached.
+      // 404 there leaves them showing whatever icon they had cached. Still
+      // the pre-monogram mark — regenerate when tooling allows.
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
-      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+      { url: "/museum/chrome/monogram-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/museum/chrome/monogram-512.png", sizes: "512x512", type: "image/png" },
     ],
-    shortcut: "/favicon-32.png",
-    apple: "/apple-touch-icon.png",
+    shortcut: "/museum/chrome/monogram-32.png",
+    apple: "/museum/chrome/monogram-180.png",
   },
 };
 
@@ -26,7 +26,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <nav className="nav">
           <div className="nav-inner">
-            <a className="nav-brand" href="/">{"{insert witty name here}"}</a>
+            <a className="nav-brand" href="/">
+              <img
+                src="/museum/chrome/nameplate-nav.svg"
+                alt="{insert witty name here}"
+                className="nav-plate"
+              />
+            </a>
             <input type="checkbox" id="nav-toggle" className="nav-toggle" hidden />
             <label className="nav-burger" htmlFor="nav-toggle" aria-label="Toggle navigation">
               <svg viewBox="0 0 24 24" aria-hidden="true">

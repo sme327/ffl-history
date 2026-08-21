@@ -109,9 +109,9 @@ All owner decisions are in (2026-08-20): league name confirmed as literally *"{i
 | A2 frame system | ✅ `artifact-frame.svg` delivered & live on all tier-1 cards. Note for future frames: the delivery note's "3–4px border width" was unusable — at slice 18/120 the rails render sub-pixel; production uses **10px** border-width (≈1.7px rails, 10px corner ornaments). `case-corner.svg` accepted and installed, not yet wired (tier-2 hairline is doing the job) |
 | A3 re-lit rooms | ✅ Delivered & live, all ten |
 | A4 spotlight | ✅ Delivered & live over the reigning champion |
-| A5 nameplate + monogram | ❌ **REJECTED — redo required.** All lettering was outlined in a blocky pixel-grid font (see `previews/nameplate-final.png` from the 2026-08-21 delivery). The brief requires *serious engraved museum typography* (Bebas-style condensed capitals as real letterform outlines) — the joke only lands if the plaque is pristine. The monogram's roundel/star/ring composition is approved; only its lettering needs the same fix |
-| A6a small manager medallions | ❌ **REJECTED — broken export.** All 24 `-sm.svg` files contain an **empty** sigil group (`<g …></g>` with no paths) — they render as plain colored discs. The preview PNGs show the intended design (accent disc + navy sigil linework), so the art exists; the export dropped it. Redeliver with the sigil paths present |
-| A6b badges / position icons | ❌ **REJECTED** — same pixel-font problem as A5 on the "F01"/"QB" captions. Crest and helmet art itself is fine |
+| A5 nameplate + monogram | ✅ **Redelivered 2026-08-21 & live.** First delivery rejected for pixel-grid lettering; redelivery uses genuine condensed letterform outlines. Nameplate in the nav and Home hero (inside the `<h1>` with alt text), monogram is the favicon/apple-touch set. Loose end: `/favicon.ico` still carries the pre-monogram mark |
+| A6a small manager medallions | ✅ **Redelivered 2026-08-21 & live.** First delivery rejected for empty sigil groups; redelivery verified — all 24 carry sigil geometry. Wired via `managerIconSmPath()` into every ≤20px context (table cells, bylines, list rows); full medallions remain at 1.4rem+ |
+| A6b badges / position icons | ✅ **Redelivered 2026-08-21 & live** — outlined letterform captions, drop-in replacements |
 | A6c cleaned full-size medallions | ✅ Delivered & live (art unchanged, IDs prefixed, dead filters stripped) |
 | A7 wall tile v2 | ✅ Delivered & live |
 | A8 object photos | ⬜ Blocked on owner sourcing draft-day photos |

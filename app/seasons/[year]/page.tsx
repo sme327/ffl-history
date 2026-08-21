@@ -1,4 +1,4 @@
-import { seasonDetail, seasonIndex, slugify, managerIconPath } from "@/lib/data";
+import { seasonDetail, seasonIndex, slugify, managerIconPath, managerIconSmPath } from "@/lib/data";
 import { Trophy } from "@/app/components/icons";
 
 export function generateStaticParams() {
@@ -92,7 +92,7 @@ export default async function SeasonPage({
                 </td>
                 <td>
                   {row.manager !== "—" && (
-                    <img src={managerIconPath(row.manager)} alt="" className="mgr-icon" />
+                    <img src={managerIconSmPath(row.manager)} alt="" className="mgr-icon" />
                   )}{" "}
                   {row.team}
                 </td>
@@ -158,7 +158,7 @@ export default async function SeasonPage({
                 <td className="num muted">#{s.rank}</td>
                 <td>
                   {s.manager !== "—" && (
-                    <img src={managerIconPath(s.manager)} alt="" className="mgr-icon" />
+                    <img src={managerIconSmPath(s.manager)} alt="" className="mgr-icon" />
                   )}{" "}
                   {s.team}
                 </td>

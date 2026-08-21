@@ -1,5 +1,5 @@
 import { ScoringEvolution, TitleBars } from "@/app/components/charts";
-import { leagueHistory, slugify, eraIconPath, managerIconPath } from "@/lib/data";
+import { leagueHistory, slugify, eraIconPath, managerIconPath, managerIconSmPath } from "@/lib/data";
 import { Trophies } from "@/app/components/icons";
 
 export const metadata = { title: "League History · {insert witty name here} Museum" };
@@ -55,7 +55,7 @@ export default function HistoryPage() {
               <span key={c.season}>
                 {i > 0 && " · "}
                 <a href={`/seasons/${c.season}`} style={{ color: era.color }}>{c.season}</a>{" "}
-                <img src={managerIconPath(c.manager)} alt="" className="mgr-icon" /> {c.manager}
+                <img src={managerIconSmPath(c.manager)} alt="" className="mgr-icon" /> {c.manager}
               </span>
             ))}
           </div>

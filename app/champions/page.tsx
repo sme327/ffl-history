@@ -1,4 +1,4 @@
-import { championsView, slugify, managerIconPath } from "@/lib/data";
+import { championsView, slugify, managerIconPath, managerIconSmPath } from "@/lib/data";
 
 export const metadata = { title: "Champions · {insert witty name here} Museum" };
 
@@ -43,7 +43,7 @@ export default function ChampionsPage() {
           <div key={entry.manager} className="chron-row">
             <div className="chron-mgr">
               <span style={{ fontSize: "1.1rem" }}>
-                <img src={managerIconPath(entry.manager)} alt="" className="mgr-icon" />
+                <img src={managerIconSmPath(entry.manager)} alt="" className="mgr-icon" />
               </span>
               <a href={`/managers/${slugify(entry.manager)}`}>{entry.manager}</a>
               <span className="muted">({entry.championships})</span>
@@ -120,7 +120,7 @@ export default function ChampionsPage() {
         <div className="card">
           <div className="eyebrow">Most Runner-Up Finishes</div>
           <h3 className="gold">
-            <img src={managerIconPath(pain.most_runner_up.manager)} alt="" className="mgr-icon" />{" "}
+            <img src={managerIconSmPath(pain.most_runner_up.manager)} alt="" className="mgr-icon" />{" "}
             {pain.most_runner_up.manager} — {pain.most_runner_up.count}×
           </h3>
           <p>Runner-up in {pain.most_runner_up.years.join(", ")}.</p>
@@ -163,7 +163,7 @@ export default function ChampionsPage() {
                   <a href={`/seasons/${f.season}`}>{f.season}</a>
                 </td>
                 <td>
-                  <img src={managerIconPath(f.champion_manager)} alt="" className="mgr-icon" />{" "}
+                  <img src={managerIconSmPath(f.champion_manager)} alt="" className="mgr-icon" />{" "}
                   {f.champion_team}{" "}
                   <span className="muted">
                     <a href={`/managers/${slugify(f.champion_manager)}`}>{f.champion_manager}</a>
