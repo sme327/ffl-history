@@ -17,7 +17,9 @@ export default function HomePage() {
         <h1 className="hero-plate">
           <img src="/museum/chrome/nameplate.svg" alt="{insert witty name here}" />
         </h1>
-        <div className="hero-subtitle">Museum · {site.subtitle}</div>
+        {/* The nameplate directly above already says the name — repeating it
+            here made the first mobile screen read it three times. */}
+        <div className="hero-subtitle">Museum · A Quarter Century of Glory</div>
         <div className="hero-tagline">
           Built by friendship.&nbsp; Defined by competition.&nbsp; Occasionally
           ruined by a waiver wire mistake.

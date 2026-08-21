@@ -26,11 +26,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <nav className="nav">
           <div className="nav-inner">
+            {/* Full nameplate on desktop; below the burger breakpoint the
+                monogram takes over so the nav plate doesn't stack directly
+                on the hero plate (CSS-only swap — no client logic). */}
             <a className="nav-brand" href="/">
               <img
                 src="/museum/chrome/nameplate-nav.svg"
                 alt="{insert witty name here}"
                 className="nav-plate"
+              />
+              <img
+                src="/museum/chrome/monogram.svg"
+                alt="{insert witty name here}"
+                className="nav-mono"
               />
             </a>
             <input type="checkbox" id="nav-toggle" className="nav-toggle" hidden />
