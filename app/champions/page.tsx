@@ -69,7 +69,13 @@ export default function ChampionsPage() {
             seven gilt frames in one grid was the exact "gold everywhere"
             problem this skin pass removed. */}
         {dynasties.map((d, i) => (
-          <div className={i === 0 ? "card card-feature" : "card"} key={d.manager}>
+          // card-feature centers its content; the demoted plain cards need the
+          // same alignment so the grid reads as one set.
+          <div
+            className={i === 0 ? "card card-feature" : "card"}
+            style={{ textAlign: "center" }}
+            key={d.manager}
+          >
             <div style={{ fontSize: "2.25rem" }}>
               <img src={managerIconPath(d.manager)} alt="" className="mgr-icon" />
             </div>
