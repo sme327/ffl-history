@@ -7,7 +7,7 @@ All imagery for the museum skin. Current design direction and the forward-lookin
 | Folder | Contents | Count |
 |---|---|---|
 | `badges/` | Franchise seat crests (F01–F12), keyed to each seat's founding steward | 12 |
-| `chrome/` | Site furniture: plaque-frame (the `border-image` on tier-1 artifact cards), divider caps, ticks, and `spotlight.webp` (the alpha light-cone over the reigning champion). `wordmark.svg` and `footer-plaque.svg` are **retired** (nav and footer render real HTML text now); both are kept only until the A5 nameplate commission replaces the wordmark idea properly | 8 |
+| `chrome/` | Site furniture: `artifact-frame.svg` (the tier-1 `border-image`, rendered at 10px — its predecessor `plaque-frame.svg` is retired but kept), `case-corner.svg` (accepted, not yet wired), divider caps, ticks, and `spotlight.webp` (the light-cone above the reigning champion, clipped to end at the frame's top rail). `wordmark.svg` and `footer-plaque.svg` are **retired** (nav and footer render real HTML text); the A5 nameplate redelivery replaces the wordmark idea properly | 10 |
 | `icons/events/` | Timeline event-type icons (championship, heartbreak, keeper, etc.) | 15 |
 | `icons/exhibits/` | Home page's 6 exhibit-grid icons | 6 |
 | `icons/positions/` | QB/RB/WR/TE/DEF/K — vector helmet marks, no photo dependency | 6 |

@@ -238,8 +238,9 @@ a.card:hover { transform: translateY(-2px); filter: brightness(1.14); border-col
    features, champion cards, and featured timeline events. Slimmed — the
    art itself is due for a thinner-railed replacement (assets brief A2a). */
 .card-feature {
-  border-style: solid; border-width: 7px; border-color: var(--gold);
-  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 7px stretch;
+  background-color: var(--surface);
+  border-style: solid; border-width: 10px; border-color: var(--gold);
+  border-image: url("/museum/chrome/artifact-frame.svg") 18 / 10px stretch;
   border-radius: 12px;
   padding: 1.8rem 1.2rem; text-align: center;
   box-shadow: 0 0 40px var(--gold-glow);
@@ -295,8 +296,8 @@ a.card:hover { transform: translateY(-2px); filter: brightness(1.14); border-col
 /* ── Champion card — tier 1, the hero moment of home and season pages ───── */
 .champion-card {
   background-color: var(--surface);
-  border-style: solid; border-width: 8px; border-color: var(--gold);
-  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 8px stretch;
+  border-style: solid; border-width: 10px; border-color: var(--gold);
+  border-image: url("/museum/chrome/artifact-frame.svg") 18 / 10px stretch;
   border-radius: 12px; padding: 2rem 1.5rem; text-align: center;
   box-shadow: 0 0 50px rgba(255, 246, 224, 0.10), inset 0 0 0 1px rgba(255, 246, 224, 0.15);
 }
@@ -315,11 +316,15 @@ a.card:hover { transform: translateY(-2px); filter: brightness(1.14); border-col
 /* The commissioned light cone (A4) falling from above the case — an alpha
    overlay, so it reads as light in the air, not a graphic on the card. */
 .champion-card.champion-hero::before {
-  content: ""; position: absolute; left: 50%; top: -160px;
+  content: ""; position: absolute; left: 50%; top: -170px;
   transform: translateX(-50%);
-  width: 560px; max-width: 90vw; height: 360px;
-  background: url("/museum/chrome/spotlight.webp") center top / contain no-repeat;
-  opacity: 0.5; pointer-events: none;
+  width: 560px; max-width: 90vw; height: 170px;
+  /* Full cone art, clipped by the element to its upper spread — the beam
+     ends exactly at the frame's top rail, so light falls *onto* the case
+     instead of washing out the frame and the artifact behind it. The
+     card's halo shadow carries the glow onward inside. */
+  background: url("/museum/chrome/spotlight.webp") center top / 560px 360px no-repeat;
+  opacity: 0.55; pointer-events: none;
 }
 .champion-sigil { font-size: 4rem; line-height: 1; margin-bottom: 0.5rem; }
 .champion-season {
@@ -394,34 +399,44 @@ a.nav-card:hover {
 .plaque p { color: var(--text); }
 
 /* ── Tier 4 — ledgers (tables) ──────────────────────────────────────────── */
-/* The reference archive as a lit page in the dark room: the delivered
-   parchment texture (assets brief A1, Option B), with every color the
-   table's contents use re-scoped to ink tones. The descendants all read
-   through custom properties, so redefining them here retints text, links,
-   rules, trophies, and .gold/.muted cells without touching any page. */
+/* The reference archive as a page in the dark room. Two rules keep it from
+   reading as a glowing light-box (the first pass's mistake): the paper is
+   multiplied down to a lamplit mid-tan rather than raw bright cream, and an
+   inset vignette makes the light fall off toward the edges — paper *lit by*
+   the room, not backlit. Every color the contents use is re-scoped through
+   custom properties, so text, links, trophies, rules, and .gold/.muted
+   cells all retint to ink without touching any page. The ink is a real
+   hierarchy, not uniform darkness: near-black primary ink, links darker
+   and semibold (pen-pressure, not color, marks them), muted a clearly
+   lighter sepia. */
 .scroll-x, .event-ledger {
-  background: #e3d5b3 url("/museum/textures/ledger-page.webp") repeat;
-  border: 1px solid #a08c60;
-  color: #2b2117;
-  --text: #241c10;
-  --muted: #5c5138;
-  --faint: #8a7c5e;
-  --gold: #7a5d1c;          /* bronze ink — achievement marks on paper */
-  --gold-bright: #8a6b28;
-  --gold-dim: #a08c60;
-  --bone: #241c10;
-  --border: rgba(43, 33, 23, 0.16);
-  --hairline: rgba(122, 93, 28, 0.55);
+  background: #c9b78e url("/museum/textures/ledger-page.webp") repeat;
+  background-blend-mode: multiply;
+  border: 1px solid #8a774f;
+  color: #221a0e;
+  --text: #1f180d;
+  --muted: #5a4d34;
+  --faint: #7c6f52;
+  --gold: #4f3b0c;          /* achievement ink — dark bronze, weighted below */
+  --gold-bright: #6b5310;
+  --gold-dim: #8a774f;
+  --bone: #1f180d;
+  --border: rgba(34, 26, 14, 0.22);
+  --hairline: rgba(79, 59, 12, 0.55);
 }
+.scroll-x a, .event-ledger a { font-weight: 600; }
 .scroll-x {
   overflow-x: auto;
   border-radius: 4px; padding: 0.4rem 0.9rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45), 0 0 40px rgba(255, 246, 224, 0.05);
+  box-shadow:
+    inset 0 0 70px rgba(58, 44, 26, 0.35),
+    0 6px 18px rgba(0, 0, 0, 0.45);
 }
 /* The page-tint rules under the dark theme are white-based and vanish on
    parchment — ruled guide lines on paper are ink, faint and warm. */
-.scroll-x tbody tr:nth-child(even) { background: rgba(43, 33, 23, 0.05); }
-.scroll-x tbody tr:hover { background: rgba(122, 93, 28, 0.13); }
+.scroll-x tbody tr:nth-child(even) { background: rgba(34, 26, 14, 0.06); }
+.scroll-x tbody tr:hover { background: rgba(79, 59, 12, 0.14); }
+.scroll-x th { color: #4a3c22; }
 table { width: 100%; border-collapse: collapse; font-size: var(--step--1); }
 th, td { padding: 0.55rem 0.7rem; text-align: left; border-bottom: 1px solid var(--border); }
 th {
@@ -481,8 +496,8 @@ td.num { font-variant-numeric: tabular-nums; }
   display: flex; gap: 1rem; align-items: flex-start;
   padding: 1.3rem 1.5rem; margin-bottom: 0.85rem;
   background: linear-gradient(180deg, rgba(255, 246, 224, 0.05), rgba(255, 246, 224, 0) 45%), var(--surface);
-  border-style: solid; border-width: 6px; border-color: var(--gold);
-  border-image: url("/museum/chrome/plaque-frame.svg") 29% 9% / 6px stretch;
+  border-style: solid; border-width: 10px; border-color: var(--gold);
+  border-image: url("/museum/chrome/artifact-frame.svg") 18 / 10px stretch;
   border-radius: 8px;
   box-shadow: 0 0 30px rgba(255, 246, 224, 0.07), 0 6px 18px rgba(0, 0, 0, 0.45);
 }
@@ -494,7 +509,9 @@ td.num { font-variant-numeric: tabular-nums; }
 .event-ledger {
   margin-bottom: 1.25rem;
   border-radius: 4px; padding: 0.2rem 1rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45), 0 0 40px rgba(255, 246, 224, 0.05);
+  box-shadow:
+    inset 0 0 70px rgba(58, 44, 26, 0.35),
+    0 6px 18px rgba(0, 0, 0, 0.45);
 }
 .event-row {
   display: flex; gap: 0.6rem; align-items: center;

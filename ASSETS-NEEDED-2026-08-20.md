@@ -105,13 +105,17 @@ All owner decisions are in (2026-08-20): league name confirmed as literally *"{i
 
 | Item | Status |
 |---|---|
-| A1 ledger paper | ✅ Delivered & live (light version in use; `-dark` kept as fallback) |
-| A2 frame system (artifact frame v2, case corners) | ⬜ **Still needed** — tier-1 cards still use the original chunky `plaque-frame.svg` |
+| A1 ledger paper | ✅ Delivered & live. Post-launch tuning (owner feedback): the raw cream read too bright against the dark site, so the implementation multiplies it down to a lamplit mid-tan with an inset vignette — future paper-family assets should target that dimmer value range (`#b8a06c`-ish rendered), not bright cream |
+| A2 frame system | ✅ `artifact-frame.svg` delivered & live on all tier-1 cards. Note for future frames: the delivery note's "3–4px border width" was unusable — at slice 18/120 the rails render sub-pixel; production uses **10px** border-width (≈1.7px rails, 10px corner ornaments). `case-corner.svg` accepted and installed, not yet wired (tier-2 hairline is doing the job) |
 | A3 re-lit rooms | ✅ Delivered & live, all ten |
 | A4 spotlight | ✅ Delivered & live over the reigning champion |
-| A5 nameplate + monogram | ⬜ **Still needed** — highest-value remaining item; name is confirmed |
-| A6 small medallions / de-Arial pass | ⬜ Still needed (batch when convenient) |
+| A5 nameplate + monogram | ❌ **REJECTED — redo required.** All lettering was outlined in a blocky pixel-grid font (see `previews/nameplate-final.png` from the 2026-08-21 delivery). The brief requires *serious engraved museum typography* (Bebas-style condensed capitals as real letterform outlines) — the joke only lands if the plaque is pristine. The monogram's roundel/star/ring composition is approved; only its lettering needs the same fix |
+| A6a small manager medallions | ❌ **REJECTED — broken export.** All 24 `-sm.svg` files contain an **empty** sigil group (`<g …></g>` with no paths) — they render as plain colored discs. The preview PNGs show the intended design (accent disc + navy sigil linework), so the art exists; the export dropped it. Redeliver with the sigil paths present |
+| A6b badges / position icons | ❌ **REJECTED** — same pixel-font problem as A5 on the "F01"/"QB" captions. Crest and helmet art itself is fine |
+| A6c cleaned full-size medallions | ✅ Delivered & live (art unchanged, IDs prefixed, dead filters stripped) |
 | A7 wall tile v2 | ✅ Delivered & live |
 | A8 object photos | ⬜ Blocked on owner sourcing draft-day photos |
+
+**One systemic note for the graphics team:** every rejection above traces to a single root cause — the text-outlining step substituted a bitmap/pixel font instead of outlining the real letterforms. Fix that step once and A5 + A6b are one redelivery. A6a is a separate export bug (empty groups).
 
 Delivery QA (same bar as previous rounds): tile seams checked at 4× repeat, size ceilings enforced, `grep` for `font-family` and unused `id=` in every SVG before wiring in.
