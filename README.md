@@ -5,10 +5,26 @@ This repo contains both the data pipeline that scrapes and normalizes historical
 data, and **{insert witty name here} Museum** — the site that presents it, live at
 **[iwnh.sme327.com](https://iwnh.sme327.com)**.
 
-For detailed methodology, data quirks, and the reasoning behind decisions, see **[DATA_GUIDE.md](DATA_GUIDE.md)**.
+For detailed methodology, data quirks, and the reasoning behind decisions, see **[docs/DATA_GUIDE.md](docs/DATA_GUIDE.md)**.
 For the product vision and page-by-page editorial brief, see **[CLAUDE.md](CLAUDE.md)**.
 
 ---
+
+## Folder map
+
+This repo is `Museum/` inside the `insert witty name here/` league workspace folder, which
+holds every project for this league as a sibling subfolder with its own repo (the
+workspace's `CLAUDE.md` lists them — the 2026 draft room app is `../Draft App/`, its own
+repo and its own deploy). Same layout as the other league folders.
+
+| Path | What it is |
+|------|------------|
+| `/` (this repo, `sme327/ffl-history`) | The league history site (Next.js/vinext) plus the Yahoo scraper scripts that feed it |
+| `app/`, `lib/`, `public/`, `worker/` | History site source |
+| `data/` | Scraped and curated league data (see `docs/DATA_GUIDE.md`) |
+| `scripts/`, `*.py` at root | Yahoo scraper and data-build scripts (documented below) |
+| `docs/` | `docs/DATA_GUIDE.md` plus `reviews/` — dated product, site, and visual-asset reviews and plans |
+| `archive/` | Retired Streamlit site and one-off fix scripts |
 
 ## Running the site
 
@@ -40,7 +56,7 @@ owns that zone.
 
 For the full migration story — why this stack, what was considered and rejected,
 and the phase-by-phase port off the original Streamlit app — see
-**[SELF-HOSTING-PLAN.md](SELF-HOSTING-PLAN.md)**.
+**[docs/reviews/SELF-HOSTING-PLAN.md](docs/reviews/SELF-HOSTING-PLAN.md)**.
 
 ### The original Streamlit app
 

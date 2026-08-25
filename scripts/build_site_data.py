@@ -2,7 +2,7 @@
 
     python3 scripts/build_site_data.py [--out build/data]
 
-Phase 2 of SELF-HOSTING-PLAN.md. The derivations stay in pandas — where they are
+Phase 2 of docs/reviews/SELF-HOSTING-PLAN.md. The derivations stay in pandas — where they are
 already correct and now fixture-tested — and move from request time to build
 time. The output is what a static site reads instead of calling Python.
 

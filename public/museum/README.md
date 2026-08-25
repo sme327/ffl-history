@@ -1,6 +1,6 @@
 # Museum visual assets
 
-All imagery for the museum skin. Current design direction and the forward-looking commission list: `UI-VISUAL-REVIEW-2026-08-20.md` and `ASSETS-NEEDED-2026-08-20.md` at the repo root. Historical specs: `VISUAL-ASSETS-2026-08-19.md`.
+All imagery for the museum skin. Current design direction and the forward-looking commission list: `docs/reviews/UI-VISUAL-REVIEW-2026-08-20.md` and `docs/reviews/ASSETS-NEEDED-2026-08-20.md` at the repo root. Historical specs: `VISUAL-ASSETS-2026-08-19.md`.
 
 ## Inventory
 
@@ -21,5 +21,5 @@ All imagery for the museum skin. Current design direction and the forward-lookin
 - **Naming:** `manager-{slug}.svg` and `franchise-{id}.svg` match the site's existing `slugify()` output, so a manager or franchise can be mapped to its asset file programmatically (see `managerIconPath()`/`franchiseBadgePath()`/`eventIconPath()`/`eraIconPath()` in `lib/data.ts`).
 - **Format:** SVG for everything vector, WebP for photographic content (rooms, textures), each under the size ceilings in the assets brief.
 - **No `currentColor` in files consumed as `<img>` or CSS `background-image`** — it can't inherit there and silently renders black (this bit `divider-cap.svg` and `nav-active-tick.svg`, both now hard-coded brass). Reserve `currentColor` for SVG that is inlined in JSX.
-- **No `<text>` with system font-families and no unused defs** in new deliveries — see "global conventions" in `ASSETS-NEEDED-2026-08-20.md` (existing files get cleaned in the A6 pass).
+- **No `<text>` with system font-families and no unused defs** in new deliveries — see "global conventions" in `docs/reviews/ASSETS-NEEDED-2026-08-20.md` (existing files get cleaned in the A6 pass).
 - **Color source of truth:** hex values for manager/era/event colors are defined in `utils/data.py` / `utils/narratives.py`; the brass ramp is `#fff0a8 → #c9a24b → #7f5b18`, warm light `#fff6e0`.
