@@ -58,6 +58,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             Est. {site.founded} · A private collection · Report a misfiled exhibit
           </div>
         </footer>
+        {/* Cloudflare Web Analytics */}
+        <script
+          type="module"
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token":"2f3ec947040a4a909b6aed50659bd0e8"}'
+        ></script>
+        {/* End Cloudflare Web Analytics */}
       </body>
     </html>
   );
