@@ -23,3 +23,7 @@ All imagery for the museum skin. Current design direction and the forward-lookin
 - **No `currentColor` in files consumed as `<img>` or CSS `background-image`** — it can't inherit there and silently renders black (this bit `divider-cap.svg` and `nav-active-tick.svg`, both now hard-coded brass). Reserve `currentColor` for SVG that is inlined in JSX.
 - **No `<text>` with system font-families and no unused defs** in new deliveries — see "global conventions" in `docs/reviews/ASSETS-NEEDED-2026-08-20.md` (existing files get cleaned in the A6 pass).
 - **Color source of truth:** hex values for manager/era/event colors are defined in `utils/data.py` / `utils/narratives.py`; the brass ramp is `#fff0a8 → #c9a24b → #7f5b18`, warm light `#fff6e0`.
+
+## Favicon (2026-08-26)
+
+Tab icon is the brace mark at `public/favicon.svg` + `favicon.ico` (16/32/48) + `favicon-32.png` + `apple-touch-icon.png` + `icon-512.png`. The monogram roundel remains the in-page brand mark; it was replaced as the favicon because its lettering is illegible below 48px.

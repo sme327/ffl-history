@@ -6,16 +6,17 @@ export const metadata = {
   title: "{insert witty name here} Museum",
   description: `${site.subtitle} — a digital museum of a fantasy football league running since ${site.founded}.`,
   icons: {
-    // The commissioned "Est. 2001" monogram roundel (A5b).
+    // Tab icon: a brass brace mark — the league's name is literally a placeholder in braces —
+    // drawn for 16–32px. The "Est. 2001" monogram roundel stays for in-page use (nav, footer);
+    // at favicon sizes its lettering turned to mush.
     icon: [
-      // Browsers request /favicon.ico regardless of what is declared here; a
-      // 404 there leaves them showing whatever icon they had cached.
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/museum/chrome/monogram-32.png", sizes: "32x32", type: "image/png" },
-      { url: "/museum/chrome/monogram-512.png", sizes: "512x512", type: "image/png" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
     ],
-    shortcut: "/museum/chrome/monogram-32.png",
-    apple: "/museum/chrome/monogram-180.png",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 
