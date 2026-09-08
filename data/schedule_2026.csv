@@ -1,0 +1,85 @@
+week,team_a,team_b
+1,small sample size,Guntry Club
+1,Fuzzy Bears,team old style
+1,Bears,This Is How We Do
+1,Goood Times,Mean Machine 22
+1,Futball in the Groin,"“I’ll take Kittle”"
+1,Guinness,miniDITKAS
+2,small sample size,Fuzzy Bears
+2,Guntry Club,team old style
+2,Bears,Goood Times
+2,Mean Machine 22,This Is How We Do
+2,Futball in the Groin,Guinness
+2,miniDITKAS,"“I’ll take Kittle”"
+3,small sample size,team old style
+3,Fuzzy Bears,Guntry Club
+3,Bears,Mean Machine 22
+3,Goood Times,This Is How We Do
+3,Futball in the Groin,miniDITKAS
+3,Guinness,"“I’ll take Kittle”"
+4,Goood Times,miniDITKAS
+4,"“I’ll take Kittle”",small sample size
+4,Mean Machine 22,Fuzzy Bears
+4,Guntry Club,Bears
+4,team old style,Futball in the Groin
+4,This Is How We Do,Guinness
+5,"“I’ll take Kittle”",Bears
+5,Mean Machine 22,small sample size
+5,Guinness,Fuzzy Bears
+5,Guntry Club,Futball in the Groin
+5,team old style,Goood Times
+5,This Is How We Do,miniDITKAS
+6,Guinness,small sample size
+6,"“I’ll take Kittle”",This Is How We Do
+6,Bears,Fuzzy Bears
+6,Guntry Club,Goood Times
+6,team old style,miniDITKAS
+6,Mean Machine 22,Futball in the Groin
+7,This Is How We Do,Fuzzy Bears
+7,Mean Machine 22,miniDITKAS
+7,Futball in the Groin,small sample size
+7,"“I’ll take Kittle”",Guntry Club
+7,team old style,Bears
+7,Goood Times,Guinness
+8,Bears,small sample size
+8,"“I’ll take Kittle”",Fuzzy Bears
+8,Guntry Club,miniDITKAS
+8,team old style,This Is How We Do
+8,Goood Times,Futball in the Groin
+8,Mean Machine 22,Guinness
+9,team old style,"“I’ll take Kittle”"
+9,miniDITKAS,small sample size
+9,Goood Times,Fuzzy Bears
+9,Mean Machine 22,Guntry Club
+9,Guinness,Bears
+9,This Is How We Do,Futball in the Groin
+10,This Is How We Do,small sample size
+10,miniDITKAS,Fuzzy Bears
+10,Guntry Club,Guinness
+10,team old style,Mean Machine 22
+10,Futball in the Groin,Bears
+10,"“I’ll take Kittle”",Goood Times
+11,Fuzzy Bears,Futball in the Groin
+11,team old style,Guinness
+11,Goood Times,small sample size
+11,Guntry Club,This Is How We Do
+11,miniDITKAS,Bears
+11,"“I’ll take Kittle”",Mean Machine 22
+12,small sample size,team old style
+12,Fuzzy Bears,Guntry Club
+12,Bears,Mean Machine 22
+12,Goood Times,This Is How We Do
+12,Futball in the Groin,miniDITKAS
+12,Guinness,"“I’ll take Kittle”"
+13,small sample size,Fuzzy Bears
+13,Guntry Club,team old style
+13,Bears,Goood Times
+13,Mean Machine 22,This Is How We Do
+13,Futball in the Groin,Guinness
+13,miniDITKAS,"“I’ll take Kittle”"
+14,small sample size,Guntry Club
+14,Fuzzy Bears,team old style
+14,Bears,This Is How We Do
+14,Goood Times,Mean Machine 22
+14,Futball in the Groin,"“I’ll take Kittle”"
+14,Guinness,miniDITKAS

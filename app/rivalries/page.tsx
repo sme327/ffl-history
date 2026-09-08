@@ -1,4 +1,4 @@
-import { franchiseIndex, franchiseRivalries, rivalriesView, rivalryIndex, slugify, managerIconPath, managerIconSmPath, franchiseBadgePath } from "@/lib/data";
+import { franchiseIndex, franchiseRivalries, programIndex, rivalriesView, rivalryIndex, slugify, managerIconPath, managerIconSmPath, franchiseBadgePath } from "@/lib/data";
 
 export const metadata = { title: "Rivalries · {insert witty name here} Museum" };
 
@@ -18,6 +18,13 @@ export default function RivalriesPage() {
         <div className="eyebrow">Who still hates each other?</div>
         <h1>RIVALRIES</h1>
         <p>The emotional center of 25 years of competition.</p>
+        {programIndex.length > 0 && (
+          <p>
+            <a className="teaser-cta" style={{ marginTop: "0.4rem" }} href="/program">
+              This week: The Program · Week {programIndex[programIndex.length - 1].week} →
+            </a>
+          </p>
+        )}
       </div>
 
       <div className="grid cols-4">

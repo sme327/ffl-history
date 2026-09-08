@@ -400,6 +400,56 @@ export type Timeline = {
   }[];
 };
 
+export type ProgramCard = {
+  team_a: string;
+  team_b: string;
+  manager_a: string;
+  manager_b: string;
+  division_a: string;
+  division_b: string;
+  in_division: boolean;
+  facts: {
+    games: number;
+    form_line: string | null;
+    first_season: number | null;
+    record: Record<string, number>; // keyed by manager name, plus "ties"
+    record_rs: Record<string, number>;
+    record_po: Record<string, number>;
+    playoff_meetings: number;
+    finals: { season: number; winner: string }[];
+    streak: { manager: string; length: number } | null;
+    closest: { margin: number; season: number; week: number; winner: string } | null;
+    biggest: { margin: number; season: number; week: number; winner: string } | null;
+  };
+  storylines: string[];
+};
+
+export type ProgramCopy = {
+  theme?: string; // editorial issue title (e.g. "Rivalry Week") — only when the week earns one
+  cold_open: string[];
+  kicker?: string;
+  notes?: Record<string, string>; // keyed "MgrA|MgrB", names sorted
+  milestone?: string | { value: string; label: string; text: string };
+  history_lines?: { year: number; text: string; pts: string; tag: string }[];
+};
+
+export type ProgramIssue = {
+  slug: string;
+  season: number;
+  week: number;
+  cards: ProgramCard[];
+  week_in_history: {
+    best: { season: number; manager: string | null; team: string; score: number }[];
+    worst: { season: number; manager: string | null; team: string; score: number } | null;
+    best_losing: { season: number; manager: string | null; team: string; score: number } | null;
+  };
+  career: Record<string, { wins: number; points: number }>;
+  milestone_watch: string[];
+  copy?: ProgramCopy;
+};
+
+export type ProgramIndexEntry = { slug: string; season: number; week: number };
+
 // ── Accessors ─────────────────────────────────────────────────────────────────
 
 export const site = read<Site>("site");
@@ -422,6 +472,14 @@ export const rivalryIndex = read<RivalrySummary[]>("rivalries/index");
 export const franchiseRivalries = read<
   { fid_a: string; fid_b: string; games: number; a_wins: number; b_wins: number; a_pct: number }[]
 >("franchise-rivalries");
+
+// The Program is emitted by scripts/build_program.py --site (chained into
+// `npm run data`); readMaybe so a build with no issues yet still compiles.
+export const programIndex = readMaybe<ProgramIndexEntry[]>("program/index") ?? [];
+
+export function programIssue(slug: string): ProgramIssue | null {
+  return readMaybe<ProgramIssue>(`program/${slug}`);
+}
 
 export function franchiseProfile(id: string): FranchiseProfile | null {
   return readMaybe<FranchiseProfile>(`franchises/${id}`);

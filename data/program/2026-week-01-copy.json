@@ -1,0 +1,27 @@
+{
+  "theme": "Rivalry Week",
+  "cold_open": [
+    "Four of the six openers are dead-even lifetime series, and a fifth is separated by a single game. Twenty-five years of history, and Week 1 starts with almost nobody ahead."
+  ],
+  "kicker": "All six of the above are division games. The rematches come in Week 14.",
+  "notes": {
+    "Brian Clark|Thomas": "Tom led this thing by five once. Clark answered with seven straight. Twenty-five years later it's 15–15, and somebody spends the winter ahead.",
+    "Kevin O'Boyle|Kevin Swanson": "No two managers have met more. Forty-two games, a championship between them, and after a quarter century O'Boyle is still chasing Swanson.",
+    "Fadi|Steve Swanson": "Dead level after 26 games, but the momentum is one way — Fadi hasn't beaten Steve since September 2024, and opens the season staring at the streak.",
+    "Douglas|Evan": "The quietest rivalry on the wall, and maybe the tightest — last year's meeting was decided by a field goal's worth of points.",
+    "Dominic|Jeff": "The reigning runner-up against the most decorated manager in league history — five titles on Dominic's shelf — and after fourteen games the series won't pick a side.",
+    "Eric|Shawn": "The commissioner against the newest member of the division. Five games is barely a paragraph in this league's book; here's the sixth sentence."
+  },
+  "milestone": {
+    "value": "200",
+    "label": "Kevin Swanson · Career Wins",
+    "text": "Kevin Swanson enters Week 1 at exactly 200 career wins — one behind Brian Clark's 201, the most in league history. Win number 201 pulls him level, and it would have to come against Kevin O'Boyle, the man he's beaten more than anyone else. Brian Clark, facing Thomas across the hall, can extend the record himself."
+  },
+  "history_lines": [
+    { "year": 2013, "text": "Robby hangs the all-time Week 1 record", "pts": "144.59", "tag": "best ever" },
+    { "year": 2019, "text": "Brian Clark opens at full speed", "pts": "133.91", "tag": "2nd best" },
+    { "year": 2009, "text": "Kevin O'Boyle announces himself early", "pts": "123.86", "tag": "3rd best" },
+    { "year": 2021, "text": "Brian Clark scores 100.49 — and loses", "pts": "100.49", "tag": "best in defeat" },
+    { "year": 2005, "text": "Dominic's 25.61, the floor no one has found since", "pts": "25.61", "tag": "worst ever" }
+  ]
+}

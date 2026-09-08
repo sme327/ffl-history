@@ -154,6 +154,25 @@ Handles team defenses (→ `DEF`), stale Yahoo team suffixes in old player names
 generational suffixes (Jr./Sr./II/III), known nicknames, and a small manual override
 list for players absent from nflverse. Coverage: 100% of 1,140 unique drafted players.
 
+### `scripts/build_program.py`
+The Program — the weekly matchup preview at `/program`. Two modes:
+
+```
+python3 scripts/build_program.py --week N   # compute a week's facts + writer's brief
+python3 scripts/build_program.py --site     # emit merged site JSON (chained into npm run data)
+```
+
+`--week N` reads `data/schedule_2026.csv` + `data/divisions_2026.csv` against the full
+scraped history and writes `data/program/2026-week-NN.json` (facts: lifetime series,
+streaks, title rematches, milestones, week-N-in-history) plus a markdown brief of
+ranked storyline candidates. The editorial copy for an issue is hand-written from
+that brief into `data/program/2026-week-NN-copy.json` — the script computes facts,
+it never writes prose. `--site` merges facts + copy into `build/data/program/` for
+`lib/data.ts`; it runs automatically as part of `npm run data`.
+
+Weekly cadence: after Monday night, re-run `--week N` (current-season results will
+layer in once `data/results_2026.csv` exists), write the copy file, `npm run deploy`.
+
 ---
 
 ## Data Files (`data/`)

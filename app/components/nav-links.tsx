@@ -2,17 +2,20 @@
 
 import { usePathname } from "next/navigation";
 
+// Labels stay one word where possible — eleven items have to share one line
+// on a laptop before the burger takes over.
 const NAV = [
   { href: "/", label: "Home" },
+  { href: "/program", label: "Program" },
   { href: "/champions", label: "Champions" },
   { href: "/timeline", label: "Timeline" },
-  { href: "/history", label: "League History" },
+  { href: "/history", label: "History" },
   { href: "/seasons", label: "Seasons" },
   { href: "/managers", label: "Managers" },
   { href: "/franchises", label: "Franchises" },
   { href: "/draft", label: "Draft" },
   { href: "/rivalries", label: "Rivalries" },
-  { href: "/keepers", label: "Keeper Hall" },
+  { href: "/keepers", label: "Keepers" },
 ];
 
 // The only client-side JS in the nav: everything else on the site is
