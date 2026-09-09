@@ -136,10 +136,15 @@ a:hover { color: var(--gold-bright); text-decoration: underline; }
 .nav-burger svg { width: 1.4rem; height: 1.4rem; display: block; }
 .nav-links { display: flex; align-items: center; gap: 0.95rem; flex-wrap: wrap; }
 
-@media (max-width: 1100px) {
-  .nav-brand { margin-right: 0; padding: 4px 0; }
+/* Trade the engraved plate for the small monogram before space runs out, so
+   the links keep their single line on typical desktop windows. */
+@media (max-width: 1180px) {
   .nav-plate { display: none; }
   .nav-mono { display: block; }
+}
+/* The burger takes over only when even the short labels can't share a line. */
+@media (max-width: 900px) {
+  .nav-brand { margin-right: 0; padding: 4px 0; }
   .nav-burger { display: block; }
   .nav-links {
     display: none; flex-basis: 100%; flex-direction: column;
@@ -147,6 +152,9 @@ a:hover { color: var(--gold-bright); text-decoration: underline; }
   }
   .nav-toggle:checked ~ .nav-links { display: flex; }
   .nav-links a { width: 100%; padding: 0.55rem 0; border-bottom: 1px solid var(--border); }
+  /* In the open menu the row separator stays quiet even on the active link —
+     the tick marks the current page; a full-width gold rule reads as broken. */
+  .nav a.active { border-bottom-color: var(--border); }
 }
 
 /* ── Headings ───────────────────────────────────────────────────────────── */
@@ -456,8 +464,11 @@ table { width: 100%; border-collapse: collapse; font-size: var(--step--1); }
 th, td { padding: 0.55rem 0.7rem; text-align: left; border-bottom: 1px solid var(--border); }
 th {
   color: var(--muted); text-transform: uppercase;
-  letter-spacing: 2px; font-weight: 600; font-size: var(--step--1);
+  letter-spacing: 1px; font-weight: 600; font-size: var(--step--1);
   border-bottom: 1px solid var(--hairline);
+  /* Ledger headers never wrap — "RS W- / L" is not a column name. Wide
+     tables scroll inside .scroll-x instead. */
+  white-space: nowrap;
 }
 /* A faint alternating tint gives a long table a readable rhythm — the
    digital equivalent of a ledger's ruled guide lines. */

@@ -1,11 +1,54 @@
 import { ScoringEvolution, TitleBars } from "@/app/components/charts";
-import { leagueHistory, slugify, eraIconPath, managerIconPath, managerIconSmPath } from "@/lib/data";
+import { leagueHistory, managerIndex, slugify, eraIconPath, managerIconPath, managerIconSmPath } from "@/lib/data";
 import { Trophies } from "@/app/components/icons";
 
 export const metadata = { title: "League History · {insert witty name here} Museum" };
 
+type LedgerRow = (typeof leagueHistory.allTimeManagers)[number];
+
+function ManagerLedger({ rows }: { rows: LedgerRow[] }) {
+  return (
+    <div className="scroll-x">
+      <table>
+        <thead>
+          <tr>
+            <th>Manager</th><th className="num">Seasons</th>
+            <th>Career W-L</th><th className="num">W/Season</th><th>RS W-L</th><th>PL W-L</th>
+            <th className="num">RS PF</th><th className="num">RS PA</th>
+            <th className="num">Playoffs</th><th className="num">Finals</th><th>Titles</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((m) => (
+            <tr key={m.canonical_name}>
+              <td style={{ whiteSpace: "nowrap" }}>
+                <a href={`/managers/${slugify(m.canonical_name)}`}>{m.canonical_name}</a>
+              </td>
+              <td className="num muted">{m.seasons}</td>
+              <td className="gold">{m.rs_wins + m.pl_wins}-{m.rs_losses + m.pl_losses}</td>
+              <td className="num">{((m.rs_wins + m.pl_wins) / m.seasons).toFixed(1)}</td>
+              <td className="muted">{m.rs_wins}-{m.rs_losses}</td>
+              <td className="muted">{m.pl_wins}-{m.pl_losses}</td>
+              <td className="num">{m.rs_pf.toLocaleString(undefined, { maximumFractionDigits: 0 })}</td>
+              <td className="num muted">{m.rs_pa.toLocaleString(undefined, { maximumFractionDigits: 0 })}</td>
+              <td className="num">{m.playoff_apps}</td>
+              <td className="num">{m.finals_apps}</td>
+              <td className="gold">{m.championships > 0 ? <Trophies count={m.championships} /> : "—"}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 export default function HistoryPage() {
   const { eras, era_bands, scoring, balance, records, allTimeManagers } = leagueHistory;
+  const activeNames = new Set(managerIndex.filter((m) => m.active).map((m) => m.name));
+  const byWins = (a: LedgerRow, b: LedgerRow) =>
+    b.rs_wins + b.pl_wins - (a.rs_wins + a.pl_wins);
+  const active = allTimeManagers.filter((m) => activeNames.has(m.canonical_name)).sort(byWins);
+  const departed = allTimeManagers.filter((m) => !activeNames.has(m.canonical_name)).sort(byWins);
 
   return (
     <>
@@ -141,39 +184,14 @@ export default function HistoryPage() {
         ))}
       </div>
       <h2>All-Time Manager Stats</h2>
-      <p style={{ marginTop: "-0.5rem" }}>Raw data lives here. The stories live above.</p>
-      <div className="scroll-x">
-        <table>
-          <thead>
-            <tr>
-              <th>Manager</th><th className="num">Seasons</th><th>RS W-L</th>
-              <th className="num">RS PF</th><th className="num">RS PA</th><th>PL W-L</th>
-              <th className="num">Playoffs</th><th className="num">Finals</th>
-              <th>Titles</th><th className="num">Best/Worst</th>
-            </tr>
-          </thead>
-          <tbody>
-            {allTimeManagers.map((m) => (
-              <tr key={m.canonical_name}>
-                <td>
-                  <a href={`/managers/${slugify(m.canonical_name)}`}>{m.canonical_name}</a>
-                </td>
-                <td className="num muted">{m.seasons}</td>
-                <td>{m.rs_wins}-{m.rs_losses}</td>
-                <td className="num">{m.rs_pf.toLocaleString(undefined, { maximumFractionDigits: 1 })}</td>
-                <td className="num muted">{m.rs_pa.toLocaleString(undefined, { maximumFractionDigits: 1 })}</td>
-                <td>{m.pl_wins}-{m.pl_losses}</td>
-                <td className="num">{m.playoff_apps}</td>
-                <td className="num">{m.finals_apps}</td>
-                <td className="gold">{m.championships > 0 ? <Trophies count={m.championships} /> : "—"}</td>
-                <td className="num muted">
-                  {m.best_finish ? `#${m.best_finish}` : "—"} / {m.worst_finish ? `#${m.worst_finish}` : "—"}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <p style={{ marginTop: "-0.5rem" }}>
+        Career record is regular season plus championship-bracket playoffs.
+        Consolation games don&rsquo;t count. They never did. Sorted by career wins.
+      </p>
+      <div className="eyebrow" style={{ marginTop: "1.25rem" }}>The Current Twelve</div>
+      <ManagerLedger rows={active} />
+      <div className="eyebrow" style={{ marginTop: "1.5rem" }}>Departed</div>
+      <ManagerLedger rows={departed} />
     </>
   );
 }

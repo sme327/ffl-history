@@ -203,14 +203,14 @@
       },
       "storylines": [
         "Brian Clark's 7 straight from 2016\u2060\u2013\u206020 is the longest streak in the series",
+        "Thomas has won 3 in a row",
         "Thomas's largest series lead was 5 games",
-        "Brian Clark won their closest meeting by 0.35 points in 2004",
-        "Brian Clark owns the biggest blowout in the series \u2014 by 55.78 in 2016"
+        "Brian Clark won their closest meeting by 0.35 points in 2004"
       ],
       "fact_pool": [
         {
           "category": "form",
-          "priority": 36,
+          "priority": 60,
           "text": "Thomas has won 3 in a row"
         },
         {
@@ -338,14 +338,14 @@
       },
       "storylines": [
         "Fadi's 7 straight from 2010\u2060\u2013\u206016 is the longest streak in the series",
+        "Steve Swanson has won 3 in a row",
         "Fadi's largest series lead was 5 games",
-        "Steve Swanson won their closest meeting by 0.21 points in 2007",
-        "Fadi owns the biggest blowout in the series \u2014 by 61.76 in 2015"
+        "Steve Swanson won their closest meeting by 0.21 points in 2007"
       ],
       "fact_pool": [
         {
           "category": "form",
-          "priority": 36,
+          "priority": 60,
           "text": "Steve Swanson has won 3 in a row"
         },
         {
@@ -824,57 +824,70 @@
     }
   },
   "career": {
-    "Fadi": {
-      "wins": 186,
-      "points": 29155.510000000006
-    },
-    "Eric": {
-      "wins": 28,
-      "points": 3817.9599999999996
-    },
-    "Jeff": {
-      "wins": 56,
-      "points": 10675.999999999996
-    },
-    "Brian Clark": {
-      "wins": 201,
-      "points": 29405.279999999966
-    },
-    "Dominic": {
-      "wins": 155,
-      "points": 24177.90999999998
-    },
-    "Thomas": {
-      "wins": 164,
-      "points": 26271.719999999998
-    },
     "Evan": {
-      "wins": 164,
-      "points": 26502.10999999999
-    },
-    "Douglas": {
-      "wins": 87,
-      "points": 14202.399999999996
-    },
-    "Steve Swanson": {
-      "wins": 144,
-      "points": 23347.37
-    },
-    "Kevin Swanson": {
-      "wins": 200,
-      "points": 29192.719999999994
-    },
-    "Kevin O'Boyle": {
-      "wins": 189,
-      "points": 28658.149999999983
+      "wins": 156,
+      "losses": 160,
+      "points": 24810.580000000013
     },
     "Shawn": {
-      "wins": 193,
-      "points": 28498.04999999998
+      "wins": 180,
+      "losses": 178,
+      "points": 26636.529999999984
+    },
+    "Brian Clark": {
+      "wins": 190,
+      "losses": 173,
+      "points": 27788.029999999966
+    },
+    "Dominic": {
+      "wins": 153,
+      "losses": 158,
+      "points": 23625.18999999999
+    },
+    "Jeff": {
+      "wins": 55,
+      "losses": 75,
+      "points": 10452.089999999998
+    },
+    "Thomas": {
+      "wins": 156,
+      "losses": 179,
+      "points": 25265.84000000001
+    },
+    "Kevin Swanson": {
+      "wins": 192,
+      "losses": 165,
+      "points": 27772.889999999992
+    },
+    "Eric": {
+      "wins": 27,
+      "losses": 20,
+      "points": 3673.5599999999995
+    },
+    "Steve Swanson": {
+      "wins": 134,
+      "losses": 142,
+      "points": 22088.540000000008
+    },
+    "Fadi": {
+      "wins": 174,
+      "losses": 187,
+      "points": 27371.399999999998
+    },
+    "Kevin O'Boyle": {
+      "wins": 178,
+      "losses": 175,
+      "points": 27054.52999999999
+    },
+    "Douglas": {
+      "wins": 77,
+      "losses": 82,
+      "points": 13159.309999999998
     }
   },
   "milestone_watch": [
-    "Kevin Swanson sits at exactly 200 career wins",
-    "all-time wins race: Brian Clark 201, Kevin Swanson 200"
+    "Fadi is one win from 175 career wins",
+    "Fadi is 128.60 points from 27,500 career points",
+    "all-time wins race: Kevin Swanson 192, Brian Clark 190"
   ]
 }

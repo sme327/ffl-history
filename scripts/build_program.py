@@ -227,8 +227,11 @@ def fact_candidates(a: str, b: str, f: dict) -> list[dict]:
         add("first_meeting", 100, "the first meeting ever between these two")
         return cands
 
+    # A live streak of 3+ is a Tier-3 streak fact; a last-5 split is Tier-5
+    # recent form.
     if f["form_line"]:
-        add("form", 36, f["form_line"])
+        live = f["streak"]["length"] if f["streak"] else 0
+        add("form", 60 if live >= 3 else 36, f["form_line"])
 
     if f["finals"]:
         if len(f["finals"]) == 1:
@@ -251,6 +254,9 @@ def fact_candidates(a: str, b: str, f: dict) -> list[dict]:
         loser = b if g["winner"] == a else a
         if margin <= 3:
             add("last_meeting", 56, f"{loser} lost their last meeting by just {margin} points")
+        elif margin >= 45:
+            # A lopsided last meeting is a live grudge, not trivia
+            add("last_meeting", 56, f"{g['winner']} won the last meeting by {margin} points")
         else:
             add("last_meeting", 20,
                 f"{g['winner']} won the most recent meeting "
@@ -329,17 +335,32 @@ def week_in_history(week: int, team2mgr) -> dict:
 
 
 def career_totals(team2mgr, managers: set[str]) -> dict:
-    """True career wins and points per current manager — every opponent counts,
-    including managers who have since left the league."""
-    out = {m: {"wins": 0, "points": 0.0} for m in managers}
+    """Career wins and points per current manager, all opponents counted —
+    but only games that matter: regular season plus championship-bracket
+    playoffs (mirroring utils/data.py's pl_wins). Consolation-bracket games
+    don't count, per the commissioner's ruling."""
+    out = {m: {"wins": 0, "losses": 0, "points": 0.0} for m in managers}
     for r in read_csv("weekly_matchups.csv"):
-        if r["is_bye"] == "true":
+        if r["is_bye"] == "true" or r["is_playoff"] == "true":
             continue
         m = team2mgr.get((r["season"], r["team_name"].strip()))
         if m in out:
             out[m]["points"] += float(r["team_score"])
             if r["result"] == "Win":
                 out[m]["wins"] += 1
+            elif r["result"] == "Loss":
+                out[m]["losses"] += 1
+    for r in read_csv("playoff_games.csv"):
+        if r["bracket"] != "championship":
+            continue
+        for team, score in ((r["team_1"], r["score_1"]), (r["team_2"], r["score_2"])):
+            m = team2mgr.get((r["season"], team.strip()))
+            if m in out:
+                out[m]["points"] += float(score)
+                if r["winner"].strip() == team.strip():
+                    out[m]["wins"] += 1
+                else:
+                    out[m]["losses"] += 1
     return out
 
 
@@ -380,6 +401,7 @@ def emit_site(out: Path) -> None:
         out_path.write_text(json.dumps(issue), encoding="utf-8")
         issues.append({"slug": issue["slug"], "season": issue["season"], "week": issue["week"]})
     issues.sort(key=lambda i: (i["season"], i["week"]))
+    out.mkdir(parents=True, exist_ok=True)
     (out / "index.json").write_text(json.dumps(issues), encoding="utf-8")
     print(f"emitted {len(issues)} program issue(s) to {out}")
 

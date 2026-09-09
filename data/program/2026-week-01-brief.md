@@ -12,7 +12,7 @@ Selected: their 2023 meeting (104.79⁠–⁠82.28) is the highest-scoring in th
 ## Fuzzy Bears (Thomas) vs team old style (Brian Clark) — Rock division
 Lifetime: Thomas 15-15 over 30 games
 - form: Thomas has won 3 in a row
-Selected: Brian Clark's 7 straight from 2016⁠–⁠20 is the longest streak in the series | Thomas's largest series lead was 5 games | Brian Clark won their closest meeting by 0.35 points in 2004 | Brian Clark owns the biggest blowout in the series — by 55.78 in 2016
+Selected: Brian Clark's 7 straight from 2016⁠–⁠20 is the longest streak in the series | Thomas has won 3 in a row | Thomas's largest series lead was 5 games | Brian Clark won their closest meeting by 0.35 points in 2004
 - [form] Thomas has won 3 in a row
 - [last_meeting] Thomas won the most recent meeting 82.71⁠–⁠59.27 in 2025
 - [longest_run] Brian Clark's 7 straight from 2016⁠–⁠20 is the longest streak in the series
@@ -25,7 +25,7 @@ Selected: Brian Clark's 7 straight from 2016⁠–⁠20 is the longest streak in
 ## Bears (Steve Swanson) vs This Is How We Do (Fadi) — Paper division
 Lifetime: Steve Swanson 13-13 over 26 games
 - form: Steve Swanson has won 3 in a row
-Selected: Fadi's 7 straight from 2010⁠–⁠16 is the longest streak in the series | Fadi's largest series lead was 5 games | Steve Swanson won their closest meeting by 0.21 points in 2007 | Fadi owns the biggest blowout in the series — by 61.76 in 2015
+Selected: Fadi's 7 straight from 2010⁠–⁠16 is the longest streak in the series | Steve Swanson has won 3 in a row | Fadi's largest series lead was 5 games | Steve Swanson won their closest meeting by 0.21 points in 2007
 - [form] Steve Swanson has won 3 in a row
 - [last_meeting] Steve Swanson won the most recent meeting 93.48⁠–⁠88.44 in 2025
 - [longest_run] Fadi's 7 straight from 2010⁠–⁠16 is the longest streak in the series
@@ -81,5 +81,6 @@ Selected: a rematch of the 2006 championship final — Kevin Swanson beat Kevin 
 - best losing effort: Brian Clark 100.49 (2021)
 
 ## Milestone watch
-- Kevin Swanson sits at exactly 200 career wins
-- all-time wins race: Brian Clark 201, Kevin Swanson 200
+- Fadi is one win from 175 career wins
+- Fadi is 128.60 points from 27,500 career points
+- all-time wins race: Kevin Swanson 192, Brian Clark 190
