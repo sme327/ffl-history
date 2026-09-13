@@ -66,9 +66,9 @@ was ported from — `app.py`, `pages/*.py`, `utils/styles.py`, and its
 landing page's `FANTASY_APP_URL` points at it, and the golden-file test suite
 confirms the ported site reproduces every derivation byte-for-byte. It's kept
 for reference (the original visual design, and as a fallback if the port ever
-needs to be checked against) rather than run day to day — the Streamlit Cloud
-deployment at `insertwittynamehere.streamlit.app` should be retired separately
-whenever convenient.
+needs to be checked against) rather than run day to day. Its Streamlit Cloud
+deployment (`insertwittynamehere.streamlit.app`) was deleted on 2026-09-13; run
+it locally if you ever need to compare against it.
 
 `utils/data.py` and `utils/narratives.py`, at the repo root, are **not**
 archived — `scripts/build_site_data.py` still imports both to build the JSON
