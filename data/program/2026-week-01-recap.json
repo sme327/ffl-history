@@ -1406,7 +1406,11 @@
         "name": "Caleb Williams",
         "position": "QB",
         "points": 32.63,
-        "projected": 15.49
+        "projected": 15.49,
+        "id": "40900",
+        "nfl_team": "CHI",
+        "opponent": "@ CAR",
+        "photo": "/players/11560.png"
       }
     ],
     "RB": [
@@ -1415,7 +1419,11 @@
         "name": "Derrick Henry",
         "position": "RB",
         "points": 26.65,
-        "projected": 9.52
+        "projected": 9.52,
+        "id": "29279",
+        "nfl_team": "BAL",
+        "opponent": "@ IND",
+        "photo": "/players/3198.png"
       }
     ],
     "WR": [
@@ -1424,7 +1432,11 @@
         "name": "Jalen Coker",
         "position": "WR",
         "points": 22.9,
-        "projected": 6.43
+        "projected": 6.43,
+        "id": "41293",
+        "nfl_team": "CAR",
+        "opponent": "vs CHI",
+        "photo": "/players/11646.png"
       }
     ],
     "TE": [
@@ -1433,7 +1445,11 @@
         "name": "Dallas Goedert",
         "position": "TE",
         "points": 17.85,
-        "projected": 5.86
+        "projected": 5.86,
+        "id": "31019",
+        "nfl_team": "PHI",
+        "opponent": "vs WAS",
+        "photo": "/players/5022.png"
       }
     ],
     "K": [
@@ -1442,7 +1458,11 @@
         "name": "Evan McPherson",
         "position": "K",
         "points": 19.0,
-        "projected": 7.79
+        "projected": 7.79,
+        "id": "33537",
+        "nfl_team": "CIN",
+        "opponent": "vs TB",
+        "photo": "/players/7839.png"
       }
     ],
     "DEF": [
@@ -1451,7 +1471,11 @@
         "name": "Steelers",
         "position": "DEF",
         "points": 18.0,
-        "projected": 7.25
+        "projected": 7.25,
+        "id": "100023",
+        "nfl_team": "PIT",
+        "opponent": "vs ATL",
+        "photo": "/nfl/PIT.png"
       }
     ]
   },
@@ -1462,7 +1486,11 @@
         "name": "Brock Purdy",
         "position": "QB",
         "points": 21.55,
-        "projected": 14.36
+        "projected": 14.36,
+        "id": "34218",
+        "nfl_team": "SF",
+        "opponent": "@ LAR",
+        "photo": "/players/8183.png"
       }
     ],
     "RB": [
@@ -1471,7 +1499,11 @@
         "name": "Chuba Hubbard",
         "position": "RB",
         "points": 17.85,
-        "projected": 6.79
+        "projected": 6.79,
+        "id": "33514",
+        "nfl_team": "CAR",
+        "opponent": "vs CHI",
+        "photo": "/players/7594.png"
       }
     ],
     "WR": [
@@ -1480,7 +1512,11 @@
         "name": "Mike Evans",
         "position": "WR",
         "points": 11.45,
-        "projected": 7.17
+        "projected": 7.17,
+        "id": "27535",
+        "nfl_team": "SF",
+        "opponent": "@ LAR",
+        "photo": "/players/2216.png"
       }
     ],
     "TE": [
@@ -1489,7 +1525,11 @@
         "name": "Isaiah Likely",
         "position": "TE",
         "points": 19.9,
-        "projected": 6.06
+        "projected": 6.06,
+        "id": "34095",
+        "nfl_team": "NYG",
+        "opponent": "vs DAL",
+        "photo": "/players/8131.png"
       }
     ]
   },
@@ -1500,7 +1540,11 @@
       "position": "QB",
       "points": -1.19,
       "projected": 15.64,
-      "shortfall": 16.83
+      "id": "31833",
+      "nfl_team": "MIN",
+      "opponent": "vs GB",
+      "shortfall": 16.83,
+      "photo": "/players/5849.png"
     }
   ],
   "coulda_won": [

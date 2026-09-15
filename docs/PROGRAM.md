@@ -24,25 +24,39 @@ Decided 2026-09-15 by the commissioner:
 Computed in `scripts/build_recap.py`, with the awards in `scripts/recap_engine.py`. The engine is
 **byte-identical** with Dynasty 22's copy; fix both or neither.
 
-- **The Finals.** One placard per game:
-  - both scores
-  - each side's projection and best possible lineup
-  - the lifetime series after the game
-  - fact lines: "coulda won", a single bench swap that would have flipped it, and streaks snapped,
-    extended, taken or evened
-- **The Awards.**
-  - Highest and Lowest Scorer
-  - Biggest Blowout and Narrowest Victory
-  - Best and Worst Managed: actual ÷ best possible lineup
-  - Worst Lineup in Hindsight: the most points left on the bench
-  - Overachiever and Below Expectation: starters vs. their original projections
-  - Luckiest Win and Unluckiest Loss: the week's score against the other eleven teams
-- **Players of the Week.** The top-scoring starter at QB, RB, WR, TE, K and DEF.
-- **Best on the Bench.** The top bench QB, RB, WR and TE.
-- **Dud of the Week.** The starter furthest below his projection.
-- **For the Record.** Archive ranks, shown only when notable: a top-3 score for that week number,
-  a top-10 score or margin since 2001, or a career high or low.
-- **Standings.** Record and points for, with division marks.
+The page is laid out top to bottom. The layout was redesigned 2026-09-15 after Sleeper's app report,
+using the same structure as Dynasty 22 in this museum's own materials.
+
+1. **Best Team / Worst Team.** Two placards with manager medallions.
+2. **The Finals.** One placard per game:
+   - both scores
+   - each side's projection and best possible lineup
+   - the lifetime series after the game
+   - fact lines: "coulda won", a single bench swap that would have flipped it, and streaks snapped,
+     extended, taken or evened
+3. **Lineups in Hindsight.** Every team ranked by score as a brass bar on one shared scale, the league's
+   highest possible score. The fill is what they scored, the track their best possible lineup, and the
+   tick their starters' projection.
+4. **Players of the Week.** QB, RB, WR, TE, K, DEF. Photo placards: headshot (a team logo for a defense),
+   the manager's medallion pinned on, points, and the NFL game ("@ CAR").
+5. **Benchwarmers of the Week.** QB, RB, WR, TE.
+6. **League Awards.** Matched pairs of two-number cases:
+   - Best / Worst Managed: score vs. max points
+   - Unluckiest Loss / Luckiest Win: score vs. the opponent
+   - Biggest Blowout / Narrowest Victory: winner vs. loser
+   - Overachiever / Below Expectation: score vs. the starters' projection
+   - Worst Lineup in Hindsight: score vs. max points
+   - Dud of the Week: points vs. projection
+7. **For the Record.** Archive ranks, shown only when notable.
+8. **Standings.** With division marks.
+
+**Photos.** `scripts/photos.py` downloads each featured player's picture once, into `public/players/`
+(headshots) or `public/nfl/` (defense logos).
+- Yahoo player IDs are matched to Sleeper IDs through the `yahoo_id` in Sleeper's public player list,
+  which is cached in `.local/`. A name-plus-team match is the fallback. The logic is the Espinosa
+  Clubhouse's.
+- Headshots come from `sleepercdn.com`. A player with no match shows initials.
+- Per-position colors are deliberately not used.
 
 Ties share an award.
 

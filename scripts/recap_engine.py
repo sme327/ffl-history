@@ -16,12 +16,14 @@ Input is one week, already normalized by the league's own builder:
                                       # "BN" for bench, or an inactive slot
             "points": 39.66,
             "projected": 21.49,       # pregame projection, None when unknown
+            # optional, passed through untouched onto player awards:
+            # "id", "nfl_team", "opponent" ("@ HOU"), "photo"
         }, ...],
     }, ...]
     games = [("M01", "M05"), ...]
     config = {
         "slots": [("QB", ["QB"]), ("RB", ["RB"]), ..., ("FLEX", ["RB", "WR", "TE"])],
-        "inactive": ["IR", "TAXI"],   # never startable, never "bench"
+        "inactive": ["IR"],           # excluded from the best lineup, never "bench"
         "award_positions": ["QB", "RB", "WR", "TE"],
         "bench_positions": ["QB", "RB", "WR", "TE"],
     }
@@ -224,7 +226,8 @@ def week_awards(teams: list[dict], games: list[tuple[str, str]], config: dict) -
 
     def player_row(t, p):
         return {"team": t["key"], "name": p["name"], "position": primary(p), "points": r2(p["points"]),
-                "projected": r2(p["projected"])}
+                "projected": r2(p["projected"]),
+                **{k: p[k] for k in ("id", "nfl_team", "opponent", "photo") if p.get(k)}}
 
     started = [(t, p) for t in teams for p in t["players"] if p["slot"] in starter_slots and p.get("name")]
     benched = [(t, p) for t in teams for p in t["players"] if p["slot"] == "BN" and p.get("name")]

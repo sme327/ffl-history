@@ -718,27 +718,91 @@ td.num { font-variant-numeric: tabular-nums; }
   display: flex; flex-direction: column; gap: 0.1rem; margin-top: 0.7rem;
   font-size: var(--step--1); color: var(--muted); font-variant-numeric: tabular-nums;
 }
-/* Award placards: tier-2 cases, three to a row — a label, one numeral as the
-   exhibit, then who and why. */
-.recap-placards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-.recap-placards-4 { grid-template-columns: repeat(4, 1fr); }
-@media (max-width: 980px) { .recap-placards, .recap-placards-4 { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .recap-placards, .recap-placards-4 { grid-template-columns: 1fr; } }
-.recap-placard { display: flex; flex-direction: column; gap: 0.35rem; text-align: center; padding: 1.1rem 1.2rem; }
+/* Best Team / Worst Team — two placards opening the recap */
+.recap-bestworst { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 2rem auto 0; max-width: 900px; }
+@media (max-width: 680px) { .recap-bestworst { grid-template-columns: 1fr; } }
+.recap-bw { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.3rem; padding: 1.3rem 1.2rem; }
+.recap-bw.best { border-color: var(--gold); box-shadow: inset 0 1px 0 rgba(255, 246, 224, 0.1), 0 0 30px rgba(201, 162, 75, 0.12); }
+.recap-bw-medal { width: 84px; height: 84px; margin: 0.4rem 0 0.2rem; }
+.recap-bw-team { font-weight: 700; font-size: var(--step-1); color: var(--text); }
+.recap-bw-score { font-size: 3.2rem; }
+.recap-bw.best .recap-bw-score { color: var(--gold-bright); }
+
 .recap-label { font-size: var(--step--1); letter-spacing: 3px; text-transform: uppercase; color: var(--muted); }
 .recap-value {
   font-family: var(--display); font-size: 2.6rem; line-height: 1; letter-spacing: 2px;
   color: var(--bone); font-variant-numeric: tabular-nums; margin-top: 0.2rem;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 246, 224, 0.12);
 }
-.recap-value::after {
-  content: ""; display: block; margin: 0.45rem auto 0.2rem; width: 30px; height: 1px;
-  background: linear-gradient(to right, transparent, var(--gold), transparent);
-}
-.recap-who { font-weight: 600; }
 .recap-detail { color: var(--muted); font-size: var(--step--1); text-wrap: pretty; }
-.recap-player { display: flex; flex-direction: column; gap: 0.25rem; }
-.recap-player + .recap-player { border-top: 1px solid var(--border); padding-top: 0.6rem; margin-top: 0.3rem; }
-.recap-player-name { font-weight: 700; font-size: var(--step-1); color: var(--text); }
 .recap-note { margin: 0.5rem 0 0; }
+
+/* Lineups in Hindsight — ranked bars on one shared scale: fill = scored,
+   track = best possible lineup, tick = the starters' projection. Brass on a
+   dark rail, the same material as the rest of the case. */
+.recap-perf { padding: 1rem 1.4rem 0.6rem; }
+.recap-perf-legend {
+  display: flex; flex-wrap: wrap; gap: 0.3rem 1.3rem; padding-bottom: 0.7rem;
+  font-size: var(--step--1); letter-spacing: 2px; text-transform: uppercase; color: var(--muted);
+}
+.recap-perf-legend .swatch { display: inline-block; width: 16px; height: 8px; border-radius: 2px; margin-right: 0.35rem; vertical-align: middle; }
+.recap-perf-legend .swatch.fill { background: var(--gold); }
+.recap-perf-legend .swatch.track { background: #2a3a50; }
+.recap-perf-legend .swatch.tick { width: 2px; height: 12px; background: var(--light); }
+.recap-perf-row {
+  display: grid; grid-template-columns: 1.6rem 44px 1fr; align-items: center; gap: 0.8rem;
+  padding: 0.6rem 0; border-top: 1px solid var(--border);
+}
+.recap-perf-rank { font-family: var(--display); font-size: 1.4rem; color: var(--muted); text-align: right; }
+.recap-perf-medal { width: 44px; height: 44px; }
+.recap-perf-main { display: flex; flex-direction: column; gap: 0.3rem; min-width: 0; }
+.recap-perf-name { display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; }
+.recap-perf-name strong { color: var(--text); }
+.recap-perf-bar { position: relative; height: 12px; }
+.recap-perf-bar .track, .recap-perf-bar .fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 6px; }
+.recap-perf-bar .track { background: #2a3a50; }
+.recap-perf-bar .fill { background: linear-gradient(90deg, var(--gold-dim), var(--gold), var(--gold-bright)); }
+.recap-perf-bar .tick { position: absolute; top: -3px; bottom: -3px; width: 2px; margin-left: -1px; background: var(--light); border-radius: 1px; }
+.recap-perf-label { font-size: var(--step--1); color: var(--muted); font-variant-numeric: tabular-nums; }
+.recap-perf-label strong { color: var(--text); }
+.recap-perf-label .pct { color: var(--gold); font-weight: 600; }
+.recap-perf-label .proj { color: var(--faint); }
+
+/* Player placards — headshot in a brass ring, manager medallion pinned on */
+.recap-players { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.recap-players-6 { grid-template-columns: repeat(6, 1fr); }
+@media (max-width: 1100px) { .recap-players-6 { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 900px) { .recap-players { grid-template-columns: repeat(2, 1fr); } }
+.recap-player-card { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.25rem; padding: 1.2rem 0.8rem 1rem; }
+.recap-photo { position: relative; width: 88px; height: 88px; margin-bottom: 0.4rem; }
+.recap-photo > img:first-child, .recap-photo-fallback {
+  width: 88px; height: 88px; border-radius: 50%; object-fit: cover; object-position: top; display: block;
+  background: radial-gradient(circle at 50% 35%, #22324a, var(--bg)); border: 2px solid var(--gold);
+  box-shadow: 0 0 0 3px rgba(201, 162, 75, 0.15);
+}
+.recap-photo.logo > img:first-child { object-fit: contain; object-position: center; padding: 12px; }
+.recap-photo-fallback { display: flex; align-items: center; justify-content: center; font-family: var(--display); font-size: 1.8rem; color: var(--muted); }
+.recap-photo-badge { position: absolute; right: -6px; bottom: -4px; width: 30px; height: 30px; }
+.recap-player-name { font-weight: 700; font-size: var(--step-1); color: var(--text); line-height: 1.25; }
+.recap-game { font-size: var(--step--1); letter-spacing: 2px; text-transform: uppercase; color: var(--faint); }
+
+/* League awards — matched pairs, each case a two-number comparison */
+.recap-award-pairs { display: flex; flex-direction: column; gap: 1rem; }
+.recap-award-pair { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+@media (max-width: 680px) { .recap-award-pair { grid-template-columns: 1fr; } }
+.recap-award-side { display: flex; flex-direction: column; gap: 1rem; }
+.recap-award-side > .recap-award { flex: 1; }
+.recap-award { display: flex; flex-direction: column; gap: 0.4rem; padding: 1rem 1.2rem; }
+.recap-award-head { display: flex; align-items: center; gap: 0.6rem; padding-bottom: 0.55rem; border-bottom: 1px solid var(--border); }
+.recap-award-medal { width: 36px; height: 36px; }
+.recap-award-photo {
+  width: 36px; height: 36px; border-radius: 50%; overflow: hidden; flex: none;
+  background: #22324a; border: 1px solid var(--gold-dim); display: flex; align-items: center; justify-content: center;
+}
+.recap-award-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.recap-award-row { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; }
+.recap-award-name { font-weight: 700; font-size: var(--step-1); color: var(--text); min-width: 0; }
+.recap-award-value { font-family: var(--display); font-size: 2rem; letter-spacing: 1px; color: var(--bone); font-variant-numeric: tabular-nums; line-height: 1; }
+.recap-award-ref { font-size: var(--step--1); color: var(--muted); }
+.recap-award-ref > span:last-child { font-family: var(--display); font-size: 1.25rem; letter-spacing: 1px; color: var(--muted); }
 .recap-footnote { max-width: 780px; margin: 2.5rem auto 0; font-size: var(--step--1); color: var(--faint); text-align: center; }

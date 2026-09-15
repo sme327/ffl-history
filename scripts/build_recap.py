@@ -24,6 +24,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from build_program import CURRENT_SEASON, current_results, load_history, load_manager_map, read_csv
+from photos import headshot, sleeper_id_for, team_logo
 from recap_engine import series_update, week_awards
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -61,6 +62,9 @@ def build_week(week: int) -> dict:
             "slot": r["slot"],
             "points": float(r["points"]) if r["points"] else 0.0,
             "projected": float(r["projected"]) if r["projected"] else None,
+            "id": r["player_id"],
+            "nfl_team": r.get("nfl_team", ""),
+            "opponent": r.get("opponent", ""),
         })
     results = [r for r in read_csv("results_2026.csv") if int(r["week"]) == week]
     if not results:
@@ -72,6 +76,14 @@ def build_week(week: int) -> dict:
             seen.add(frozenset((a, b)))
             games.append((a, b))
     res = week_awards([{"key": k, "players": v} for k, v in by_mgr.items()], games, CONFIG)
+
+    # Pictures for every featured player: a headshot via the Sleeper id, a team logo for a defense
+    for row in [r for rows in res["players_of_week"].values() for r in rows] + \
+               [r for rows in res["bench_best"].values() for r in rows] + res["dud"]:
+        if row["position"] == "DEF":
+            row["photo"] = team_logo(row.get("nfl_team"))
+        else:
+            row["photo"] = headshot(sleeper_id_for(row.get("id", ""), row["name"], row.get("nfl_team", "")))
 
     official = {team_mgr[r["team_name"]]: float(r["score"]) for r in results}
     for k, t in res["teams"].items():

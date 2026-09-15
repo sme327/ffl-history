@@ -453,7 +453,18 @@ export type ProgramIndexEntry = { slug: string; season: number; week: number };
 // ── The Recap (the Program's Tuesday tab) — scripts/build_recap.py ───────────
 // Every key below is a canonical manager name, like the rest of the museum.
 
-export type RecapPlayer = { team: string; name: string; position: string; points: number; projected: number | null; shortfall?: number };
+export type RecapPlayer = {
+  team: string;
+  name: string;
+  position: string;
+  points: number;
+  projected: number | null;
+  shortfall?: number;
+  id?: string; // Yahoo player id
+  nfl_team?: string;
+  opponent?: string; // "@ LAR" / "vs BUF"
+  photo?: string | null; // site path: public/players (headshot) or public/nfl (defense logo)
+};
 export type RecapSwap = { bench: string; bench_points: number; starter: string | null; starter_points: number; slot: string; gain: number };
 export type RecapSeriesNote =
   | { kind: "first_meeting" }

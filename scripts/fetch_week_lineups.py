@@ -3,13 +3,14 @@ included, every player's slot, fantasy points and original projection.
 
     python3 scripts/fetch_week_lineups.py --week 1
     python3 scripts/fetch_week_lineups.py --week 1 --dry-run   # parse and validate, write nothing
+    python3 scripts/fetch_week_lineups.py --week 1 --from-raw  # re-parse saved pages, no Yahoo traffic
 
 Feeds The Recap (scripts/build_recap.py) and layers current-season results into
 The Program's preview (scripts/build_program.py). Writes, replacing only that
 week's rows:
 
   data/lineups_2026.csv   week, team_id, team_name, player_id, player_name,
-                          position, slot, points, projected
+                          position, slot, points, projected, nfl_team, opponent
   data/results_2026.csv   week, team_name, score, opponent, opponent_score,
                           projected — one row per team
 
@@ -52,7 +53,9 @@ STORAGE_STATE = Path("~/.draft-queue/yahoo-session.json").expanduser()
 SLOTS = {"QB", "RB", "WR", "TE", "W/R/T", "K", "DEF", "BN", "IR", "IR+"}
 STARTER_SLOTS = {"QB", "RB", "WR", "TE", "W/R/T", "K", "DEF"}
 
-LINEUP_FIELDS = ["week", "team_id", "team_name", "player_id", "player_name", "position", "slot", "points", "projected"]
+LINEUP_FIELDS = ["week", "team_id", "team_name", "player_id", "player_name", "position", "slot", "points", "projected",
+                 "nfl_team", "opponent"]
+TEAM_ALIAS = {"WSH": "WAS", "LA": "LAR", "JAC": "JAX"}
 RESULT_FIELDS = ["week", "team_name", "score", "opponent", "opponent_score", "projected"]
 
 
@@ -64,17 +67,26 @@ def num(text: str) -> float | None:
         return None
 
 
+def team_code(code: str) -> str:
+    code = code.upper()
+    return TEAM_ALIAS.get(code, code)
+
+
 def player_cell(td) -> dict:
     a = td.select_one("a.name")
     if not a:
-        return {"player_id": "", "player_name": "", "position": ""}
-    pos = ""
+        return {"player_id": "", "player_name": "", "position": "", "nfl_team": "", "opponent": ""}
+    pos, team = "", ""
     for span in td.select("span.D-b span.Fz-xxs"):
-        m = re.search(r"-\s*([A-Z/,]+)\s*$", span.get_text(" ", strip=True))
+        m = re.search(r"([A-Za-z]{2,3})\s*-\s*([A-Z/,]+)\s*$", span.get_text(" ", strip=True))
         if m:
-            pos = m.group(1).replace(",", "/")
+            team, pos = team_code(m.group(1)), m.group(2).replace(",", "/")
             break
-    return {"player_id": a.get("data-ys-playerid", ""), "player_name": a.get("title") or a.get_text(strip=True), "position": pos}
+    # "Final L 31-36 vs Buf" -> "vs BUF"; "@ LAR" for road games
+    status = td.select_one(".ysf-game-status")
+    g = re.search(r"(@|vs)\s*([A-Za-z]{2,3})\s*$", status.get_text(" ", strip=True)) if status else None
+    return {"player_id": a.get("data-ys-playerid", ""), "player_name": a.get("title") or a.get_text(strip=True),
+            "position": pos, "nfl_team": team, "opponent": f"{g.group(1)} {team_code(g.group(2))}" if g else ""}
 
 
 def parse_page(html: str, week: int) -> dict:
@@ -196,9 +208,19 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--week", type=int, required=True)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--from-raw", action="store_true",
+                    help="re-parse the pages already saved under .local/raw/ instead of scraping Yahoo")
     args = ap.parse_args()
 
-    games = asyncio.run(scrape(args.week))
+    if args.from_raw:
+        games, covered = [], set()
+        for path in sorted(RAW.glob(f"{SEASON}-week-{args.week:02d}-mid*.html")):
+            game = parse_page(path.read_text(encoding="utf-8"), args.week)
+            if not covered & {t["team_id"] for t in game["teams"]}:
+                covered.update(t["team_id"] for t in game["teams"])
+                games.append(game)
+    else:
+        games = asyncio.run(scrape(args.week))
     validate(args.week, games)
     lineups, results = [], []
     for g in games:

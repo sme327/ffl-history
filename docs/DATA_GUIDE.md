@@ -347,7 +347,8 @@ Scraped Tuesday mornings by `scripts/fetch_week_lineups.py` from the six Yahoo m
 pages; each run replaces only its own week's rows.
 
 - **`lineups_2026.csv`** — `week, team_id, team_name, player_id, player_name, position,
-  slot, points, projected`. Every roster row both teams show on the matchup page: the
+  slot, points, projected, nfl_team, opponent` (`opponent` is `@ LAR` / `vs BUF`, read from
+  the player cell's game line). Every roster row both teams show on the matchup page: the
   nine starter slots, bench (`BN`) and `IR`, including `(Empty)` slots (blank player).
   `projected` is Yahoo's original pregame projection (the starters sum to the page's
   "Orig Proj"). `position` is Yahoo's eligibility, `/`-joined when a player has more than one.
