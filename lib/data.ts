@@ -512,8 +512,9 @@ export type RecapRecord =
   | { kind: "career_high" | "career_low"; team: string; value: number; previous: number };
 
 /** Hand-approved copy (data/program/2026-week-NN-recap-copy.json). Same
- * contract as ProgramCopy; notes keyed "MgrA|MgrB" sorted, awards keyed like
- * Recap.awards (plus "QB_of_week", "RB_bench", "dud", ...). */
+ * contract as ProgramCopy; notes keyed "MgrA|MgrB" sorted; awards holds
+ * player-card notes only ("QB_of_week", "RB_bench", ...) — League Award cards
+ * never take a note. */
 export type RecapCopy = {
   theme?: string;
   cold_open?: string[];

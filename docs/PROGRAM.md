@@ -90,8 +90,7 @@ weeks before the issue's own.
 ## Copy
 
 - **File.** `data/program/2026-week-NN-recap-copy.json`
-- **Fields.** `theme`, `cold_open`, `notes` (keyed `"MgrA|MgrB"`, names sorted), `awards` (keyed
-  like the award ids, plus `QB_of_week`, `RB_bench`, `dud`, and so on), and `kicker`.
+- **Fields.** `theme`, `cold_open`, `notes` (keyed `"MgrA|MgrB"`, names sorted), `awards` (keyed `QB_of_week`, `RB_bench`, …, for player cards only; League Award cards take no written notes, decided 2026-09-15, so every card in a pair keeps the same shape and a note can't pass for the full explanation), and `kicker`.
 - **Contract.** The same as the preview's (`build_program.py` docstring):
   - Every claim must trace to the week's `-recap-brief.md`.
   - Notes run about 25–35 words.

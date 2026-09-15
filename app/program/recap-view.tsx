@@ -48,7 +48,9 @@ function PlayerPlacard({ recap, label, player, note }: { recap: Recap; label: st
   );
 }
 
-function AwardSide({ recap, cards, note }: { recap: Recap; cards: AwardCard[]; note: (id: string) => string | undefined }) {
+/** League award cards carry numbers only — never a written note — so every
+ * card in a pair keeps the same shape (commissioner, 2026-09-15). */
+function AwardSide({ recap, cards }: { recap: Recap; cards: AwardCard[] }) {
   if (cards.length === 0) return <div />;
   return (
     <div className="recap-award-side">
@@ -73,7 +75,6 @@ function AwardSide({ recap, cards, note }: { recap: Recap; cards: AwardCard[]; n
             <span>{c.ref}</span>
           </div>
           <div className="recap-detail">{c.detail}</div>
-          {note(c.id) && <p className="identity recap-note">{note(c.id)}</p>}
         </div>
       ))}
     </div>
@@ -235,8 +236,8 @@ export function RecapView({ recap }: { recap: Recap }) {
       <div className="recap-award-pairs">
         {awardPairs(recap).map((pair, i) => (
           <div className="recap-award-pair" key={i}>
-            <AwardSide recap={recap} cards={pair.left} note={note} />
-            <AwardSide recap={recap} cards={pair.right} note={note} />
+            <AwardSide recap={recap} cards={pair.left} />
+            <AwardSide recap={recap} cards={pair.right} />
           </div>
         ))}
       </div>
