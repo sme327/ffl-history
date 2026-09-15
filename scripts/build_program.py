@@ -7,9 +7,13 @@ data/divisions_2026.csv) plus the scraped history, and writes two files per
 week: a JSON facts file and a markdown brief of ranked storyline candidates.
 The brief is raw material — the published prose is written from it, not by it.
 
-Current-season results are layered in from data/results_2026.csv when it
-exists (columns: week,team_name,score — two rows per game). Week 1's issue
-needs no results file; it is pure history.
+Current-season results are layered in from data/results_2026.csv (written by
+scripts/fetch_week_lineups.py; one row per team) — only weeks before the
+issue's own week, so a back issue never shows its own result. Week 1's issue
+is pure history.
+
+Lifetime series count every meeting, consolation games included (commissioner,
+2026-09-15) — unlike the career win totals below, which exclude consolation.
 
 Every matchup card gets the same treatment: a lifetime series line plus the
 top-ranked facts. The ranker chooses which facts, never how much coverage.
@@ -60,10 +64,30 @@ def load_manager_map() -> dict[tuple[str, str], str]:
     return out
 
 
-def load_history(team2mgr, managers: set[str]):
+CURRENT_SEASON = 2026
+
+
+def current_results(before_week: int | None) -> list[dict]:
+    """data/results_2026.csv reshaped like weekly_matchups.csv rows, weeks < before_week."""
+    path = DATA / f"results_{CURRENT_SEASON}.csv"
+    if before_week is None or not path.exists():
+        return []
+    out = []
+    for r in read_csv(path.name):
+        if int(r["week"]) >= before_week:
+            continue
+        score, opp = float(r["score"]), float(r["opponent_score"])
+        out.append({"season": str(CURRENT_SEASON), "week": r["week"], "team_name": r["team_name"],
+                    "opponent": r["opponent"], "result": "Win" if score > opp else "Loss" if score < opp else "Tie",
+                    "team_score": r["score"], "opponent_score": r["opponent_score"],
+                    "is_bye": "false", "is_playoff": "false"})
+    return out
+
+
+def load_history(team2mgr, managers: set[str], before_week: int | None = None):
     """All games between current managers, chronological, deduped to one row per game."""
     games = []
-    for r in read_csv("weekly_matchups.csv"):
+    for r in read_csv("weekly_matchups.csv") + current_results(before_week):
         if r["is_bye"] == "true":
             continue
         a = team2mgr.get((r["season"], r["team_name"].strip()))
@@ -334,13 +358,13 @@ def week_in_history(week: int, team2mgr) -> dict:
             "best_losing": next((x for x in rows if x["result"] == "Loss"), None)}
 
 
-def career_totals(team2mgr, managers: set[str]) -> dict:
+def career_totals(team2mgr, managers: set[str], before_week: int | None = None) -> dict:
     """Career wins and points per current manager, all opponents counted —
     but only games that matter: regular season plus championship-bracket
     playoffs (mirroring utils/data.py's pl_wins). Consolation-bracket games
     don't count, per the commissioner's ruling."""
     out = {m: {"wins": 0, "losses": 0, "points": 0.0} for m in managers}
-    for r in read_csv("weekly_matchups.csv"):
+    for r in read_csv("weekly_matchups.csv") + current_results(before_week):
         if r["is_bye"] == "true" or r["is_playoff"] == "true":
             continue
         m = team2mgr.get((r["season"], r["team_name"].strip()))
@@ -388,14 +412,18 @@ def emit_site(out: Path) -> None:
     src = DATA / "program"
     issues = []
     for path in sorted(src.glob("[0-9]*-week-*.json")):
-        if path.stem.endswith("-copy"):
-            continue
+        if path.stem.endswith("-copy") or "-recap" in path.stem:
+            continue  # recaps are emitted by scripts/build_recap.py --site
         issue = json.loads(path.read_text(encoding="utf-8"))
         issue["slug"] = path.stem
         issue["season"] = int(path.stem[:4])
         copy_path = src / f"{path.stem}-copy.json"
         if copy_path.exists():
-            issue["copy"] = json.loads(copy_path.read_text(encoding="utf-8"))
+            copy = json.loads(copy_path.read_text(encoding="utf-8"))
+            if copy.get("draft"):
+                print(f"skipping draft copy {copy_path.name} — not yet approved")
+            else:
+                issue["copy"] = copy
         out_path = out / f"{path.stem}.json"
         out_path.parent.mkdir(parents=True, exist_ok=True)
         out_path.write_text(json.dumps(issue), encoding="utf-8")
@@ -426,7 +454,9 @@ def main() -> None:
     managers = set(team_mgr.values())
 
     team2mgr = load_manager_map()
-    games = load_history(team2mgr, managers)
+    for team, mgr in team_mgr.items():
+        team2mgr[(str(CURRENT_SEASON), team)] = mgr
+    games = load_history(team2mgr, managers, before_week=args.week)
     finals = load_finals(team2mgr)
 
     cards = []
@@ -445,7 +475,7 @@ def main() -> None:
             "fact_pool": fact_candidates(ma, mb, facts),
         })
 
-    career = career_totals(team2mgr, managers)
+    career = career_totals(team2mgr, managers, before_week=args.week)
     issue = {
         "week": args.week,
         "cards": cards,

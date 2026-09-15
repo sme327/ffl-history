@@ -450,6 +450,83 @@ export type ProgramIssue = {
 
 export type ProgramIndexEntry = { slug: string; season: number; week: number };
 
+// ── The Recap (the Program's Tuesday tab) — scripts/build_recap.py ───────────
+// Every key below is a canonical manager name, like the rest of the museum.
+
+export type RecapPlayer = { team: string; name: string; position: string; points: number; projected: number | null; shortfall?: number };
+export type RecapSwap = { bench: string; bench_points: number; starter: string | null; starter_points: number; slot: string; gain: number };
+export type RecapSeriesNote =
+  | { kind: "first_meeting" }
+  | { kind: "snapped"; team: string; length: number }
+  | { kind: "streak"; team: string; length: number }
+  | { kind: "took_lead" | "evened"; team: string }
+  | { kind: "first_win"; team: string; games: number }
+  | { kind: "first_win_since"; team: string; season: number; week: number; games_between: number };
+
+export type RecapTeam = {
+  key: string;
+  actual: number;
+  projected: number | null;
+  vs_projection: number | null;
+  optimal: number;
+  efficiency: number | null;
+  left_on_bench: number;
+  best_swap: RecapSwap | null;
+  all_play: { wins: number; losses: number; ties: number };
+  score_rank: number;
+  opponent: string;
+  result: "win" | "loss" | "tie";
+  margin: number;
+};
+
+export type RecapGame = {
+  a: string;
+  b: string;
+  winner: string | null;
+  loser: string | null;
+  margin: number;
+  coulda_won: { team: string; optimal: number; needed: number } | null;
+  swap_flip: ({ team: string } & RecapSwap) | null;
+  series: {
+    before: Record<string, number>;
+    after: Record<string, number>;
+    games_after: number;
+    notes: RecapSeriesNote[];
+  };
+};
+
+export type RecapRecord =
+  | { kind: "high_all_time" | "low_all_time" | "blowout_all_time"; team: string; value: number; rank: number; of: number }
+  | { kind: "high_week" | "low_week"; team: string; value: number; week: number; rank: number; of: number }
+  | { kind: "career_high" | "career_low"; team: string; value: number; previous: number };
+
+/** Hand-approved copy (data/program/2026-week-NN-recap-copy.json). Same
+ * contract as ProgramCopy; notes keyed "MgrA|MgrB" sorted, awards keyed like
+ * Recap.awards (plus "QB_of_week", "RB_bench", "dud", ...). */
+export type RecapCopy = {
+  theme?: string;
+  cold_open?: string[];
+  kicker?: string;
+  notes?: Record<string, string>;
+  awards?: Record<string, string>;
+};
+
+export type Recap = {
+  slug: string;
+  season: number;
+  week: number;
+  managers: Record<string, { name: string; team: string; division: string }>;
+  teams: Record<string, RecapTeam>;
+  games: RecapGame[];
+  awards: Record<string, { team?: string; winner?: string; loser?: string; value: number }[]>;
+  players_of_week: Record<string, RecapPlayer[]>;
+  bench_best: Record<string, RecapPlayer[]>;
+  dud: RecapPlayer[];
+  standings: { manager: string; division: string; wins: number; losses: number; ties: number; points_for: number }[];
+  records: RecapRecord[];
+  copy?: RecapCopy;
+};
+
 // ── Accessors ─────────────────────────────────────────────────────────────────
 
 export const site = read<Site>("site");
@@ -479,6 +556,13 @@ export const programIndex = readMaybe<ProgramIndexEntry[]>("program/index") ?? [
 
 export function programIssue(slug: string): ProgramIssue | null {
   return readMaybe<ProgramIssue>(`program/${slug}`);
+}
+
+// Emitted by scripts/build_recap.py --site, after build_program.py --site.
+export const recapIndex = readMaybe<ProgramIndexEntry[]>("program/recaps") ?? [];
+
+export function programRecap(slug: string): Recap | null {
+  return readMaybe<Recap>(`program/${slug}-recap`);
 }
 
 export function franchiseProfile(id: string): FranchiseProfile | null {

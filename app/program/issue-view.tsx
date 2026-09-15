@@ -1,4 +1,6 @@
-import { ProgramIssue, ProgramCard, programIndex, site, slugify, managerIconSmPath } from "@/lib/data";
+import { ProgramIssue, ProgramCard, site, slugify, managerIconSmPath } from "@/lib/data";
+import { shortName, shortenNames } from "@/lib/program-names";
+import { ProgramTabs, ProgramIssuePills } from "./program-tabs";
 
 function noteKey(card: ProgramCard): string {
   return [card.manager_a, card.manager_b].sort().join("|");
@@ -11,30 +13,6 @@ const DIVISION_ICON: Record<string, string> = {
   Paper: "📄",
   Scissors: "✂️",
 };
-
-// Matchup cards speak in locker-room short names; the history ledger and
-// Milestone Watch keep full names. Longest keys replace first so
-// "Kevin Swanson" never half-matches through "Swanson".
-const SHORT_NAME: Record<string, string> = {
-  "Kevin O'Boyle": "O'Boyle",
-  "Kevin Swanson": "Swanson",
-  "Brian Clark": "Clark",
-  "Steve Swanson": "Steve",
-  Thomas: "Tom",
-  Douglas: "Doug",
-};
-
-function shortName(name: string): string {
-  return SHORT_NAME[name] ?? name;
-}
-
-function shortenNames(text: string): string {
-  let out = text;
-  for (const full of Object.keys(SHORT_NAME).sort((a, b) => b.length - a.length)) {
-    out = out.split(full).join(SHORT_NAME[full]);
-  }
-  return out;
-}
 
 function DivisionMark({ division }: { division: string }) {
   return (
@@ -82,7 +60,6 @@ export function IssueView({ issue }: { issue: ProgramIssue }) {
         ? [{ year: wih.worst.season, text: `${wih.worst.manager ?? wih.worst.team} finds the floor`, pts: wih.worst.score.toFixed(2), tag: "worst ever" }]
         : []),
     ];
-  const others = programIndex.filter((i) => i.slug !== issue.slug).reverse();
 
   return (
     <>
@@ -93,7 +70,7 @@ export function IssueView({ issue }: { issue: ProgramIssue }) {
         <h1>THE PROGRAM</h1>
         {copy?.theme && <div className="program-issue-line">{copy.theme}</div>}
       </div>
-      <hr className="divider" style={{ maxWidth: "420px" }} />
+      <ProgramTabs slug={issue.slug} week={issue.week} active="preview" />
 
       {copy && (
         <div className="program-open">
@@ -191,18 +168,7 @@ export function IssueView({ issue }: { issue: ProgramIssue }) {
         </>
       )}
 
-      {others.length > 0 && (
-        <>
-          <h2>Back Issues</h2>
-          <div className="chron-years" style={{ display: "flex", flexWrap: "wrap", gap: "0.35rem" }}>
-            {others.map((i) => (
-              <a className="year-pill" key={i.slug} href={`/program/${i.slug}`}>
-                {i.season} wk {i.week}
-              </a>
-            ))}
-          </div>
-        </>
-      )}
+      <ProgramIssuePills slug={issue.slug} />
     </>
   );
 }

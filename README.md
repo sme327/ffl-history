@@ -170,8 +170,25 @@ that brief into `data/program/2026-week-NN-copy.json` — the script computes fa
 it never writes prose. `--site` merges facts + copy into `build/data/program/` for
 `lib/data.ts`; it runs automatically as part of `npm run data`.
 
-Weekly cadence: after Monday night, re-run `--week N` (current-season results will
-layer in once `data/results_2026.csv` exists), write the copy file, `npm run deploy`.
+Weekly cadence: Wednesday or Thursday, run `--week N` (the finished weeks' results
+layer in from `data/results_2026.csv`, weeks before N only), write the copy file,
+`npm run deploy`. Each issue now has two tabs — this preview and the Tuesday Recap
+below; **docs/PROGRAM.md** is the full spec and runbook.
+
+### `scripts/fetch_week_lineups.py` and `scripts/build_recap.py` — The Recap
+The Program's Tuesday tab (`/program/[slug]/recap`, added 2026-09-15): every final,
+every lineup judged in hindsight, the awards, players of the week, standings.
+
+```
+python3 scripts/fetch_week_lineups.py --week N   # Yahoo box scores -> data/lineups_2026.csv, data/results_2026.csv
+python3 scripts/build_recap.py --week N          # facts + writer's brief into data/program/
+python3 scripts/build_recap.py --site            # merge facts + approved copy (chained into npm run data)
+```
+
+The fetch reads all six matchup pages with a saved Yahoo session (the museum's
+`.yahoo_cookies.json`, falling back to My FFL's) and refuses to write unless every
+team's starters sum to Yahoo's score and projections sum to Yahoo's "Orig Proj".
+Awards come from `scripts/recap_engine.py`, byte-identical with Dynasty 22's copy.
 
 ---
 

@@ -38,3 +38,6 @@ node_modules/
 .wrangler/
 dist/
 tsconfig.tsbuildinfo
+
+# Raw scraped pages (Yahoo headers carry the signed-in email) — never commit
+.local/
