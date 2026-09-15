@@ -66,8 +66,9 @@ Ties share an award.
 
 **Every meeting, consolation games included.** The commissioner decided this on 2026-09-15; a
 brief same-day ruling to drop consolation games was reversed before anything shipped. It is the
-same count the Week 1 preview and the Rivalries room use, and it deliberately differs from career
-win totals, which exclude consolation.
+same count the Week 1 preview uses. It differs from the Rivalries room and the career win totals,
+which both exclude consolation games, so three Week 1 series (O'Boyle–Swanson, Clark–Tom,
+Fadi–Steve) read one game heavier here than on their Rivalries pages.
 
 `build_program.load_history(team2mgr, managers, before_week)` serves both tabs. It only ever counts
 weeks before the issue's own.

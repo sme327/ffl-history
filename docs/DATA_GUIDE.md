@@ -358,6 +358,9 @@ pages; each run replaces only its own week's rows.
   2001–2025 and the golden fixtures stay untouched.
 
 **What counts toward a lifetime series** (commissioner, 2026-09-15): every meeting,
-consolation games included — the same count as the published Week 1 preview and the
-Rivalries room. This is deliberately different from the career win totals, where
-consolation games don't count. A preview counts only weeks before its own.
+consolation games included — the same count as the published Week 1 preview. The
+Rivalries room (utils/data.py: regular season + championship-bracket playoffs) and the
+career win totals do *not* count consolation games, so a series with a consolation
+meeting reads one game heavier on The Program than on its Rivalries page (Week 1:
+O'Boyle–Swanson, Clark–Tom, Fadi–Steve). Verified 2026-09-15; an open question whether
+to align them. A preview counts only weeks before its own.
