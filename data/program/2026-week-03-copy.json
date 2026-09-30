@@ -1,0 +1,47 @@
+{
+  "theme": "Old Finals",
+  "cold_open": [
+    "Three of this week's six games are championship rematches — five title games between them, from 2011 to 2024. It is the last week of the opening division run before the schedule crosses the lines."
+  ],
+  "notes": {
+    "Brian Clark|Shawn": "Clark's five straight from 2001 to 2006 is the longest run here; he once led by eight and has won four of the last five. Shawn took the last one, 77.83–72.89.",
+    "Eric|Thomas": "Eight meetings, 4–4. Tom took the last one by 1.11 points, the closest they've ever played, and has won three of the last five. Eric once led this young series by two.",
+    "Douglas|Steve Swanson": "Doug beat Steve for the 2020 title and owns the biggest blowout in the series, 49.18 points in 2024. Steve leads 10–9 anyway, and won the last one 89.53–61.29.",
+    "Evan|Fadi": "Thirty-five meetings, two of them for the championship: Evan won in 2012, Fadi in 2024. Fadi has won four of the last five, leads 18–17, and once beat Evan by 101.93 points.",
+    "Jeff|Kevin Swanson": "Swanson leads 10–4 and once led by seven. But Jeff has won three of the last five, the last by 48.28 — the biggest blowout in the series. He owns the closest game too, by 0.70.",
+    "Dominic|Kevin O'Boyle": "They've met twice for the title, and Dominic won both, in 2011 and 2021. O'Boyle leads the series 16–13 all the same, and won the last one by 47.71."
+  },
+  "history_lines": [
+    {
+      "year": 2025,
+      "text": "Jeff sets the Week 3 standard",
+      "pts": "128.77",
+      "tag": "best ever"
+    },
+    {
+      "year": 2015,
+      "text": "Nick Blaettler comes up 4.71 short",
+      "pts": "124.06",
+      "tag": "2nd best"
+    },
+    {
+      "year": 2023,
+      "text": "Evan crosses 120",
+      "pts": "121.02",
+      "tag": "3rd best"
+    },
+    {
+      "year": 2015,
+      "text": "Fadi scores 112.26 — and loses",
+      "pts": "112.26",
+      "tag": "best in defeat"
+    },
+    {
+      "year": 2003,
+      "text": "Byron's 21.56, still the Week 3 floor",
+      "pts": "21.56",
+      "tag": "worst ever"
+    }
+  ],
+  "kicker": "All six are division games, the last of the opening stretch. The cross-division schedule starts in Week 4."
+}

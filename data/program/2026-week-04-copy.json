@@ -1,0 +1,47 @@
+{
+  "theme": "Across the Line",
+  "cold_open": [
+    "Three weeks of division games are done. Week 4 sends every team across the line for the first time this season: a 2013 title-game rematch, a series dead even at 7–7, and an eleven-game lead that has never been wider."
+  ],
+  "notes": {
+    "Evan|Kevin Swanson": "Evan beat Swanson for the 2013 title. Swanson took their last meeting, 99.05–59.15 in Week 16 last year, and leads 16–15 over 31 games — one of them decided by 0.02 points.",
+    "Dominic|Shawn": "Shawn once beat Dominic five straight times, 2012 to 2016. Dominic now has five straight of his own, the last by 52.57 points, and leads the series 13–11.",
+    "Douglas|Thomas": "Doug once led this series by six and still holds a 9–5 edge. But Tom has won the last two, and owns its biggest blowout — 69.06 points in 2022.",
+    "Eric|Steve Swanson": "Only the sixth meeting, and lately it has been all Eric: three straight, the last 86.64–47.37 in Week 15 last year. Steve opened this young series 2–0.",
+    "Brian Clark|Jeff": "Fourteen games, dead even at 7–7. Clark once ran off four straight and led by four; Jeff has taken three of the last five, and owns the biggest blowout — 84.17 points in 2023.",
+    "Fadi|Kevin O'Boyle": "Twenty-seven meetings since 2002, and O'Boyle leads 19–8, the widest the gap has ever been. He once won six straight, and took their closest game by 0.71 points in 2015."
+  },
+  "history_lines": [
+    {
+      "year": 2012,
+      "text": "Kevin O'Boyle sets the Week 4 standard",
+      "pts": "129.58",
+      "tag": "best ever"
+    },
+    {
+      "year": 2023,
+      "text": "Douglas comes up 1.44 short",
+      "pts": "128.14",
+      "tag": "2nd best"
+    },
+    {
+      "year": 2023,
+      "text": "Kevin Swanson goes big the same week",
+      "pts": "125.17",
+      "tag": "3rd best"
+    },
+    {
+      "year": 2013,
+      "text": "Fadi scores 110.49 — and loses",
+      "pts": "110.49",
+      "tag": "best in defeat"
+    },
+    {
+      "year": 2006,
+      "text": "Fadi finds the floor",
+      "pts": "19.40",
+      "tag": "worst ever"
+    }
+  ],
+  "kicker": "All six are cross-division games, the first of the 2026 season."
+}
