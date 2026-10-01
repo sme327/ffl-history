@@ -78,7 +78,5 @@ Selected: Kevin O'Boyle's 6 straight from 2017⁠–⁠21 is the longest streak 
 - best losing effort: Fadi 110.49 (2013)
 
 ## Milestone watch
-- Evan is 90.69 points from 25,000 career points
-- Fadi is one win from 175 career wins
-- Fadi is 30.75 points from 27,500 career points
-- all-time wins race: Kevin Swanson 193, Brian Clark 191
+- Steve Swanson is 120.82 points from 22,500 career points
+- all-time wins race: Kevin Swanson 194, Brian Clark 192
