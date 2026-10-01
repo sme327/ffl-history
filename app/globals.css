@@ -241,6 +241,41 @@ blockquote { margin: 1rem 0; padding-left: 1rem; border-left: 2px solid var(--ha
 .divider::before { left: 0; transform: translateY(-50%) rotate(180deg); }
 .divider::after { right: 0; }
 
+/* ── Across the Line pilot review ─────────────────────────────────────── */
+.show-review-header {
+  max-width: 900px; margin: 2.75rem auto 1.5rem; text-align: center;
+}
+.show-review-header h1 { font-size: clamp(3.5rem, 9vw, 6.5rem); margin: 0.2rem 0; }
+.show-review-title {
+  font-family: var(--serif); font-style: italic; color: var(--gold-bright);
+  font-size: clamp(1.15rem, 3vw, 1.7rem); margin-top: 0.4rem;
+}
+.show-review-header p { max-width: 680px; margin: 1rem auto 0; }
+.show-player-case {
+  max-width: 1120px; margin: 2rem auto 0; padding: 0.8rem;
+  background: linear-gradient(180deg, rgba(255, 246, 224, 0.07), transparent 35%), #050b14;
+  border: 1px solid var(--gold-dim); border-radius: 6px;
+  box-shadow: 0 30px 75px rgba(0, 0, 0, 0.62), inset 0 1px rgba(255, 246, 224, 0.09);
+}
+.show-player-label {
+  display: flex; justify-content: space-between; gap: 1rem; padding: 0.25rem 0.3rem 0.8rem;
+  color: var(--muted); font-size: var(--step--1); letter-spacing: 2px; text-transform: uppercase;
+}
+.show-player { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+.show-review-notes {
+  max-width: 980px; margin: 2rem auto 1rem; display: grid;
+  grid-template-columns: minmax(0, 1fr) auto; gap: 3rem; align-items: center;
+}
+.show-review-notes h2 { margin-top: 0.25rem; }
+.show-review-actions { text-align: center; min-width: 210px; }
+.show-review-actions .teaser-cta { display: inline-block; margin-bottom: 0.65rem; }
+@media (max-width: 720px) {
+  .show-player-label { display: block; }
+  .show-player-label span { display: block; }
+  .show-player-label span + span { margin-top: 0.2rem; }
+  .show-review-notes { grid-template-columns: 1fr; gap: 1rem; }
+}
+
 /* ── Tier 2 — display case (the default .card) ──────────────────────────── */
 /* A thin brass hairline and a glass-like top light. The ornate border-image
    frame this used to carry now belongs to tier 1 only — when every stat
