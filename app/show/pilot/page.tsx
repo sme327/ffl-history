@@ -1,55 +1,70 @@
 export const metadata = {
-  title: "Across the Line — Pilot Review",
-  description: "A work-in-progress pilot from the {insert witty name here} Museum.",
+  title: "Across the Line — Rivalry Round One",
+  description:
+    "Graham Keeper and Kate Hedges recap three weeks of fantasy football. Real scores. Questionable decisions. A SME327 production.",
+  openGraph: {
+    title: "Across the Line — Rivalry Round One",
+    description: "Real scores. Questionable decisions. Watch the animated fantasy football pilot with Graham Keeper and Kate Hedges.",
+    url: "https://iwnh.sme327.com/show/pilot",
+    type: "website",
+    images: [{ url: "https://iwnh.sme327.com/show/studio-poster-v001.webp", width: 1920, height: 1080, alt: "Graham Keeper and Kate Hedges at the Across the Line studio desk" }],
+  },
 };
+
+const episodeFile = "/show/pilot-review.mp4?v=20261005-v033-720p";
 
 export default function PilotReviewPage() {
   return (
-    <>
-      <div
-        className="room-photo"
-        style={{ backgroundImage: "url(/museum/rooms/entrance-hall.webp)" }}
-      />
-      <div className="room-scrim" />
+    <div className="atl-page">
+      <a className="atl-skip" href="#watch">Skip to episode</a>
+      <nav className="atl-topbar" aria-label="Show navigation">
+        <a className="atl-home" href="/">← Back to the league museum</a>
+        <span className="atl-production">A SME327 production</span>
+      </nav>
 
-      <header className="show-review-header">
-        <div className="eyebrow">A SME327 Production · Pilot Review</div>
-        <h1>Across the Line</h1>
-        <div className="show-review-title">Rivalry Round One: The Standings Are Lying</div>
-        <p>
-          A work-in-progress animated pilot from the {"{insert witty name here}"} Museum.
-        </p>
+      <header className="atl-masthead">
+        <div className="atl-masthead-copy">
+          <div className="atl-kicker">Fantasy football · Unnecessarily serious coverage</div>
+          <h1>Across <span>the Line</span></h1>
+          <p className="atl-tagline">Real scores. Questionable decisions.</p>
+        </div>
+        <div className="atl-episode-stamp" aria-label="Pilot episode, weeks one to three">
+          <span>Pilot episode</span>
+          <strong>01</strong>
+          <span>Weeks 1–3</span>
+        </div>
       </header>
 
-      <section className="show-player-case" aria-label="Across the Line pilot video">
-        <div className="show-player-label">
-          <span>Pilot Review</span>
-          <span>6:45 · October 2, 2026</span>
+      <section className="atl-broadcast" id="watch" tabIndex={-1} aria-label="Watch Across the Line pilot">
+        <div className="atl-player-bar">
+          <span><i aria-hidden="true" /> In the studio</span>
+          <span>Animated review · V033 · 7:45 · 720p</span>
         </div>
-        <video className="show-player" controls preload="metadata" playsInline>
-          <source src="/show/pilot-review.mp4?v=20261002-v004" type="video/mp4" />
-          Your browser does not support embedded video. You can use the download link below.
+        <video
+          className="atl-player"
+          controls
+          preload="metadata"
+          playsInline
+          poster="/show/studio-poster-v001.webp"
+          aria-label="Rivalry Round One: The Standings Are Lying — pilot review"
+        >
+          <source src={episodeFile} type="video/mp4" />
+          Your browser does not support embedded video. <a href={episodeFile}>Download the episode instead.</a>
         </video>
+        <div className="atl-lower-third">
+          <div className="atl-episode-label">Episode 01 <span>Weeks 1–3</span></div>
+          <div className="atl-episode-title">
+            <span>Rivalry Round One</span>
+            <h2>The Standings Are Lying</h2>
+          </div>
+          <div className="atl-host-credit">At the desk<strong>Graham Keeper <span>&amp;</span> Kate Hedges</strong></div>
+        </div>
       </section>
 
-      <div className="show-review-notes">
-        <div>
-          <div className="eyebrow">Review Cut</div>
-          <h2>What you’re watching</h2>
-          <p>
-            Graham Keeper and Kate Hedges recap the first three weeks of divisional
-            matchups, with Kittle Watch, the Evidence Locker, and a look ahead to Week 4.
-            This updated review cut uses the approved host designs and current voices;
-            character animation and further visual polish are still in development.
-          </p>
-        </div>
-        <div className="show-review-actions">
-          <a className="teaser-cta" href="/show/pilot-review.mp4?v=20261002-v004" download>
-            Download review cut
-          </a>
-          <div className="muted">Best viewed with sound on.</div>
-        </div>
-      </div>
-    </>
+      <footer className="atl-footer">
+        <span>Across the Line <small> / A SME327 production</small></span>
+        <a href="/program">Meet the league →</a>
+      </footer>
+    </div>
   );
 }
