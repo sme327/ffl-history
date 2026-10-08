@@ -1,0 +1,153 @@
+{
+  "checkedAt": "2026-10-08T18:59:13.393Z",
+  "base": "https://iwnh.sme327.com",
+  "localOnly": false,
+  "status": "live-pages-media-and-range-passed",
+  "pages": [
+    {
+      "path": "/show",
+      "status": 200
+    },
+    {
+      "path": "/show/previews/week-5",
+      "status": 200
+    },
+    {
+      "path": "/show/pilot",
+      "status": 200
+    },
+    {
+      "path": "/show/episodes/1",
+      "status": 200
+    },
+    {
+      "path": "/program/2026-week-04/recap",
+      "status": 200
+    }
+  ],
+  "video": {
+    "path": "/show/previews/2026-week-05.mp4",
+    "bytes": 20758353,
+    "sha256": "cce7116d761384edfb9a8c9c05564c9cba3cf82aadd4e699a311c418607c4eda",
+    "contentType": "video/mp4",
+    "rangeStatus": 206,
+    "rangeVerified": true
+  },
+  "localRangeLimitation": null,
+  "pilotV033Preserved": true,
+  "burnedInCaptionsOnly": true,
+  "missingProgramLinkHidden": true,
+  "deploymentApproved": true,
+  "deployed": true,
+  "additionalRangeChecks": [
+    {
+      "path": "/show/previews/2026-week-05.mp4",
+      "header": "bytes=-32",
+      "status": 206,
+      "bytes": 32
+    },
+    {
+      "path": "/show/previews/2026-week-05.mp4",
+      "header": "bytes=20758321-",
+      "status": 206,
+      "bytes": 32
+    },
+    {
+      "path": "/show/previews/2026-week-05.mp4",
+      "header": "bytes=20758353-",
+      "status": 416
+    },
+    {
+      "path": "/show/pilot-review.mp4",
+      "header": "bytes=-32",
+      "status": 206,
+      "bytes": 32
+    },
+    {
+      "path": "/show/pilot-review.mp4",
+      "header": "bytes=24291109-",
+      "status": 206,
+      "bytes": 32
+    },
+    {
+      "path": "/show/pilot-review.mp4",
+      "header": "bytes=24291141-",
+      "status": 416
+    }
+  ],
+  "hubSlotsVerified": true,
+  "repeatedShowPageChecks": [
+    {
+      "round": 1,
+      "path": "/show",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 1,
+      "path": "/show/previews/week-5",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 1,
+      "path": "/show/pilot",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 1,
+      "path": "/show/episodes/1",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 2,
+      "path": "/show",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 2,
+      "path": "/show/previews/week-5",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 2,
+      "path": "/show/pilot",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 2,
+      "path": "/show/episodes/1",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 3,
+      "path": "/show",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 3,
+      "path": "/show/previews/week-5",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 3,
+      "path": "/show/pilot",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 3,
+      "path": "/show/episodes/1",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    }
+  ]
+}

@@ -4,6 +4,8 @@ The museum hosts the animated show *Across the Line* (Graham Keeper and Kate Hed
 
 ## Current Week 5 release: V007
 
+**Live and verified October 8.** [Watch Week 5](https://iwnh.sme327.com/show/previews/week-5) · [Show hub](https://iwnh.sme327.com/show). Worker version `d49f0a30-6819-41fa-bf14-4d74fffef385`, deployed source `37c4347`. The final Yahoo capture was **11:58 AM Pacific**, and all three spoken configurations passed. Twelve repeat show-page requests match the built HTML; both movie hashes, prefix/suffix/open-range requests and unsatisfiable-range responses pass. Week 5 browser playback and seeking resume correctly, and the unchanged V033 pilot plays. Initial seeking and page-limit failures were repaired before the main-branch handoff. No known release failure remains. See the release manifest, live QA, browser QA and final-lineup report.
+
 The owner authorized deployment after trimming Decision to Watch. Graham 116 now ends at “leading scorer”; Kate 116 is unchanged. The score card shows SHOUGH 14.13 START / STROUD 14.28 BENCH and stays through Kate's full response. Its stamp remains the actual data-check time, **THU 10:11 AM PT**. No projection gap is spoken or tested.
 
 The clean V007 export is **4:41.200, 1280×720, 30 fps, 20,758,353 bytes (19.80 MiB)**. The catalog uses `20261008-slate2-v007` and `4:41`. The manifest binds its checksum and records explicit deployment authorization. The branch already merged main's Week 4 recap `f60ca86` via `58e7175`.

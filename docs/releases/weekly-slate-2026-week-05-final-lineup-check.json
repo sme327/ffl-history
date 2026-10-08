@@ -1,0 +1,57 @@
+{
+  "capturedAt": "2026-10-08T18:58:16.754847+00:00",
+  "checkedAt": "2026-10-08T18:58:17.303Z",
+  "checks": [
+    {
+      "team": "Futball in the Groin",
+      "players": [
+        {
+          "name": "George Kittle",
+          "state": "start",
+          "projected": 7.51
+        },
+        {
+          "name": "Rhamondre Stevenson",
+          "state": "start",
+          "projected": 7.6
+        }
+      ]
+    },
+    {
+      "team": "Bears",
+      "players": [
+        {
+          "name": "Jaylen Waddle",
+          "state": "start",
+          "projected": 7.89
+        },
+        {
+          "name": "Michael Wilson",
+          "state": "bench",
+          "projected": 10.54
+        }
+      ]
+    },
+    {
+      "team": "Guinness",
+      "players": [
+        {
+          "name": "Tyler Shough",
+          "state": "start",
+          "projected": 14.13
+        },
+        {
+          "name": "C.J. Stroud",
+          "state": "bench",
+          "projected": 14.28
+        }
+      ]
+    }
+  ],
+  "pass": true,
+  "projectionGapIsNotSpoken": true,
+  "projectionGapTestApplied": false,
+  "cardDataRemainsAsOf": "2026-10-08T17:11:39.236464+00:00",
+  "cardStampNotRelabelledAsNewer": true,
+  "releaseSHA256": "cce7116d761384edfb9a8c9c05564c9cba3cf82aadd4e699a311c418607c4eda"
+}

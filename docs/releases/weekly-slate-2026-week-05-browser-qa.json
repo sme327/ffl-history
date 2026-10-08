@@ -1,0 +1,21 @@
+{
+  "workerVersion": "d49f0a30-6819-41fa-bf14-4d74fffef385",
+  "week5URL": "https://iwnh.sme327.com/show/previews/week-5",
+  "version": "20261008-slate2-v007",
+  "durationSeconds": 281.216,
+  "playbackObservedAtSeconds": 25.459336,
+  "timelineSeekToSeconds": 265.45855,
+  "resumedPlaybackObservedAtSeconds": 265.572737,
+  "readyStateAfterSeek": 4,
+  "pilotURL": "https://iwnh.sme327.com/show/pilot",
+  "pilotVersion": "20261005-v033-720p",
+  "pilotDurationSeconds": 465.237,
+  "pilotPlaybackFromSeconds": 0.018714,
+  "pilotPlaybackToSeconds": 23.959126,
+  "pilotMediaVerifiedAgainAfterFinalDeployment": true,
+  "pilotBrowserPlaybackTestOnUnchangedMovieBeforeStaticPageRepair": true,
+  "hubWeek5InThisWeek": true,
+  "hubEpisode1InLatestEpisode": true,
+  "initialSeekFailureResolved": true,
+  "initialShowPageResourceErrorsResolvedByBuildTimePages": true
+}

@@ -28,5 +28,12 @@
   "pilotV033Bytes": 24291141,
   "releaseApproved": true,
   "deploymentApproved": true,
-  "deployed": false
+  "deployed": true,
+  "workerVersion": "d49f0a30-6819-41fa-bf14-4d74fffef385",
+  "deployedSourceCommit": "37c4347",
+  "finalLineupCheckedAt": "2026-10-08T18:58:16.754847+00:00",
+  "liveVerifiedAt": "2026-10-08T18:59:13.393Z",
+  "liveURL": "https://iwnh.sme327.com/show/previews/week-5",
+  "initialFailuresResolved": ["MP4 Range requests returned 200 instead of 206", "Intermittent show-page rendering exceeded Cloudflare limits"],
+  "remainingKnownReleaseFailures": []
 }
