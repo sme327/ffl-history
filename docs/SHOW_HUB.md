@@ -2,7 +2,19 @@
 
 The museum hosts the animated show *Across the Line* (Graham Keeper and Kate Hedges). This page covers how its pages are laid out and how to ship a new weekly preview or episode.
 
-## Week 5 release preparation
+## Current Week 5 release: V007
+
+The owner authorized deployment after trimming Decision to Watch. Graham 116 now ends at “leading scorer”; Kate 116 is unchanged. The score card shows SHOUGH 14.13 START / STROUD 14.28 BENCH and stays through Kate's full response. Its stamp remains the actual data-check time, **THU 10:11 AM PT**. No projection gap is spoken or tested.
+
+The clean V007 export is **4:41.200, 1280×720, 30 fps, 20,758,353 bytes (19.80 MiB)**. The catalog uses `20261008-slate2-v007` and `4:41`. The manifest binds its checksum and records explicit deployment authorization. The branch already merged main's Week 4 recap `f60ca86` via `58e7175`.
+
+Deploy from this checkout with `FFL_VERIFY_WEEK5_LINEUPS=1 npm run deploy`. The opt-in gate runs after the full build and immediately before upload: fresh Yahoo selections must still show Kittle/Stevenson starting, Waddle starting/Wilson benched, and Shough starting/Stroud benched. It writes a sanitized final-check report and stops upload on any failure. Raw Yahoo pages and session data stay ignored in the show checkout. The final check does not pretend the displayed projections were captured later than their stamp.
+
+After deployment run `node scripts/verify-weekly-show-release.mjs https://iwnh.sme327.com --live`; verify the hub's This week / Latest episode slots, actual playback and seeking, then merge show-hub into Museum main and push. Preserve prior Worker version `bcc35893-80e0-4375-9016-d8c3a4b1524a` for rollback. The pilot in this branch is V033, not V031; verify its known hash and playback.
+
+Before the merge, the original main checkout's dirty work was saved in retained stash `07ccd67d30fa61a44adbd5d6e057f332512c1a38`. Restore its three unrelated Week 5 Program drafts afterward. Do not apply the overlapping old CSS/pilot-route changes over the approved hub; they remain recoverable in the retained stash. Do not stage the deployment checkout's `node_modules` symlink.
+
+## Historical V006 release preparation (superseded)
 
 The owner approved Weekly Slate V005 and requested the clean 720p release on October 8. **Do not deploy until the owner says go.** Week 5 is marked `published` only in the prepared local branch; it is not live yet. The branch includes the Week 4 recap through merge `58e7175`, containing main's `f60ca86`.
 

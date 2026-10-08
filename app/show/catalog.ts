@@ -95,8 +95,8 @@ export const PREVIEWS: ShowPreview[] = [
     video: "/show/previews/2026-week-05.mp4",
     // Captions are burned into the approved release; do not show them twice.
     poster: "/show/studio-poster-v001.webp",
-    version: "20261008-slate2-v006",
-    runtime: "4:47",
+    version: "20261008-slate2-v007",
+    runtime: "4:41",
     summary:
       "Six Week 4 results, the Box Score, cross-division progress, Ramirez’s Second Opinion, and all six Week 5 previews.",
     programSlug: "2026-week-05",
