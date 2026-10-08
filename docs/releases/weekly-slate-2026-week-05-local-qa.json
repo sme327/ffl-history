@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-08T18:41:51.695Z",
+  "checkedAt": "2026-10-08T18:56:00.966Z",
   "base": "http://127.0.0.1:4187",
   "localOnly": true,
   "status": "local-checks-passed",
@@ -38,5 +38,116 @@
   "burnedInCaptionsOnly": true,
   "missingProgramLinkHidden": true,
   "deploymentApproved": true,
-  "deployed": false
+  "deployed": false,
+  "additionalRangeChecks": [
+    {
+      "path": "/show/previews/2026-week-05.mp4",
+      "header": "bytes=-32",
+      "status": 206,
+      "bytes": 32
+    },
+    {
+      "path": "/show/previews/2026-week-05.mp4",
+      "header": "bytes=20758321-",
+      "status": 206,
+      "bytes": 32
+    },
+    {
+      "path": "/show/previews/2026-week-05.mp4",
+      "header": "bytes=20758353-",
+      "status": 416
+    },
+    {
+      "path": "/show/pilot-review.mp4",
+      "header": "bytes=-32",
+      "status": 206,
+      "bytes": 32
+    },
+    {
+      "path": "/show/pilot-review.mp4",
+      "header": "bytes=24291109-",
+      "status": 206,
+      "bytes": 32
+    },
+    {
+      "path": "/show/pilot-review.mp4",
+      "header": "bytes=24291141-",
+      "status": 416
+    }
+  ],
+  "hubSlotsVerified": true,
+  "repeatedShowPageChecks": [
+    {
+      "round": 1,
+      "path": "/show",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 1,
+      "path": "/show/previews/week-5",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 1,
+      "path": "/show/pilot",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 1,
+      "path": "/show/episodes/1",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 2,
+      "path": "/show",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 2,
+      "path": "/show/previews/week-5",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 2,
+      "path": "/show/pilot",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 2,
+      "path": "/show/episodes/1",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 3,
+      "path": "/show",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 3,
+      "path": "/show/previews/week-5",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 3,
+      "path": "/show/pilot",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    },
+    {
+      "round": 3,
+      "path": "/show/episodes/1",
+      "status": 200,
+      "buildTimeHTMLVerified": true
+    }
+  ]
 }

@@ -22,6 +22,12 @@ The internal asset binding omits a length in this runtime; the two checksummed r
 
 `node scripts/test-video-range.mjs`, generated binding types, type checking and local Workers-runtime QA pass. Local Week 5 prefix and pilot suffix requests return HTTP 206 with correct bytes. Repeat live range checks and browser playback/seek after the repair deployment; do not waive the production range guard.
 
+### Show-page rendering repair
+
+Live verification also caught intermittent HTTP 503 / Cloudflare 1102 failures on the hub and preview. A later check passing did not erase those failures. `scripts/build-show-pages.mjs` now renders exactly four public routes with the installed vinext production server at build time: `/show`, `/show/previews/week-5`, `/show/pilot`, and `/show/episodes/1`. It preflights all four before writing generated HTML into `dist/client`; the existing static asset router serves the clean URLs. The pages regenerate with every deployment, after catalog and Program data changes. Other museum routes remain unchanged SSR. No account-plan or paid-resource change was made.
+
+The live verifier compares these pages against their generated HTML hashes and repeats all four requests three times. Current-snapshot authentication remains outside the build, in the separate final upload gate. Static page generation does not touch the episode, its stamped facts, or either MP4 checksum. Add future published watch routes to this narrow build list.
+
 ## Historical V006 release preparation (superseded)
 
 The owner approved Weekly Slate V005 and requested the clean 720p release on October 8. **Do not deploy until the owner says go.** Week 5 is marked `published` only in the prepared local branch; it is not live yet. The branch includes the Week 4 recap through merge `58e7175`, containing main's `f60ca86`.

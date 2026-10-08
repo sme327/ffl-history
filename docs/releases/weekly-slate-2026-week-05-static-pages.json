@@ -1,0 +1,27 @@
+{
+  "builtAt": "2026-10-08T18:54:02.546Z",
+  "scope": "four-public-show-pages-only",
+  "releaseVersion": "v007",
+  "pages": [
+    {
+      "route": "/show",
+      "bytes": 24169,
+      "sha256": "54efdbe3f3468af0460dbafd8ba011b72f046e2d39a37d0bfc52af3925fba3f2"
+    },
+    {
+      "route": "/show/previews/week-5",
+      "bytes": 21716,
+      "sha256": "91514f0cc5c00cb2af6e6f1ee8f92a9fa6aaac7048062b9bb865a72f5da98d5f"
+    },
+    {
+      "route": "/show/pilot",
+      "bytes": 24942,
+      "sha256": "68d30a1f2cd37a456a1a65c8b0b6e8198fa82c0acd5ee2ee50a7ab488c6f043a"
+    },
+    {
+      "route": "/show/episodes/1",
+      "bytes": 26377,
+      "sha256": "f18c5ade1afe9d3548983ce7b40ca5e56d15162ac901084117d2962f08844cfb"
+    }
+  ]
+}
