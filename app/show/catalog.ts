@@ -66,9 +66,9 @@ export const EPISODES: ShowEpisode[] = [
     released: "2026-10-04",
     runtime: "7:45",
     video: "/show/pilot-review.mp4",
-    // Captions are burned into V031, so no separate track.
+    // Captions are burned into the preserved live V033 pilot, so no separate track.
     poster: "/show/studio-poster-v001.webp",
-    version: "20261004-v031",
+    version: "20261005-v033-720p",
     summary:
       "Three weeks of division games, and every division finished with the exact same standings. Graham Keeper and Kate Hedges explain what that hides.",
     segments: [
@@ -88,15 +88,17 @@ export const PREVIEWS: ShowPreview[] = [
   {
     kind: "preview",
     week: 5,
-    title: "Week 5 Preview",
-    dek: "Every Week 5 matchup, one fact at a time.",
-    status: "draft",
-    // Fill these in on release day (docs/SHOW_HUB.md):
+    title: "Week 5 Weekly Slate",
+    dek: "Week 4 review · Week 5 preview",
+    status: "published",
+    released: "2026-10-08",
     video: "/show/previews/2026-week-05.mp4",
-    captions: "/show/previews/2026-week-05.vtt",
+    // Captions are burned into the approved release; do not show them twice.
     poster: "/show/studio-poster-v001.webp",
-    version: "20261008-v001",
-    runtime: "",
+    version: "20261008-slate2-v006",
+    runtime: "4:47",
+    summary:
+      "Six Week 4 results, the Box Score, cross-division progress, Ramirez’s Second Opinion, and all six Week 5 previews.",
     programSlug: "2026-week-05",
   },
 ];

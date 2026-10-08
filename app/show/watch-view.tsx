@@ -8,6 +8,7 @@ import {
   weeksLabel,
   withVersion,
 } from "./catalog";
+import { programIndex } from "@/lib/data";
 
 /** Shared chrome for every show page: back links and the show masthead strip. */
 export function ShowTopbar() {
@@ -69,6 +70,7 @@ export function WatchView({ item }: { item: ShowItem }) {
   const latest = latestEpisode();
   const preview = currentPreview();
   const played = item.kind === "preview" && previewPlayed(item);
+  const pairedProgramAvailable = item.programSlug && programIndex.some((issue) => issue.slug === item.programSlug);
   const next = [
     preview && preview !== item ? preview : null,
     latest && latest !== item ? latest : null,
@@ -111,7 +113,7 @@ export function WatchView({ item }: { item: ShowItem }) {
 
       <section className="atl-review-note" aria-label="More">
         <div>
-          {item.programSlug && (
+          {pairedProgramAvailable && item.programSlug && (
             <p>
               Pairs with <a href={`/program/${item.programSlug}`}>The Program, Week {item.programSlug.split("-").pop()?.replace(/^0/, "")}</a>.
             </p>

@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-10-08T16:47:34.288Z",
+  "base": "http://127.0.0.1:4186",
+  "localOnly": true,
+  "status": "local-pages-and-video-passed-production-range-pending",
+  "pages": [
+    {
+      "path": "/show",
+      "status": 200
+    },
+    {
+      "path": "/show/previews/week-5",
+      "status": 200
+    },
+    {
+      "path": "/show/pilot",
+      "status": 200
+    },
+    {
+      "path": "/show/episodes/1",
+      "status": 200
+    },
+    {
+      "path": "/program/2026-week-04/recap",
+      "status": 200
+    }
+  ],
+  "video": {
+    "path": "/show/previews/2026-week-05.mp4",
+    "bytes": 20918660,
+    "sha256": "b0c9bf93dc6757c5a299e4a0496c8eb10c19867900cd1bf02da732c391d94900",
+    "contentType": "video/mp4",
+    "rangeStatus": 200,
+    "rangeVerified": false
+  },
+  "localRangeLimitation": "Installed Miniflare asset worker returns a full 200 response for Range requests; resolveAssetIntentToResponse emits OkResponse. Verify HTTP 206 seeking against the actual new URL only after authorized deployment.",
+  "pilotV033Preserved": true,
+  "burnedInCaptionsOnly": true,
+  "missingProgramLinkHidden": true,
+  "deploymentApproved": false,
+  "deployed": false
+}

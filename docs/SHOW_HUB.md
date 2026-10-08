@@ -2,6 +2,20 @@
 
 The museum hosts the animated show *Across the Line* (Graham Keeper and Kate Hedges). This page covers how its pages are laid out and how to ship a new weekly preview or episode.
 
+## Week 5 release preparation
+
+The owner approved Weekly Slate V005 and requested the clean 720p release on October 8. **Do not deploy until the owner says go.** Week 5 is marked `published` only in the prepared local branch; it is not live yet. The branch includes the Week 4 recap through merge `58e7175`, containing main's `f60ca86`.
+
+The video belongs at `public/show/previews/2026-week-05.mp4`, with burned-in captions and no separate VTT track. The catalog uses runtime `4:47`, release date `2026-10-08`, and version `20261008-slate2-v006`. The matching Week 5 Program draft is outside this branch; the player suppresses that link until its issue exists in the built Program index.
+
+Local type checking, history-data generation and the complete vinext build passed. Cloudflare's local preview serves `/show`, `/show/previews/week-5`, both pilot URLs and the Week 4 recap successfully. It serves the clean 20,918,660-byte release as `video/mp4` with the expected hash. The release is 4:46.933, 1280×720 at 30 fps, with all 38 takes and no lineup cuts. The final lineup check is October 8 at 8:48 AM Pacific. Evidence is in `docs/releases/weekly-slate-2026-week-05.json` and `docs/releases/weekly-slate-2026-week-05-local-qa.json`.
+
+The local Miniflare asset handler returns a full 200 response to Range requests. **Production byte-range seeking remains unverified**, explicitly recorded in QA; check the new public video's HTTP 206 response and browser seeking after authorized deployment. No production-serving changes were made to work around this local limitation. The verifier is strict by default; `--allow-local-no-range` records this exception without marking the range check passed.
+
+The original main checkout's uncommitted pilot and Week 5 Program edits are preserved separately and must not be reset or overwritten. If deployment is delayed, refresh the lineup check and rebuild any changed exchange before going live. The show repository's `weekly/2026-week-05/RELEASE_BUILD_NOTES.md` holds the release evidence and checkout path. This preparation is local only, with no push or deployment.
+
+The branch's pilot MP4 already matches the verified live V033 delivery: SHA-256 `7efaea2692c49d8fb51e51b52718c6a531deddd7a62d3d1831f9126ca773e383`, 24,291,141 bytes. Its stale V031 catalog comment/cache version is corrected to V033; the media itself is unchanged.
+
 ## Pages
 
 | URL | What it is |
@@ -37,8 +51,9 @@ Everything is server-rendered. There is no client JS; the archive uses `<details
    - check `video`, `poster`, and `programSlug`
    - change `version` whenever a file is replaced, to bust browser caches
 5. **Next week.** Add a `draft` entry for the following week, so it's ready.
-6. **Check locally:** `npm run typecheck`, then `npm run build`, then `npm run start`. Open `/show` and `/show/previews/week-N`.
-7. **Ship:** `npm run deploy`, then commit and push.
+6. **Check locally:** `npm run typecheck`, then `npm run build`. Use the built Cloudflare preview for media checks (`wrangler dev --local --config dist/server/wrangler.json`); the generic Node preview may use the wrong MP4 content type. Open `/show` and `/show/previews/week-N`. For Week 5, `node scripts/verify-weekly-show-release.mjs http://127.0.0.1:4186 --allow-local-no-range` records local evidence and the pending production-range check.
+7. **Hold for owner authorization.** A local catalog value of `published` is not permission to deploy. Commit the staged release; do not deploy or push until explicitly authorized. If lineups have become stale, refresh them and replace changed exchanges before deployment.
+8. **Ship only after “go”:** `npm run deploy`, then verify the new public page, content type, bytes/hash, and byte-range seeking before reporting it live. Preserve the previous deployment for rollback.
 
 ## Release-day runbook: episode
 
