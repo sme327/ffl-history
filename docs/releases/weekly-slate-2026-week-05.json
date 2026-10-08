@@ -25,6 +25,7 @@
   "mergedRecap": "f60ca86",
   "recapMergeCommit": "58e7175",
   "pilotV033PreservedSHA256": "7efaea2692c49d8fb51e51b52718c6a531deddd7a62d3d1831f9126ca773e383",
+  "pilotV033Bytes": 24291141,
   "releaseApproved": true,
   "deploymentApproved": true,
   "deployed": false

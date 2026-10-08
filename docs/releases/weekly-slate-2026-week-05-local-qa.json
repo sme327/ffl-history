@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-10-08T16:47:34.288Z",
-  "base": "http://127.0.0.1:4186",
+  "checkedAt": "2026-10-08T18:41:51.695Z",
+  "base": "http://127.0.0.1:4187",
   "localOnly": true,
-  "status": "local-pages-and-video-passed-production-range-pending",
+  "status": "local-checks-passed",
   "pages": [
     {
       "path": "/show",
@@ -27,16 +27,16 @@
   ],
   "video": {
     "path": "/show/previews/2026-week-05.mp4",
-    "bytes": 20918660,
-    "sha256": "b0c9bf93dc6757c5a299e4a0496c8eb10c19867900cd1bf02da732c391d94900",
+    "bytes": 20758353,
+    "sha256": "cce7116d761384edfb9a8c9c05564c9cba3cf82aadd4e699a311c418607c4eda",
     "contentType": "video/mp4",
-    "rangeStatus": 200,
-    "rangeVerified": false
+    "rangeStatus": 206,
+    "rangeVerified": true
   },
-  "localRangeLimitation": "Installed Miniflare asset worker returns a full 200 response for Range requests; resolveAssetIntentToResponse emits OkResponse. Verify HTTP 206 seeking against the actual new URL only after authorized deployment.",
+  "localRangeLimitation": null,
   "pilotV033Preserved": true,
   "burnedInCaptionsOnly": true,
   "missingProgramLinkHidden": true,
-  "deploymentApproved": false,
+  "deploymentApproved": true,
   "deployed": false
 }

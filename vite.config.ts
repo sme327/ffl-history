@@ -17,6 +17,12 @@ export default defineConfig(async () => {
         config: {
           main: "./worker/index.ts",
           compatibility_flags: ["nodejs_compat"],
+          // Only show videos need explicit byte-range delivery. Everything else
+          // retains the framework's existing asset-first routing.
+          assets: {
+            binding: "ASSETS",
+            run_worker_first: ["/show/previews/*.mp4", "/show/pilot-review.mp4"],
+          },
         },
       }),
     ],

@@ -14,6 +14,14 @@ After deployment run `node scripts/verify-weekly-show-release.mjs https://iwnh.s
 
 Before the merge, the original main checkout's dirty work was saved in retained stash `07ccd67d30fa61a44adbd5d6e057f332512c1a38`. Restore its three unrelated Week 5 Program drafts afterward. Do not apply the overlapping old CSS/pilot-route changes over the approved hub; they remain recoverable in the retained stash. Do not stage the deployment checkout's `node_modules` symlink.
 
+### Video seeking repair
+
+The first V007 upload (`c17e22db-2d97-4c3f-9e50-6597047a19e9`) served the correct movie but ignored Range requests: HTTP 200, and the browser could play but could not seek ahead. This failed release QA and was not merged to main. `worker/video-range.ts` now streams single byte ranges for show videos only. `vite.config.ts` routes the preview MP4s and pilot movie through the Worker before the static asset handler. All other routes retain asset-first behavior. There are no new paid storage resources, secrets or domain changes.
+
+The internal asset binding omits a length in this runtime; the two checksummed release files use their verified byte lengths in the release manifest. Keep those lengths updated with future movie replacements. The slice streams to a [FixedLengthStream](https://developers.cloudflare.com/workers/runtime-apis/streams/transformstream/#fixedlengthstream), so its actual bytes and Content-Length agree. Source streams are cancelled after the interval and promises are attached to the request lifetime. No entire movie is buffered. Routing follows Cloudflare's [selective Worker-first configuration](https://developers.cloudflare.com/workers/static-assets/routing/worker-script/#run-worker-first-for-selective-paths).
+
+`node scripts/test-video-range.mjs`, generated binding types, type checking and local Workers-runtime QA pass. Local Week 5 prefix and pilot suffix requests return HTTP 206 with correct bytes. Repeat live range checks and browser playback/seek after the repair deployment; do not waive the production range guard.
+
 ## Historical V006 release preparation (superseded)
 
 The owner approved Weekly Slate V005 and requested the clean 720p release on October 8. **Do not deploy until the owner says go.** Week 5 is marked `published` only in the prepared local branch; it is not live yet. The branch includes the Week 4 recap through merge `58e7175`, containing main's `f60ca86`.
