@@ -1,12 +1,12 @@
 # The Program — 2026 Week 6 — brief
 
 ## Guinness (Kevin O'Boyle) vs small sample size (Shawn) — Scissors vs Rock
-Lifetime: Kevin O'Boyle 13-20 over 33 games
-- form: Shawn has won 3 in a row
-Selected: a rematch of the 2015 championship final — Kevin O'Boyle beat Shawn for the title | Shawn's 5 straight from 2005⁠–⁠08 is the longest streak in the series | Shawn has won 3 in a row | Shawn's series lead has never been bigger
-- [form] Shawn has won 3 in a row
+Lifetime: Kevin O'Boyle 12-18 over 30 games
+- form: Shawn has won 3 of the last 5
+Selected: a rematch of the 2015 championship final — Kevin O'Boyle beat Shawn for the title | Shawn's 5 straight from 2005⁠–⁠08 is the longest streak in the series | Shawn's series lead has never been bigger | Kevin O'Boyle lost their last meeting by just 0.32 points
+- [form] Shawn has won 3 of the last 5
 - [title_game] a rematch of the 2015 championship final — Kevin O'Boyle beat Shawn for the title
-- [last_meeting] Shawn won the most recent meeting 105.28⁠–⁠70.71 in 2025
+- [last_meeting] Kevin O'Boyle lost their last meeting by just 0.32 points
 - [longest_run] Shawn's 5 straight from 2005⁠–⁠08 is the longest streak in the series
 - [biggest_lead] Shawn's series lead has never been bigger
 - [closest_game] Shawn won their closest meeting by 0.32 points in 2025
@@ -15,7 +15,7 @@ Selected: a rematch of the 2015 championship final — Kevin O'Boyle beat Shawn 
 - [slugfest] their 2007 meeting (66.35⁠–⁠33.64) is the lowest-scoring in the series
 
 ## “I’ll take Kittle” (Dominic) vs This Is How We Do (Fadi) — Scissors vs Paper
-Lifetime: Dominic 12-18 over 30 games
+Lifetime: Dominic 12-17 over 29 games
 - form: Fadi has won 3 in a row
 Selected: a rematch of the 2007 championship final — Dominic beat Fadi for the title | Fadi's 4 straight from 2008⁠–⁠10 is the longest streak in the series | Fadi has won 3 in a row | Fadi's series lead has never been bigger
 - [form] Fadi has won 3 in a row
@@ -50,7 +50,7 @@ Selected: Evan lost their last meeting by just 0.69 points | Eric won their clos
 - [shootout] their 2024 meeting (97.93⁠–⁠96.15) is the highest-scoring in the series
 
 ## team old style (Brian Clark) vs miniDITKAS (Kevin Swanson) — Rock vs Scissors
-Lifetime: Brian Clark 19-14 over 33 games
+Lifetime: Brian Clark 18-13 over 31 games
 - form: Brian Clark has won 4 in a row
 Selected: Brian Clark has won 4 in a row | Brian Clark's series lead has never been bigger | Kevin Swanson won their closest meeting by 1.74 points in 2015 | Kevin Swanson owns the biggest blowout in the series — by 70.22 in 2007
 - [form] Brian Clark has won 4 in a row
@@ -58,14 +58,14 @@ Selected: Brian Clark has won 4 in a row | Brian Clark's series lead has never b
 - [biggest_lead] Brian Clark's series lead has never been bigger
 - [closest_game] Kevin Swanson won their closest meeting by 1.74 points in 2015
 - [biggest_win] Kevin Swanson owns the biggest blowout in the series — by 70.22 in 2007
-- [shootout] their 2008 meeting (127.19⁠–⁠101.25) is the highest-scoring in the series
+- [shootout] their 2018 meeting (123.78⁠–⁠84.87) is the highest-scoring in the series
 - [slugfest] their 2006 meeting (55.83⁠–⁠43.49) is the lowest-scoring in the series
 
 ## Mean Machine 22 (Douglas) vs Futball in the Groin (Jeff) — Paper vs Scissors
-Lifetime: Douglas 9-5 over 14 games
-- form: Jeff has won 3 of the last 5
+Lifetime: Douglas 8-5 over 13 games
+- form: Jeff has won 4 of the last 5
 Selected: Douglas's 7 straight from 2017⁠–⁠20 is the longest streak in the series | Douglas's largest series lead was 7 games | Douglas won their closest meeting by 1.63 points in 2018 | Douglas owns the biggest blowout in the series — by 98.03 in 2020
-- [form] Jeff has won 3 of the last 5
+- [form] Jeff has won 4 of the last 5
 - [last_meeting] Jeff won the most recent meeting 97.56⁠–⁠82.42 in 2025
 - [longest_run] Douglas's 7 straight from 2017⁠–⁠20 is the longest streak in the series
 - [biggest_lead] Douglas's largest series lead was 7 games
@@ -83,4 +83,4 @@ Selected: Douglas's 7 straight from 2017⁠–⁠20 is the longest streak in the
 
 ## Milestone watch
 - Kevin O'Boyle is 43.83 points from 27,500 career points
-- all-time wins race: Brian Clark 194, Kevin Swanson 194
+- all-time wins race: Kevin Swanson 194, Brian Clark 194

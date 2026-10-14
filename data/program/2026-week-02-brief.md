@@ -1,17 +1,17 @@
 # The Program — 2026 Week 2 — brief
 
 ## small sample size (Shawn) vs Fuzzy Bears (Thomas) — Rock division
-Lifetime: Shawn 20-18 over 38 games
+Lifetime: Shawn 19-17 over 36 games
 - form: Thomas has won 3 of the last 5
-Selected: Shawn's 5 straight from 2003⁠–⁠07 is the longest streak in the series | Shawn's largest series lead was 8 games | Shawn won their closest meeting by 0.84 points in 2018 | Shawn owns the biggest blowout in the series — by 46.39 in 2008
+Selected: Shawn's 5 straight from 2003⁠–⁠07 is the longest streak in the series | Shawn's largest series lead was 7 games | Shawn won their closest meeting by 0.84 points in 2018 | Shawn owns the biggest blowout in the series — by 46.39 in 2008
 - [form] Thomas has won 3 of the last 5
 - [last_meeting] Thomas won the most recent meeting 84.52⁠–⁠68.53 in 2025
 - [longest_run] Shawn's 5 straight from 2003⁠–⁠07 is the longest streak in the series
-- [biggest_lead] Shawn's largest series lead was 8 games
+- [biggest_lead] Shawn's largest series lead was 7 games
 - [closest_game] Shawn won their closest meeting by 0.84 points in 2018
 - [biggest_win] Shawn owns the biggest blowout in the series — by 46.39 in 2008
 - [shootout] their 2004 meeting (115.61⁠–⁠93.92) is the highest-scoring in the series
-- [slugfest] their 2007 meeting (58.78⁠–⁠37.51) is the lowest-scoring in the series
+- [slugfest] their 2005 meeting (53.54⁠–⁠46.36) is the lowest-scoring in the series
 
 ## Guntry Club (Eric) vs team old style (Brian Clark) — Rock division
 Lifetime: Eric 4-2 over 6 games
@@ -23,14 +23,14 @@ Selected: their 2025 meeting (106.5⁠–⁠81.04) is the highest-scoring in the
 - [shootout] their 2025 meeting (106.5⁠–⁠81.04) is the highest-scoring in the series
 
 ## Bears (Steve Swanson) vs Goood Times (Evan) — Paper division
-Lifetime: Steve Swanson 14-16 over 30 games
+Lifetime: Steve Swanson 13-13 over 26 games
 - form: Evan has won 4 of the last 5
-Selected: Evan's 5 straight from 2021⁠–⁠24 is the longest streak in the series | Steve Swanson's largest series lead was 4 games | Evan owns the biggest blowout in the series — by 83.97 in 2021 | their 2025 meeting (103.42⁠–⁠90.74) is the highest-scoring in the series
+Selected: Steve Swanson's 6 straight from 2014⁠–⁠19 is the longest streak in the series | Steve Swanson's largest series lead was 5 games | Steve Swanson owns the biggest blowout in the series — by 52.08 in 2019 | their 2025 meeting (103.42⁠–⁠90.74) is the highest-scoring in the series
 - [form] Evan has won 4 of the last 5
 - [last_meeting] Evan won the most recent meeting 90.7⁠–⁠69.37 in 2025
-- [longest_run] Evan's 5 straight from 2021⁠–⁠24 is the longest streak in the series
-- [biggest_lead] Steve Swanson's largest series lead was 4 games
-- [biggest_win] Evan owns the biggest blowout in the series — by 83.97 in 2021
+- [longest_run] Steve Swanson's 6 straight from 2014⁠–⁠19 is the longest streak in the series
+- [biggest_lead] Steve Swanson's largest series lead was 5 games
+- [biggest_win] Steve Swanson owns the biggest blowout in the series — by 52.08 in 2019
 - [shootout] their 2025 meeting (103.42⁠–⁠90.74) is the highest-scoring in the series
 - [slugfest] their 2019 meeting (89.13⁠–⁠37.05) is the lowest-scoring in the series
 

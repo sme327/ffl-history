@@ -12,8 +12,9 @@ data/program/2026-week-NN-recap-copy.json; a copy file still marked
 "draft": true never reaches the site.
 
 Awards come from scripts/recap_engine.py — byte-identical with Dynasty 22's
-copy; fix both or neither. Series count every meeting, consolation included —
-the same games the preview counts (build_program.load_history).
+copy; fix both or neither. Series count regular season plus championship-bracket
+playoffs — consolation games don't count — the same games the preview counts
+(build_program.load_history).
 """
 
 from __future__ import annotations

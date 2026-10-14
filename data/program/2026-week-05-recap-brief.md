@@ -3,24 +3,24 @@
 ## Results
 - Shawn (small sample size) 97.97 def. Douglas (Mean Machine 22) 56.25 (margin 41.72)
   - projected Shawn 88.74 / Douglas 82.54; optimal 103.32 / 66.75
-  - series before {'Shawn': 8, 'Douglas': 6, 'ties': 0}, after {'Shawn': 9, 'Douglas': 6, 'ties': 0} over 15 games; notes []
+  - series before {'Shawn': 8, 'Douglas': 4, 'ties': 0}, after {'Shawn': 9, 'Douglas': 4, 'ties': 0} over 13 games; notes [{'kind': 'streak', 'team': 'Shawn', 'length': 3}]
 - Steve Swanson (Bears) 88.4 def. Dominic (“I’ll take Kittle”) 55.31 (margin 33.09)
   - projected Steve Swanson 87.77 / Dominic 73.94; optimal 88.4 / 55.96
-  - series before {'Steve Swanson': 13, 'Dominic': 16, 'ties': 0}, after {'Steve Swanson': 14, 'Dominic': 16, 'ties': 0} over 30 games; notes [{'kind': 'streak', 'team': 'Steve Swanson', 'length': 2}]
+  - series before {'Steve Swanson': 12, 'Dominic': 15, 'ties': 0}, after {'Steve Swanson': 13, 'Dominic': 15, 'ties': 0} over 28 games; notes [{'kind': 'streak', 'team': 'Steve Swanson', 'length': 3}]
 - Eric (Guntry Club) 108.63 def. Jeff (Futball in the Groin) 103.13 (margin 5.5)
   - projected Eric 75.03 / Jeff 80.73; optimal 119.03 / 103.13
   - series before {'Jeff': 2, 'Eric': 2, 'ties': 0}, after {'Jeff': 2, 'Eric': 3, 'ties': 0} over 5 games; notes [{'kind': 'streak', 'team': 'Eric', 'length': 2}, {'kind': 'took_lead', 'team': 'Eric'}]
 - Thomas (Fuzzy Bears) 138.85 def. Kevin O'Boyle (Guinness) 77.72 (margin 61.13)
   - projected Thomas 89.86 / Kevin O'Boyle 83.89; optimal 150.55 / 97.77
-  - series before {'Thomas': 17, "Kevin O'Boyle": 14, 'ties': 0}, after {'Thomas': 18, "Kevin O'Boyle": 14, 'ties': 0} over 32 games; notes [{'kind': 'streak', 'team': 'Thomas', 'length': 6}]
+  - series before {'Thomas': 16, "Kevin O'Boyle": 14, 'ties': 0}, after {'Thomas': 17, "Kevin O'Boyle": 14, 'ties': 0} over 31 games; notes [{'kind': 'streak', 'team': 'Thomas', 'length': 5}]
 - Brian Clark (team old style) 104.23 def. Evan (Goood Times) 94.5 (margin 9.73)
   - projected Brian Clark 83.36 / Evan 76.9; optimal 110.58 / 115.7
-  - series before {'Evan': 15, 'Brian Clark': 14, 'ties': 0}, after {'Evan': 15, 'Brian Clark': 15, 'ties': 0} over 30 games; notes [{'kind': 'streak', 'team': 'Brian Clark', 'length': 2}, {'kind': 'evened', 'team': 'Brian Clark'}]
+  - series before {'Evan': 15, 'Brian Clark': 13, 'ties': 0}, after {'Evan': 15, 'Brian Clark': 14, 'ties': 0} over 29 games; notes [{'kind': 'streak', 'team': 'Brian Clark', 'length': 2}]
   - COULDA WON: Evan (Goood Times) optimal 115.7 > 104.23
   - ONE SWAP FLIPS IT: Isaiah Likely (22.2) for Mike Washington Jr. (1.0) at W/R/T, +21.2
 - Fadi (This Is How We Do) 83.22 def. Kevin Swanson (miniDITKAS) 80.52 (margin 2.7)
   - projected Fadi 72.69 / Kevin Swanson 77.01; optimal 88.37 / 93.77
-  - series before {'Kevin Swanson': 17, 'Fadi': 14, 'ties': 0}, after {'Kevin Swanson': 17, 'Fadi': 15, 'ties': 0} over 32 games; notes [{'kind': 'streak', 'team': 'Fadi', 'length': 2}]
+  - series before {'Kevin Swanson': 16, 'Fadi': 13, 'ties': 0}, after {'Kevin Swanson': 16, 'Fadi': 14, 'ties': 0} over 30 games; notes [{'kind': 'streak', 'team': 'Fadi', 'length': 2}]
   - COULDA WON: Kevin Swanson (miniDITKAS) optimal 93.77 > 83.22
   - ONE SWAP FLIPS IT: Jameson Williams (15.35) for Tee Higgins (2.1) at W/R/T, +13.25
 

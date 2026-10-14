@@ -7,21 +7,21 @@
   - COULDA WON: Dominic (“I’ll take Kittle”) optimal 82.65 > 74.6
 - Eric (Guntry Club) 85.93 def. Steve Swanson (Bears) 59.94 (margin 25.99)
   - projected Eric 69.34 / Steve Swanson 80.87; optimal 94.98 / 91.74
-  - series before {'Steve Swanson': 2, 'Eric': 3, 'ties': 0}, after {'Steve Swanson': 2, 'Eric': 4, 'ties': 0} over 6 games; notes [{'kind': 'streak', 'team': 'Eric', 'length': 4}]
+  - series before {'Steve Swanson': 1, 'Eric': 3, 'ties': 0}, after {'Steve Swanson': 1, 'Eric': 4, 'ties': 0} over 5 games; notes [{'kind': 'streak', 'team': 'Eric', 'length': 4}]
   - COULDA WON: Steve Swanson (Bears) optimal 91.74 > 85.93
 - Brian Clark (team old style) 101.51 def. Jeff (Futball in the Groin) 80.24 (margin 21.27)
   - projected Brian Clark 81.49 / Jeff 86.91; optimal 109.51 / 96.99
   - series before {'Jeff': 7, 'Brian Clark': 7, 'ties': 0}, after {'Jeff': 7, 'Brian Clark': 8, 'ties': 0} over 15 games; notes [{'kind': 'snapped', 'team': 'Brian Clark', 'length': 2}, {'kind': 'took_lead', 'team': 'Brian Clark'}]
 - Douglas (Mean Machine 22) 93.48 def. Thomas (Fuzzy Bears) 84.56 (margin 8.92)
   - projected Douglas 85.5 / Thomas 78.53; optimal 113.98 / 86.66
-  - series before {'Thomas': 5, 'Douglas': 9, 'ties': 0}, after {'Thomas': 5, 'Douglas': 10, 'ties': 0} over 15 games; notes [{'kind': 'snapped', 'team': 'Douglas', 'length': 2}]
+  - series before {'Thomas': 5, 'Douglas': 8, 'ties': 0}, after {'Thomas': 5, 'Douglas': 9, 'ties': 0} over 14 games; notes [{'kind': 'snapped', 'team': 'Douglas', 'length': 2}]
 - Evan (Goood Times) 83.11 def. Kevin Swanson (miniDITKAS) 75.0 (margin 8.11)
   - projected Evan 87.48 / Kevin Swanson 85.34; optimal 91.56 / 83.15
-  - series before {'Evan': 15, 'Kevin Swanson': 16, 'ties': 0}, after {'Evan': 16, 'Kevin Swanson': 16, 'ties': 0} over 32 games; notes [{'kind': 'snapped', 'team': 'Evan', 'length': 2}, {'kind': 'evened', 'team': 'Evan'}]
+  - series before {'Evan': 15, 'Kevin Swanson': 14, 'ties': 0}, after {'Evan': 16, 'Kevin Swanson': 14, 'ties': 0} over 30 games; notes []
   - COULDA WON: Kevin Swanson (miniDITKAS) optimal 83.15 > 83.11
 - Kevin O'Boyle (Guinness) 119.37 def. Fadi (This Is How We Do) 100.19 (margin 19.18)
   - projected Kevin O'Boyle 91.8 / Fadi 73.39; optimal 131.57 / 100.19
-  - series before {"Kevin O'Boyle": 19, 'Fadi': 8, 'ties': 0}, after {"Kevin O'Boyle": 20, 'Fadi': 8, 'ties': 0} over 28 games; notes [{'kind': 'streak', 'team': "Kevin O'Boyle", 'length': 2}]
+  - series before {"Kevin O'Boyle": 18, 'Fadi': 8, 'ties': 0}, after {"Kevin O'Boyle": 19, 'Fadi': 8, 'ties': 0} over 27 games; notes [{'kind': 'streak', 'team': "Kevin O'Boyle", 'length': 2}]
 
 ## Teams
 - Kevin O'Boyle (Guinness): 119.37 (1st), win, proj 91.8 (+27.57), optimal 131.57 (90.73%), bench left 12.2, all-play 11-0, best swap {'bench': 'Tony Pollard', 'bench_points': 9.5, 'starter': 'David Montgomery', 'starter_points': 2.15, 'slot': 'RB', 'gain': 7.35}

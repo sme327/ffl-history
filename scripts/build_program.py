@@ -12,8 +12,12 @@ scripts/fetch_week_lineups.py; one row per team) — only weeks before the
 issue's own week, so a back issue never shows its own result. Week 1's issue
 is pure history.
 
-Lifetime series count every meeting, consolation games included (commissioner,
-2026-09-15) — unlike the career win totals below, which exclude consolation.
+Consolation games don't count (commissioner, 2026-09-07, reaffirmed
+2026-10-14 for the whole site). Series, streaks, last meetings, career totals
+and Week-N history all use the same games as the museum's Rivalries room:
+regular season plus championship-bracket playoffs. A playoff-week game counts
+only when playoff_games.csv lists it in the championship bracket — see
+counted_game() below.
 
 Every matchup card gets the same treatment: a lifetime series line plus the
 top-ranked facts. The ranker chooses which facts, never how much coverage.
@@ -84,11 +88,35 @@ def current_results(before_week: int | None) -> list[dict]:
     return out
 
 
+def championship_games() -> set[tuple[str, str, str]]:
+    """(season, week, team_name) for every championship-bracket playoff game."""
+    out = set()
+    for r in read_csv("playoff_games.csv"):
+        if r["bracket"] == "championship":
+            out.add((r["season"], r["week"], r["team_1"].strip()))
+            out.add((r["season"], r["week"], r["team_2"].strip()))
+    return out
+
+
+def counted_game(r: dict, champ: set[tuple[str, str, str]]) -> bool:
+    """Regular season, or a playoff-week game in the championship bracket.
+
+    Consolation games — and the unbracketed placement games Yahoo schedules for
+    eliminated teams in playoff weeks — don't count anywhere on the site.
+    """
+    if r["is_bye"] == "true":
+        return False
+    if r["is_playoff"] != "true":
+        return True
+    return (r["season"], r["week"], r["team_name"].strip()) in champ
+
+
 def load_history(team2mgr, managers: set[str], before_week: int | None = None):
-    """All games between current managers, chronological, deduped to one row per game."""
+    """All counted games between current managers, chronological, one row per game."""
+    champ = championship_games()
     games = []
     for r in read_csv("weekly_matchups.csv") + current_results(before_week):
-        if r["is_bye"] == "true":
+        if not counted_game(r, champ):
             continue
         a = team2mgr.get((r["season"], r["team_name"].strip()))
         b = team2mgr.get((r["season"], r["opponent"].strip()))
@@ -345,9 +373,10 @@ def select_storylines(cands: list[dict], min_fourth_priority: int = 40) -> list[
 
 def week_in_history(week: int, team2mgr) -> dict:
     """Best and worst week-N performances all-time, by anyone who ever played."""
+    champ = championship_games()
     rows = []
     for r in read_csv("weekly_matchups.csv"):
-        if r["is_bye"] == "true" or int(r["week"]) != week:
+        if int(r["week"]) != week or not counted_game(r, champ):
             continue
         mgr = team2mgr.get((r["season"], r["team_name"].strip()))
         rows.append({"season": int(r["season"]), "manager": mgr,

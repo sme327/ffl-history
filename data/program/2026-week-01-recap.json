@@ -1130,16 +1130,16 @@
       "swap_flip": null,
       "series": {
         "before": {
-          "Steve Swanson": 13,
+          "Steve Swanson": 12,
           "Fadi": 13,
           "ties": 0
         },
         "after": {
-          "Steve Swanson": 14,
+          "Steve Swanson": 13,
           "Fadi": 13,
           "ties": 0
         },
-        "games_after": 27,
+        "games_after": 26,
         "streak_after": {
           "team": "Steve Swanson",
           "length": 4
@@ -1151,7 +1151,7 @@
             "length": 4
           },
           {
-            "kind": "took_lead",
+            "kind": "evened",
             "team": "Steve Swanson"
           }
         ]
@@ -1208,16 +1208,16 @@
       "swap_flip": null,
       "series": {
         "before": {
-          "Thomas": 15,
+          "Thomas": 14,
           "Brian Clark": 15,
           "ties": 0
         },
         "after": {
-          "Thomas": 15,
+          "Thomas": 14,
           "Brian Clark": 16,
           "ties": 0
         },
-        "games_after": 31,
+        "games_after": 30,
         "streak_after": {
           "team": "Brian Clark",
           "length": 1
@@ -1227,10 +1227,6 @@
             "kind": "snapped",
             "team": "Brian Clark",
             "length": 3
-          },
-          {
-            "kind": "took_lead",
-            "team": "Brian Clark"
           },
           {
             "kind": "first_win_since",
@@ -1305,16 +1301,16 @@
       },
       "series": {
         "before": {
-          "Kevin O'Boyle": 19,
-          "Kevin Swanson": 23,
+          "Kevin O'Boyle": 18,
+          "Kevin Swanson": 22,
           "ties": 0
         },
         "after": {
-          "Kevin O'Boyle": 19,
-          "Kevin Swanson": 24,
+          "Kevin O'Boyle": 18,
+          "Kevin Swanson": 23,
           "ties": 0
         },
-        "games_after": 43,
+        "games_after": 41,
         "streak_after": {
           "team": "Kevin Swanson",
           "length": 2

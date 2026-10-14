@@ -308,8 +308,8 @@ export function RecapView({ recap }: { recap: Recap }) {
 
       <p className="recap-footnote">
         Best possible lineup: the highest-scoring legal lineup from each roster&rsquo;s starters and bench (IR
-        excluded). Projections are Yahoo&rsquo;s original pregame numbers. Lifetime series count every meeting,
-        playoffs and consolation games included. Player photos via Sleeper.
+        excluded). Projections are Yahoo&rsquo;s original pregame numbers. Lifetime series count regular-season and
+        championship-bracket playoff games; consolation games don&rsquo;t count. Player photos via Sleeper.
       </p>
       <ProgramIssuePills slug={recap.slug} />
     </>

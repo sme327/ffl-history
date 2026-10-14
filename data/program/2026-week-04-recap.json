@@ -1127,16 +1127,16 @@
       "swap_flip": null,
       "series": {
         "before": {
-          "Steve Swanson": 2,
+          "Steve Swanson": 1,
           "Eric": 3,
           "ties": 0
         },
         "after": {
-          "Steve Swanson": 2,
+          "Steve Swanson": 1,
           "Eric": 4,
           "ties": 0
         },
-        "games_after": 6,
+        "games_after": 5,
         "streak_after": {
           "team": "Eric",
           "length": 4
@@ -1202,15 +1202,15 @@
       "series": {
         "before": {
           "Thomas": 5,
-          "Douglas": 9,
+          "Douglas": 8,
           "ties": 0
         },
         "after": {
           "Thomas": 5,
-          "Douglas": 10,
+          "Douglas": 9,
           "ties": 0
         },
-        "games_after": 15,
+        "games_after": 14,
         "streak_after": {
           "team": "Douglas",
           "length": 1
@@ -1241,30 +1241,20 @@
       "series": {
         "before": {
           "Evan": 15,
-          "Kevin Swanson": 16,
+          "Kevin Swanson": 14,
           "ties": 0
         },
         "after": {
           "Evan": 16,
-          "Kevin Swanson": 16,
+          "Kevin Swanson": 14,
           "ties": 0
         },
-        "games_after": 32,
+        "games_after": 30,
         "streak_after": {
           "team": "Evan",
           "length": 1
         },
-        "notes": [
-          {
-            "kind": "snapped",
-            "team": "Evan",
-            "length": 2
-          },
-          {
-            "kind": "evened",
-            "team": "Evan"
-          }
-        ]
+        "notes": []
       }
     },
     {
@@ -1279,16 +1269,16 @@
       "swap_flip": null,
       "series": {
         "before": {
-          "Kevin O'Boyle": 19,
+          "Kevin O'Boyle": 18,
           "Fadi": 8,
           "ties": 0
         },
         "after": {
-          "Kevin O'Boyle": 20,
+          "Kevin O'Boyle": 19,
           "Fadi": 8,
           "ties": 0
         },
-        "games_after": 28,
+        "games_after": 27,
         "streak_after": {
           "team": "Kevin O'Boyle",
           "length": 2

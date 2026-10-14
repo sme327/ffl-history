@@ -10,20 +10,20 @@ Selected: their 2023 meeting (104.79⁠–⁠82.28) is the highest-scoring in th
 - [shootout] their 2023 meeting (104.79⁠–⁠82.28) is the highest-scoring in the series
 
 ## Fuzzy Bears (Thomas) vs team old style (Brian Clark) — Rock division
-Lifetime: Thomas 15-15 over 30 games
+Lifetime: Thomas 14-15 over 29 games
 - form: Thomas has won 3 in a row
-Selected: Brian Clark's 7 straight from 2016⁠–⁠20 is the longest streak in the series | Thomas has won 3 in a row | Thomas's largest series lead was 5 games | Brian Clark won their closest meeting by 0.35 points in 2004
+Selected: Brian Clark's 7 straight from 2016⁠–⁠20 is the longest streak in the series | Thomas has won 3 in a row | Thomas's largest series lead was 4 games | Brian Clark won their closest meeting by 0.35 points in 2004
 - [form] Thomas has won 3 in a row
 - [last_meeting] Thomas won the most recent meeting 82.71⁠–⁠59.27 in 2025
 - [longest_run] Brian Clark's 7 straight from 2016⁠–⁠20 is the longest streak in the series
-- [biggest_lead] Thomas's largest series lead was 5 games
+- [biggest_lead] Thomas's largest series lead was 4 games
 - [closest_game] Brian Clark won their closest meeting by 0.35 points in 2004
 - [biggest_win] Brian Clark owns the biggest blowout in the series — by 55.78 in 2016
 - [shootout] their 2024 meeting (129.71⁠–⁠96.82) is the highest-scoring in the series
 - [slugfest] their 2005 meeting (46.73⁠–⁠46.23) is the lowest-scoring in the series
 
 ## Bears (Steve Swanson) vs This Is How We Do (Fadi) — Paper division
-Lifetime: Steve Swanson 13-13 over 26 games
+Lifetime: Steve Swanson 12-13 over 25 games
 - form: Steve Swanson has won 3 in a row
 Selected: Fadi's 7 straight from 2010⁠–⁠16 is the longest streak in the series | Steve Swanson has won 3 in a row | Fadi's largest series lead was 5 games | Steve Swanson won their closest meeting by 0.21 points in 2007
 - [form] Steve Swanson has won 3 in a row
@@ -60,17 +60,17 @@ Selected: Dominic won their closest meeting by 1.09 points in 2020 | Jeff owns t
 - [slugfest] their 2024 meeting (80.6⁠–⁠47.45) is the lowest-scoring in the series
 
 ## Guinness (Kevin O'Boyle) vs miniDITKAS (Kevin Swanson) — Scissors division
-Lifetime: Kevin O'Boyle 19-23 over 42 games
+Lifetime: Kevin O'Boyle 18-22 over 40 games
 - form: Kevin O'Boyle has won 3 of the last 5
-Selected: a rematch of the 2006 championship final — Kevin Swanson beat Kevin O'Boyle for the title | Kevin Swanson's 7 straight from 2006⁠–⁠08 is the longest streak in the series | Kevin Swanson's largest series lead was 10 games | Kevin Swanson won their closest meeting by 1.28 points in 2008
+Selected: a rematch of the 2006 championship final — Kevin Swanson beat Kevin O'Boyle for the title | Kevin Swanson's 7 straight from 2006⁠–⁠08 is the longest streak in the series | Kevin Swanson's largest series lead was 9 games | Kevin Swanson won their closest meeting by 1.28 points in 2008
 - [form] Kevin O'Boyle has won 3 of the last 5
 - [title_game] a rematch of the 2006 championship final — Kevin Swanson beat Kevin O'Boyle for the title
 - [last_meeting] Kevin Swanson won the most recent meeting 89.3⁠–⁠82.27 in 2025
 - [longest_run] Kevin Swanson's 7 straight from 2006⁠–⁠08 is the longest streak in the series
-- [biggest_lead] Kevin Swanson's largest series lead was 10 games
+- [biggest_lead] Kevin Swanson's largest series lead was 9 games
 - [closest_game] Kevin Swanson won their closest meeting by 1.28 points in 2008
 - [biggest_win] Kevin O'Boyle owns the biggest blowout in the series — by 52.23 in 2021
-- [shootout] their 2024 meeting (124.93⁠–⁠79.58) is the highest-scoring in the series
+- [shootout] their 2021 meeting (115.4⁠–⁠88.45) is the highest-scoring in the series
 - [slugfest] their 2002 meeting (47.27⁠–⁠35.67) is the lowest-scoring in the series
 
 ## Week 1 in league history

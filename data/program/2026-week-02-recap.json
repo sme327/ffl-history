@@ -1091,16 +1091,16 @@
       "swap_flip": null,
       "series": {
         "before": {
-          "Shawn": 20,
-          "Thomas": 18,
+          "Shawn": 19,
+          "Thomas": 17,
           "ties": 0
         },
         "after": {
-          "Shawn": 21,
-          "Thomas": 18,
+          "Shawn": 20,
+          "Thomas": 17,
           "ties": 0
         },
-        "games_after": 39,
+        "games_after": 37,
         "streak_after": {
           "team": "Shawn",
           "length": 1
@@ -1138,16 +1138,16 @@
       },
       "series": {
         "before": {
-          "Steve Swanson": 14,
-          "Evan": 16,
+          "Steve Swanson": 13,
+          "Evan": 13,
           "ties": 0
         },
         "after": {
-          "Steve Swanson": 15,
-          "Evan": 16,
+          "Steve Swanson": 14,
+          "Evan": 13,
           "ties": 0
         },
-        "games_after": 31,
+        "games_after": 27,
         "streak_after": {
           "team": "Steve Swanson",
           "length": 1
@@ -1157,6 +1157,10 @@
             "kind": "snapped",
             "team": "Steve Swanson",
             "length": 2
+          },
+          {
+            "kind": "took_lead",
+            "team": "Steve Swanson"
           }
         ]
       }

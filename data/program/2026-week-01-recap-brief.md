@@ -6,19 +6,19 @@
   - series before {'Shawn': 3, 'Eric': 2, 'ties': 0}, after {'Shawn': 3, 'Eric': 3, 'ties': 0} over 6 games; notes [{'kind': 'snapped', 'team': 'Eric', 'length': 2}, {'kind': 'evened', 'team': 'Eric'}]
 - Steve Swanson (Bears) 114.5 def. Fadi (This Is How We Do) 97.85 (margin 16.65)
   - projected Steve Swanson 78.88 / Fadi 74.45; optimal 133.89 / 100.95
-  - series before {'Steve Swanson': 13, 'Fadi': 13, 'ties': 0}, after {'Steve Swanson': 14, 'Fadi': 13, 'ties': 0} over 27 games; notes [{'kind': 'streak', 'team': 'Steve Swanson', 'length': 4}, {'kind': 'took_lead', 'team': 'Steve Swanson'}]
+  - series before {'Steve Swanson': 12, 'Fadi': 13, 'ties': 0}, after {'Steve Swanson': 13, 'Fadi': 13, 'ties': 0} over 26 games; notes [{'kind': 'streak', 'team': 'Steve Swanson', 'length': 4}, {'kind': 'evened', 'team': 'Steve Swanson'}]
 - Jeff (Futball in the Groin) 115.38 def. Dominic (“I’ll take Kittle”) 100.35 (margin 15.03)
   - projected Jeff 84.82 / Dominic 83.39; optimal 122.38 / 107.35
   - series before {'Jeff': 7, 'Dominic': 7, 'ties': 0}, after {'Jeff': 8, 'Dominic': 7, 'ties': 0} over 15 games; notes [{'kind': 'streak', 'team': 'Jeff', 'length': 3}, {'kind': 'took_lead', 'team': 'Jeff'}]
 - Brian Clark (team old style) 98.21 def. Thomas (Fuzzy Bears) 69.18 (margin 29.03)
   - projected Brian Clark 84.94 / Thomas 85.49; optimal 114.01 / 76.58
-  - series before {'Thomas': 15, 'Brian Clark': 15, 'ties': 0}, after {'Thomas': 15, 'Brian Clark': 16, 'ties': 0} over 31 games; notes [{'kind': 'snapped', 'team': 'Brian Clark', 'length': 3}, {'kind': 'took_lead', 'team': 'Brian Clark'}, {'kind': 'first_win_since', 'team': 'Brian Clark', 'season': 2024, 'week': 2, 'games_between': 3}]
+  - series before {'Thomas': 14, 'Brian Clark': 15, 'ties': 0}, after {'Thomas': 14, 'Brian Clark': 16, 'ties': 0} over 30 games; notes [{'kind': 'snapped', 'team': 'Brian Clark', 'length': 3}, {'kind': 'first_win_since', 'team': 'Brian Clark', 'season': 2024, 'week': 2, 'games_between': 3}]
 - Evan (Goood Times) 98.73 def. Douglas (Mean Machine 22) 56.77 (margin 41.96)
   - projected Evan 81.14 / Douglas 77.1; optimal 114.38 / 89.93
   - series before {'Evan': 8, 'Douglas': 8, 'ties': 0}, after {'Evan': 9, 'Douglas': 8, 'ties': 0} over 17 games; notes [{'kind': 'streak', 'team': 'Evan', 'length': 2}, {'kind': 'took_lead', 'team': 'Evan'}]
 - Kevin Swanson (miniDITKAS) 77.88 def. Kevin O'Boyle (Guinness) 70.91 (margin 6.97)
   - projected Kevin Swanson 76.48 / Kevin O'Boyle 80.49; optimal 94.53 / 108.95
-  - series before {"Kevin O'Boyle": 19, 'Kevin Swanson': 23, 'ties': 0}, after {"Kevin O'Boyle": 19, 'Kevin Swanson': 24, 'ties': 0} over 43 games; notes [{'kind': 'streak', 'team': 'Kevin Swanson', 'length': 2}]
+  - series before {"Kevin O'Boyle": 18, 'Kevin Swanson': 22, 'ties': 0}, after {"Kevin O'Boyle": 18, 'Kevin Swanson': 23, 'ties': 0} over 41 games; notes [{'kind': 'streak', 'team': 'Kevin Swanson', 'length': 2}]
   - COULDA WON: Kevin O'Boyle (Guinness) optimal 108.95 > 77.88
   - ONE SWAP FLIPS IT: Tyler Shough (20.6) for Kyler Murray (-1.19) at QB, +21.79
 

@@ -180,9 +180,9 @@ The 2021 shift back to week 15 reflects the NFL extending its regular season to 
 
 The league started with 9 teams in 2001 and expanded to 11 in 2002. With an odd number of teams, one team had a bye each week. `is_bye = True` marks those rows. Bye weeks don't exist in any other season — from 2003 onward the league had 12 teams and a full schedule every week.
 
-### Consolation Bracket
+### Consolation and placement games
 
-Consolation bracket games are **not captured** in this file. The scraper only pulled championship bracket matchup data. Consolation games from the playoff period are missing here; they appear in `playoff_games.csv` instead (as game-level results, not week-level matchup rows).
+Every playoff-week game is in this file, consolation games included, flagged `is_playoff: true` like championship games (verified 2026-09-09 and 2026-10-14). The flag says only that a game was played in a playoff week. To know whether it was a championship-bracket game, look it up in `playoff_games.csv`. **Consolation games don't count** anywhere on the site (commissioner, 2026-09-07; reaffirmed site-wide 2026-10-14). Everything counted is regular season plus championship-bracket games, the rule `utils/data.py` and `scripts/build_program.py`'s `counted_game()` both apply.
 
 ---
 
@@ -198,7 +198,7 @@ Before 2021, the league ran an 8-team playoff across both brackets:
 
 Starting in 2021, the league expanded to a 6-team championship bracket (adding a bye round), which changed consolation structure:
 - Championship: 6 seeds — quarterfinals (2 games), semifinals, final, 3rd-place game
-- Consolation: 3 games instead of 4; no 11th/12th place game in the 6-team format
+- Consolation: 3 games captured per year instead of 4. Yahoo also played other placement games that the scraper skipped (see Known Gaps).
 
 **Important:** In 2021–2025, the game labeled `game_type = "7th_place"` in the consolation bracket is actually the consolation *championship* (9th place overall). Yahoo reuses the same CSS class regardless of how many teams are in the consolation bracket, so the label is inherited from the markup rather than from the actual game position.
 
@@ -315,6 +315,7 @@ Built manually from Yahoo's settings pages rather than scraped programmatically.
 
 | Gap | Detail |
 |---|---|
+| Unbracketed playoff-week games, 2021–2025 | 10 team-games per season (5 games) are in `weekly_matchups.csv` with `is_playoff: true` but have no row in `playoff_games.csv`. They are the 6-team format's other placement games: consolation round 1 (Week 15), the game between the two championship quarterfinal losers (Week 16), and the lower placement games (Week 17). Cause: `fetch_yahoo_data.py`'s `scrape_playoffs()` keeps only the round types the 2001–2020 format used, so it skipped the consolation `quarterfinal`, any championship-page `place_5`, and the `place_9`/`place_11` games. They count nowhere today. Re-scraping 2021–2025 with those round types kept would label them. Open question for the commissioner if that happens: whether the quarterfinal losers' 5th-place game, if Yahoo files it in the championship bracket, counts like the 3rd-place game does. Found 2026-10-14. |
 | ~~Consolation matchup rows~~ | Outdated — verified 2026-09-09 that `weekly_matchups.csv` DOES include consolation-bracket games in playoff weeks (e.g. 2001 wk16's consolation semis), flagged `is_playoff: true` like bracket games. That's why a naive playoff-week win count exceeds `playoff_games.csv`'s championship-bracket record — and why the league's sanctioned career record (regular season + championship bracket only; consolation games don't count) must be built from `playoff_games.csv`, not from `weekly_matchups.csv`'s playoff rows. See `scripts/build_program.py`'s `career_totals()`. |
 | `season_rosters.csv` | Only contains 2001 week 17 data; full roster snapshots were not scraped |
 | `roster_moves.csv` | Not built — FA adds, drops, and waiver pickups from the transactions page are not yet captured |
@@ -358,10 +359,8 @@ pages; each run replaces only its own week's rows.
   `build_recap.py` reconciles every lineup against them. `weekly_matchups.csv` stays
   2001–2025 and the golden fixtures stay untouched.
 
-**What counts toward a lifetime series** (commissioner, 2026-09-15): every meeting,
-consolation games included — the same count as the published Week 1 preview. The
-Rivalries room (utils/data.py: regular season + championship-bracket playoffs) and the
-career win totals do *not* count consolation games, so a series with a consolation
-meeting reads one game heavier on The Program than on its Rivalries page (Week 1:
-O'Boyle–Swanson, Clark–Tom, Fadi–Steve). Verified 2026-09-15; an open question whether
-to align them. A preview counts only weeks before its own.
+**What counts toward a lifetime series** (commissioner, 2026-10-14, replacing the
+2026-09-15 count-every-meeting decision): regular season plus championship-bracket
+playoffs. Consolation games don't count, the same rule as the Rivalries room
+(utils/data.py) and the career win totals, so The Program and the Rivalries pages now
+agree. A preview counts only weeks before its own. See `docs/PROGRAM.md`.

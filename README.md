@@ -243,7 +243,7 @@ One row per team per week. Includes both regular season and playoff weeks.
 - `is_bye`: true only for 2001 (9 teams) and 2002 (11 teams) where rotating byes occurred
 - `is_playoff`: true for any week at or after the playoff start week for that season
 - Playoff start weeks vary: wk 16 (2001), wk 15 (2002–2004, 2021–2025), wk 14 (2005–2020)
-- Consolation bracket games for non-playoff teams are **not** captured for most years
+- Consolation and placement games are included, also flagged `is_playoff`; whether a game was a championship-bracket game comes from `playoff_games.csv`. Consolation games don't count anywhere on the site (see `docs/DATA_GUIDE.md`)
 **Coverage:** 2001–2025 (complete — all seasons have full week ranges)
 
 ---
@@ -254,7 +254,7 @@ Game-by-game results for both the championship and consolation brackets.
 - `bracket`: `championship` or `consolation`
 - `game_type` (championship): `quarterfinal`, `semifinal`, `final`, `3rd_place`
 - `game_type` (consolation, 2001–2020): `semifinal`, `5th_place`, `7th_place` — 4 games per year
-- `game_type` (consolation, 2021–2025): `semifinal`, `7th_place` — 3 games per year; no 11th/12th place game in 6-team playoff format. Note: `7th_place` in these years is actually the consolation championship (9th place overall); Yahoo reuses the same CSS class regardless of bracket size.
+- `game_type` (consolation, 2021–2025): `semifinal`, `7th_place` — 3 games per year as scraped; the scraper skipped the format's other placement games (see `docs/DATA_GUIDE.md` → Known Gaps). Note: `7th_place` in these years is actually the consolation championship (9th place overall); Yahoo reuses the same CSS class regardless of bracket size.
 - Consolation seeds reflect each team's original championship seeding
 - 281 total rows: 186 championship + 95 consolation
 **Coverage:** 2001–2025 (complete)
@@ -365,5 +365,5 @@ Hand-authored narrative events for the league timeline. Supplements scraped data
 | 2011 draft picks | Complete — scraped from Yahoo auction-format page with snake correction |
 | `roster_moves.csv` | Not yet built — FA adds/drops/waivers from transactions page |
 | `league_settings.csv` | Built manually; requires manual updates if league settings change |
-| Consolation bracket matchups | Not captured in `weekly_matchups` (only championship bracket) |
+| 2021–2025 placement games | In `weekly_matchups`, but 5 per season are missing from `playoff_games.csv` (scraper skipped those round types). See `docs/DATA_GUIDE.md` → Known Gaps |
 | `ref_nfl_players.csv` | Re-download periodically from nflverse for new player coverage |

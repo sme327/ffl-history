@@ -3,10 +3,10 @@
 ## Results
 - Shawn (small sample size) 107.33 def. Thomas (Fuzzy Bears) 84.09 (margin 23.24)
   - projected Shawn 83.99 / Thomas 81.36; optimal 110.99 / 102.19
-  - series before {'Shawn': 20, 'Thomas': 18, 'ties': 0}, after {'Shawn': 21, 'Thomas': 18, 'ties': 0} over 39 games; notes [{'kind': 'snapped', 'team': 'Shawn', 'length': 2}]
+  - series before {'Shawn': 19, 'Thomas': 17, 'ties': 0}, after {'Shawn': 20, 'Thomas': 17, 'ties': 0} over 37 games; notes [{'kind': 'snapped', 'team': 'Shawn', 'length': 2}]
 - Steve Swanson (Bears) 96.04 def. Evan (Goood Times) 94.31 (margin 1.73)
   - projected Steve Swanson 81.44 / Evan 86.86; optimal 98.89 / 98.51
-  - series before {'Steve Swanson': 14, 'Evan': 16, 'ties': 0}, after {'Steve Swanson': 15, 'Evan': 16, 'ties': 0} over 31 games; notes [{'kind': 'snapped', 'team': 'Steve Swanson', 'length': 2}]
+  - series before {'Steve Swanson': 13, 'Evan': 13, 'ties': 0}, after {'Steve Swanson': 14, 'Evan': 13, 'ties': 0} over 27 games; notes [{'kind': 'snapped', 'team': 'Steve Swanson', 'length': 2}, {'kind': 'took_lead', 'team': 'Steve Swanson'}]
   - COULDA WON: Evan (Goood Times) optimal 98.51 > 96.04
   - ONE SWAP FLIPS IT: Isaiah Likely (4.15) for DJ Moore (-0.05) at W/R/T, +4.2
 - Kevin O'Boyle (Guinness) 69.44 def. Jeff (Futball in the Groin) 67.15 (margin 2.29)

@@ -78,11 +78,26 @@ Ties share an award.
 
 ## What counts toward a lifetime series
 
-**Every meeting, consolation games included.** The commissioner decided this on 2026-09-15; a
-brief same-day ruling to drop consolation games was reversed before anything shipped. It is the
-same count the Week 1 preview uses. It differs from the Rivalries room and the career win totals,
-which both exclude consolation games, so three Week 1 series (O'Boyle–Swanson, Clark–Tom,
-Fadi–Steve) read one game heavier here than on their Rivalries pages.
+**Regular-season games plus championship-bracket playoff games. Consolation games don't count.**
+The commissioner ruled on 2026-10-14 that this holds everywhere on the site ("consolation games
+don't count", first ruled 2026-09-07 for career totals). It replaced the 2026-09-15 decision to
+count every meeting in Program series. The Program now uses the same games as the Rivalries room,
+the career win totals and every other museum page.
+
+- **Which games count.** `build_program.counted_game()`. A playoff-week game counts only when
+  `playoff_games.csv` lists it in the championship bracket. That excludes the consolation bracket
+  and also the unbracketed placement games that Yahoo schedules for eliminated teams in 2021–2025
+  (see `docs/DATA_GUIDE.md` → Known Gaps).
+- **Where it applies.** Series records and the "regular season · playoffs" split on each card,
+  streaks, longest runs, biggest leads, last / closest / biggest / highest / lowest meetings, the
+  recap's series lines, and "Week N in the Archive". So "playoffs" on a card now means championship
+  playoffs only.
+- **Back issues.** Weeks 1–6 previews and Weeks 1–5 recaps were rebuilt on 2026-10-14, and 41
+  published notes and 3 cold opens were corrected to match. Each change is listed in
+  `docs/reviews/CONSOLATION-RULING-2026-10-14.md`.
+- **Writing copy.** A game in a playoff week isn't automatically a playoff game. Before writing
+  "playoffs", check its bracket in `playoff_games.csv`; the facts JSON's `playoff` flag now means
+  championship bracket.
 
 `build_program.load_history(team2mgr, managers, before_week)` serves both tabs. It only ever counts
 weeks before the issue's own.

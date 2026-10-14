@@ -3,26 +3,26 @@
 ## Results
 - Shawn (small sample size) 81.47 def. Brian Clark (team old style) 64.41 (margin 17.06)
   - projected Shawn 85.42 / Brian Clark 83.42; optimal 93.13 / 105.49
-  - series before {'Shawn': 13, 'Brian Clark': 20, 'ties': 0}, after {'Shawn': 14, 'Brian Clark': 20, 'ties': 0} over 34 games; notes [{'kind': 'streak', 'team': 'Shawn', 'length': 2}]
+  - series before {'Shawn': 13, 'Brian Clark': 19, 'ties': 0}, after {'Shawn': 14, 'Brian Clark': 19, 'ties': 0} over 33 games; notes [{'kind': 'streak', 'team': 'Shawn', 'length': 2}]
   - COULDA WON: Brian Clark (team old style) optimal 105.49 > 81.47
   - ONE SWAP FLIPS IT: Brock Purdy (31.64) for Jalen Hurts (8.31) at QB, +23.33
 - Douglas (Mean Machine 22) 86.22 def. Steve Swanson (Bears) 80.1 (margin 6.12)
   - projected Douglas 73.93 / Steve Swanson 81.57; optimal 104.12 / 95.0
-  - series before {'Steve Swanson': 10, 'Douglas': 9, 'ties': 0}, after {'Steve Swanson': 10, 'Douglas': 10, 'ties': 0} over 20 games; notes [{'kind': 'evened', 'team': 'Douglas'}]
+  - series before {'Steve Swanson': 9, 'Douglas': 7, 'ties': 0}, after {'Steve Swanson': 9, 'Douglas': 8, 'ties': 0} over 17 games; notes []
   - COULDA WON: Steve Swanson (Bears) optimal 95.0 > 86.22
   - ONE SWAP FLIPS IT: Michael Wilson (15.95) for Jaylen Waddle (4.2) at WR, +11.75
 - Jeff (Futball in the Groin) 117.02 def. Kevin Swanson (miniDITKAS) 101.95 (margin 15.07)
   - projected Jeff 89.59 / Kevin Swanson 81.88; optimal 127.27 / 104.55
-  - series before {'Jeff': 4, 'Kevin Swanson': 10, 'ties': 0}, after {'Jeff': 5, 'Kevin Swanson': 10, 'ties': 0} over 15 games; notes [{'kind': 'streak', 'team': 'Jeff', 'length': 2}]
+  - series before {'Jeff': 3, 'Kevin Swanson': 10, 'ties': 0}, after {'Jeff': 4, 'Kevin Swanson': 10, 'ties': 0} over 14 games; notes [{'kind': 'streak', 'team': 'Jeff', 'length': 2}]
 - Thomas (Fuzzy Bears) 87.44 def. Eric (Guntry Club) 52.03 (margin 35.41)
   - projected Thomas 82.24 / Eric 72.44; optimal 99.99 / 56.35
-  - series before {'Thomas': 4, 'Eric': 4, 'ties': 0}, after {'Thomas': 5, 'Eric': 4, 'ties': 0} over 9 games; notes [{'kind': 'streak', 'team': 'Thomas', 'length': 2}, {'kind': 'took_lead', 'team': 'Thomas'}]
+  - series before {'Thomas': 4, 'Eric': 3, 'ties': 0}, after {'Thomas': 5, 'Eric': 3, 'ties': 0} over 8 games; notes [{'kind': 'streak', 'team': 'Thomas', 'length': 2}]
 - Fadi (This Is How We Do) 80.04 def. Evan (Goood Times) 48.28 (margin 31.76)
   - projected Fadi 72.36 / Evan 84.58; optimal 84.79 / 61.88
-  - series before {'Evan': 17, 'Fadi': 18, 'ties': 0}, after {'Evan': 17, 'Fadi': 19, 'ties': 0} over 36 games; notes [{'kind': 'streak', 'team': 'Fadi', 'length': 2}]
+  - series before {'Evan': 16, 'Fadi': 16, 'ties': 0}, after {'Evan': 16, 'Fadi': 17, 'ties': 0} over 33 games; notes [{'kind': 'streak', 'team': 'Fadi', 'length': 2}, {'kind': 'took_lead', 'team': 'Fadi'}]
 - Dominic (“I’ll take Kittle”) 74.41 def. Kevin O'Boyle (Guinness) 64.2 (margin 10.21)
   - projected Dominic 78.84 / Kevin O'Boyle 79.73; optimal 92.31 / 78.85
-  - series before {"Kevin O'Boyle": 16, 'Dominic': 13, 'ties': 0}, after {"Kevin O'Boyle": 16, 'Dominic': 14, 'ties': 0} over 30 games; notes []
+  - series before {"Kevin O'Boyle": 14, 'Dominic': 13, 'ties': 0}, after {"Kevin O'Boyle": 14, 'Dominic': 14, 'ties': 0} over 28 games; notes [{'kind': 'streak', 'team': 'Dominic', 'length': 2}, {'kind': 'evened', 'team': 'Dominic'}]
   - COULDA WON: Kevin O'Boyle (Guinness) optimal 78.85 > 74.41
   - ONE SWAP FLIPS IT: Brock Bowers (16.8) for Dalton Schultz (3.0) at TE, +13.8
 
