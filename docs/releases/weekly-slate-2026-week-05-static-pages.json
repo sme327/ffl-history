@@ -1,27 +1,27 @@
 {
-  "builtAt": "2026-10-08T18:57:44.424Z",
+  "builtAt": "2026-10-14T00:04:17.564Z",
   "scope": "four-public-show-pages-only",
   "releaseVersion": "v007",
   "pages": [
     {
       "route": "/show",
-      "bytes": 24169,
-      "sha256": "f3bded076d3edaa2d0080d6fbd6d0ebaf8973155d137d6bbfa2fe314b689ed37"
+      "bytes": 25269,
+      "sha256": "28bc72d9c83f5544c7facc9bf399d343fc220abb5d17215dfb826580e29e726c"
     },
     {
       "route": "/show/previews/week-5",
-      "bytes": 21716,
-      "sha256": "0ca81bbe3a0f19f83bc7decd58cd52b4903adc9cca1dd3d2681ceceb8107ee2f"
+      "bytes": 22303,
+      "sha256": "8c6612c3282a7a1ef80e9616c98c8b3eaacbc457282ca2ed4cf83f1a72acf78d"
     },
     {
       "route": "/show/pilot",
-      "bytes": 24942,
-      "sha256": "746c316e6d3b8753b3e42dd6521ccaa701eeda53c9c275f7d04f8ad2c461e8c7"
+      "bytes": 23395,
+      "sha256": "979768d5c7c364135090f31e76cf05b7ebaadbe00939b52a9313cbd70925aaa4"
     },
     {
       "route": "/show/episodes/1",
-      "bytes": 26377,
-      "sha256": "fe5a6363829713753ed50a7be0235bce3bc4f913bc9f3ab0fc172d3663eb92ab"
+      "bytes": 24824,
+      "sha256": "54bd85f53910a002c39491aa73461fc0fb4bc47a655591388d1320c204425170"
     }
   ]
 }
