@@ -97,6 +97,16 @@ weeks before the issue's own.
   - Dramatic is good; unverifiable is not.
 - **Drafts.** `"draft": true` means not yet approved. `build_recap.py --site` skips it, so a deploy
   can't ship it. The same flag works for preview copy files.
+- **Drafts don't expire.** An unapproved draft just sits there, committed, and the week passes
+  without it. That happened to the Week 5 preview (drafted 2026-10-06, approved 2026-10-13 after
+  the week was played). Before each deploy, check `grep -l '"draft"' data/program/*-copy.json`
+  and ask the commissioner about anything still waiting.
+- **Late approval.** Approved preview copy still ships after its week, as a back issue. Every line is a
+  pregame line, so it reads correctly as an archive. `/program` still opens on the newest tab.
+- **"Playoff" in the facts JSON includes consolation games.** `is_playoff` covers both brackets, so a
+  card's `record_po`, `playoff_meetings` and `last.playoff` count consolation games. Before a note
+  says "playoffs", check `data/playoff_games.csv` for `bracket`. Doug–Shawn's 2025 Week 17
+  meeting has `playoff: true`, but it was the 7th-place consolation game.
 
 ## Tuesday runbook
 
@@ -104,5 +114,15 @@ weeks before the issue's own.
 2. `python3 scripts/build_recap.py --week N`
 3. Claude drafts `2026-week-NN-recap-copy.json` with `"draft": true`. The commissioner approves or edits it.
 4. Remove `"draft"`, run `npm run deploy`, commit, and send the league `/program/2026-week-NN/recap`.
-5. Wednesday or Thursday: `python3 scripts/build_program.py --week N+1`, write the copy, and deploy.
-   `/program` flips to the preview.
+5. Wednesday or Thursday: `python3 scripts/build_program.py --week N+1`. Claude drafts
+   `2026-week-NN-copy.json` with `"draft": true`, and the commissioner approves it. Then remove
+   `"draft"`, deploy, and commit. `/program` flips to the preview once its copy ships.
+6. After any deploy, load the live page and confirm the copy is there. A deploy skips a draft without
+   any error.
+
+## Status
+
+- **Week 5 (2026).** The preview copy ("Tiebreakers") was approved and deployed 2026-10-13, after the
+  week, as a back issue (`8ab8f13`). The recap is committed (`2128b6e`).
+- **Week 6 (2026).** The preview facts and draft copy are committed (`4504f0e`). The copy is **still
+  awaiting approval**.
