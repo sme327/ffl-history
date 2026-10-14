@@ -1,0 +1,53 @@
+{
+  "draft": true,
+  "theme": "Tiebreakers",
+  "cold_open": [
+    "Eric and Jeff are 2–2 and meet for the fifth time. Brian Clark is one game behind Evan in their series, and one behind Kevin Swanson in the all-time wins race, 194–193. Clark plays Evan this week; Swanson plays Fadi."
+  ],
+  "notes": {
+    "Dominic|Steve Swanson": "Dominic beat Steve for the 2008 title and leads the series 16–13. Steve has won three of the last five, including this same week a year ago: 104.98–82.58 in Week 5.",
+    "Douglas|Shawn": "Shawn leads 8–6 and once won four straight, 2019 to 2022. Doug has taken three of the last five, and the last one was ugly: 89.45–36.24, a 53.21-point beating.",
+    "Kevin O'Boyle|Thomas": "Tom has won five straight, matching his 2013–15 run as the longest in the series; one more sets the record. O'Boyle owns the biggest blowout, 70.08 points in 2017. Tom leads 17–14.",
+    "Eric|Jeff": "Four meetings, 2–2, and this one breaks the tie. Jeff won their closest, by 1.88 points in Week 5 of 2024 — also their highest-scoring game. Eric won the last, 86.7–63.16.",
+    "Brian Clark|Evan": "Evan once led this series by six; it's down to 15–14. Clark has won four of the last five, the last 73.6–70.48, and took their closest game by 0.53 in 2023. One more evens it.",
+    "Fadi|Kevin Swanson": "Swanson leads 17–14 and has won four of the last five. Fadi took the most recent, 88.72–54.07 last year, and owns the series' biggest blowout: 82.45 points in 2008."
+  },
+  "history_lines": [
+    {
+      "year": 2019,
+      "text": "Jeff sets the Week 5 standard",
+      "pts": "133.26",
+      "tag": "best ever"
+    },
+    {
+      "year": 2022,
+      "text": "Thomas misses it by 0.63",
+      "pts": "132.63",
+      "tag": "2nd best"
+    },
+    {
+      "year": 2015,
+      "text": "Brian Clark clears 129",
+      "pts": "129.16",
+      "tag": "3rd best"
+    },
+    {
+      "year": 2021,
+      "text": "Jeff scores 106.67 — and loses",
+      "pts": "106.67",
+      "tag": "best in defeat"
+    },
+    {
+      "year": 2007,
+      "text": "Evan bottoms out",
+      "pts": "25.43",
+      "tag": "worst ever"
+    }
+  ],
+  "milestone": {
+    "value": "60.88",
+    "label": "Steve Swanson · Points to 22,500",
+    "text": "Steve Swanson is 60.88 points from 22,500 for his career; Kevin O'Boyle is 121.55 from 27,500. In the all-time wins race, Kevin Swanson leads Brian Clark 194–193."
+  },
+  "kicker": "For the second straight week, all six games cross division lines."
+}
