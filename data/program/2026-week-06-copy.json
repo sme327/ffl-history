@@ -1,0 +1,53 @@
+{
+  "draft": true,
+  "theme": "High-Water Marks",
+  "cold_open": [
+    "Brian Clark and Kevin Swanson are tied at 194 all-time wins, and this week they play each other. Elsewhere, four series leads have never been wider: Shawn over O'Boyle, Fadi over Dominic, Tom over Steve, and Clark over Swanson."
+  ],
+  "notes": {
+    "Kevin O'Boyle|Shawn": "O'Boyle beat Shawn for the 2015 title. Shawn has won the last three, one by 0.32 points and the latest 105.28–70.71 in last year's playoffs. His 20–13 lead has never been bigger.",
+    "Dominic|Fadi": "Dominic beat Fadi for the 2007 title and owns the series' biggest blowout: 139.89–56.62 in 2011. Fadi has won three straight since, and his 18–12 lead has never been wider.",
+    "Steve Swanson|Thomas": "Tom has won three straight and leads 16–9, the widest it has been in 25 meetings. He owns the biggest blowout, 59.89 points in 2024. Steve won the shootout: 123.04–100.38 in 2023.",
+    "Eric|Evan": "Only the fourth meeting, and the last two were coin flips: Eric won 97.93–96.15 in 2024 and 72.7–72.01 last year. Evan took the first, in 2023, and hasn't beaten him since.",
+    "Brian Clark|Kevin Swanson": "Tied at 194 career wins; the winner takes the all-time lead. Clark has won four straight, matching the series' longest run, and leads 19–14, his biggest edge ever. Swanson owns the biggest blowout: 70.22 in 2007.",
+    "Douglas|Jeff": "Doug won the first seven, 2017 to 2020, including a 98.03-point demolition. Jeff has taken three of the last five, the latest 97.56–82.42, and the seven-game lead is down to four."
+  },
+  "history_lines": [
+    {
+      "year": 2009,
+      "text": "Kevin O'Boyle sets the Week 6 standard",
+      "pts": "131.23",
+      "tag": "best ever"
+    },
+    {
+      "year": 2009,
+      "text": "Kevin Swanson, same week, 2.68 short",
+      "pts": "128.55",
+      "tag": "2nd best"
+    },
+    {
+      "year": 2015,
+      "text": "Shawn clears 120",
+      "pts": "120.16",
+      "tag": "3rd best"
+    },
+    {
+      "year": 2019,
+      "text": "Steve Swanson scores 104.53 — and loses",
+      "pts": "104.53",
+      "tag": "best in defeat"
+    },
+    {
+      "year": 2001,
+      "text": "Dale bottoms out in the league's first season",
+      "pts": "21.19",
+      "tag": "worst ever"
+    }
+  ],
+  "milestone": {
+    "value": "43.83",
+    "label": "Kevin O'Boyle · Points to 27,500",
+    "text": "Kevin O'Boyle is 43.83 points from 27,500 for his career. In the all-time wins race, Brian Clark and Kevin Swanson are tied at 194 — and they meet this week."
+  },
+  "kicker": "For the third straight week, all six games cross division lines."
+}
