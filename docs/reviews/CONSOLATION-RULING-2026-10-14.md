@@ -12,6 +12,16 @@ What counts everywhere: **regular-season games plus championship-bracket playoff
 including the 3rd-place game. A playoff-week game counts only when `playoff_games.csv` lists it
 in the championship bracket.
 
+## Status
+
+- **Museum: live.** The corrected copy, rebuilt facts and recap footnote deployed 2026-10-14
+  (Worker version `7caf0f79-a7b9-4bc5-9e05-7e83b1f5d2cb`). Every corrected note and cold open was
+  checked live on Weeks 1–6.
+- **Show: in production.** Eight replacement lines approved by the owner on 2026-10-14. Retake
+  requests pushed to the FFL Show repo (`3f16cff`), with Grok recording and Codex re-cutting (see
+  The Show below). The published videos are unchanged until those cuts are approved and deployed.
+- **5th-place game: ruled.** It doesn't count in any season (see the data gap below).
+
 ## What changed in the museum
 
 - `scripts/build_program.py`: new `championship_games()` and `counted_game()`. `load_history()`

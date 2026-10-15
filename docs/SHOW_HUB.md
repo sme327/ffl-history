@@ -2,6 +2,17 @@
 
 The museum hosts the animated show *Across the Line* (Graham Keeper and Kate Hedges). This page covers how its pages are laid out and how to ship a new weekly preview or episode.
 
+## Pending: corrected Week 5 Slate (V008) and pilot (V034)
+
+V007 and the pilot V033 state series records under the old count. On 2026-10-14 the commissioner
+ruled that consolation games don't count anywhere (`docs/reviews/CONSOLATION-RULING-2026-10-14.md`)
+and approved eight replacement lines: five in the Slate, three Kate lines in the pilot. The FFL Show
+repo holds the retake briefs and requests (commit `3f16cff`):
+`weekly/2026-week-05/CONSOLATION_CORRECTION_RETAKE.md` and
+`episodes/001-rivalry-round-one/CONSOLATION_CORRECTION_RETAKE.md`. Grok records; Codex swaps the
+takes, fixes the hard-coded card numbers, re-renders and stages both releases. Each cut needs the
+owner's ear-check, exact-cut approval and deploy go. Until then the live videos stay as they are.
+
 ## Current Week 5 release: V007
 
 **Live and verified October 8.** [Watch Week 5](https://iwnh.sme327.com/show/previews/week-5) · [Show hub](https://iwnh.sme327.com/show). Worker version `d49f0a30-6819-41fa-bf14-4d74fffef385`, deployed source `37c4347`. The final Yahoo capture was **11:58 AM Pacific**, and all three spoken configurations passed. Twelve repeat show-page requests match the built HTML; both movie hashes, prefix/suffix/open-range requests and unsatisfiable-range responses pass. Week 5 browser playback and seeking resume correctly, and the unchanged V033 pilot plays. Initial seeking and page-limit failures were repaired before the main-branch handoff. No known release failure remains. See the release manifest, live QA, browser QA and final-lineup report.

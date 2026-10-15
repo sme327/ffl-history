@@ -140,6 +140,21 @@ python inspect_yahoo_page.py "https://full.url.here" 2004
 
 ---
 
+### `scripts/probe_playoff_brackets.py`
+Read-only list of every game on Yahoo's championship and consolation bracket pages, with
+Yahoo's own round labels (`quarterfinal`, `place_5`, `place_9`, …). It exists because
+`fetch_yahoo_data.py`'s `scrape_playoffs()` keeps only the 2001–2020 round types and skips five
+placement games a season from 2021 on (see `docs/DATA_GUIDE.md` → Known Gaps). It writes raw pages
+and `brackets.json` to `.local/raw/brackets/` and changes no data file. If the saved session has
+expired it opens a visible Yahoo sign-in window, then saves the refreshed `.yahoo_cookies.json`.
+
+```
+python3 scripts/probe_playoff_brackets.py              # 2021–2025
+python3 scripts/probe_playoff_brackets.py 2019 2025    # any range
+```
+
+---
+
 ### `build_player_positions.py`
 One-time script that builds `data/player_positions.csv` by matching every player name
 in `draft_picks.csv` against the nflverse players database (`data/ref_nfl_players.csv`).
