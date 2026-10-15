@@ -1,0 +1,28 @@
+{
+  "builtAt": "2026-10-15T06:50:41.459Z",
+  "scope": "current-manifest-show-pages-only",
+  "releaseId": "consolation-v008-v034",
+  "mediaManifestSHA256": "907f5b4ba86037204778a683134eb43645a823665781efbe79df6206ef5190fe",
+  "pages": [
+    {
+      "route": "/show",
+      "bytes": 25293,
+      "sha256": "e42c159d298817e85986222770b16c49bb3b8dc9044baf6609dc7e36d24e9048"
+    },
+    {
+      "route": "/show/previews/week-5",
+      "bytes": 22690,
+      "sha256": "2687c32596cf61079ae90101595b095efc94dc348da55fa472817df9a1af430e"
+    },
+    {
+      "route": "/show/pilot",
+      "bytes": 23848,
+      "sha256": "ae7825861374da46c656a8023dede15abada81c5355d1207eacfb0130e39f32e"
+    },
+    {
+      "route": "/show/episodes/1",
+      "bytes": 25277,
+      "sha256": "24483426c9188e0ff2eff59e9afebffdd52be6bae83911452934934b7aa555df"
+    }
+  ]
+}

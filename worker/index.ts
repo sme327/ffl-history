@@ -1,7 +1,7 @@
 /** Cloudflare Worker entry point for The Long Game. */
 import handler from "vinext/server/app-router-entry";
 import {sliceVideo, videoRange} from "./video-range";
-import release from "../docs/releases/weekly-slate-2026-week-05.json";
+import release from "../docs/releases/show-media-current.json";
 
 export default {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
@@ -15,11 +15,10 @@ export default {
       const responseHeaders = new Headers(asset.headers);
       responseHeaders.set("Accept-Ranges", "bytes");
       // The internal asset binding can omit Content-Length even though the
-      // public asset response adds it. These two bounded release files have
+      // public asset response adds it. The current bounded release files have
       // checksummed lengths verified before deployment; unknown files do not.
       const declaredSize = Number(asset.headers.get("Content-Length"));
-      const knownSize = pathname === release.video ? release.bytes :
-        pathname === "/show/pilot-review.mp4" ? release.pilotV033Bytes : 0;
+      const knownSize = release.media.find(item => item.video === pathname)?.bytes ?? 0;
       const size = declaredSize || knownSize;
       const rangeHeader = request.headers.get("Range");
       const ifRange = request.headers.get("If-Range");

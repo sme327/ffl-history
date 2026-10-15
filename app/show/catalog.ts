@@ -66,9 +66,10 @@ export const EPISODES: ShowEpisode[] = [
     released: "2026-10-04",
     runtime: "7:45",
     video: "/show/pilot-review.mp4",
-    // Captions are burned into the preserved live V033 pilot, so no separate track.
+    // Correction candidate V034 has burned-in captions; do not duplicate them.
     poster: "/show/studio-poster-v001.webp",
-    version: "20261005-v033-720p",
+    version: "20261014-v034-consolation-720p",
+    correction: "Corrected Oct 14: head-to-head history excludes consolation games.",
     summary:
       "Three weeks of division games, and every division finished with the exact same standings. Graham Keeper and Kate Hedges explain what that hides.",
     segments: [
@@ -95,8 +96,9 @@ export const PREVIEWS: ShowPreview[] = [
     video: "/show/previews/2026-week-05.mp4",
     // Captions are burned into the approved release; do not show them twice.
     poster: "/show/studio-poster-v001.webp",
-    version: "20261008-slate2-v007",
-    runtime: "4:41",
+    version: "20261014-slate2-v008-consolation",
+    runtime: "4:39",
+    correction: "Corrected Oct 14: series, streaks and last meetings exclude consolation games; Game 3 historical scores corrected.",
     summary:
       "Six Week 4 results, the Box Score, cross-division progress, Ramirez’s Second Opinion, and all six Week 5 previews.",
     programSlug: "2026-week-05",

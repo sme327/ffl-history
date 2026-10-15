@@ -2,7 +2,19 @@
 
 The museum hosts the animated show *Across the Line* (Graham Keeper and Kate Hedges). This page covers how its pages are laid out and how to ship a new weekly preview or episode.
 
-## Pending: corrected Week 5 Slate (V008) and pilot (V034)
+## Approved consolation corrections: V008 / V034
+
+The owner approved the exact Week 5 Slate V008 and Pilot V034 cuts, then explicitly said “go” on October 15. Approval binds the two SHA-256 values in `docs/releases/show-media-current.json`. Deployment and live verification are now authorized; publication status is recorded separately after those checks.
+
+`docs/releases/show-media-current.json` is the current media registry: movie paths, exact bytes/hash, catalog versions, watch routes and recorded owner approval. `worker/index.ts` uses its file lengths for range responses rather than V007's historical release report. Preserve that old report and all old live QA.
+
+`scripts/build-show-pages.mjs` now takes its routes and expected catalog versions from this registry and writes `docs/releases/show-static-pages-current.json`. Add future published movie/watch routes to the registry. Other Museum pages retain their existing rendering. `scripts/verify-corrected-show-release.mjs BASE_URL NEW_QA_PATH` checks exact movie bytes/hash, MP4 content type, prefix/suffix/open ranges, invalid-range 416, repeated static pages and the declared hub state. It refuses to overwrite a previous QA report. Browser playback and seeking are separate checks after authorized deployment.
+
+Week 5 has been played and belongs in Past weekly previews, not This Week. The expected current slot is the coming-soon card until another weekly is published; Episode 1 remains Latest Episode. Do not rerun the retired V007 verifier or its old current-lineup upload gate for these historical correction cuts.
+
+After explicit go: reconcile current main, run `npm run deploy` with no old `FFL_VERIFY_WEEK5_LINEUPS=1` flag, verify all four watch/hub routes and both movies, then merge/push the verified source. The current registry and versioned correction staging report bind the movies approved by the owner.
+
+## Correction background: Week 5 Slate (V008) and pilot (V034)
 
 V007 and the pilot V033 state series records under the old count. On 2026-10-14 the commissioner
 ruled that consolation games don't count anywhere (`docs/reviews/CONSOLATION-RULING-2026-10-14.md`)
@@ -13,7 +25,7 @@ repo holds the retake briefs and requests (commit `3f16cff`):
 takes, fixes the hard-coded card numbers, re-renders and stages both releases. Each cut needs the
 owner's ear-check, exact-cut approval and deploy go. Until then the live videos stay as they are.
 
-## Current Week 5 release: V007
+## Historical Week 5 release: V007 (superseded after V008 deployment)
 
 **Live and verified October 8.** [Watch Week 5](https://iwnh.sme327.com/show/previews/week-5) · [Show hub](https://iwnh.sme327.com/show). Worker version `d49f0a30-6819-41fa-bf14-4d74fffef385`, deployed source `37c4347`. The final Yahoo capture was **11:58 AM Pacific**, and all three spoken configurations passed. Twelve repeat show-page requests match the built HTML; both movie hashes, prefix/suffix/open-range requests and unsatisfiable-range responses pass. Week 5 browser playback and seeking resume correctly, and the unchanged V033 pilot plays. Initial seeking and page-limit failures were repaired before the main-branch handoff. No known release failure remains. See the release manifest, live QA, browser QA and final-lineup report.
 
@@ -110,10 +122,10 @@ hashes, burned-in captions only, no dead Program link, repeated build-time page 
 checklist for the next release. If that release wants a script, write a general one that reads the
 release manifest it is shipping and knows a preview leaves **This week** once its recap exists.
 
-`scripts/build-show-pages.mjs` is **not** retired: `npm run build` runs it on every deploy. It still
-hard-codes the four Week 5-era routes and writes `weekly-slate-2026-week-05-static-pages.json`. The
-next show release (the corrected Week 5 cut V008, the corrected pilot V034, or Week 6) has to update
-its routes and manifest path.
+`scripts/build-show-pages.mjs` is **not** retired: `npm run build` runs it on every deploy. The
+V008/V034 staging change replaces its Week 5 hard-coded routes and old report path with
+`show-media-current.json` and `show-static-pages-current.json`, as described above. The recorded
+Week 5 release QA remains historical evidence, not a mutable gate for future releases.
 
 ## Release-day runbook: episode
 

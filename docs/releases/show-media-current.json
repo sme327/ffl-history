@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "releaseId": "consolation-v008-v034",
+  "stage": "owner-approved-deploy-authorized",
+  "ownerApproval": {"owner":"Shawn","approvalDate":"2026-10-15","exactCutApprovalMessage":"approved","deploymentAuthorizationMessage":"go","scope":"Week 5 Slate V008 and Pilot V034; exact SHA-256 values in media"},
+  "rulingDate": "2026-10-14",
+  "rulingEvidence": "docs/reviews/CONSOLATION-RULING-2026-10-14.md",
+  "historicalCorrectionOnly": true,
+  "preserveOriginalLineupSnapshot": true,
+  "expectedHub": {
+    "currentPreview": null,
+    "latestEpisode": "/show/episodes/1",
+    "pastPreviews": [
+      "/show/previews/week-5"
+    ]
+  },
+  "media": [
+    {
+      "id": "weekly-slate-2026-week-05-v008",
+      "video": "/show/previews/2026-week-05.mp4",
+      "watchRoutes": [
+        "/show/previews/week-5"
+      ],
+      "version": "20261014-slate2-v008-consolation",
+      "bytes": 20671255,
+      "sha256": "df357fa43473d0c8caf59ec755f2bd226d1e1a45f97ad41c767cff4192c6f041",
+      "frames": 8374,
+      "seconds": 279.1333333333333,
+      "previousSHA256": "cce7116d761384edfb9a8c9c05564c9cba3cf82aadd4e699a311c418607c4eda",
+      "captionsBurnedIn": true,
+      "sourceMovie": "renders/weekly/2026-week-05/slate-2.0-v008/weekly-slate-wk05-2.0-review-v008.mp4",
+      "releaseApproved": true,
+      "deploymentApproved": true
+    },
+    {
+      "id": "pilot-v034",
+      "video": "/show/pilot-review.mp4",
+      "watchRoutes": [
+        "/show/pilot",
+        "/show/episodes/1"
+      ],
+      "version": "20261014-v034-consolation-720p",
+      "bytes": 24238495,
+      "sha256": "84d34138deea91a48768674e12d2a73c383547031e21c1cb14443bbb6888a457",
+      "frames": 13945,
+      "seconds": 464.8333333333333,
+      "previousSHA256": "7efaea2692c49d8fb51e51b52718c6a531deddd7a62d3d1831f9126ca773e383",
+      "captionsBurnedIn": true,
+      "sourceMovie": "renders/001-rivalry-round-one/consolation-v034/pilot-consolation-v034-web-720p.mp4",
+      "releaseApproved": true,
+      "deploymentApproved": true
+    }
+  ],
+  "releaseApproved": true,
+  "deploymentApproved": true,
+  "deployed": false
+}
