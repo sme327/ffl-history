@@ -1,0 +1,58 @@
+{
+  "checkedAt": "2026-10-15T22:11:28Z",
+  "base": "https://iwnh.sme327.com",
+  "releaseId": "consolation-v008-v034",
+  "workerVersion": "a9b2dadd-a368-4c70-a46e-9879307e22e5",
+  "method": "Live in-app browser; native player controls; read-only video state; no audio-listening claim",
+  "checks": [
+    {
+      "route": "/show/previews/week-5",
+      "version": "20261014-slate2-v008-consolation",
+      "duration": 279.147,
+      "playback": true,
+      "observedInitialAdvance": 29.716239,
+      "seekTo": 192.275526,
+      "resumedAt": 192.42748,
+      "laterTime": 210.201123,
+      "paused": false,
+      "readyState": 4,
+      "error": null
+    },
+    {
+      "route": "/show/pilot",
+      "version": "20261014-v034-consolation-720p",
+      "duration": 464.853,
+      "playback": true,
+      "beforeSeek": 21.816175,
+      "seekTo": 26.28013,
+      "laterTime": 42.436369,
+      "paused": false,
+      "readyState": 4,
+      "error": null
+    },
+    {
+      "route": "/show/episodes/1",
+      "version": "20261014-v034-consolation-720p",
+      "duration": 464.853,
+      "playback": true,
+      "beforeSeek": 0.134553,
+      "seekTo": 4.762804,
+      "laterTime": 41.28718,
+      "paused": false,
+      "readyState": 4,
+      "error": null
+    },
+    {
+      "route": "/show",
+      "thisWeek": "Next preview coming soon",
+      "latestEpisode": "/show/episodes/1",
+      "expandedArchiveContains": "Week 5 · Week 4 review / Week 5 preview · 4:39",
+      "archiveHref": "/show/previews/week-5"
+    }
+  ],
+  "resolvedIssues": [
+    "Cloudflare asset upload had a fetch failure, then its built-in retry completed successfully.",
+    "First post-deploy /show/previews/week-5 page hash mismatched; subsequent custom-domain and workers.dev hashes matched the build, and all twelve repeated page checks passed."
+  ],
+  "remainingFailures": []
+}

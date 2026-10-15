@@ -2,9 +2,11 @@
 
 The museum hosts the animated show *Across the Line* (Graham Keeper and Kate Hedges). This page covers how its pages are laid out and how to ship a new weekly preview or episode.
 
-## Approved consolation corrections: V008 / V034
+## Live consolation corrections: V008 / V034
 
-The owner approved the exact Week 5 Slate V008 and Pilot V034 cuts, then explicitly said “go” on October 15. Approval binds the two SHA-256 values in `docs/releases/show-media-current.json`. Deployment and live verification are now authorized; publication status is recorded separately after those checks.
+The owner approved the exact Week 5 Slate V008 and Pilot V034 cuts, then explicitly said “go” on October 15. Both are deployed and live-verified. Worker version: `a9b2dadd-a368-4c70-a46e-9879307e22e5`; deployed source: `03cab90`. Approval binds the unchanged SHA-256 values in `docs/releases/show-media-current.json`. [Week 5](https://iwnh.sme327.com/show/previews/week-5) · [Pilot](https://iwnh.sme327.com/show/pilot) · [Episode 1](https://iwnh.sme327.com/show/episodes/1).
+
+Live evidence: `docs/releases/consolation-v008-v034-live-qa.json` (four pages × three checks, both full movie hashes/MIME/bytes, six valid 206 range checks and two invalid-range 416 checks) and `consolation-v008-v034-browser-qa.json` (all three players play/seek/resume; hub and expanded archive verified). An upload network retry and the first post-deploy page hash mismatch resolved before final verification. No known failure remains. Deployment status metadata was updated after the build; `show-static-pages-current.json` retains the exact build-time registry hash and generated page hashes. No movie was re-rendered after approval.
 
 `docs/releases/show-media-current.json` is the current media registry: movie paths, exact bytes/hash, catalog versions, watch routes and recorded owner approval. `worker/index.ts` uses its file lengths for range responses rather than V007's historical release report. Preserve that old report and all old live QA.
 

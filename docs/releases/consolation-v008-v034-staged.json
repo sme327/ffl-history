@@ -1,7 +1,8 @@
 {
   "schemaVersion": 1,
   "releaseId": "consolation-v008-v034",
-  "stage": "owner-approved-deploy-authorized",
+  "stage": "deployed-live-verified",
+  "deployment": {"worker":"the-long-game","workerVersion":"a9b2dadd-a368-4c70-a46e-9879307e22e5","deployedSourceCommit":"03cab90fa0df7a742867761eb9abd9892e7696b3","verifiedAt":"2026-10-15T22:11:28Z","liveQA":"consolation-v008-v034-live-qa.json","browserQA":"consolation-v008-v034-browser-qa.json","statusMetadataUpdatedAfterBuild":true,"remainingFailures":[]},
   "ownerApproval": {"owner":"Shawn","approvalDate":"2026-10-15","exactCutApprovalMessage":"approved","deploymentAuthorizationMessage":"go","scope":"Week 5 Slate V008 and Pilot V034; exact SHA-256 values in media"},
   "rulingDate": "2026-10-14",
   "rulingEvidence": "docs/reviews/CONSOLATION-RULING-2026-10-14.md",
@@ -53,5 +54,5 @@
   ],
   "releaseApproved": true,
   "deploymentApproved": true,
-  "deployed": false
+  "deployed": true
 }
