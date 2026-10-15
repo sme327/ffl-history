@@ -250,8 +250,10 @@ are on the consolation page (`quarterfinal` ×2, `place_11`, `place_9`) and don'
 quarterfinal losers' game is `place_5` **on the championship page**. Yahoo moved it there with the
 2021 format.
 
-**Decision pending:** does the 2021–2025 5th-place game count? Today it doesn't. Counting it adds one
-game a season: 2021 Kevin Swanson over Shawn, 2022 Shawn over Fadi, 2023 Douglas over Kevin
+**Ruling (commissioner, 2026-10-14): the 5th-place game doesn't count**, in any season and whatever
+bracket Yahoo files it under. It never counted from 2002 to 2020, and the museum never counted it from
+2021 either; only Yahoo's label changed. No data or page changes. For the record, the games it would
+have added: 2021 Kevin Swanson over Shawn, 2022 Shawn over Fadi, 2023 Douglas over Kevin
 Swanson, 2024 Dominic over Steve Swanson, 2025 Brian Clark over Steve Swanson. Kevin Swanson and
 Brian Clark would each gain one career win, so their 194–194 tie stands.
 

@@ -86,8 +86,10 @@ the career win totals and every other museum page.
 
 - **Which games count.** `build_program.counted_game()`. A playoff-week game counts only when
   `playoff_games.csv` lists it in the championship bracket. That excludes the consolation bracket
-  and also the unbracketed placement games that Yahoo schedules for eliminated teams in 2021–2025
-  (see `docs/DATA_GUIDE.md` → Known Gaps).
+  and also the unbracketed placement games that Yahoo schedules for eliminated teams in 2021–2025,
+  including the 5th-place game, which never counts, even though Yahoo files it in the
+  championship bracket from 2021 on (commissioner, 2026-10-14; see `docs/DATA_GUIDE.md` → Known
+  Gaps).
 - **Where it applies.** Series records and the "regular season · playoffs" split on each card,
   streaks, longest runs, biggest leads, last / closest / biggest / highest / lowest meetings, the
   recap's series lines, and "Week N in the Archive". So "playoffs" on a card now means championship
