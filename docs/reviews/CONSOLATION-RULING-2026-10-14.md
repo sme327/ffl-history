@@ -245,11 +245,15 @@ consolation semifinal losers' game (Week 17). Four are plainly consolation games
 losers' game is the 5th-place game: from 2002 to 2020 Yahoo filed that game in the consolation
 bracket in all 19 seasons, and it never counted.
 
-**Recommendation (awaiting the commissioner's confirmation):** keep all five excluded, which is
-the current behavior, consistent with 19 seasons of precedent. Nothing in the data or on the site
-changes. `scripts/probe_playoff_brackets.py` reads Yahoo's own bracket labels for 2021–2025
-read-only. It needs a fresh Yahoo sign-in (both saved sessions had expired on 2026-10-14) and
-would confirm how Yahoo labels these games.
+**Yahoo's labels** (probe run 2026-10-14, `scripts/probe_playoff_brackets.py`): four of the five
+are on the consolation page (`quarterfinal` ×2, `place_11`, `place_9`) and don't count. The
+quarterfinal losers' game is `place_5` **on the championship page**. Yahoo moved it there with the
+2021 format.
+
+**Decision pending:** does the 2021–2025 5th-place game count? Today it doesn't. Counting it adds one
+game a season: 2021 Kevin Swanson over Shawn, 2022 Shawn over Fadi, 2023 Douglas over Kevin
+Swanson, 2024 Dominic over Steve Swanson, 2025 Brian Clark over Steve Swanson. Kevin Swanson and
+Brian Clark would each gain one career win, so their 194–194 tie stands.
 
 ## The Show
 
@@ -257,7 +261,7 @@ Corrections for the published videos are written up in the FFL Show project, in 
 (exact lines for Grok, picture changes for Codex, release steps):
 `weekly/2026-week-05/CONSOLATION_CORRECTION_RETAKE.md` and
 `episodes/001-rivalry-round-one/CONSOLATION_CORRECTION_RETAKE.md`, each with a
-`consolation-correction-request.json`. The new wording awaits owner approval.
+`consolation-correction-request.json`. The new wording was approved by the owner on 2026-10-14.
 
 The Week 5 release verifier (`scripts/verify-weekly-show-release.mjs`) was retired the same day.
 See `docs/SHOW_HUB.md`.
