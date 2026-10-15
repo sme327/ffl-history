@@ -1,3 +1,5 @@
+// RETIRED 2026-10-14: one-time release gate for Week 5 V007. Do not rerun. It would fail by design
+// (Week 5 has left "This week") and overwrite V007's recorded live QA. See docs/SHOW_HUB.md.
 import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';

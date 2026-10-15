@@ -12,7 +12,7 @@ The clean V007 export is **4:41.200, 1280×720, 30 fps, 20,758,353 bytes (19.80 
 
 Deploy from this checkout with `FFL_VERIFY_WEEK5_LINEUPS=1 npm run deploy`. The opt-in gate runs after the full build and immediately before upload: fresh Yahoo selections must still show Kittle/Stevenson starting, Waddle starting/Wilson benched, and Shough starting/Stroud benched. It writes a sanitized final-check report and stops upload on any failure. Raw Yahoo pages and session data stay ignored in the show checkout. The final check does not pretend the displayed projections were captured later than their stamp.
 
-After deployment run `node scripts/verify-weekly-show-release.mjs https://iwnh.sme327.com --live`; verify the hub's This week / Latest episode slots, actual playback and seeking, then merge show-hub into Museum main and push. Preserve prior Worker version `bcc35893-80e0-4375-9016-d8c3a4b1524a` for rollback. The pilot in this branch is V033, not V031; verify its known hash and playback.
+After deployment run `node scripts/verify-weekly-show-release.mjs https://iwnh.sme327.com --live` (retired 2026-10-14; see "Retired: the Week 5 release verifier" below); verify the hub's This week / Latest episode slots, actual playback and seeking, then merge show-hub into Museum main and push. Preserve prior Worker version `bcc35893-80e0-4375-9016-d8c3a4b1524a` for rollback. The pilot in this branch is V033, not V031; verify its known hash and playback.
 
 Before the merge, the original main checkout's dirty work was saved in retained stash `07ccd67d30fa61a44adbd5d6e057f332512c1a38`. Restore its three unrelated Week 5 Program drafts afterward. Do not apply the overlapping old CSS/pilot-route changes over the approved hub; they remain recoverable in the retained stash. Do not stage the deployment checkout's `node_modules` symlink.
 
@@ -79,9 +79,30 @@ Everything is server-rendered. There is no client JS; the archive uses `<details
    - check `video`, `poster`, and `programSlug`
    - change `version` whenever a file is replaced, to bust browser caches
 5. **Next week.** Add a `draft` entry for the following week, so it's ready.
-6. **Check locally:** `npm run typecheck`, then `npm run build`. Use the built Cloudflare preview for media checks (`wrangler dev --local --config dist/server/wrangler.json`); the generic Node preview may use the wrong MP4 content type. Open `/show` and `/show/previews/week-N`. For Week 5, `node scripts/verify-weekly-show-release.mjs http://127.0.0.1:4186 --allow-local-no-range` records local evidence and the pending production-range check.
+6. **Check locally:** `npm run typecheck`, then `npm run build`. Use the built Cloudflare preview for media checks (`wrangler dev --local --config dist/server/wrangler.json`); the generic Node preview may use the wrong MP4 content type. Open `/show` and `/show/previews/week-N`. (The Week 5 release verifier is retired; see below. Until a general one exists, check the hub slots, playback, content type, bytes/hash and byte-range seeking by hand.)
 7. **Hold for owner authorization.** A local catalog value of `published` is not permission to deploy. Commit the staged release; do not deploy or push until explicitly authorized. If lineups have become stale, refresh them and replace changed exchanges before deployment.
 8. **Ship only after “go”:** `npm run deploy`, then verify the new public page, content type, bytes/hash, and byte-range seeking before reporting it live. Preserve the previous deployment for rollback.
+
+## Retired: the Week 5 release verifier
+
+`scripts/verify-weekly-show-release.mjs` was the one-time release gate for Week 5 V007. It is
+retired as of 2026-10-14 (owner decision) and must not be rerun:
+
+- It expects the Week 5 preview in **This week**, which stopped being true, by design, once the
+  Week 5 recap shipped.
+- It compares pages against the Week 5 build snapshot, which every later build rewrites.
+- A rerun overwrites `docs/releases/weekly-slate-2026-week-05-live-qa.json`, the recorded evidence
+  of the V007 release.
+
+Its record of V007 stays in `docs/releases/`. The checks it ran (byte-range seeking, movie and pilot
+hashes, burned-in captions only, no dead Program link, repeated build-time page fetches) are the
+checklist for the next release. If that release wants a script, write a general one that reads the
+release manifest it is shipping and knows a preview leaves **This week** once its recap exists.
+
+`scripts/build-show-pages.mjs` is **not** retired: `npm run build` runs it on every deploy. It still
+hard-codes the four Week 5-era routes and writes `weekly-slate-2026-week-05-static-pages.json`. The
+next show release (the corrected Week 5 cut V008, the corrected pilot V034, or Week 6) has to update
+its routes and manifest path.
 
 ## Release-day runbook: episode
 

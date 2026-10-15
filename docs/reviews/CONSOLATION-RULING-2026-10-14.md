@@ -239,6 +239,25 @@ These games count nowhere today, which is correct for consolation games. To labe
 round type in `scrape_playoffs()` and re-run it for 2021–2025 only (10 bracket pages) with a
 logged-in Yahoo session.
 
-**Open question for the commissioner if that happens:** if Yahoo files the quarterfinal losers'
-5th-place game in the championship bracket, does it count like the 3rd-place game? If yes, career
-totals and Rivalries for 2021–2025 gain those games.
+**What they are**, by seed and week: two consolation quarterfinals (Week 15), the 11th-place game
+(Week 16), the game between the two championship quarterfinal losers (Week 16), and the
+consolation semifinal losers' game (Week 17). Four are plainly consolation games. The quarterfinal
+losers' game is the 5th-place game: from 2002 to 2020 Yahoo filed that game in the consolation
+bracket in all 19 seasons, and it never counted.
+
+**Recommendation (awaiting the commissioner's confirmation):** keep all five excluded, which is
+the current behavior, consistent with 19 seasons of precedent. Nothing in the data or on the site
+changes. `scripts/probe_playoff_brackets.py` reads Yahoo's own bracket labels for 2021–2025
+read-only. It needs a fresh Yahoo sign-in (both saved sessions had expired on 2026-10-14) and
+would confirm how Yahoo labels these games.
+
+## The Show
+
+Corrections for the published videos are written up in the FFL Show project, in its retake format
+(exact lines for Grok, picture changes for Codex, release steps):
+`weekly/2026-week-05/CONSOLATION_CORRECTION_RETAKE.md` and
+`episodes/001-rivalry-round-one/CONSOLATION_CORRECTION_RETAKE.md`, each with a
+`consolation-correction-request.json`. The new wording awaits owner approval.
+
+The Week 5 release verifier (`scripts/verify-weekly-show-release.mjs`) was retired the same day.
+See `docs/SHOW_HUB.md`.
