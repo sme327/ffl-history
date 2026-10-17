@@ -1,28 +1,33 @@
 {
-  "builtAt": "2026-10-15T22:06:10.860Z",
+  "builtAt": "2026-10-17T06:30:50.212Z",
   "scope": "current-manifest-show-pages-only",
-  "releaseId": "consolation-v008-v034",
-  "mediaManifestSHA256": "6f1d91d2b97b9b7cee19c84b5726fa044740091c143d1bb9f0799fb2e6da0640",
+  "releaseId": "weekly-slate-2026-week-06-v004",
+  "mediaManifestSHA256": "5233275b5f0d06800124e56c3f99f36745cba0683d5d4e17ea2f15428278057f",
   "pages": [
     {
       "route": "/show",
-      "bytes": 25293,
-      "sha256": "81647bd7deb04f1e4c5469c557f5ecabb0ecbc7b39ebb00e16c1b96896871331"
+      "bytes": 25351,
+      "sha256": "86917db5f8b639749ba1844ff4bd33456977eca12f3054ba8bf71f61bf32b192"
+    },
+    {
+      "route": "/show/previews/week-6",
+      "bytes": 21956,
+      "sha256": "b283d1047ecf74c18f9342152897854d0c783d0049fd05003af917bdf415583f"
     },
     {
       "route": "/show/previews/week-5",
-      "bytes": 22690,
-      "sha256": "40f3e462cbb96c9e41c2347855c0410cb316e3a3e2d2cd9d36dc3bc2d9cd743a"
+      "bytes": 23137,
+      "sha256": "8e007c086dc4582b0d93fcfb9f31d5011a2b1e9d904c47f4f67b54c2a399440b"
     },
     {
       "route": "/show/pilot",
-      "bytes": 23848,
-      "sha256": "9dcb9894e1b93088bc0070145c3d1b5d282e09b6aac6dc0544c6897c7eb93f23"
+      "bytes": 24909,
+      "sha256": "25b89b65d37eb19a2567ed905f06a45b323f28b71bc4a53e9a14babb62476df1"
     },
     {
       "route": "/show/episodes/1",
-      "bytes": 25277,
-      "sha256": "1a4f6499f5ec2c65f6d9dab0aae10ce37ea62f6cc15af64fda34e10a77609528"
+      "bytes": 26340,
+      "sha256": "0253b5c771a415d17d38ce6d1c1c687119e0f67824e24df7ce605ea356b7fd57"
     }
   ]
 }

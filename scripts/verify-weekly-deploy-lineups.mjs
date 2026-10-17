@@ -4,6 +4,35 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
+// The V007 branch below is retained as historical code. The active Week 6
+// release has independent approvals, source hashes and roster/count conditions.
+const current=JSON.parse(fs.readFileSync('docs/releases/show-media-current.json','utf8'));
+if(current.releaseId==='weekly-slate-2026-week-06-v004'){
+ assert.equal(current.releaseApproved,true,'Exact V004 cut approval required');
+ assert.equal(current.deploymentApproved,true,'STOP: explicit owner deployment go has not been recorded');
+ assert(current.ownerApproval.deploymentAuthorizationMessage,'Record the actual owner deploy-go message');
+ const show=process.env.FFL_SHOW_ROOT??'/Users/sme/Documents/Projects/Sports/Fantasy Football Leagues/FFL Show';
+ const approval=JSON.parse(fs.readFileSync(path.join(show,'weekly/2026-week-06/OWNER_APPROVAL_V004.json'),'utf8'));
+ const item=current.media.find(m=>m.id===current.releaseId);
+ assert(item&&item.releaseApproved&&item.deploymentApproved);
+ assert.equal(approval.sha256,item.sha256);assert.equal(approval.releaseApproved,true);
+ assert.equal(approval.deploymentApproved,true,'Show repo also requires explicit owner deployment authorization');
+ for(const media of current.media){
+  const bytes=fs.readFileSync(path.join('public',media.video));
+  assert(bytes.length<25*1024*1024);assert.equal(bytes.length,media.bytes);
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),media.sha256,'Approved movie changed: '+media.id);
+ }
+ const output=path.join(show,'weekly/2026-week-06',`predeploy-check-${Date.now()}.json`);
+ execFileSync('python3',[path.join(show,'renderer/scripts/check-week06-freshness.py'),'--output',output],{cwd:show,stdio:'inherit'});
+ const check=JSON.parse(fs.readFileSync(output,'utf8'));
+ assert(Date.now()-Date.parse(check.capturedAtStart)<5*60*1000,'Freshness check must finish inside five minutes');
+ for(const [key,value]of Object.entries(check.conditions))assert.equal(value,key!=='V2_revY','STOP: spoken condition changed: '+key);
+ const cards=JSON.parse(fs.readFileSync(path.join(show,'weekly/2026-week-06/release-card-data-v004.json'),'utf8'));
+ const report={releaseId:current.releaseId,sha256:item.sha256,checkedAt:new Date().toISOString(),capture:output,capturedAtPacific:check.capturedAtPacific,conditions:check.conditions,pass:true,projectionGapIsNotSpoken:true,cardDataRemainsAsOf:cards.kittle.capturedAt,cardStampsNotRelabelled:true,currentValues:{kittleTransactions:check.kittleTransactionCount,tihwdMoves:check.tihwdMoves,rodgersProjection:check.decisionPlayers.Rodgers.projected,youngProjection:check.decisionPlayers.Young.projected},note:'Current values are logged, not substituted into the owner-approved movie. Its clearly stamped historical card values remain unchanged.'};
+ fs.writeFileSync('docs/releases/weekly-slate-2026-week-06-final-upload-check.json',JSON.stringify(report,null,2)+'\n');
+ console.log('Week 6 upload gate passed: exact approved hashes, explicit deploy go and fresh spoken roster/count conditions.');
+ process.exit(0);
+}
 if(process.env.FFL_VERIFY_WEEK5_LINEUPS!=='1')process.exit(0);
 const show=process.env.FFL_SHOW_ROOT??'/Users/sme/Documents/Projects/Sports/Fantasy Football Leagues/FFL Show';
 const manifest=JSON.parse(fs.readFileSync('docs/releases/weekly-slate-2026-week-05.json','utf8'));

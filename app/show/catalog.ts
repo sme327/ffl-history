@@ -88,6 +88,23 @@ export const EPISODES: ShowEpisode[] = [
 export const PREVIEWS: ShowPreview[] = [
   {
     kind: "preview",
+    week: 6,
+    title: "Week 6 Weekly Slate",
+    dek: "Week 5 review · Week 6 preview",
+    // Published in this staged local build only; explicit deploy go is still required.
+    status: "published",
+    released: "2026-10-16",
+    video: "/show/previews/2026-week-06.mp4",
+    poster: "/show/studio-poster-v001.webp",
+    version: "20261016-slate-v004",
+    runtime: "4:48",
+    summary:
+      "Six Week 5 results, Kittle Watch, the Box Score, Ramirez’s Rules Board, six Week 6 previews, and a trip From the Vault.",
+    programSlug: "2026-week-06",
+  },
+  { kind: "preview", week: 7, title: "Week 7 Weekly Slate", dek: "Week 6 review · Week 7 preview", status: "draft" },
+  {
+    kind: "preview",
     week: 5,
     title: "Week 5 Weekly Slate",
     dek: "Week 4 review · Week 5 preview",

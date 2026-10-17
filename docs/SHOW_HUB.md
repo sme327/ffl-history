@@ -2,6 +2,18 @@
 
 The museum hosts the animated show *Across the Line* (Graham Keeper and Kate Hedges). This page covers how its pages are laid out and how to ship a new weekly preview or episode.
 
+## Week 6 V004 — approved and locally staged, NOT deployed
+
+Shawn approved the exact V004 cut on October 16: SHA-256 `e98bb81ec17cad4467cc3ea14df98e360f3366c58d43fc28f134c142960b1c4e`, 17,093,176 bytes, 720p, 4:48.033. Evidence: FFL Show `weekly/2026-week-06/OWNER_APPROVAL_V004.json`. Deployment authorization is **not** included in that approval.
+
+Prepared on `show-hub`, reconciled with fetched `origin/main` baseline `c6d59ba`. The local catalog marks Week 6 published at `/show/previews/week-6`, version `20261016-slate-v004`, with Week 7 hidden as a draft. This is local staging only. The current media registry adds its exact hash/bytes and watch route; its deployment fields remain false. Week 5 V008 and pilot V034 movie hashes/versions are unchanged. The five generated pages now put Week 6 in This week, Episode 1 in Latest episode and Week 5 in the archive.
+
+Local checks pass: typecheck, complete data/site build, 15 repeated page requests, all three movie hashes and MP4 types, prefix/suffix/open-range HTTP 206 and invalid-range HTTP 416. Automated browser tests confirm the hub slots/archive and play/seek/resume on all four watch URLs. Reports: `docs/releases/weekly-slate-2026-week-06-v004-local-qa.json`, `weekly-slate-2026-week-06-v004-local-browser-qa.json`, and `weekly-slate-2026-week-06-v004-staged.json`. Browser tests were muted technical checks; human listening acceptance came from Shawn, not the test.
+
+The active branch in `scripts/verify-weekly-deploy-lineups.mjs` stops **before capture/upload** unless both repositories record explicit deployment approval for this exact hash. After go, it checks all media bytes/hashes, runs the isolated Week 6 read-only Yahoo checker after the build, and requires fresh Rodgers/Young, Fuzzy Bears, Mixon and transaction/Move spoken conditions. It logs current card numbers without relabelling the approved movie's actual 7:58 PM PT capture stamps. The old Week 5 opt-in branch remains historical; never run the retired `verify-weekly-show-release.mjs`.
+
+After explicit go: record the actual message in both approval records and enable deployment approval on the Week 6 registry item; reconcile current main, update the catalog release date if the day changed, run `npm run deploy` **without** the old Week 5 flag, and verify `/show`, Week 6, Week 5 and both pilot URLs against the current registry. Browser QA: `python3 scripts/verify-show-browser.py BASE_URL NEW_REPORT_PATH`. HTTP/hash/range QA: `node scripts/verify-corrected-show-release.mjs BASE_URL NEW_REPORT_PATH`. Preserve historical reports. Merge/push only after authorized publication and live QA. Previous live Worker version `a9b2dadd-a368-4c70-a46e-9879307e22e5` remains the rollback target. No Week 6 upload has occurred.
+
 ## Live consolation corrections: V008 / V034
 
 The owner approved the exact Week 5 Slate V008 and Pilot V034 cuts, then explicitly said “go” on October 15. Both are deployed and live-verified. Worker version: `a9b2dadd-a368-4c70-a46e-9879307e22e5`; deployed source: `03cab90`. Approval binds the unchanged SHA-256 values in `docs/releases/show-media-current.json`. [Week 5](https://iwnh.sme327.com/show/previews/week-5) · [Pilot](https://iwnh.sme327.com/show/pilot) · [Episode 1](https://iwnh.sme327.com/show/episodes/1).
