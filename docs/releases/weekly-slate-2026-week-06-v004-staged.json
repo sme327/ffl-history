@@ -21,6 +21,7 @@
   "localQA": "weekly-slate-2026-week-06-v004-local-qa.json",
   "browserQA": "weekly-slate-2026-week-06-v004-local-browser-qa.json",
   "uploadGateRejectsMissingDeploymentGo": true,
+  "localRuntimeWarnings": [{"message":"Network connection lost","observedDuring":"Automated browser seeking/navigation and request cancellation","interpretation":"Likely cancellation of an in-flight streamed video response; this is an inference, not a repaired runtime defect","functionalEvidence":"All four players advanced after seeking with video.error=null; full hashes, all valid 206 ranges and invalid 416 checks passed","followup":"Repeat functional playback/seeking checks live after authorized deployment; do not waive any real playback or response failure"}],
   "expectedHub": {"currentPreview":"/show/previews/week-6","latestEpisode":"/show/episodes/1","pastPreviews":["/show/previews/week-5"]},
   "preservedMedia": {
     "week5V008SHA256": "df357fa43473d0c8caf59ec755f2bd226d1e1a45f97ad41c767cff4192c6f041",
