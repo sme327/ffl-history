@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "releaseId": "weekly-slate-2026-week-06-v004",
-  "stage": "owner-approved-local-staging-not-deployed",
+  "stage": "owner-authorized-awaiting-final-check-and-deploy",
   "deployment": null,
   "previousDeployment": {"worker":"the-long-game","workerVersion":"a9b2dadd-a368-4c70-a46e-9879307e22e5","deployedSourceCommit":"03cab90fa0df7a742867761eb9abd9892e7696b3","verifiedAt":"2026-10-15T22:11:28Z","liveQA":"consolation-v008-v034-live-qa.json","browserQA":"consolation-v008-v034-browser-qa.json","remainingFailures":[]},
-  "ownerApproval": {"owner":"Shawn","approvalDate":"2026-10-16","exactCutApprovalMessage":"approved","deploymentAuthorizationMessage":null,"scope":"Week 6 V004 only, SHA-256 e98bb81ec17cad4467cc3ea14df98e360f3366c58d43fc28f134c142960b1c4e; no deployment authorization","sourceEvidence":"FFL Show/weekly/2026-week-06/OWNER_APPROVAL_V004.json"},
+  "ownerApproval": {"owner":"Shawn","approvalDate":"2026-10-16","exactCutApprovalMessage":"approved","deploymentAuthorizationMessage":"go","deploymentAuthorizationDatePacific":"2026-10-16","scope":"Deploy Week 6 V004 only, SHA-256 e98bb81ec17cad4467cc3ea14df98e360f3366c58d43fc28f134c142960b1c4e; preserve Week 5 V008 and Pilot V034","sourceEvidence":"FFL Show/weekly/2026-week-06/OWNER_APPROVAL_V004.json"},
   "preservedHistoricalRelease": "consolation-v008-v034",
   "historicalCorrectionOnly": false,
   "preserveOriginalLineupSnapshot": true,
@@ -31,7 +31,7 @@
       "cardCapturedAtPacific": "2026-10-16 19:58 PDT",
       "postRenderCheck": "FFL Show/weekly/2026-week-06/post-render-check-v004-2026-10-16.json",
       "releaseApproved": true,
-      "deploymentApproved": false
+      "deploymentApproved": true
     },
     {
       "id": "weekly-slate-2026-week-05-v008",
@@ -70,6 +70,6 @@
     }
   ],
   "releaseApproved": true,
-  "deploymentApproved": false,
+  "deploymentApproved": true,
   "deployed": false
 }
