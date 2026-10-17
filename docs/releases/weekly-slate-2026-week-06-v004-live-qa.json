@@ -1,0 +1,147 @@
+{
+  "checkedAt": "2026-10-17T06:49:45.957Z",
+  "base": "https://iwnh.sme327.com",
+  "releaseId": "weekly-slate-2026-week-06-v004",
+  "checks": [
+    {
+      "kind": "page",
+      "round": 0,
+      "route": "/show",
+      "status": 200,
+      "sha256": "7765cd74a0cd1256a3a95ba342151dfc41667a2119b4bb8183ff02c5814990c9"
+    },
+    {
+      "kind": "page",
+      "round": 0,
+      "route": "/show/previews/week-6",
+      "status": 200,
+      "sha256": "3edf8cc0fe150789418636a2d2d020f60b39f6ca7b2821b038127c8082e83a07"
+    },
+    {
+      "kind": "page",
+      "round": 0,
+      "route": "/show/previews/week-5",
+      "status": 200,
+      "sha256": "d18c32339ebed1dba3040b1f0f47521ef80f4ecf7cb49aec4fdf4feb182212eb"
+    },
+    {
+      "kind": "page",
+      "round": 0,
+      "route": "/show/pilot",
+      "status": 200,
+      "sha256": "995ebb0be20f092b824a032ae767bc3a18da127220fe5ca39bc99370f5a7b206"
+    },
+    {
+      "kind": "page",
+      "round": 0,
+      "route": "/show/episodes/1",
+      "status": 200,
+      "sha256": "88e3fd571a8cc84e155cb260a86dac5c9ef636249aff9693146d7c6e2e9e7adb"
+    },
+    {
+      "kind": "page",
+      "round": 1,
+      "route": "/show",
+      "status": 200,
+      "sha256": "7765cd74a0cd1256a3a95ba342151dfc41667a2119b4bb8183ff02c5814990c9"
+    },
+    {
+      "kind": "page",
+      "round": 1,
+      "route": "/show/previews/week-6",
+      "status": 200,
+      "sha256": "3edf8cc0fe150789418636a2d2d020f60b39f6ca7b2821b038127c8082e83a07"
+    },
+    {
+      "kind": "page",
+      "round": 1,
+      "route": "/show/previews/week-5",
+      "status": 200,
+      "sha256": "d18c32339ebed1dba3040b1f0f47521ef80f4ecf7cb49aec4fdf4feb182212eb"
+    },
+    {
+      "kind": "page",
+      "round": 1,
+      "route": "/show/pilot",
+      "status": 200,
+      "sha256": "995ebb0be20f092b824a032ae767bc3a18da127220fe5ca39bc99370f5a7b206"
+    },
+    {
+      "kind": "page",
+      "round": 1,
+      "route": "/show/episodes/1",
+      "status": 200,
+      "sha256": "88e3fd571a8cc84e155cb260a86dac5c9ef636249aff9693146d7c6e2e9e7adb"
+    },
+    {
+      "kind": "page",
+      "round": 2,
+      "route": "/show",
+      "status": 200,
+      "sha256": "7765cd74a0cd1256a3a95ba342151dfc41667a2119b4bb8183ff02c5814990c9"
+    },
+    {
+      "kind": "page",
+      "round": 2,
+      "route": "/show/previews/week-6",
+      "status": 200,
+      "sha256": "3edf8cc0fe150789418636a2d2d020f60b39f6ca7b2821b038127c8082e83a07"
+    },
+    {
+      "kind": "page",
+      "round": 2,
+      "route": "/show/previews/week-5",
+      "status": 200,
+      "sha256": "d18c32339ebed1dba3040b1f0f47521ef80f4ecf7cb49aec4fdf4feb182212eb"
+    },
+    {
+      "kind": "page",
+      "round": 2,
+      "route": "/show/pilot",
+      "status": 200,
+      "sha256": "995ebb0be20f092b824a032ae767bc3a18da127220fe5ca39bc99370f5a7b206"
+    },
+    {
+      "kind": "page",
+      "round": 2,
+      "route": "/show/episodes/1",
+      "status": 200,
+      "sha256": "88e3fd571a8cc84e155cb260a86dac5c9ef636249aff9693146d7c6e2e9e7adb"
+    },
+    {
+      "kind": "movie",
+      "id": "weekly-slate-2026-week-06-v004",
+      "video": "/show/previews/2026-week-06.mp4",
+      "bytes": 17093176,
+      "sha256": "e98bb81ec17cad4467cc3ea14df98e360f3366c58d43fc28f134c142960b1c4e",
+      "contentType": "video/mp4",
+      "prefixSuffixOpenRanges": true,
+      "unsatisfiableRange416": true
+    },
+    {
+      "kind": "movie",
+      "id": "weekly-slate-2026-week-05-v008",
+      "video": "/show/previews/2026-week-05.mp4",
+      "bytes": 20671255,
+      "sha256": "df357fa43473d0c8caf59ec755f2bd226d1e1a45f97ad41c767cff4192c6f041",
+      "contentType": "video/mp4",
+      "prefixSuffixOpenRanges": true,
+      "unsatisfiableRange416": true
+    },
+    {
+      "kind": "movie",
+      "id": "pilot-v034",
+      "video": "/show/pilot-review.mp4",
+      "bytes": 24238495,
+      "sha256": "84d34138deea91a48768674e12d2a73c383547031e21c1cb14443bbb6888a457",
+      "contentType": "video/mp4",
+      "prefixSuffixOpenRanges": true,
+      "unsatisfiableRange416": true
+    }
+  ],
+  "hubArchiveAndLatestEpisode": true,
+  "rawHeadersOrCredentialsIncluded": false,
+  "ownerEarCheckPending": false,
+  "releaseApproved": true,
+  "deploymentApproved": true
+}

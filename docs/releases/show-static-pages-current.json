@@ -1,33 +1,33 @@
 {
-  "builtAt": "2026-10-17T06:30:50.212Z",
+  "builtAt": "2026-10-17T06:46:29.400Z",
   "scope": "current-manifest-show-pages-only",
   "releaseId": "weekly-slate-2026-week-06-v004",
-  "mediaManifestSHA256": "5233275b5f0d06800124e56c3f99f36745cba0683d5d4e17ea2f15428278057f",
+  "mediaManifestSHA256": "25d53241a8b6488c4be9d366912d920a09cd1ec04ed71a48a2eea6d04cb0310f",
   "pages": [
     {
       "route": "/show",
       "bytes": 25351,
-      "sha256": "86917db5f8b639749ba1844ff4bd33456977eca12f3054ba8bf71f61bf32b192"
+      "sha256": "7765cd74a0cd1256a3a95ba342151dfc41667a2119b4bb8183ff02c5814990c9"
     },
     {
       "route": "/show/previews/week-6",
       "bytes": 21956,
-      "sha256": "b283d1047ecf74c18f9342152897854d0c783d0049fd05003af917bdf415583f"
+      "sha256": "3edf8cc0fe150789418636a2d2d020f60b39f6ca7b2821b038127c8082e83a07"
     },
     {
       "route": "/show/previews/week-5",
       "bytes": 23137,
-      "sha256": "8e007c086dc4582b0d93fcfb9f31d5011a2b1e9d904c47f4f67b54c2a399440b"
+      "sha256": "d18c32339ebed1dba3040b1f0f47521ef80f4ecf7cb49aec4fdf4feb182212eb"
     },
     {
       "route": "/show/pilot",
       "bytes": 24909,
-      "sha256": "25b89b65d37eb19a2567ed905f06a45b323f28b71bc4a53e9a14babb62476df1"
+      "sha256": "995ebb0be20f092b824a032ae767bc3a18da127220fe5ca39bc99370f5a7b206"
     },
     {
       "route": "/show/episodes/1",
       "bytes": 26340,
-      "sha256": "0253b5c771a415d17d38ce6d1c1c687119e0f67824e24df7ce605ea356b7fd57"
+      "sha256": "88e3fd571a8cc84e155cb260a86dac5c9ef636249aff9693146d7c6e2e9e7adb"
     }
   ]
 }

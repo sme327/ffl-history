@@ -2,7 +2,15 @@
 
 The museum hosts the animated show *Across the Line* (Graham Keeper and Kate Hedges). This page covers how its pages are laid out and how to ship a new weekly preview or episode.
 
-## Week 6 V004 — approved and locally staged, NOT deployed
+## Week 6 V004 — LIVE and verified, October 16
+
+Shawn approved the exact cut, then separately said “go.” `npm run deploy` rebuilt all five show pages and ran the Week 6 upload gate immediately before publishing. The **11:47 PM Pacific** Yahoo check passed all spoken roster/count conditions. The exact V004 movie was not changed: **4:48.033, 720p, 17,093,176 bytes**, SHA-256 `e98bb81ec17cad4467cc3ea14df98e360f3366c58d43fc28f134c142960b1c4e`. Its card stamps remain the real 7:58 PM PT source capture. Projections moved slightly after that capture; neither those values nor a gap is spoken.
+
+[Watch Week 6](https://iwnh.sme327.com/show/previews/week-6) · [Show hub](https://iwnh.sme327.com/show). Worker version **5bf2389d-d75d-4952-b580-9af07f3d47b8**, deployed source `85cdc25`. Live verification passed 15 repeated page/hash requests, all three full movie hashes/MP4 types, nine valid HTTP 206 ranges, three invalid-range HTTP 416 responses, and browser playback/seek/resume on Week 6, Week 5, `/show/pilot` and `/show/episodes/1`. Week 6 is This week, Episode 1 remains Latest episode, and Week 5 is archived. V008/V034 media are untouched. No known release check failed.
+
+Evidence: `docs/releases/weekly-slate-2026-week-06-v004-published.json`, `weekly-slate-2026-week-06-final-upload-check.json`, `weekly-slate-2026-week-06-v004-live-qa.json`, and `weekly-slate-2026-week-06-v004-live-browser-qa.json`. Current-registry deployment status was updated after the build; `show-static-pages-current.json` retains its exact build-time registry/page hashes. The earlier staged report remains historical and its false deployment flag is not current status. Previous Worker version `a9b2dadd-a368-4c70-a46e-9879307e22e5` is retained for rollback.
+
+## Historical Week 6 V004 staging (subsequently published above)
 
 Shawn approved the exact V004 cut on October 16: SHA-256 `e98bb81ec17cad4467cc3ea14df98e360f3366c58d43fc28f134c142960b1c4e`, 17,093,176 bytes, 720p, 4:48.033. Evidence: FFL Show `weekly/2026-week-06/OWNER_APPROVAL_V004.json`. Deployment authorization is **not** included in that approval.
 

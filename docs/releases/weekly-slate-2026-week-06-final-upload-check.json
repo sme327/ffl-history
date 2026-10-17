@@ -1,0 +1,27 @@
+{
+  "releaseId": "weekly-slate-2026-week-06-v004",
+  "sha256": "e98bb81ec17cad4467cc3ea14df98e360f3366c58d43fc28f134c142960b1c4e",
+  "checkedAt": "2026-10-17T06:47:29.523Z",
+  "capture": "/Users/sme/Documents/Projects/Sports/Fantasy Football Leagues/FFL Show/weekly/2026-week-06/predeploy-check-1792219589542.json",
+  "capturedAtPacific": "2026-10-16T23:47:28.949798-07:00",
+  "conditions": {
+    "V1_revR": true,
+    "V2_revY": false,
+    "V3_namedFuzzyPlayersRostered": true,
+    "V3_namedFuzzyPlayersOnBye": true,
+    "V5_MixonRostered": true,
+    "V6_KittleMoreThanTenTransactionRows": true,
+    "V6_TIHWDMoreThanTwentyMoves": true
+  },
+  "pass": true,
+  "projectionGapIsNotSpoken": true,
+  "cardDataRemainsAsOf": "2026-10-17T02:58:45.215031+00:00",
+  "cardStampsNotRelabelled": true,
+  "currentValues": {
+    "kittleTransactions": 13,
+    "tihwdMoves": 22,
+    "rodgersProjection": 15.1,
+    "youngProjection": 13.69
+  },
+  "note": "Current values are logged, not substituted into the owner-approved movie. Its clearly stamped historical card values remain unchanged."
+}
