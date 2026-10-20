@@ -945,3 +945,193 @@ week,team_id,team_name,player_id,player_name,position,slot,points,projected,nfl_
 5,11,This Is How We Do,100012,Chiefs,DEF,BN,,0.0,KC,
 5,9,miniDITKAS,,,,IR,,,,
 5,11,This Is How We Do,40118,De'Von Achane,RB,IR,0.0,0.0,MIA,vs CIN
+6,1,small sample size,29369,Dak Prescott,QB,QB,7.51,16.32,DAL,@ GB
+6,6,Guinness,41825,Tyler Shough,QB,QB,28.48,14.72,NO,@ NYG
+6,1,small sample size,30121,Christian McCaffrey,RB,RB,20.35,13.14,SF,vs WAS
+6,6,Guinness,31960,Tony Pollard,RB,RB,3.8,6.99,TEN,@ IND
+6,1,small sample size,41922,Cam Skattebo,RB,RB,0.0,7.16,NYG,vs NO
+6,6,Guinness,33514,Chuba Hubbard,RB,RB,12.55,9.94,CAR,@ PHI
+6,1,small sample size,40234,Parker Washington,WR,WR,5.2,8.68,JAX,vs HOU
+6,6,Guinness,40168,Puka Nacua,WR,WR,7.0,13.78,LAR,vs ARI
+6,1,small sample size,40039,Zay Flowers,WR,WR,6.35,9.34,BAL,@ CLE
+6,6,Guinness,33477,Nico Collins,WR,WR,5.45,10.32,HOU,@ JAX
+6,1,small sample size,34010,Trey McBride,TE,TE,6.15,9.88,ARI,@ LAR
+6,6,Guinness,40878,Brock Bowers,TE,TE,5.5,10.63,LV,vs BUF
+6,1,small sample size,41097,Devaughn Vele,WR,W/R/T,3.6,6.3,NO,@ NYG
+6,6,Guinness,34007,George Pickens,WR,W/R/T,6.65,8.7,DAL,@ GB
+6,1,small sample size,31482,Eddy Pineiro,K,K,5.0,8.91,SF,vs WAS
+6,6,Guinness,32858,Tyler Bass,K,K,17.0,8.6,BUF,@ LV
+6,1,small sample size,100014,Rams,DEF,DEF,3.0,7.07,LAR,vs ARI
+6,6,Guinness,100026,Seahawks,DEF,DEF,3.0,6.1,SEA,@ DEN
+6,1,small sample size,41821,Quinshon Judkins,RB,BN,0.0,0.0,CLE,vs BAL
+6,6,Guinness,31905,David Montgomery,RB,BN,0.0,0.0,HOU,@ JAX
+6,1,small sample size,29235,Jared Goff,QB,BN,,0.0,DET,
+6,6,Guinness,40877,Xavier Worthy,WR,BN,7.15,6.91,KC,vs LAC
+6,1,small sample size,33998,Wan'Dale Robinson,WR,BN,2.6,5.91,TEN,@ IND
+6,6,Guinness,31107,Dalton Schultz,TE,BN,3.65,4.71,HOU,@ JAX
+6,1,small sample size,40042,Jordan Addison,WR,BN,,0.0,MIN,
+6,6,Guinness,42696,Malachi Fields,WR,BN,1.95,3.37,NYG,vs NO
+6,1,small sample size,41902,Woody Marks,RB,BN,5.05,8.34,HOU,@ JAX
+6,6,Guinness,40030,C.J. Stroud,QB,BN,22.49,12.92,HOU,@ JAX
+6,1,small sample size,30161,Joe Mixon,RB,BN,0.0,0.0,HOU,@ JAX
+6,6,Guinness,40835,Jake Bates,K,BN,,0.0,DET,
+6,1,small sample size,34207,Isiah Pacheco,RB,IR,,0.0,DET,
+6,6,Guinness,,,,IR,,,,
+6,2,Bears,9265,Matthew Stafford,QB,QB,16.44,18.81,LAR,vs ARI
+6,4,Fuzzy Bears,30125,Deshaun Watson,QB,QB,4.73,12.68,CLE,vs BAL
+6,2,Bears,29279,Derrick Henry,RB,RB,1.5,11.4,BAL,@ CLE
+6,4,Fuzzy Bears,34447,Jaylen Warren,RB,RB,4.9,9.48,PIT,@ TB
+6,2,Bears,41791,Ashton Jeanty,RB,RB,10.9,10.49,LV,vs BUF
+6,4,Fuzzy Bears,40971,MarShawn Lloyd,RB,RB,0.5,7.73,GB,vs DAL
+6,2,Bears,33989,Christian Watson,WR,WR,4.7,10.89,GB,vs DAL
+6,4,Fuzzy Bears,40114,Tre Tucker,WR,WR,19.35,5.8,LV,vs BUF
+6,2,Bears,40121,Michael Wilson,WR,WR,3.6,8.14,ARI,@ LAR
+6,4,Fuzzy Bears,29631,Kalif Raymond,WR,WR,1.9,4.37,CHI,@ ATL
+6,2,Bears,33443,Pat Freiermuth,TE,TE,1.55,5.79,PIT,@ TB
+6,4,Fuzzy Bears,29344,Tyler Higbee,TE,TE,1.1,5.49,LAR,vs ARI
+6,2,Bears,32705,D'Andre Swift,RB,W/R/T,17.5,9.69,CHI,@ ATL
+6,4,Fuzzy Bears,31896,DK Metcalf,WR,W/R/T,10.15,7.46,PIT,@ TB
+6,2,Bears,31977,Matt Gay,K,K,12.0,8.45,LV,vs BUF
+6,4,Fuzzy Bears,40296,Blake Grupe,K,K,4.0,0.0,LAR,vs ARI
+6,2,Bears,100030,Jaguars,DEF,DEF,1.0,6.54,JAX,vs HOU
+6,4,Fuzzy Bears,100025,49ers,DEF,DEF,5.0,5.93,SF,vs WAS
+6,2,Bears,33394,Jaylen Waddle,WR,BN,3.2,6.54,DEN,vs SEA
+6,4,Fuzzy Bears,40064,Sam LaPorta,TE,BN,,0.0,DET,
+6,2,Bears,42626,Carnell Tate,WR,BN,12.5,6.43,TEN,@ IND
+6,4,Fuzzy Bears,32671,Joe Burrow,QB,BN,,0.0,CIN,
+6,2,Bears,34047,Rachaad White,RB,BN,10.85,6.29,WAS,@ SF
+6,4,Fuzzy Bears,30295,Aaron Jones Sr.,RB,BN,,0.0,MIN,
+6,2,Bears,34088,Romeo Doubs,WR,BN,8.6,0.0,NE,vs NYJ
+6,4,Fuzzy Bears,32692,Justin Jefferson,WR,BN,,0.0,MIN,
+6,2,Bears,32696,Jordan Love,QB,BN,16.12,18.0,GB,vs DAL
+6,4,Fuzzy Bears,33393,Ja'Marr Chase,WR,BN,,0.0,CIN,
+6,2,Bears,41093,Will Reichard,K,BN,,0.0,MIN,
+6,4,Fuzzy Bears,100013,Raiders,DEF,BN,1.0,4.44,LV,vs BUF
+6,3,Futball in the Groin,40896,Jayden Daniels,QB,QB,18.5,15.04,WAS,@ SF
+6,8,Mean Machine 22,7200,Aaron Rodgers,QB,QB,15.01,14.55,PIT,@ TB
+6,3,Futball in the Groin,33508,Rhamondre Stevenson,RB,RB,1.8,9.3,NE,vs NYJ
+6,8,Mean Machine 22,40055,Bijan Robinson,RB,RB,3.65,14.36,ATL,vs CHI
+6,3,Futball in the Groin,33996,Kenneth Walker III,RB,RB,19.95,13.64,KC,vs LAC
+6,8,Mean Machine 22,41900,Bhayshul Tuten,RB,RB,18.35,8.01,JAX,vs HOU
+6,3,Futball in the Groin,40126,Josh Downs,WR,WR,4.35,8.15,IND,vs TEN
+6,8,Mean Machine 22,33963,Drake London,WR,WR,7.1,10.69,ATL,vs CHI
+6,3,Futball in the Groin,41824,Luther Burden III,WR,WR,8.75,7.32,CHI,@ ATL
+6,8,Mean Machine 22,40899,Malik Nabers,WR,WR,14.25,9.01,NYG,vs NO
+6,3,Futball in the Groin,30259,George Kittle,TE,TE,11.95,9.17,SF,vs WAS
+6,8,Mean Machine 22,33113,Juwan Johnson,TE,TE,0.0,6.26,NO,@ NYG
+6,3,Futball in the Groin,40908,Ladd McConkey,WR,W/R/T,1.35,5.77,LAC,@ KC
+6,8,Mean Machine 22,40901,Rome Odunze,WR,W/R/T,3.45,6.03,CHI,@ ATL
+6,3,Futball in the Groin,41988,Tyler Loop,K,K,4.0,7.85,BAL,@ CLE
+6,8,Mean Machine 22,40819,Brandon Aubrey,K,K,1.0,8.75,DAL,@ GB
+6,3,Futball in the Groin,100011,Colts,DEF,DEF,2.0,7.07,IND,vs TEN
+6,8,Mean Machine 22,100023,Steelers,DEF,DEF,10.0,7.21,PIT,@ TB
+6,3,Futball in the Groin,28534,Stefon Diggs,WR,BN,11.2,6.46,WAS,@ SF
+6,8,Mean Machine 22,40029,Bryce Young,QB,BN,17.92,13.82,CAR,@ PHI
+6,3,Futball in the Groin,41969,Ollie Gordon II,RB,BN,,0.0,MIA,
+6,8,Mean Machine 22,41795,Colston Loveland,TE,BN,12.25,5.81,CHI,@ ATL
+6,3,Futball in the Groin,40059,Jahmyr Gibbs,RB,BN,,0.0,DET,
+6,8,Mean Machine 22,42010,Jacory Croskey-Merritt,RB,BN,0.0,0.0,WAS,@ SF
+6,3,Futball in the Groin,31002,Lamar Jackson,QB,BN,0.0,0.0,BAL,@ CLE
+6,8,Mean Machine 22,42796,Emmett Johnson,RB,BN,2.2,3.19,KC,vs LAC
+6,3,Futball in the Groin,41845,RJ Harvey,RB,BN,10.3,5.95,DEN,vs SEA
+6,8,Mean Machine 22,34054,Brian Robinson Jr.,RB,BN,1.5,3.75,ATL,vs CHI
+6,3,Futball in the Groin,42646,KC Concepcion Jr.,WR,BN,3.95,5.93,CLE,vs BAL
+6,8,Mean Machine 22,30551,Kendrick Bourne,WR,BN,4.85,4.57,ARI,@ LAR
+6,3,Futball in the Groin,40063,Jayden Reed,WR,IR,0.0,0.0,GB,vs DAL
+6,8,Mean Machine 22,,,,IR,,,,
+6,5,Goood Times,30977,Josh Allen,QB,QB,17.15,21.79,BUF,@ LV
+6,7,Guntry Club,40881,Drake Maye,QB,QB,23.9,16.9,NE,vs NYJ
+6,5,Goood Times,34019,James Cook III,RB,RB,15.15,10.81,BUF,@ LV
+6,7,Guntry Club,40981,Braelon Allen,RB,RB,6.2,8.55,NYJ,@ NE
+6,5,Goood Times,42744,Mike Washington Jr.,RB,RB,3.0,2.57,LV,vs BUF
+6,7,Guntry Club,40641,Keaton Mitchell,RB,RB,0.2,4.67,LAC,@ KC
+6,5,Goood Times,41804,Emeka Egbuka,WR,WR,11.9,6.4,TB,vs PIT
+6,7,Guntry Club,32687,CeeDee Lamb,WR,WR,8.0,11.53,DAL,@ GB
+6,5,Goood Times,41793,Tetairoa McMillan,WR,WR,7.3,8.1,CAR,@ PHI
+6,7,Guntry Club,42661,Denzel Boston,WR,WR,1.25,6.77,CLE,vs BAL
+6,5,Goood Times,41799,Tyler Warren,TE,TE,0.0,0.0,IND,vs TEN
+6,7,Guntry Club,40078,Brenton Strange,TE,TE,4.7,5.78,JAX,vs HOU
+6,5,Goood Times,34095,Isaiah Likely,TE,W/R/T,15.95,8.54,NYG,vs NO
+6,7,Guntry Club,41293,Jalen Coker,WR,W/R/T,7.85,7.59,CAR,@ PHI
+6,5,Goood Times,41062,Cam Little,K,K,9.0,8.06,JAX,vs HOU
+6,7,Guntry Club,41499,Spencer Shrader,K,K,9.0,9.48,IND,vs TEN
+6,5,Goood Times,100018,Saints,DEF,DEF,13.0,5.88,NO,@ NYG
+6,7,Guntry Club,100007,Broncos,DEF,DEF,12.0,6.44,DEN,vs SEA
+6,5,Goood Times,40196,Chase Brown,RB,BN,,0.0,CIN,
+6,7,Guntry Club,30197,Chris Godwin Jr.,WR,BN,3.85,5.11,TB,vs PIT
+6,5,Goood Times,41058,Malik Washington,WR,BN,,0.0,MIA,
+6,7,Guntry Club,33392,Kyle Pitts Sr.,TE,BN,17.5,4.66,ATL,vs CHI
+6,5,Goood Times,30994,DJ Moore,WR,BN,0.0,0.0,BUF,@ LV
+6,7,Guntry Club,30972,Saquon Barkley,RB,BN,0.0,0.0,PHI,vs CAR
+6,5,Goood Times,42654,Jadarian Price,RB,BN,0.0,0.0,SEA,@ DEN
+6,7,Guntry Club,40900,Caleb Williams,QB,BN,12.25,14.99,CHI,@ ATL
+6,5,Goood Times,42655,De'Zhaun Stribling,WR,BN,0.0,0.0,SF,vs WAS
+6,7,Guntry Club,31856,Josh Jacobs,RB,BN,0.0,0.0,GB,vs DAL
+6,5,Goood Times,41881,Kaleb Johnson,RB,BN,-0.1,1.83,GB,vs DAL
+6,7,Guntry Club,26699,Keenan Allen,WR,BN,8.1,6.95,IND,vs TEN
+6,5,Goood Times,42630,Jordyn Tyson,WR,IR,0.0,0.0,NO,@ NYG
+6,7,Guntry Club,34008,Alec Pierce,WR,IR,0.0,0.0,IND,vs TEN
+6,9,miniDITKAS,30123,Patrick Mahomes,QB,QB,4.24,14.85,KC,vs LAC
+6,10,team old style,34218,Brock Purdy,QB,QB,12.68,17.9,SF,vs WAS
+6,9,miniDITKAS,32725,J.K. Dobbins,RB,RB,9.8,5.0,DEN,vs SEA
+6,10,team old style,34120,Kyren Williams,RB,RB,4.85,13.16,LAR,vs ARI
+6,9,miniDITKAS,34107,Tyler Allgeier,RB,RB,2.9,7.48,ARI,@ LAR
+6,10,team old style,40993,Bucky Irving,RB,RB,3.45,8.59,TB,vs PIT
+6,9,miniDITKAS,33965,Garrett Wilson,WR,WR,4.2,9.3,NYJ,@ NE
+6,10,team old style,27535,Mike Evans,WR,WR,6.2,9.9,SF,vs WAS
+6,9,miniDITKAS,41808,Matthew Golden,WR,WR,14.2,9.02,GB,vs DAL
+6,10,team old style,33398,DeVonta Smith,WR,WR,13.25,7.82,PHI,vs CAR
+6,9,miniDITKAS,26686,Travis Kelce,TE,TE,4.65,7.61,KC,vs LAC
+6,10,team old style,40048,Dalton Kincaid,TE,TE,5.4,7.18,BUF,@ LV
+6,9,miniDITKAS,40041,Jaxon Smith-Njigba,WR,W/R/T,12.7,13.13,SEA,@ DEN
+6,10,team old style,30180,Alvin Kamara,RB,W/R/T,10.45,5.85,NO,@ NYG
+6,9,miniDITKAS,28378,Jason Myers,K,K,8.0,7.95,SEA,@ DEN
+6,10,team old style,29792,Ka'imi Fairbairn,K,K,11.0,7.79,HOU,@ JAX
+6,9,miniDITKAS,100017,Patriots,DEF,DEF,6.0,7.73,NE,vs NYJ
+6,10,team old style,100033,Ravens,DEF,DEF,9.0,7.13,BAL,@ CLE
+6,9,miniDITKAS,42625,Jeremiyah Love,RB,BN,0.0,0.0,ARI,@ LAR
+6,10,team old style,34104,Khalil Shakir,WR,BN,9.7,6.76,BUF,@ LV
+6,9,miniDITKAS,32676,Justin Herbert,QB,BN,3.38,10.77,LAC,@ KC
+6,10,team old style,33500,Amon-Ra St. Brown,WR,BN,,0.0,DET,
+6,9,miniDITKAS,32703,Tee Higgins,WR,BN,,0.0,CIN,
+6,10,team old style,41877,Harold Fannin Jr.,TE,BN,0.95,6.52,CLE,vs BAL
+6,9,miniDITKAS,42025,Kyle Monangai,RB,BN,0.0,0.0,CHI,@ ATL
+6,10,team old style,34320,Jordan Mason,RB,BN,,0.0,MIN,
+6,9,miniDITKAS,33967,Jameson Williams,WR,BN,,0.0,DET,
+6,10,team old style,31833,Kyler Murray,QB,BN,,0.0,MIN,
+6,9,miniDITKAS,32231,Jakobi Meyers,WR,BN,6.65,5.25,JAX,vs HOU
+6,10,team old style,100016,Vikings,DEF,BN,,0.0,MIN,
+6,9,miniDITKAS,,,,IR,,,,
+6,10,team old style,33413,Travis Etienne Jr.,RB,IR,0.0,0.0,NO,@ NYG
+6,11,This Is How We Do,33389,Trevor Lawrence,QB,QB,28.67,14.03,JAX,vs HOU
+6,12,“I’ll take Kittle”,25812,Kirk Cousins,QB,QB,16.26,15.34,LV,vs BUF
+6,11,This Is How We Do,40707,Emanuel Wilson,RB,RB,2.6,8.16,SEA,@ DEN
+6,12,“I’ll take Kittle”,32711,Jonathan Taylor,RB,RB,12.55,13.14,IND,vs TEN
+6,11,This Is How We Do,33423,Javonte Williams,RB,RB,9.5,10.89,DAL,@ GB
+6,12,“I’ll take Kittle”,40962,Blake Corum,RB,RB,10.0,4.66,LAR,vs ARI
+6,11,This Is How We Do,42669,Germie Bernard,WR,WR,15.85,6.25,PIT,@ TB
+6,12,“I’ll take Kittle”,33966,Chris Olave,WR,WR,10.15,9.96,NO,@ NYG
+6,11,This Is How We Do,31883,A.J. Brown,WR,WR,2.85,7.03,NE,vs NYJ
+6,12,“I’ll take Kittle”,40893,Marvin Harrison Jr.,WR,WR,3.2,2.38,HOU,@ JAX
+6,11,This Is How We Do,40102,Tucker Kraft,TE,TE,4.35,7.52,GB,vs DAL
+6,12,“I’ll take Kittle”,31019,Dallas Goedert,TE,TE,6.05,6.44,PHI,vs CAR
+6,11,This Is How We Do,27581,Davante Adams,WR,W/R/T,3.45,0.0,LAR,vs ARI
+6,12,“I’ll take Kittle”,31908,Terry McLaurin,WR,W/R/T,1.85,0.0,WAS,@ SF
+6,11,This Is How We Do,43171,Dominic Zvada,K,K,8.0,7.77,NYG,vs NO
+6,12,“I’ll take Kittle”,30346,Harrison Butker,K,K,13.0,8.26,KC,vs LAC
+6,11,This Is How We Do,100012,Chiefs,DEF,DEF,15.0,7.65,KC,vs LAC
+6,12,“I’ll take Kittle”,100029,Panthers,DEF,DEF,4.0,6.67,CAR,@ PHI
+6,11,This Is How We Do,34063,Dameon Pierce,RB,BN,10.5,6.9,PHI,vs CAR
+6,12,“I’ll take Kittle”,40084,Rashee Rice,WR,BN,0.0,0.0,KC,vs LAC
+6,11,This Is How We Do,40108,Kendre Miller,RB,BN,4.5,5.26,NO,@ NYG
+6,12,“I’ll take Kittle”,41823,TreVeyon Henderson,RB,BN,0.5,3.76,NE,vs NYJ
+6,11,This Is How We Do,41807,Omarion Hampton,RB,BN,3.95,5.28,LAC,@ KC
+6,12,“I’ll take Kittle”,42638,Kenyon Sadiq,TE,BN,1.1,3.75,NYJ,@ NE
+6,11,This Is How We Do,40075,Zach Charbonnet,RB,BN,0.0,0.0,SEA,@ DEN
+6,12,“I’ll take Kittle”,40889,Michael Penix Jr.,QB,BN,24.55,13.03,ATL,vs CHI
+6,11,This Is How We Do,40875,Bo Nix,QB,BN,2.24,12.31,DEN,vs SEA
+6,12,“I’ll take Kittle”,41052,Kimani Vidal,RB,BN,3.5,3.75,LAC,@ KC
+6,11,This Is How We Do,100034,Texans,DEF,BN,1.0,5.79,HOU,@ JAX
+6,12,“I’ll take Kittle”,100019,Giants,DEF,BN,1.0,5.73,NYG,vs NO
+6,11,This Is How We Do,40118,De'Von Achane,RB,IR,,0.0,MIA,
+6,12,“I’ll take Kittle”,33991,Breece Hall,RB,IR,0.0,0.0,NYJ,@ NE

@@ -1,0 +1,1547 @@
+{
+  "season": 2026,
+  "week": 6,
+  "managers": {
+    "Shawn": {
+      "name": "Shawn",
+      "team": "small sample size",
+      "division": "Rock"
+    },
+    "Kevin O'Boyle": {
+      "name": "Kevin O'Boyle",
+      "team": "Guinness",
+      "division": "Scissors"
+    },
+    "Steve Swanson": {
+      "name": "Steve Swanson",
+      "team": "Bears",
+      "division": "Paper"
+    },
+    "Thomas": {
+      "name": "Thomas",
+      "team": "Fuzzy Bears",
+      "division": "Rock"
+    },
+    "Jeff": {
+      "name": "Jeff",
+      "team": "Futball in the Groin",
+      "division": "Scissors"
+    },
+    "Douglas": {
+      "name": "Douglas",
+      "team": "Mean Machine 22",
+      "division": "Paper"
+    },
+    "Evan": {
+      "name": "Evan",
+      "team": "Goood Times",
+      "division": "Paper"
+    },
+    "Eric": {
+      "name": "Eric",
+      "team": "Guntry Club",
+      "division": "Rock"
+    },
+    "Kevin Swanson": {
+      "name": "Kevin Swanson",
+      "team": "miniDITKAS",
+      "division": "Scissors"
+    },
+    "Brian Clark": {
+      "name": "Brian Clark",
+      "team": "team old style",
+      "division": "Rock"
+    },
+    "Fadi": {
+      "name": "Fadi",
+      "team": "This Is How We Do",
+      "division": "Paper"
+    },
+    "Dominic": {
+      "name": "Dominic",
+      "team": "\u201cI\u2019ll take Kittle\u201d",
+      "division": "Scissors"
+    }
+  },
+  "standings": [
+    {
+      "manager": "Brian Clark",
+      "division": "Rock",
+      "wins": 5,
+      "losses": 1,
+      "ties": 0,
+      "points_for": 543.32
+    },
+    {
+      "manager": "Fadi",
+      "division": "Paper",
+      "wins": 4,
+      "losses": 2,
+      "ties": 0,
+      "points_for": 518.3
+    },
+    {
+      "manager": "Steve Swanson",
+      "division": "Paper",
+      "wins": 4,
+      "losses": 2,
+      "ties": 0,
+      "points_for": 508.17
+    },
+    {
+      "manager": "Shawn",
+      "division": "Rock",
+      "wins": 4,
+      "losses": 2,
+      "ties": 0,
+      "points_for": 500.08
+    },
+    {
+      "manager": "Evan",
+      "division": "Paper",
+      "wins": 3,
+      "losses": 3,
+      "ties": 0,
+      "points_for": 511.38
+    },
+    {
+      "manager": "Kevin O'Boyle",
+      "division": "Scissors",
+      "wins": 3,
+      "losses": 3,
+      "ties": 0,
+      "points_for": 491.07
+    },
+    {
+      "manager": "Eric",
+      "division": "Rock",
+      "wins": 3,
+      "losses": 3,
+      "ties": 0,
+      "points_for": 470.38
+    },
+    {
+      "manager": "Douglas",
+      "division": "Paper",
+      "wins": 3,
+      "losses": 3,
+      "ties": 0,
+      "points_for": 418.65
+    },
+    {
+      "manager": "Jeff",
+      "division": "Scissors",
+      "wins": 2,
+      "losses": 4,
+      "ties": 0,
+      "points_for": 555.57
+    },
+    {
+      "manager": "Thomas",
+      "division": "Rock",
+      "wins": 2,
+      "losses": 4,
+      "ties": 0,
+      "points_for": 515.75
+    },
+    {
+      "manager": "Kevin Swanson",
+      "division": "Scissors",
+      "wins": 2,
+      "losses": 4,
+      "ties": 0,
+      "points_for": 508.03
+    },
+    {
+      "manager": "Dominic",
+      "division": "Scissors",
+      "wins": 1,
+      "losses": 5,
+      "ties": 0,
+      "points_for": 425.33
+    }
+  ],
+  "records": [
+    {
+      "kind": "high_all_time",
+      "team": "Evan",
+      "value": 92.45,
+      "rank": 831,
+      "of": 4004
+    },
+    {
+      "kind": "low_all_time",
+      "team": "Thomas",
+      "value": 51.63,
+      "rank": 459,
+      "of": 4004
+    },
+    {
+      "kind": "high_week",
+      "team": "Evan",
+      "value": 92.45,
+      "week": 6,
+      "rank": 50,
+      "of": 306
+    },
+    {
+      "kind": "low_week",
+      "team": "Thomas",
+      "value": 51.63,
+      "week": 6,
+      "rank": 30,
+      "of": 306
+    },
+    {
+      "kind": "blowout_all_time",
+      "team": "Kevin O'Boyle",
+      "value": 32.27,
+      "rank": 406,
+      "of": 2002
+    }
+  ],
+  "teams": {
+    "Shawn": {
+      "key": "Shawn",
+      "actual": 57.16,
+      "projected": 86.8,
+      "vs_projection": -29.64,
+      "optimal": 62.21,
+      "optimal_lineup": [
+        {
+          "slot": "QB",
+          "name": "Dak Prescott",
+          "points": 7.51
+        },
+        {
+          "slot": "RB",
+          "name": "Christian McCaffrey",
+          "points": 20.35
+        },
+        {
+          "slot": "RB",
+          "name": "Woody Marks",
+          "points": 5.05
+        },
+        {
+          "slot": "WR",
+          "name": "Zay Flowers",
+          "points": 6.35
+        },
+        {
+          "slot": "WR",
+          "name": "Parker Washington",
+          "points": 5.2
+        },
+        {
+          "slot": "TE",
+          "name": "Trey McBride",
+          "points": 6.15
+        },
+        {
+          "slot": "W/R/T",
+          "name": "Devaughn Vele",
+          "points": 3.6
+        },
+        {
+          "slot": "K",
+          "name": "Eddy Pineiro",
+          "points": 5.0
+        },
+        {
+          "slot": "DEF",
+          "name": "Rams",
+          "points": 3.0
+        }
+      ],
+      "efficiency": 91.88,
+      "left_on_bench": 5.05,
+      "best_swap": {
+        "bench": "Woody Marks",
+        "bench_points": 5.05,
+        "starter": "Cam Skattebo",
+        "starter_points": 0.0,
+        "slot": "RB",
+        "gain": 5.05
+      },
+      "all_play": {
+        "wins": 1,
+        "losses": 10,
+        "ties": 0
+      },
+      "score_rank": 11,
+      "opponent": "Kevin O'Boyle",
+      "result": "loss",
+      "margin": -32.27
+    },
+    "Kevin O'Boyle": {
+      "key": "Kevin O'Boyle",
+      "actual": 89.43,
+      "projected": 89.78,
+      "vs_projection": -0.35,
+      "optimal": 91.13,
+      "optimal_lineup": [
+        {
+          "slot": "QB",
+          "name": "Tyler Shough",
+          "points": 28.48
+        },
+        {
+          "slot": "RB",
+          "name": "Chuba Hubbard",
+          "points": 12.55
+        },
+        {
+          "slot": "RB",
+          "name": "Tony Pollard",
+          "points": 3.8
+        },
+        {
+          "slot": "WR",
+          "name": "Xavier Worthy",
+          "points": 7.15
+        },
+        {
+          "slot": "WR",
+          "name": "Puka Nacua",
+          "points": 7.0
+        },
+        {
+          "slot": "TE",
+          "name": "Brock Bowers",
+          "points": 5.5
+        },
+        {
+          "slot": "W/R/T",
+          "name": "George Pickens",
+          "points": 6.65
+        },
+        {
+          "slot": "K",
+          "name": "Tyler Bass",
+          "points": 17.0
+        },
+        {
+          "slot": "DEF",
+          "name": "Seahawks",
+          "points": 3.0
+        }
+      ],
+      "efficiency": 98.13,
+      "left_on_bench": 1.7,
+      "best_swap": {
+        "bench": "Xavier Worthy",
+        "bench_points": 7.15,
+        "starter": "Nico Collins",
+        "starter_points": 5.45,
+        "slot": "WR",
+        "gain": 1.7
+      },
+      "all_play": {
+        "wins": 9,
+        "losses": 2,
+        "ties": 0
+      },
+      "score_rank": 3,
+      "opponent": "Shawn",
+      "result": "win",
+      "margin": 32.27
+    },
+    "Steve Swanson": {
+      "key": "Steve Swanson",
+      "actual": 69.19,
+      "projected": 90.2,
+      "vs_projection": -21.01,
+      "optimal": 91.34,
+      "optimal_lineup": [
+        {
+          "slot": "QB",
+          "name": "Matthew Stafford",
+          "points": 16.44
+        },
+        {
+          "slot": "RB",
+          "name": "D'Andre Swift",
+          "points": 17.5
+        },
+        {
+          "slot": "RB",
+          "name": "Ashton Jeanty",
+          "points": 10.9
+        },
+        {
+          "slot": "WR",
+          "name": "Carnell Tate",
+          "points": 12.5
+        },
+        {
+          "slot": "WR",
+          "name": "Romeo Doubs",
+          "points": 8.6
+        },
+        {
+          "slot": "TE",
+          "name": "Pat Freiermuth",
+          "points": 1.55
+        },
+        {
+          "slot": "W/R/T",
+          "name": "Rachaad White",
+          "points": 10.85
+        },
+        {
+          "slot": "K",
+          "name": "Matt Gay",
+          "points": 12.0
+        },
+        {
+          "slot": "DEF",
+          "name": "Jaguars",
+          "points": 1.0
+        }
+      ],
+      "efficiency": 75.75,
+      "left_on_bench": 22.15,
+      "best_swap": {
+        "bench": "Rachaad White",
+        "bench_points": 10.85,
+        "starter": "Derrick Henry",
+        "starter_points": 1.5,
+        "slot": "RB",
+        "gain": 9.35
+      },
+      "all_play": {
+        "wins": 3,
+        "losses": 8,
+        "ties": 0
+      },
+      "score_rank": 9,
+      "opponent": "Thomas",
+      "result": "win",
+      "margin": 17.56
+    },
+    "Thomas": {
+      "key": "Thomas",
+      "actual": 51.63,
+      "projected": 58.94,
+      "vs_projection": -7.31,
+      "optimal": 51.63,
+      "optimal_lineup": [
+        {
+          "slot": "QB",
+          "name": "Deshaun Watson",
+          "points": 4.73
+        },
+        {
+          "slot": "RB",
+          "name": "Jaylen Warren",
+          "points": 4.9
+        },
+        {
+          "slot": "RB",
+          "name": "MarShawn Lloyd",
+          "points": 0.5
+        },
+        {
+          "slot": "WR",
+          "name": "Tre Tucker",
+          "points": 19.35
+        },
+        {
+          "slot": "WR",
+          "name": "DK Metcalf",
+          "points": 10.15
+        },
+        {
+          "slot": "TE",
+          "name": "Tyler Higbee",
+          "points": 1.1
+        },
+        {
+          "slot": "W/R/T",
+          "name": "Kalif Raymond",
+          "points": 1.9
+        },
+        {
+          "slot": "K",
+          "name": "Blake Grupe",
+          "points": 4.0
+        },
+        {
+          "slot": "DEF",
+          "name": "49ers",
+          "points": 5.0
+        }
+      ],
+      "efficiency": 100.0,
+      "left_on_bench": 0.0,
+      "best_swap": null,
+      "all_play": {
+        "wins": 0,
+        "losses": 11,
+        "ties": 0
+      },
+      "score_rank": 12,
+      "opponent": "Steve Swanson",
+      "result": "loss",
+      "margin": -17.56
+    },
+    "Jeff": {
+      "key": "Jeff",
+      "actual": 72.65,
+      "projected": 83.31,
+      "vs_projection": -10.66,
+      "optimal": 91.0,
+      "optimal_lineup": [
+        {
+          "slot": "QB",
+          "name": "Jayden Daniels",
+          "points": 18.5
+        },
+        {
+          "slot": "RB",
+          "name": "Kenneth Walker III",
+          "points": 19.95
+        },
+        {
+          "slot": "RB",
+          "name": "RJ Harvey",
+          "points": 10.3
+        },
+        {
+          "slot": "WR",
+          "name": "Stefon Diggs",
+          "points": 11.2
+        },
+        {
+          "slot": "WR",
+          "name": "Luther Burden III",
+          "points": 8.75
+        },
+        {
+          "slot": "TE",
+          "name": "George Kittle",
+          "points": 11.95
+        },
+        {
+          "slot": "W/R/T",
+          "name": "Josh Downs",
+          "points": 4.35
+        },
+        {
+          "slot": "K",
+          "name": "Tyler Loop",
+          "points": 4.0
+        },
+        {
+          "slot": "DEF",
+          "name": "Colts",
+          "points": 2.0
+        }
+      ],
+      "efficiency": 79.84,
+      "left_on_bench": 18.35,
+      "best_swap": {
+        "bench": "Stefon Diggs",
+        "bench_points": 11.2,
+        "starter": "Ladd McConkey",
+        "starter_points": 1.35,
+        "slot": "W/R/T",
+        "gain": 9.85
+      },
+      "all_play": {
+        "wins": 4,
+        "losses": 7,
+        "ties": 0
+      },
+      "score_rank": 8,
+      "opponent": "Douglas",
+      "result": "loss",
+      "margin": -0.16
+    },
+    "Douglas": {
+      "key": "Douglas",
+      "actual": 72.81,
+      "projected": 84.87,
+      "vs_projection": -12.06,
+      "optimal": 89.37,
+      "optimal_lineup": [
+        {
+          "slot": "QB",
+          "name": "Bryce Young",
+          "points": 17.92
+        },
+        {
+          "slot": "RB",
+          "name": "Bhayshul Tuten",
+          "points": 18.35
+        },
+        {
+          "slot": "RB",
+          "name": "Bijan Robinson",
+          "points": 3.65
+        },
+        {
+          "slot": "WR",
+          "name": "Malik Nabers",
+          "points": 14.25
+        },
+        {
+          "slot": "WR",
+          "name": "Drake London",
+          "points": 7.1
+        },
+        {
+          "slot": "TE",
+          "name": "Colston Loveland",
+          "points": 12.25
+        },
+        {
+          "slot": "W/R/T",
+          "name": "Kendrick Bourne",
+          "points": 4.85
+        },
+        {
+          "slot": "K",
+          "name": "Brandon Aubrey",
+          "points": 1.0
+        },
+        {
+          "slot": "DEF",
+          "name": "Steelers",
+          "points": 10.0
+        }
+      ],
+      "efficiency": 81.47,
+      "left_on_bench": 16.56,
+      "best_swap": {
+        "bench": "Colston Loveland",
+        "bench_points": 12.25,
+        "starter": "Juwan Johnson",
+        "starter_points": 0.0,
+        "slot": "TE",
+        "gain": 12.25
+      },
+      "all_play": {
+        "wins": 5,
+        "losses": 6,
+        "ties": 0
+      },
+      "score_rank": 7,
+      "opponent": "Jeff",
+      "result": "win",
+      "margin": 0.16
+    },
+    "Evan": {
+      "key": "Evan",
+      "actual": 92.45,
+      "projected": 72.15,
+      "vs_projection": 20.3,
+      "optimal": 92.45,
+      "optimal_lineup": [
+        {
+          "slot": "QB",
+          "name": "Josh Allen",
+          "points": 17.15
+        },
+        {
+          "slot": "RB",
+          "name": "James Cook III",
+          "points": 15.15
+        },
+        {
+          "slot": "RB",
+          "name": "Mike Washington Jr.",
+          "points": 3.0
+        },
+        {
+          "slot": "WR",
+          "name": "Malik Washington",
+          "points": 0.0
+        },
+        {
+          "slot": "WR",
+          "name": "Tetairoa McMillan",
+          "points": 7.3
+        },
+        {
+          "slot": "TE",
+          "name": "Isaiah Likely",
+          "points": 15.95
+        },
+        {
+          "slot": "W/R/T",
+          "name": "Emeka Egbuka",
+          "points": 11.9
+        },
+        {
+          "slot": "K",
+          "name": "Cam Little",
+          "points": 9.0
+        },
+        {
+          "slot": "DEF",
+          "name": "Saints",
+          "points": 13.0
+        }
+      ],
+      "efficiency": 100.0,
+      "left_on_bench": 0.0,
+      "best_swap": null,
+      "all_play": {
+        "wins": 11,
+        "losses": 0,
+        "ties": 0
+      },
+      "score_rank": 1,
+      "opponent": "Eric",
+      "result": "win",
+      "margin": 19.35
+    },
+    "Eric": {
+      "key": "Eric",
+      "actual": 73.1,
+      "projected": 77.71,
+      "vs_projection": -4.61,
+      "optimal": 92.75,
+      "optimal_lineup": [
+        {
+          "slot": "QB",
+          "name": "Drake Maye",
+          "points": 23.9
+        },
+        {
+          "slot": "RB",
+          "name": "Braelon Allen",
+          "points": 6.2
+        },
+        {
+          "slot": "RB",
+          "name": "Keaton Mitchell",
+          "points": 0.2
+        },
+        {
+          "slot": "WR",
+          "name": "Keenan Allen",
+          "points": 8.1
+        },
+        {
+          "slot": "WR",
+          "name": "CeeDee Lamb",
+          "points": 8.0
+        },
+        {
+          "slot": "TE",
+          "name": "Kyle Pitts Sr.",
+          "points": 17.5
+        },
+        {
+          "slot": "W/R/T",
+          "name": "Jalen Coker",
+          "points": 7.85
+        },
+        {
+          "slot": "K",
+          "name": "Spencer Shrader",
+          "points": 9.0
+        },
+        {
+          "slot": "DEF",
+          "name": "Broncos",
+          "points": 12.0
+        }
+      ],
+      "efficiency": 78.81,
+      "left_on_bench": 19.65,
+      "best_swap": {
+        "bench": "Kyle Pitts Sr.",
+        "bench_points": 17.5,
+        "starter": "Brenton Strange",
+        "starter_points": 4.7,
+        "slot": "TE",
+        "gain": 12.8
+      },
+      "all_play": {
+        "wins": 6,
+        "losses": 5,
+        "ties": 0
+      },
+      "score_rank": 6,
+      "opponent": "Evan",
+      "result": "loss",
+      "margin": -19.35
+    },
+    "Kevin Swanson": {
+      "key": "Kevin Swanson",
+      "actual": 66.69,
+      "projected": 82.07,
+      "vs_projection": -15.38,
+      "optimal": 69.14,
+      "optimal_lineup": [
+        {
+          "slot": "QB",
+          "name": "Patrick Mahomes",
+          "points": 4.24
+        },
+        {
+          "slot": "RB",
+          "name": "J.K. Dobbins",
+          "points": 9.8
+        },
+        {
+          "slot": "RB",
+          "name": "Tyler Allgeier",
+          "points": 2.9
+        },
+        {
+          "slot": "WR",
+          "name": "Matthew Golden",
+          "points": 14.2
+        },
+        {
+          "slot": "WR",
+          "name": "Jaxon Smith-Njigba",
+          "points": 12.7
+        },
+        {
+          "slot": "TE",
+          "name": "Travis Kelce",
+          "points": 4.65
+        },
+        {
+          "slot": "W/R/T",
+          "name": "Jakobi Meyers",
+          "points": 6.65
+        },
+        {
+          "slot": "K",
+          "name": "Jason Myers",
+          "points": 8.0
+        },
+        {
+          "slot": "DEF",
+          "name": "Patriots",
+          "points": 6.0
+        }
+      ],
+      "efficiency": 96.46,
+      "left_on_bench": 2.45,
+      "best_swap": {
+        "bench": "Jakobi Meyers",
+        "bench_points": 6.65,
+        "starter": "Garrett Wilson",
+        "starter_points": 4.2,
+        "slot": "WR",
+        "gain": 2.45
+      },
+      "all_play": {
+        "wins": 2,
+        "losses": 9,
+        "ties": 0
+      },
+      "score_rank": 10,
+      "opponent": "Brian Clark",
+      "result": "loss",
+      "margin": -9.59
+    },
+    "Brian Clark": {
+      "key": "Brian Clark",
+      "actual": 76.28,
+      "projected": 85.32,
+      "vs_projection": -9.04,
+      "optimal": 82.53,
+      "optimal_lineup": [
+        {
+          "slot": "QB",
+          "name": "Brock Purdy",
+          "points": 12.68
+        },
+        {
+          "slot": "RB",
+          "name": "Alvin Kamara",
+          "points": 10.45
+        },
+        {
+          "slot": "RB",
+          "name": "Kyren Williams",
+          "points": 4.85
+        },
+        {
+          "slot": "WR",
+          "name": "DeVonta Smith",
+          "points": 13.25
+        },
+        {
+          "slot": "WR",
+          "name": "Khalil Shakir",
+          "points": 9.7
+        },
+        {
+          "slot": "TE",
+          "name": "Dalton Kincaid",
+          "points": 5.4
+        },
+        {
+          "slot": "W/R/T",
+          "name": "Mike Evans",
+          "points": 6.2
+        },
+        {
+          "slot": "K",
+          "name": "Ka'imi Fairbairn",
+          "points": 11.0
+        },
+        {
+          "slot": "DEF",
+          "name": "Ravens",
+          "points": 9.0
+        }
+      ],
+      "efficiency": 92.43,
+      "left_on_bench": 6.25,
+      "best_swap": {
+        "bench": "Khalil Shakir",
+        "bench_points": 9.7,
+        "starter": "Mike Evans",
+        "starter_points": 6.2,
+        "slot": "WR",
+        "gain": 3.5
+      },
+      "all_play": {
+        "wins": 7,
+        "losses": 4,
+        "ties": 0
+      },
+      "score_rank": 5,
+      "opponent": "Kevin Swanson",
+      "result": "win",
+      "margin": 9.59
+    },
+    "Fadi": {
+      "key": "Fadi",
+      "actual": 90.27,
+      "projected": 69.3,
+      "vs_projection": 20.97,
+      "optimal": 99.82,
+      "optimal_lineup": [
+        {
+          "slot": "QB",
+          "name": "Trevor Lawrence",
+          "points": 28.67
+        },
+        {
+          "slot": "RB",
+          "name": "Dameon Pierce",
+          "points": 10.5
+        },
+        {
+          "slot": "RB",
+          "name": "Javonte Williams",
+          "points": 9.5
+        },
+        {
+          "slot": "WR",
+          "name": "Germie Bernard",
+          "points": 15.85
+        },
+        {
+          "slot": "WR",
+          "name": "Davante Adams",
+          "points": 3.45
+        },
+        {
+          "slot": "TE",
+          "name": "Tucker Kraft",
+          "points": 4.35
+        },
+        {
+          "slot": "W/R/T",
+          "name": "Kendre Miller",
+          "points": 4.5
+        },
+        {
+          "slot": "K",
+          "name": "Dominic Zvada",
+          "points": 8.0
+        },
+        {
+          "slot": "DEF",
+          "name": "Chiefs",
+          "points": 15.0
+        }
+      ],
+      "efficiency": 90.43,
+      "left_on_bench": 9.55,
+      "best_swap": {
+        "bench": "Dameon Pierce",
+        "bench_points": 10.5,
+        "starter": "Emanuel Wilson",
+        "starter_points": 2.6,
+        "slot": "RB",
+        "gain": 7.9
+      },
+      "all_play": {
+        "wins": 10,
+        "losses": 1,
+        "ties": 0
+      },
+      "score_rank": 2,
+      "opponent": "Dominic",
+      "result": "win",
+      "margin": 13.21
+    },
+    "Dominic": {
+      "key": "Dominic",
+      "actual": 77.06,
+      "projected": 66.85,
+      "vs_projection": 10.21,
+      "optimal": 87.0,
+      "optimal_lineup": [
+        {
+          "slot": "QB",
+          "name": "Michael Penix Jr.",
+          "points": 24.55
+        },
+        {
+          "slot": "RB",
+          "name": "Jonathan Taylor",
+          "points": 12.55
+        },
+        {
+          "slot": "RB",
+          "name": "Blake Corum",
+          "points": 10.0
+        },
+        {
+          "slot": "WR",
+          "name": "Chris Olave",
+          "points": 10.15
+        },
+        {
+          "slot": "WR",
+          "name": "Marvin Harrison Jr.",
+          "points": 3.2
+        },
+        {
+          "slot": "TE",
+          "name": "Dallas Goedert",
+          "points": 6.05
+        },
+        {
+          "slot": "W/R/T",
+          "name": "Kimani Vidal",
+          "points": 3.5
+        },
+        {
+          "slot": "K",
+          "name": "Harrison Butker",
+          "points": 13.0
+        },
+        {
+          "slot": "DEF",
+          "name": "Panthers",
+          "points": 4.0
+        }
+      ],
+      "efficiency": 88.57,
+      "left_on_bench": 9.94,
+      "best_swap": {
+        "bench": "Michael Penix Jr.",
+        "bench_points": 24.55,
+        "starter": "Kirk Cousins",
+        "starter_points": 16.26,
+        "slot": "QB",
+        "gain": 8.29
+      },
+      "all_play": {
+        "wins": 8,
+        "losses": 3,
+        "ties": 0
+      },
+      "score_rank": 4,
+      "opponent": "Fadi",
+      "result": "loss",
+      "margin": -13.21
+    }
+  },
+  "games": [
+    {
+      "a": "Shawn",
+      "b": "Kevin O'Boyle",
+      "score_a": 57.16,
+      "score_b": 89.43,
+      "winner": "Kevin O'Boyle",
+      "loser": "Shawn",
+      "margin": 32.27,
+      "coulda_won": null,
+      "swap_flip": null,
+      "series": {
+        "before": {
+          "Shawn": 18,
+          "Kevin O'Boyle": 12,
+          "ties": 0
+        },
+        "after": {
+          "Shawn": 18,
+          "Kevin O'Boyle": 13,
+          "ties": 0
+        },
+        "games_after": 31,
+        "streak_after": {
+          "team": "Kevin O'Boyle",
+          "length": 1
+        },
+        "notes": [
+          {
+            "kind": "snapped",
+            "team": "Kevin O'Boyle",
+            "length": 2
+          }
+        ]
+      }
+    },
+    {
+      "a": "Steve Swanson",
+      "b": "Thomas",
+      "score_a": 69.19,
+      "score_b": 51.63,
+      "winner": "Steve Swanson",
+      "loser": "Thomas",
+      "margin": 17.56,
+      "coulda_won": null,
+      "swap_flip": null,
+      "series": {
+        "before": {
+          "Steve Swanson": 9,
+          "Thomas": 16,
+          "ties": 0
+        },
+        "after": {
+          "Steve Swanson": 10,
+          "Thomas": 16,
+          "ties": 0
+        },
+        "games_after": 26,
+        "streak_after": {
+          "team": "Steve Swanson",
+          "length": 1
+        },
+        "notes": [
+          {
+            "kind": "snapped",
+            "team": "Steve Swanson",
+            "length": 3
+          },
+          {
+            "kind": "first_win_since",
+            "team": "Steve Swanson",
+            "season": 2023,
+            "week": 8,
+            "games_between": 3
+          }
+        ]
+      }
+    },
+    {
+      "a": "Jeff",
+      "b": "Douglas",
+      "score_a": 72.65,
+      "score_b": 72.81,
+      "winner": "Douglas",
+      "loser": "Jeff",
+      "margin": 0.16,
+      "coulda_won": {
+        "team": "Jeff",
+        "optimal": 91.0,
+        "needed": 72.81
+      },
+      "swap_flip": {
+        "team": "Jeff",
+        "bench": "Stefon Diggs",
+        "bench_points": 11.2,
+        "starter": "Ladd McConkey",
+        "starter_points": 1.35,
+        "slot": "W/R/T",
+        "gain": 9.85
+      },
+      "series": {
+        "before": {
+          "Jeff": 5,
+          "Douglas": 8,
+          "ties": 0
+        },
+        "after": {
+          "Jeff": 5,
+          "Douglas": 9,
+          "ties": 0
+        },
+        "games_after": 14,
+        "streak_after": {
+          "team": "Douglas",
+          "length": 1
+        },
+        "notes": []
+      }
+    },
+    {
+      "a": "Evan",
+      "b": "Eric",
+      "score_a": 92.45,
+      "score_b": 73.1,
+      "winner": "Evan",
+      "loser": "Eric",
+      "margin": 19.35,
+      "coulda_won": {
+        "team": "Eric",
+        "optimal": 92.75,
+        "needed": 92.45
+      },
+      "swap_flip": null,
+      "series": {
+        "before": {
+          "Evan": 1,
+          "Eric": 2,
+          "ties": 0
+        },
+        "after": {
+          "Evan": 2,
+          "Eric": 2,
+          "ties": 0
+        },
+        "games_after": 4,
+        "streak_after": {
+          "team": "Evan",
+          "length": 1
+        },
+        "notes": [
+          {
+            "kind": "snapped",
+            "team": "Evan",
+            "length": 2
+          },
+          {
+            "kind": "evened",
+            "team": "Evan"
+          }
+        ]
+      }
+    },
+    {
+      "a": "Kevin Swanson",
+      "b": "Brian Clark",
+      "score_a": 66.69,
+      "score_b": 76.28,
+      "winner": "Brian Clark",
+      "loser": "Kevin Swanson",
+      "margin": 9.59,
+      "coulda_won": null,
+      "swap_flip": null,
+      "series": {
+        "before": {
+          "Kevin Swanson": 13,
+          "Brian Clark": 18,
+          "ties": 0
+        },
+        "after": {
+          "Kevin Swanson": 13,
+          "Brian Clark": 19,
+          "ties": 0
+        },
+        "games_after": 32,
+        "streak_after": {
+          "team": "Brian Clark",
+          "length": 5
+        },
+        "notes": [
+          {
+            "kind": "streak",
+            "team": "Brian Clark",
+            "length": 5
+          }
+        ]
+      }
+    },
+    {
+      "a": "Fadi",
+      "b": "Dominic",
+      "score_a": 90.27,
+      "score_b": 77.06,
+      "winner": "Fadi",
+      "loser": "Dominic",
+      "margin": 13.21,
+      "coulda_won": null,
+      "swap_flip": null,
+      "series": {
+        "before": {
+          "Fadi": 17,
+          "Dominic": 12,
+          "ties": 0
+        },
+        "after": {
+          "Fadi": 18,
+          "Dominic": 12,
+          "ties": 0
+        },
+        "games_after": 30,
+        "streak_after": {
+          "team": "Fadi",
+          "length": 4
+        },
+        "notes": [
+          {
+            "kind": "streak",
+            "team": "Fadi",
+            "length": 4
+          }
+        ]
+      }
+    }
+  ],
+  "awards": {
+    "highest_score": [
+      {
+        "team": "Evan",
+        "value": 92.45
+      }
+    ],
+    "lowest_score": [
+      {
+        "team": "Thomas",
+        "value": 51.63
+      }
+    ],
+    "biggest_blowout": [
+      {
+        "winner": "Kevin O'Boyle",
+        "loser": "Shawn",
+        "value": 32.27
+      }
+    ],
+    "narrowest_win": [
+      {
+        "winner": "Douglas",
+        "loser": "Jeff",
+        "value": 0.16
+      }
+    ],
+    "best_managed": [
+      {
+        "team": "Evan",
+        "value": 100.0
+      }
+    ],
+    "worst_managed": [
+      {
+        "team": "Steve Swanson",
+        "value": 75.75
+      }
+    ],
+    "most_left_on_bench": [
+      {
+        "team": "Steve Swanson",
+        "value": 22.15
+      }
+    ],
+    "overachiever": [
+      {
+        "team": "Fadi",
+        "value": 20.97
+      }
+    ],
+    "below_expectation": [
+      {
+        "team": "Shawn",
+        "value": -29.64
+      }
+    ],
+    "unluckiest_loss": [
+      {
+        "team": "Dominic",
+        "value": 77.06
+      }
+    ],
+    "luckiest_win": [
+      {
+        "team": "Steve Swanson",
+        "value": 69.19
+      }
+    ]
+  },
+  "players_of_week": {
+    "QB": [
+      {
+        "team": "Fadi",
+        "name": "Trevor Lawrence",
+        "position": "QB",
+        "points": 28.67,
+        "projected": 14.03,
+        "id": "33389",
+        "nfl_team": "JAX",
+        "opponent": "vs HOU",
+        "photo": "/players/7523.png"
+      }
+    ],
+    "RB": [
+      {
+        "team": "Shawn",
+        "name": "Christian McCaffrey",
+        "position": "RB",
+        "points": 20.35,
+        "projected": 13.14,
+        "id": "30121",
+        "nfl_team": "SF",
+        "opponent": "vs WAS",
+        "photo": "/players/4034.png"
+      }
+    ],
+    "WR": [
+      {
+        "team": "Thomas",
+        "name": "Tre Tucker",
+        "position": "WR",
+        "points": 19.35,
+        "projected": 5.8,
+        "id": "40114",
+        "nfl_team": "LV",
+        "opponent": "vs BUF",
+        "photo": "/players/10213.png"
+      }
+    ],
+    "TE": [
+      {
+        "team": "Evan",
+        "name": "Isaiah Likely",
+        "position": "TE",
+        "points": 15.95,
+        "projected": 8.54,
+        "id": "34095",
+        "nfl_team": "NYG",
+        "opponent": "vs NO",
+        "photo": "/players/8131.png"
+      }
+    ],
+    "K": [
+      {
+        "team": "Kevin O'Boyle",
+        "name": "Tyler Bass",
+        "position": "K",
+        "points": 17.0,
+        "projected": 8.6,
+        "id": "32858",
+        "nfl_team": "BUF",
+        "opponent": "@ LV",
+        "photo": "/players/7042.png"
+      }
+    ],
+    "DEF": [
+      {
+        "team": "Fadi",
+        "name": "Chiefs",
+        "position": "DEF",
+        "points": 15.0,
+        "projected": 7.65,
+        "id": "100012",
+        "nfl_team": "KC",
+        "opponent": "vs LAC",
+        "photo": "/nfl/KC.png"
+      }
+    ]
+  },
+  "bench_best": {
+    "QB": [
+      {
+        "team": "Dominic",
+        "name": "Michael Penix Jr.",
+        "position": "QB",
+        "points": 24.55,
+        "projected": 13.03,
+        "id": "40889",
+        "nfl_team": "ATL",
+        "opponent": "vs CHI",
+        "photo": "/players/11559.png"
+      }
+    ],
+    "RB": [
+      {
+        "team": "Steve Swanson",
+        "name": "Rachaad White",
+        "position": "RB",
+        "points": 10.85,
+        "projected": 6.29,
+        "id": "34047",
+        "nfl_team": "WAS",
+        "opponent": "@ SF",
+        "photo": "/players/8136.png"
+      }
+    ],
+    "WR": [
+      {
+        "team": "Steve Swanson",
+        "name": "Carnell Tate",
+        "position": "WR",
+        "points": 12.5,
+        "projected": 6.43,
+        "id": "42626",
+        "nfl_team": "TEN",
+        "opponent": "@ IND",
+        "photo": "/players/13279.png"
+      }
+    ],
+    "TE": [
+      {
+        "team": "Eric",
+        "name": "Kyle Pitts Sr.",
+        "position": "TE",
+        "points": 17.5,
+        "projected": 4.66,
+        "id": "33392",
+        "nfl_team": "ATL",
+        "opponent": "vs CHI",
+        "photo": "/players/7553.png"
+      }
+    ]
+  },
+  "dud": [
+    {
+      "team": "Douglas",
+      "name": "Bijan Robinson",
+      "position": "RB",
+      "points": 3.65,
+      "projected": 14.36,
+      "id": "40055",
+      "nfl_team": "ATL",
+      "opponent": "vs CHI",
+      "shortfall": 10.71,
+      "photo": "/players/9509.png"
+    }
+  ],
+  "coulda_won": [
+    {
+      "team": "Jeff",
+      "optimal": 91.0,
+      "needed": 72.81,
+      "opponent": "Douglas",
+      "margin": 0.16
+    },
+    {
+      "team": "Eric",
+      "optimal": 92.75,
+      "needed": 92.45,
+      "opponent": "Evan",
+      "margin": 19.35
+    }
+  ],
+  "swap_flips": [
+    {
+      "team": "Jeff",
+      "bench": "Stefon Diggs",
+      "bench_points": 11.2,
+      "starter": "Ladd McConkey",
+      "starter_points": 1.35,
+      "slot": "W/R/T",
+      "gain": 9.85,
+      "opponent": "Douglas",
+      "margin": 0.16
+    }
+  ]
+}

@@ -141,5 +141,5 @@ weeks before the issue's own.
 
 - **Week 5 (2026).** The preview copy ("Tiebreakers") was approved and deployed 2026-10-13, after the
   week, as a back issue (`8ab8f13`). The recap is committed (`2128b6e`).
-- **Week 6 (2026).** The preview facts and draft copy are committed (`4504f0e`). The copy is **still
-  awaiting approval**.
+- **Week 6 (2026).** The preview copy ("High-Water Marks") was approved and deployed (`54ed3e1`). The
+  recap copy ("Perfect at Both Ends") was approved and deployed 2026-10-20.
