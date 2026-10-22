@@ -1,0 +1,876 @@
+{
+  "week": 7,
+  "cards": [
+    {
+      "team_a": "This Is How We Do",
+      "team_b": "Fuzzy Bears",
+      "manager_a": "Fadi",
+      "manager_b": "Thomas",
+      "division_a": "Paper",
+      "division_b": "Rock",
+      "in_division": false,
+      "facts": {
+        "form_line": "Fadi has won 4 in a row",
+        "games": 34,
+        "first_season": 2003,
+        "record": {
+          "Fadi": 20,
+          "Thomas": 14,
+          "ties": 0
+        },
+        "record_rs": {
+          "Fadi": 18,
+          "Thomas": 13,
+          "ties": 0
+        },
+        "record_po": {
+          "Fadi": 2,
+          "Thomas": 1,
+          "ties": 0
+        },
+        "playoff_meetings": 3,
+        "finals": [],
+        "streak": {
+          "manager": "Fadi",
+          "length": 4
+        },
+        "best_run": {
+          "manager": "Fadi",
+          "length": 4,
+          "start": 2023,
+          "end": 2025
+        },
+        "max_lead": {
+          "manager": "Fadi",
+          "lead": 6
+        },
+        "last": {
+          "season": 2025,
+          "week": 9,
+          "a": "Fadi",
+          "b": "Thomas",
+          "score_a": 115.69,
+          "score_b": 84.56,
+          "winner": "Fadi",
+          "playoff": false
+        },
+        "closest": {
+          "value": 2.66,
+          "season": 2003,
+          "week": 3,
+          "winner": "Fadi",
+          "score_hi": 42.3,
+          "score_lo": 39.64
+        },
+        "biggest": {
+          "value": 48.62,
+          "season": 2007,
+          "week": 5,
+          "winner": "Fadi",
+          "score_hi": 74.21,
+          "score_lo": 25.59
+        },
+        "highest": {
+          "value": 209.16,
+          "season": 2015,
+          "week": 12,
+          "winner": "Thomas",
+          "score_hi": 117.0,
+          "score_lo": 92.16
+        },
+        "lowest": {
+          "value": 81.94,
+          "season": 2003,
+          "week": 3,
+          "winner": "Fadi",
+          "score_hi": 42.3,
+          "score_lo": 39.64
+        }
+      },
+      "storylines": [
+        "Fadi has won 4 in a row",
+        "Fadi's series lead has never been bigger",
+        "Fadi owns the biggest blowout in the series \u2014 by 48.62 in 2007",
+        "their 2015 meeting (117.0\u2060\u2013\u206092.16) is the highest-scoring in the series"
+      ],
+      "fact_pool": [
+        {
+          "category": "form",
+          "priority": 60,
+          "text": "Fadi has won 4 in a row"
+        },
+        {
+          "category": "last_meeting",
+          "priority": 20,
+          "text": "Fadi won the most recent meeting 115.69\u2060\u2013\u206084.56 in 2025"
+        },
+        {
+          "category": "biggest_lead",
+          "priority": 58,
+          "text": "Fadi's series lead has never been bigger"
+        },
+        {
+          "category": "biggest_win",
+          "priority": 46,
+          "text": "Fadi owns the biggest blowout in the series \u2014 by 48.62 in 2007"
+        },
+        {
+          "category": "shootout",
+          "priority": 40,
+          "text": "their 2015 meeting (117.0\u2060\u2013\u206092.16) is the highest-scoring in the series"
+        },
+        {
+          "category": "slugfest",
+          "priority": 26,
+          "text": "their 2003 meeting (42.3\u2060\u2013\u206039.64) is the lowest-scoring in the series"
+        }
+      ]
+    },
+    {
+      "team_a": "Mean Machine 22",
+      "team_b": "miniDITKAS",
+      "manager_a": "Douglas",
+      "manager_b": "Kevin Swanson",
+      "division_a": "Paper",
+      "division_b": "Scissors",
+      "in_division": false,
+      "facts": {
+        "form_line": "Kevin Swanson has won 3 of the last 5",
+        "games": 14,
+        "first_season": 2015,
+        "record": {
+          "Douglas": 9,
+          "Kevin Swanson": 5,
+          "ties": 0
+        },
+        "record_rs": {
+          "Douglas": 7,
+          "Kevin Swanson": 4,
+          "ties": 0
+        },
+        "record_po": {
+          "Douglas": 2,
+          "Kevin Swanson": 1,
+          "ties": 0
+        },
+        "playoff_meetings": 3,
+        "finals": [
+          {
+            "season": 2017,
+            "winner": "Douglas"
+          }
+        ],
+        "streak": {
+          "manager": "Douglas",
+          "length": 2
+        },
+        "best_run": {
+          "manager": "Douglas",
+          "length": 4,
+          "start": 2016,
+          "end": 2018
+        },
+        "max_lead": {
+          "manager": "Douglas",
+          "lead": 5
+        },
+        "last": {
+          "season": 2025,
+          "week": 6,
+          "a": "Douglas",
+          "b": "Kevin Swanson",
+          "score_a": 80.3,
+          "score_b": 68.53,
+          "winner": "Douglas",
+          "playoff": false
+        },
+        "closest": {
+          "value": 0.78,
+          "season": 2015,
+          "week": 6,
+          "winner": "Kevin Swanson",
+          "score_hi": 74.49,
+          "score_lo": 73.71
+        },
+        "biggest": {
+          "value": 71.47,
+          "season": 2023,
+          "week": 3,
+          "winner": "Kevin Swanson",
+          "score_hi": 112.71,
+          "score_lo": 41.24
+        },
+        "highest": {
+          "value": 210.43,
+          "season": 2018,
+          "week": 8,
+          "winner": "Douglas",
+          "score_hi": 105.9,
+          "score_lo": 104.53
+        },
+        "lowest": {
+          "value": 105.78,
+          "season": 2019,
+          "week": 16,
+          "winner": "Douglas",
+          "score_hi": 69.98,
+          "score_lo": 35.8
+        }
+      },
+      "storylines": [
+        "a rematch of the 2017 championship final \u2014 Douglas beat Kevin Swanson for the title",
+        "Douglas's 4 straight from 2016\u2060\u2013\u206018 is the longest streak in the series",
+        "Douglas's largest series lead was 5 games",
+        "Kevin Swanson won their closest meeting by 0.78 points in 2015"
+      ],
+      "fact_pool": [
+        {
+          "category": "form",
+          "priority": 36,
+          "text": "Kevin Swanson has won 3 of the last 5"
+        },
+        {
+          "category": "title_game",
+          "priority": 100,
+          "text": "a rematch of the 2017 championship final \u2014 Douglas beat Kevin Swanson for the title"
+        },
+        {
+          "category": "last_meeting",
+          "priority": 20,
+          "text": "Douglas won the most recent meeting 80.3\u2060\u2013\u206068.53 in 2025"
+        },
+        {
+          "category": "longest_run",
+          "priority": 62,
+          "text": "Douglas's 4 straight from 2016\u2060\u2013\u206018 is the longest streak in the series"
+        },
+        {
+          "category": "biggest_lead",
+          "priority": 58,
+          "text": "Douglas's largest series lead was 5 games"
+        },
+        {
+          "category": "closest_game",
+          "priority": 52,
+          "text": "Kevin Swanson won their closest meeting by 0.78 points in 2015"
+        },
+        {
+          "category": "biggest_win",
+          "priority": 46,
+          "text": "Kevin Swanson owns the biggest blowout in the series \u2014 by 71.47 in 2023"
+        },
+        {
+          "category": "shootout",
+          "priority": 40,
+          "text": "their 2018 meeting (105.9\u2060\u2013\u2060104.53) is the highest-scoring in the series"
+        },
+        {
+          "category": "slugfest",
+          "priority": 26,
+          "text": "their 2019 meeting (69.98\u2060\u2013\u206035.8) is the lowest-scoring in the series"
+        }
+      ]
+    },
+    {
+      "team_a": "Futball in the Groin",
+      "team_b": "small sample size",
+      "manager_a": "Jeff",
+      "manager_b": "Shawn",
+      "division_a": "Scissors",
+      "division_b": "Rock",
+      "in_division": false,
+      "facts": {
+        "form_line": "Jeff has won 3 of the last 5",
+        "games": 10,
+        "first_season": 2017,
+        "record": {
+          "Jeff": 4,
+          "Shawn": 6,
+          "ties": 0
+        },
+        "record_rs": {
+          "Jeff": 3,
+          "Shawn": 6,
+          "ties": 0
+        },
+        "record_po": {
+          "Jeff": 1,
+          "Shawn": 0,
+          "ties": 0
+        },
+        "playoff_meetings": 1,
+        "finals": [],
+        "streak": null,
+        "best_run": {
+          "manager": "Shawn",
+          "length": 3,
+          "start": 2017,
+          "end": 2019
+        },
+        "max_lead": {
+          "manager": "Shawn",
+          "lead": 4
+        },
+        "last": {
+          "season": 2025,
+          "week": 6,
+          "a": "Jeff",
+          "b": "Shawn",
+          "score_a": 67.86,
+          "score_b": 52.56,
+          "winner": "Jeff",
+          "playoff": false
+        },
+        "closest": {
+          "value": 3.21,
+          "season": 2022,
+          "week": 7,
+          "winner": "Shawn",
+          "score_hi": 63.41,
+          "score_lo": 60.2
+        },
+        "biggest": {
+          "value": 48.29,
+          "season": 2019,
+          "week": 11,
+          "winner": "Shawn",
+          "score_hi": 107.78,
+          "score_lo": 59.49
+        },
+        "highest": {
+          "value": 176.99,
+          "season": 2024,
+          "week": 9,
+          "winner": "Shawn",
+          "score_hi": 98.86,
+          "score_lo": 78.13
+        },
+        "lowest": {
+          "value": 120.42,
+          "season": 2025,
+          "week": 6,
+          "winner": "Jeff",
+          "score_hi": 67.86,
+          "score_lo": 52.56
+        }
+      },
+      "storylines": [
+        "Shawn's largest series lead was 4 games",
+        "Shawn owns the biggest blowout in the series \u2014 by 48.29 in 2019",
+        "their 2024 meeting (98.86\u2060\u2013\u206078.13) is the highest-scoring in the series"
+      ],
+      "fact_pool": [
+        {
+          "category": "form",
+          "priority": 36,
+          "text": "Jeff has won 3 of the last 5"
+        },
+        {
+          "category": "last_meeting",
+          "priority": 20,
+          "text": "Jeff won the most recent meeting 67.86\u2060\u2013\u206052.56 in 2025"
+        },
+        {
+          "category": "biggest_lead",
+          "priority": 58,
+          "text": "Shawn's largest series lead was 4 games"
+        },
+        {
+          "category": "biggest_win",
+          "priority": 46,
+          "text": "Shawn owns the biggest blowout in the series \u2014 by 48.29 in 2019"
+        },
+        {
+          "category": "shootout",
+          "priority": 40,
+          "text": "their 2024 meeting (98.86\u2060\u2013\u206078.13) is the highest-scoring in the series"
+        },
+        {
+          "category": "slugfest",
+          "priority": 26,
+          "text": "their 2025 meeting (67.86\u2060\u2013\u206052.56) is the lowest-scoring in the series"
+        }
+      ]
+    },
+    {
+      "team_a": "\u201cI\u2019ll take Kittle\u201d",
+      "team_b": "Guntry Club",
+      "manager_a": "Dominic",
+      "manager_b": "Eric",
+      "division_a": "Scissors",
+      "division_b": "Rock",
+      "in_division": false,
+      "facts": {
+        "form_line": null,
+        "games": 3,
+        "first_season": 2023,
+        "record": {
+          "Dominic": 0,
+          "Eric": 3,
+          "ties": 0
+        },
+        "record_rs": {
+          "Dominic": 0,
+          "Eric": 3,
+          "ties": 0
+        },
+        "record_po": {
+          "Dominic": 0,
+          "Eric": 0,
+          "ties": 0
+        },
+        "playoff_meetings": 0,
+        "finals": [],
+        "streak": {
+          "manager": "Eric",
+          "length": 3
+        },
+        "best_run": {
+          "manager": "Eric",
+          "length": 3,
+          "start": 2023,
+          "end": 2025
+        },
+        "max_lead": {
+          "manager": "Eric",
+          "lead": 3
+        },
+        "last": {
+          "season": 2025,
+          "week": 8,
+          "a": "Dominic",
+          "b": "Eric",
+          "score_a": 77.26,
+          "score_b": 91.65,
+          "winner": "Eric",
+          "playoff": false
+        },
+        "closest": {
+          "value": 11.41,
+          "season": 2024,
+          "week": 11,
+          "winner": "Eric",
+          "score_hi": 88.07,
+          "score_lo": 76.66
+        },
+        "biggest": {
+          "value": 19.63,
+          "season": 2023,
+          "week": 9,
+          "winner": "Eric",
+          "score_hi": 73.75,
+          "score_lo": 54.12
+        },
+        "highest": {
+          "value": 168.91,
+          "season": 2025,
+          "week": 8,
+          "winner": "Eric",
+          "score_hi": 91.65,
+          "score_lo": 77.26
+        },
+        "lowest": {
+          "value": 127.87,
+          "season": 2023,
+          "week": 9,
+          "winner": "Eric",
+          "score_hi": 73.75,
+          "score_lo": 54.12
+        }
+      },
+      "storylines": [
+        "their 2025 meeting (91.65\u2060\u2013\u206077.26) is the highest-scoring in the series",
+        "this is only their fourth meeting",
+        "Eric won the most recent meeting 91.65\u2060\u2013\u206077.26 in 2025"
+      ],
+      "fact_pool": [
+        {
+          "category": "last_meeting",
+          "priority": 20,
+          "text": "Eric won the most recent meeting 91.65\u2060\u2013\u206077.26 in 2025"
+        },
+        {
+          "category": "young_series",
+          "priority": 28,
+          "text": "this is only their fourth meeting"
+        },
+        {
+          "category": "shootout",
+          "priority": 40,
+          "text": "their 2025 meeting (91.65\u2060\u2013\u206077.26) is the highest-scoring in the series"
+        }
+      ]
+    },
+    {
+      "team_a": "team old style",
+      "team_b": "Bears",
+      "manager_a": "Brian Clark",
+      "manager_b": "Steve Swanson",
+      "division_a": "Rock",
+      "division_b": "Paper",
+      "in_division": false,
+      "facts": {
+        "form_line": "Brian Clark has won 3 of the last 5",
+        "games": 26,
+        "first_season": 2007,
+        "record": {
+          "Brian Clark": 12,
+          "Steve Swanson": 14,
+          "ties": 0
+        },
+        "record_rs": {
+          "Brian Clark": 10,
+          "Steve Swanson": 13,
+          "ties": 0
+        },
+        "record_po": {
+          "Brian Clark": 2,
+          "Steve Swanson": 1,
+          "ties": 0
+        },
+        "playoff_meetings": 3,
+        "finals": [
+          {
+            "season": 2009,
+            "winner": "Brian Clark"
+          }
+        ],
+        "streak": null,
+        "best_run": {
+          "manager": "Brian Clark",
+          "length": 4,
+          "start": 2008,
+          "end": 2009
+        },
+        "max_lead": {
+          "manager": "Steve Swanson",
+          "lead": 3
+        },
+        "last": {
+          "season": 2025,
+          "week": 6,
+          "a": "Brian Clark",
+          "b": "Steve Swanson",
+          "score_a": 95.04,
+          "score_b": 58.84,
+          "winner": "Brian Clark",
+          "playoff": false
+        },
+        "closest": {
+          "value": 0.65,
+          "season": 2016,
+          "week": 13,
+          "winner": "Brian Clark",
+          "score_hi": 74.17,
+          "score_lo": 73.52
+        },
+        "biggest": {
+          "value": 72.71,
+          "season": 2024,
+          "week": 7,
+          "winner": "Steve Swanson",
+          "score_hi": 106.53,
+          "score_lo": 33.82
+        },
+        "highest": {
+          "value": 195.07,
+          "season": 2016,
+          "week": 1,
+          "winner": "Brian Clark",
+          "score_hi": 103.21,
+          "score_lo": 91.86
+        },
+        "lowest": {
+          "value": 109.94,
+          "season": 2012,
+          "week": 11,
+          "winner": "Steve Swanson",
+          "score_hi": 58.62,
+          "score_lo": 51.32
+        }
+      },
+      "storylines": [
+        "a rematch of the 2009 championship final \u2014 Brian Clark beat Steve Swanson for the title",
+        "Brian Clark's 4 straight from 2008\u2060\u2013\u206009 is the longest streak in the series",
+        "Brian Clark won their closest meeting by 0.65 points in 2016",
+        "Steve Swanson owns the biggest blowout in the series \u2014 by 72.71 in 2024"
+      ],
+      "fact_pool": [
+        {
+          "category": "form",
+          "priority": 36,
+          "text": "Brian Clark has won 3 of the last 5"
+        },
+        {
+          "category": "title_game",
+          "priority": 100,
+          "text": "a rematch of the 2009 championship final \u2014 Brian Clark beat Steve Swanson for the title"
+        },
+        {
+          "category": "last_meeting",
+          "priority": 20,
+          "text": "Brian Clark won the most recent meeting 95.04\u2060\u2013\u206058.84 in 2025"
+        },
+        {
+          "category": "longest_run",
+          "priority": 62,
+          "text": "Brian Clark's 4 straight from 2008\u2060\u2013\u206009 is the longest streak in the series"
+        },
+        {
+          "category": "closest_game",
+          "priority": 52,
+          "text": "Brian Clark won their closest meeting by 0.65 points in 2016"
+        },
+        {
+          "category": "biggest_win",
+          "priority": 46,
+          "text": "Steve Swanson owns the biggest blowout in the series \u2014 by 72.71 in 2024"
+        },
+        {
+          "category": "shootout",
+          "priority": 40,
+          "text": "their 2016 meeting (103.21\u2060\u2013\u206091.86) is the highest-scoring in the series"
+        },
+        {
+          "category": "slugfest",
+          "priority": 26,
+          "text": "their 2012 meeting (58.62\u2060\u2013\u206051.32) is the lowest-scoring in the series"
+        }
+      ]
+    },
+    {
+      "team_a": "Goood Times",
+      "team_b": "Guinness",
+      "manager_a": "Evan",
+      "manager_b": "Kevin O'Boyle",
+      "division_a": "Paper",
+      "division_b": "Scissors",
+      "in_division": false,
+      "facts": {
+        "form_line": "Evan has won 4 in a row",
+        "games": 28,
+        "first_season": 2004,
+        "record": {
+          "Evan": 14,
+          "Kevin O'Boyle": 14,
+          "ties": 0
+        },
+        "record_rs": {
+          "Evan": 13,
+          "Kevin O'Boyle": 12,
+          "ties": 0
+        },
+        "record_po": {
+          "Evan": 1,
+          "Kevin O'Boyle": 2,
+          "ties": 0
+        },
+        "playoff_meetings": 3,
+        "finals": [],
+        "streak": {
+          "manager": "Evan",
+          "length": 4
+        },
+        "best_run": {
+          "manager": "Evan",
+          "length": 4,
+          "start": 2022,
+          "end": 2025
+        },
+        "max_lead": {
+          "manager": "Kevin O'Boyle",
+          "lead": 6
+        },
+        "last": {
+          "season": 2025,
+          "week": 7,
+          "a": "Evan",
+          "b": "Kevin O'Boyle",
+          "score_a": 97.54,
+          "score_b": 89.72,
+          "winner": "Evan",
+          "playoff": false
+        },
+        "closest": {
+          "value": 0.75,
+          "season": 2015,
+          "week": 11,
+          "winner": "Kevin O'Boyle",
+          "score_hi": 68.8,
+          "score_lo": 68.05
+        },
+        "biggest": {
+          "value": 59.6,
+          "season": 2023,
+          "week": 11,
+          "winner": "Evan",
+          "score_hi": 123.95,
+          "score_lo": 64.35
+        },
+        "highest": {
+          "value": 221.26,
+          "season": 2016,
+          "week": 2,
+          "winner": "Evan",
+          "score_hi": 124.73,
+          "score_lo": 96.53
+        },
+        "lowest": {
+          "value": 80.06,
+          "season": 2007,
+          "week": 5,
+          "winner": "Kevin O'Boyle",
+          "score_hi": 54.63,
+          "score_lo": 25.43
+        }
+      },
+      "storylines": [
+        "Evan has won 4 in a row",
+        "Kevin O'Boyle's largest series lead was 6 games",
+        "Kevin O'Boyle won their closest meeting by 0.75 points in 2015",
+        "Evan owns the biggest blowout in the series \u2014 by 59.6 in 2023"
+      ],
+      "fact_pool": [
+        {
+          "category": "form",
+          "priority": 60,
+          "text": "Evan has won 4 in a row"
+        },
+        {
+          "category": "last_meeting",
+          "priority": 20,
+          "text": "Evan won the most recent meeting 97.54\u2060\u2013\u206089.72 in 2025"
+        },
+        {
+          "category": "biggest_lead",
+          "priority": 58,
+          "text": "Kevin O'Boyle's largest series lead was 6 games"
+        },
+        {
+          "category": "closest_game",
+          "priority": 52,
+          "text": "Kevin O'Boyle won their closest meeting by 0.75 points in 2015"
+        },
+        {
+          "category": "biggest_win",
+          "priority": 46,
+          "text": "Evan owns the biggest blowout in the series \u2014 by 59.6 in 2023"
+        },
+        {
+          "category": "shootout",
+          "priority": 40,
+          "text": "their 2016 meeting (124.73\u2060\u2013\u206096.53) is the highest-scoring in the series"
+        },
+        {
+          "category": "slugfest",
+          "priority": 26,
+          "text": "their 2007 meeting (54.63\u2060\u2013\u206025.43) is the lowest-scoring in the series"
+        }
+      ]
+    }
+  ],
+  "week_in_history": {
+    "best": [
+      {
+        "season": 2015,
+        "manager": "Robby",
+        "team": "Swami Singer",
+        "score": 142.24,
+        "result": "Win"
+      },
+      {
+        "season": 2010,
+        "manager": "Steve Swanson",
+        "team": "cubs killed harry",
+        "score": 127.43,
+        "result": "Win"
+      },
+      {
+        "season": 2018,
+        "manager": "Kevin Swanson",
+        "team": "miniDITKAS",
+        "score": 123.77,
+        "result": "Win"
+      }
+    ],
+    "worst": {
+      "season": 2005,
+      "manager": "Thomas",
+      "team": "shootinfor.750",
+      "score": 14.05,
+      "result": "Loss"
+    },
+    "best_losing": {
+      "season": 2015,
+      "manager": "Shawn",
+      "team": "los pollos hermanos",
+      "score": 94.92,
+      "result": "Loss"
+    }
+  },
+  "career": {
+    "Eric": {
+      "wins": 30,
+      "losses": 23,
+      "points": 4143.94
+    },
+    "Brian Clark": {
+      "wins": 195,
+      "losses": 174,
+      "points": 28331.349999999962
+    },
+    "Fadi": {
+      "wins": 178,
+      "losses": 189,
+      "points": 27889.699999999997
+    },
+    "Steve Swanson": {
+      "wins": 138,
+      "losses": 144,
+      "points": 22596.710000000006
+    },
+    "Thomas": {
+      "wins": 158,
+      "losses": 183,
+      "points": 25781.59000000001
+    },
+    "Kevin O'Boyle": {
+      "wins": 181,
+      "losses": 178,
+      "points": 27545.59999999999
+    },
+    "Kevin Swanson": {
+      "wins": 194,
+      "losses": 169,
+      "points": 28280.919999999995
+    },
+    "Douglas": {
+      "wins": 80,
+      "losses": 85,
+      "points": 13577.959999999997
+    },
+    "Evan": {
+      "wins": 159,
+      "losses": 163,
+      "points": 25321.960000000014
+    },
+    "Shawn": {
+      "wins": 184,
+      "losses": 180,
+      "points": 27136.609999999986
+    },
+    "Dominic": {
+      "wins": 154,
+      "losses": 163,
+      "points": 24050.519999999993
+    },
+    "Jeff": {
+      "wins": 57,
+      "losses": 79,
+      "points": 11007.659999999996
+    }
+  },
+  "milestone_watch": [
+    "all-time wins race: Brian Clark 195, Kevin Swanson 194"
+  ]
+}

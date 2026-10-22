@@ -1,0 +1,52 @@
+{
+  "theme": "Title Rematches",
+  "cold_open": [
+    "Two old championship games get replayed this week: Douglas–Kevin Swanson from 2017, and Brian Clark–Steve Swanson from 2009. Clark leads Kevin Swanson 195–194 in the all-time wins race, and both are in a rematch. Evan and O'Boyle are dead even at 14–14."
+  ],
+  "notes": {
+    "Fadi|Thomas": "Fadi has won four straight, most recently 115.69–84.56 last year, and his 20–14 lead has never been wider. He owns the biggest blowout, 48.62 in 2007. Tom won the shootout: 117.0–92.16 in 2015.",
+    "Douglas|Kevin Swanson": "A rematch of the 2017 final, which Doug won. He leads 9–5 and took the last two. Swanson owns the biggest blowout, 71.47 points in 2023, and the closest game, by 0.78 in 2015.",
+    "Jeff|Shawn": "Shawn won three straight from 2017 to 2019 and leads 6–4. Jeff has taken three of the last five and their one playoff game, the 2022 quarterfinal. He won the last, 67.86–52.56, the lowest-scoring meeting.",
+    "Dominic|Eric": "Three meetings, three Eric wins, none closer than 11.41 points. Dominic is still looking for the first. Eric won the last, 91.65–77.26 in 2025, the highest-scoring game of the series.",
+    "Brian Clark|Steve Swanson": "A rematch of the 2009 final, which Clark won. Steve leads 14–12 and owns the biggest blowout: 72.71 points, this same week in 2024. Clark won the last, 95.04–58.84, and three of the last five.",
+    "Evan|Kevin O'Boyle": "O'Boyle once led this series by six. Evan has won four straight, including this same week last year, 97.54–89.72, and it's 14–14. O'Boyle won their closest, by 0.75 in 2015. The winner takes the lead."
+  },
+  "history_lines": [
+    {
+      "year": 2015,
+      "text": "Robby sets the Week 7 standard",
+      "pts": "142.24",
+      "tag": "best ever"
+    },
+    {
+      "year": 2010,
+      "text": "Steve Swanson, 14.81 short",
+      "pts": "127.43",
+      "tag": "2nd best"
+    },
+    {
+      "year": 2018,
+      "text": "Kevin Swanson clears 120",
+      "pts": "123.77",
+      "tag": "3rd best"
+    },
+    {
+      "year": 2015,
+      "text": "Shawn, the same week as Robby's record, scores 94.92 — and loses",
+      "pts": "94.92",
+      "tag": "best in defeat"
+    },
+    {
+      "year": 2005,
+      "text": "Thomas bottoms out",
+      "pts": "14.05",
+      "tag": "worst ever"
+    }
+  ],
+  "milestone": {
+    "value": "195",
+    "label": "Brian Clark · Career Wins",
+    "text": "Brian Clark leads the all-time wins race, 195 to Kevin Swanson's 194, after beating him last week. Both play title rematches now: Clark against Steve Swanson, Kevin Swanson against Douglas."
+  },
+  "kicker": "For the fourth straight week, all six games cross division lines."
+}

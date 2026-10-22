@@ -143,3 +143,4 @@ weeks before the issue's own.
   week, as a back issue (`8ab8f13`). The recap is committed (`2128b6e`).
 - **Week 6 (2026).** The preview copy ("High-Water Marks") was approved and deployed (`54ed3e1`). The
   recap copy ("Perfect at Both Ends") was approved and deployed 2026-10-20.
+- **Week 7 (2026).** The preview copy ("Title Rematches") was approved and deployed 2026-10-21.
