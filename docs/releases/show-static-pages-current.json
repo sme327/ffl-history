@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-10-25T15:46:10.064Z",
+  "builtAt": "2026-10-25T15:53:39.714Z",
   "scope": "current-manifest-show-pages-only",
   "releaseId": "weekly-slate-2026-week-07-v003",
   "mediaManifestSHA256": "608c49e5bdc28ecb2670794cd95cd68de7723dc7afd7aa521f27139fc1ad092d",
@@ -7,32 +7,32 @@
     {
       "route": "/show",
       "bytes": 25772,
-      "sha256": "24a33464e785c809a8706d02cf43e96e87472f960a20a2b8eb8bdf83679b0271"
+      "sha256": "fd7c4790e42f9ca02a42a13e517ea17d701d364c61b1eb2b49676336cf86bd06"
     },
     {
       "route": "/show/previews/week-7",
       "bytes": 21978,
-      "sha256": "4bcba1c0250c2a09028b5d888a97058fe9d1b06e4b690565d432c0490103bb34"
+      "sha256": "e71208d67fd47d98f9ab50185d1a27e26f054a2c83dc79773be04a8ad6ab5a64"
     },
     {
       "route": "/show/previews/week-6",
       "bytes": 22756,
-      "sha256": "471c99b90655d217bcc9c1fb840268f10d6989d83d8b226adb1500ea673ea995"
+      "sha256": "ae9206801b89a9af363fd3256e2a2774fa7444426d9e5c9ac6254738495fd974"
     },
     {
       "route": "/show/previews/week-5",
       "bytes": 23137,
-      "sha256": "dbf19591b589ff9fb3b6e4f89fc475749506f5208e8b3f0671afd5c4b7b9b506"
+      "sha256": "81eef96d1a225aacac21698100c045d566ae0b75d10b2ce9d1431ffd45f3c567"
     },
     {
       "route": "/show/pilot",
       "bytes": 24909,
-      "sha256": "37f168988347b57d7953730ce8cac9f4ca13431351dcd18a34eb8b24edb55d98"
+      "sha256": "dcb1c3b1786bd6322d92cce1690ade680db740aa3d4bf6f41c114844cabeb04e"
     },
     {
       "route": "/show/episodes/1",
       "bytes": 26340,
-      "sha256": "6c58a28d834c375d0baed208863d973717926208357e352e0fcb35599227c55d"
+      "sha256": "0a0169040ab078980d32d27caf7df8003ba35631c960b60530db22c3f0284cce"
     }
   ]
 }

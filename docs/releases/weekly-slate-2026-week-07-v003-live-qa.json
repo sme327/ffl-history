@@ -1,0 +1,178 @@
+{
+  "checkedAt": "2026-10-25T15:55:15.434Z",
+  "base": "https://iwnh.sme327.com",
+  "releaseId": "weekly-slate-2026-week-07-v003",
+  "checks": [
+    {
+      "kind": "page",
+      "round": 0,
+      "route": "/show",
+      "status": 200,
+      "sha256": "fd7c4790e42f9ca02a42a13e517ea17d701d364c61b1eb2b49676336cf86bd06"
+    },
+    {
+      "kind": "page",
+      "round": 0,
+      "route": "/show/previews/week-7",
+      "status": 200,
+      "sha256": "e71208d67fd47d98f9ab50185d1a27e26f054a2c83dc79773be04a8ad6ab5a64"
+    },
+    {
+      "kind": "page",
+      "round": 0,
+      "route": "/show/previews/week-6",
+      "status": 200,
+      "sha256": "ae9206801b89a9af363fd3256e2a2774fa7444426d9e5c9ac6254738495fd974"
+    },
+    {
+      "kind": "page",
+      "round": 0,
+      "route": "/show/previews/week-5",
+      "status": 200,
+      "sha256": "81eef96d1a225aacac21698100c045d566ae0b75d10b2ce9d1431ffd45f3c567"
+    },
+    {
+      "kind": "page",
+      "round": 0,
+      "route": "/show/pilot",
+      "status": 200,
+      "sha256": "dcb1c3b1786bd6322d92cce1690ade680db740aa3d4bf6f41c114844cabeb04e"
+    },
+    {
+      "kind": "page",
+      "round": 0,
+      "route": "/show/episodes/1",
+      "status": 200,
+      "sha256": "0a0169040ab078980d32d27caf7df8003ba35631c960b60530db22c3f0284cce"
+    },
+    {
+      "kind": "page",
+      "round": 1,
+      "route": "/show",
+      "status": 200,
+      "sha256": "fd7c4790e42f9ca02a42a13e517ea17d701d364c61b1eb2b49676336cf86bd06"
+    },
+    {
+      "kind": "page",
+      "round": 1,
+      "route": "/show/previews/week-7",
+      "status": 200,
+      "sha256": "e71208d67fd47d98f9ab50185d1a27e26f054a2c83dc79773be04a8ad6ab5a64"
+    },
+    {
+      "kind": "page",
+      "round": 1,
+      "route": "/show/previews/week-6",
+      "status": 200,
+      "sha256": "ae9206801b89a9af363fd3256e2a2774fa7444426d9e5c9ac6254738495fd974"
+    },
+    {
+      "kind": "page",
+      "round": 1,
+      "route": "/show/previews/week-5",
+      "status": 200,
+      "sha256": "81eef96d1a225aacac21698100c045d566ae0b75d10b2ce9d1431ffd45f3c567"
+    },
+    {
+      "kind": "page",
+      "round": 1,
+      "route": "/show/pilot",
+      "status": 200,
+      "sha256": "dcb1c3b1786bd6322d92cce1690ade680db740aa3d4bf6f41c114844cabeb04e"
+    },
+    {
+      "kind": "page",
+      "round": 1,
+      "route": "/show/episodes/1",
+      "status": 200,
+      "sha256": "0a0169040ab078980d32d27caf7df8003ba35631c960b60530db22c3f0284cce"
+    },
+    {
+      "kind": "page",
+      "round": 2,
+      "route": "/show",
+      "status": 200,
+      "sha256": "fd7c4790e42f9ca02a42a13e517ea17d701d364c61b1eb2b49676336cf86bd06"
+    },
+    {
+      "kind": "page",
+      "round": 2,
+      "route": "/show/previews/week-7",
+      "status": 200,
+      "sha256": "e71208d67fd47d98f9ab50185d1a27e26f054a2c83dc79773be04a8ad6ab5a64"
+    },
+    {
+      "kind": "page",
+      "round": 2,
+      "route": "/show/previews/week-6",
+      "status": 200,
+      "sha256": "ae9206801b89a9af363fd3256e2a2774fa7444426d9e5c9ac6254738495fd974"
+    },
+    {
+      "kind": "page",
+      "round": 2,
+      "route": "/show/previews/week-5",
+      "status": 200,
+      "sha256": "81eef96d1a225aacac21698100c045d566ae0b75d10b2ce9d1431ffd45f3c567"
+    },
+    {
+      "kind": "page",
+      "round": 2,
+      "route": "/show/pilot",
+      "status": 200,
+      "sha256": "dcb1c3b1786bd6322d92cce1690ade680db740aa3d4bf6f41c114844cabeb04e"
+    },
+    {
+      "kind": "page",
+      "round": 2,
+      "route": "/show/episodes/1",
+      "status": 200,
+      "sha256": "0a0169040ab078980d32d27caf7df8003ba35631c960b60530db22c3f0284cce"
+    },
+    {
+      "kind": "movie",
+      "id": "weekly-slate-2026-week-07-v003",
+      "video": "/show/previews/2026-week-07.mp4",
+      "bytes": 20305858,
+      "sha256": "a4fbfcba698bc232448ee8ba1bc0157283b56ab132f67e46266d07b9206d8a1e",
+      "contentType": "video/mp4",
+      "prefixSuffixOpenRanges": true,
+      "unsatisfiableRange416": true
+    },
+    {
+      "kind": "movie",
+      "id": "weekly-slate-2026-week-06-v004",
+      "video": "/show/previews/2026-week-06.mp4",
+      "bytes": 17093176,
+      "sha256": "e98bb81ec17cad4467cc3ea14df98e360f3366c58d43fc28f134c142960b1c4e",
+      "contentType": "video/mp4",
+      "prefixSuffixOpenRanges": true,
+      "unsatisfiableRange416": true
+    },
+    {
+      "kind": "movie",
+      "id": "weekly-slate-2026-week-05-v008",
+      "video": "/show/previews/2026-week-05.mp4",
+      "bytes": 20671255,
+      "sha256": "df357fa43473d0c8caf59ec755f2bd226d1e1a45f97ad41c767cff4192c6f041",
+      "contentType": "video/mp4",
+      "prefixSuffixOpenRanges": true,
+      "unsatisfiableRange416": true
+    },
+    {
+      "kind": "movie",
+      "id": "pilot-v034",
+      "video": "/show/pilot-review.mp4",
+      "bytes": 24238495,
+      "sha256": "84d34138deea91a48768674e12d2a73c383547031e21c1cb14443bbb6888a457",
+      "contentType": "video/mp4",
+      "prefixSuffixOpenRanges": true,
+      "unsatisfiableRange416": true
+    }
+  ],
+  "hubArchiveAndLatestEpisode": true,
+  "rawHeadersOrCredentialsIncluded": false,
+  "ownerEarCheckPending": false,
+  "releaseApproved": true,
+  "deploymentApproved": true
+}

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "releaseId": "weekly-slate-2026-week-07-v003",
-  "stage": "owner-authorized-staged",
-  "deployment": null,
+  "stage": "deployed-live-verified",
+  "deployment": {"worker":"the-long-game","workerVersion":"1de8979e-7ab8-4a21-9394-4ad9dc2ba0ff","deployedSourceCommit":"0767e2199c65045a064257468c527750e02ad53e","liveQA":"weekly-slate-2026-week-07-v003-live-qa.json","browserQA":"weekly-slate-2026-week-07-v003-live-browser-qa.json","finalUploadCheck":"weekly-slate-2026-week-07-final-upload-check.json","statusMetadataUpdatedAfterBuild":true,"remainingFailures":[]},
   "previousDeployment": {"worker":"the-long-game","workerVersion":"ef91292b-82e7-496c-bcbc-2ada04d90e37","deploymentId":"256b8d01-1026-4f36-b25a-50f0b2014cba","deployedAt":"2026-10-22T04:42:59.537414Z","source":"Read-only Wrangler deployments list, October 25; source commit not independently certified"},
   "ownerApproval": {"owner":"Shawn","approvalDate":"2026-10-25","exactCutApprovalMessage":"this is it!  approved, publish it.","deploymentAuthorizationMessage":"this is it!  approved, publish it.","deploymentAuthorizationDatePacific":"2026-10-25","scope":"Publish the approved Week 7 V002 content as clean V003 with only the review banner removed; preserve prior movies, audio, captions, timing, lineup data and Saturday capture stamps","sourceEvidence":"FFL Show/weekly/2026-week-07/OWNER_APPROVAL_V002.json","approvedReviewSHA256":"2f838c595b2f3facb40515c629dd3dd79097743575845f4a63333b754c6ecc52"},
   "lineupRecheckWaived": true,
@@ -96,5 +96,5 @@
   ],
   "releaseApproved": true,
   "deploymentApproved": true,
-  "deployed": false
+  "deployed": true
 }

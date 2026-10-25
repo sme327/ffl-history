@@ -1,5 +1,17 @@
 # Across the Line: show hub
 
+## Week 7 V003 — live and verified, October 25
+
+[Watch Week 7](https://iwnh.sme327.com/show/previews/week-7) · [Show hub](https://iwnh.sme327.com/show).
+
+Shawn approved V002 and directed publication, then explicitly waived further lineup verification. The clean V003 changes **only** removal of the review banner; the approved audio, captions, timing, graphics, lineup values and actual October 24 ~8:35 PM PT stamps remain unchanged. No fresh Yahoo certification is claimed. Both messages are recorded in FFL Show `weekly/2026-week-07/OWNER_APPROVAL_V002.json` and the current media registry. The Week 7 upload gate enforces exact hashes, technical QA and this explicit waiver; it does not call Yahoo.
+
+Published with `npm run deploy` from reconciled `show-hub` source `0767e21`, including local Museum main `20d7a16` (Week 6 recap and Week 7 Program preview). **5:37.533, 1280×720, 20,305,858 bytes / 19.37 MiB**, SHA-256 `a4fbfcba698bc232448ee8ba1bc0157283b56ab132f67e46266d07b9206d8a1e`. Worker version **1de8979e-7ab8-4a21-9394-4ad9dc2ba0ff**. The asset uploader retried two network failures, then completed all 11 changed assets successfully; no release check remains failed.
+
+Live HTTP QA passes six pages × three requests, all four movie hashes/bytes/MP4 types, twelve valid HTTP 206 range requests and four invalid-range HTTP 416 responses. Browser QA passes play/seek/resume for Week 7, Week 6, Week 5, `/show/pilot` and `/show/episodes/1`. The hub places Week 7 in **This week**, Episode 1 in **Latest episode**, and Week 6 / Week 5 in the archive. Previous movies are byte-for-byte unchanged. Evidence: `weekly-slate-2026-week-07-v003-live-qa.json`, `weekly-slate-2026-week-07-v003-live-browser-qa.json`, `weekly-slate-2026-week-07-final-upload-check.json`. The exact build-time page hashes remain in `show-static-pages-current.json`; deployment-status metadata was updated only after live verification.
+
+Verified rollback version before this deployment: **ef91292b-82e7-496c-bcbc-2ada04d90e37**, not the older Week 6-only version in historical notes below.
+
 The museum hosts the animated show *Across the Line* (Graham Keeper and Kate Hedges). This page covers how its pages are laid out and how to ship a new weekly preview or episode.
 
 ## Week 6 V004 — LIVE and verified, October 16
