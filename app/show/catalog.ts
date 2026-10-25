@@ -102,7 +102,22 @@ export const PREVIEWS: ShowPreview[] = [
       "Six Week 5 results, Kittle Watch, the Box Score, Ramirez’s Rules Board, six Week 6 previews, and a trip From the Vault.",
     programSlug: "2026-week-06",
   },
-  { kind: "preview", week: 7, title: "Week 7 Weekly Slate", dek: "Week 6 review · Week 7 preview", status: "draft" },
+  {
+    kind: "preview",
+    week: 7,
+    title: "Week 7 Weekly Slate",
+    dek: "Week 6 review · Week 7 preview",
+    status: "published",
+    released: "2026-10-25",
+    video: "/show/previews/2026-week-07.mp4",
+    poster: "/show/studio-poster-v001.webp",
+    version: "20261025-slate-v003",
+    runtime: "5:38",
+    summary:
+      "Six Week 6 results, the Box Score, Ramirez’s Rules Board and lineup audit, six Week 7 previews, and From the Vault: The Name File.",
+    programSlug: "2026-week-07",
+  },
+  { kind: "preview", week: 8, title: "Week 8 Weekly Slate", dek: "Week 7 review · Week 8 preview", status: "draft" },
   {
     kind: "preview",
     week: 5,

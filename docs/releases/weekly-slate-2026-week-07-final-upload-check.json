@@ -1,0 +1,13 @@
+{
+  "releaseId": "weekly-slate-2026-week-07-v003",
+  "sha256": "a4fbfcba698bc232448ee8ba1bc0157283b56ab132f67e46266d07b9206d8a1e",
+  "checkedAt": "2026-10-25T15:46:52.157Z",
+  "pass": true,
+  "exactMediaHashesVerified": true,
+  "ownerApproval": "FFL Show/weekly/2026-week-07/OWNER_APPROVAL_V002.json",
+  "lineupRecheckWaived": true,
+  "lineupRecheckWaiverMessage": "we do not need to re-verify line-ups.  we need to get this final & published.",
+  "currentLineupsCertified": false,
+  "cardDataRemainsAsOf": "2026-10-24 ~20:35 PDT",
+  "note": "Owner explicitly directed publication without another lineup check. No fresh Yahoo capture is claimed; approved audio/cards and Saturday stamps remain unchanged."
+}

@@ -7,6 +7,26 @@ import {createHash} from 'node:crypto';
 // The V007 branch below is retained as historical code. The active Week 6
 // release has independent approvals, source hashes and roster/count conditions.
 const current=JSON.parse(fs.readFileSync('docs/releases/show-media-current.json','utf8'));
+if(current.releaseId==='weekly-slate-2026-week-07-v003'){
+ const show=process.env.FFL_SHOW_ROOT??'/Users/sme/Documents/Projects/Sports/Fantasy Football Leagues/FFL Show';
+ const approval=JSON.parse(fs.readFileSync(path.join(show,'weekly/2026-week-07/OWNER_APPROVAL_V002.json'),'utf8'));
+ assert(current.releaseApproved&&current.deploymentApproved,'Explicit owner publication approval required');
+ assert(approval.releaseApproved&&approval.deploymentApproved,'Show repository must record explicit owner go');
+ assert.equal(approval.reviewSHA256,'2f838c595b2f3facb40515c629dd3dd79097743575845f4a63333b754c6ecc52');
+ assert.equal(approval.lineupRecheckWaived,true,'Do not infer a waiver of the lineup check');
+ assert.equal(approval.lineupRecheckWaiverMessage,'we do not need to re-verify line-ups.  we need to get this final & published.');
+ assert.equal(current.lineupRecheckWaived,true);assert.equal(current.currentLineupsCertified,false);
+ for(const media of current.media){const bytes=fs.readFileSync(path.join('public',media.video));assert(bytes.length<25*1024*1024);assert.equal(bytes.length,media.bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),media.sha256,'Movie changed: '+media.id);}
+ const qa=JSON.parse(fs.readFileSync(path.join(show,'weekly/2026-week-07/QA_V003.json'),'utf8'));
+ const item=current.media.find(m=>m.id===current.releaseId);assert(item);
+ assert.equal(qa.sha256,item.sha256);assert.equal(qa.under25MiB,true);assert.equal(qa.fullDecode,true);assert.equal(qa.continuousFrameTimestamps,true);
+ assert.equal(qa.reviewBanner,false);assert.equal(qa.selectedTakes,52);assert.equal(qa.approvedReviewComparisons.length,70);
+ assert.equal(qa.captionTextMatchesApprovedSources,true);assert.equal(qa.alignmentChecks.length,52);
+ const report={releaseId:current.releaseId,sha256:item.sha256,checkedAt:new Date().toISOString(),pass:true,exactMediaHashesVerified:true,ownerApproval:'FFL Show/weekly/2026-week-07/OWNER_APPROVAL_V002.json',lineupRecheckWaived:true,lineupRecheckWaiverMessage:approval.lineupRecheckWaiverMessage,currentLineupsCertified:false,cardDataRemainsAsOf:'2026-10-24 ~20:35 PDT',note:'Owner explicitly directed publication without another lineup check. No fresh Yahoo capture is claimed; approved audio/cards and Saturday stamps remain unchanged.'};
+ fs.writeFileSync('docs/releases/weekly-slate-2026-week-07-final-upload-check.json',JSON.stringify(report,null,2)+'\n');
+ console.log('Week 7 upload gate passed: approved clean cut, exact hashes, technical QA and explicit owner waiver of further lineup verification. No Yahoo check requested.');
+ process.exit(0);
+}
 if(current.releaseId==='weekly-slate-2026-week-06-v004'){
  assert.equal(current.releaseApproved,true,'Exact V004 cut approval required');
  assert.equal(current.deploymentApproved,true,'STOP: explicit owner deployment go has not been recorded');
