@@ -1,29 +1,75 @@
 {
   "schemaVersion": 1,
-  "releaseId": "weekly-slate-2026-week-07-v003",
-  "stage": "deployed-live-verified",
-  "deployment": {"worker":"the-long-game","workerVersion":"1de8979e-7ab8-4a21-9394-4ad9dc2ba0ff","deployedSourceCommit":"0767e2199c65045a064257468c527750e02ad53e","liveQA":"weekly-slate-2026-week-07-v003-live-qa.json","browserQA":"weekly-slate-2026-week-07-v003-live-browser-qa.json","finalUploadCheck":"weekly-slate-2026-week-07-final-upload-check.json","statusMetadataUpdatedAfterBuild":true,"remainingFailures":[]},
-  "previousDeployment": {"worker":"the-long-game","workerVersion":"ef91292b-82e7-496c-bcbc-2ada04d90e37","deploymentId":"256b8d01-1026-4f36-b25a-50f0b2014cba","deployedAt":"2026-10-22T04:42:59.537414Z","source":"Read-only Wrangler deployments list, October 25; source commit not independently certified"},
-  "ownerApproval": {"owner":"Shawn","approvalDate":"2026-10-25","exactCutApprovalMessage":"this is it!  approved, publish it.","deploymentAuthorizationMessage":"this is it!  approved, publish it.","deploymentAuthorizationDatePacific":"2026-10-25","scope":"Publish the approved Week 7 V002 content as clean V003 with only the review banner removed; preserve prior movies, audio, captions, timing, lineup data and Saturday capture stamps","sourceEvidence":"FFL Show/weekly/2026-week-07/OWNER_APPROVAL_V002.json","approvedReviewSHA256":"2f838c595b2f3facb40515c629dd3dd79097743575845f4a63333b754c6ecc52"},
-  "lineupRecheckWaived": true,
-  "lineupRecheckWaiverMessage": "we do not need to re-verify line-ups.  we need to get this final & published.",
+  "releaseId": "episode02-halftime-adjustments-v003",
+  "stage": "approved-staged",
+  "deployment": null,
+  "previousDeployment": {
+    "worker": "the-long-game",
+    "workerVersion": "1de8979e-7ab8-4a21-9394-4ad9dc2ba0ff",
+    "deployedSourceCommit": "0767e2199c65045a064257468c527750e02ad53e",
+    "liveQA": "weekly-slate-2026-week-07-v003-live-qa.json",
+    "browserQA": "weekly-slate-2026-week-07-v003-live-browser-qa.json",
+    "finalUploadCheck": "weekly-slate-2026-week-07-final-upload-check.json",
+    "statusMetadataUpdatedAfterBuild": true,
+    "remainingFailures": []
+  },
+  "ownerApproval": {
+    "version": "v003",
+    "date": "2026-10-28",
+    "owner": "Shawn",
+    "message": "go ahead and publish. approved.",
+    "approvedReviewMovie": "renders/002-cross-division-check-in/review-v003/episode02-review-master-720p-v003.mp4",
+    "approvedReviewSHA256": "c168d41da257a5ee3997fce5c67d68983402c0b464883d4bf378b1cebd58b7d8",
+    "releaseApproved": true,
+    "deploymentApproved": true,
+    "permittedReleaseChange": "Remove review-only banner. Preserve all approved pictures, source audio, captions, cues and timing.",
+    "newPronunciationCertificationClaimed": false,
+    "sourceEvidence": "FFL Show/episodes/002-cross-division-check-in/OWNER_APPROVAL_V003.json"
+  },
+  "lineupRecheckWaived": false,
+  "lineupRecheckWaiverMessage": null,
   "currentLineupsCertified": false,
   "preservedHistoricalRelease": "consolation-v008-v034",
   "historicalCorrectionOnly": false,
   "preserveOriginalLineupSnapshot": true,
   "expectedHub": {
-    "currentPreview": "/show/previews/week-7",
-    "latestEpisode": "/show/episodes/1",
+    "currentPreview": null,
+    "latestEpisode": "/show/episodes/2",
     "pastPreviews": [
+      "/show/previews/week-7",
       "/show/previews/week-6",
       "/show/previews/week-5"
     ]
   },
   "media": [
     {
+      "id": "episode02-halftime-adjustments-v003",
+      "video": "/show/episodes/ep02.mp4",
+      "watchRoutes": [
+        "/show/episodes/2"
+      ],
+      "version": "20261028-episode02-v003",
+      "bytes": 24307526,
+      "sha256": "a69d80788ab38f70183d436f66a34e929fecacf080324e2b3dcd1289949909b2",
+      "frames": 15541,
+      "seconds": 518.033333,
+      "captionsBurnedIn": true,
+      "sourceMovie": "renders/002-cross-division-check-in/release-v003/episode02-release-720p-v003.mp4",
+      "sourceQA": "FFL Show/episodes/002-cross-division-check-in/RELEASE_QA_V003.json",
+      "approvedReviewSHA256": "c168d41da257a5ee3997fce5c67d68983402c0b464883d4bf378b1cebd58b7d8",
+      "reviewBanner": false,
+      "changesFromApprovedReview": [
+        "Review banner removed only"
+      ],
+      "releaseApproved": true,
+      "deploymentApproved": true
+    },
+    {
       "id": "weekly-slate-2026-week-07-v003",
       "video": "/show/previews/2026-week-07.mp4",
-      "watchRoutes": ["/show/previews/week-7"],
+      "watchRoutes": [
+        "/show/previews/week-7"
+      ],
       "version": "20261025-slate-v003",
       "bytes": 20305858,
       "sha256": "a4fbfcba698bc232448ee8ba1bc0157283b56ab132f67e46266d07b9206d8a1e",
@@ -34,7 +80,9 @@
       "sourceQA": "FFL Show/weekly/2026-week-07/QA_V003.json",
       "reviewBanner": false,
       "approvedReviewSHA256": "2f838c595b2f3facb40515c629dd3dd79097743575845f4a63333b754c6ecc52",
-      "changesFromApprovedReview": ["Review banner removed only"],
+      "changesFromApprovedReview": [
+        "Review banner removed only"
+      ],
       "cardCapturedAtPacific": "2026-10-24 ~20:35 PDT",
       "lineupRecheckWaived": true,
       "currentLineupsCertified": false,
@@ -44,7 +92,9 @@
     {
       "id": "weekly-slate-2026-week-06-v004",
       "video": "/show/previews/2026-week-06.mp4",
-      "watchRoutes": ["/show/previews/week-6"],
+      "watchRoutes": [
+        "/show/previews/week-6"
+      ],
       "version": "20261016-slate-v004",
       "bytes": 17093176,
       "sha256": "e98bb81ec17cad4467cc3ea14df98e360f3366c58d43fc28f134c142960b1c4e",
@@ -96,5 +146,6 @@
   ],
   "releaseApproved": true,
   "deploymentApproved": true,
-  "deployed": true
+  "deployed": false,
+  "retrospectiveAndSchedulePreviewOnly": true
 }

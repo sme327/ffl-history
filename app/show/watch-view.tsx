@@ -4,11 +4,12 @@ import {
   currentPreview,
   itemHref,
   previewPlayed,
+  publishedEpisodes,
   releasedLabel,
   weeksLabel,
   withVersion,
 } from "./catalog";
-import { programIndex } from "@/lib/data";
+import { programIndex, recapIndex } from "@/lib/data";
 
 /** Shared chrome for every show page: back links and the show masthead strip. */
 export function ShowTopbar() {
@@ -71,6 +72,8 @@ export function WatchView({ item }: { item: ShowItem }) {
   const preview = currentPreview();
   const played = item.kind === "preview" && previewPlayed(item);
   const pairedProgramAvailable = item.programSlug && programIndex.some((issue) => issue.slug === item.programSlug);
+  const recapAvailable = item.programSlug && recapIndex.some((issue) => issue.slug === item.programSlug);
+  const coveringEpisode = item.kind === "preview" ? publishedEpisodes().find((e) => e.weeks && e.weeks[0] <= item.week && e.weeks[1] >= item.week) : null;
   const next = [
     preview && preview !== item ? preview : null,
     latest && latest !== item ? latest : null,
@@ -84,7 +87,8 @@ export function WatchView({ item }: { item: ShowItem }) {
       {played && (
         <p className="atl-stale-note">
           Week {item.kind === "preview" && item.week} has been played.{" "}
-          {item.programSlug && <a href={`/program/${item.programSlug}/recap`}>See how it turned out →</a>}
+          {recapAvailable ? <a href={`/program/${item.programSlug}/recap`}>See how it turned out →</a>
+            : coveringEpisode ? <a href={itemHref(coveringEpisode)}>See the review in Episode {coveringEpisode.number} →</a> : null}
         </p>
       )}
 

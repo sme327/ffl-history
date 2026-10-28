@@ -7,6 +7,24 @@ import {createHash} from 'node:crypto';
 // The V007 branch below is retained as historical code. The active Week 6
 // release has independent approvals, source hashes and roster/count conditions.
 const current=JSON.parse(fs.readFileSync('docs/releases/show-media-current.json','utf8'));
+if(current.releaseId==='episode02-halftime-adjustments-v003'){
+ const show=process.env.FFL_SHOW_ROOT??'/Users/sme/Documents/Projects/Sports/Fantasy Football Leagues/FFL Show';
+ const folder=path.join(show,'episodes/002-cross-division-check-in');
+ const approval=JSON.parse(fs.readFileSync(path.join(folder,'OWNER_APPROVAL_V003.json'),'utf8'));
+ const qa=JSON.parse(fs.readFileSync(path.join(folder,'RELEASE_QA_V003.json'),'utf8'));
+ assert(approval.releaseApproved&&approval.deploymentApproved&&current.releaseApproved&&current.deploymentApproved,'Explicit owner go required');
+ assert.equal(approval.message,'go ahead and publish. approved.');
+ const item=current.media.find(m=>m.id===current.releaseId);assert(item);
+ assert.equal(approval.approvedReviewSHA256,item.approvedReviewSHA256);
+ assert.equal(qa.sha256,item.sha256);assert(qa.fullDecode&&qa.under25MiB&&qa.fastStart&&qa.audioUnchanged);
+ assert.equal(qa.reviewBanner,false);assert.equal(qa.frames,15541);assert.equal(qa.sourceTakes,92);
+ assert(qa.approvedReviewComparisons.length>=30);assert(qa.v001AndV002AndReviewV003Preserved);
+ for(const media of current.media){const bytes=fs.readFileSync(path.join('public',media.video));assert(bytes.length<25*1024**2);assert.equal(bytes.length,media.bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),media.sha256,'Changed movie: '+media.id);}
+ const report={releaseId:current.releaseId,sha256:item.sha256,checkedAt:new Date().toISOString(),pass:true,exactMediaHashesVerified:true,ownerApproval:'FFL Show/episodes/002-cross-division-check-in/OWNER_APPROVAL_V003.json',newLineupCheckRequired:false,reason:'Approved retrospective through Week 7 and schedule-led Week 8 preview; no current starter/bench or projection-dependent exchange.'};
+ fs.writeFileSync('docs/releases/episode02-v003-final-upload-check.json',JSON.stringify(report,null,2)+'\n');
+ console.log('Episode 2 upload gate passed: owner go, clean approved content, unchanged audio/timing, all exact movie hashes.');
+ process.exit(0);
+}
 if(current.releaseId==='weekly-slate-2026-week-07-v003'){
  const show=process.env.FFL_SHOW_ROOT??'/Users/sme/Documents/Projects/Sports/Fantasy Football Leagues/FFL Show';
  const approval=JSON.parse(fs.readFileSync(path.join(show,'weekly/2026-week-07/OWNER_APPROVAL_V002.json'),'utf8'));

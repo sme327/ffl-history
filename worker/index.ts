@@ -7,7 +7,7 @@ export default {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const pathname = new URL(request.url).pathname;
     if ((request.method === "GET" || request.method === "HEAD") &&
-        (pathname === "/show/pilot-review.mp4" || /^\/show\/previews\/[^/]+\.mp4$/.test(pathname))) {
+        (pathname === "/show/pilot-review.mp4" || /^\/show\/(?:previews|episodes)\/[^/]+\.mp4$/.test(pathname))) {
       const headers = new Headers(request.headers);
       headers.delete("Range"); headers.delete("If-Range");
       const asset = await env.ASSETS.fetch(new Request(request, {headers}));

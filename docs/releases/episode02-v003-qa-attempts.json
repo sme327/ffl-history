@@ -1,0 +1,16 @@
+{
+  "releaseId": "episode02-halftime-adjustments-v003",
+  "datePacific": "2026-10-28",
+  "scope": "Local QA transport; no video or production streaming algorithm changes",
+  "initialAttempts": [
+    {"attempt":1,"result":"failed","error":"Node fetch terminated during the Week 7 full movie download","observed":"Local preview reloaded during the request"},
+    {"attempt":2,"result":"failed","error":"Local fetch ECONNRESET"},
+    {"attempt":3,"result":"failed","error":"Local fetch ECONNRESET"}
+  ],
+  "resolution": "The local-only verifier uses independent HTTP connections instead of reusing keep-alive sockets. Every original hash, byte, content-type, HTTP status and range assertion remains enforced. Production verifier requests retain their previous connection policy.",
+  "rootCause": "Local preview connection reuse/reload interaction is an inference, not a proven runtime defect",
+  "finalHTTPReport": "episode02-v003-local-qa.json",
+  "finalBrowserReport": "episode02-v003-local-browser-qa.json",
+  "finalResult": "All 21 repeated page requests, five full movie hashes, 15 HTTP 206 ranges, five invalid-range 416 responses, and six browser play/seek/resume checks pass",
+  "remainingLocalFailures": []
+}

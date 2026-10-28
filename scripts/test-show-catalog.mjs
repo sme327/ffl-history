@@ -1,0 +1,20 @@
+// Exercise catalog behavior without requiring live Museum data or a server.
+import fs from 'node:fs/promises';
+import {stripTypeScriptTypes} from 'node:module';
+import assert from 'node:assert/strict';
+const text=await fs.readFile('app/show/catalog.ts','utf8');
+const isolated=text.replace('import { recapIndex } from "@/lib/data";','const recapIndex = [];');
+const js=stripTypeScriptTypes(isolated,{mode:'strip'});
+const catalog=await import('data:text/javascript;base64,'+Buffer.from(js).toString('base64'));
+assert.equal(catalog.latestEpisode().number,2);
+assert.equal(catalog.latestEpisode().title,'Halftime Adjustments');
+assert.deepEqual(catalog.latestEpisode().weeks,[4,7]);
+assert.equal(catalog.latestEpisode().runtime,'8:38');
+assert.equal(catalog.currentPreview(),null,'A full retrospective closes covered previews even before a recap ships');
+assert.deepEqual(catalog.pastPreviews().map(p=>p.week),[7,6,5]);
+assert.equal(catalog.findPreview(8),null,'No Week 8 weekly ships alongside the full episode');
+assert.equal(catalog.previewPlayed({kind:'preview',week:8,status:'published',title:'future'}),false);
+assert.equal(catalog.findEpisode(1).version,'20261014-v034-consolation-720p');
+assert.equal(catalog.findPreview(7).version,'20261025-slate-v003');
+assert.equal(catalog.withVersion(catalog.latestEpisode().video,catalog.latestEpisode().version),'/show/episodes/ep02.mp4?v=20261028-episode02-v003');
+console.log('Catalog passes: Episode 2 latest, completed previews archived, Week 8 hidden, older versions untouched.');

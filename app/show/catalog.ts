@@ -80,7 +80,30 @@ export const EPISODES: ShowEpisode[] = [
       { title: "One Last Item", detail: "Graham files the week’s benches.", type: "Closing" },
     ],
   },
-  { kind: "episode", number: 2, title: "Episode 2", status: "planned" },
+  {
+    kind: "episode",
+    number: 2,
+    weeks: [4, 7],
+    title: "Halftime Adjustments",
+    dek: "The findings have changed. The paperwork remains.",
+    status: "published",
+    released: "2026-10-28",
+    runtime: "8:38",
+    video: "/show/episodes/ep02.mp4",
+    poster: "/show/studio-poster-v001.webp",
+    version: "20261028-episode02-v003",
+    summary:
+      "Graham Keeper and Kate Hedges reopen their original findings after seven weeks: six finals, an Out of Office Award, the standings corrected, credit where due, a quick Week 8 preview, and The Ring Doesn’t Check the Record.",
+    segments: [
+      { title: "The Original Finding", detail: "The archive has a follow-up.", type: "Opening" },
+      { title: "Six Finals", detail: "Week 7 results and the decisions that settled them.", type: "League review" },
+      { title: "The Out of Office Award", detail: "One final requires a separate hearing.", type: "Official finding" },
+      { title: "The Standings, Corrected", detail: "Four weeks later, the same records tell different stories.", type: "Cross-division check-in" },
+      { title: "Credit Where Due", detail: "The hosts revisit their own paperwork.", type: "Game film" },
+      { title: "Week 8", detail: "Six matchups. Attendance will be taken.", type: "Quick preview" },
+      { title: "The Ring Doesn’t Check the Record", detail: "Graham opens the permanent collection.", type: "One last item" },
+    ],
+  },
   { kind: "episode", number: 3, title: "Episode 3", status: "planned" },
   { kind: "episode", number: 4, title: "Episode 4", status: "planned" },
 ];
@@ -149,9 +172,11 @@ export function latestEpisode(): ShowEpisode | null {
   return eps[eps.length - 1] ?? null;
 }
 
-/** A preview's games have been played once the museum has that week's recap. */
+/** A recap or published retrospective confirms a preview's week is complete. */
 export function previewPlayed(p: ShowPreview): boolean {
-  return recapIndex.some((r) => r.season === SHOW_SEASON && r.week === p.week);
+  return recapIndex.some((r) => r.season === SHOW_SEASON && r.week === p.week)
+    // A full retrospective can close a preview before its Program recap ships.
+    || publishedEpisodes().some((e) => e.weeks && e.weeks[0] <= p.week && e.weeks[1] >= p.week);
 }
 
 /** The newest published preview whose week is still to be played, else null. */

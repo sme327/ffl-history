@@ -1,5 +1,15 @@
 # Across the Line: show hub
 
+## Episode 2 — Halftime Adjustments V003, authorized/staged October 28
+
+Shawn approved the exact V003 review and directed **“go ahead and publish. approved.”** The clean release changes only removal of the review banner: **8:38.03 / 1280×720 / 24,307,526 bytes / 23.18 MiB**, SHA-256 **a69d80788ab38f70183d436f66a34e929fecacf080324e2b3dcd1289949909b2**. FFL Show `OWNER_APPROVAL_V003.json`, `RELEASE_RENDER_V003.json` and `RELEASE_QA_V003.json` bind the approval, 92 complete takes, unchanged captions/cues, all 12,143 identical AAC packets, continuous timestamps and 30 approved-review picture comparisons. V001/V002/V003 reviews remain preserved.
+
+Staged route: **/show/episodes/2**, catalog version **20261028-episode02-v003**; Episode 2 is Latest episode. It covers Weeks 4–7 and replaces the Week 8 weekly. Published full retrospectives now also close covered weekly previews, so Week 7 joins Weeks 6/5 in the archive before a Week 7 Program recap exists. The archived Week 7 note points to Episode 2 rather than a missing recap. No new weekly preview is published.
+
+The existing bounded MP4 range handler now also handles `/show/episodes/*.mp4`; its slicing algorithm and all four older movie files/versions are unchanged. No storage, dependency, account-plan or compatibility-date changes. A dedicated upload gate verifies owner authorization, clean-cut QA and all five exact movie hashes; this retrospective/schedule preview has no current lineup condition to re-check.
+
+Local typecheck, full build, catalog/range tests and Wrangler dry-run pass. Seven pages × three HTTP checks, all five movie hashes/types, fifteen valid ranges/five invalid ranges, and actual browser play/seek/resume on all six watch routes pass. See `episode02-v003-local-qa.json`, `episode02-v003-local-browser-qa.json` and `episode02-v003-qa-attempts.json`. Initial local preview transport resets resolved by independent **local-only** verifier connections; no hash/status/range assertion was relaxed and production requests keep the original policy. Next: the owner-authorized `npm run deploy`, strict live verification, then source reconciliation/push. Prior live Worker **1de8979e-7ab8-4a21-9394-4ad9dc2ba0ff** is the rollback reference.
+
 ## Week 7 V003 — live and verified, October 25
 
 [Watch Week 7](https://iwnh.sme327.com/show/previews/week-7) · [Show hub](https://iwnh.sme327.com/show).

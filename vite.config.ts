@@ -21,7 +21,7 @@ export default defineConfig(async () => {
           // retains the framework's existing asset-first routing.
           assets: {
             binding: "ASSETS",
-            run_worker_first: ["/show/previews/*.mp4", "/show/pilot-review.mp4"],
+            run_worker_first: ["/show/previews/*.mp4", "/show/episodes/*.mp4", "/show/pilot-review.mp4"],
           },
         },
       }),

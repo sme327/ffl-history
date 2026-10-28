@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "releaseId": "weekly-slate-2026-week-07-v003",
+  "stage": "deployed-live-verified",
+  "deployment": {"worker":"the-long-game","workerVersion":"1de8979e-7ab8-4a21-9394-4ad9dc2ba0ff","deployedSourceCommit":"0767e2199c65045a064257468c527750e02ad53e","liveQA":"weekly-slate-2026-week-07-v003-live-qa.json","browserQA":"weekly-slate-2026-week-07-v003-live-browser-qa.json","finalUploadCheck":"weekly-slate-2026-week-07-final-upload-check.json","statusMetadataUpdatedAfterBuild":true,"remainingFailures":[]},
+  "previousDeployment": {"worker":"the-long-game","workerVersion":"ef91292b-82e7-496c-bcbc-2ada04d90e37","deploymentId":"256b8d01-1026-4f36-b25a-50f0b2014cba","deployedAt":"2026-10-22T04:42:59.537414Z","source":"Read-only Wrangler deployments list, October 25; source commit not independently certified"},
+  "ownerApproval": {"owner":"Shawn","approvalDate":"2026-10-25","exactCutApprovalMessage":"this is it!  approved, publish it.","deploymentAuthorizationMessage":"this is it!  approved, publish it.","deploymentAuthorizationDatePacific":"2026-10-25","scope":"Publish the approved Week 7 V002 content as clean V003 with only the review banner removed; preserve prior movies, audio, captions, timing, lineup data and Saturday capture stamps","sourceEvidence":"FFL Show/weekly/2026-week-07/OWNER_APPROVAL_V002.json","approvedReviewSHA256":"2f838c595b2f3facb40515c629dd3dd79097743575845f4a63333b754c6ecc52"},
+  "lineupRecheckWaived": true,
+  "lineupRecheckWaiverMessage": "we do not need to re-verify line-ups.  we need to get this final & published.",
+  "currentLineupsCertified": false,
+  "preservedHistoricalRelease": "consolation-v008-v034",
+  "historicalCorrectionOnly": false,
+  "preserveOriginalLineupSnapshot": true,
+  "expectedHub": {
+    "currentPreview": "/show/previews/week-7",
+    "latestEpisode": "/show/episodes/1",
+    "pastPreviews": [
+      "/show/previews/week-6",
+      "/show/previews/week-5"
+    ]
+  },
+  "media": [
+    {
+      "id": "weekly-slate-2026-week-07-v003",
+      "video": "/show/previews/2026-week-07.mp4",
+      "watchRoutes": ["/show/previews/week-7"],
+      "version": "20261025-slate-v003",
+      "bytes": 20305858,
+      "sha256": "a4fbfcba698bc232448ee8ba1bc0157283b56ab132f67e46266d07b9206d8a1e",
+      "frames": 10126,
+      "seconds": 337.53333333333336,
+      "captionsBurnedIn": true,
+      "sourceMovie": "renders/weekly/2026-week-07/slate-v003/weekly-slate-wk07-release-v003.mp4",
+      "sourceQA": "FFL Show/weekly/2026-week-07/QA_V003.json",
+      "reviewBanner": false,
+      "approvedReviewSHA256": "2f838c595b2f3facb40515c629dd3dd79097743575845f4a63333b754c6ecc52",
+      "changesFromApprovedReview": ["Review banner removed only"],
+      "cardCapturedAtPacific": "2026-10-24 ~20:35 PDT",
+      "lineupRecheckWaived": true,
+      "currentLineupsCertified": false,
+      "releaseApproved": true,
+      "deploymentApproved": true
+    },
+    {
+      "id": "weekly-slate-2026-week-06-v004",
+      "video": "/show/previews/2026-week-06.mp4",
+      "watchRoutes": ["/show/previews/week-6"],
+      "version": "20261016-slate-v004",
+      "bytes": 17093176,
+      "sha256": "e98bb81ec17cad4467cc3ea14df98e360f3366c58d43fc28f134c142960b1c4e",
+      "frames": 8641,
+      "seconds": 288.03333333333336,
+      "captionsBurnedIn": true,
+      "sourceMovie": "renders/weekly/2026-week-06/slate-v004/weekly-slate-wk06-release-v004.mp4",
+      "sourceQA": "FFL Show/weekly/2026-week-06/QA_V004.json",
+      "cardCapturedAtPacific": "2026-10-16 19:58 PDT",
+      "postRenderCheck": "FFL Show/weekly/2026-week-06/post-render-check-v004-2026-10-16.json",
+      "releaseApproved": true,
+      "deploymentApproved": true
+    },
+    {
+      "id": "weekly-slate-2026-week-05-v008",
+      "video": "/show/previews/2026-week-05.mp4",
+      "watchRoutes": [
+        "/show/previews/week-5"
+      ],
+      "version": "20261014-slate2-v008-consolation",
+      "bytes": 20671255,
+      "sha256": "df357fa43473d0c8caf59ec755f2bd226d1e1a45f97ad41c767cff4192c6f041",
+      "frames": 8374,
+      "seconds": 279.1333333333333,
+      "previousSHA256": "cce7116d761384edfb9a8c9c05564c9cba3cf82aadd4e699a311c418607c4eda",
+      "captionsBurnedIn": true,
+      "sourceMovie": "renders/weekly/2026-week-05/slate-2.0-v008/weekly-slate-wk05-2.0-review-v008.mp4",
+      "releaseApproved": true,
+      "deploymentApproved": true
+    },
+    {
+      "id": "pilot-v034",
+      "video": "/show/pilot-review.mp4",
+      "watchRoutes": [
+        "/show/pilot",
+        "/show/episodes/1"
+      ],
+      "version": "20261014-v034-consolation-720p",
+      "bytes": 24238495,
+      "sha256": "84d34138deea91a48768674e12d2a73c383547031e21c1cb14443bbb6888a457",
+      "frames": 13945,
+      "seconds": 464.8333333333333,
+      "previousSHA256": "7efaea2692c49d8fb51e51b52718c6a531deddd7a62d3d1831f9126ca773e383",
+      "captionsBurnedIn": true,
+      "sourceMovie": "renders/001-rivalry-round-one/consolation-v034/pilot-consolation-v034-web-720p.mp4",
+      "releaseApproved": true,
+      "deploymentApproved": true
+    }
+  ],
+  "releaseApproved": true,
+  "deploymentApproved": true,
+  "deployed": true
+}

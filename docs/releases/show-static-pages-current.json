@@ -1,38 +1,43 @@
 {
-  "builtAt": "2026-10-25T15:53:39.714Z",
+  "builtAt": "2026-10-28T23:37:29.863Z",
   "scope": "current-manifest-show-pages-only",
-  "releaseId": "weekly-slate-2026-week-07-v003",
-  "mediaManifestSHA256": "608c49e5bdc28ecb2670794cd95cd68de7723dc7afd7aa521f27139fc1ad092d",
+  "releaseId": "episode02-halftime-adjustments-v003",
+  "mediaManifestSHA256": "f4f74d0c0b075a9dc25135a57f88e5528037f9da0a613a7dffaca7d209cae61b",
   "pages": [
     {
       "route": "/show",
-      "bytes": 25772,
-      "sha256": "fd7c4790e42f9ca02a42a13e517ea17d701d364c61b1eb2b49676336cf86bd06"
+      "bytes": 26417,
+      "sha256": "ebef7186f27668333eca1cd9eae903303ccfda8eab6a55042c4454e52574a3bb"
+    },
+    {
+      "route": "/show/episodes/2",
+      "bytes": 27883,
+      "sha256": "d2743242023ca664d06b4797a06fc8ad6cfd683e9acd37044546ef08e33b9cde"
     },
     {
       "route": "/show/previews/week-7",
-      "bytes": 21978,
-      "sha256": "e71208d67fd47d98f9ab50185d1a27e26f054a2c83dc79773be04a8ad6ab5a64"
+      "bytes": 22403,
+      "sha256": "e753b8711eb0325d536217bd886fc9d9fed161a6316e0e622e4626a7989ec94b"
     },
     {
       "route": "/show/previews/week-6",
-      "bytes": 22756,
-      "sha256": "ae9206801b89a9af363fd3256e2a2774fa7444426d9e5c9ac6254738495fd974"
+      "bytes": 22367,
+      "sha256": "a01ebaffb895f3e014e1f2ff20e8918ca08cb41b9cffa7c3ceef5a9f609842a4"
     },
     {
       "route": "/show/previews/week-5",
-      "bytes": 23137,
-      "sha256": "81eef96d1a225aacac21698100c045d566ae0b75d10b2ce9d1431ffd45f3c567"
+      "bytes": 22748,
+      "sha256": "442cd11a5f16040eb8ba0ee470571d8bf9758eb90d1dbe5e99d69897c8c4fa9b"
     },
     {
       "route": "/show/pilot",
-      "bytes": 24909,
-      "sha256": "dcb1c3b1786bd6322d92cce1690ade680db740aa3d4bf6f41c114844cabeb04e"
+      "bytes": 24942,
+      "sha256": "f93de4da8eefaf50ad737284963f349925e50a841a8e63c60e9551bcad972a41"
     },
     {
       "route": "/show/episodes/1",
-      "bytes": 26340,
-      "sha256": "0a0169040ab078980d32d27caf7df8003ba35631c960b60530db22c3f0284cce"
+      "bytes": 26373,
+      "sha256": "8e341fc8de680ed960523e7ea1d4fdd17d12f2c4e0a16edd2d70816d3e36ffde"
     }
   ]
 }
