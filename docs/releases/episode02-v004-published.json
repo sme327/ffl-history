@@ -1,0 +1,73 @@
+{
+  "releaseId": "episode02-halftime-adjustments-v004",
+  "title": "Halftime Adjustments",
+  "url": "https://iwnh.sme327.com/show/episodes/2",
+  "hub": "https://iwnh.sme327.com/show",
+  "publishedDatePacific": "2026-10-29",
+  "recordedAt": "2026-10-29T19:58:33.262Z",
+  "media": {
+    "id": "episode02-halftime-adjustments-v004",
+    "video": "/show/episodes/ep02.mp4",
+    "watchRoutes": [
+      "/show/episodes/2"
+    ],
+    "version": "20261029-episode02-v004",
+    "bytes": 23951043,
+    "sha256": "516f86f7982a1512a9368d07111a01bb43fee465225dbac29406b78ed7212cb3",
+    "frames": 15541,
+    "seconds": 518.033333,
+    "captionsBurnedIn": true,
+    "sourceMovie": "renders/002-cross-division-check-in/review-v004/episode02-review-master-720p-v004.mp4",
+    "sourceQA": "FFL Show/episodes/002-cross-division-check-in/QA_V004.json",
+    "approvedReviewSHA256": "516f86f7982a1512a9368d07111a01bb43fee465225dbac29406b78ed7212cb3",
+    "reviewBanner": false,
+    "changesFromApprovedReview": [],
+    "releaseApproved": true,
+    "deploymentApproved": true
+  },
+  "ownerApproval": {
+    "version": "v004",
+    "date": "2026-10-29",
+    "owner": "Shawn",
+    "message": "approved.  get it to the website please",
+    "approvedReviewMovie": "renders/002-cross-division-check-in/review-v004/episode02-review-master-720p-v004.mp4",
+    "approvedReviewSHA256": "516f86f7982a1512a9368d07111a01bb43fee465225dbac29406b78ed7212cb3",
+    "releaseApproved": true,
+    "deploymentApproved": true,
+    "permittedReleaseChange": "None. Publish the exact approved clean V004; no re-render or audio/caption/runtime changes.",
+    "newPronunciationCertificationClaimed": false,
+    "sourceEvidence": "FFL Show/episodes/002-cross-division-check-in/OWNER_APPROVAL_V004.json"
+  },
+  "deployment": {
+    "worker": "the-long-game",
+    "workerVersion": "8e90cdfc-8659-4b9c-91e3-bf5ac2459e1f",
+    "deployedSourceCommit": "03808ba2293426f500153acc4b9868679ed9e94c",
+    "liveQA": "episode02-v004-live-qa.json",
+    "browserQA": "episode02-v004-live-browser-qa.json",
+    "finalUploadCheck": "episode02-v004-final-upload-check.json",
+    "statusMetadataUpdatedAfterBuild": true,
+    "remainingFailures": []
+  },
+  "expectedHub": {
+    "currentPreview": null,
+    "latestEpisode": "/show/episodes/2",
+    "pastPreviews": [
+      "/show/previews/week-7",
+      "/show/previews/week-6",
+      "/show/previews/week-5"
+    ]
+  },
+  "livePageChecks": 21,
+  "liveMovieHashes": 5,
+  "validRangeChecks": 15,
+  "invalidRangeChecks": 5,
+  "browserWatchRoutes": 6,
+  "previousMoviesUnchanged": true,
+  "exactApprovedReviewPublished": true,
+  "audioUnchanged": true,
+  "captionsUnchanged": true,
+  "runtimeUnchanged": true,
+  "deployed": true,
+  "releaseApproved": true,
+  "deploymentApproved": true
+}

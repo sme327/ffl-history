@@ -1,8 +1,17 @@
 {
   "schemaVersion": 1,
   "releaseId": "episode02-halftime-adjustments-v004",
-  "stage": "approved-staged",
-  "deployment": null,
+  "stage": "published-live-verified",
+  "deployment": {
+    "worker": "the-long-game",
+    "workerVersion": "8e90cdfc-8659-4b9c-91e3-bf5ac2459e1f",
+    "deployedSourceCommit": "03808ba2293426f500153acc4b9868679ed9e94c",
+    "liveQA": "episode02-v004-live-qa.json",
+    "browserQA": "episode02-v004-live-browser-qa.json",
+    "finalUploadCheck": "episode02-v004-final-upload-check.json",
+    "statusMetadataUpdatedAfterBuild": true,
+    "remainingFailures": []
+  },
   "previousDeployment": {
     "worker": "the-long-game",
     "workerVersion": "49423fc1-0e2d-4d64-a407-4c7beff52ce7",
@@ -144,6 +153,6 @@
   ],
   "releaseApproved": true,
   "deploymentApproved": true,
-  "deployed": false,
+  "deployed": true,
   "retrospectiveAndSchedulePreviewOnly": true
 }

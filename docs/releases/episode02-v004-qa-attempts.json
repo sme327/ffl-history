@@ -1,0 +1,22 @@
+{
+  "releaseId": "episode02-halftime-adjustments-v004",
+  "attempts": [
+    {
+      "stage": "live-browser-initial",
+      "result": "incomplete",
+      "passedRoutes": ["/show/episodes/2", "/show/previews/week-7", "/show/previews/week-6"],
+      "failedRoute": "/show/previews/week-5",
+      "failure": "Thirty-second wait for seek completion timed out while the full five-movie HTTP verifier was running concurrently.",
+      "causeConfirmed": false,
+      "nextAction": "Repeat the unchanged strict browser checks after the full-download HTTP verification finishes; do not relax seek assertions."
+    },
+    {
+      "stage": "live-browser-serial-retry",
+      "result": "passed",
+      "report": "episode02-v004-live-browser-qa.json",
+      "watchRoutes": 6,
+      "assertionsRelaxed": false,
+      "causeOfFirstTimeoutConfirmed": false
+    }
+  ]
+}

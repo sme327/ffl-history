@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-10-29T19:50:19.723Z",
+  "builtAt": "2026-10-29T19:54:07.042Z",
   "scope": "current-manifest-show-pages-only",
   "releaseId": "episode02-halftime-adjustments-v004",
   "mediaManifestSHA256": "0fed8a29c231ebe7c36ed44da5633e0f999ba772f7a7ef1536de639948a8458e",
@@ -7,37 +7,37 @@
     {
       "route": "/show",
       "bytes": 26417,
-      "sha256": "bb405608bfd5d346d7d85fbdeddd0ea7a60f7c3139da202acebce710589ce7c6"
+      "sha256": "9129804f4acec73d6b5b3b118d6b88639370331d73f55a7a3bc2da30c8179208"
     },
     {
       "route": "/show/episodes/2",
       "bytes": 28002,
-      "sha256": "054fb761ca86cf573ced1bbc5d28d22b972e800d03d1bea558b9970a3e04e723"
+      "sha256": "47975bee907b50b69d8f39b376e7991d295527abbe7dc699b9ffcac33247de93"
     },
     {
       "route": "/show/previews/week-7",
       "bytes": 22403,
-      "sha256": "44aedd4ec01e421f80e763c3f1fc17dbc26d44959da98e6007b7254ccb0b2eb4"
+      "sha256": "7517fa21248f12c5e2ef74e51724e4631790acce7cb6c24e4d7ec98e5c97a013"
     },
     {
       "route": "/show/previews/week-6",
       "bytes": 22367,
-      "sha256": "9e461a968c9709e22c0172fa8488c8cd8302ac622d99fd09cace9a1a81582ee2"
+      "sha256": "bb76e10a15839c808e9d7dd4262e83c46573a640e4ca3ecdd8795200d9df6eca"
     },
     {
       "route": "/show/previews/week-5",
       "bytes": 22748,
-      "sha256": "e98b353a1263e5aada998fba3ae03aa879d4792398edc75496e90b3bce702937"
+      "sha256": "4ddb3bb0fef857229843e982ad5e22b35f29632fc32ce00bc7f1830e81e84832"
     },
     {
       "route": "/show/pilot",
       "bytes": 24942,
-      "sha256": "43bb70073617d3435689bbc661eaee9db10c72da3a83a1fd65f71dc5d57b905c"
+      "sha256": "e7475d9d91b38b9b1a9634061d4793791f67b81b98c2b90d26e43adef777a371"
     },
     {
       "route": "/show/episodes/1",
       "bytes": 26373,
-      "sha256": "83738270c087f45243479bc5880495ce9591d9e4e62281f8d24843f911a6227f"
+      "sha256": "e5630a98703c739eeeede027856233a76d2ae2ad2b9c8efa90afb6499992ed5e"
     }
   ]
 }

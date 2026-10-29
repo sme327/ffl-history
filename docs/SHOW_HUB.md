@@ -1,12 +1,14 @@
 # Across the Line: show hub
 
-## Episode 2 V004 — authorized roll-call update, October 29
+## Episode 2 V004 — LIVE and verified, October 29
+
+[Watch Episode 2](https://iwnh.sme327.com/show/episodes/2). Published with `npm run deploy` from **03808ba**, Worker **8e90cdfc-8659-4b9c-91e3-bf5ac2459e1f**; twelve changed assets uploaded. Live checks pass 21 repeated pages, five exact movie hashes/types, fifteen valid HTTP 206 ranges/five invalid-range 416s and browser playback/seek/resume on all six routes. Initial unchanged Week 5 seek timeout resolved on strict serial retry after the parallel full-file HTTP run; cause unconfirmed, no assertions relaxed. `episode02-v004-qa-attempts.json` records both attempts. No remaining release failure. See `episode02-v004-published.json`, `episode02-v004-live-qa.json`, `episode02-v004-live-browser-qa.json`. Registry deployment metadata was updated after build; build-time hashes remain in `show-static-pages-current.json`. V003 Worker **49423fc1-0e2d-4d64-a407-4c7beff52ce7** is retained for rollback.
 
 Shawn approved V004 and directed **“approved.  get it to the website please”**. Publish the exact clean review: **23,951,043 bytes / 22.84 MiB / 720p / 8:38.03**, SHA-256 `516f86f7982a1512a9368d07111a01bb43fee465225dbac29406b78ed7212cb3`. One accumulating historical roll-call board replaces the rapid cards and holds through Kate's question. Audio, captions, runtime and all outside-patch pictures unchanged. V003 remains preserved in the FFL Show release folder and versioned website evidence.
 
 Route `/show/episodes/2`, version **20261029-episode02-v004**; original release date retained, visible update note added. Latest episode/archive state and the four earlier movie hashes/versions remain unchanged. FFL Show `OWNER_APPROVAL_V004.json`, `QA_V004.json` and `RELEASE_RENDER_V004.json` bind the exact cut and publication go. Museum staging and final upload checks are versioned V004 records. No current-lineup check is relevant to this picture-only historical change.
 
-Local typecheck, catalog/range tests, full build and Wrangler dry run pass. Local verification passed seven pages × three requests, five exact movie hashes/types, fifteen HTTP 206 ranges/five invalid-range responses, plus browser playback/seek/resume on all six watch routes. Evidence: `episode02-v004-local-qa.json`, `episode02-v004-local-browser-qa.json`. Deployment/live result will be recorded separately; the V003 publication section below is historical after V004 goes live.
+Local typecheck, catalog/range tests, full build and Wrangler dry run pass. Local verification passed seven pages × three requests, five exact movie hashes/types, fifteen HTTP 206 ranges/five invalid-range responses, plus browser playback/seek/resume on all six watch routes. Evidence: `episode02-v004-local-qa.json`, `episode02-v004-local-browser-qa.json`. The V003 publication section below is now history.
 
 ## Episode 2 — Halftime Adjustments V003, LIVE and verified October 28
 
