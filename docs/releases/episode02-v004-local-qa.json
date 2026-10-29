@@ -1,0 +1,210 @@
+{
+  "checkedAt": "2026-10-29T19:51:49.012Z",
+  "base": "http://localhost:8795",
+  "releaseId": "episode02-halftime-adjustments-v004",
+  "checks": [
+    {
+      "kind": "page",
+      "round": 0,
+      "route": "/show",
+      "status": 200,
+      "sha256": "bb405608bfd5d346d7d85fbdeddd0ea7a60f7c3139da202acebce710589ce7c6"
+    },
+    {
+      "kind": "page",
+      "round": 0,
+      "route": "/show/episodes/2",
+      "status": 200,
+      "sha256": "054fb761ca86cf573ced1bbc5d28d22b972e800d03d1bea558b9970a3e04e723"
+    },
+    {
+      "kind": "page",
+      "round": 0,
+      "route": "/show/previews/week-7",
+      "status": 200,
+      "sha256": "44aedd4ec01e421f80e763c3f1fc17dbc26d44959da98e6007b7254ccb0b2eb4"
+    },
+    {
+      "kind": "page",
+      "round": 0,
+      "route": "/show/previews/week-6",
+      "status": 200,
+      "sha256": "9e461a968c9709e22c0172fa8488c8cd8302ac622d99fd09cace9a1a81582ee2"
+    },
+    {
+      "kind": "page",
+      "round": 0,
+      "route": "/show/previews/week-5",
+      "status": 200,
+      "sha256": "e98b353a1263e5aada998fba3ae03aa879d4792398edc75496e90b3bce702937"
+    },
+    {
+      "kind": "page",
+      "round": 0,
+      "route": "/show/pilot",
+      "status": 200,
+      "sha256": "43bb70073617d3435689bbc661eaee9db10c72da3a83a1fd65f71dc5d57b905c"
+    },
+    {
+      "kind": "page",
+      "round": 0,
+      "route": "/show/episodes/1",
+      "status": 200,
+      "sha256": "83738270c087f45243479bc5880495ce9591d9e4e62281f8d24843f911a6227f"
+    },
+    {
+      "kind": "page",
+      "round": 1,
+      "route": "/show",
+      "status": 200,
+      "sha256": "bb405608bfd5d346d7d85fbdeddd0ea7a60f7c3139da202acebce710589ce7c6"
+    },
+    {
+      "kind": "page",
+      "round": 1,
+      "route": "/show/episodes/2",
+      "status": 200,
+      "sha256": "054fb761ca86cf573ced1bbc5d28d22b972e800d03d1bea558b9970a3e04e723"
+    },
+    {
+      "kind": "page",
+      "round": 1,
+      "route": "/show/previews/week-7",
+      "status": 200,
+      "sha256": "44aedd4ec01e421f80e763c3f1fc17dbc26d44959da98e6007b7254ccb0b2eb4"
+    },
+    {
+      "kind": "page",
+      "round": 1,
+      "route": "/show/previews/week-6",
+      "status": 200,
+      "sha256": "9e461a968c9709e22c0172fa8488c8cd8302ac622d99fd09cace9a1a81582ee2"
+    },
+    {
+      "kind": "page",
+      "round": 1,
+      "route": "/show/previews/week-5",
+      "status": 200,
+      "sha256": "e98b353a1263e5aada998fba3ae03aa879d4792398edc75496e90b3bce702937"
+    },
+    {
+      "kind": "page",
+      "round": 1,
+      "route": "/show/pilot",
+      "status": 200,
+      "sha256": "43bb70073617d3435689bbc661eaee9db10c72da3a83a1fd65f71dc5d57b905c"
+    },
+    {
+      "kind": "page",
+      "round": 1,
+      "route": "/show/episodes/1",
+      "status": 200,
+      "sha256": "83738270c087f45243479bc5880495ce9591d9e4e62281f8d24843f911a6227f"
+    },
+    {
+      "kind": "page",
+      "round": 2,
+      "route": "/show",
+      "status": 200,
+      "sha256": "bb405608bfd5d346d7d85fbdeddd0ea7a60f7c3139da202acebce710589ce7c6"
+    },
+    {
+      "kind": "page",
+      "round": 2,
+      "route": "/show/episodes/2",
+      "status": 200,
+      "sha256": "054fb761ca86cf573ced1bbc5d28d22b972e800d03d1bea558b9970a3e04e723"
+    },
+    {
+      "kind": "page",
+      "round": 2,
+      "route": "/show/previews/week-7",
+      "status": 200,
+      "sha256": "44aedd4ec01e421f80e763c3f1fc17dbc26d44959da98e6007b7254ccb0b2eb4"
+    },
+    {
+      "kind": "page",
+      "round": 2,
+      "route": "/show/previews/week-6",
+      "status": 200,
+      "sha256": "9e461a968c9709e22c0172fa8488c8cd8302ac622d99fd09cace9a1a81582ee2"
+    },
+    {
+      "kind": "page",
+      "round": 2,
+      "route": "/show/previews/week-5",
+      "status": 200,
+      "sha256": "e98b353a1263e5aada998fba3ae03aa879d4792398edc75496e90b3bce702937"
+    },
+    {
+      "kind": "page",
+      "round": 2,
+      "route": "/show/pilot",
+      "status": 200,
+      "sha256": "43bb70073617d3435689bbc661eaee9db10c72da3a83a1fd65f71dc5d57b905c"
+    },
+    {
+      "kind": "page",
+      "round": 2,
+      "route": "/show/episodes/1",
+      "status": 200,
+      "sha256": "83738270c087f45243479bc5880495ce9591d9e4e62281f8d24843f911a6227f"
+    },
+    {
+      "kind": "movie",
+      "id": "episode02-halftime-adjustments-v004",
+      "video": "/show/episodes/ep02.mp4",
+      "bytes": 23951043,
+      "sha256": "516f86f7982a1512a9368d07111a01bb43fee465225dbac29406b78ed7212cb3",
+      "contentType": "video/mp4",
+      "prefixSuffixOpenRanges": true,
+      "unsatisfiableRange416": true
+    },
+    {
+      "kind": "movie",
+      "id": "weekly-slate-2026-week-07-v003",
+      "video": "/show/previews/2026-week-07.mp4",
+      "bytes": 20305858,
+      "sha256": "a4fbfcba698bc232448ee8ba1bc0157283b56ab132f67e46266d07b9206d8a1e",
+      "contentType": "video/mp4",
+      "prefixSuffixOpenRanges": true,
+      "unsatisfiableRange416": true
+    },
+    {
+      "kind": "movie",
+      "id": "weekly-slate-2026-week-06-v004",
+      "video": "/show/previews/2026-week-06.mp4",
+      "bytes": 17093176,
+      "sha256": "e98bb81ec17cad4467cc3ea14df98e360f3366c58d43fc28f134c142960b1c4e",
+      "contentType": "video/mp4",
+      "prefixSuffixOpenRanges": true,
+      "unsatisfiableRange416": true
+    },
+    {
+      "kind": "movie",
+      "id": "weekly-slate-2026-week-05-v008",
+      "video": "/show/previews/2026-week-05.mp4",
+      "bytes": 20671255,
+      "sha256": "df357fa43473d0c8caf59ec755f2bd226d1e1a45f97ad41c767cff4192c6f041",
+      "contentType": "video/mp4",
+      "prefixSuffixOpenRanges": true,
+      "unsatisfiableRange416": true
+    },
+    {
+      "kind": "movie",
+      "id": "pilot-v034",
+      "video": "/show/pilot-review.mp4",
+      "bytes": 24238495,
+      "sha256": "84d34138deea91a48768674e12d2a73c383547031e21c1cb14443bbb6888a457",
+      "contentType": "video/mp4",
+      "prefixSuffixOpenRanges": true,
+      "unsatisfiableRange416": true
+    }
+  ],
+  "localClientConnectionPolicy": "independent-connections",
+  "hubArchiveAndLatestEpisode": true,
+  "rawHeadersOrCredentialsIncluded": false,
+  "ownerEarCheckPending": false,
+  "releaseApproved": true,
+  "deploymentApproved": true
+}

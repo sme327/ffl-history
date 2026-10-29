@@ -1,5 +1,13 @@
 # Across the Line: show hub
 
+## Episode 2 V004 — authorized roll-call update, October 29
+
+Shawn approved V004 and directed **“approved.  get it to the website please”**. Publish the exact clean review: **23,951,043 bytes / 22.84 MiB / 720p / 8:38.03**, SHA-256 `516f86f7982a1512a9368d07111a01bb43fee465225dbac29406b78ed7212cb3`. One accumulating historical roll-call board replaces the rapid cards and holds through Kate's question. Audio, captions, runtime and all outside-patch pictures unchanged. V003 remains preserved in the FFL Show release folder and versioned website evidence.
+
+Route `/show/episodes/2`, version **20261029-episode02-v004**; original release date retained, visible update note added. Latest episode/archive state and the four earlier movie hashes/versions remain unchanged. FFL Show `OWNER_APPROVAL_V004.json`, `QA_V004.json` and `RELEASE_RENDER_V004.json` bind the exact cut and publication go. Museum staging and final upload checks are versioned V004 records. No current-lineup check is relevant to this picture-only historical change.
+
+Local typecheck, catalog/range tests, full build and Wrangler dry run pass. Local verification passed seven pages × three requests, five exact movie hashes/types, fifteen HTTP 206 ranges/five invalid-range responses, plus browser playback/seek/resume on all six watch routes. Evidence: `episode02-v004-local-qa.json`, `episode02-v004-local-browser-qa.json`. Deployment/live result will be recorded separately; the V003 publication section below is historical after V004 goes live.
+
 ## Episode 2 — Halftime Adjustments V003, LIVE and verified October 28
 
 [Watch Episode 2](https://iwnh.sme327.com/show/episodes/2) · [Show hub](https://iwnh.sme327.com/show). Published with `npm run deploy` from **7ce53d9**, Worker version **49423fc1-0e2d-4d64-a407-4c7beff52ce7**. All twelve changed assets uploaded successfully. Live HTTP QA passes seven pages × three requests, five exact movie hashes/types, fifteen valid HTTP 206 ranges and five invalid-range HTTP 416s. Browser playback/seek/resume passes all six watch routes, including both pilot URLs. Episode 2 is Latest episode; Weeks 7/6/5 are archived. Older movies remain byte-identical. No remaining release failure. Evidence: `episode02-v003-published.json`, `episode02-v003-live-qa.json`, `episode02-v003-live-browser-qa.json`. Registry deployment metadata was updated after the build; `show-static-pages-current.json` preserves its exact build-time page/registry hashes.

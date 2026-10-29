@@ -91,7 +91,8 @@ export const EPISODES: ShowEpisode[] = [
     runtime: "8:38",
     video: "/show/episodes/ep02.mp4",
     poster: "/show/studio-poster-v001.webp",
-    version: "20261028-episode02-v003",
+    version: "20261029-episode02-v004",
+    correction: "Updated Oct 29: the historical roll call now builds on one board. Audio and runtime are unchanged.",
     summary:
       "Graham Keeper and Kate Hedges reopen their original findings after seven weeks: six finals, an Out of Office Award, the standings corrected, credit where due, a quick Week 8 preview, and The Ring Doesn’t Check the Record.",
     segments: [

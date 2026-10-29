@@ -1,0 +1,12 @@
+{
+  "releaseId": "episode02-halftime-adjustments-v004",
+  "sha256": "516f86f7982a1512a9368d07111a01bb43fee465225dbac29406b78ed7212cb3",
+  "checkedAt": "2026-10-29T19:48:43.681Z",
+  "pass": true,
+  "exactMediaHashesVerified": true,
+  "exactApprovedReviewUsed": true,
+  "otherMoviesUnchanged": true,
+  "ownerApproval": "FFL Show/episodes/002-cross-division-check-in/OWNER_APPROVAL_V004.json",
+  "newLineupCheckRequired": false,
+  "reason": "Picture-only historical roll-call revision to the approved retrospective; no audio, caption, timing or lineup claim changed."
+}

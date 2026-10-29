@@ -16,5 +16,6 @@ assert.equal(catalog.findPreview(8),null,'No Week 8 weekly ships alongside the f
 assert.equal(catalog.previewPlayed({kind:'preview',week:8,status:'published',title:'future'}),false);
 assert.equal(catalog.findEpisode(1).version,'20261014-v034-consolation-720p');
 assert.equal(catalog.findPreview(7).version,'20261025-slate-v003');
-assert.equal(catalog.withVersion(catalog.latestEpisode().video,catalog.latestEpisode().version),'/show/episodes/ep02.mp4?v=20261028-episode02-v003');
+assert.equal(catalog.withVersion(catalog.latestEpisode().video,catalog.latestEpisode().version),'/show/episodes/ep02.mp4?v=20261029-episode02-v004');
+assert.match(catalog.latestEpisode().correction,/historical roll call now builds on one board/);
 console.log('Catalog passes: Episode 2 latest, completed previews archived, Week 8 hidden, older versions untouched.');

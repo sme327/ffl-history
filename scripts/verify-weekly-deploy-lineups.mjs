@@ -7,6 +7,28 @@ import {createHash} from 'node:crypto';
 // The V007 branch below is retained as historical code. The active Week 6
 // release has independent approvals, source hashes and roster/count conditions.
 const current=JSON.parse(fs.readFileSync('docs/releases/show-media-current.json','utf8'));
+if(current.releaseId==='episode02-halftime-adjustments-v004'){
+ const show=process.env.FFL_SHOW_ROOT??'/Users/sme/Documents/Projects/Sports/Fantasy Football Leagues/FFL Show';
+ const folder=path.join(show,'episodes/002-cross-division-check-in');
+ const approval=JSON.parse(fs.readFileSync(path.join(folder,'OWNER_APPROVAL_V004.json'),'utf8'));
+ const qa=JSON.parse(fs.readFileSync(path.join(folder,'QA_V004.json'),'utf8'));
+ assert(approval.releaseApproved&&approval.deploymentApproved&&current.releaseApproved&&current.deploymentApproved,'Explicit owner go required');
+ assert.equal(approval.message,'approved.  get it to the website please');
+ const item=current.media.find(m=>m.id===current.releaseId);assert(item&&item.releaseApproved&&item.deploymentApproved);
+ assert.equal(approval.approvedReviewSHA256,item.sha256);assert.equal(item.approvedReviewSHA256,item.sha256);assert.equal(qa.sha256,item.sha256);
+ assert(qa.fullDecode&&qa.under25MiB&&qa.fastStart&&qa.audioUnchanged&&qa.continuousFrameTimestamps);
+ assert.equal(qa.reviewBanner,false);assert.equal(qa.frames,15541);assert.equal(qa.sourceTakes,92);
+ assert.equal(qa.surroundingPictureSlicesIdentical,15219);assert.equal(qa.olderArtifactsPreserved,727);
+ const previous=JSON.parse(fs.readFileSync('docs/releases/show-media-before-episode02-v004.json','utf8'));
+ for(const media of current.media){
+  const bytes=fs.readFileSync(path.join('public',media.video));assert(bytes.length<25*1024**2);assert.equal(bytes.length,media.bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),media.sha256,'Changed movie: '+media.id);
+  if(media.id!==current.releaseId)assert.deepEqual(media,previous.media.find(m=>m.id===media.id),'Prior media metadata changed');
+ }
+ const report={releaseId:current.releaseId,sha256:item.sha256,checkedAt:new Date().toISOString(),pass:true,exactMediaHashesVerified:true,exactApprovedReviewUsed:true,otherMoviesUnchanged:true,ownerApproval:'FFL Show/episodes/002-cross-division-check-in/OWNER_APPROVAL_V004.json',newLineupCheckRequired:false,reason:'Picture-only historical roll-call revision to the approved retrospective; no audio, caption, timing or lineup claim changed.'};
+ fs.writeFileSync('docs/releases/episode02-v004-final-upload-check.json',JSON.stringify(report,null,2)+'\n');
+ console.log('V004 upload gate passed: exact approved movie, unchanged audio/timing, four prior movies intact.');
+ process.exit(0);
+}
 if(current.releaseId==='episode02-halftime-adjustments-v003'){
  const show=process.env.FFL_SHOW_ROOT??'/Users/sme/Documents/Projects/Sports/Fantasy Football Leagues/FFL Show';
  const folder=path.join(show,'episodes/002-cross-division-check-in');

@@ -1,43 +1,43 @@
 {
-  "builtAt": "2026-10-28T23:49:53.128Z",
+  "builtAt": "2026-10-29T19:50:19.723Z",
   "scope": "current-manifest-show-pages-only",
-  "releaseId": "episode02-halftime-adjustments-v003",
-  "mediaManifestSHA256": "f4f74d0c0b075a9dc25135a57f88e5528037f9da0a613a7dffaca7d209cae61b",
+  "releaseId": "episode02-halftime-adjustments-v004",
+  "mediaManifestSHA256": "0fed8a29c231ebe7c36ed44da5633e0f999ba772f7a7ef1536de639948a8458e",
   "pages": [
     {
       "route": "/show",
       "bytes": 26417,
-      "sha256": "ac7b438ff1e6552320eb3082e971bae685364ffd117f8e697282afdc2ff1e72d"
+      "sha256": "bb405608bfd5d346d7d85fbdeddd0ea7a60f7c3139da202acebce710589ce7c6"
     },
     {
       "route": "/show/episodes/2",
-      "bytes": 27883,
-      "sha256": "d4cf3970c7c0290bba159ed261003d3b8b28a20c21b1e9fb695703000c1464a1"
+      "bytes": 28002,
+      "sha256": "054fb761ca86cf573ced1bbc5d28d22b972e800d03d1bea558b9970a3e04e723"
     },
     {
       "route": "/show/previews/week-7",
       "bytes": 22403,
-      "sha256": "17b9ff9831003dd9f365c4ec69434db68e881c36e223322df081191b332de035"
+      "sha256": "44aedd4ec01e421f80e763c3f1fc17dbc26d44959da98e6007b7254ccb0b2eb4"
     },
     {
       "route": "/show/previews/week-6",
       "bytes": 22367,
-      "sha256": "63394a0d4dec04aa2d4edbbe139ac478db57ebf917dfe93f788c205ec4227fde"
+      "sha256": "9e461a968c9709e22c0172fa8488c8cd8302ac622d99fd09cace9a1a81582ee2"
     },
     {
       "route": "/show/previews/week-5",
       "bytes": 22748,
-      "sha256": "172009e709284f98486c5f49575a8966e46592982d90a8d8c84d2e9a6f5bdbf1"
+      "sha256": "e98b353a1263e5aada998fba3ae03aa879d4792398edc75496e90b3bce702937"
     },
     {
       "route": "/show/pilot",
       "bytes": 24942,
-      "sha256": "12cacc3941ff37a1421fd27a2e3c2c8cfdd687f1543c14da10cb8e9ef321a6a8"
+      "sha256": "43bb70073617d3435689bbc661eaee9db10c72da3a83a1fd65f71dc5d57b905c"
     },
     {
       "route": "/show/episodes/1",
       "bytes": 26373,
-      "sha256": "9d74c427df96b99e9f1c144b644b40b08c152ecc919453ddd2addcf9cdc7de44"
+      "sha256": "83738270c087f45243479bc5880495ce9591d9e4e62281f8d24843f911a6227f"
     }
   ]
 }

@@ -1,0 +1,79 @@
+{
+  "releaseId": "episode02-halftime-adjustments-v004",
+  "media": {
+    "id": "episode02-halftime-adjustments-v004",
+    "video": "/show/episodes/ep02.mp4",
+    "watchRoutes": [
+      "/show/episodes/2"
+    ],
+    "version": "20261029-episode02-v004",
+    "bytes": 23951043,
+    "sha256": "516f86f7982a1512a9368d07111a01bb43fee465225dbac29406b78ed7212cb3",
+    "frames": 15541,
+    "seconds": 518.033333,
+    "captionsBurnedIn": true,
+    "sourceMovie": "renders/002-cross-division-check-in/review-v004/episode02-review-master-720p-v004.mp4",
+    "sourceQA": "FFL Show/episodes/002-cross-division-check-in/QA_V004.json",
+    "approvedReviewSHA256": "516f86f7982a1512a9368d07111a01bb43fee465225dbac29406b78ed7212cb3",
+    "reviewBanner": false,
+    "changesFromApprovedReview": [],
+    "releaseApproved": true,
+    "deploymentApproved": true
+  },
+  "approval": {
+    "version": "v004",
+    "date": "2026-10-29",
+    "owner": "Shawn",
+    "message": "approved.  get it to the website please",
+    "approvedReviewMovie": "renders/002-cross-division-check-in/review-v004/episode02-review-master-720p-v004.mp4",
+    "approvedReviewSHA256": "516f86f7982a1512a9368d07111a01bb43fee465225dbac29406b78ed7212cb3",
+    "releaseApproved": true,
+    "deploymentApproved": true,
+    "permittedReleaseChange": "None. Publish the exact approved clean V004; no re-render or audio/caption/runtime changes.",
+    "newPronunciationCertificationClaimed": false,
+    "sourceEvidence": "FFL Show/episodes/002-cross-division-check-in/OWNER_APPROVAL_V004.json"
+  },
+  "previousMedia": {
+    "id": "episode02-halftime-adjustments-v003",
+    "video": "/show/episodes/ep02.mp4",
+    "watchRoutes": [
+      "/show/episodes/2"
+    ],
+    "version": "20261028-episode02-v003",
+    "bytes": 24307526,
+    "sha256": "a69d80788ab38f70183d436f66a34e929fecacf080324e2b3dcd1289949909b2",
+    "frames": 15541,
+    "seconds": 518.033333,
+    "captionsBurnedIn": true,
+    "sourceMovie": "renders/002-cross-division-check-in/release-v003/episode02-release-720p-v003.mp4",
+    "sourceQA": "FFL Show/episodes/002-cross-division-check-in/RELEASE_QA_V003.json",
+    "approvedReviewSHA256": "c168d41da257a5ee3997fce5c67d68983402c0b464883d4bf378b1cebd58b7d8",
+    "reviewBanner": false,
+    "changesFromApprovedReview": [
+      "Review banner removed only"
+    ],
+    "releaseApproved": true,
+    "deploymentApproved": true
+  },
+  "previousDeployment": {
+    "worker": "the-long-game",
+    "workerVersion": "49423fc1-0e2d-4d64-a407-4c7beff52ce7",
+    "deployedSourceCommit": "7ce53d9b8aeeafa730f37860c265294f328cb0a9",
+    "liveQA": "episode02-v003-live-qa.json",
+    "browserQA": "episode02-v003-live-browser-qa.json",
+    "finalUploadCheck": "episode02-v003-final-upload-check.json",
+    "statusMetadataUpdatedAfterBuild": true,
+    "remainingFailures": []
+  },
+  "previousReleasePreservedAt": "renders/002-cross-division-check-in/release-v003/episode02-release-720p-v003.mp4",
+  "expectedHub": {
+    "currentPreview": null,
+    "latestEpisode": "/show/episodes/2",
+    "pastPreviews": [
+      "/show/previews/week-7",
+      "/show/previews/week-6",
+      "/show/previews/week-5"
+    ]
+  },
+  "deployed": false
+}
