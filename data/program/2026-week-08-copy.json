@@ -1,0 +1,48 @@
+{
+  "theme": "Old Finals, Even Ledgers",
+  "cold_open": [
+    "Two more championship games get replayed this week: Steve Swanson–Shawn from 2019, and Dominic–Thomas from 2014. Douglas and O'Boyle are dead even at 6–6, and after 27 meetings since 2001, Clark and Fadi are separated by one game."
+  ],
+  "notes": {
+    "Shawn|Steve Swanson": "A rematch of the 2019 final, which Steve won. He leads 13–9, his widest lead ever, and has won four of the last five. Shawn owns the biggest blowout: 52.81 points in 2014.",
+    "Dominic|Thomas": "A rematch of the 2014 final, which Tom won, the same year he hung a 64.73-point blowout on Dominic. Dominic has answered with five straight and leads 13–11. The last was 64.47–61.35.",
+    "Eric|Kevin Swanson": "Only their fourth meeting. None of the first three was decided by more than 12.09. Kevin Swanson leads 2–1 and won the last, 77.3–71.29. Eric's lone win came by 2.11 in 2024.",
+    "Brian Clark|Fadi": "Clark leads 14–13 over 27 meetings since 2001. Fadi once led by four; Clark won six straight from 2018 to 2023; Fadi has the last two. The closest went to Fadi, by 0.03, in 2007.",
+    "Evan|Jeff": "Evan leads 7–4 and won this same week last year, 108.39–84.23. He also owns the series' biggest blowout, 80.45 points in 2024. Jeff's answers: the 2019 shootout, 106.67–98.37, and the 2023 third-place game.",
+    "Douglas|Kevin O'Boyle": "Dead even at 6–6. Doug won their only playoff meeting, the 2020 semifinal, 118.58–100.36, the series' highest-scoring game. O'Boyle answered with four straight; Doug snapped it last year by 3.65, their closest ever."
+  },
+  "history_lines": [
+    {
+      "year": 2022,
+      "text": "Fadi sets the Week 8 standard",
+      "pts": "124.16",
+      "tag": "best ever"
+    },
+    {
+      "year": 2016,
+      "text": "O'Boyle, 0.60 short",
+      "pts": "123.56",
+      "tag": "2nd best"
+    },
+    {
+      "year": 2023,
+      "text": "Steve Swanson, 1.12 short",
+      "pts": "123.04",
+      "tag": "3rd best"
+    },
+    {
+      "year": 2018,
+      "text": "Kevin Swanson scores 104.53 — and loses",
+      "pts": "104.53",
+      "tag": "best in defeat"
+    },
+    {
+      "year": 2001,
+      "text": "Fadi bottoms out in the league's first season — he holds both ends of Week 8",
+      "pts": "26.77",
+      "tag": "worst ever"
+    }
+  ],
+  "milestone": null,
+  "kicker": "For the fifth straight week, all six games cross division lines."
+}

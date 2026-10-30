@@ -144,3 +144,6 @@ weeks before the issue's own.
 - **Week 6 (2026).** The preview copy ("High-Water Marks") was approved and deployed (`54ed3e1`). The
   recap copy ("Perfect at Both Ends") was approved and deployed 2026-10-20.
 - **Week 7 (2026).** The preview copy ("Title Rematches") was approved and deployed 2026-10-21.
+- **Week 8 (2026).** The preview copy ("Old Finals, Even Ledgers") was approved and deployed 2026-10-29
+  (Worker `bef380fe`). It ships with no milestone: Week 7 results weren't fetched yet, so the brief's
+  wins race (Clark 195, Kevin Swanson 194) was stale. No Week 7 recap exists yet.
