@@ -71,3 +71,27 @@ week,team_name,score,opponent,opponent_score,projected
 6,team old style,76.28,miniDITKAS,66.69,85.32
 6,This Is How We Do,90.27,“I’ll take Kittle”,77.06,69.3
 6,“I’ll take Kittle”,77.06,This Is How We Do,90.27,66.85
+7,small sample size,100.44,Futball in the Groin,80.87,85.63
+7,Futball in the Groin,80.87,small sample size,100.44,84.97
+7,Bears,79.65,team old style,82.86,87.87
+7,team old style,82.86,Bears,79.65,85.75
+7,Fuzzy Bears,61.59,This Is How We Do,70.79,84.5
+7,This Is How We Do,70.79,Fuzzy Bears,61.59,75.69
+7,Goood Times,5.6,Guinness,101.21,13.23
+7,Guinness,101.21,Goood Times,5.6,94.01
+7,Guntry Club,87.07,“I’ll take Kittle”,73.1,80.91
+7,“I’ll take Kittle”,73.1,Guntry Club,87.07,69.08
+7,Mean Machine 22,75.21,miniDITKAS,53.2,82.38
+7,miniDITKAS,53.2,Mean Machine 22,75.21,79.23
+8,small sample size,70.95,Bears,76.29,85.17
+8,Bears,76.29,small sample size,70.95,85.79
+8,Futball in the Groin,63.75,Goood Times,81.98,70.51
+8,Goood Times,81.98,Futball in the Groin,63.75,88.59
+8,Fuzzy Bears,101.34,“I’ll take Kittle”,64.25,83.59
+8,“I’ll take Kittle”,64.25,Fuzzy Bears,101.34,67.48
+8,Guinness,86.68,Mean Machine 22,86.48,88.37
+8,Mean Machine 22,86.48,Guinness,86.68,82.39
+8,Guntry Club,80.28,miniDITKAS,119.37,86.59
+8,miniDITKAS,119.37,Guntry Club,80.28,80.19
+8,team old style,72.04,This Is How We Do,60.25,82.74
+8,This Is How We Do,60.25,team old style,72.04,77.08
