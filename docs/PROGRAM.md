@@ -147,3 +147,9 @@ weeks before the issue's own.
 - **Week 8 (2026).** The preview copy ("Old Finals, Even Ledgers") was approved and deployed 2026-10-29
   (Worker `bef380fe`). It ships with no milestone: Week 7 results weren't fetched yet, so the brief's
   wins race (Clark 195, Kevin Swanson 194) was stale. No Week 7 recap exists yet.
+- **Week 9 (2026).** The preview copy ("Split Decisions") was approved and deployed 2026-11-05
+  (Worker `62b8b59e`). The same deploy published the Week 7 and Week 8 recaps with no recap copy,
+  as the commissioner chose: no theme, cold open or notes.
+- **Week 10 (2026).** The preview copy ("Lopsided Ledgers") was approved and deployed 2026-11-10
+  (Worker `0124b52c`). It ships with no milestone: Week 9 results weren't fetched yet, so the brief's
+  wins race (Clark 197, Kevin Swanson 195) was stale. No Week 9 recap exists yet.

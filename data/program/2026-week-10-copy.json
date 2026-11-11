@@ -1,0 +1,48 @@
+{
+  "theme": "Lopsided Ledgers",
+  "cold_open": [
+    "Kevin Swanson once beat Thomas 11 straight times, the longest run in any series this week, and Eric is 4–0 against O'Boyle. Fadi and Shawn met in this same week last year; Fadi won. Doug's 141.10 in 2018 is still the Week 10 record, and he plays Clark, whom he has beaten twice running."
+  ],
+  "notes": {
+    "Fadi|Shawn": "Shawn leads 18–13 and owns the series' biggest blowout, 142.88–26.31 in 2004. Fadi's replies: last year's win in this same week, 90.75–68.55, and the 2001 semifinal over top-seeded Shawn.",
+    "Kevin Swanson|Thomas": "Kevin Swanson leads 22–11 and once led by 14, with 11 straight from 2007 to 2013. Tom has won three of the last five and took the 2014 semifinal, a year after losing the 2013 one.",
+    "Eric|Kevin O'Boyle": "Eric is 4–0 since they first met in 2023, with his biggest win by 26.42 that year. O'Boyle came closest last year, 99.94–92.12, the series' highest-scoring game. He's still looking for his first.",
+    "Brian Clark|Douglas": "Clark leads 8–7 and once led by four, but Doug has won the last two and three of the last five. Their closest game was their only playoff meeting: Clark's 85.61–81.77 quarterfinal win in 2023.",
+    "Jeff|Steve Swanson": "Steve leads 5–4 after winning four of the last five, and Jeff never led by more than two. Steve also owns the biggest blowout, 41.01 in 2021, and the closest game, by 5.82 in Week 10 of 2024.",
+    "Dominic|Evan": "Dominic leads 17–12 and is 3–0 against Evan in the playoffs: the 2007 semifinal and quarterfinals in 2010 and 2018. Evan's answer is the series' biggest blowout, 65.98 points in 2020."
+  },
+  "history_lines": [
+    {
+      "year": 2018,
+      "text": "Douglas sets the Week 10 standard",
+      "pts": "141.10",
+      "tag": "best ever"
+    },
+    {
+      "year": 2019,
+      "text": "Kevin Swanson, 13.89 short",
+      "pts": "127.21",
+      "tag": "2nd best"
+    },
+    {
+      "year": 2024,
+      "text": "Evan, 14.94 short",
+      "pts": "126.16",
+      "tag": "3rd best"
+    },
+    {
+      "year": 2025,
+      "text": "Kevin Swanson scores 97.20 — and loses to Dominic's 112.80",
+      "pts": "97.20",
+      "tag": "best in defeat"
+    },
+    {
+      "year": 2001,
+      "text": "Dale bottoms out in the league's first season",
+      "pts": "21.65",
+      "tag": "worst ever"
+    }
+  ],
+  "milestone": null,
+  "kicker": "For the seventh straight week, all six games cross division lines."
+}

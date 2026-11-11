@@ -1,0 +1,52 @@
+{
+  "theme": "Split Decisions",
+  "cold_open": [
+    "Clark and Dominic have met in two finals, 2010 and 2023, and split them. Three other series this week are even in the playoffs, and O'Boyle and Steve Swanson are dead even overall at 12–12. Clark leads Kevin Swanson 197–195 in the all-time wins race."
+  ],
+  "notes": {
+    "Brian Clark|Dominic": "A rematch of two finals: Clark won 2010, Dominic 2023. Clark leads 23–11, but Dominic leads 3–2 in the playoffs and has won the last three there. Clark took the last two.",
+    "Kevin Swanson|Shawn": "Kevin Swanson leads 19–13 but once led 16–7, before Shawn won five straight from 2019 to 2022. Their four playoff meetings are split 2–2. Swanson won one of those by 0.90 in 2017.",
+    "Evan|Thomas": "Tom leads 15–13 and won the last by 2.37. Evan took the three before that, including the 2024 semifinal, 104.94–87.23. Tom's best run was five straight from 2015 to 2017.",
+    "Douglas|Eric": "Only their fourth meeting. Doug won the first two, including the 102.65–94.27 shootout in 2024. Eric answered last year, 81.37–68.68, the lowest-scoring game of the series. None has been closer than 8.38.",
+    "Kevin O'Boyle|Steve Swanson": "Dead even at 12–12. O'Boyle won four straight to lead 12–8 in 2021. Steve has won the last four to erase all of it. The winner takes the lead.",
+    "Fadi|Jeff": "Jeff leads 10–1, the widest this series has been, and has won six straight. Fadi's one win came 57.2–53.6 in 2020. Last year's semifinal went to Jeff, 111.05–74.69."
+  },
+  "history_lines": [
+    {
+      "year": 2018,
+      "text": "Evan sets the Week 9 standard",
+      "pts": "125.26",
+      "tag": "best ever"
+    },
+    {
+      "year": 2011,
+      "text": "Brian Clark, 2.06 short",
+      "pts": "123.20",
+      "tag": "2nd best"
+    },
+    {
+      "year": 2020,
+      "text": "Evan again, 5.85 short",
+      "pts": "119.41",
+      "tag": "3rd best"
+    },
+    {
+      "year": 2011,
+      "text": "Shawn scores 102.69 — and loses to Clark's 123.20",
+      "pts": "102.69",
+      "tag": "best in defeat"
+    },
+    {
+      "year": 2003,
+      "text": "Fadi bottoms out",
+      "pts": "29.15",
+      "tag": "worst ever"
+    }
+  ],
+  "milestone": {
+    "value": "197",
+    "label": "Brian Clark · Career Wins",
+    "text": "Brian Clark leads the all-time wins race, 197 to Kevin Swanson's 195. Clark plays Dominic this week; Kevin Swanson plays Shawn."
+  },
+  "kicker": "For the sixth straight week, all six games cross division lines."
+}
