@@ -74,4 +74,4 @@ Selected: Dominic's 4 straight from 2007⁠–⁠08 is the longest streak in the
 - best losing effort: Kevin Swanson 97.2 (2025)
 
 ## Milestone watch
-- all-time wins race: Brian Clark 197, Kevin Swanson 195
+- Shawn is 112.85 points from 27,500 career points

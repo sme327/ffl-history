@@ -785,68 +785,68 @@
     }
   },
   "career": {
-    "Jeff": {
-      "wins": 57,
-      "losses": 81,
-      "points": 11152.279999999997
-    },
-    "Kevin O'Boyle": {
-      "wins": 183,
-      "losses": 178,
-      "points": 27733.48999999999
-    },
-    "Dominic": {
-      "wins": 154,
-      "losses": 165,
-      "points": 24187.86999999999
-    },
-    "Brian Clark": {
-      "wins": 197,
-      "losses": 174,
-      "points": 28486.249999999964
-    },
     "Steve Swanson": {
       "wins": 139,
-      "losses": 145,
-      "points": 22752.65000000001
-    },
-    "Fadi": {
-      "wins": 179,
-      "losses": 190,
-      "points": 28020.739999999998
-    },
-    "Shawn": {
-      "wins": 185,
-      "losses": 181,
-      "points": 27307.999999999985
-    },
-    "Kevin Swanson": {
-      "wins": 195,
-      "losses": 170,
-      "points": 28453.489999999994
-    },
-    "Thomas": {
-      "wins": 159,
-      "losses": 184,
-      "points": 25944.52000000001
-    },
-    "Douglas": {
-      "wins": 81,
-      "losses": 86,
-      "points": 13739.649999999996
-    },
-    "Eric": {
-      "wins": 31,
-      "losses": 24,
-      "points": 4311.29
+      "losses": 146,
+      "points": 22814.40000000001
     },
     "Evan": {
       "wins": 160,
-      "losses": 164,
-      "points": 25409.54000000001
+      "losses": 165,
+      "points": 25487.02000000001
+    },
+    "Douglas": {
+      "wins": 82,
+      "losses": 86,
+      "points": 13826.519999999997
+    },
+    "Fadi": {
+      "wins": 179,
+      "losses": 191,
+      "points": 28091.629999999997
+    },
+    "Kevin Swanson": {
+      "wins": 195,
+      "losses": 171,
+      "points": 28531.629999999994
+    },
+    "Eric": {
+      "wins": 31,
+      "losses": 25,
+      "points": 4385.120000000001
+    },
+    "Thomas": {
+      "wins": 160,
+      "losses": 184,
+      "points": 26027.29000000001
+    },
+    "Dominic": {
+      "wins": 154,
+      "losses": 166,
+      "points": 24250.55999999999
+    },
+    "Brian Clark": {
+      "wins": 198,
+      "losses": 174,
+      "points": 28580.339999999964
+    },
+    "Shawn": {
+      "wins": 186,
+      "losses": 181,
+      "points": 27387.149999999987
+    },
+    "Jeff": {
+      "wins": 58,
+      "losses": 81,
+      "points": 11242.969999999998
+    },
+    "Kevin O'Boyle": {
+      "wins": 184,
+      "losses": 178,
+      "points": 27830.93999999999
     }
   },
   "milestone_watch": [
-    "all-time wins race: Brian Clark 197, Kevin Swanson 195"
+    "Shawn is 112.85 points from 27,500 career points"
   ]
 }
